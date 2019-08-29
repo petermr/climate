@@ -1,0 +1,853 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head> <style type="text/css">
+         	     		 
+         	    a                          {background : #ffffff; }
+         	    article                    {border-style : dotted; border-width : 2px; }
+         		 	
+         		 	div                        {background : #ffffcc;}
+         		 	div.abstract-title         {font-weight : bold ; font-size : 16pt;}
+         		 	div.ack                    {border-style : solid ; border-color : red; margin
+         : 2em; }
+         		 	div.article-meta           {border-style : solid; border-width : 1 pt; margin
+         1em;}
+         		 	div.boxed-text             {margin : 5em; border-style : solid;}
+         		 	div.contrib-group          {margin : 1em; }
+         		 	div.fig                    {border-style : solid; border-width : 2px; margin :
+         2em; }
+         		 	div.funding                {font-weight : bold ; font-size : 16pt;}
+         		 	div.given-names            {font-style : italic;}
+         		 	div.intro                  {border-style : inset; margin : 5px;}
+         		 	div.introduction           {border-style : inset; margin : 5px;}
+         		 	div.journal-meta           {border-style : solid; border-width : 1 pt; margin
+         1em;}
+         		 	div.journal-title-group    {background : #ffeeee;}
+         		 	div.article-title          {font-weight : bold ; font-size : 18pt;}
+         		 	div.kwd                    {font-style : italic}
+         		 	div.meta-name              {font-weight : bold ; font-size : 16pt;}
+         		 	div.name                   {font-weight : bold;}
+         		 	div.alt-title              {font-style : italic; font-size : 12px;}
+         		 	
+         		 	div.sec                    {border : 2px; margin 5px; padding 2px;}
+         		 	div.title                  {font-family : courier; font-weight : bold;
+         		 	                            font-size : 16pt; margin : 5px;}
+         		 	
+         		 	div.materials_methods      {border-style : double; margin : 5px; }
+         		 	div.methods                {border-style : double; margin : 5px; }
+         		 	
+         		 	div.results                {border-style : solid; margin : 5px;}
+         		 	div.background             {border-style : dotted; margin : 5px;}
+         		 	
+         		 	div.discussion             {border-style : groove; margin : 5px;}
+         		 	div.conclusion             {border-style : ridge; margin : 5px;}
+         		 	div.conclusions             {border-style : ridge; margin : 5px;}
+         		 	div.supplementary-material {border-style : inset; margin : 5px;}
+         		 	div.abbreviations          {border-style : double; border-color : red; margin
+         : 5px;}
+         		 	div.competinginterests     {border-style : double; border-color : blue; margin
+         : 5px;}
+         		 	div.acknowledgements       {border-style : double; border-color : green; margin
+         : 5px;}
+         		 	div.authors_contributions   {border-style : double; border-color : purple; margin
+         : 5px;}
+         		 	
+         		 	div.publisher              {border-style : outset; margin : 5px;}
+         		 	div.fn-type-conflict       {background : #f88; }
+         		 	div.fn-type-con            {background : #ddf; }
+         		 	div.fn-type-other          {background : #ddd; }
+         		 	
+         		 	div.unknown                {background : #ffd;
+         									 	  border-style : solid;
+         									 	  border-width : 1px;
+         									 	  padding : 2 px;}
+         		 	  
+         	    table                      {background : #ffffdd;}
+         		 	tr                         {background : #ddddff; padding : 1px;}
+         		 	
+         		 	span                       {background : #ffcccc;}
+         		 	
+         		 	span.citation-author       {font-family : helvetica; background : #ffeeee;}
+         		 	span.collab                {background : #ddffff; }
+         		 	span.comment               {font-family : courier; font-size : 6px; background
+         : #ffaaff;}
+         		 	span.contrib               {background : #ffffff;}
+         		 	span.corresp               {background : #ddffdd; }
+         		 	span.doi                   {background : #ffffff;}
+         		 	span.email                 {font-family : courier; }
+         		 	span.etal                  {font-style : italic;}
+         		 	span.fpage                 {font-family : courier;}
+         		 	span.given-names           {background : #ffffff;}
+         		 	span.iso-abbrev            {background : #ffffff;}
+         		 	span.issn-epub             {background : #ffffff;}
+         		 	span.issn-ppub             {background : #ffffff;}
+         		 	span.journal-title         {background : #ffffff;}
+         		 	span.lpage                 {font-family : courier;}
+         		 	span.mixed-article-title   {font-style : italic ;}
+         		 	span.nlm-ta                {background : #ffffff;}
+         		 	span.pmc                   {background : #ffffff;}
+         		 	span.pmcid                 {background : #ffffff;}
+         		 	span.pmid                  {background : #ffffff;}
+         		 	span.publisher             {background : #ffffff;}
+         		 	span.publisher-id          {background : #ffffff;}
+         		 	span.publisher-name        {background : #ffffff;}
+         		 	span.source                {background : #ffffff;}
+         		 	span.subject               {background : #ffffff;}
+         		 	span.surname               {background : #ffffff;}
+         		 	span.volume                {font-family : courier; font-weight : bold;}
+         		 	span.year                  {font-family : courier ; font-style : italic;}
+         			
+      </style> </head> <body> <div class="front" title="front"> <div class="journal-meta" tagx="journal-meta" title="journal-meta"> <span class="nlm-ta" title="nlm-ta">PLoS One</span> <span class="iso-abbrev" title="iso-abbrev">PLoS ONE</span> <span class="publisher-id" title="publisher-id">plos</span> <span class="pmc" title="pmc">plosone</span> <div class="journal-title-group" tagx="journal-title-group" title="journal-title-group"> <span class="journal-title" tagx="journal-title" title="journal-title">PLoS ONE</span> </div> <span class="issn-epub" tagx="issn" title="issn-epub">1932-6203</span> <div class="publisher" tagx="publisher" title="publisher"> <span class="publisher-name" tagx="publisher-name" title="publisher-name">Public Library of Science</span> <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">San Francisco, CA USA</span> </div> </div> <div class="article-meta" tagx="article-meta" title="article-meta"> <span class="pmcid" title="pmcid"> pmcid: <a href="http://www.ncbi.nlm.nih.gov/pubmed/6461246">6461246</a> </span> <span class="publisher-id" title="publisher-id">PONE-D-18-32429</span> <span class="doi" title="doi"> doi: <a href="https://dx.doi.org/10.1371/journal.pone.0213300">10.1371/journal.pone.0213300</a> </span> <div class="article-categories" title="article-categories">
+: <span class="subject" title="subject">Research Article</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Earth Sciences</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Natural Disasters</span>: <span class="subject" title="subject">Tornadoes</span> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Earth Sciences</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Atmospheric Science</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Meteorology</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Wind</span>: <span class="subject" title="subject">Tornadoes</span> </div> </div> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Physical Sciences</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Mathematics</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Probability Theory</span>: <span class="subject" title="subject">Probability Distribution</span> </div> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Earth Sciences</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Atmospheric Science</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Climatology</span>: <span class="subject" title="subject">Climate Change</span> </div> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Research and Analysis Methods</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Mathematical and Statistical Techniques</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Mathematical Models</span>: <span class="subject" title="subject">Random Walk</span> </div> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Physical Sciences</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Mathematics</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Probability Theory</span>: <span class="subject" title="subject">Random Variables</span> </div> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Research and Analysis Methods</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Research Facilities</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Information Centers</span>: <span class="subject" title="subject">Archives</span> </div> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Earth Sciences</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Geography</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Cartography</span>: <span class="subject" title="subject">Longitude</span> </div> </div> </div> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Computer and Information Sciences</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Data Visualization</span> <div class="sub-group" title="subj-group">
+: <span class="subject" title="subject">Infographics</span>: <span class="subject" title="subject">Charts</span> </div> </div> </div> </div> <div class="title-group"> <div class="article-title" title="article-title">
+Technological improvements or climate change? Bayesian modeling of time-varying conformance to Benford’s Law </div> <div class="alt-title" title="alt-title">
+Bayesian modeling of time-varying conformance to Benford’s Law</div> </div> <div class="contrib-group" title="contrib-group"> <span class="contrib" title="contrib"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">http://orcid.org/0000-0002-4726-210X</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lee</span> <span class="given-names" tagx="given-names" title="given-names">Junho</span> </span> <span class="role" tagx="role" title="role">Investigation</span> <span class="role" tagx="role" title="role">Methodology</span> <span class="role" tagx="role" title="role">Visualization</span> <a href="#aff001" /> </span> <span class="contrib" title="contrib"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">http://orcid.org/0000-0003-3248-6984</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">de Carvalho</span> <span class="given-names" tagx="given-names" title="given-names">Miguel</span> </span> <span class="role" tagx="role" title="role">Conceptualization</span> <span class="role" tagx="role" title="role">Funding acquisition</span> <span class="role" tagx="role" title="role">Methodology</span> <span class="role" tagx="role" title="role">Supervision</span> <span class="role" tagx="role" title="role">Visualization</span> <a href="#aff001" /> <a href="#cor001">*</a> </span> </div> <span class="citation_author_institution" id="aff001">[], <span class="addr-line" title="addr-line">School of Mathematics, University of Edinburgh, Edinburgh, United Kingdom</span> </span> <div class="contrib-group" title="contrib-group"> <span class="contrib" title="contrib"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Chen</span> <span class="given-names" tagx="given-names" title="given-names">Li</span> </span> <span class="role" tagx="role" title="role">Editor</span> <a href="#edit1" /> </span> </div> <span class="citation_author_institution" id="edit1">[], <span class="addr-line" title="addr-line">Auburn University - Harrison School of Pharmacy, UNITED STATES</span> </span> <div class="author-notes" title="author-notes"> <div class="fn-type-COI-statement" title="COI-statement"> <p> <b>Competing Interests: </b>The authors have declared that no competing interests exist. </p> </div> <div class="corresp" title="corresp">
+* E-mail: <span class="email" tagx="email" title="email">Miguel.deCarvalho@ed.ac.uk</span> </div> </div> <span class="pub-date-collection" title="pub-date-collection">collection: <span>2019</span> </span> <span class="pub-date-epub" title="pub-date-epub">epub: <span>2019-4-4</span> </span> <span class="volume" tagx="volume" title="volume">14</span> <span class="issue" tagx="issue" title="issue">4</span> <span class="elocation-id" tagx="elocation-id" title="elocation-id">e0213300</span> <span class="history" title="history"> <span class="received" title="received">received: 2018-11-11</span> <span class="accepted" title="accepted">accepted: 2019-2-19</span> </span> <div class="permissions"> <span class="copyright" title="copyright">(C) <span class="copyright-holder" tagx="copyright-holder" title="copyright-holder">Lee, de Carvalho</span>, <span class="copyright-year" tagx="copyright-year" title="copyright-year">2019</span> </span> <span class="license" title="license"> <span class="license-p" title="license-p">This is an open access article distributed under the terms of the <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution License</a>, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited. </span> </span> </div> <a class="self-uri" href="pone.0213300.pdf" title="self-uri">pone.0213300.pdf</a> <div class="abstract" title="abstract"> <div class="abstract-title" title="abstract-title">
+Abstract</div> <p>We develop a Bayesian time-varying model that tracks periods at which conformance to Benford’s Law is lower. Our methods are motivated by recent attempts to assess how the quality and homogeneity of large datasets may change over time by using the First-Digit Rule. We resort to a smooth multinomial logistic model which captures the dynamics governing the proportion of first digits, and apply the proposed model to global tropical cyclone tracks over the past two centuries. Our findings indicate that cumulative technological improvements may have only had a moderate influence on the homogeneity of the dataset, and hint that recent heterogeneity could be due to other drivers. </p> </div> <div class="funding-group" title="funding-group"> <div class="funding" title="funding">
+Funding</div> <div class="award-group" title="award-group"> <div class="funding-source" title="funding-source"> <div class="institution-wrap" title="institution-wrap"> <span class="institution-id" title="institution-id">http://dx.doi.org/10.13039/501100001871</span> <span class="institution" title="institution">Fundação para a Ciência e a Tecnologia</span> </div> </div> <span class="award-id" tagx="award-id" title="award-id">PTDC/MAT-STA/28649/2017</span> <span class="principal-award-recipient" title="principal-award-recipient"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">http://orcid.org/0000-0003-3248-6984</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">de Carvalho</span> <span class="given-names" tagx="given-names" title="given-names">Miguel</span> </span> </span> </div> <div class="award-group" title="award-group"> <div class="funding-source" title="funding-source"> <div class="institution-wrap" title="institution-wrap"> <span class="institution-id" title="institution-id">http://dx.doi.org/10.13039/501100001871</span> <span class="institution" title="institution">Fundação para a Ciência e a Tecnologia</span> </div> </div> <span class="award-id" tagx="award-id" title="award-id">UID/MAT/00006/2019</span> <span class="principal-award-recipient" title="principal-award-recipient"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">http://orcid.org/0000-0003-3248-6984</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">de Carvalho</span> <span class="given-names" tagx="given-names" title="given-names">Miguel</span> </span> </span> </div> <div class="funding-statement" title="funding-statement">
+This work was supported by the FCT (Fundação para a Ciência e a Tecnologia) research grants PTDC/MAT-STA/28649/2017 and UID/MAT/00006/2019 to MdC. </div> </div> <div class="counts" title="counts"> <span class="fig-count" title="fig-count">fig-count: </span> <span class="table-count" title="table-count">table-count: </span> <span class="page-count" title="page-count">page-count: </span> </div> <div class="custom-meta-group" title="custom-meta-group"> <meta name="Data Availability" value="The data includes a register of tropical cyclones since 1842, and is available from the website of IBTrACS (https://www.ncdc.noaa.gov/ibtracs)." /> </div> </div> <div class="title" tagx="title" title="title">
+Data Availability</div> <p>The data includes a register of tropical cyclones since 1842, and is available from the website of IBTrACS ( <a href="https://www.ncdc.noaa.gov/ibtracs">https://www.ncdc.noaa.gov/ibtracs</a>). </p> </div> <div class="body" title="body"> <div class="intro" title="intro"> <div class="title" tagx="title" title="title">
+Introduction</div> <p>Benford’s Law is an empirical observation on the distribution of first digits of numerical data discovered by [ <a href="#pone.0213300.ref001">1</a>] and [ <a href="#pone.0213300.ref002">2</a>]. The law states that, in many situations of applied interest, the frequency of the first digit of numbers follows a logarithmically decreasing distribution—even though it is generally believed that the probability of occurrence of each number is equally likely. The probability that the first non-zero digit begins with a number <i>d</i> follows a logarithmic distribution given by </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mtext_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mtext_UNKNOWN">
+P</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+D</div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msub_UNKNOWN"> <div class="mo_UNKNOWN">
+log</div> <div class="mn_UNKNOWN">
+10</div> </div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
++</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(1)</span> </div> where <i>D</i> is the first significant digit of a random variable. The probability of the significant leading digit equal to 1, for example, is calculated as approximately 0.301, and then the probability of the leading digit equals <i>d</i> gets smaller as <i>d</i> increase, up to where the probability of the leading digit 9 equals to only 0.046. A wide variety of datasets, especially a collection of datasets, have been reported to conform to Benford’s Law. A statistical foundation of its universality was presented by [ <a href="#pone.0213300.ref003">3</a>]. Since the peculiar law of first digits uncovered, a battery of studies showed that large classes of quantities in different disciplines from both natural phenomena and social activities are expected to follow the First-Digit Rule, and therefore it can be used for detecting structural changes or irregularities from various applications [ <a href="#pone.0213300.ref004">4</a>, <a href="#pone.0213300.ref005">5</a>]. <p /> <p>This paper devises a Bayesian time-varying model that tracks periods at which conformance to Benford’s Law is lower. Our methods are motivated by recent attempts to assess how the quality and homogeneity of large datasets may change over time by using the First-Digit Rule (e.g. [ <a href="#pone.0213300.ref006">6</a>– <a href="#pone.0213300.ref008">8</a>]). As we show in the numerical studies in the Supplementary Materials ( <a href="#pone.0213300.s001">S1 File</a>), the empirical-based approach by [ <a href="#pone.0213300.ref008">8</a>] suffers often from bias (cf <a href="#pone.0213300.g004">Fig 4</a>, <a href="#pone.0213300.s001">S1 File</a>)—thus questioning some of their key empirical findings. Our Bayesian smooth multinomial logistic model is however accurate (cf numerical studies in <a href="#pone.0213300.s001">S1 File</a>), and it is tailored—by construction—for capturing the dynamics governing the proportion of first digits. We apply the proposed model to global tropical cyclone tracks over the past two centuries, and compare our empirical findings with those of [ <a href="#pone.0213300.ref008">8</a>]. An application of our model indicates that cumulative technological improvements may have only had a moderate influence on the homogeneity of the dataset. Indeed, although technological improvements are cumulative we find that the most recent heterogeneity levels actually tend to be higher than the ones from 1842 to 1890 (cf <a href="#pone.0213300.g004">Fig 4</a>, below); this finding seems to be in contradiction with [ <a href="#pone.0213300.ref008">8</a>] (cf <a href="#pone.0213300.g005">Fig 5</a> in their paper), possibly due to the above-mentioned bias issue. Finally, while we center the article on the tropical cyclone application, our Bayesian time-varying approach has the potential to be employed on other contexts where the target is on learning about the dynamics governing conformance to Benford’s Law—including fraud analysis. </p> <p>The paper is organized as follows. We first introduce our motivating global tropical cyclone data and provide preliminary statistics on their conformance to Benford’s Law. The next section describes our proposed Bayesian multinomial logistic smoothing model along with details on prior specification and on inference. The homogeneity of cyclone data is then analyzed by inspecting dynamics of the first-digit distribution. Lastly, we discuss data homogeneity and other issues based on the results. For the convenience of exposition, specific details surrounding numerical experiments on the model and relevant code in R [ <a href="#pone.0213300.ref009">9</a>] are left to the <a href="#pone.0213300.s001">S1 File</a>. </p> </div> <div class="materials_methods" title="materials|methods"> <div class="title" tagx="title" title="title">
+Materials and methods</div> <div class="globaltropicalcyclones(gtc)dataset" title="sec"> <div class="title" tagx="title" title="title">
+Global tropical cyclones (GTC) dataset</div> <p>The GTC dataset provides information on the distribution, frequency, and intensity of tropical cyclones worldwide, which is collected as a project of International Best Track Archive for Climate Stewardship (IBTrACS). The dataset includes a register of tropical cyclones since 1842, and is available from the website of IBTrACS ( <a href="https://www.ncdc.noaa.gov/ibtracs">https://www.ncdc.noaa.gov/ibtracs</a>). It has multiple observed records of each cyclone such as geographical location, temperature, and wind speed. As of May of 2018, a total of 348,703 traveled locations are recorded with the corresponding climatic information. <a href="#pone.0213300.g001">Fig 1</a> presents the traveled path of each cyclone in the dataset over the entire period. </p> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/10.1371/journal.pone.0213300.g001"> <span class="label" tagx="label" title="label">Fig 1</span> </a> </div>   <div class="title" tagx="title" title="title">
+Map of the global tropical cyclones tracks from International Best Track Archive for Climate Stewardship (IBTrACS). </div> <p>(Top) paths from 1842 to 1960; (Bottom) paths from 1961 to 2017;(Left) Map projection on longitude 10°E ∼170°W; (Right) Map projection on Longitude 170°W ∼10°E. </p>   </div> <p>Apart from the intrinsic heterogeneity of tropical cyclones, there has been a debate on the quality of early records in the dataset for assessing the influence of climate change on the occurrence of tropical cyclones [ <a href="#pone.0213300.ref010">10</a>, <a href="#pone.0213300.ref011">11</a>]. </p> <p>We retrieve observed location records of each cyclone from 1842 to 2016 in the GTC dataset and then trace a geometric path by connecting points which each cyclone traveled. We measure distance per cyclone in meters along the path using the <tt>geosphere</tt> package [ <a href="#pone.0213300.ref012">12</a>] from the R programming language. Except for the small cyclones with a single geographical location (latitude/longitude), we obtain 12,741 observations of traveled distances in total; <a href="#pone.0213300.g002">Fig 2</a> depicts the frequency of tropical cyclones over the period under analysis. This allows us to analyze dynamics of the first-digit proportion throughout the period under analysis. Before specifying our statistical model, we first test the overall validity of Benford’s Law in the GTC dataset. <a href="#pone.0213300.g002">Fig 2</a> shows the proportion of first digits in the GTC dataset against Benford’s Law. The first-digit proportions in the pooled GTC data resemble the probability mass from Benford’s Law. In <a href="#pone.0213300.g002">Fig 2</a>, digit 1 and digit 6 to digit 9 exhibits higher proportion than the probability from <a href="#pone.0213300.e001">Eq (1)</a> among all digits, whereas digits 2 to 4 present lower than the counterpart values. We discuss the variation of each proportion in detail with our time-varying model. </p> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/10.1371/journal.pone.0213300.g002"> <span class="label" tagx="label" title="label">Fig 2</span> </a> </div>   <div class="title" tagx="title" title="title">
+Descriptive statistics for GTC data.</div> <p>Above: Frequency of tropical cyclones from 1842–2016. Below: Empirical first-digit distribution of the traveled distance (in meters) per cyclone is represented (red) along with the corresponding probability mass for Benford’s distribution (blue). </p>   </div> </div> <div class="modelingtime-varyingconformancetobenford’slaw" title="sec"> <div class="title" tagx="title" title="title">
+Modeling time-varying conformance to Benford’s Law</div> <div class="modelspecification" title="sec"> <div class="title" tagx="title" title="title">
+Model specification</div> <p>We construct a smooth multinomial model which will capture the time-varying proportions in the leading digits and compare the variation with Benford’s distribution. Our GTC dataset is composed of two records for each cyclone: the first digit of traveled distance and the year a cyclone was first observed. Let <i>N</i> <sub> <i>t</i> </sub> be the number of cyclones occurring in year <i>t</i>, and let <b> <i>n</i> </b> <sub> <i>t</i> </sub> = ( <i>n</i> <sub>1, <i>t</i> </sub>, …, <i>n</i> <sub>9, <i>t</i> </sub>) with <i>n</i> <sub> <i>d</i>, <i>t</i> </sub> denoting the frequency of cyclones whose first digit of traveled distance equals to <i>d</i>, during year <i>t</i>. Below, <b> <i>n</i> </b> <sub> <i>t</i> </sub> is assumed to follow a multinomial distribution with parameter </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+N</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(2)</span> </div> where the <i>p</i> <sub> <i>d</i>, <i>t</i> </sub>’s obey <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+9</div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </span>, for all <i>t</i>. <p /> <p>Our primary interest is in the probability <b> <i>p</i> </b> <sub> <i>t</i> </sub> = ( <i>p</i> <sub>1, <i>t</i> </sub>, …, <i>p</i> <sub>9, <i>t</i> </sub>), that is the probability of occurrence of each digit at year <i>t</i>; we will refer to <b> <i>p</i> </b> <sub> <i>t</i> </sub> as the <i>first-digit probability</i>. More precisely, our target below will be on learning from the data about the dynamics governing the first-digit probability, <b> <i>p</i> </b> <sub> <i>t</i> </sub>, and on contrasting it with Benford’s Law, <tt>p</tt> <sub> <i>d</i> </sub>, in <a href="#pone.0213300.e001">Eq (1)</a>. </p> <p>Since our data is composed of frequencies of nine digits together with time <i>t</i>, it is natural to relate the first-digit probability to the time predictor via a generalized linear model [ <a href="#pone.0213300.ref013">13</a>]. We consider a multinomial logistic model where elements of <b> <i>p</i> </b> <sub> <i>t</i> </sub> are connected to a vector of time predictor <b> <i>η</i> </b> <sub> <i>t</i> </sub> = ( <i>η</i> <sub>1, <i>t</i> </sub>, …, <i>η</i> <sub>8, <i>t</i> </sub>) by </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+exp</div> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+η</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
++</div> <div class="msubsup_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+8</div> </div> <div class="mo_UNKNOWN">
+exp</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+η</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+⋯</div> <div class="mo_UNKNOWN">
+,</div> <div class="mn_UNKNOWN">
+8</div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(3)</span> </div> and <i>p</i> <sub>9, <i>t</i> </sub> is inferred from <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+9</div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </span>. Time-varying conformance to Benford’s Law will then be assessed by contrasting <i>p</i> <sub> <i>d</i>, <i>t</i> </sub> as in <a href="#pone.0213300.e004">(3)</a> against the benchmark <tt>p</tt> <sub> <i>d</i> </sub>, from <a href="#pone.0213300.e001">Eq (1)</a>. <p /> <p>To trace the dynamics governing <b> <i>p</i> </b> <sub> <i>t</i> </sub>, we employ degree 3 B-spline basis [ <a href="#pone.0213300.ref014">14</a>], also known as cubic splines, which produce a smooth curve for each element of <b> <i>η</i> </b> <sub> <i>t</i> </sub>; cubic splines are the standard choice in the literature as they are twice continuously differentiable and thus allow for a reasonable amount of smoothness [ <a href="#pone.0213300.ref015">15</a>]. We assume that the B–spline basis functions have <i>K</i>+ 1 equally spaced knots, <i>t</i> <sub>min</sub> = <i>t</i> <sub>0</sub> &amp;lt; <i>t</i> <sub>1</sub> &amp;lt; ⋯ &amp;lt; <i>t</i> <sub> <i>K</i>−1 </sub> &amp;lt; <i>t</i> <sub> <i>K</i> </sub> = <i>t</i> <sub>max</sub> over the entire observation period, and thus the smooth curve <i>η</i> <sub> <i>d</i>, <i>t</i> </sub> can be expressed by the following linear combination of B–splines, </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+η</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="munderover_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
++</div> <div class="mn_UNKNOWN">
+3</div> </div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+k</div> </div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+B</div> <div class="mi_UNKNOWN">
+k</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mn_UNKNOWN">
+8</div> <div class="mo_UNKNOWN">
+.</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(4)</span> </div> <p /> <p>Here the <i>β</i> <sub> <i>d</i>, <i>k</i> </sub>’s are regression coefficients of B-splines predictors for digit <i>d</i>, and <i>B</i> <sub> <i>k</i> </sub>( <i>t</i>) is a set of B–splines basis functions of degree 3. </p> <p>To assess overall conformance over nine digits with the First-Digit Rule in each year, we use the smooth sum of squared deviations (SSD) of each digit as a summary statistic. The smooth SSD is computed by a sum of squares of the individual discrepancies between leading digits, i.e. </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtext_UNKNOWN">
+SSD</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="munderover_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+9</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+-</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(5)</span> </div> where <i>p</i> <sub> <i>d</i>, <i>t</i> </sub> and <tt>p</tt> <sub> <i>d</i> </sub> are respectively the first-digit probability from <a href="#pone.0213300.e004">(3)</a>, and the probability from Benford’s Law from <a href="#pone.0213300.e001">(1)</a>. The smooth SSD will be exactly zero when the first-digit probability happens to equal to Benford’s first-digit distribution. <p /> <p>To sum up, the goal of the model is on tracking the dynamics governing the first-digit probability over time, conformance to the benchmark will be assessed via the smooth SSD as in <a href="#pone.0213300.e007">(5)</a>, and we next concentrate on discussing how the Bayesian paradigm can be used to learn about <b> <i>p</i> </b> <sub> <i>t</i> </sub> from the data. </p> </div> <div class="bayesianinference" title="sec"> <div class="title" tagx="title" title="title">
+Bayesian inference</div> <p>We follow a Bayesian version of the penalised spline approach [ <a href="#pone.0213300.ref016">16</a>, <a href="#pone.0213300.ref017">17</a>] so as to learn about the first-digit probability <i> <b>p</b> <sub>t</sub> </i>. We assign a first-order random walk prior to the regression coefficients <b> <i>β</i> </b> <sub> <i>d</i> </sub> = ( <i>β</i> <sub>1, <i>d</i> </sub>, …, <i>β</i> <sub> <i>K</i>+3, <i>d</i> </sub>) <sup>T</sup>, which relate an independent and identical Gaussian error <i>ε</i> <sub> <i>d</i> </sub> with mean zero and variance <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> , that is, <div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+k</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
+-</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+ε</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+ε</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+∼</div> <div class="mi_UNKNOWN">
+N</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+0</div> <div class="mo_UNKNOWN">
+,</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
++</div> <div class="mn_UNKNOWN">
+3</div> <div class="mo_UNKNOWN">
+;</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(6)</span> </div> a flat (uniform) prior is set for the initial coefficient <i>β</i> <sub> <i>d</i>,1 </sub>. The first order random walk prior can be represented in a matrix form, <b> <i>Fβ</i> </b> <sub> <i>d</i> </sub> = <i>ε</i> <sub> <i>d</i> </sub>, where <i>ε</i> <sub> <i>d</i> </sub> is a ( <i>K</i> + 2)-vector of <i>ε</i> <sub> <i>d</i> </sub>’s and <b> <i>F</i> </b> is a difference matrix of dimension ( <i>K</i> + 2, <i>K</i> + 3). The <b> <i>F</i> </b> has a diagonal of 1’s ( <i>i</i> = <i>j</i>), −1’s for the next elements to the diagonal ( <i>i</i> = <i>j</i> + 1), and zero otherwise for the ( <i>i</i>, <i>j</i>)th element with <i>i</i> ∈ {1, …, <i>K</i> + 2} and <i>j</i> ∈ {1, …, <i>K</i> + 3}. <p /> <p>The variance <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div>  controls amount of smoothness of <i>η</i> <sub> <i>d</i>, <i>t</i> </sub>—and hence that of <i>p</i> <sub> <i>d</i>, <i>t</i> </sub>—with a lower <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> </span> indicating that variability of the next regression coefficient is restricted around the value of the previous coefficient. Accordingly, the conditional probability of the regression coefficients <b> <i>β</i> </b> <sub> <i>d</i> </sub> given <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> </span> is given by <div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+∣</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mo_UNKNOWN">
+exp</div> <div class="mo_UNKNOWN">
+(</div> <div class="mo_UNKNOWN">
+-</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+2</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mi_UNKNOWN">
+K</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(7)</span> </div> where <b> <i>K</i> </b> is a penalty matrix, <b> <i>K</i> </b> = <b> <i>F</i> </b> <sup>T</sup> <b>F</b> obtained from the random walk prior in <a href="#pone.0213300.e009">Eq (6)</a>. The precision parameters <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> </span>’s are estimated along with the regression coefficients in the model by assigning an additional prior. We place a diffuse inverse gamma prior <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+∼</div> <div class="mtext_UNKNOWN">
+IG</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+a</div> <div class="mn_UNKNOWN">
+0</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+b</div> <div class="mn_UNKNOWN">
+0</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </span> with two constants <i>a</i> <sub>0</sub> and <i>b</i> <sub>0</sub> and then apply a uniform prior for performing a sensitivity analysis. To ease notation, in what follows we let <b> <i>β</i> </b> and <b> <i>τ</i> </b> stand for the set { <b> <i>β</i> </b> <sub>1</sub>, …, <b> <i>β</i> </b> <sub>8</sub>} and <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+{</div> <div class="msubsup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> </div> <div class="mn_UNKNOWN">
+1</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msubsup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> </div> <div class="mn_UNKNOWN">
+8</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+}</div> </div> </div> </div> </span> respectively. <p /> <p>The likelihood of observing <b> <i>n</i> </b> = { <b> <i>n</i> </b> <sub>1</sub>, …, <b> <i>n</i> </b> <sub> <i>T</i> </sub>} is given by the product of multinomial probabilities, that is, </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+L</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+f</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+n</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+n</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+∣</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="munderover_UNKNOWN"> <div class="mo_UNKNOWN">
+∏</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="munderover_UNKNOWN"> <div class="mo_UNKNOWN">
+∏</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+9</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+{</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+}</div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+n</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> </div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(8)</span> </div> where <i>p <sub>d,t</sub> </i>( <b> <i>β</i> </b>) and <i>n</i> <sub> <i>d</i>, <i>t</i> </sub> are respectively the probability and the realized frequency of digit <i>d</i> in year <i>t</i>; note that <i>p</i> <sub> <i>d</i>, <i>t</i> </sub> is connected to the regression coefficients <i> <b>β</b> </i> via the link function in <a href="#pone.0213300.e004">(3)</a> and the linear predictors <i>η</i> <sub> <i>d</i>, <i>t</i> </sub> in <a href="#pone.0213300.e006">(4)</a>. The model is summarized in <a href="#pone.0213300.box001">Box 1</a>. <p /> <div class="boxed-text" tagx="boxed-text" title="boxed-text"> <div class="box1.summarydescriptionofthefittedbayesiansmoothingmodel." title="sec"> <div class="title" tagx="title" title="title">
+Box 1. Summary description of the fitted Bayesian smoothing model.</div> <div class="bayesianmultinomiallogisticsmoothingmodel" title="sec"> <div class="title" tagx="title" title="title">
+Bayesian multinomial logistic smoothing model</div> <p> </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mtext_UNKNOWN">
+(Likelihood)</div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mspace_UNKNOWN" /> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+n</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+n</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+∼</div> <div class="mtext_UNKNOWN">
+Mult</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+N</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtext_UNKNOWN">
+(Model</div> <div class="mspace_UNKNOWN" /> <div class="mtext_UNKNOWN">
+Specification)</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mspace_UNKNOWN" /> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+exp</div> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+η</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
++</div> <div class="msubsup_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+8</div> </div> <div class="mo_UNKNOWN">
+exp</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+η</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
++</div> <div class="msubsup_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+8</div> </div> <div class="mo_UNKNOWN">
+exp</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+η</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN" /> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mspace_UNKNOWN" /> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+η</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="munderover_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
++</div> <div class="mn_UNKNOWN">
+3</div> </div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+k</div> </div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+B</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+k</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtext_UNKNOWN">
+(Random</div> <div class="mspace_UNKNOWN" /> <div class="mtext_UNKNOWN">
+Walk</div> <div class="mspace_UNKNOWN" /> <div class="mtext_UNKNOWN">
+Prior)</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mspace_UNKNOWN" /> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+d</div> </div> </div> <div class="mo_UNKNOWN">
+∼</div> <div class="mi_UNKNOWN">
+U</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+c</div> <div class="mn_UNKNOWN">
+0</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
++</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+d</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+d</div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+ε</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+ε</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+∼</div> <div class="mi_UNKNOWN">
+N</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+0</div> <div class="mo_UNKNOWN">
+,</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mtext_UNKNOWN">
+(Hyper-Prior)</div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mspace_UNKNOWN" /> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+∼</div> <div class="mtext_UNKNOWN">
+IG</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+a</div> <div class="mn_UNKNOWN">
+0</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+b</div> <div class="mn_UNKNOWN">
+0</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+.</div> </div> </div> </div> </div> </div> </div> </div> <p /> </div> </div> </div> <p>Bayesian inference is based on the joint posterior distribution given by </p><div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+,</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+∣</div> <div class="mi_UNKNOWN">
+n</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+L</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+∣</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(9)</span> </div> where <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msubsup_UNKNOWN"> <div class="mo_UNKNOWN">
+∏</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+8</div> </div> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </span>, with <i>π</i>( <i>τ</i> <sub> <i>d</i> </sub>) denoting the density of an inverse gamma distribution with parameters ( <i>a</i> <sub>0</sub>, <i>b</i> <sub>0</sub>), and <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+∣</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msubsup_UNKNOWN"> <div class="mo_UNKNOWN">
+∏</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+8</div> </div> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+∣</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </span> with <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+π</div> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+β</div> <div class="mi_UNKNOWN">
+d</div> </div> <div class="mo_UNKNOWN">
+∣</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </span> as in <a href="#pone.0213300.e013">(7)</a>. We calculate a full conditional distribution for the regression coefficients <i> <b>β</b> </i> and <i> <b>τ</b> </i> <sup>2</sup> from <a href="#pone.0213300.e019">Eq (9)</a>, <div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+∣</div> <div class="mi_UNKNOWN">
+n</div> <div class="mo_UNKNOWN">
+,</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+L</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+∣</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+∣</div> <div class="mi_UNKNOWN">
+n</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+β</div> <div class="mo_UNKNOWN">
+∣</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+π</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+τ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+.</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(10)</span> </div> <p /> <p>Since the full conditional distribution <tt>p</tt>( <b> <i>β</i> </b>∣ <b> <i>n</i>, <i>τ</i> </b> <sup>2</sup>) in <a href="#pone.0213300.e023">Eq (10)</a> does not result in a closed form, a natural option to generate posterior samples is to resort to a Metropolis–Hastings algorithm with iteratively weighted least-squares (IWLS) proposals [ <a href="#pone.0213300.ref018">18</a>, <a href="#pone.0213300.ref019">19</a>]. In practice, a version of our model can be readily implemented with the aid of existing statistical software. The <a href="#pone.0213300.s001">S1 File</a> includes examples with R code. </p> </div> </div> </div> <div class="results" title="results"> <div class="title" tagx="title" title="title">
+Results</div> <p>We now apply our smooth multinomial logistic model to the GTC data. The masterplan of this section is as follows: first, we learn about the dynamics of the first-digit probability; second, we examine conformance of the first-digit probability to Benford’s Law, and assess the homogeneity within the dataset over the observation period; third, we further examine evidence on the behavior of the second-digit probability. To streamline the comparisons with [ <a href="#pone.0213300.ref008">8</a>], below we partition the time horizon into two periods (S1: 1842–1960; S2: 1960–2010). </p> <div class="dynamicsofthefirst-digitprobability" title="sec"> <div class="title" tagx="title" title="title">
+Dynamics of the first-digit probability</div> <p>We present the dynamics of the probability <b> <i>p</i> </b> <sub> <i>t</i> </sub> in <a href="#pone.0213300.g003">Fig 3</a>. The posterior mean of <i>p</i> <sub> <i>d</i>, <i>t</i> </sub> and the 95% credible band is compared to the corresponding probability from Benford’s Law, along with the empirical distribution on each panel. The dynamics of posterior distributions of <i>p</i> <sub> <i>d</i>, <i>t</i> </sub>’s show different patterns over the period between leading digits. As expected, we see that in the very early stage of the dataset, e.g. around the 1850s, the corresponding credible bands are much wider than those in the period of 1900s onward due to small sample sizes (see <a href="#pone.0213300.g002">Fig 2</a>). Among all the nine curves, the probability of leading digit one <i>p</i> <sub>1, <i>t</i> </sub> has a pronounced variation over the entire period. The posterior mean of <i>p</i> <sub>1, <i>t</i> </sub> rises to around 0.4 until the early 1910s, and then steadily drops for more than a century to around 0.2. This implies that the proportion of cyclones whose traveled distance start with digit one decreased approximately by half from around 1900s to recent years. On the contrary, the dynamics of the probability of leading digit three, i.e. <i>p</i> <sub>3, <i>t</i> </sub> moves upward the benchmark around the same period as the downward move of leading digit one, although the magnitude of the move is much smaller than that of digit one. The other seven curves move more tightly around the straight line of Benford’s Law, but digit two to digit seven are slightly upward and the others downward the benchmark. Given the variances of the digit probabilities, it is possible that these probabilities stay constant over the observation period S1. </p> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/10.1371/journal.pone.0213300.g003"> <span class="label" tagx="label" title="label">Fig 3</span> </a> </div>   <div class="title" tagx="title" title="title">
+Dynamics of the time-varying first-digit probability <i>p</i> <sub> <i>t</i> </sub>. </div> <p>Time-varying first-digit probability for digits 1 to 9 ( <i>p</i> <sub>1, <i>t</i> </sub>, …, <i>p</i> <sub>9, <i>t</i> </sub>) are presented from top left to bottom right. The chart further includes the posterior mean (solid line) and 95% credible bands (shaded areas) of <i>p</i> <sub> <i>d</i>, <i>t</i> </sub>, the sample empirical distribution (point), and Benford’s distribution (dashed line). </p>   </div> </div> <div class="time-varyingconformancetobenford’slaw" title="sec"> <div class="title" tagx="title" title="title">
+Time-varying conformance to Benford’s Law</div> <p>We now turn to time-varying conformance of the first-digit probability to Benford’s Law. To assess overall conformance over nine digits with the First-Digit Rule in each year, we resort to the smooth SSD statistics from <a href="#pone.0213300.e007">Eq 5</a>. <a href="#pone.0213300.g004">Fig 4</a> depicts the posterior mean and the 95% credible band of the smooth SSD. As with the first digit probability, the SSD also reflects uncertainty from different sample sizes and intrinsic variability of <i>p</i> <sub> <i>d</i>, <i>t</i> </sub>’s. </p> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/10.1371/journal.pone.0213300.g004"> <span class="label" tagx="label" title="label">Fig 4</span> </a> </div>   <div class="title" tagx="title" title="title">
+Dynamics of sum of squared deviations (SSD).</div> <p>The chart gives the posterior mean of SSD (solid blue line) and 95% credible bands (shaded blue area) in each year. The time horizons suggested in the previous study is labeled for reference: Two long-term division (Period 1 and 2) and four short-term episodes (Episode A, B, C, and D). </p>   </div> <p>The smooth SSD avoids overestimation of the misfit due to a discretization effect, whereas a naive empirical SSD as in [ <a href="#pone.0213300.ref008">8</a>] can be shown to be biased. As the numerical experiments in the <a href="#pone.0213300.s001">S1 File</a> illustrate, the empirical SSD can provide a biased and misleading snapshot of conformance to Benford’s Law (see <a href="#pone.0213300.g004">Fig 4</a>, <a href="#pone.0213300.s001">S1 File</a>). For the GTC dataset, the empirical SSD (not reported) would be generally well above the smooth SSD curve from <a href="#pone.0213300.g004">Fig 4</a>, especially in the years where the number of cyclones was lower. </p> <p>The smooth SSD examines the heterogeneity within the dataset over time in terms of Benford’s Law. Our results reject the hypothesis of homogeneity across the entire period of observation, as no horizontal line would fit the credible band of the smooth SSD. For the early decades prior to 1880s, the smooth SSD is susceptible to considerable variability due to small sample size, and hence it is difficult to tell either conformance or lack of conformance. However, ever since then, the posterior mean of the smooth SSD starts soon to increase gradually from the 1880s, reaches a peak value of 0.0184 in 1903, and then returns to a lower level around 1940, which constitute the first long-term cycle in the variation of the smooth SSD. Another substantive long-term deviation is currently in progress since the 1970s. The first peak occurs in 1989 with the posterior mean 0.00995 and then the mean falls slightly to 0.00757, ending up with the highest value of 0.0153 in 2016. As shown in <a href="#pone.0213300.g004">Fig 4</a>, the second period has a large SSD value for the first period in magnitude, and hence these periods represent two different heterogeneity in the dataset. </p> <p>To streamline comparisons, <a href="#pone.0213300.g004">Fig 4</a> includes the sub-period division of [ <a href="#pone.0213300.ref008">8</a>]: Episode A and C show periods of decreasing misfit, which was claimed to be explained by technical advancements of collecting and coordinating data as a result of the introduction of telegraph lines and aircraft; Episode B, a sudden rise in a downward trend, was claimed to be possibly due by potential climate variation such as El Nino Southern Oscillation (ENSO); a small bump of misfit during Episode D was claimed to be possibly explained by a mix of effects of new technology and potential climate change. </p> <p>Despite the conclusion of [ <a href="#pone.0213300.ref008">8</a>] that the GTC data tend to conform to Benford’s Law from 1960 onward, our model actually finds a substantial deviation from Benford’s Law over that period. Keeping in mind that technological improvements are cumulative, we find that the most recent heterogeneity levels actually tend to be higher than the ones from 1842 to 1890 (cf <a href="#pone.0213300.g004">Fig 4</a>). This finding seems to be contradiction with [ <a href="#pone.0213300.ref008">8</a>] (cf <a href="#pone.0213300.g005">Fig 5</a> in their paper), which is possibly due to the above-mentioned bias issue faced by their approach. </p> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/10.1371/journal.pone.0213300.g005"> <span class="label" tagx="label" title="label">Fig 5</span> </a> </div>   <div class="title" tagx="title" title="title">
+Dynamics of the time-varying second-digit probability <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </span>. </div> <p>Time-varying second-digit probability for digits 0 to 9 <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+0</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div>  are presented from top left to bottom right. The chart further includes the posterior mean (solid line) and 95% credible bands (shaded areas) of <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </span>, the sample empirical distribution (point), and Benford’s distribution (dashed line). <p />   </div> </div> <div class="evidencefromthesecond-digitanalysis" title="sec"> <div class="title" tagx="title" title="title">
+Evidence from the second-digit analysis</div> <p>We further examine the second-digit probability <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+0</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div>  in the GTC dataset. Benford’s Second-Digit Rule is given by <div class="disp-formula" title="disp-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+d</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mtext_UNKNOWN">
+P</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="munderover_UNKNOWN"> <div class="mo_UNKNOWN">
+∑</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> <div class="mn_UNKNOWN">
+9</div> </div> <div class="msub_UNKNOWN"> <div class="mo_UNKNOWN">
+log</div> <div class="mn_UNKNOWN">
+10</div> </div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
++</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+10</div> <div class="mo_UNKNOWN">
+·</div> <div class="mi_UNKNOWN">
+k</div> <div class="mo_UNKNOWN">
++</div> <div class="mi_UNKNOWN">
+d</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+,</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+0</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mn_UNKNOWN">
+9</div> <div class="mo_UNKNOWN">
+,</div> </div> </div> </div> </div> </div> </div> <span class="label" tagx="label" title="label">(11)</span> </div> where <i>D</i> <sub>2</sub> is the second significant digit of a random variable [ <a href="#pone.0213300.ref020">20</a>]. <a href="#pone.0213300.g005">Fig 5</a> illustrates the dynamics of the second-digit probability <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </span>. The dynamics of each <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </span> yields either gradually increasing or decreasing linear trends over the entire period, but the variation of each digit is mostly contained within the credible bands except for digit zero and digit four. <p /> <p>We also examine overall time-evolving conformance to Benford’s Law between ten digits. The distribution of the second-digit smooth SSD is obtained from Benford’s Second-Digit Rule in <a href="#pone.0213300.e028">Eq (11)</a> and the posterior sample of the second-digit probability, and presented in <a href="#pone.0213300.g006">Fig 6</a>. The posterior mean of the second-digit SSD starts from high levels and dwindles until around 1950s, then gradually increasing up to recent years. The posterior mean of <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="graphic_UNKNOWN" /> <div class="math_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mi_UNKNOWN">
+p</div> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div>  gives consistent results to our finding in the first-digit analysis that the heterogeneity of the dataset may have been increasing recently. <p /> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/10.1371/journal.pone.0213300.g006"> <span class="label" tagx="label" title="label">Fig 6</span> </a> </div>   <div class="title" tagx="title" title="title">
+Dynamics of the second-digit SSD.</div> <p>The chart presents the posterior mean of the second-digit SSD (solid blue line) and 95% credible bands (shaded blue area) in each year. The time horizons are labeled for reference as in the first-digit analysis. </p>   </div> </div> </div> <div class="closingremarks" title="sec"> <div class="title" tagx="title" title="title">
+Closing remarks</div> <p>This paper devises a smooth Bayesian model based on penalized splines so to track time-varying conformance to Benford’s law. We have explored the dynamics of the first- and second-digit probability to test the homogeneity of the GTC dataset by comparing the variation with Benford’s Law. Our model enables us to track directly spans of years at which conformance to Benford’s Law is lower, and therefore facilitates the statistical inference about the intrinsic distribution of the first or second digits by evaluating discrepancies from Benford’s Law. Numerical studies in the <a href="#pone.0213300.s001">S1 File</a> show that our method avoids pitfalls faced by pointwise empirical approaches. With respect to our empirical findings versus those of [ <a href="#pone.0213300.ref008">8</a>]. There seems to be a consensus that the heterogeneity up to early 20th century could be mainly induced by the incomplete management of cyclone records and inevitable measurement errors. Technological developments in the 20th century have enable meteorologists to detect even tiny cyclones and to precisely locate the tracks of those cyclones, which results in the consistently increasing number of cyclones until the 1970s. Our results suggest that heterogeneity starts increasing again, even though the frequency of cyclones has been stable since the 1970s. While technological improvements are cumulative we find that the most recent heterogeneity levels actually tend to be higher than the ones from 1842 to 1890 (see <a href="#pone.0213300.g004">Fig 4</a>); this finding seems to contradict [ <a href="#pone.0213300.ref008">8</a>] (cf <a href="#pone.0213300.g005">Fig 5</a> in their paper), possibly due to the above-mentioned bias issue. </p> <p>While we have centered the paper on the tropical cyclone application, our Bayesian time-varying approach has the potential to be applied in other setups where the goal is on inferring the dynamics governing conformance to Benford’s Law—including fraud analysis. </p> </div> <div class="supplementary-material" title="supplementary-material"> <div class="title" tagx="title" title="title">
+Supporting information</div> <div class="local-data" title="local-data"> <span class="label" tagx="label" title="label">S1 File</span>  <div class="title" tagx="title" title="title">
+Supplementary materials.</div> <p>(PDF)</p>  <div class="media" title="media"> <a href="pone.0213300.s001.pdf">LINK</a>  <p>Click here for additional data file.</p>  </div> </div> </div> </div> <div class="back" title="back"> <div class="references">
+References</div> <div tag="ref-list"> <ul> <div class="title" tagx="title" title="title">
+References</div> <li tag="ref"> <a name="pone.0213300.ref001" /> <span class="label" tagx="label" title="label">1</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Newcomb</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Note on the frequency of use of the different digits in natural numbers</span>. <span class="source" tagx="source" title="source">Am J Math</span>. <span class="year" tagx="year" title="year">1881</span>; <span class="volume" tagx="volume" title="volume">4</span>( <span class="issue" tagx="issue" title="issue">1</span>): <span class="fpage" tagx="fpage" title="fpage">39</span>– <span class="lpage" tagx="lpage" title="lpage">40</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.2307/2369148">10.2307/2369148</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref002" /> <span class="label" tagx="label" title="label">2</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Benford</span> <span class="given-names" tagx="given-names" title="given-names">F</span> </span>. <span class="mixed-article-title" title="mixed-article-title">The law of anomalous numbers</span>. <span class="source" tagx="source" title="source">Proc Am Phil Soc</span>. <span class="year" tagx="year" title="year">1938</span>; <span class="volume" tagx="volume" title="volume">78</span>( <span class="issue" tagx="issue" title="issue">4</span>): <span class="fpage" tagx="fpage" title="fpage">551</span>– <span class="lpage" tagx="lpage" title="lpage">572</span>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref003" /> <span class="label" tagx="label" title="label">3</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Hill</span> <span class="given-names" tagx="given-names" title="given-names">TP</span> </span>. <span class="mixed-article-title" title="mixed-article-title">A statistical derivation of the significant-digit law</span>. <span class="source" tagx="source" title="source">Statist Sci</span>. <span class="year" tagx="year" title="year">1995</span>; <span class="volume" tagx="volume" title="volume">10</span>( <span class="issue" tagx="issue" title="issue">4</span>): <span class="fpage" tagx="fpage" title="fpage">354</span>– <span class="lpage" tagx="lpage" title="lpage">363</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.1214/ss/1177009869">10.1214/ss/1177009869</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref004" /> <span class="label" tagx="label" title="label">4</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Miller</span> <span class="given-names" tagx="given-names" title="given-names">SJ</span> </span>. <span class="source" tagx="source" title="source">Benford’s law: theory &amp;amp; applications</span>. <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">Princeton NJ</span>: <span class="publisher-name" tagx="publisher-name" title="publisher-name">Princeton University Press</span>; <span class="year" tagx="year" title="year">2015</span>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref005" /> <span class="label" tagx="label" title="label">5</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Tsagbey</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">de Carvalho</span> <span class="given-names" tagx="given-names" title="given-names">M</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Page</span> <span class="given-names" tagx="given-names" title="given-names">GL</span> </span>. <span class="mixed-article-title" title="mixed-article-title">All data are wrong, but some are useful? Advocating the need for data auditing</span>. <span class="source" tagx="source" title="source">Am Statist</span>. <span class="year" tagx="year" title="year">2017</span>; <span class="volume" tagx="volume" title="volume">71</span>: <span class="fpage" tagx="fpage" title="fpage">231</span>– <span class="lpage" tagx="lpage" title="lpage">235</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.1080/00031305.2017.1311282">10.1080/00031305.2017.1311282</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref006" /> <span class="label" tagx="label" title="label">6</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ley</span> <span class="given-names" tagx="given-names" title="given-names">E</span> </span>. <span class="mixed-article-title" title="mixed-article-title">On the peculiar distribution of the U.S. stock indexes’ digits</span>. <span class="source" tagx="source" title="source">Am Statist</span>. <span class="year" tagx="year" title="year">1996</span>; <span class="volume" tagx="volume" title="volume">50</span>( <span class="issue" tagx="issue" title="issue">4</span>): <span class="fpage" tagx="fpage" title="fpage">311</span>– <span class="lpage" tagx="lpage" title="lpage">313</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.2307/2684926">10.2307/2684926</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref007" /> <span class="label" tagx="label" title="label">7</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Corazza</span> <span class="given-names" tagx="given-names" title="given-names">M</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ellero</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zorzi</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span>. <span class="chapter-title" tagx="chapter-title" title="chapter-title">Checking financial markets via Benford’s law: the S&amp;amp;P 500 case</span> In: <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Corazza</span> <span class="given-names" tagx="given-names" title="given-names">M</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Pizzi</span> <span class="given-names" tagx="given-names" title="given-names">C</span> </span>, editors. <span class="source" tagx="source" title="source">Mathematical and Statistical Methods for Actuarial Sciences and Finance</span>. <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">Milano</span>: <span class="publisher-name" tagx="publisher-name" title="publisher-name">Springer Milan</span>; <span class="year" tagx="year" title="year">2010</span> p. <span class="fpage" tagx="fpage" title="fpage">93</span>– <span class="lpage" tagx="lpage" title="lpage">102</span>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref008" /> <span class="label" tagx="label" title="label">8</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Joannes-Boyau</span> <span class="given-names" tagx="given-names" title="given-names">R</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Bodin</span> <span class="given-names" tagx="given-names" title="given-names">T</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Scheffers</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sambridge</span> <span class="given-names" tagx="given-names" title="given-names">M</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">May</span> <span class="given-names" tagx="given-names" title="given-names">SM</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Using Benford’s law to investigate natural hazard dataset homogeneity</span>. <span class="source" tagx="source" title="source">Scient Rep</span>. <span class="year" tagx="year" title="year">2015</span>; <span class="volume" tagx="volume" title="volume">5</span>: <span class="fpage" tagx="fpage" title="fpage">12046</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1038/srep12046">10.1038/srep12046</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref009" /> <span class="label" tagx="label" title="label">9</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="collab'">collab: R Development Core Team</span>. <span class="source" tagx="source" title="source">R: A language and environment for statistical computing</span>. <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">Vienna, Austria</span>: <span class="publisher-name" tagx="publisher-name" title="publisher-name">R Foundation for Statistical Computing</span>; <span class="year" tagx="year" title="year">2016</span>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref010" /> <span class="label" tagx="label" title="label">10</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Emanuel</span> <span class="given-names" tagx="given-names" title="given-names">K</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Increasing destructiveness of tropical cyclones over the past 30 years</span>. <span class="source" tagx="source" title="source">Nature</span>. <span class="year" tagx="year" title="year">2005</span>; <span class="volume" tagx="volume" title="volume">436</span>: <span class="fpage" tagx="fpage" title="fpage">686</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1038/nature03906">10.1038/nature03906</a> </span> <span class="pub-id"> <a href="http://www.ncbi.nlm.nih.gov/pubmed/16056221">16056221</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref011" /> <span class="label" tagx="label" title="label">11</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Landsea</span> <span class="given-names" tagx="given-names" title="given-names">CW</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Hurricanes and global warming</span>. <span class="source" tagx="source" title="source">Nature</span>. <span class="year" tagx="year" title="year">2005</span>; <span class="volume" tagx="volume" title="volume">438</span>: <span class="fpage" tagx="fpage" title="fpage">E11</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1038/nature04477">10.1038/nature04477</a> </span> <span class="pub-id"> <a href="http://www.ncbi.nlm.nih.gov/pubmed/16371953">16371953</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref012" /> <span class="label" tagx="label" title="label">12</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation">Hijmans RJ. geosphere: spherical trigonometry; 2017. Available from: <a href="https://CRAN.R-project.org/package=geosphere">https://CRAN.R-project.org/package=geosphere</a>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref013" /> <span class="label" tagx="label" title="label">13</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Dobson</span> <span class="given-names" tagx="given-names" title="given-names">AJ</span> </span>. <span class="source" tagx="source" title="source">An introduction to generalized linear models</span>. <span class="edition" tagx="edition" title="edition">3rd ed</span> <span class="collab'">collab: Chapman &amp;amp; Hall/CRC</span>. <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">Boca Raton</span>: <span class="publisher-name" tagx="publisher-name" title="publisher-name">Chapman &amp;amp; Hall/CRC</span>; <span class="year" tagx="year" title="year">2008</span>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref014" /> <span class="label" tagx="label" title="label">14</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">De Boor</span> <span class="given-names" tagx="given-names" title="given-names">C</span> </span>. <span class="chapter-title" tagx="chapter-title" title="chapter-title">A practical guide to splines</span>; <span class="edition" tagx="edition" title="edition">rev. ed</span> <span class="source" tagx="source" title="source">Applied mathematical sciences</span>. <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">Berlin</span>: <span class="publisher-name" tagx="publisher-name" title="publisher-name">Springer</span>; <span class="year" tagx="year" title="year">2001</span>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref015" /> <span class="label" tagx="label" title="label">15</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Fahrmeir</span> <span class="given-names" tagx="given-names" title="given-names">L</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Kneib</span> <span class="given-names" tagx="given-names" title="given-names">T</span> </span>. <span class="source" tagx="source" title="source">Bayesian smoothing and regression for longitudinal, spatial and event history data</span>. <span class="publisher-name" tagx="publisher-name" title="publisher-name">Oxford University Press</span>; <span class="year" tagx="year" title="year">2011</span>. </span> </li> <li tag="ref"> <a name="pone.0213300.ref016" /> <span class="label" tagx="label" title="label">16</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lang</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Brezger</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Bayesian P-splines</span>. <span class="source" tagx="source" title="source">J Comput Graph Statist</span>. <span class="year" tagx="year" title="year">2004</span>; <span class="volume" tagx="volume" title="volume">13</span>( <span class="issue" tagx="issue" title="issue">1</span>): <span class="fpage" tagx="fpage" title="fpage">183</span>– <span class="lpage" tagx="lpage" title="lpage">212</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.1198/1061860043010">10.1198/1061860043010</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref017" /> <span class="label" tagx="label" title="label">17</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Brezger</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Steiner</span> <span class="given-names" tagx="given-names" title="given-names">WJ</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Monotonic regression based on Bayesian P-splines: an application to estimating price response functions from store-level scanner data </span>. <span class="source" tagx="source" title="source">J Bus Econ Statist</span>. <span class="year" tagx="year" title="year">2008</span>; <span class="volume" tagx="volume" title="volume">26</span>: <span class="fpage" tagx="fpage" title="fpage">90</span>– <span class="lpage" tagx="lpage" title="lpage">104</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.1198/073500107000000223">10.1198/073500107000000223</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref018" /> <span class="label" tagx="label" title="label">18</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Gamerman</span> <span class="given-names" tagx="given-names" title="given-names">D</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Sampling from the posterior distribution in generalized linear mixed models</span>. <span class="source" tagx="source" title="source">Statist Comput</span>. <span class="year" tagx="year" title="year">1997</span>; <span class="volume" tagx="volume" title="volume">7</span>( <span class="issue" tagx="issue" title="issue">1</span>): <span class="fpage" tagx="fpage" title="fpage">57</span>– <span class="lpage" tagx="lpage" title="lpage">68</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.1023/A:1018509429360">10.1023/A:1018509429360</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref019" /> <span class="label" tagx="label" title="label">19</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Brezger</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span>, <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lang</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Generalized structured additive regression based on Bayesian P-splines</span>. <span class="source" tagx="source" title="source">Comput Statist Data Anal</span>. <span class="year" tagx="year" title="year">2006</span>; <span class="volume" tagx="volume" title="volume">50</span>( <span class="issue" tagx="issue" title="issue">4</span>): <span class="fpage" tagx="fpage" title="fpage">967</span>– <span class="lpage" tagx="lpage" title="lpage">991</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.1016/j.csda.2004.10.011">10.1016/j.csda.2004.10.011</a> </span> </span> </li> <li tag="ref"> <a name="pone.0213300.ref020" /> <span class="label" tagx="label" title="label">20</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Diekmann</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span>. <span class="mixed-article-title" title="mixed-article-title">Not the first digit! Using Benford’s law to detect fraudulent scientific data</span>. <span class="source" tagx="source" title="source">J Appl Statist</span>. <span class="year" tagx="year" title="year">2007</span>; <span class="volume" tagx="volume" title="volume">34</span>( <span class="issue" tagx="issue" title="issue">3</span>): <span class="fpage" tagx="fpage" title="fpage">321</span>– <span class="lpage" tagx="lpage" title="lpage">329</span>. <span class="pub-id"> <a href="https://dx.doi.org/10.1080/02664760601004940">10.1080/02664760601004940</a> </span> </span> </li> </ul> </div> </div>  </body></html>
