@@ -1,6 +1,13 @@
 # climate
 OpenAccess papers mined for Climate Change
 
+## narrative
+Starting as a possible project for eLife sprint 20190904 in Cambridge and collaboration
+with Simon Worthington / [GenR](https://genr.eu/wp/open-science-and-climate-change-a-genr-theme/).
+
+A [Narrative](narrative.md) for this project.
+
+
 ## dictionaries
 Dictionaries specific for climate and other
 
