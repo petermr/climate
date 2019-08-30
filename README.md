@@ -1,6 +1,10 @@
 # climate
 OpenAccess papers mined for Climate Change
 
+## communal resources for OpenNotebook
+Much of the code and processes are shared between the OpenNotebook projects, see:
+[OpenNotebook](https://github.com/petermr/openNotebook/blob/master/README.md)
+
 ## narrative
 Starting as a possible project for eLife sprint 20190904 in Cambridge and collaboration
 with Simon Worthington / [GenR](https://genr.eu/wp/open-science-and-climate-change-a-genr-theme/).
