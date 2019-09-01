@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec3-ijerph-12-00767" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">3. Application</div>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.1. Study Area and Data Processing</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Anhui Province, an inland province in Southeast China (114.54°–119.37° E, 29.41°–34.38° N), was selected as the case study area for the application of the relative sensitivity indicator. Anhui Province has a high incidence of many infectious diseases, and encompasses different climates because it locates across the basins of the Yangtze and Huai Rivers (
+   <a ref-type="fig" rid="ijerph-12-00767-f003" href="#ijerph-12-00767-f003">Figure 3</a>). The northern part of the province is part of the North China Plain, which is more temperate and with more clear-cut seasons. In contrast, the southern part is warmer and has more rainfall. In terms of administrative districts, Anhui Province is composed of 17 cities and 61 counties (hereafter all administration units are referred to as counties).
+  </p>
+  <div id="ijerph-12-00767-f003" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 3</span>
+   <div class="caption">
+    <p>Location of the study area and its sub-areas.</p>
+   </div>
+   <div xlink:href="ijerph-12-00767-g003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Both the infectious diseases data and climate data at the county level were collected. Monthly cases of thirteen infectious diseases at the county level from 2004 to 2010 in Anhui Province were collected from an Internet-based infectious disease reporting system coordinated by the Chinese Center for Disease Control and Prevention (China CDC). The system provides a standardized platform for data collection throughout the entire nation, and ensures data quality and reliability much better than before. In Anhui Province, the infectious diseases include: dysentery, hand, foot and mouth disease (HFM), hepatitis A, hemorrhagic fever, typhoid fever, malaria, meningitis, influenza, schistosomiasis, Japanese encephalitis, avian influenza, leptospirosis and cholera. Months without reported incidences of a disease were excluded. The monthly incidence of each disease was calculated by dividing monthly cases through the corresponding population for each county except for HFM. For this illness, we divided the monthly cases by the number of children younger than 9 years old (0, 9) because of the special population that suffers from this disease [
+   <a rid="B22-ijerph-12-00767" ref-type="bibr" href="#B22-ijerph-12-00767">22</a>]. 
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We also collected monthly data concerning climate variables for each county at a spatial resolution of 5 km. The dataset was generated based on field observation, remotely sensed data and reanalysis data from the Land Surface Model over the Chinese mainland (which dates from 1960 to 2010) [
+   <a rid="B23-ijerph-12-00767" ref-type="bibr" href="#B23-ijerph-12-00767">23</a>]. In the study, three climate variables for the study periods were considered; monthly average temperature (MAT), monthly accumulated precipitation (MAP), and monthly average absolute humidity (MAAH). Moreover, county-level historical mean values (
+   <span class="italic">HC
+    <sub>i</sub>
+    <span class="sup">mean</span>
+   </span>) and the standard deviation (
+   <span class="italic">HC
+    <sub>i</sub>
+    <span class="sup">std</span>
+   </span>) of the three climate variables from 1973 to 2003 (30 years) were also calculated for identifying the exposure and non-exposure groups. Considering the statistical requirements of the linear regression method and the hypothesis test, only counties with at least 20 months of data concerning infectious disease, of which more than 5 and 7 months are in exposure and non-exposure groups, respectively, were regarded as the effective counties to be analyzed. The calculations were carried out using MATLAB 7.10.0 (R2010a).
+  </p>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.2. Results</div>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.2.1. Characteristics of Climate Variables in Exposure and Non-exposure Group</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">
+    <a ref-type="table" rid="ijerph-12-00767-t002" href="#ijerph-12-00767-t002">Table 2</a> shows the descriptive statistics for the differences in climate variables including temperature, precipitation and absolute humidity in exposure and non-exposure groups. 
+   </p>
+   <div id="ijerph-12-00767-t002" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="pii" class="object-id">ijerph-12-00767-t002_Table 2</span>
+    <span class="label">Table 2</span>
+    <div class="caption">
+     <p>Descriptive statistics for the climate variables in the exposure and non-exposure groups in Anhui province.</p>
+    </div>
+    <table frame="hsides" rules="groups">
+     <thead>
+      <tr>
+       <th rowspan="2" align="center" valign="middle" colspan="1">Climate Variables</th>
+       <th rowspan="2" align="center" valign="middle" colspan="1">Groups</th>
+       <th colspan="4" align="center" valign="middle" rowspan="1">| 
+        <span class="italic">PC
+         <sub>i</sub>
+        </span> − 
+        <span class="italic">HC
+         <sub>i</sub>
+         <span class="sup">mean</span>
+        </span>|
+       </th>
+      </tr>
+      <tr style="border-top: solid thin">
+       <th align="center" valign="middle" rowspan="1" colspan="1">Average</th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Maximum</th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Minimum</th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Standard Deviation</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td rowspan="2" align="center" valign="middle" colspan="1">Temperature (°C)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Exposure</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">2.11</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">4.57</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.75</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.76</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Non-exposure</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.53</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">1.63</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.0001</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.34</td>
+      </tr>
+      <tr style="border-top: solid thin">
+       <td rowspan="2" align="center" valign="middle" colspan="1">Precipitation (m)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Exposure</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">5.85</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">40.47</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.15</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">4.63</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Non-exposure</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">1.84</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">17.56</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.0008</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">1.96</td>
+      </tr>
+      <tr style="border-top: solid thin">
+       <td rowspan="2" align="center" valign="middle" colspan="1">Absolute Humidity (mg/L)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Exposure</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">115.24</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">253.05</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">34.65</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">44.69</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Non-exposure</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">38.30</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">115.15</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">0.002</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">25.35</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Taking temperature as an example, the averaged difference between the monthly average temperatures and the historical monthly mean temperatures is 0.53 °C in the non-exposure group with a maximum and standard deviation of 1.63 °C and 0.34 °C, respectively. In contrast, in the exposure group, the corresponding average difference is 2.11 °C, with a maximum value and standard deviation of 4.57 °C and 0.76 °C, respectively. Generally, the average difference in the exposure group is more than 2 times over that of the non-exposure group’s. There are also similar trends for precipitation and absolute humidity in Anhui Province.</p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.2.2. Screening Results for Climate Change-Sensitive Disease</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Among the above thirteen infectious diseases, nine (dysentery, HFM, hepatitis A, hemorrhagic fever, typhoid fever, malaria, meningitis, influenza, and schistosomiasis) were examined to investigate whether they would be affected by changes in the selected climatic variables based on the Relative Sensitivity indicator. The remaining four infectious diseases (Japanese encephalitis, avian influenza, leptospirosis and cholera) were excluded from the analysis due to their lower incidences during the 2004–2010 time period. 
+    <a ref-type="table" rid="ijerph-12-00767-t003" href="#ijerph-12-00767-t003">Table 3</a> shows the Relative Sensitivity (RS) of the nine infectious diseases to changes in climate variables, as exposure factors in Anhui Province. Relative Sensitivity values where 
+    <span class="italic">RS</span> ≠ 0 and 
+    <span class="italic">p</span> &lt; 0.05 represent significantly different associations between the exposed climate variable and the disease outcome in the exposure and non-exposure groups.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Considering that increasing temperature along with climate change is the main exposure climatic variable, the 
+    <span class="italic">RS</span> results suggested that six infectious diseases were affected by temperature change in more than 50% of the effective counties and cities in Anhui Province from 2004 to 2010; they are: HFM, malaria, influenza, typhoid fever, meningitis, and schistosomiasis. In contrast, dysentery, hepatitis A and hemorrhagic fever were affected in less than 50% of the effective counties and cities. Special hemorrhagic fever was affected in only 10% of the effective counties. 
+   </p>
+   <div id="ijerph-12-00767-t003" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="pii" class="object-id">ijerph-12-00767-t003_Table 3</span>
+    <span class="label">Table 3</span>
+    <div class="caption">
+     <p>The screening results for climate change-sensitive disease using RS indicator in Anhui province.</p>
+    </div>
+    <table frame="hsides" rules="groups">
+     <thead>
+      <tr>
+       <th rowspan="2" align="center" valign="middle" colspan="1">Diseases</th>
+       <th colspan="2" align="center" valign="middle" rowspan="1">Monthly Average Temperature</th>
+       <th colspan="2" align="center" valign="middle" rowspan="1">Monthly Accumulated Precipitation</th>
+       <th colspan="2" align="center" valign="middle" rowspan="1">Monthly Average Absolute Humidity</th>
+      </tr>
+      <tr style="border-top: solid thin">
+       <th align="center" valign="middle" rowspan="1" colspan="1">Effective Counties</th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Counties with RS ≠ 0 
+        <span class="sup">*</span> (Proportion)
+       </th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Effective Counties</th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Counties with RS ≠ 0 
+        <span class="sup">*</span> (Proportion)
+       </th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Effective Counties</th>
+       <th align="center" valign="middle" rowspan="1" colspan="1">Counties with RS ≠ 0 
+        <span class="sup">*</span> (Proportion)
+       </th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Dysentery</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">77</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">35 (45%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">77</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">51 (66%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">77</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">73 (95%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Hand, foot and mouth</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">76</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">48 (63%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">76</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">33 (43%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">76</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">72 (95%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Hepatitis A</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">69</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">33 (48%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">68</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">40 (59%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">68</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">37 (54%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Malaria</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">36</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">21 (59%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">36</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">10 (28%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">36</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">30 (83%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Influenza</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">29</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">20 (69%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">29</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">10 (34%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">29</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">18 (62%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Typhoid fever</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">16</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">10 (63%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">15</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">9 (60%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">16</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">10 (63%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Hemorrhagic fever</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">10</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">1 (10%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">10</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">2 (20%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">10</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">6 (60%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Meningitis</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">8</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">4(50%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">8</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">3 (38%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">8</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">7 (88%)</td>
+      </tr>
+      <tr>
+       <td align="center" valign="middle" rowspan="1" colspan="1">Schistosomiasis</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">9</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">6 (67%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">7</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">4 (57%)</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">9</td>
+       <td align="center" valign="middle" rowspan="1" colspan="1">5 (56%)</td>
+      </tr>
+     </tbody>
+    </table>
+    <div class="table-wrap-foot">
+     <fn class="fn" xmlns="">
+      <p xmlns="http://www.w3.org/1999/xhtml">
+       <span class="bold">*</span>
+       <span class="italic">p</span>-value is less than 0.05.
+      </p>
+     </fn>
+    </div>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">By comparing the 
+    <span class="italic">RS</span> calculated from the disease incidence and precipitation in the exposure and non-exposure groups, the relative sensitivity indicator showed that precipitation change has direct or indirect effects on the sensitivities of dysentery, hepatitis A, typhoid fever and schistosomiasis in more than 50% of the effective counties in Anhui Province. For the diseases of HFM, malaria, influenza, meningitis, and hemorrhagic fever, most effective counties (67%–80%) had not witnessed the impact of precipitation change on disease epidemics in Anhui Province.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">When the absolute humidity was taken as the exposed factor, the 
+    <span class="italic">RS</span> values showed that the change of absolute humidity produced an effect on all the nine infectious diseases, including dysentery, HFM, hepatitis A, hemorrhagic fever, typhoid fever, malaria, meningitis, influenza and schistosomiasis, in more than 50% of the effective counties in Anhui province. 95% of the effective counties experienced different sensitivities to dysentery and HFM to absolute humidity at two different climate statuses in the exposure and non-exposure groups. 
+   </p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.2.3. Spatial Distribution for RS of the Climate Change-Sensitive Disease</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Besides finding out which diseases’ transmission would be affected by climate change, we also investigated where infectious diseases were more sensitive to climate change, in support of the prevention of these infectious diseases in local areas. Here, the top two infectious disease, 
+    <span class="italic">i.e.</span>, HFMs and dysenteries were employed to explain the spatial distribution of the relative sensitivity indicator in 
+    <a ref-type="fig" rid="ijerph-12-00767-f004" href="#ijerph-12-00767-f004">Figure 4</a> and 
+    <a ref-type="fig" rid="ijerph-12-00767-f005" href="#ijerph-12-00767-f005">Figure 5</a>. 
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">In Anhui Province, a total of 169,287 HFM cases and 92,047 dysentery cases were reported from 2004 to 2010. In spatial distribution, the prevalence of HFM was sensitive to temperature change in 63% of the effective counties, which are scattered around the northeast, midwest and south parts of Anhui Province (
+    <a ref-type="fig" rid="ijerph-12-00767-f004" href="#ijerph-12-00767-f004">Figure 4</a>a). 
+   </p>
+   <div id="ijerph-12-00767-f004" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span class="label">Figure 4</span>
+    <div class="caption">
+     <p>The spatial distribution of 
+      <span class="italic">RS</span> for HFM in Anhui Province: (
+      <span class="bold">a</span>) RS to temperature; (
+      <span class="bold">b</span>) RS to precipitation; (
+      <span class="bold">c</span>) RS to absolute humidity.
+     </p>
+    </div>
+    <div xlink:href="ijerph-12-00767-g004" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">It is worthwhile to note that the relative sensitivity of HFM in eight cities among the twelve effective cities was smaller compared to that in the surrounding rural counties. There was also a similar phenomenon in the effect of absolute humidity change on HFM. The incidence of HFM in eleven cities of the sixteen effective cities were less sensitive than that in the nearby rural counties to the change of absolute humidity. It is evident that better medical conditions in cities 
+    <span class="italic">versus</span> rural counties can reduce sensitivity of climate change to some extent. 
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">As for dysentery, the thirty five counties where disease outbreak was sensitive to the temperature change were mainly located along a band distribution from the northwest to southeast. The counties with significantly different association between dysentery incidence and precipitation in the exposure and non-exposure groups were mainly located along the Huai River and Yangtze River. For most parts of Anhui Province, except some southwestern counties, dysentery incidence was sensitive to the change of absolute humidity. Moreover, the relative sensitivity to absolute humidity in thirteen urban cities was smaller than that in the surrounding rural counties. That is to say, rural areas may be the key areas that need more inputs in response to climate change due to the relatively underdeveloped medical conditions. </p>
+   <div id="ijerph-12-00767-f005" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span class="label">Figure 5</span>
+    <div class="caption">
+     <p>The spatial distribution of RS for dysentery in Anhui Province: (
+      <span class="bold">a</span>) RS to temperature; (
+      <span class="bold">b</span>) RS to precipitation; (
+      <span class="bold">c</span>) RS to absolute humidity.
+     </p>
+    </div>
+    <div xlink:href="ijerph-12-00767-g005" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </sec>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.3. Discussions</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To our knowledge, this is the first study on identifying the sensitivity of the incidence of many infectious diseases to climate change in an area based on a statistical indicator. There are three main strengths of the Relative Sensitivity indicator for screening climate-change sensitive diseases. First, it could reduce the influence of seasonality and inter-annual trends in the data to some extent. It is well noticed that the original data, especially the climatic data, has notable seasonality and inter-annual trends (see 
+   <a ref-type="fig" rid="ijerph-12-00767-f002" href="#ijerph-12-00767-f002">Figure 2</a>a). Thus, the existing methods (e.g., correlation analysis) always require essential data pre-processing to avoid these influences. However, when calculating Relative Sensitivity, the exposure and non-exposure groups were defined according to the difference of the climate variable between the month of interest and the historical mean value of that month, which could considerably reduce the impact of seasonality and trend. Second, Relative Sensitivity is a comprehensive indicator with a statistical basis for screening climate-change sensitive diseases, 
+   <span class="italic">i.e.</span>, the sensitivity difference between different groups (
+   <span class="italic">i.e.</span>, exposure and non-exposure groups), is strictly examined by a well-developed hypothesis test (
+   <span class="italic">F</span>-test). Lastly, Relative Sensitivity could be adopted for short time series datasets. As mentioned before, one of the limitations for the correlation analysis methods is that they require a relatively long and continuous time series dataset for a reliable result. Therefore, the unavailability and discontinuity of long-term epidemic data seriously limit their applications. On the contrary, Relative Sensitivity could work well, even if the time series is relatively short and discontinuous in the temporal domain. Specifically, Relative Sensitivity only needs more than five data points in each group for the linear regression model, although we acknowledge that more data points could improve the reliability of relative sensitivity to some extent.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Besides the advantages mentioned above, there are also several limitations that should be well studied in the future. One is that Relative Sensitivity is now designed for only one climate variable. In fact, changes in multiple climate variables could affect infectious diseases simultaneously. This issue should be well addressed in the future. Fortunately, Relative Sensitivity could be easily expanded to multiple climate variables, since the hypothesis test and linear regression model, as two crucial steps for Relative Sensitivity, for multiple variables have been well established. In addition, the current definition of Relative Sensitivity is the absolute value of differences between exposure and non-exposure groups, which loses the direction of changes of the infectious diseases caused by climate change. Thus, an improved version of Relative Sensitivity should be developed by considering both the magnitude and direction of relative sensitivity caused by climate change. Additionally, the Relative Sensitivity does not consider the temporal autocorrelation in incidence data. There are several reasons that might lead to temporal autocorrelation in incidence data. One reason is that there might be a time gap between getting infected and showing symptoms, which varies for different diseases. For diseases with long time gaps, the disease incidence for one month might be the result from infections during previous months. However, temporal autocorrelation caused by this could be partially avoided by using prior knowledge about specific diseases in epidemiology, such as applying lag days between getting infected and showing symptoms (or reporting incidence) to artificially match incidence data with climate variables of preceding months. Another reason for temporal autocorrelation is that high incidence in one month might increase transmission potential in subsequent months. This factor is difficult to address by statistical methods, since it is impossible to quantify this transmission potential using monthly aggregated incidence data. In order to quantify this influence, a dynamic model characterizing transmission process might be helpful. In further studies, combining transmission dynamic modeling and statistical approaches might be a potential way to address this issue.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Other studies have also assessed the influence of climate change on the incidence of different infectious diseases adopting different methods. Consistent with previous studies, empirical data analysis also showed that one or more climate variables could lead to more disease cases in some places [
+   <a rid="B24-ijerph-12-00767" ref-type="bibr" href="#B24-ijerph-12-00767">24</a>,
+   <a rid="B25-ijerph-12-00767" ref-type="bibr" href="#B25-ijerph-12-00767">25</a>]. For example, temperature was significantly correlated with the incidence of HFM [
+   <a rid="B26-ijerph-12-00767" ref-type="bibr" href="#B26-ijerph-12-00767">26</a>,
+   <a rid="B27-ijerph-12-00767" ref-type="bibr" href="#B27-ijerph-12-00767">27</a>,
+   <a rid="B28-ijerph-12-00767" ref-type="bibr" href="#B28-ijerph-12-00767">28</a>], malaria [
+   <a rid="B29-ijerph-12-00767" ref-type="bibr" href="#B29-ijerph-12-00767">29</a>,
+   <a rid="B30-ijerph-12-00767" ref-type="bibr" href="#B30-ijerph-12-00767">30</a>], influenza [
+   <a rid="B31-ijerph-12-00767" ref-type="bibr" href="#B31-ijerph-12-00767">31</a>,
+   <a rid="B32-ijerph-12-00767" ref-type="bibr" href="#B32-ijerph-12-00767">32</a>], typhoid fever [
+   <a rid="B33-ijerph-12-00767" ref-type="bibr" href="#B33-ijerph-12-00767">33</a>,
+   <a rid="B34-ijerph-12-00767" ref-type="bibr" href="#B34-ijerph-12-00767">34</a>], meningitis [
+   <a rid="B35-ijerph-12-00767" ref-type="bibr" href="#B35-ijerph-12-00767">35</a>], and schistosomiasis [
+   <a rid="B36-ijerph-12-00767" ref-type="bibr" href="#B36-ijerph-12-00767">36</a>]. Precipitation change has been shown different effects on sensitivity of dysentery [
+   <a rid="B37-ijerph-12-00767" ref-type="bibr" href="#B37-ijerph-12-00767">37</a>,
+   <a rid="B38-ijerph-12-00767" ref-type="bibr" href="#B38-ijerph-12-00767">38</a>], hepatitis A [
+   <a rid="B39-ijerph-12-00767" ref-type="bibr" href="#B39-ijerph-12-00767">39</a>], typhoid fever [
+   <a rid="B33-ijerph-12-00767" ref-type="bibr" href="#B33-ijerph-12-00767">33</a>,
+   <a rid="B39-ijerph-12-00767" ref-type="bibr" href="#B39-ijerph-12-00767">39</a>], and schistosomiasis [
+   <a rid="B36-ijerph-12-00767" ref-type="bibr" href="#B36-ijerph-12-00767">36</a>,
+   <a rid="B40-ijerph-12-00767" ref-type="bibr" href="#B40-ijerph-12-00767">40</a>]. Researchers are also interested in the relationship between humidity and infectious disease outbreaks, but most of the time relative humidity is employed [
+   <a rid="B41-ijerph-12-00767" ref-type="bibr" href="#B41-ijerph-12-00767">41</a>], such as the effect of relative humidity on dysentery [
+   <a rid="B38-ijerph-12-00767" ref-type="bibr" href="#B38-ijerph-12-00767">38</a>], HFM [
+   <a rid="B25-ijerph-12-00767" ref-type="bibr" href="#B25-ijerph-12-00767">25</a>], malaria [
+   <a rid="B29-ijerph-12-00767" ref-type="bibr" href="#B29-ijerph-12-00767">29</a>], typhoid fever [
+   <a rid="B42-ijerph-12-00767" ref-type="bibr" href="#B42-ijerph-12-00767">42</a>], and so on. Relative humidity measures the ratio of water vapor content in the air to the saturating level, which varies with temperature. By contrast, absolute humidity measures the ratio of actual amount of water present in the air, without considering the temperature [
+   <a rid="B43-ijerph-12-00767" ref-type="bibr" href="#B43-ijerph-12-00767">43</a>]. Shaman found that absolute humidity constrains both transmission efficiency and virus survival much more significantly than relative humidity in influenza epidemics [
+   <a rid="B43-ijerph-12-00767" ref-type="bibr" href="#B43-ijerph-12-00767">43</a>]. Besides the emerging hypothesis that absolute humidity is an important determinant of observed influenza outcomes [
+   <a rid="B31-ijerph-12-00767" ref-type="bibr" href="#B31-ijerph-12-00767">31</a>,
+   <a rid="B43-ijerph-12-00767" ref-type="bibr" href="#B43-ijerph-12-00767">43</a>,
+   <a rid="B44-ijerph-12-00767" ref-type="bibr" href="#B44-ijerph-12-00767">44</a>,
+   <a rid="B45-ijerph-12-00767" ref-type="bibr" href="#B45-ijerph-12-00767">45</a>], this study provides novel ecologic evidence that absolute humidity has also a critical influence on many observed infectious diseases in Anhui Province, including dysentery, HFM, hepatitis A, hemorrhagic fever, typhoid fever, malaria, meningitis and schistosomiasis.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Although the impacts of climate change on infectious diseases are detected worldwide, the forms and degree of impacts differ greatly. Because of the complex interactions process between climate variables and infectious diseases’ components (pathogen, host and transmission environment) for the specific diseases [
+   <a rid="B4-ijerph-12-00767" ref-type="bibr" href="#B4-ijerph-12-00767">4</a>], the impacts are different at different geographic scales for different infectious diseases, and sometimes controversial [
+   <a rid="B46-ijerph-12-00767" ref-type="bibr" href="#B46-ijerph-12-00767">46</a>,
+   <a rid="B47-ijerph-12-00767" ref-type="bibr" href="#B47-ijerph-12-00767">47</a>]. Moreover, the incidence of infectious disease is tied to many other factors besides climate, such as the location of the respective countries and socio-economical situations, pollution, and healthcare conditions [
+   <a rid="B46-ijerph-12-00767" ref-type="bibr" href="#B46-ijerph-12-00767">46</a>]. In this study, we also found that the Relative Sensitivity of infectious diseases to climate change in Anhui province is different in space. For example, dysentery and HFM are more sensitive to climate change in rural areas than that in urban areas. Taking HFM for example, it is a childhood disease caused by human enteroviruses, particularly coxsackie viruses and human enterovirus 71 (HEV71) [
+   <a rid="B26-ijerph-12-00767" ref-type="bibr" href="#B26-ijerph-12-00767">26</a>]. Different thermal effects on HEV71 rely on the local sensitivity of temperature and humidity, or resistant serotype [
+   <a rid="B48-ijerph-12-00767" ref-type="bibr" href="#B48-ijerph-12-00767">48</a>,
+   <a rid="B49-ijerph-12-00767" ref-type="bibr" href="#B49-ijerph-12-00767">49</a>]. Warmer and moister environment was helpful to prolong the viability of HEV71 and the transmission of HFM [
+   <a rid="B26-ijerph-12-00767" ref-type="bibr" href="#B26-ijerph-12-00767">26</a>]. At the same time, lower temperature could decrease the gathering activity and cross infection between children, thus interrupting the disease transmission. Many researchers measured the correlation between climate variables and HFM and reported a 1.4% to 36% increase of disease incidence per 1 °C increment of temperature [
+   <a rid="B26-ijerph-12-00767" ref-type="bibr" href="#B26-ijerph-12-00767">26</a>,
+   <a rid="B50-ijerph-12-00767" ref-type="bibr" href="#B50-ijerph-12-00767">50</a>,
+   <a rid="B51-ijerph-12-00767" ref-type="bibr" href="#B51-ijerph-12-00767">51</a>,
+   <a rid="B52-ijerph-12-00767" ref-type="bibr" href="#B52-ijerph-12-00767">52</a>] and a 0.5% to 4.7% increase for every 1% increase in relative humidity [
+   <a rid="B50-ijerph-12-00767" ref-type="bibr" href="#B50-ijerph-12-00767">50</a>,
+   <a rid="B51-ijerph-12-00767" ref-type="bibr" href="#B51-ijerph-12-00767">51</a>]. On the other hand, some non-climatic determinants could impact the transmission of HFM, such as the child population density, good hygiene practices, and disease surveillance systems [
+   <a rid="B26-ijerph-12-00767" ref-type="bibr" href="#B26-ijerph-12-00767">26</a>,
+   <a rid="B46-ijerph-12-00767" ref-type="bibr" href="#B46-ijerph-12-00767">46</a>]. Importantly, there was an obvious difference of these non-climatic determinants in Anhui province, for example, the expenditure on food and health care was much higher in urban areas than that in rural areas [
+   <a rid="B53-ijerph-12-00767" ref-type="bibr" href="#B53-ijerph-12-00767">53</a>].
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">It is important to answer why certain diseases are more sensitive than others to specific climate variables. However this requires deeper understanding of the transmission mechanism of infectious disease and more data on the pathogens and host. It is beyond the scope of this study and should be addressed in the future research.</p>
+ </sec>
+</sec>

@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec005" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Projecting effects of climate change on First Nations’ fisheries</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">A dynamic bioclimate envelope model (DBEM) [
+  <a rid="pone.0145285.ref039" ref-type="bibr" href="#pone.0145285.ref039">39</a>,
+  <a rid="pone.0145285.ref070" ref-type="bibr" href="#pone.0145285.ref070">70</a>] was used to model changes to the distributions and relative abundances of the studied species under two climate change scenarios. Current (1971–2000) species’ distributions were obtained using an SDM developed by the 
+  <span class="italic">Sea Around Us</span> Project [
+  <a rid="pone.0145285.ref049" ref-type="bibr" href="#pone.0145285.ref049">49</a>,
+  <a rid="pone.0145285.ref071" ref-type="bibr" href="#pone.0145285.ref071">71</a>]. The model determines distributions of marine fishes and invertebrates by employing a set of filters including: (i) presence in FAO area(s); (ii) latitudinal range; (iii) range-limiting polygons; (iv) depth range; (v) habitat preferences; and (vi) the effect of ‘equatorial submergence’ (for detailed methodology, please refer to [
+  <a rid="pone.0145285.ref071" ref-type="bibr" href="#pone.0145285.ref071">71</a>]). Data for these filters were primarily derived from FishBase [
+  <a rid="pone.0145285.ref049" ref-type="bibr" href="#pone.0145285.ref049">49</a>,
+  <a rid="pone.0145285.ref072" ref-type="bibr" href="#pone.0145285.ref072">72</a>], SeaLifeBase [
+  <a rid="pone.0145285.ref073" ref-type="bibr" href="#pone.0145285.ref073">73</a>] and the Encyclopedia of Life [
+  <a rid="pone.0145285.ref074" ref-type="bibr" href="#pone.0145285.ref074">74</a>,
+  <a rid="pone.0145285.ref075" ref-type="bibr" href="#pone.0145285.ref075">75</a>], which were supplemented or cross-checked with data collected from the Department of Fisheries and Oceans Canada (DFO) reports, and peer-reviewed literature. For species with limited life history records, data for species within the same genus were used. Range-limiting polygons were produced using known latitudinal and longitudinal ranges and the resulting distributional maps were cross-checked with AquaMaps [
+  <a rid="pone.0145285.ref076" ref-type="bibr" href="#pone.0145285.ref076">76</a>], the IUCN Red List of Threatened Species [
+  <a rid="pone.0145285.ref077" ref-type="bibr" href="#pone.0145285.ref077">77</a>], and FAO’s Aquatic Species Distribution Viewer [
+  <a rid="pone.0145285.ref078" ref-type="bibr" href="#pone.0145285.ref078">78</a>] (see 
+  <a rid="pone.0145285.s011" ref-type="supplementary-material" href="#pone.0145285.s011">S1 Data</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Based on modelled current distributions, the DBEM simulates changes in the relative abundance of each species in each 0.5° latitudinal x 0.5° longitudinal cell of the ocean. By overlaying the current predicted relative abundance on modelled ocean properties from Earth System Models for the contemporary period (1971–2000), we identified species’ preferences to environmental conditions that are defined by sea water temperature (surface and bottom), salinity, sea ice concentration, bathymetry and habitat types (e.g., estuaries, seamounts, shelf). Species’ carrying capacities (
+  <span class="italic">K</span>) in each cell (
+  <span class="italic">i</span>) are positively related to inferred environmental preferences and the environmental conditions. Changes in relative abundance (
+  <span class="italic">Abd</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) in each cell (
+  <span class="italic">i</span>) at each time step (
+  <span class="italic">t</span>) were simulated based on the following algorithm (see Cheung et al. 2011 for details): 
+  <div id="pone.0145285.e001" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0145285.e001.jpg" id="pone.0145285.e001g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M1" class="math">
+     <div class="mrow">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">d</span>
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="bold-italic" class="mi">A</span>
+        <span mathvariant="bold-italic" class="mi">b</span>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">d</span>
+         <span mathvariant="bold-italic" class="mi">i</span>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">d</span>
+        <span mathvariant="bold-italic" class="mi">t</span>
+       </div>
+      </div>
+      <span mathvariant="bold" class="mo">=</span>
+      <span width="0.2em" class="mspace"/>
+      <div class="msubsup">
+       <span mathvariant="bold" class="mi">∑</span>
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">j</span>
+        <span mathvariant="bold-italic" class="mo">=</span>
+        <span mathvariant="bold" class="mn">1</span>
+       </div>
+       <span mathvariant="bold-italic" class="mi">N</span>
+      </div>
+      <div class="msub">
+       <span mathvariant="bold-italic" class="mi">G</span>
+       <span mathvariant="bold-italic" class="mi">i</span>
+      </div>
+      <span mathvariant="bold" class="mo">+</span>
+      <div class="msub">
+       <span mathvariant="bold-italic" class="mi">L</span>
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">j</span>
+        <span mathvariant="bold-italic" class="mi">i</span>
+       </div>
+      </div>
+      <span mathvariant="bold" class="mo">+</span>
+      <div class="msub">
+       <span mathvariant="bold-italic" class="mi">I</span>
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">j</span>
+        <span mathvariant="bold-italic" class="mi">i</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div> where 
+  <span class="italic">Abd</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the relative abundance of cell 
+  <span class="italic">i</span>, 
+  <span class="italic">G</span> is the intrinsic population growth, and 
+  <span class="italic">L</span>
+  <sub>
+   <span class="italic">ji</span>
+  </sub> and 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">ji</span>
+  </sub> are settled larvae and net migrated adults from surrounding cells (
+  <span class="italic">j</span>), respectively [
+  <a rid="pone.0145285.ref009" ref-type="bibr" href="#pone.0145285.ref009">9</a>,
+  <a rid="pone.0145285.ref079" ref-type="bibr" href="#pone.0145285.ref079">79</a>]. Recruitment within the model thereby operates as a function of larval dispersal, settlement, and mortality, which is temperature dependent. However, the DBEM does not aim to represent the natural short-term (inter-annual) variability of recruitment; instead it aims to represent the long-term mean changes in production of the population. The intrinsic growth rate of a population is calculated as 
+  <div id="pone.0145285.e002" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0145285.e002.jpg" id="pone.0145285.e002g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M2" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span mathvariant="bold-italic" class="mi">G</span>
+       <span mathvariant="bold-italic" class="mi">i</span>
+      </div>
+      <span mathvariant="bold" class="mo">=</span>
+      <span mathvariant="bold-italic" class="mi">r</span>
+      <span mathvariant="bold" class="mo">⋅</span>
+      <span mathvariant="bold-italic" class="mi">A</span>
+      <span mathvariant="bold-italic" class="mi">b</span>
+      <div class="msub">
+       <span mathvariant="bold-italic" class="mi">d</span>
+       <span mathvariant="bold-italic" class="mi">i</span>
+      </div>
+      <span mathvariant="bold" class="mo">⋅</span>
+      <span mathvariant="bold" stretchy="false" class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mn">1</span>
+       <span mathvariant="bold" class="mo">−</span>
+       <div class="mfrac">
+        <div class="mrow">
+         <span mathvariant="bold-italic" class="mi">A</span>
+         <span mathvariant="bold-italic" class="mi">b</span>
+         <div class="msub">
+          <span mathvariant="bold-italic" class="mi">d</span>
+          <span mathvariant="bold-italic" class="mi">i</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <div class="msub">
+          <span mathvariant="bold-italic" class="mi">K</span>
+          <span mathvariant="bold-italic" class="mi">i</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span mathvariant="bold" stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(2)</span>
+  </div> where 
+  <span class="italic">r</span> is the intrinsic rate of population increase and 
+  <span class="italic">K</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the population carrying capacity for cell 
+  <span class="italic">i</span> that is expressed as a function of the habitat suitability, and theoretical unfished biomass of the cell. An advection-diffusion-reaction model is used to account for larval dispersal according to ocean conditions, while adult abundances diffuse following a gradient of habitat suitability [
+  <a rid="pone.0145285.ref009" ref-type="bibr" href="#pone.0145285.ref009">9</a>]. Further details regarding these methods were previously published by Cheung et al. (2009, 2010; [
+  <a rid="pone.0145285.ref009" ref-type="bibr" href="#pone.0145285.ref009">9</a>,
+  <a rid="pone.0145285.ref012" ref-type="bibr" href="#pone.0145285.ref012">12</a>,
+  <a rid="pone.0145285.ref042" ref-type="bibr" href="#pone.0145285.ref042">42</a>]).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Model simulation was driven by projected changes in ocean properties under two climate change scenarios: RCP 8.5 and 2.6, representing the high and low greenhouse gas emission scenarios respectively [
+  <a rid="pone.0145285.ref037" ref-type="bibr" href="#pone.0145285.ref037">37</a>,
+  <a rid="pone.0145285.ref080" ref-type="bibr" href="#pone.0145285.ref080">80</a>,
+  <a rid="pone.0145285.ref081" ref-type="bibr" href="#pone.0145285.ref081">81</a>]. Ocean properties—including sea surface temperature, sea bottom temperature, salinity, oxygen concentration, surface advection, and net primary production—were projected from NOAA’s Geophysical Fluid Dynamics Laboratory’s IPCC-class earth system model (GFDL ESM2M; [
+  <a rid="pone.0145285.ref082" ref-type="bibr" href="#pone.0145285.ref082">82</a>]). Based on the outputs from the DBEM, we calculated changes in species’ relative abundances, distributions, and richness, as well as corresponding changes in relative catch potential using species’ relative abundances and projected changes in primary productivity for each cell (methods based on [
+  <a rid="pone.0145285.ref070" ref-type="bibr" href="#pone.0145285.ref070">70</a>] and [
+  <a rid="pone.0145285.ref042" ref-type="bibr" href="#pone.0145285.ref042">42</a>]).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The latitudinal centroid (
+  <span class="italic">LC</span>) of each species was calculated as 
+  <div id="pone.0145285.e003" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0145285.e003.jpg" id="pone.0145285.e003g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M3" class="math">
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi">L</span>
+      <span mathvariant="bold-italic" class="mi">C</span>
+      <span mathvariant="bold" class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mi">∑</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">i</span>
+          <span mathvariant="bold" class="mo">=</span>
+          <span mathvariant="bold" class="mn">1</span>
+         </div>
+         <span mathvariant="bold-italic" class="mi">n</span>
+        </div>
+        <span mathvariant="bold-italic" class="mi">L</span>
+        <span mathvariant="bold-italic" class="mi">a</span>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">t</span>
+         <span mathvariant="bold-italic" class="mi">i</span>
+        </div>
+        <span class="mo">*</span>
+        <span mathvariant="bold-italic" class="mi">A</span>
+        <span mathvariant="bold-italic" class="mi">b</span>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">d</span>
+         <span mathvariant="bold-italic" class="mi">i</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mi">∑</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">i</span>
+          <span mathvariant="bold" class="mo">=</span>
+          <span mathvariant="bold" class="mn">1</span>
+         </div>
+         <span mathvariant="bold-italic" class="mi">n</span>
+        </div>
+        <span mathvariant="bold-italic" class="mi">A</span>
+        <span mathvariant="bold-italic" class="mi">b</span>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">d</span>
+         <span mathvariant="bold-italic" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(3)</span>
+  </div> where 
+  <span class="italic">Lat</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the latitudinal centre of the spatial cell (
+  <span class="italic">i</span>) and 
+  <span class="italic">n</span> is the total number of cells where abundance is greater than 0 [
+  <a rid="pone.0145285.ref009" ref-type="bibr" href="#pone.0145285.ref009">9</a>,
+  <a rid="pone.0145285.ref083" ref-type="bibr" href="#pone.0145285.ref083">83</a>]. The range shift, in kilometers, was then calculated from the difference between the latitudinal centroid of the projected and reference years as follows [
+  <a rid="pone.0145285.ref070" ref-type="bibr" href="#pone.0145285.ref070">70</a>]: 
+  <div id="pone.0145285.e004" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0145285.e004.jpg" id="pone.0145285.e004g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M4" class="math">
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi">Distance shifted</span>
+      <span width="0.25em" class="mspace"/>
+      <div class="mrow">
+       <span mathvariant="bold" class="mo">(</span>
+       <span mathvariant="bold-italic" class="mi">km</span>
+       <span mathvariant="bold" class="mo">)</span>
+      </div>
+      <span mathvariant="bold" class="mo">=</span>
+      <span width="0.1em" class="mspace"/>
+      <div class="mrow">
+       <span mathvariant="bold" class="mo">(</span>
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">L</span>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">C</span>
+         <span mathvariant="bold-italic" class="mi">m</span>
+        </div>
+        <span mathvariant="bold" class="mo">−</span>
+        <span mathvariant="bold-italic" class="mi">L</span>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">C</span>
+         <span mathvariant="bold-italic" class="mi">n</span>
+        </div>
+       </div>
+       <span mathvariant="bold" class="mo">)</span>
+      </div>
+      <div class="mfrac">
+       <span mathvariant="bold-italic" class="mi">π</span>
+       <div class="mrow">
+        <span mathvariant="bold" class="mn">180</span>
+       </div>
+      </div>
+      <span width="0.2em" class="mspace"/>
+      <span mathvariant="bold" class="mo">×</span>
+      <span width="0.2em" class="mspace"/>
+      <span mathvariant="bold-italic" class="mi">r</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(4)</span>
+  </div> where 
+  <span class="italic">r</span> = 6378.2 km, the approximate radius of the earth, and 
+  <span class="italic">LC</span>
+  <sub>
+   <span class="italic">m</span>
+  </sub> and 
+  <span class="italic">LC</span>
+  <sub>
+   <span class="italic">n</span>
+  </sub> are the latitudinal centroids in years 
+  <span class="italic">m</span> and 
+  <span class="italic">n</span>. Median values were used to estimate range shifts by taxonomic group in order to remove anomalies. The relative change in catch potential (%) was estimated from mean inferred current abundance (1971–2000), change in net primary production, and range area, as represented by the following algorithm, 
+  <div id="pone.0145285.e005" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0145285.e005.jpg" id="pone.0145285.e005g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M5" class="math">
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">Δ</span>
+      <span width="0.1em" class="mspace"/>
+      <div class="msub">
+       <span mathvariant="bold-italic" class="mi">Relative Catch Potential</span>
+       <span mathvariant="bold-italic" class="mi">t</span>
+      </div>
+      <span width="0.25em" class="mspace"/>
+      <div class="mrow">
+       <span mathvariant="bold" class="mo">(</span>
+       <span mathvariant="bold" class="mi">%</span>
+       <span mathvariant="bold" class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">∑</span>
+        <span width="0.2em" class="mspace"/>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">Abundance</span>
+         <span mathvariant="bold-italic" class="mi">t</span>
+        </div>
+        <span width="0.1em" class="mspace"/>
+        <span mathvariant="bold" class="mo">×</span>
+        <span width="0.1em" class="mspace"/>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">P</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">i</span>
+          <span class="mo">,</span>
+          <span mathvariant="bold-italic" class="mi">t</span>
+         </div>
+        </div>
+        <span width="0.1em" class="mspace"/>
+        <span mathvariant="bold" class="mo">×</span>
+        <span width="0.1em" class="mspace"/>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">A</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">i</span>
+          <span class="mo">,</span>
+          <span mathvariant="bold-italic" class="mi">t</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">∑</span>
+        <span width="0.2em" class="mspace"/>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">Abundance</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">t</span>
+          <span mathvariant="bold" class="mn">0</span>
+         </div>
+        </div>
+        <span width="0.1em" class="mspace"/>
+        <span mathvariant="bold" class="mo">×</span>
+        <span width="0.1em" class="mspace"/>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">P</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">i</span>
+          <span class="mo">,</span>
+          <span mathvariant="bold-italic" class="mi">t</span>
+          <span mathvariant="bold" class="mn">0</span>
+         </div>
+        </div>
+        <span width="0.1em" class="mspace"/>
+        <span mathvariant="bold" class="mo">×</span>
+        <span width="0.1em" class="mspace"/>
+        <div class="msub">
+         <span mathvariant="bold-italic" class="mi">A</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">i</span>
+          <span class="mo">,</span>
+          <span mathvariant="bold-italic" class="mi">t</span>
+          <span mathvariant="bold" class="mn">0</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span width="0.1em" class="mspace"/>
+      <span mathvariant="bold" class="mo">×</span>
+      <span width="0.2em" class="mspace"/>
+      <span mathvariant="bold" class="mn">100</span>
+      <span mathvariant="bold" class="mi">%</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(5)</span>
+  </div> where 
+  <span class="italic">P</span> and 
+  <span class="italic">A</span> are the net primary productivity and area of cell 
+  <span class="italic">i</span> at time step 
+  <span class="italic">t</span>, respectively [
+  <a rid="pone.0145285.ref012" ref-type="bibr" href="#pone.0145285.ref012">12</a>,
+  <a rid="pone.0145285.ref036" ref-type="bibr" href="#pone.0145285.ref036">36</a>]. Due to limited landings data, the results were reported as percent change in relative catch potential. Changes in species richness were inferred by modifying relative average abundance data for the projected (2041–2060) and reference (1991–2010) periods to reflect presence (1) or absence (0) within a given cell and summed to yield species richness for each cell within the area of interest. The difference was then obtained between the projected and reference periods. The threshold used to assess species’ presence or absence was 0 (Values &gt; 0 were assigned a value of 1), which represents an extremely conservative estimate given that species’ thresholds would differ depending on the spatial density and dynamics of the populations [
+  <a rid="pone.0145285.ref084" ref-type="bibr" href="#pone.0145285.ref084">84</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Relative changes in commercial catch potential (%) were calculated for each 0.5° longitudinal x 0.5° latitudinal grid-cell situated in BC’s waters within Canada’s exclusive economic zone (EEZ) using 20-year average abundances for 2050 (2041–2060) relative to 2000 (1991–2010) obtained from the DBEM simulations. Species were aggregated by commercial fishery, noting the proportion of species included in the analysis relative to those included in each fishery’s quota (
+  <a rid="pone.0145285.s005" ref-type="supplementary-material" href="#pone.0145285.s005">S2 Table</a>). Regional impacts on FSC fisheries were estimated by using First Nations’ DFAs as outlined by the SOI boundaries submitted to the BC Treaty Commission, with the change in relative catch potential calculated for each species within each DFA.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Annual landed values by taxon or fishery (e.g., herring spawn-on-kelp) between 2001 and 2010 were obtained from the BC Ministry of Agriculture’s annual reports and averaged to provide mean annual landed revenue [
+  <a rid="pone.0145285.ref085" ref-type="bibr" href="#pone.0145285.ref085">85</a>–
+  <a rid="pone.0145285.ref089" ref-type="bibr" href="#pone.0145285.ref089">89</a>]. Projected changes in relative catch potential for each commercial fishery under RCPs 2.6 and 8.5 were subsequently used to derive an estimate of changes in mean annual landed revenue (in 2010 CAD) given the approximate proportion of licenses held by First Nations [
+  <a rid="pone.0145285.ref090" ref-type="bibr" href="#pone.0145285.ref090">90</a>](
+  <a rid="pone.0145285.s006" ref-type="supplementary-material" href="#pone.0145285.s006">S3 Table</a>). These changes in landed revenue were calculated using the following equation: 
+  <div id="pone.0145285.e006" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0145285.e006.jpg" id="pone.0145285.e006g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M6" class="math">
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">Δ</span>
+      <span mathvariant="bold-italic" class="mi">R</span>
+      <span mathvariant="bold" class="mo">=</span>
+      <span mathvariant="bold-italic" class="mi">R</span>
+      <span width="0.2em" class="mspace"/>
+      <span mathvariant="bold" class="mo">×</span>
+      <span width="0.2em" class="mspace"/>
+      <div class="mrow">
+       <span mathvariant="bold" class="mo">(</span>
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">Δ</span>
+          <span mathvariant="bold-italic" class="mi">CP</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="bold" class="mn">100</span>
+         </div>
+        </div>
+       </div>
+       <span mathvariant="bold" class="mo">)</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(6)</span>
+  </div> where 
+  <span class="bold">Δ
+   <span class="italic">R</span>
+  </span> is the projected change in First Nations’ mean annual landed revenue by 2050, 
+  <span class="bold">
+   <span class="italic">R</span>
+  </span> represents First Nations’ estimated current mean annual landed revenue (2001–2010), and 
+  <span class="bold">Δ
+   <span class="italic">CP</span>
+  </span> represents the projected per cent change in relative catch potential by 2050. Data outlining landed revenue in the Heiltsuk commercial intertidal bivalve fishery and First Nations’ participation in the commercial green sea urchin fishery, tuna fishery, and groundfish trawl and hook and lines fisheries were not available, and were therefore not included in the estimates of changes in landed revenue in the EEZ.
+ </p>
+</sec>

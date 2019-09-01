@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Mapping thermal suitability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The Mordecai et al. (
+   <a rid="B27" ref-type="bibr" href="#B27">2013</a>) model measured transmission using 
+   <span class="italic">R
+    <sub>0</sub>
+   </span>, the number of secondary infections expected when an infected individual enters a fully susceptible population. The model is an extension of the classic Kermack–McKendrick model, and 
+   <span class="italic">R
+    <sub>0</sub>
+   </span> is given by: 
+   <div class="disp-formula">
+    <span id="eq1" notation="LaTeX" class="tex-math">\documentclass{aastex}\usepackage{amsbsy}\usepackage{amsfonts}\usepackage{amssymb}\usepackage{bm}\usepackage{mathrsfs}\usepackage{pifont}\usepackage{stmaryrd}\usepackage{textcomp}\usepackage{portland, xspace}\usepackage{amsmath, amsxtra}\pagestyle{empty}\DeclareMathSizes{10}{9}{7}{6}\begin{document} \begin{align*}R_0 = \sqrt { \frac { M } { Nr } \frac { a^2 bc \ exp ( - \mu / PDR ) } { \mu } } \end{align*} \end{document}</span>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">N</span>, human population size; 
+   <span class="italic">a</span>, per-mosquito biting rate, or mean oviposition time
+   <span class="sup">−1</span>. 
+   <span class="italic">bc</span>, vector competence; μ, mosquito mortality rate; PDR, parasite development rate; and 
+   <span class="italic">M</span>, mosquito population size (which is itself determined by mosquito fecundity, development rate, and adult and egg/juvenile survival). All vector and parasite traits are assumed to depend on temperature and are modeled with hump-shaped responses fit to laboratory data. Human population density and human recovery rate (
+   <span class="italic">r</span>) from malaria are assumed to be temperature independent. When these are combined in the model, the result is a prediction curve of how 
+   <span class="italic">R</span>
+   <sub>0</sub> should vary across temperatures (Mordecai et al. 
+   <a rid="B27" ref-type="bibr" href="#B27">2013</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We describe the predicted proportion of optimal 
+   <span class="italic">R
+    <sub>0</sub>
+   </span> using quantiles capturing most (top 25%), high (25–50%), moderate (50–75%), and marginal (75—100%) suitability. These quantiles describe the proximity of temperatures to the optimal transmission temperature, 
+   <span class="italic">i.e</span>., the relative transmission risk, which we refer to as relative 
+   <span class="italic">R
+    <sub>0</sub>
+   </span>. The top three quantiles (0–75%) correspond to temperatures that promote malaria, whereas the last (marginal) likely limits transmission. To demonstrate the effects of nonlinear thermal responses, we compared the results with models that used the thermal responses from a previous mechanistic transmission model (Parham and Michael 
+   <a rid="B30" ref-type="bibr" href="#B30">2010</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The thermal response models were used to predict relative 
+   <span class="italic">R
+    <sub>0</sub>
+   </span> as a function of temperature and mapped onto temperature at 0.01°C increments using a geographic WGS84 (decimal degree) projection map of the African continent. Because moisture availability also limits mosquito survival, we masked areas that are too dry for too long for mosquitoes to develop and survive, based on the Normalized Difference Vegetation Index (NDVI), sensu Suzuki et al. (
+   <a rid="B42" ref-type="bibr" href="#B42">2006</a>), (see below). We then queried the map for suitability quantiles and calculated their areas. We used the statistical program R (R Core Team 
+   <a rid="B34" ref-type="bibr" href="#B34">2014</a>) for our analyses; specifically, we used the packages raster, sp, maptools, and rgdal to import and manipulate raster data as R objects, and rasterVis, lattice, latticeExtra, and ColorSpace to create our visualizations.
+  </p>
+ </sec>
+ <sec id="s004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used global monthly mean temperatures for the current climatic period (to 2000), calculated at a 30 arcsec resolution from WorldClim (Hijmans et al. 
+   <a rid="B18" ref-type="bibr" href="#B18">2005</a>), and clipped to the African continent. For future climate predictions, we used HadCM3 climate projections for 2020, 2050, and 2080 and selected SRES A1B emission scenarios, downscaled using the delta method (Ramirez and Jarvis 
+   <a rid="B35" ref-type="bibr" href="#B35">2008</a>). The A1B scenario falls in the center of projections of anthropogenic emissions and makes a general assumption of continuing globalization (Intergovernmental Panel on Climate Change 
+   <a rid="B20" ref-type="bibr" href="#B20">2007b</a>), while avoiding extremes. The delta method uses the long-term monthly mean of temperature generated by the HadCM3 global climate model to calculate anomalies for the generated time series (Ramirez and Jarvis 
+   <a rid="B35" ref-type="bibr" href="#B35">2008</a>), which are applied to higher-resolution temperature surfaces from WorldClim. We chose this method for its simplicity and sufficiency for continental level intermodel comparison. We aggregated the 5 arcmin (∼0.083°) data to 0.1° to match the data used to project the 
+   <span class="italic">R
+    <sub>0</sub>
+   </span> models.
+  </p>
+ </sec>
+ <sec id="s005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Aridity mask</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We defined moisture availability using thresholds of vegetation greenness, similar to the approach used by Guerra et al. (
+   <a rid="B16" ref-type="bibr" href="#B16">2008</a>) and following work by Suzuki et al. (
+   <a rid="B42" ref-type="bibr" href="#B42">2006</a>). Recent work by Baeza et al. (
+   <a rid="B3" ref-type="bibr" href="#B3">2011</a>) has shown that NDVI is a good predictor of malaria prevalence, typically better than rainfall when irrigation levels are low to moderate. Using NDVI allowed us to retain pockets of suitable transmission conditions such as river tributaries or irrigated land where transmission may be supported, while eliminating areas that are too dry for too long to support mosquito populations, regardless of temperature regime (Gething et al. 
+   <a rid="B13" ref-type="bibr" href="#B13">2011</a>, Guerra et al. 
+   <a rid="B16" ref-type="bibr" href="#B16">2008</a>, 
+   <a rid="B17" ref-type="bibr" href="#B17">2010</a>). Differences in rainfall within sufficiently humid regions may impact transmission, but NDVI has been shown to be a stronger predictor than precipitation for large geographic areas (Baeza et al. 
+   <a rid="B3" ref-type="bibr" href="#B3">2011</a>). We created pixel-wise monthly mean NDVI values from the USGS eMODIS product (Jenkerson et al. 
+   <a rid="B21" ref-type="bibr" href="#B21">2010</a>), using dekadal (10-day interval) data from 2001–2011 for the African continent from the Famine Early Warning System Network (FEWS NET) data portal (
+   <span xlink:type="simple" xlink:href="http://earlywarning.usgs.gov/fews/africa/index.php" class="uri" xmlns:xlink="http://www.w3.org/1999/xlink">http://earlywarning.usgs.gov/fews/africa/index.php</span>), aggregated from 250 meters to 0.1 degree resolution. We masked out pixels that did not have at least two consecutive months of NDVI above 0.125; this is slightly more conservative than the 0.1 limit of Suzuki et al. (
+   <a rid="B42" ref-type="bibr" href="#B42">2006</a>).
+  </p>
+ </sec>
+ <sec id="s006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Population risk projections</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To estimate the population at risk for transmission, we used population projection data for 2015 from the Gridded Populations of the World (GPW) version 3.0 (CIESIN, 
+   <a rid="B10" ref-type="bibr" href="#B10">2005</a>), and the Global Rural Urban Mapping Project (GRUMP) Urban extents layer (CIESIN, 
+   <a rid="B11" ref-type="bibr" href="#B11">2011</a>). We resampled the projected malaria model and urban extents to the GPW resolution (2.5 arcmin) using bilinear interpolation. To visualize the impact of malaria shift and population density, we first scaled malaria season duration (0–12 months) to a 0–1 scale and log-transformed population density for ease of visualization. Malaria transmission ceases to be a function of the environment in high-density urban areas (Gething et al. 
+   <a rid="B13" ref-type="bibr" href="#B13">2011</a>), so we excluded these from our analysis with the GRUMP data by simply masking out the areas described as urban extents.
+  </p>
+ </sec>
+</sec>

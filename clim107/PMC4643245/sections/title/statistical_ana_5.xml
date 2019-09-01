@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Survival was analysed using the counting process formulation of the Cox proportional hazard (CPH) model
+  <a ref-type="bibr" rid="b61" href="#b61">61</a>
+  <a ref-type="bibr" rid="b62" href="#b62">62</a>
+  <a ref-type="bibr" rid="b63" href="#b63">63</a> in R
+  <a ref-type="bibr" rid="b64" href="#b64">64</a>, version 3.0.1 with the function ‘coxph’ of package survival
+  <a ref-type="bibr" rid="b65" href="#b65">65</a>, version 2.37-4. The counting process formulation allows the coefficient to be estimated at each time point and thus time-dependent covariates, such as minimum temperature, DTR and age can be included. Time was portioned into daily intervals for all analyses.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">When analysing effects of climatic variables on system responses, the time window over which the climate variable affect system response needs to be identified. However, this time is usually not known. Should the temperature be quantified as a (weighted) mean over the preceding day, week or month? To resolve this, we identified the time window over which each climate variable affected survival using a flexible time window approach
+  <a ref-type="bibr" rid="b38" href="#b38">38</a>. In brief, this method uses a maximum-likelihood optimization procedure to estimate a weight function over a time window that creates weighted temperature variables that best describe the variation in mortality data. As weight function we used a three-parameter Weibull function. Weight functions may differ between treatments and between climatic variables, and we thus estimated weight functions for each climatic variable separately. To estimate the strength of the difference in time windows between climatic variables, we used the weight function of one climatic variable to construct the other weighted climatic variable. We then compared the fit of this model relative to the fit of the model with the best fitting weight function. Model fits were compared using Akaike Information Criterion (AICc). Weight functions of the climatic variables did not differ between treatments (0.1 &lt; ΔAICc &lt; 0.5) and hence all analyses were carried out using the weight functions as in 
+  <a ref-type="fig" rid="f3" href="#f3">Fig. 3</a> in both treatments.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Except for the first batch to enter the adult phase of the experiment, other batches were housed indoors prior to being entered into the experiment. These birds were thus not exposed to the outdoor climatic variables before starting the foraging cost experiment and their mortality cannot be included in the survival analyses for the length of the period that the weighted climatic variable was calculated. Given the results of the time window analysis (
+  <a ref-type="fig" rid="f3" href="#f3">Fig. 3</a>), we excluded the first month of survival data after birds were entered in the foraging cost experiment. As a control we also ran the final model with (i) all data included and (ii) three months of data excluded, and both gave results that were consistent with those reported here (results not shown).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used a model selection approach to find the model best supported by the data. To this end we followed Burnham and Anderson model selection approach
+  <a ref-type="bibr" rid="b66" href="#b66">66</a>
+  <a ref-type="bibr" rid="b67" href="#b67">67</a>, based on Akaike Information Criterion (AICc) with the function ‘dredge’ of the package ‘MuMIn’
+  <a ref-type="bibr" rid="b68" href="#b68">68</a>. In brief, this is a hypothesis-based approach that generates, given a global model, subset models that best fit the data. This makes it possible to assess model support for each hypothesis tested. Model support is shown here by ranking all subset models within 4 AICc of the best model fit. Weighted DTR and MinT were mean centered in all analyses.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The counting process formulation of the CPH model allows for non-proportionality by including the interaction between the main effect and time or age. Other assumptions of the CPH models were fulfilled as indicated by scaled deviance and martingale residual plots. Age was square-root transformed. Because, we found virtually no support for sex-specific mortality or for sex-specific DTR effects (see section 3 of the 
+  <a ref-type="supplementary-material" rid="S1" href="#S1">supplementary material</a>), sexes were pooled in all analyses. Many random effects can potentially be included in these analyses: birth nest, genetic mother, genetic father, rear nest, rear mother, rear father, (birth) batch and aviary. We ran all models with aviary as random effect. We previously verified that including other random effects in CPH models did not improve the models (results not shown).
+ </p>
+</sec>

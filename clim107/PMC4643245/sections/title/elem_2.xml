@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Birds and housing</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All birds used in this study were reared and housed at the University of Groningen, the Netherlands (53° 13′ 0” N/6° 33′, 0” E). Birds were bred indoors in single housed pairs housed in 80 × 40 x 40 cm (I × h × d) cages with two perches, a wooden nestbox and abundant nesting material (hay). Food (tropical seed mixture), water, grit and cuttlebone were provided ad libitum. In addition the birds received one teaspoon of fortified canary food (“eggfood”, by Bogena, Hedel, the Netherlands) 3 times a week, until hatching of the first chick. Birds were cross-fostered when the oldest chick in a brood was 5 days old to broods that were either small (2 young, sometimes 3) or large broods (6 young, sometimes 5 or 7). Birds reared in a large brood attained lower body mass during growth and this effect persisted into adulthood (Briga 
+   <span class="italic">et al.</span> submitted). Young were removed from the parental cage when 35 days old and housed in indoor aviaries until they were entered in the experiment at 3–4 months of age.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Adults were housed in eight large outdoor aviaries (L × H × W 310 × 210 × 150 cm) and subject to a foraging cost manipulation as described previously
+   <a ref-type="bibr" rid="b60" href="#b60">60</a>. Briefly, in each aviary a food box was attached to the ceiling, with holes in the sides from which food (tropical seed mixture) could be obtained. In the easy foraging environment (4 aviaries) the food box has perches beneath the holes, while in the hard foraging environment these were removed (also 4 aviaries), forcing birds to fly and hover for seeds. Water (for drinking and bathing), grit and cuttlebone were provided ad libitum. In addition the birds received 1.25 g of fortified canary food (“eggfood”, by Bogena, Hedel, the Netherlands) per individual per week in three portions given on different days.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Each aviary contained 15–30 birds of one sex (4 aviaries of each sex). To maintain numbers within a limited range, new birds were periodically added to replace dead birds. The first batch was 3–24 months old when the experiment started and variation in age when entering the experiment (‘AgeStart’) was therefore included as variable in all analyses. The first batch was kept in similar housing as in the experiment until the experiment started.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The foraging experiment was conducted from Dec 9
+   <span class="sup">th</span> 2007 till Jan 1
+   <span class="sup">st</span> 2013. During this period, 478 birds were entered in the experiment of which 285 died a natural death and 7 died an accidental death. In all analyses, accidental deaths and birds still alive were censored, but treating accidental deaths as natural deaths did not change the conclusions (results not shown).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">All methods and experimental protocols were carried out under the approval of the Animal Experimentation Ethical Committee of the University of Groningen, license 5150A. All methods were carried out in accordance with these approved guidelines.</p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Temperature data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Temperature data (
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1</a>) were collected at the weather station of Eelde, approximately 7 km from the aviaries (
+   <span ext-link-type="uri" xlink:href="http://www.knmi.nl/klimatologie/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.knmi.nl/klimatologie/</span>), where temperature was recorded 1.5 m above ground, every hour with accuracy of 0.1 °C. DTR is the difference between maximum (MaxT) and minimum (MinT) temperature within one day. Both MinT and DTR measured at the weather station correlate well with the measurements at the aviaries (N = 1196, r = 0.96 and 0.83 for MinT and DTR respectively; 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. S2</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Apparent effects of DTR on mortality could instead be caused by minimum or maximum temperature, because DTR will be higher when either minimum or maximum temperature has an extreme value. To resolve this issue, we included MinT as a covariate in addition to DTR in all analyses and also tested the interaction between MinT and DTR. Alternatively, we could have included MaxT instead of MinT. However, DTR = MaxT – MinT, and thus when MinT and DTR are given the corresponding MaxT is known. Hence having DTR in the model with either MinT or MaxT is mathematically equivalent. To confirm this point we reran the best fitting model in 
+   <a ref-type="table" rid="t1" href="#t1">Table 1</a> with MaxT instead of MinT which as expected confirmed the importance of DTR on mortality.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analyses</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Survival was analysed using the counting process formulation of the Cox proportional hazard (CPH) model
+   <a ref-type="bibr" rid="b61" href="#b61">61</a>
+   <a ref-type="bibr" rid="b62" href="#b62">62</a>
+   <a ref-type="bibr" rid="b63" href="#b63">63</a> in R
+   <a ref-type="bibr" rid="b64" href="#b64">64</a>, version 3.0.1 with the function ‘coxph’ of package survival
+   <a ref-type="bibr" rid="b65" href="#b65">65</a>, version 2.37-4. The counting process formulation allows the coefficient to be estimated at each time point and thus time-dependent covariates, such as minimum temperature, DTR and age can be included. Time was portioned into daily intervals for all analyses.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">When analysing effects of climatic variables on system responses, the time window over which the climate variable affect system response needs to be identified. However, this time is usually not known. Should the temperature be quantified as a (weighted) mean over the preceding day, week or month? To resolve this, we identified the time window over which each climate variable affected survival using a flexible time window approach
+   <a ref-type="bibr" rid="b38" href="#b38">38</a>. In brief, this method uses a maximum-likelihood optimization procedure to estimate a weight function over a time window that creates weighted temperature variables that best describe the variation in mortality data. As weight function we used a three-parameter Weibull function. Weight functions may differ between treatments and between climatic variables, and we thus estimated weight functions for each climatic variable separately. To estimate the strength of the difference in time windows between climatic variables, we used the weight function of one climatic variable to construct the other weighted climatic variable. We then compared the fit of this model relative to the fit of the model with the best fitting weight function. Model fits were compared using Akaike Information Criterion (AICc). Weight functions of the climatic variables did not differ between treatments (0.1 &lt; ΔAICc &lt; 0.5) and hence all analyses were carried out using the weight functions as in 
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3</a> in both treatments.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Except for the first batch to enter the adult phase of the experiment, other batches were housed indoors prior to being entered into the experiment. These birds were thus not exposed to the outdoor climatic variables before starting the foraging cost experiment and their mortality cannot be included in the survival analyses for the length of the period that the weighted climatic variable was calculated. Given the results of the time window analysis (
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3</a>), we excluded the first month of survival data after birds were entered in the foraging cost experiment. As a control we also ran the final model with (i) all data included and (ii) three months of data excluded, and both gave results that were consistent with those reported here (results not shown).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used a model selection approach to find the model best supported by the data. To this end we followed Burnham and Anderson model selection approach
+   <a ref-type="bibr" rid="b66" href="#b66">66</a>
+   <a ref-type="bibr" rid="b67" href="#b67">67</a>, based on Akaike Information Criterion (AICc) with the function ‘dredge’ of the package ‘MuMIn’
+   <a ref-type="bibr" rid="b68" href="#b68">68</a>. In brief, this is a hypothesis-based approach that generates, given a global model, subset models that best fit the data. This makes it possible to assess model support for each hypothesis tested. Model support is shown here by ranking all subset models within 4 AICc of the best model fit. Weighted DTR and MinT were mean centered in all analyses.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The counting process formulation of the CPH model allows for non-proportionality by including the interaction between the main effect and time or age. Other assumptions of the CPH models were fulfilled as indicated by scaled deviance and martingale residual plots. Age was square-root transformed. Because, we found virtually no support for sex-specific mortality or for sex-specific DTR effects (see section 3 of the 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">supplementary material</a>), sexes were pooled in all analyses. Many random effects can potentially be included in these analyses: birth nest, genetic mother, genetic father, rear nest, rear mother, rear father, (birth) batch and aviary. We ran all models with aviary as random effect. We previously verified that including other random effects in CPH models did not improve the models (results not shown).
+  </p>
+ </sec>
+</sec>

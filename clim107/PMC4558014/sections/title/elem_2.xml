@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bird Data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Presence/absence data were obtained from two sources: the North American Breeding Bird Survey (BBS) [
+   <a rid="pone.0135350.ref021" ref-type="bibr" href="#pone.0135350.ref021">21</a>] and the Audubon Christmas Bird Count (CBC) [
+   <a rid="pone.0135350.ref022" ref-type="bibr" href="#pone.0135350.ref022">22</a>]. These surveys are remarkable in the breadth of spatial coverage and the use of consistent sampling methods. The BBS monitors bird populations in the United States and Canada between early May and mid-July. Survey routes are 39.4 km long with 50 stops. At each stop, participants conduct a 3-min point count and record birds seen or heard. We pooled observations of each species over the first 30 stops (~24 km) for each BBS route and distilled counts into presence/absence data. This allowed us to maintain a reasonable match to the resolution of the climate grids that we used for projections (10 x 10 km) and to balance the scales of BBS and CBC samples used in our models. The CBC began in 1900 to document early winter bird assemblages in North America and has a growing presence throughout the Western Hemisphere. CBC surveys are conducted within 24.1 km-diameter circles for one 24 h period during a two-week interval centered on December 25. For this study, all circles that fell within the boundaries of the United States and Canada were included. For every circle and count year, we distilled raw count data into presence/absence information for each species. Since all information was collected from existing datasets and no animals were handled, no specific permission was required for this project.
+  </p>
+ </sec>
+ <sec id="sec004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate Data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Historical climate data were obtained from the Canadian Forest Service (CFS) and linked to historical bird observations using a point extraction tool that provided spatially continuous estimates of climate across the landscape [
+   <a rid="pone.0135350.ref023" ref-type="bibr" href="#pone.0135350.ref023">23</a>, 
+   <a rid="pone.0135350.ref024" ref-type="bibr" href="#pone.0135350.ref024">24</a>]. By using the mid-point of each CBC circle and the start-point of each BBS route as extraction points we ensured the distance between climate estimates and bird observations never exceeded 24 km. This approach seemed reasonable given the structure of the data sets, the continental scale of the study, inherent uncertainty in historical climate estimates, and the lack of systematic bias in the association of climate estimates and bird observations (even when small spatial mismatches may have occurred). We matched bird data and climate data on an annual basis, assuming that climate variables from the year leading up to each survey would best inform our understanding of occurrence data. We used 17 bioclimatic variables to characterize conditions in each year.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Bioclimatic variables are thought to represent biologically meaningful combinations of monthly climate variables because they aggregate climate information in ways known to drive biological processes [
+   <a rid="pone.0135350.ref025" ref-type="bibr" href="#pone.0135350.ref025">25</a>]. Bioclimatic variables can be highly correlated, however, which raises concerns about the ability of modeling algorithms to identify causal relationships in data sets and to generate accurate predictions [
+   <a rid="pone.0135350.ref026" ref-type="bibr" href="#pone.0135350.ref026">26</a>]. A variety of approaches to clustering or removing predictors can be employed in an effort to reduce collinearity but none of them guarantee better inference or prediction [
+   <a rid="pone.0135350.ref026" ref-type="bibr" href="#pone.0135350.ref026">26</a>]. Ultimately, iterative assessment of correlated variables through observation and experiment is needed. We chose not to remove variables from our data set because we had little or no 
+   <span class="italic">a priori</span> justification for choosing one correlated variable over another. In addition, our approach to matching bird data and climate data on an annual basis (described below) allowed correlations to vary across time and space, thus reducing the degree of collinearity.
+  </p>
+ </sec>
+ <sec id="sec005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Species Distribution Models</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Species distribution models were developed using boosted regression trees (BRTs) [
+   <a rid="pone.0135350.ref027" ref-type="bibr" href="#pone.0135350.ref027">27</a>]. BRT models aim to improve predictive performance of any single model by incorporating tree-based methods that iteratively fit nonlinear relationships and handle interactions between predictors automatically [
+   <a rid="pone.0135350.ref028" ref-type="bibr" href="#pone.0135350.ref028">28</a>]. We built separate distribution models for breeding and non-breeding seasons using BBS and CBC data, respectively. Our analyses of BBS and CBC data were similar in approach with small adjustments to account for differences in data sets and survey protocols. In addition to bioclimatic variables, for BBS analyses we used ordinal date (day of year) to account for variation in timing of surveys across the summer season. We used 25081 records collected along 3718 routes from 2000–2009 to train our models and 41959 records collected from 1980–1999 to test the predictive performance of our models. This approach allowed us to take advantage of increased geographic sampling in recent years to build models and availability of abundant historical data for assessing the predictive ability of our models outside the current time period and climate space. We had sufficient data to construct models for 475 North American species during the breeding season (see Supporting Information). For CBC analyses, we included the number of survey hours invested in each CBC circle as a predictor to account for uneven observer effort across circles, in addition to bioclimatic variables. The number of participating individuals and the duration of counts vary among CBC circles and through time, thus the number of party-hours has often been used as a covariate to account for this variation in analyses based on CBC data (e.g., [
+   <a rid="pone.0135350.ref029" ref-type="bibr" href="#pone.0135350.ref029">29</a>]). We used 19272 records collected at 2278 circles from 2000–2009 to train our models and 30630 records collected from 1980–1999 to assess the predictive ability of our models. We had sufficient data to construct models for 503 North American species during the non-breeding season (see Supporting Information).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We built models using the following parameters: (i) learning rate = 0.01, (ii) tree complexity = 5, (iii) family = Bernoulli. These settings resulted in models built with an average of 3100 and 2800 trees for winter and summer species, respectively, well beyond the suggested minimum of 1000 [
+   <a rid="pone.0135350.ref028" ref-type="bibr" href="#pone.0135350.ref028">28</a>]. All models were built using the gbm package [
+   <a rid="pone.0135350.ref027" ref-type="bibr" href="#pone.0135350.ref027">27</a>] in R and cross-validation was performed using 10 folds.
+  </p>
+ </sec>
+ <sec id="sec006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Spatial Projections and Range Delineation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We generated current species distributions by projecting modeled relationships across gridded annual bioclimatic data averaged from the same period used to construct the models. A spatial layer containing the median survey day was included as a constant in projections of BBS models and a layer containing the median number of survey hours was included as a constant in projections of CBC models. To characterize future climates and establish a spatial context for projections, we added future climate anomaly grids to baseline climate data in several processing steps. First, we obtained spatially downscaled (5-min resolution) climate grids for 13 combinations of general circulation models (GCMs) and emissions scenarios [
+   <a rid="pone.0135350.ref030" ref-type="bibr" href="#pone.0135350.ref030">30</a>] summarized across each of three future time periods (2010–2039, 2040–2069, 2070–2099; hereafter 2020, 2050, 2080). We then subtracted contemporary WorldClim grids [
+   <a rid="pone.0135350.ref031" ref-type="bibr" href="#pone.0135350.ref031">31</a>] for monthly minimum temperature, maximum temperature, and precipitation from the future grids to isolate predicted climate anomalies from baseline values. This resulted in a change value for each of the three variables between current and future for each month. Finally, we added these monthly anomaly grids to CFS mean climate grids for the base period (1971–2000) for each variable in each month, ensuring correspondence between the historical climate used to build the models and simulated future climate [
+   <a rid="pone.0135350.ref032" ref-type="bibr" href="#pone.0135350.ref032">32</a>]. We then transformed projected temperature and precipitation data into bioclimatic variables using DIVA software and the raster package [
+   <a rid="pone.0135350.ref033" ref-type="bibr" href="#pone.0135350.ref033">33</a>] in the statistical software R.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Species distribution models were projected into each of 39 future climate surfaces (i.e., 13 combinations of emissions scenarios and GCMs in each of 3 future time periods). Because we were fundamentally interested in understanding responses of species to climate change across scenarios and time, we ensembled projections for multiple GCMs within each scenario and time period (consensus forecasting 
+   <span class="italic">sensu</span> [
+   <a rid="pone.0135350.ref034" ref-type="bibr" href="#pone.0135350.ref034">34</a>]). This process resulted in 9 future prediction grids for each species, one for each emissions scenario (SRES A2, A1B, B2) in each time period (2020, 2050, 2080) that described climatic suitability of the United States and Canada on a continuous scale from 0 (unsuitable) to 1 (highly suitable). When estimating range sizes, we delineated boundaries of species ranges using a threshold value based on the maximum Kappa statistic [
+   <a rid="pone.0135350.ref035" ref-type="bibr" href="#pone.0135350.ref035">35</a>]. The Kappa statistic measures the proportion of correctly predicted sites after the probability of chance agreement has been removed [
+   <a rid="pone.0135350.ref036" ref-type="bibr" href="#pone.0135350.ref036">36</a>]. We chose the maximum Kappa statistic because it provided us a conservative estimate of ranges compared to alternative thresholds, particularly for rare species. We used raster [
+   <a rid="pone.0135350.ref033" ref-type="bibr" href="#pone.0135350.ref033">33</a>] and dismo packages [
+   <a rid="pone.0135350.ref037" ref-type="bibr" href="#pone.0135350.ref037">37</a>] in R for all projections and raster manipulations.
+  </p>
+ </sec>
+ <sec id="sec007" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate Sensitivity</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We assigned each species to a climate sensitivity status based on overall changes in climatic suitability: 
+   <span class="italic">Climate endangered</span>, 
+   <span class="italic">climate threatened</span>, or 
+   <span class="italic">climate stable</span>. We defined 
+   <span class="italic">climate endangered</span> as projected loss of more than 50% of current range by 2050 across all scenarios, with no net gain from potential range expansion. 
+   <span class="italic">Climate threatened</span> was defined as projected loss of more than 50% of current range by 2080 across all scenarios, with net gain from potential range expansion possible. 
+   <span class="italic">Climate stable</span> was defined as projected loss of less than 50% of current range across scenarios. 
+   <span class="italic">Climate stable</span> included 46 species, defined as introduced (
+   <span class="italic">n</span> = 14) or native species with ranges that occur only marginally within our study area (
+   <span class="italic">n</span> = 32).
+  </p>
+ </sec>
+ <sec id="sec008" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Conservation Priority Ranks</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We assessed how well our climate sensitivity rankings matched three existing conservation priority assessments: Partners in Flight (PIF) maximum threat scores [
+   <a rid="pone.0135350.ref038" ref-type="bibr" href="#pone.0135350.ref038">38</a>], IUCN Red List (IUCN) [
+   <a rid="pone.0135350.ref039" ref-type="bibr" href="#pone.0135350.ref039">39</a>], U.S. federal status and Birds of Conservation Concern (FED/BCC) [
+   <a rid="pone.0135350.ref040" ref-type="bibr" href="#pone.0135350.ref040">40</a>]. Federal status and Birds of Conservation Concern assessments were combined because the BCC list was developed to complement the federal list. For this composite category each species was assigned to one of three groups: FED, BCC, or neither. Measuring the relationship between Audubon climate sensitivity status and existing conservation priority assessments required that we assign numerical ranks to species based on their conservation status. PIF scores were already numerical, but Audubon climate sensitivities, FED/BCC, and IUCN categories had to be assigned ranks. We converted Audubon climate risk status to rankings, with the highest threat being assigned the lowest rank and the 
+   <span class="italic">climate stable</span> group being assigned the highest rank (marginal and introduced species were excluded from this analysis as many of them are not classified according to one or more of the assessments). For FED/BCC, species were assigned a rank of 1 if they were federally listed, 2 if they were of conservation concern, and 3 if neither label applied. For the IUCN categories, species were assigned a rank of 1 if they were considered endangered, 2 if threatened, and 3 if considered to be of least concern. We then used Kendall rank correlation analysis to examine the relationships between climate sensitivity and existing conservation priority assessments (one correlation for each comparison—Audubon vs. PIF, Audubon vs. IUCN, and Audubon vs. FED/BCC).
+  </p>
+ </sec>
+ <sec id="sec009" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Geographic Shifts in Species Distributions</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We characterized changes in species distributions with respect to latitude, elevation, and distance from the coast to evaluate whether distributional responses to climate change might generalize across species. Simple hypotheses that focus on the role of cold temperature in limiting distributions predict geographic shifts northward, upslope, and inland as overall warming trends continue throughout the century (e.g., [
+   <a rid="pone.0135350.ref014" ref-type="bibr" href="#pone.0135350.ref014">14</a>]). To characterize potential future shifts, we summarized latitude, elevation, and distance to coast values across current and future species distribution grids. Values in each grid cell were weighted by the proportion of each species distribution in the corresponding cell and averaged across all cells, resulting in centroid estimates of latitude, elevation, and distance to coast for each species in current and future time periods.
+  </p>
+ </sec>
+ <sec id="sec010" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Covariates and Dissimilarity</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Variance components analysis is a way to assess the amount of variation in a dependent variable that is associated with one or more predictor variables [
+   <a rid="pone.0135350.ref041" ref-type="bibr" href="#pone.0135350.ref041">41</a>]. The central output is a variance components table that shows the proportion of variance attributable to each variable (note: the predictor variables have to be treated as random effects for this analysis). We used the lmer function, which is part of the lme4 package in R [
+   <a rid="pone.0135350.ref042" ref-type="bibr" href="#pone.0135350.ref042">42</a>] to run random-effects ANOVAs to ascertain the percent of variation in current geographic range that is explained by four covariates relevant to bird conservation: species, migratory strategy [
+   <a rid="pone.0135350.ref043" ref-type="bibr" href="#pone.0135350.ref043">43</a>], climate change scenario (SRES A2, A1B, B2), and habitat affinity (IUCN). This was done separately for both the breeding and non-breeding seasons. We also ran the same analyses, using relative change in range size as the response variable. Finally, we repeated all four variance components analyses using Audubon’s habitat classifications to see if choice of habitat assignment scheme affected the results.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To estimate changes in community composition between the present and future, we used the vegdist function, part of the vegan package in R [
+   <a rid="pone.0135350.ref044" ref-type="bibr" href="#pone.0135350.ref044">44</a>], to calculate binary Bray-Curtis dissimilarity (equivalent to 1—Sørensen similarity) for each grid cell. Dissimilarity was calculated for each season, comparing the present and 2080 (SRES A2). Dissimilarity results were then mapped to provide a community-level complement to estimates of species gains and losses derived from changes in individual species ranges.
+  </p>
+ </sec>
+</sec>
