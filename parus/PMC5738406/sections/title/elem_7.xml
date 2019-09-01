@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" sec-type="materials|methods" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Masting index</div>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">To analyse the response of beech and spruce masting at the sub-continental scale we computed an annual masting index for both species representing how much of the species distribution range displays a heavy seed crop in each year. We used the MASTREE database
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span>, which contains the longest available masting record for European beech and Norway spruce covering most of both species distribution and including annually resolved observations of beech and spruce seed production or related proxies (e.g., flowering, airborne pollen, fruiting, and dendrochronological reconstruction). We truncated the data to 2015 and 2014, and excluded the pollen and flowering proxies for beech and spruce respectively. We limited our analysis to the Central-Northern European regions, i.e., the core area of beech and spruce distribution where climate is most influenced by NAO
+   <span class="sup">
+    <a ref-type="bibr" rid="CR10" href="#CR10">10</a>–
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span>, and where all previous studies were focused (Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>). In total, we selected 5774 yearly observations from 337 series in 40 NUTS-1 (Nomenclature of Territorial Units for Statistics) for beech, and 5119 yearly observations from 191 series in 37 NUTS-1 for spruce (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). For each series, we extracted the five class ordinal masting index (from 1: very poor, to 5: very abundant) provided by MASTREE (column ORDmast). To avoid oversampling in regions with multiple data-series, we aggregated individual masting series into NUTS-1 chronologies by using the modal masting class for each year and NUTS-1. This produced long masting series with a minimum amount of missing data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR3" href="#CR3">3</a>
+   </span>. We then computed the annual masting index (M_index) for both species as the difference between the proportion of NUTS-1 displaying a good masting (classes 4 and 5, 
+   <span class="italic">NC-45</span>) and a poor masting (classes 1 and 2, 
+   <span class="italic">NC-12</span>) in any given year. M_index varies from − 1, when all NUTS-1 are in class 1 and 2 (broad masting failure), to + 1 when all NUTS-1 are in masting classes 4 and 5 synchronously. Intermediate (zero) values indicate a prevalence of class-3 masting, or a balanced distribution of 
+   <span class="italic">NC-45</span> and 
+   <span class="italic">NC-12</span> (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). M_index was computed on a different number of NUTS-1 each year, but covered a continuous period from 1760 to 2015 and 1800 to 2014 for beech and spruce, respectively (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>).
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Raw seasonal NAO indices vs. masting index model</div>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">To test at the sub-continental scale the consistency of NAO-mast correlations reported by previous studies at the regional scale (Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>), we built a regression model. The building of this initial model was limited to 1952–2015 and 1959–2014 for beech and spruce respectively, when NUTS-1 chronologies were numerous (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>), and evenly spread across the study area
+   <span class="sup">
+    <a ref-type="bibr" rid="CR3" href="#CR3">3</a>
+   </span>. To build the predictors, we used the monthly NAO series provided by the Climate Prediction Center of the NOAA, which covers the entire period of analysis (i.e., 1950–2015). As in previous studies (Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>), we computed raw seasonal NAO indices (i.e., without extracting high- and low-frequency components) by averaging monthly values as follows: December of the previous year to March (winter-NAO), April to May (spring-NAO), and June to September (summer-NAO). The shorter window for spring-NAO was justified by the fact that beech and spruce flowering and pollination in Central-Northern Europe occur mostly between April and May. We then fitted M_index of both species as a function of summer-NAO 
+   <span class="italic">Y</span>
+   <sub>M−2</sub>, winter-NAO 
+   <span class="italic">Y</span>
+   <sub>M−1</sub> and summer-NAO 
+   <span class="italic">Y</span>
+   <sub>M−1</sub>, and spring-NAO 
+   <span class="italic">Y</span>
+   <sub>M</sub>. We accounted for the effect of resource depletion by previous masting events
+   <span class="sup">
+    <a ref-type="bibr" rid="CR4" href="#CR4">4</a>,
+    <a ref-type="bibr" rid="CR5" href="#CR5">5</a>
+   </span> by adding an autoregressive term with a lag of − 1 year. All predictors were standardized and checked for the absence of collinearity (pairwise Pearson correlation &lt; 0.4). As the response was 
+   <span class="italic">β</span>-distributed for both beech and spruce (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>, left column), we rescaled M_index from 0 to 1 and fitted a 
+   <span class="italic">β</span>-regression model via maximum likelihood using the R 
+   <span class="italic">betareg</span> package
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span> for the R statistical framework.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Low-frequency domain of NAO and tree masting relationships</div>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">To test whether low-frequency changes in NAO influence beech and spruce masting, and to extract the frequency domain of such relationship, we carried out a wavelet coherence analysis using the 
+   <span class="italic">wtc</span> function in the R package 
+   <span class="italic">biwavelet</span>
+   <span class="sup">
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span>. Wavelet analysis has often been applied to test for causality between teleconnections and geophysical processes
+   <span class="sup">
+    <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+   </span>, and allows assessment of whether such relationships are time-stationary across the frequency domain
+   <span class="sup">
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span>. To avoid bias due to non-normality
+   <span class="sup">
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span>, M_index of both species was arcsine-transformed
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span> before the wavelet analysis (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>, right column). Wavelet analysis for spruce was limited to the period 1950–2014, as before 1950 there were too few data to calculate M_index (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> right), whereas for beech we used data extending back to 1826 (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> left). From 1950 to 2015 we used seasonal NAO indices by NOAA aggregating months as for the initial regression model. However, to extend the beech analysis before 1950 we used seasonal NAO indices provided by Hurrell
+   <span class="sup">
+    <a ref-type="bibr" rid="CR10" href="#CR10">10</a>
+   </span> and Jones et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span>, which cover the periods 1899–2015 and 1826–2015, respectively. The NOAA and Hurrell series are suited to test for coherence using all seasonal indices, because they are based on principal component analysis of sea level pressure over the North Atlantic
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span>. Conversely, the Jones index is station-based (with fixed stations located in the Azores and Iceland), which makes it robust for winter NAO only
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span>. Consequently, the wavelet coherence analysis for 1826–1899 was carried out on winter-NAO calculated from Jones et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span> only.
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">Each wavelet coherence analysis was computed using Morlet continuous wavelet transform and considering the lag − 1 autocorrelation of each series
+   <span class="sup">
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span>. The data were padded with zeros at each end to reduce wraparound effects. Significance of coherence within all frequency domains larger than five years (i.e., low frequencies) was tested using a time-average test and 500 Monte Carlo randomizations.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">High- and low-frequency NAO vs. masting index model</div>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">To discriminate between low- and high-frequencies NAO components for the period 1952–2015, we fitted each of the three raw seasonal NAO series (i.e., winter-, summer-, and spring-NAO) with a running line smoother using the 
+   <span class="italic">supsmu</span> function of the 
+   <span class="italic">stats</span> R package. The span of all smoothers was set to the mean frequency domain at which wavelet coherence of raw seasonal NAO series against beech and spruce masting was significant (considering all NAO data sources and seasons). The corresponding high-frequency components were calculated by subtracting the smoothed series from the raw seasonal NAO index (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>). For the summer season, two high-frequency summer-NAO components were calculated (i.e., for both 
+   <span class="italic">Y</span>
+   <sub>M−2</sub> and 
+   <span class="italic">Y</span>
+   <sub>M−1</sub>). We then fitted M_index as a function of the three low-frequency components (winter-, summer-, and spring-NAO), the four high-frequency components (summer-NAO 
+   <span class="italic">Y</span>
+   <sub>M−2</sub>, winter-NAO 
+   <span class="italic">Y</span>
+   <sub>M−1</sub>, summer-NAO 
+   <span class="italic">Y</span>
+   <sub>M−1</sub>, and spring-NAO 
+   <span class="italic">Y</span>
+   <sub>M</sub>), and an autoregressive term with a lag of − 1 year. All predictors were standardized and checked for collinearity (pairwise Pearson's correlation &lt; 0.4). The period of analysis was limited to 1952–2015 and 1959–2014 for beech and spruce, respectively, the response was assumed to be 
+   <span class="italic">β</span>-distributed, and the model was fitted via maximum likelihood using the 
+   <span class="italic">betareg</span> package for R
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span>.
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">When testing for interactions between all high- and low-frequency NAO predictors, we needed to limit overfitting, due to the large number of possible bivariate interactions relative to the number of observations. Following Quinn and Keough
+   <span class="sup">
+    <a ref-type="bibr" rid="CR66" href="#CR66">66</a>
+   </span>, we computed the residuals of the “null” model (without interactions), and fitted them as a linear function of each possible two-way interaction among standardized predictors. Only interactions producing a significant (
+   <span class="italic">p</span> &lt; 0.05) fit against null model residuals were added to the final model. The pseudo
+   <span class="italic">-R</span>
+   <span class="sup">2</span> of the model was computed as the squared correlation between the linear predictor for the mean and the link-transformed response
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span>.
+  </p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">We assessed the importance of each (standardized) predictor in the final model by calculating the difference between the AIC of the models with and without the concerned predictor (ΔAIC)—the higher ΔAIC, the larger the importance of the predictor in the model. The final model was validated by LOOCV.</p>
+ </sec>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">NAO relationships with weather patterns determining masting</div>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">To test if NAO–masting relationships were coherent with weather patterns known to determine masting in both beech and spruce
+   <span class="sup">
+    <a ref-type="bibr" rid="CR3" href="#CR3">3</a>,
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>, we analysed the correlation between significant NAO patterns, as in the final regression model, and local weather anomalies. At each grid point of Europe, we computed the Spearman correlation between seasonal NAO indices and both precipitation and temperature series. Monthly precipitation and temperature were obtained from the Climate Research Unit database (version TS4.00). CRU time series and the NAO series were aggregated to the periods DJFM (December–January–February–March), AM (April–May), and JJAS (June–July–August–September), and linearly detrended. The period between 1950 and 2015 was considered for the correlation analysis.
+  </p>
+ </sec>
+ <sec id="Sec14" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Code availability</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">The R code used for analyses is provided as Supplementary material. We used R 3.3.1 version.</p>
+ </sec>
+ <sec id="Sec15" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">The beech and spruce seed data that support the findings of this study are published in Ascoli et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span>, are available on Ecological Archives (doi:10.1002/ecy.1785) and are accessible via the following link: 
+   <span ext-link-type="uri" xlink:href="http://onlinelibrary.wiley.com/store/10.1002/ecy.1785/asset/supinfo/ecy1785-sup-0002-DataS1.zip?v=1&amp;s=2491b8cc559d5ec909f96dfc5a91397b1d7e9683" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://onlinelibrary.wiley.com/store/10.1002/ecy.1785/asset/supinfo/ecy1785-sup-0002-DataS1.zip?v=1&amp;s=2491b8cc559d5ec909f96dfc5a91397b1d7e9683</span>. NAO data from the Climate Prediction Centre are available at: 
+   <span ext-link-type="uri" xlink:href="http://www.cpc.ncep.noaa.gov/products/precip/CWlink/pna/norm.nao.monthly.b5001.current.ascii.table" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.cpc.ncep.noaa.gov/products/precip/CWlink/pna/norm.nao.monthly.b5001.current.ascii.table</span>; NAO data from Hurrell at the link: 
+   <span ext-link-type="uri" xlink:href="https://climatedataguide.ucar.edu/sites/default/files/nao_pc_monthly.txt" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://climatedataguide.ucar.edu/sites/default/files/nao_pc_monthly.txt</span>; NAO data from Jones at the link: 
+   <span ext-link-type="uri" xlink:href="https://crudata.uea.ac.uk/cru/data/nao/nao.dat" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://crudata.uea.ac.uk/cru/data/nao/nao.dat</span>; CRU database (version TS4.00) is available at 
+   <span ext-link-type="uri" xlink:href="http://badc.nerc.ac.uk/data/cru/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://badc.nerc.ac.uk/data/cru/</span>.
+  </p>
+ </sec>
+</sec>

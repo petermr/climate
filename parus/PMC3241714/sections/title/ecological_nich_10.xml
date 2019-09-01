@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2h" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecological niche models</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used algorithms of MAXENT 
+  <a rid="pone.0029329-Phillips1" ref-type="bibr" href="#pone.0029329-Phillips1">[53]</a>–
+  <a rid="pone.0029329-Phillips2" ref-type="bibr" href="#pone.0029329-Phillips2">[54]</a> and DesktopGARP implementation of GARP with the best subsets provided by a free and open source software package OPENMODELLER 
+  <a rid="pone.0029329-Anderson1" ref-type="bibr" href="#pone.0029329-Anderson1">[55]</a>–
+  <a rid="pone.0029329-Giovanni1" ref-type="bibr" href="#pone.0029329-Giovanni1">[56]</a> to predict the distribution of target species during three periods; present, LGM (0.021–0.018 Ma) and LIG (0.14–0.12 Ma). Nineteen available environment data layers generated from CCSM paleo-climatic model 
+  <a rid="pone.0029329-Collins1" ref-type="bibr" href="#pone.0029329-Collins1">[57]</a> during three periods were downloaded from the WorldClim dataset (
+  <span ext-link-type="uri" xlink:href="http://www.worldclim.org/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.worldclim.org/</span>) 
+  <a rid="pone.0029329-Hijmans1" ref-type="bibr" href="#pone.0029329-Hijmans1">[58]</a>. These data are high-resolution 
+  <a rid="pone.0029329-Hijmans1" ref-type="bibr" href="#pone.0029329-Hijmans1">[58]</a> and have been applied to investigate Pleistocene climatic effects on an East Asian bat, the greater horseshoe bat 
+  <span class="italic">Rhinolophus ferrumequinum</span>
+  <a rid="pone.0029329-Flanders1" ref-type="bibr" href="#pone.0029329-Flanders1">[59]</a>.The data layers were 2.5′ spatial resolution for the present and LGM. The 30″ spatial resolution layers for LIG were subsequently resampled to a spatial resolution of 2.5' using ARC GIS 9.3. These environmental variables reflected annual trends for temperature and precipitation, bioclimatic seasonality, extreme conditions or potential limiting factors. ENMs were built according to current environmental factors, and then projected to three periods. All sample points were used as the model input.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For MAXENT, we used the quadratic features and set the maximum iterations to 2000, replicates to 10. Eighty percent of the localities were randomly selected to train the model and the remaining 20% to test the model performance. The fade-by-clamp option was selected to remove heavily clamped pixels from the final prediction. Other parameters were used default values. For GARP, We changed the total run to 100, max generations to 900 and training proportion to 80. The training data was divided into true training data (for model rule development) and intrinsic testing data (for rule-testing intrinsic to GARP processing), and the remaining 20% data was set aside for an independent test of model quality. The ‘best subset’ was generated according to the soft omission threshold of 20% and the commission threshold of 50%.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The value of AUC (Area under curves), sensitivity and omission error were used to assess the model's performance 
+  <a rid="pone.0029329-Swets1" ref-type="bibr" href="#pone.0029329-Swets1">[60]</a>–
+  <a rid="pone.0029329-Lobo1" ref-type="bibr" href="#pone.0029329-Lobo1">[61]</a>. We selected the Arc/Info ASC II Grid as output format, which can be easily handled with GIS software. The output maps were imported to ARC GIS 9.3 to produce final maps. Different map colors corresponded to different fitting indices in the potential distribution maps. The two algorithms generated the similar potential suitable distribution for each period but were different in range and location of the most suitable habitat. As the GARP modelling also showed the values of sensitivity (1) and omission error (0) 
+  <a rid="pone.0029329-Lobo1" ref-type="bibr" href="#pone.0029329-Lobo1">[61]</a>, we described the change of species distribution mainly based on the predictions of GARP but drew the conclusions by adopting a conservative approach by including areas predicted as ‘suitable’ or “unsuitable” by both models 
+  <a rid="pone.0029329-Flanders1" ref-type="bibr" href="#pone.0029329-Flanders1">[59]</a>, 
+  <a rid="pone.0029329-Waltari1" ref-type="bibr" href="#pone.0029329-Waltari1">[62]</a>.
+ </p>
+</sec>

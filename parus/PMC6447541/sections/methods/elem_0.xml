@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Nest type evolution in Australian passerines</div>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">To explore whether general nest type (domed or cup) is related to environmental variables, information on nest type for continental Australian passerines was extracted from Price and Griffith
+   <span class="sup">
+    <a ref-type="bibr" rid="CR7" href="#CR7">7</a>
+   </span> (38 families, cup = 181 species, domed = 96 species). Cavity nesters (n = 15) were excluded from the analyses because they were too few to include as a separate category and at the same time different enough from domed nesters to prevent inclusion in the same category. The remaining 277 species were selected on the basis that they all breed in continental Australia, that are not introduced, that they have available information on distribution and that the majority of their breeding range is in the continent (list of excluded species in supplementary data file). For each of these species I downloaded 1000 random records from the Atlas of Living Australia repository (
+   <span ext-link-type="uri" xlink:href="http://www.ala.org.au" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ala.org.au</span>) and then for each location I extracted six environmental variables. Some species didn’t have 1000 records available, so for these the maximum number of records available was extracted (mean number of records ± s.d., 973 ± 134, Supplementary Material Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>). Records were manually filtered to keep only those from continental Australia and Tasmania. The climatic variables extracted were chosen to describe two different aspects of the environment of each species during the warmest and most productive months of the year (December-February), when they are likely to be breeding in Australia
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+   </span>: radiation levels (radiation in warmest quarter, wettest quarter and annual mean radiation) and temperature (temperature in warmest quarter, wettest quarter and annual mean temperature). The roof in domed nests is suggested to have evolved to 1. protect eggs from high radiation levels and temperatures in hot and arid environments or 2. to protect eggs and nestlings from the cold. Thus, what could potentially lead to the evolution of domed nests is the maximum radiation a species can tolerate or the minimum temperature (i.e. domed nests evolving in species that experience high radiation levels or colder environments). The highest probability distribution (HPD) was calculated for each variable across the 1000 records per species, and using the HPDinterval function in the ‘coda’ package I extracted 95% HPD intervals
+   <span class="sup">
+    <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+   </span>. These intervals don’t assume normal or unimodal distributions and consider the posterior distribution of the variable, which is probably a more accurate representation of the environment of the species. For temperature I extracted the lower interval (i.e. the lowest temperature across the records in the 95% interval) and the upper interval for radiation (i.e. the highest radiation in the 95% interval).
+  </p>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">For each of the six environmental variables extracted the standard deviation across records was calculated (as a measure of climatic niche breadth or environmental variation across the range of each species). All variables describing either radiation or temperature were used in two PCAs (Principal Component Analysis) to extract an axis that summarises variation in either radiation levels or temperatures across the range. I also used all the variables that measure standard deviation across records and extracted a principal component (PC) that described the ‘climatic niche breadth’ of each species. I only used the first PC from each analysis because PC1 explained more than 70% of the variation in each case (Supplementary Material Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>). Therefore, after this process, each species had a value for three PCs that described maximum radiation levels across the species range, lowest temperature across the range, and a value of environmental variation (climatic niche breadth). In addition to the variables described above, I also collated information on range size (in thousands of km
+   <span class="sup">2</span>) from published datasets
+   <span class="sup">
+    <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+   </span>, which as expected, was highly correlated to the niche breadth measure (r
+   <span class="sup">2</span> = 0.71, p &lt; 0.001).
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Evolution of nest traits in honeyeaters and allies</div>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">To explore how particular traits of nest shape evolve in Australasian passerines from the superfamily Meliphagoidea, detailed information on nest variables for 191 species was extracted. This analysis included the families Meliphagidae, Maluridae, Acanthizidae, Dayornitidae and Pardalotidae, five of the 12 families with domed nests in Australia and 106 of the 277 species present in the previous analysis. This clade was chosen because it comprises more than 45% of the passerine avifauna in Australia
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+   </span>, it exhibits high variability in nesting habits, and because there is available information for a large percentage of species (68%). For this analysis I did not exclude cavity nesters such as pardalotes, because I was able to specify whether they built domed or open nests inside the cavities. I used the ‘Handbook of Birds of the World online’
+   <span class="sup">
+    <a ref-type="bibr" rid="CR3" href="#CR3">3</a>
+   </span> to extract information on the average nest height in metres (middle value from range reported or average value reported), and a set of parameters that describe the general structure of the nest (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a>), such as general shape (elongated vertically or horizontally), number of materials used (e.g. only twigs vs. twigs and feathers), and type of attachment (suspended or supported). I performed a Principal Coordinate Analysis (PCO)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>
+   </span> using the variables described in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a>, since this is an ideal method to summarize continuous, ordinal and categorical variables. To do this, I first constructed a dissimilarity matrix of all variables with the daisy function in the 
+   <span class="italic">cluster</span> R package, using the ‘Gower’ method of variable standardization
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>. Then, I used the matrix constructed with the function 
+   <span class="italic">cmdscale</span> to obtain a set of coordinates for two dimensions, which describe the nest structure for each species in the data set. These two coordinates were used in posterior analyses (see statistical analyses).
+  </p>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">To extract environmental variables from species in the Meliphagoidea I used the rgbif package
+   <span class="sup">
+    <a ref-type="bibr" rid="CR42" href="#CR42">42</a>
+   </span> to download 1000 records, and I extracted six bioclimatic variables for each location using the Worldclim database in the raster package
+   <span class="sup">
+    <a ref-type="bibr" rid="CR43" href="#CR43">43</a>
+   </span> (annual temperature, mean temperature of wettest quarter, mean temperature of warmest quarter, annual precipitation, precipitation of wettest quarter, precipitation of warmest quarter). I used a different methodology from the one described earlier for all Australian passerines because the Atlas of Living Australia does not have information for species outside Australia (and several species of the Meliphagoidea are found outside Australia). After extracting the six climatic variables, I generated an environmental PC that summarised 62% of the variation in climate.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ancestral state reconstruction in honeyeaters and allies</div>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">The command ‘phylomorphospace’ in the R package phytools
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span> was used to generate the plot shown in the results, which contains phylogenetic information as well as nest shape information from the PCO. Three methods of ancestral state reconstruction of discrete characters available in phytools
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span> were used to explore the ancestral state of different traits in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a>. To do this I run each method in a sample of 1000 trees from the posterior distribution of trees of the most recent phylogenetic analysis for Meliphagoidea
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+   </span>, and I report 95% HPD intervals for the probability of each state. The command 
+   <span class="italic">fitER</span> was used to explore the evolution under a model that assumes equal transition rates between states. I also used the command 
+   <span class="italic">fitARD</span> to fit a model where backward and forward rates can change. To complement this analysis I also used the command 
+   <span class="italic">AncThresh</span> in phytools, which uses Bayesian MCMC to estimate ancestral states, and builds a threshold model that detects thresholds of change between states
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+   </span>. For nest height (log
+   <sub>10</sub> height + 0.1), a continuous character, I used the 
+   <span class="italic">fastAnc</span> command in phytools
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span>, which uses maximum likelihood to calculate ancestral states. I report the 95% HPD interval of the ancestral nest height across 1000 trees in the most ancestral node. The phylogenetic signal (Pagel’s λ) is also reported for specific traits using the 
+   <span class="italic">phylosig</span> command in phytools
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span> for continuous characters and 
+   <span class="italic">fitDiscrete</span> in Geiger
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span> for discrete traits. Larger values of λ (closer to one) indicate that the phylogenetic signal is high, and closely related species are more likely to share similar trait values than unrelated species
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analyses</div>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">To test whether environmental variables could explain the type of nest shape (domed vs. open) that Australian passerines construct, I built a generalized linear mixed model (GLMM) using the R package MCMCglmm
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>, which controls for phylogenetic non-independence by incorporating phylogenetic relationships as a random factor. The response variable in this model was a binary variable (nest type: domed or cup), and a categorical family model was used. The predictors were the PC1 of maximum radiation, the PC1 of minimum temperature and log
+   <sub>10</sub> body weight. The variance inflation factor (VIF) for this model was below 2, suggesting there are no collinearity issues in the model. To test whether nest type can predict the range size or the niche breadth of a species, I run a mixed model as described above but from a gaussian family, using either log
+   <sub>10</sub> range size or niche breadth PC1 as response variables and log
+   <sub>10</sub> body weight and nest type as predictor variables, given that body size can potentially explain variation in the range size and distribution of a species
+   <span class="sup">
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span>.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Phylogenetic uncertainty was taken into account by running the models described above in 1000 different phylogenies obtained from birdtree.org using the Hackett backbone
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span>, which belong to a posterior sample of possible phylogenetic hypotheses. I followed the procedure described by Ross 
+   <span class="italic">et al</span>.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span> and sampled, without replacement, one tree from the 1300 trees and cycled through each of these, running the MCMC mixed model for 3000 iterations and saving the results of the last MCMC sample before continuing on another tree. The runs from the first 300 trees were discarded as burn-in, ending with a posterior sample of 1,000 saved iterations. For each model I report the 95% credible interval for the estimate across 1000 trees for each predictor, and the P-value. I evaluated model convergence visually by using the command plot(model) in the package and made sure that all effective sample sizes were at least 900. All models were run using both default priors and a χ
+   <span class="sup">2</span> prior distribution for the binary model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+   </span> and, following Nakagawa, 
+   <span class="italic">et al</span>.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>, a non-informative prior for the gaussian models. Results using different priors were qualitatively identical, and the Gelman-Rubin criteria showed that analyses with different priors – and the same analyses run repeated times – converged in the same posterior distributions (details given in the supplementary material, Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S3</a>).
+  </p>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">To understand in detail the evolution of nest shape within the clade of honeyeaters and allies, the same procedure described above was used, but sampling trees from the posterior distribution of the most recent phylogenetic analysis on Meliphagoidea
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+   </span>. A model was built to test whether morphological or environmental variables can explain nest architecture. Therefore, the predictor variables were the logarithm of the size of the bird species, the logarithm of the height of the nest and the environmental PC1. The response variable was each of the two ordination axes that describe nest shape. The first axis (x) was log-transformed (log
+   <sub>10</sub> x + 0.5) to increase normality of the residuals. Results remain qualitatively identical with or without using the log-transformed variable. Results of all models described above were confirmed using different methods (e.g. PGLS, Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S4</a>).
+  </p>
+ </sec>
+</sec>

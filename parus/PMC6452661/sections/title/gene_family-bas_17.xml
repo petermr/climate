@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s17" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Gene Family-Based Positive Selection Tests.</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">For positive selection analyses we also selected the four most closely related species with assembled genomes (
+  <span class="italic">A. thaliana</span>, 
+  <span class="italic">A</span>. 
+  <span class="italic">lyrata</span>, 
+  <span class="italic">C. rubella</span>, and 
+  <span class="italic">C. hirsuta</span>) and 
+  <span class="italic">C. himalaica</span> to identify orthologs based on our phylogenetic tree. The analysis procedure is similar to the phylogenetic tree analysis. First, we used OrthoMCL (
+  <a rid="r32" ref-type="bibr" href="#r32">32</a>) to identify homologous gene clusters (orthogroups) among the five genomes. OrthoMCL was run with an E-value cutoff of 1E-15 and an inflation parameter of 1.5 due to the close genetic relationship between five relatives. Orthogroups with single-copy genes shared by all five genomes were retained for further analyses. Multiple sequence alignment was performed for each orthogroup using MUSCLE v. 3.8.31 (
+  <a rid="r97" ref-type="bibr" href="#r97">97</a>) with default parameters. Poorly aligned regions were further trimmed using the trimAl v. 1.4 software (
+  <a rid="r100" ref-type="bibr" href="#r100">100</a>) with the parameter “-gt 0.8 -st 0.001”. Maximum likelihood trees were generated using RAxML v7.0.4 (
+  <a rid="r101" ref-type="bibr" href="#r101">101</a>) with the PROTCATJTT model. To calculate the nonsynonymous (
+  <span class="italic">K</span>
+  <sub>a</sub>) and synonymous (Ks) substitution rates between pairs of orthogroups, we reverse-translated amino acid alignments to the corresponding codon-based nucleotide alignments using PAL2NAL (
+  <a rid="r102" ref-type="bibr" href="#r102">102</a>). To increase the power of tests for positive selection, we applied the branch-site model (
+  <a rid="r103" ref-type="bibr" href="#r103">103</a>) implemented in codeml program (
+  <a rid="r35" ref-type="bibr" href="#r35">35</a>) to estimate the dN/dS substitution rates (ω value). We also deleted all gaps (clean data = 1) from the alignments to lower the effect of ambiguous bases on the inference of positive selection. A foreground branch was specified as the clade of 
+  <span class="italic">C. himalaica</span>. A likelihood ratio test was conducted to determine whether positive selection is operating in the foreground branch. In this study, PSGs were inferred if the 
+  <span class="italic">P</span> value was less than 0.01. The functional annotation of PSGs in 
+  <span class="italic">C. himalaica</span> was also conducted using the same approach and the same 
+  <span class="italic">P-</span>value cutoff with the gene family expansion and contraction analysis.
+ </p>
+</sec>

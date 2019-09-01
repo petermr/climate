@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Fastsimcoal2 analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Joint derived-allele frequency spectra were generated from the full data set in ANGSD 0.900 (ref. 
+  <a ref-type="bibr" rid="b49" href="#b49">49</a>) for a subset of four colonies that encompass the whole continent (MZE, DDU, NEU and HAL). To polarize these spectra, we reconstructed the most likely ancestral base for all positions in the RADome. We selected 12 high-quality Emperor penguin samples covering the whole species' range, as well as 12 high-quality King penguin samples processed according to the same protocol. States at all positions were determined using GATK's Haplotype Caller pipeline
+  <a ref-type="bibr" rid="b48" href="#b48">48</a>. We used BEDtools
+  <a ref-type="bibr" rid="b65" href="#b65">65</a> and VCFtools' vcf-consensus script
+  <a ref-type="bibr" rid="b51" href="#b51">51</a> to update the published Emperor penguin genome and establish a reference RADome for both the King penguin and the Emperor penguin, using only high-quality polymorphisms (phred-scale genotype quality ≥80), and including variable sites as ambiguity codes according to the International Union of Pure and Applied Chemistry (IUPAC) standard notation. We aligned this RADome to the Adélie penguin genome 
+  <span class="italic">Pygoscelis adeliae</span>
+  <a ref-type="bibr" rid="b66" href="#b66">66</a> using Bowtie2 (ref. 
+  <a ref-type="bibr" rid="b46" href="#b46">46</a>), and extracted the corresponding regions. For each RAD locus, a maximum-likelihood unrooted tree was built in PhyML
+  <a ref-type="bibr" rid="b67" href="#b67">67</a>, and maximum-likelihood ancestral sequence for crown-
+  <span class="italic">Aptenodytes</span> was reconstructed using PAML
+  <a ref-type="bibr" rid="b68" href="#b68">68</a> and Lazarus (
+  <span ext-link-type="uri" xlink:href="https://project-lazarus.googlecode.com/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://project-lazarus.googlecode.com/</span>), using PhyML tree topology as a prior. Ancestral states were then used to determine the ancestral and derived alleles in the Emperor penguin.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Reconstruction of population sizes and migration events was performed through composite-likelihood maximization
+  <a ref-type="bibr" rid="b34" href="#b34">34</a>, by simulating joint-spectra under a continuous-time Markovian coalescent model in fastsimcoal2.5.11 (ref. 
+  <a ref-type="bibr" rid="b69" href="#b69">69</a>). For each run, we performed a maximum of 80 expectation-conditional maximisation (ECM) optimization cycles over the 12 retained parameters (population sizes and asymmetric migration rates between the four analysed colonies), each parameter optimization step requiring the generation of 100,000 simulated joint-spectra. We generated 50 non-parametric bootstrap replicates for each spectrum. For each bootstrap data set, and for the original data set, we ran 50 independent replicates, and retained the one with the highest log-likelihood. We assumed a mutation rate of 2.6e
+  <span class="sup">−7</span> subsitutions per site per generation as calculated for the King penguin
+  <a ref-type="bibr" rid="b32" href="#b32">32</a>, and a generation time of 16 years
+  <a ref-type="bibr" rid="b15" href="#b15">15</a>. Computation was performed on the high-performance Abel cluster at the University of Oslo, and required a total of ∼30,000 CPU hours.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We chose to restrict our analysis to a stepwise migration model for two main reasons. First, computational load increases rapidly with the number of estimated parameters, and higher complexity models could not be run with the necessary amount of replication. Second, as our model is not supposed to represent precisely the present-day state of the colonies, but rather parameters averaged over a long period of time, we do not expect the intensity of the migration flow to be much affected by the structure of the connectivity.</p>
+</sec>

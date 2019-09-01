@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece33082-sec-0009" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We tested for reproductive costs and their determinants using univariate generalized linear mixed models implemented in the R package lme4 (Bates, Maechler, Bolker, &amp; Walker, 
+  <a rid="ece33082-bib-0001" ref-type="ref" href="#ece33082-bib-0001">2014</a>). Specifically, we modeled a female's probability of giving birth (
+  <span class="italic">n</span>
+  <sub>observations</sub> = 496, 
+  <span class="italic">n</span>
+  <sub>horses</sub> = 113) and of weaning a foal (i.e., foal surviving to the next summer for females having reproduced, 
+  <span class="italic">n</span>
+  <sub>observations</sub> = 321, 
+  <span class="italic">n</span>
+  <sub>horses</sub> = 113) using logistic regressions and then used a model selection approach to identify the best model. To test for costs of reproduction, reproductive status the previous year (produced a foal observed in July–August in the previous summer or not) was included as a fixed effect. To test for the influence of intrinsic and extrinsic variables on costs of reproduction, fixed effects also included female age (fitted as a continuous variable with a quadratic effect to allow for nonlinear relationships), female quality, median location in summer (standardized to a mean of 0 and 
+  <span class="italic">SD</span> of 1), band size, local abundance in summer (standardized to a mean of 0 and standard deviation of 1), local and band sex ratios, winter severity (winter NAO) before conception, during pregnancy and the first winter of the foal (only for models on the probability of weaning) as well as their two‐way interactions with reproductive status the previous year. More complex interactions were not considered to avoid overparameterization of our models. Horse identity was included as a random effect in all models to account for repeated measurements. Because local density and mean summer location were highly correlated (Pearson's product–moment correlation: correlation = 0.70, 
+  <span class="italic">n </span>=
+  <span class="italic"> </span>496, 
+  <span class="italic">t </span>=
+  <span class="italic"> </span>21.66, 
+  <span class="italic">df</span> = 494, 
+  <span class="italic">p </span>&lt;
+  <span class="italic"> </span>.001), both factors were not included in the same model to avoid issues of colinearity. Because the relationship between female age and probability to give birth or wean a foal is not expected to be linear in feral horses (Garrott, Eagle, &amp; Plotka, 
+  <a rid="ece33082-bib-0021" ref-type="ref" href="#ece33082-bib-0021">1991</a>), we added a second‐order polynomial term to allow for such nonlinearity. Note that band size and local density were not correlated (Pearson's product–moment correlation: correlation = –0.02, 
+  <span class="italic">n </span>=
+  <span class="italic"> </span>496, 
+  <span class="italic">t </span>= –0.45, 
+  <span class="italic">df</span> = 494, 
+  <span class="italic">p </span>=
+  <span class="italic"> </span>.65).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We fitted the global models described above as well as all simpler models in R using the AICcmodavg package (Mazerolle, 
+  <a rid="ece33082-bib-0041" ref-type="ref" href="#ece33082-bib-0041">2015</a>). The best models were then selected using the Akaike Information Criterion corrected for small sample size (AIC
+  <sub>c</sub>), which reflects the best compromise between model precision and accuracy (Burnham &amp; Anderson, 
+  <a rid="ece33082-bib-0007" ref-type="ref" href="#ece33082-bib-0007">2002</a>; Symonds &amp; Moussalli, 
+  <a rid="ece33082-bib-0065" ref-type="ref" href="#ece33082-bib-0065">2011</a>). According to the rule of parsimony, we selected the simplest model within 2.0 AIC
+  <sub>c</sub> of the top model (Burnham &amp; Anderson, 
+  <a rid="ece33082-bib-0007" ref-type="ref" href="#ece33082-bib-0007">2002</a>). We also calculated evidence ratio (ER) and AIC
+  <sub>c</sub> weights (AIC
+  <sub>c</sub>Wts) as a measure of the likelihood that a given model was the best among the set of fitted models. Using the sum of the AIC
+  <sub>c</sub>Wts (termed the predictor weight), we estimated the relative importance of each variable and interactions according to Symonds and Moussalli (
+  <a rid="ece33082-bib-0065" ref-type="ref" href="#ece33082-bib-0065">2011</a>). The predictor weight can be interpreted as being equivalent to the probability that the predictor is a component of the best model. For all selected logistic models we calculated the conditional and marginal coefficient of determination (
+  <span class="italic">pseudo R</span>
+  <span class="sup">2</span>). The marginal coefficient of determination represents the variance explained by fixed factors and conditional coefficient of determination interprets as variance explained by both fixed and random factors (Nakagawa &amp; Schielzeth, 
+  <a rid="ece33082-bib-0048" ref-type="ref" href="#ece33082-bib-0048">2013</a>).
+ </p>
+</sec>

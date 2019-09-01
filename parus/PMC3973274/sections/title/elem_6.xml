@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2e" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">(e)</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analysis</div>
+ <sec id="s2e1" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">(i)</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Moult phenology</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used a mixed effects change point analysis to estimate the population mean initiation and completion dates of coat colour change phenology in the Gardiner site (as previously done for the Seeley Lake site [
+   <a rid="RSPB20140029C13" ref-type="bibr" href="#RSPB20140029C13">13</a>]), and to test for the effects of snow, temperature and sex on moult phenology at both sites. We assessed temperature as the rate of seasonal cooling in the autumn and warming in the spring; we calculated degree days for each day as the cumulative sum of mean temperature below 0°C in the autumn (September–December) and above 0°C in the spring (March–June).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We were able to document individual moult phenology over more than 1 autumn or spring moult for none of the hares at the Seeley Lake site and only seven individuals in the Gardiner site due to the high mortality rates typical of snowshoe hares [
+   <a rid="RSPB20140029C25" ref-type="bibr" href="#RSPB20140029C25">25</a>,
+   <a rid="RSPB20140029C27" ref-type="bibr" href="#RSPB20140029C27">27</a>] and due to incomplete detection. We plotted coat colour observations over time of those seven individuals for visual assessment of the reaction norm (range of phenotypes produced by a particular genotype in different environmental conditions) in the moult phenology.
+  </p>
+ </sec>
+ <sec id="s2e2" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">(ii)</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Concealment</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To test whether hares adjusted hiding behaviour to increase concealment in response to colour contrast, we fitted linear mixed effects models in software R v. 2.15.2 [
+   <a rid="RSPB20140029C28" ref-type="bibr" href="#RSPB20140029C28">28</a>] using the package lme4 [
+   <a rid="RSPB20140029C29" ref-type="bibr" href="#RSPB20140029C29">29</a>]. We included the identity of individual hares as a random effect to control for variation among individuals. We included the fixed effects of coat colour (per cent whiteness), snow cover around hares (at 1- and 10-m radius), coat colour contrast (at 1- and 10-m radius; ranging from −100 to 100), coat colour mismatch (at 1- and 10-m radius), site, sex and season. Coat colour mismatch was a categorical variable distinguishing between positive (white hare on brown background: contrast ≥ 60), negative (brown hare on white background: contrast ≤ −60) and no mismatch (−60 &lt; contrast &lt; 60). Further, to examine whether the two different types of contrast and mismatch (positive and negative) had equivalent effects, we established an absolute contrast covariate (ranging from 0 to 100) and a binary categorical covariate for absolute mismatch (mismatch: contrast ≤ −60 and contrast ≥ 60 versus no mismatch: −60 &lt; contrast &lt; 60). In addition to linear terms, we used quadratic terms to allow for the possibility of a curvilinear response of concealment to contrast. We differentiated seasons separately for the two sites based on local climate (Seeley Lake: winter (December–March), spring (April–May), summer (June–August), autumn (September–November); Gardiner: winter (November–April), spring (May–June), summer (July–August), autumn (September–October)).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Because hare whiteness and snow cover at both the 1- and 10-m radius around hares were highly correlated for most of the year (
+   <span class="italic">r</span> ≥ 0.8), we considered each separately in model construction. Whiteness and contrast as well as snow cover and contrast were not highly correlated (
+   <span class="italic">r</span> ≤ 0.1 and 
+   <span class="italic">r</span> ≥ −0.5, respectively) and so were both present in some models. To test for habituation in hiding behaviour to human observers, we ran a univariate linear mixed model, with concealment as a function of number of location attempts per hare (including unsuccessful sightings) and individual hares coded as random effects to control for variation among individuals.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We selected a set of best models (within 2 ΔAIC
+   <span class="italic">
+    <sub>c</sub>
+   </span>) fitted with maximum likelihood using AIC
+   <span class="italic">
+    <sub>c</sub>
+   </span> criterion [
+   <a rid="RSPB20140029C30" ref-type="bibr" href="#RSPB20140029C30">30</a>]. The precision of model parameters was based on a sample (100 000 iterations) from the posterior distribution of the fixed effects parameters using a Markov chain Monte Carlo approach (function mcmcsamp) to determine whether the 95% highest posterior density (HPD) intervals included zero.
+  </p>
+ </sec>
+ <sec id="s2e3" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">(iii)</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Flight initiation distance</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used Cox proportional hazards regression [
+   <a rid="RSPB20140029C31" ref-type="bibr" href="#RSPB20140029C31">31</a>] to test whether FID increased with colour mismatch. Our data were a form of time-to-event data, with flight the event of interest and observations with no flight response at the maximum approaching distance of 3 m classified as right-censored data. We fitted the models using the package survival [
+   <a rid="RSPB20140029C32" ref-type="bibr" href="#RSPB20140029C32">32</a>] in R. We included the same covariates and potential correlations among them as in the previous analysis: whiteness, snow cover around hares, colour contrast (regular and absolute), colour mismatch (regular and absolute), site, sex, season and concealment. We also tested for potential habituation in FID behaviour as in the previous analysis. The proportional hazard assumption was tested using score test and scatterplots of scaled Schoenfeld residuals. We selected a set of best models (within 2 ΔAIC
+   <span class="italic">
+    <sub>c</sub>
+   </span>) fitted with maximum likelihood using AIC
+   <span class="italic">
+    <sub>c</sub>
+   </span> criterion.
+  </p>
+ </sec>
+ <sec id="s2e4" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">(iv)</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Resting spots</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To test whether hares chose resting spots randomly with respect to colour contrast and snow cover, we fitted separate mixed effects models with fixed effects of colour contrast and snow cover. The models were fitted with binomial error distribution and a logit link function in R using the package lme4 [
+   <a rid="RSPB20140029C29" ref-type="bibr" href="#RSPB20140029C29">29</a>]. The binomial dependent variable coded as one for the immediate resting spot (1 m) and zero for the eight other available ‘pie slices’ within the 10-m radius of the hare. The identity of individual hares and the date of when each hare was located were included as random effects to control for variation among individuals and to specify a nested design of the nine spots available to a hare at each location. We compared importance of the tested predictors using the statistical significance of the fixed effects slopes and the models’ AIC
+   <span class="italic">
+    <sub>c</sub>
+   </span>.
+  </p>
+ </sec>
+</sec>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Adapt or die</div>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Adaptive walks</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Selection in a constant environment will result in an adaptive walk, the substitution of a series of beneficial mutations of successively higher fitness. At any particular point in time, all alleles at a locus affecting fitness can be ranked from the most to the least fit. The fitnesses of the very small fraction of alleles whose fitness exceeds that of the wild type will follow an extreme-value distribution, almost regardless of the overall distribution of fitness (
+   <a ref-type="bibr" rid="b36" href="#b36">Gillespie 1984</a>). Supposing the difference in fitness between the best and second-best alleles to be Δ
+   <sub>1</sub>, the difference between alleles with adjacent ranks 
+   <span class="italic">i</span> and 
+   <span class="italic">j</span> is a random variable with expected value Δ
+   <sub>
+    <span class="italic">i</span>
+   </sub> = Δ
+   <sub>1</sub>/
+   <span class="italic">i</span>. This does not apply to the great majority of low-fitness alleles, but these can be neglected because they will never contribute to adaptation. Most beneficial alleles have only slightly greater fitness than the wild type, but rare alleles with very high fitness are less likely to be lost stochastically soon after they arise; hence, the first step of the adaptive walk will often involve a mutation with a large effect on fitness (
+   <a ref-type="bibr" rid="b68" href="#b68">Orr 2002</a>). To model the walk as a whole, we could treat the extreme-value distribution based on the current wild type as a fixed allelic series, and follow the successive substitution of mutations of greater effect until the most fit allele has been fixed. A more realistic procedure is to regenerate a random series of allelic values whenever a substitution occurs, until the walk ends because no allele is superior to the current wild type; this is the ‘mutational landscape’ model of 
+   <a ref-type="bibr" rid="b36" href="#b36">Gillespie (1984)</a>.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In practice, no population becomes permanently adapted, because conditions will change sooner or later. If the environment changes only rarely, each successive adaptive walk will be completed, and the population will be well adapted most of the time. If it changes more rapidly, few adaptive walks will be completed, and the population will be poorly adapted most of the time. If it changes very rapidly selection may be inadequate to restore adaptation quickly enough, and the population will dwindle and eventually become extinct. Recurrent change can be modeled by shifting the distribution of fitness to the left at intervals, reducing the fitness and increasing the rank of the current wild type. In a mutational landscape model, this can be accomplished by drawing new random values for each fitness rank while increasing the rank of each allele by a specified amount and thereby creating a new series of alleles whose fitness in the changed conditions exceeds that of any pre-existing type.</p>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Effects of frequency and severity of change</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Suppose that conditions are unchanged for a period 
+   <span class="italic">E</span>, after which fitness is abruptly reduced by an amount proportional to Δ
+   <sub>1</sub>. The overall rate of deterioration then has two components, the rate and the severity of deterioration. These combine to lower the fitness of alleles, but at the same time expose a longer series of potentially beneficial alleles and thereby increase the mutation supply rate. At some point the supply of mutations is sufficient to allow selection to restore adaptation, and the population comes into a dynamic equilibrium with its continually worsening environment. Long-term mean fitness depends on the frequency of change but not on its severity (
+   <a ref-type="fig" rid="fig01" href="#fig01">Fig. 1</a>). Although a more severe change will produce a steeper decline in mean fitness, adaptation will be restored more effectively because selection will be more intense. The depression of mean fitness can be expressed relative to a comparable population whose environment does not change. Numerical simulation of a mutational landscape model suggests that mean fitness 
+   <span class="italic">w</span>
+   <sub>s</sub> = 
+   <span class="italic">w</span>
+   <sub>0</sub>–
+   <span class="italic">b</span> ln(1/
+   <span class="italic">E</span>), where 
+   <span class="italic">b</span> ≍ 0.1 and 
+   <span class="italic">w</span>
+   <sub>0</sub> depends on the mutation supply rate (
+   <a ref-type="fig" rid="fig02" href="#fig02">Fig. 2</a>). This result does not seem to depend on the details of the model: a fixed allelic series, or even a model with fitness increments of equal size, yields similar results. It suggests that populations may be able to adapt to quite rapid deterioration, provided that the mutation supply rate is fairly large.
+  </p>
+  <div id="fig01" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 1</span>
+   <div class="caption">
+    <p>The effect of the frequency and severity of environmental change on adaptedness. Mutational landscape model with series of 100 alleles; environmental change simulated by shifting back the wild type one rank after a specified period E (1 or 50 time units) with weak or strong selection (Δ
+     <sub>1</sub> = 0.01 or 0.1). From 
+     <a ref-type="bibr" rid="b6" href="#b6">Bell (2008)</a>.
+    </p>
+   </div>
+   <div xlink:href="eva0001-0003-f1" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <div id="fig02" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 2</span>
+   <div class="caption">
+    <p>Effect of environmental change on mean fitness in relation to mutation supply rate. Based on a mutational landscape model as in 
+     <a ref-type="fig" rid="fig01" href="#fig01">Fig. 1</a>. From 
+     <a ref-type="bibr" rid="b6" href="#b6">Bell (2008)</a>.
+    </p>
+   </div>
+   <div xlink:href="eva0001-0003-f2" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Evolutionary rescue</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The outlook is much less benign, however, if lower mean fitness leads to a reduction in population size and thereby in the mutation supply rate. This will happen if environmental deterioration causes the growth rate of the current wild type to become negative, 
+   <span class="italic">r</span>
+   <sub>0</sub> &lt; 0, so that population size begins to decline from its initial carrying capacity of 
+   <span class="italic">N</span>
+   <sub>0</sub> individuals. This tendency is opposed by rescue mutations, all with growth rate 
+   <span class="italic">r</span>
+   <sub>1</sub> &gt; 0, which comprise a fraction Φ of the overall genomic mutation rate 
+   <span class="italic">U</span>. The number of new rescue mutations appearing before the population becomes extinct depends on the total number of individuals that live during its period of decline, which will be −
+   <span class="italic">N</span>
+   <sub>0</sub>/
+   <span class="italic">r</span>
+   <sub>0</sub>. The probability that a new rescue mutation will spread is about 2(
+   <span class="italic">r</span>
+   <sub>1</sub> − 
+   <span class="italic">r</span>
+   <sub>0</sub>). Hence, the expected number of fixed rescue mutations is 
+   <span class="italic">B</span> = 2
+   <span class="italic">N</span>
+   <sub>0</sub>
+   <span class="italic">U</span>Φ(
+   <span class="italic">r</span>
+   <sub>0</sub> − 
+   <span class="italic">r</span>
+   <sub>1</sub>)/
+   <span class="italic">r</span>
+   <sub>0</sub>, and the Poisson probability that at least one will spread is 
+   <span class="italic">P</span> = 1 − exp(−
+   <span class="italic">B</span>). Evolutionary rescue therefore requires that the frequency of rescue mutations is sufficiently high, Φ &gt; −[
+   <span class="italic">r</span>
+   <sub>0</sub>/(
+   <span class="italic">r</span>
+   <sub>0</sub> − 
+   <span class="italic">r</span>
+   <sub>1</sub>)][ln (1–
+   <span class="italic">P</span>)]/(2
+   <span class="italic">N</span>
+   <sub>0</sub>
+   <span class="italic">U</span>). For example, to attain 
+   <span class="italic">P</span> = 1/2 in a small population (
+   <span class="italic">N</span>
+   <sub>0</sub> = 1000) with genomic mutation rate 
+   <span class="italic">U</span> = 1, moderately rapid decline (
+   <span class="italic">r</span>
+   <sub>0</sub> = −0.1) and moderately strong selection (r
+   <sub>1</sub> = 0.1) requires Φ &gt; 0.0002 approximately.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Evolutionary rescue in an extreme-value model is illustrated in 
+   <a ref-type="fig" rid="fig03" href="#fig03">Fig. 3</a>. A single severe depression of fitness (
+   <span class="italic">r</span>
+   <sub>0</sub> = −0.5) is countered by an extreme-value series of beneficial mutations of which the top three are rescue alleles with 
+   <span class="italic">r</span> &gt; 0. The initial decline of the population is buffered by the increase in frequency of alleles with growth 
+   <span class="italic">r</span>
+   <sub>0</sub> &lt; 
+   <span class="italic">r</span> &lt; 0, but this effect is slight. The third-ranking allele appears at about generation 10 and rapidly spreads, rescuing the population. When it has nearly reached fixation the population is invaded first by the second-ranking and shortly afterwards by the top allele, which contribute to adaptation but were not responsible for rescue. Once the population has become abundant, a shifting spectrum of low-frequency mutations appears as mutation-selection balance is restored. The diagram shows a successful rescue; in most replicate simulations the population swiftly collapses.
+  </p>
+  <div id="fig03" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 3</span>
+   <div class="caption">
+    <p>Dynamics of evolutionary rescue. The population has 
+     <span class="italic">N</span>
+     <sub>0</sub> = 1000, 
+     <span class="italic">U</span> = 1, Δ
+     <sub>1</sub> = 0.25 and 
+     <span class="italic">r</span>
+     <sub>0</sub>
+     <sub>=</sub> −0.5. The lines show the flux in frequency of a fixed series of 20 alleles, of which the top three have 
+     <span class="italic">r</span> &gt; 0. The diamonds are overall population size.
+    </p>
+   </div>
+   <div xlink:href="eva0001-0003-f3" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The probability that a population will adapt to an abrupt stress depends on the severity of the stress and on the supply of beneficial mutations (
+   <a ref-type="fig" rid="fig04" href="#fig04">Fig. 4</a>). The two are linked, because for a given value of Δ
+   <sub>1</sub> rescue mutations will be more frequent when the stress is less severe. These simulations suggest that there will be a substantial probability of adaptation (
+   <span class="italic">P</span> &gt; 0.2 or so) only if the number of rescue mutants appearing exceeds one per generation. This condition might be difficult to meet, especially for small populations.
+  </p>
+  <div id="fig04" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 4</span>
+   <div class="caption">
+    <p>The probability of evolutionary rescue in relation to the severity of environmental deterioration and the mutation supply rate. Output of extreme-value model with 20 alleles, Δ
+     <sub>1</sub> = 0.25, 
+     <span class="italic">N</span>
+     <sub>0</sub> = 1000; plotted points each based on 100 simulations.
+    </p>
+   </div>
+   <div xlink:href="eva0001-0003-f4" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Quantitative variation in sexual populations</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">These ideas stem from thinking about microbial populations, which are typically large, asexual and highly resistant to extinction. Small sexual populations where the response to selection depends on standing genetic variance are more directly related to conservation issues. Suppose that viability in such a population with λ = 
+   <span class="italic">e</span>
+   <span class="sup">r</span> &gt; 1 is governed by some quantitative character with phenotypic variance 
+   <div class="inline-formula">
+    <span xlink:href="eva0001-0003-mu1.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> subject to stabilizing selection under a Gaussian fitness function with width ω
+   <span class="sup">2</span>. The population mean phenotype is close to its current optimum, but this optimal value now begins to change over time at a rate 
+   <span class="italic">k</span> per generation. This induces a response to selection 
+   <span class="italic">R</span> that shifts the population mean closer to the new optimum. Consequently, the population shadows the moving optimum, changing at a corresponding rate 
+   <span class="italic">k</span> per generation but lagging behind the current optimum by a quantity 
+   <span class="italic">k</span>/
+   <span class="italic">R</span> (
+   <a ref-type="bibr" rid="b21" href="#b21">Charlesworth 1993</a>; 
+   <a ref-type="bibr" rid="b59" href="#b59">Lynch and Lande 1993</a>). The disparity between the population mean and the optimum reduces λ, however, and if the rate of environmental change exceeds some critical value 
+   <span class="italic">k</span>
+   <sub>crit</sub> then λ &lt; 1 and the population will decline in abundance and eventually become extinct. Provided that the environment changes rather smoothly, with little stochastic variation around its expected value, this critical value is given approximately by 
+   <span class="italic">k</span>
+   <sub>crit</sub> ≍ 
+   <span class="italic">R</span> (2 V
+   <sub>λ</sub> ln λ*)
+   <span class="sup">0.5</span>, where 
+   <div class="inline-formula">
+    <span xlink:href="eva0001-0003-mu2.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> and λ* is the maximal rate of increase attained when the population mean phenotype matches the optimal value (cf equation 10 of 
+   <a ref-type="bibr" rid="b18" href="#b18">Burger and Lynch 1995</a>). Hence, the population is most likely to escape extinction through adaptation if genetic variance is large (
+   <span class="italic">R</span> and 
+   <div class="inline-formula">
+    <span xlink:href="eva0001-0003-mu3.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> large), selection is weak (ω
+   <span class="sup">2</span> and 
+   <span class="italic">V</span>
+   <sub>λ</sub> large), and fecundity is high (λ* large). 
+   <a ref-type="bibr" rid="b37" href="#b37">Gomulkiewicz and Holt (1995)</a> present a similar analysis in which environmental change reduces the population rate of increase below replacement level. This will eventually be restored by selection, but the population is likely to become extinct through demographic stochasticity if it remains rare for too long. The analytical theory does not yet handle the evolution of the genetic variance over time, but simulations show that large population size, high fecundity and an abundant supply of genetic variation through mutation facilitate escape from extinction by adaptation (
+   <a ref-type="bibr" rid="b45" href="#b45">Holt and Gomulkiewicz 2004</a>). Although the microbial and quantitative-genetic models are constructed in very different ways they give broadly concordant results, and hold out the hope that a general theory of adaptation in relation to extinction can be constructed. This would also imply that microbial models can be used to calibrate and test theories of evolutionary rescue. No such experiments have yet been reported, although we expect that they will become an important item on the agenda of evolutionary biology in the first decade of 
+   <span class="italic">Evolutionary Applications</span>. All we can do is to put forward some guesses to be tested by experience.
+  </p>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Rate of beneficial mutation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The rate of mutation to beneficial alleles depends both on the fundamental mutation rate and on the degree of adaptation of the population, and so cannot be estimated without knowing both the state of the environment and the state of the population. The actual frequency of beneficial mutations is poorly known, although it is usually thought to be very low (
+   <a ref-type="bibr" rid="b30" href="#b30">Eyre-Walker and Keightley 2007</a>). This is not necessarily the case: 
+   <a ref-type="bibr" rid="b83" href="#b83">Shaw et al. (2000)</a> claimed that roughly half of all mutations in 
+   <span class="italic">Arabidopsis</span> are beneficial. This claim was vigorously rebutted by 
+   <a ref-type="bibr" rid="b51" href="#b51">Keightley and Lynch (2003)</a>, but at least 40% of all viable loss-of-function mutations in yeast are neutral or mildly beneficial under laboratory conditions (
+   <a ref-type="bibr" rid="b6" href="#b6">Bell 2008</a>). This may explain why the decline of isolate lines where mutations are periodically trapped in bottlenecked populations is often very slow (e.g. 
+   <a ref-type="bibr" rid="b94" href="#b94">Vassilieva et al. 1999</a>), as beneficial as well as deleterious mutations are liable to be trapped. For example, 
+   <a ref-type="bibr" rid="b49" href="#b49">Joseph and Hall (2004)</a> found that about 5% of mutations in yeast mutation-accumulation lines were beneficial. The most precise estimate of the beneficial mutation rate at a nucleotide level is the study of an RNA virus by 
+   <a ref-type="bibr" rid="b78" href="#b78">Sanjuan et al. (2004)</a>, who found 2/29 viable single-nucleotide mutations were beneficial. They used a chimaeric ancestral sequence that had not been cultured long under laboratory conditions and may well have been poorly adapted. Other virus experiments yield much lower estimates: the initial probability that a random mutation will increase fitness is about 0.0034 for phage ϕX174 adapting to high temperature and about 0.0009 for RNA VSV adapting to a new host cell type . 
+   <a ref-type="bibr" rid="b50" href="#b50">Kassen and Bataillon (2006)</a> trapped beneficial mutations in laboratory population of 
+   <span class="italic">Pseudomonas</span> and estimated that they arose at a frequency of 7.6 × 10
+   <span class="sup">−11</span> per gene per replication, equivalent in their system to Φ = 0.031. It is quite possible that mutations are more strongly deleterious in natural conditions than in the laboratory, but in that case laboratory estimates of the effect of mutation are difficult to interpret.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The rate of mutation to rescue alleles is even less well known. It could be estimated by adapt-or-die experiments in which a dilution series of a test organism is exposed to a stress severe enough to cause population decline, but we do not know of any published estimates except those involving resistance to a lethal stress, usually a toxin such as an antibiotic. Moreover, even the rate of mutation to antibiotic resistance is far from being a simple parameter with a single value, but rather depends on the underlying physiology and genetics of the organism, its previous conditions of growth and the physical structure of the environment (
+   <a ref-type="bibr" rid="b62" href="#b62">Martinez and Baquero 2000</a>). Resistance to quinolones, for example, may involve mutations in seven or eight genes, in each of which several nucleotide substitutions may be responsible (
+   <a ref-type="bibr" rid="b46" href="#b46">Hooper 1999</a>), so that estimates of the rescue mutation rate can vary over four orders of magnitude, from 1 × 10
+   <span class="sup">−6</span> to 4 × 10
+   <span class="sup">−10</span> per genome per replication (
+   <a ref-type="bibr" rid="b53" href="#b53">Kohler et al. 1997</a>).
+  </p>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Variation and selection</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The immediate response to selection in most animals and plants will depend on the level of standing genetic variation in the population. Inbred lines of 
+   <span class="italic">Drosophila</span> respond only slowly to artificial selection, at about 10% of the rate of outbred lines. Outbred lines successfully adapted to much higher concentrations of salt than lines in which variation was restricted by inbreeding or bottlenecking (
+   <a ref-type="bibr" rid="b1001" href="#b1001">Frankham et al. (1999)</a>. The average heritability of characters measured in outbred natural populations is about 0.5 (
+   <a ref-type="bibr" rid="b67" href="#b67">Mousseau and Roff 1987</a>). Detailed analyses of exceptionally well-studied populations give a lower but still substantial average of 0.28 (
+   <a ref-type="bibr" rid="b56" href="#b56">Kruuk 2004</a>). As most characters have substantial phenotypic variation, this implies that additive genetic variance may often be sufficient to support adaptation to rapid environmental change. 
+   <a ref-type="bibr" rid="b41" href="#b41">Hendry et al. (2007)</a> showed that phenotypic changes induced by human activities often exceed those associated with natural environmental variation, but concluded that this was attributable in large part to phenotypic plasticity. 
+   <a ref-type="bibr" rid="b74" href="#b74">Réale et al. (2003)</a> found that the parturition date of red squirrels in northern Canada advanced by 3.7 days per generation between 1989 and 1998, with adaptation contributing 0.8 days and plasticity the remainder. In short, natural populations often have the potential to adapt to global change, and have been documented to do so.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The recuperation of fitness by selection is equal to the standardized additive variance of fitness, 
+   <div class="inline-formula">
+    <span xlink:href="eva0001-0003-mu4.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> by the fundamental theorem (
+   <a ref-type="bibr" rid="b32" href="#b32">Fisher 1930</a>), and on a few occasions this has been measured in natural populations. In the annual plant 
+   <span class="italic">Impatiens pallida</span> the corresponding phenotypic variance SV
+   <sub>P</sub> was 15.8 in natural conditions of growth, a very high value largely attributable to the majority of individuals that fail to reproduce at all; when these are neglected SV
+   <sub>P</sub> falls to 1.1 (
+   <a ref-type="bibr" rid="b7" href="#b7">Bell et al. 1991</a>). Only a very small fraction of this was genetic, however, with SV
+   <sub>A</sub> = 0.03 (
+   <a ref-type="bibr" rid="b82" href="#b82">Schoen et al. 1994</a>). In the great tit 
+   <span class="italic">Parus major</span> long-term observations of marked individuals yielded estimates of SV
+   <sub>P</sub> = 1.9 and SV
+   <sub>A</sub> = 0.014 (averaged over males and females) (
+   <a ref-type="bibr" rid="b63" href="#b63">McCleery et al. 2004</a>). Similar work with another small bird, the collared flycatcher 
+   <span class="italic">Ficedula albicollis</span>, gave SV
+   <sub>P</sub> = 0.4 and sex-averaged SV
+   <sub>A</sub> = 0.057 (
+   <a ref-type="bibr" rid="b64" href="#b64">Merilä and Sheldon 2000</a>). Although detailed field studies are scarce, the similarity of estimates from birds and plants suggests that SV
+   <sub>A</sub> might often lie between 0.01 and 0.05. Although not directly equivalent to the selective response to environmental change, this indicates that natural populations routinely cope with fitness degradation of a few per cent per generation.
+  </p>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Adaptation to stressful conditions</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The abundant genetic variation of many natural populations explains why they can often respond rapidly to changed conditions of growth. Field studies collated by 
+   <a ref-type="bibr" rid="b29" href="#b29">Endler (1986)</a> reported average selection coefficients of 0.33 for undisturbed environments and 0.30 for situations involving recent anthropogenic disturbance. The modal selection coefficient calculated from more recent selection gradient studies collated by 
+   <a ref-type="bibr" rid="b44" href="#b44">Hoekstra et al. (2001)</a> and 
+   <a ref-type="bibr" rid="b52" href="#b52">Kingsolver et al. (2001)</a> is between 0.15 and 0.35. These values may be inflated by reporting bias, but 
+   <a ref-type="bibr" rid="b40" href="#b40">Hendry and Kinnison (1999)</a> and 
+   <a ref-type="bibr" rid="b75" href="#b75">Reznick and Ghalambor (2001)</a> have emphasized that populations can often adapt successfully to abrupt environmental degradation. In the laboratory, artificial selection of a quantitative character over 30–50 generations can readily shift the population mean by 10 σ
+   <sub>P</sub> or more (
+   <a ref-type="bibr" rid="b43" href="#b43">Hill and Bünger 2004</a>), and the response increases with population size (
+   <a ref-type="bibr" rid="b97" href="#b97">Weber 2004</a>). Moreover, many instances of evolutionary rescue have been reported, especially the evolution of antibiotic resistance in microbes, pesticide resistance in insects, and herbicide resistance in plants (see 
+   <a ref-type="bibr" rid="b69" href="#b69">Palumbi 2001</a>). This gives some reason to hope that many organisms will be able to adapt successfully to the relatively mild stresses imposed by global change (see 
+   <a ref-type="bibr" rid="b33" href="#b33">Frankham and Kingsolver 2004</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Most of these example, however, involve rather mild stresses, very large populations of individuals or meristems, or experimental situations in which the propagation of the line is assured. When severe stress is encountered, one route to evolutionary rescue is the high mutation supply rate provided by a large population. As a crude rule of thumb, intended to be no more than a stimulus for more exact analyses, a substantial probability of adaptation may require at least one rescue mutation per generation, independently of the severity of the stress. Although we do not yet have good estimates of this rate, some unintentional natural experiments suggest that it may often be very low. Elm and chestnut trees have failed to evolve substantial resistance to introduced fungal pathogens, despite populations of billions of trees. Vultures in India have failed to adapt to diclofenac, and will surely become extinct unless conservation efforts are successful, despite an initial population size of 2–3 × 10
+   <span class="sup">7</span> individuals (
+   <a ref-type="bibr" rid="b39" href="#b39">Green et al. 2004</a>). In the first systematic discussion of adaptation to global change, 
+   <a ref-type="bibr" rid="b14" href="#b14">Bradshaw and McNeilly (1991)</a> were skeptical that selection will often succeed in rescuing stressed populations from extinction. They drew on their extensive experience with heavy-metal tolerance in plants to point out that tolerance readily evolves in a minority of species, but seldom, if ever, in most. Hundreds of species grow next to stressful environments such as salt marshes or serpentine soils without ever becoming adapted to them. Changing climates often cause shifts in plant distribution, such that species remain within the same range of conditions, with little evidence for adaptation 
+   <span class="italic">in situ</span>. The sporadic occurrence of adaptation to particular kinds of stressful conditions suggests that it may often depend on idiosyncratic properties of particular species, which either preadapt them to survive or make it more likely that adaptation will often occur. Any given stress would then sort the existing community and lead to the emergence of a less diverse group of the luckiest species.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Even very large population size is not necessarily an effective prophylactic against extinction. For example, 
+   <a ref-type="bibr" rid="b57" href="#b57">Kwiatkowski and Roff (1976)</a> reported high rates of extinction among the phytoplankton of a group of acidified oligotrophic lakes on the northern shore of Lake Huron. A nonacidified lake with low concentrations of heavy metals supported 55 species of eukaryotic algae. Only 34 species remained in Carlyle Lake, which had a mean pH of about 5 and elevated levels of heavy metals. It had a chlorophyll a concentration of about 1 μg L
+   <span class="sup">−1</span>, equivalent to 50 μg L
+   <span class="sup">−1</span> of algae, or about 5 × 10
+   <span class="sup">4</span> cells L
+   <span class="sup">−1</span> of algae the size of 
+   <span class="italic">Chlamydomonas</span>. This amounts to a whole-lake population of 2.5 × 10
+   <span class="sup">11</span> cells, or roughly 10
+   <span class="sup">10</span> cells per species on average. The time period of acidification is not known, but is unlikely to have been &lt;20 years, so the total number of cells exposed to mutation is likely to have been at least 10
+   <span class="sup">12</span> on average per species. Nevertheless, about one-third of species became extinct. A more severely affected lake nearby, with pH 4–4.6 had only 12 species remaining. Baby Lake, close to a big nickel smelter at Sudbury, was almost devoid of eukaryotic life in 1972 except for a sparse population of 
+   <span class="italic">Chlorella</span>. This was attributable to its pH of 4 and very high heavy metal concentrations (Ni 3.2 ppm, Cu 0.7 ppm), and when isolates of 
+   <span class="italic">Chlorella</span> from the lake were tested in laboratory media they were found to have evolved tolerance to high levels of Ni and Cu (
+   <a ref-type="bibr" rid="b89" href="#b89">Stokes et al. 1973</a>). 
+   <span class="italic">Scenedesmus</span> from a nearby lake was likewise tolerant of high levels of Cu. Hence, microbes can become adapted even to very stressful conditions, but even microbes are likely to become extinct as stress becomes more severe, until only the most abundant (or the luckiest) survive.
+  </p>
+ </sec>
+</sec>

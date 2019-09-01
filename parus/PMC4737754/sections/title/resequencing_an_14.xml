@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Resequencing and SNP calling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We analysed 29 wild great tit individuals (
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 2</a>) covering a wide range of the species distribution (
+  <a ref-type="fig" rid="f1" href="#f1">Fig. 1</a>); 10 individuals were from the Wytham population in Oxford (UK), and the remaining 19 birds were sampled from 15 European populations. Each bird was sequenced to ≈10 × coverage. Paired-end sequencing libraries of each sample were built with an insert size of 300 bp and sequencing was performed on a HiSeq 2000 platform with a read length of 100 bp. The raw reads were trimmed and filtered with Sickle (
+  <span ext-link-type="uri" xlink:href="https://github.com/najoshi/sickle" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/najoshi/sickle</span>) using default parameters and a length restriction of 75. We then used the Burrows–Wheeler Aligner
+  <a ref-type="bibr" rid="b50" href="#b50">50</a> to map the filtered raw reads onto the assembled great tit reference genome. Subsequently, we removed duplicates and conducted local realignments following the best practices of the GATK pipeline
+  <a ref-type="bibr" rid="b51" href="#b51">51</a>. We used ANGSD
+  <a ref-type="bibr" rid="b52" href="#b52">52</a> to call SNPs based on the genotype likelihoods estimated by the GATK model from the mapped reads
+  <a ref-type="bibr" rid="b51" href="#b51">51</a>; this approach has been shown to produce more accurate estimates of the Site Frequency Spectrum (SFS) than other widely used SNP-calling pipelines when sequencing coverage is low (&lt;10 × )
+  <a ref-type="bibr" rid="b53" href="#b53">53</a>, which is critical for our analysis because our average coverage is 10 × . However, for comparison, we also called SNPs using three additional approaches: (1) GATK using data from each individual separately (the ‘Single' approach); (2) GATK using data from all individuals simultaneously (the ‘Multi' approach); (3) Platypus, which calls SNPs directly from the Burrows–Wheeler Aligner alignments, independent of the GATK pipeline
+  <a ref-type="bibr" rid="b54" href="#b54">54</a>. We also tested the reliability of the SNP data, see details in 
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Information</a> and 
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 9 and 10</a> and 
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 9</a>.
+ </p>
+</sec>

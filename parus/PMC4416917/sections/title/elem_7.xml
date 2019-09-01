@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec007" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">All statistical analyses were conducted in the statistical software R version 2.15.3 [
+  <a rid="pone.0125773.ref033" ref-type="bibr" href="#pone.0125773.ref033">33</a>].
+ </p>
+ <sec id="sec008" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Maternal infection and current breeding attempt</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We first investigated the relationship between maternal infection and reproductive success measured as either clutch size (number of eggs), fledging failure or recruitment failure (first dataset, see above). To test if there was a mean difference between infected/non-infected mothers or a linear relationship with faecal egg count (FEC), we used maternal infection status (no/yes) or FEC as explanatory variables. We included females which had been captured and sampled during the period when their nest contained eggs or chicks. This period corresponds to hatch date ± 14 days, as egg laying and incubation may take 14 days [
+   <a rid="pone.0125773.ref028" ref-type="bibr" href="#pone.0125773.ref028">28</a>] and chicks generally leave the nest when they are 14 days old [
+   <a rid="pone.0125773.ref028" ref-type="bibr" href="#pone.0125773.ref028">28</a>]. In addition to infection status and FEC, we included clutch number, clutch size, hatch day, hatch day
+   <span class="sup">2</span>, calendar year (as a factor) and the mothers; age, age
+   <span class="sup">2</span> and morphology (BC, bill depth, bill length, tarsus length and wing length) as explanatory variables. Because 6 birds appeared as mothers more than once in our dataset, we used maternal identity as a random factor in all models in order to avoid pseudoreplication.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The first analysis focused on the relationship between clutch size (measured as the number of eggs laid by a female) and infection. In this analysis we used the clutch size as the response variable in generalized linear mixed models (package lme4, function = glmer, family = poisson, link = log). In the second part of our first section, we investigated the probability of fledging failure measured as the proportion of eggs in a nest that failed to develop into fledglings (nestlings with age 9–13 days) by using generalized linear mixed models (package lme4, function = glmer, family = binomial, link = cloglog). In these models, we also included the age of fledglings (9–13) as an offset in all models to account for differences in survival intervals from egg to fledgling [
+   <a rid="pone.0125773.ref034" ref-type="bibr" href="#pone.0125773.ref034">34</a>]. We also weighted the proportion of fledgling failure in a given nest by the number of eggs present in the nest (i.e. number of trials). Lastly in our first section, we investigated the probability of fledglings failing to become recruits (i.e. probability of fledglings in a given nest that failed to survive their first winter) by using generalized linear mixed models (package lme4, function = glmer, family = binomial, link = cloglog). We only included nests that produced fledglings (n = 51). We also weighted the proportion of recruitment failure in a given nest by the number of fledglings present in the nest (i.e. number of trials). We thus investigated if maternal infection could have a delayed relationship with mortality of offspring after fledging.
+  </p>
+ </sec>
+ <sec id="sec009" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Lifetime reproductive success and juvenile infection</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Our second section of analyses investigated the relationship between female lifetime reproductive success (LRS) and their infection status or FEC as a juvenile. In these analyses we used our second dataset (see above) which was collected from captured female juveniles and only included female juveniles that survived to become adults. None of these individuals were observed or captured in 2013 and were assumed to be dead after 2012. Previous analyses [
+   <a rid="pone.0125773.ref021" ref-type="bibr" href="#pone.0125773.ref021">21</a>] have found a very high mean resighting probability (~ 0.9) on Hestmannøy. Accordingly, we assumed that the estimated total number of recruits produced per female 2007–2012 represented an estimate of the LRS for these individuals. For these analyses we used generalized linear models (function = glm, family = poisson, link = log) with LRS as the response variable. As explanatory variables we used FEC, infection status and juvenile morphology (BC, bill depth, bill length, tarsus length and wing length). In addition we included the lifespan (number of years) and the hatch year of individuals as explanatory variables.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">All candidate models were ranked using Akaike information criterion corrected for small sample sizes (AIC
+   <sub>C</sub>), which penalizes models with a high number of parameters relative to sample size [
+   <a rid="pone.0125773.ref035" ref-type="bibr" href="#pone.0125773.ref035">35</a>]. We also calculated the Akaike weights [
+   <a rid="pone.0125773.ref035" ref-type="bibr" href="#pone.0125773.ref035">35</a>] of all candidate models. Estimates from candidate models are reported as mean ± 1 standard error. In order to prevent any problems due to multicollinearity, all explanatory variables were assessed for collinearity visually, by the use of Pearson’s correlation coefficient (r
+   <sub>p</sub>) and variance inflation factors (VIF). Models with higher-order terms also included the respective main effects (e.g. age and age
+   <span class="sup">2</span>). To avoid overparametrization [
+   <a rid="pone.0125773.ref035" ref-type="bibr" href="#pone.0125773.ref035">35</a>], we did not include models with a sample size to variable ratio &lt; 10 (i.e. never less than 10 samples per variable). Due to the relatively small size of our datasets, we did not include interactions between explanatory variables in any models. We also did not allow FEC and infection status to feature together in the same candidate model(s) due to their collinearity.
+  </p>
+ </sec>
+</sec>

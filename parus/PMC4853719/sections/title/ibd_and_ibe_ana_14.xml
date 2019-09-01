@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">IBD and IBE analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">To quantify the roles of geography and ecology in spatial genetic divergence, we quantified isolation by distance (IBD)
+  <a ref-type="bibr" rid="b21" href="#b21">21</a> and isolation by environment (IBE)
+  <a ref-type="bibr" rid="b87" href="#b87">87</a> using our AFLP dataset, because multi-locus datasets with highly variable markers are ideal for this purpose
+  <a ref-type="bibr" rid="b5" href="#b5">5</a>
+  <a ref-type="bibr" rid="b88" href="#b88">88</a>
+  <a ref-type="bibr" rid="b89" href="#b89">89</a>. We computed population pairwise genetic distances (
+  <span class="italic">F</span>
+  <sub>ST</sub>) with 
+  <span class="sc">arlequin</span> using all putatively neutral (non-outlier) AFLP loci (i.e. 451 loci) described above. We obtained a total of 21 environmental and geographical variables for our study area, including 19 bioclimatic variables with 30 arc-second resolution (
+  <span ext-link-type="uri" xlink:href="http://www.bioclim.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.bioclim.org</span>), a slope layer based on a digital elevation model with 1-km resolution from the USGS EROS database (
+  <span ext-link-type="uri" xlink:href="http://eros.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://eros.usgs.gov</span>), and soil type from the Chinese soil taxonomy record
+  <a ref-type="bibr" rid="b90" href="#b90">90</a>. We used resistance-based distances, to reflect biological connectivity between populations, instead of direct geographical distances
+  <a ref-type="bibr" rid="b89" href="#b89">89</a> (see 
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Method S5</a> for more details).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We then employed two related methods to quantify IBD and IBE: multiple matrix regression with randomization (MMRR)
+  <a ref-type="bibr" rid="b88" href="#b88">88</a> and structural equation modelling (SEM)
+  <a ref-type="bibr" rid="b89" href="#b89">89</a>. Both methods use a series of regression-based analyses to quantify the effects of multiple explanatory variables on a single response variable, in this case genetic distance (
+  <span class="italic">F</span>
+  <sub>ST</sub>). MMRR provides a straightforward method for estimating linear regressions among distance matrices, while SEM allows for flexibility in defining the relationships among variables and utilizes latent variable modelling. For the MMRR analysis, we constructed an environmental distance matrix by taking the population pairwise Euclidian distances across all 21 environmental variables. We then analyzed the effects of environmental distance and geographic distance, as explanatory variables, on genetic distance, as the response variable, using the ‘MMRR’ function in R
+  <a ref-type="bibr" rid="b88" href="#b88">88</a> with 10,000 permutations. For the SEM analysis, we used all 21 environmental variables to construct an environmental distance latent variable, and then quantified the relationships between environmental distance, geographic distance, and genetic distance using the ‘lavaan’ package in R (
+  <span ext-link-type="uri" xlink:href="http://cran.r-project.org/web/packages/lavaan/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://cran.r-project.org/web/packages/lavaan/</span>). Prior to analysis, all environmental, geographic, and genetic distance matrices were standardized. In each case, the analysis was used to test three alternative hypotheses: (1) only geographical distance contributes significantly to genetic distance, (2) only environmental distance contributes significantly to genetic distance, and (3) geographical distance and environmental distance each contribute significantly to genetic distance. We performed both analyses on AFLP pairwise genetic distances (
+  <span class="italic">F</span>
+  <sub>ST</sub>) for all populations.
+ </p>
+</sec>

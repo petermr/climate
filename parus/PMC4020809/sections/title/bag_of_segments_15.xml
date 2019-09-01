@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2f" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bag of Segments, Statistics of Segments and Coding Over Multiple Codebooks</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="bold">S
+   <sub>1</sub>
+  </span> offers a gross description of the spectrum. The 
+  <span class="bold">S
+   <sub>1</sub>
+  </span> features set can capture quite well species vocalising in different frequency bands but it fails to capture species vocalising in the same band. Another set of features, named 
+  <span class="bold">S
+   <sub>2</sub>
+  </span> is extracted out of the examination of the morphology of each ROI. Each recording is considered as a bag of segments where the bag is the set composed of all ROIs in a recording and each ROI is an instance. For the ROIs corresponding to each recording we derive the following features:
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Area of the binary mask noted as 
+  <span class="italic">M
+   <sub>area</sub>
+  </span> of the mask 
+  <span class="italic">M</span>:
+  <div id="pone.0096936.e001" class="disp-formula">
+   <div xlink:href="pone.0096936.e001.jpg" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <span class="label">(1)</span>
+  </div>where 
+  <span class="italic">t, f</span> are pixel indices belonging to the area of the mask.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Mean off the spectral patch corresponding to a ROI:
+  <div id="pone.0096936.e002" class="disp-formula">
+   <div xlink:href="pone.0096936.e002.jpg" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <span class="label">(2)</span>
+  </div>where S
+  <span class="italic">
+   <sub>t,f</sub>
+  </span> corresponds to the amplitude of the spectral chunk of the underlying binary mask 
+  <span class="italic">M
+   <sub>t,f</sub>.
+  </span>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Standard deviation of the spectral ROI:
+  <div id="pone.0096936.e003" class="disp-formula">
+   <div xlink:href="pone.0096936.e003.jpg" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <span class="label">(3)</span>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The Median, Minimum and Maximum value of the spectral patch defined by ROIs and the Maximum position of the spectral ROIs (only the frequency index retained) as well as bandwidth and duration of each ROI are set as features. Additionally, we calculate the mel-frequency cepstral coefficients (13 features) only in the frames containing the ROIs. These coefficients are derived by multiplying the amplitude of the spectrogram with a mel-scaled filterbank, then the logarithm is applied and finally the result is decorrelated using the discrete cosine transform.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">However, each recording has a varying number of ROIs. In order to derive a useful description per recording this must have a fixed size so that it can be compared to the descriptions of other recordings. Therefore we follow the following steps:</p>
+ <div list-type="alpha-lower" class="list" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="list-item">
+   <p>The ROIs of all training and test recordings are pooled together, whitened and clustered using a widely accepted non-supervised clustering approach namely K-means clustering 
+    <a rid="pone.0096936-Breiman1" ref-type="bibr" href="#pone.0096936-Breiman1">[22]</a>.
+   </p>
+  </div>
+  <div class="list-item">
+   <p>Each ROI belonging to the same recording is associated to the cluster mean from which it has the lowest distance.</p>
+  </div>
+  <div class="list-item">
+   <p>From all ROIs belonging to each recording we make a histogram of occurrences of cluster indices. This clearly has a fixed dimensionality equal to the size of the K-means partition. This procedure resembles the bag-of-words analysis used in text processing that is adapted to our bag of spectral segments case as in 
+    <a rid="pone.0096936-Briggs1" ref-type="bibr" href="#pone.0096936-Briggs1">[5]</a>.
+   </p>
+  </div>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We have found the use of multiple code-books over the single codebook approach beneficial. A codebook with a small number of clusters will cluster using the gross-characteristic of the ROIs while gradual augmentation of the number of clusters leads to finer detail. We have been using 3 codebooks with 25, 15 and 70 clusters respectively resulting to a 687×25, 687×15, 687×70 training set which, after column stacking leads to a future set of 
+  <span class="bold">S
+   <sub>2</sub>
+  </span>
+  <span class="sup">687×110</span> for the training set.
+ </p>
+</sec>

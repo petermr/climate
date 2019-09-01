@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece35190-sec-0008" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.6</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecological niche modeling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We attempted to estimate the approximate Last Glacial Maximum (LGM) distribution of 
+  <span class="italic">B. lineatus</span> using ecological niche modeling (ENM: Peterson et al., 
+  <a rid="ece35190-bib-0047" ref-type="ref" href="#ece35190-bib-0047">2011</a>); an approach that has been shown to be useful for interpreting phylogeographic patterns (Alvarado‐Serrano &amp; Knowles, 
+  <a rid="ece35190-bib-0001" ref-type="ref" href="#ece35190-bib-0001">2014</a>). We created a file of latitudes and longitudes for 
+  <span class="italic">B. lineatus</span> using AMNH specimens, geo‐referenced museum specimens compiled in the Global Biodiversity Information Facility (GBIF.org) and documented breeding attempts in various state breeding bird atlases. We removed vagrants from the GBIF list by checking for specimens collected in United States and Mexican states and in Canadian provinces in which the hawk has not been documented to breed. Because 
+  <span class="italic">B. lineatus</span> is largely nonmigratory and its known migration does not extend south of its breeding range (Crocoll, 
+  <a rid="ece35190-bib-0018" ref-type="ref" href="#ece35190-bib-0018">1994</a>), this file represents a reasonable assessment of the species' breeding distribution.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We constructed ENMs using the WorldClim database for current climate (Hijmans, Cameron, Parra, Jones, &amp; Jarvis, 
+  <a rid="ece35190-bib-0029" ref-type="ref" href="#ece35190-bib-0029">2005</a>) and the Paleoclimate Modelling Intercomparison Project Phase II database for the LGM (Braconnot et al., 
+  <a rid="ece35190-bib-0013" ref-type="ref" href="#ece35190-bib-0013">2007</a>). Based on the pattern of correlations among climatic variables, we reduced 19 commonly used bioclimatic factors to seven variables not highly correlated in the North American breeding range of 
+  <span class="italic">B. lineatus</span>. Two of these represented temperature extremes (minimum temperature of the coldest month of the year; mean temperature of the warmest quarter); three represented seasonality of precipitation (precipitation seasonality; precipitation of warmest quarter; precipitation of wettest quarter); one represented drought incidence (precipitation of driest quarter); and one representing frost, ice, and snow conditions (precipitation of coldest quarter). These variables had correlations ranging from 0.14 to 0.86 (median 0.49), and the correlation patterns were similar in the current climate and LGM databases. By using only (abiotic) climate variables in our analysis, our ENMs represent projections of areas with suitable climate for 
+  <span class="italic">B. lineatus</span> rather than its true range, which would also require biotic factors, such as competition with other predators. Nevertheless, our climatic ENMs do allow us to make broad comparisons about changes in suitable regions for 
+  <span class="italic">B. lineatus</span> between current conditions and those at the LGM.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We built ENMs using MAXENT version 3.3.3e (Phillips, Anderson, &amp; Schapire, 
+  <a rid="ece35190-bib-0048" ref-type="ref" href="#ece35190-bib-0048">2006</a>); MAXENT estimates the unknown probability density for a species' actual range by minimizing the relative entropy between the species' observed range and environmental conditions across the study area (Elith et al., 
+  <a rid="ece35190-bib-0021" ref-type="ref" href="#ece35190-bib-0021">2006</a>). We selected the regularization parameter for the MAXENT model by testing a range of values from one to four and determining which model resulted in the highest area under the curve (AUC) of the receiver operating characteristic (ROC) plot, calculated with one‐fourth of occurrence data set aside as test data (Radosavljevic &amp; Anderson, 
+  <a rid="ece35190-bib-0053" ref-type="ref" href="#ece35190-bib-0053">2014</a>). We chose a regularization parameter of two. Other model parameterizations followed generic recommendations by the model developers (Phillips et al., 
+  <a rid="ece35190-bib-0048" ref-type="ref" href="#ece35190-bib-0048">2006</a>; Phillips &amp; Dudik, 
+  <a rid="ece35190-bib-0049" ref-type="ref" href="#ece35190-bib-0049">2008</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We evaluated the predictive capabilities of the model using a fourfold partitioning (Peterson et al., 
+  <a rid="ece35190-bib-0047" ref-type="ref" href="#ece35190-bib-0047">2011</a>). For each partitioning, we calculated the AUC. We also calculated the omission rate by generating binary predictions using a maximum training sensitivity plus specificity threshold and used a binomial test to assess whether the observed omission rate was better than expected compared with a random prediction (Anderson, Gómez‐Laverde, &amp; Peterson, 
+  <a rid="ece35190-bib-0002" ref-type="ref" href="#ece35190-bib-0002">2002</a>).
+ </p>
+</sec>

@@ -1,0 +1,1632 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="evo13660-sec-0020" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="evo13660-sec-0030" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">DATA COLLECTION AND PREPARATION</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Data were collected from a long‐term great tit (
+   <span class="italic">Parus major</span>) population at the Hoge Veluwe National Park (HV; 52°23′N, 05°51′E, central Netherlands). The HV population is situated within a matrix of natural habitat, facilitating dispersal from and into the study area, and has been monitored continuously since 1955. Nest boxes are provided in excess (∼400) in suitable habitat. Each breeding season from April to July, boxes are checked at least once a week to monitor the breeding activity of hole‐breeding passerines. Clutch size is noted and laying date (i.e., the date when a female's first egg of her first clutch in that season is laid) is calculated based on the number of eggs in the nest, assuming that one egg is laid per day. During the chick‐feeding phase, parents and chicks are captured at the nest box and ringed, allowing for establishing a “social” pedigree. Extra‐pair paternity in the neighboring population of Westerheide ranges from 6.5% to 12.5% of all chicks (Van Oers et al. 
+   <a rid="evo13660-bib-0093" ref-type="ref" href="#evo13660-bib-0093">2008</a>), a common rate for tit species (Brommer et al. 
+   <a rid="evo13660-bib-0007" ref-type="ref" href="#evo13660-bib-0007">2010</a>) that has been found to only marginally affect the accuracy of heritability estimates when sample sizes are sufficiently large (Charmantier and Réale 
+   <a rid="evo13660-bib-0015" ref-type="ref" href="#evo13660-bib-0015">2005</a>; Firth et al. 
+   <a rid="evo13660-bib-0023" ref-type="ref" href="#evo13660-bib-0023">2015</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Temperature data were retrieved as daily averages from a nearby weather station of the Royal Dutch Meteorological Institute (KNMI; Deelen station: 52°05′N, 5°87′E; 
+   <span ext-link-type="uri" xlink:href="http://projects.knmi.nl/klimatologie/daggegevens/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://projects.knmi.nl/klimatologie/daggegevens/</span>). Temperature data were averaged over the period from March 11 to April 20, which is the time window yielding the strongest correlation between annual mean daily average temperature and annual mean laying date (
+   <span class="italic">r</span>
+   <span class="sup">2</span> = 0.74). This was done using a sliding‐window approach in the “climwin” R package (Bailey and Van de Pol 
+   <a rid="evo13660-bib-0002" ref-type="ref" href="#evo13660-bib-0002">2017</a>); details of the analyses are given elsewhere (Bailey et al. in prep.). We used these mean daily average temperatures as proxies for the environmental cues great tits use to time their reproduction, which in reality is an intricate interplay between day length and changes in temperature over time (Gienapp et al. 
+   <a rid="evo13660-bib-0028" ref-type="ref" href="#evo13660-bib-0028">2005</a>; Schaper et al. 
+   <a rid="evo13660-bib-0076" ref-type="ref" href="#evo13660-bib-0076">2012</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The peak date of food availability has been estimated since 1985, using frass samples (see Visser et al. 
+   <a rid="evo13660-bib-0103" ref-type="ref" href="#evo13660-bib-0103">2006</a> for details). The most common caterpillars are of the winter moth (
+   <span class="italic">Operophtera brumata</span>) and the oak leaf roller (
+   <span class="italic">Tortrix viridana</span>), although other species are present. Caterpillar peak date correlates very well with the mean temperature from March 22 to May 16 (
+   <span class="italic">r</span>
+   <span class="sup">2</span> = 0.81, resulting from a sliding window analysis); we used this relationship to hindcast the caterpillar peak date from 1973 to 1984 (all temperatures fell within the analyzed range).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Here, we consider brood data from 1973 to 2016, as the study area was reorganised following a major storm in 1972, and the latest data on recruitment of fledged offspring (our fitness measure) was available for 2017. During the study period, a number of broods were manipulated in brood size. None of the broods that we considered were affected in their laying date, but brood size manipulations could affect the reproductive success of a brood. We therefore included broods whose size was manipulated in the laying date analyses, but removed them from annual selection analysis (but not for analysis of selection on the reaction norm; see below). Sample sizes per analysis are given in Table 
+   <a rid="evo13660-tbl-0001" ref-type="table" href="#evo13660-tbl-0001">1</a>.
+  </p>
+  <div id="evo13660-tbl-0001" xml:lang="en" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <p>Sample sizes used in all analyses</p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <col align="left" span="1"/>
+    <col align="left" span="1"/>
+    <col align="left" span="1"/>
+    <col align="left" span="1"/>
+    <col align="left" span="1"/>
+    <thead>
+     <tr style="border-bottom:solid 1px #000000">
+      <th align="left" rowspan="1" colspan="1">Analysis</th>
+      <th align="left" rowspan="1" colspan="1">Year span</th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="italic">N</span>
+       <sub>years</sub>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="italic">N</span>
+       <sub>females</sub>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="italic">N</span>
+       <sub>broods</sub>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">1. Optimal laying date vs. environment</td>
+      <td align="left" rowspan="1" colspan="1">1973–1987</td>
+      <td align="left" rowspan="1" colspan="1">15</td>
+      <td align="left" rowspan="1" colspan="1">—</td>
+      <td align="left" rowspan="1" colspan="1">—</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">1988–2001</td>
+      <td align="left" rowspan="1" colspan="1">14</td>
+      <td align="left" rowspan="1" colspan="1">—</td>
+      <td align="left" rowspan="1" colspan="1">—</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">2002–2016</td>
+      <td align="left" rowspan="1" colspan="1">15</td>
+      <td align="left" rowspan="1" colspan="1">—</td>
+      <td align="left" rowspan="1" colspan="1">—</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">2. Selection on plasticity
+       <a ref-type="fn" rid="evo13660-tbl1-note-0001" href="#evo13660-tbl1-note-0001">a</a>
+      </td>
+      <td align="left" rowspan="1" colspan="1">1969–1987</td>
+      <td align="left" rowspan="1" colspan="1">19</td>
+      <td align="left" rowspan="1" colspan="1">456</td>
+      <td align="left" rowspan="1" colspan="1">1272</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">1988–2001</td>
+      <td align="left" rowspan="1" colspan="1">14</td>
+      <td align="left" rowspan="1" colspan="1">365</td>
+      <td align="left" rowspan="1" colspan="1">953</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">2002–2012</td>
+      <td align="left" rowspan="1" colspan="1">11</td>
+      <td align="left" rowspan="1" colspan="1">280</td>
+      <td align="left" rowspan="1" colspan="1">691</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">3. Quantifying 
+       <span class="bold">
+        <span class="italic">G</span>
+       </span>‐matrix
+      </td>
+      <td align="left" rowspan="1" colspan="1">1973–2016</td>
+      <td align="left" rowspan="1" colspan="1">44</td>
+      <td align="left" rowspan="1" colspan="1">3028</td>
+      <td align="left" rowspan="1" colspan="1">4890</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">4. Selection (
+       <div id="nlm-math-1" class="math">
+        <div class="msub">
+         <span class="mi">β</span>
+         <span class="mi">z</span>
+        </div>
+       </div>) on laying date
+       <a ref-type="fn" rid="evo13660-tbl1-note-0002" href="#evo13660-tbl1-note-0002">b</a>
+      </td>
+      <td align="left" rowspan="1" colspan="1">1973–2016</td>
+      <td align="left" rowspan="1" colspan="1">44</td>
+      <td align="left" rowspan="1" colspan="1">&gt;2347</td>
+      <td align="left" rowspan="1" colspan="1">3662</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">5. Observed reaction norms</td>
+      <td align="left" rowspan="1" colspan="1">1973–1987</td>
+      <td align="left" rowspan="1" colspan="1">15</td>
+      <td align="left" rowspan="1" colspan="1">1026</td>
+      <td align="left" rowspan="1" colspan="1">1650</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">1988–2001</td>
+      <td align="left" rowspan="1" colspan="1">14</td>
+      <td align="left" rowspan="1" colspan="1">993</td>
+      <td align="left" rowspan="1" colspan="1">1551</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">2002–2016</td>
+      <td align="left" rowspan="1" colspan="1">15</td>
+      <td align="left" rowspan="1" colspan="1">1126</td>
+      <td align="left" rowspan="1" colspan="1">1689</td>
+     </tr>
+    </tbody>
+   </table>
+   <div class="table-wrap-foot">
+    <fn id="evo13660-tbl1-note-0001" class="fn" xmlns="">
+     <p xmlns="http://www.w3.org/1999/xhtml">
+      <span class="sup">a</span>Year span here indicates cohort span; birds with incomplete lifetime reproductive success (LRS) at the end of the dataset were omitted, whereas LRS of birds breeding in 1973 were complemented with brood data from previous years, hence making the cohort span 1969–2012 (see text). Only birds with ≥ 2 breeding events were included here.
+     </p>
+    </fn>
+    <fn id="evo13660-tbl1-note-0002" class="fn" xmlns="">
+     <p xmlns="http://www.w3.org/1999/xhtml">
+      <span class="sup">b</span>Reduced dataset without manipulated broods; exact 
+      <span class="italic">N</span>
+      <sub>females</sub> is unknown because this analysis includes broods whose mother could not be identified.
+     </p>
+    </fn>
+   </div>
+   <div class="permissions">
+    <span class="copyright-holder">John Wiley &amp; Sons, Ltd.</span>
+   </div>
+  </div>
+ </sec>
+ <sec id="evo13660-sec-0040" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">CHANGE IN THE RELATIONSHIP BETWEEN OPTIMAL PHENOTYPE AND THE ENVIRONMENT</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">If the optimal laying date (LD
+   <sub>θ</sub>, i.e., the laying date at which fitness is maximized) advanced at a faster rate over time than the observed laying date, this could lead to selection on (1) the reaction norm elevation, if the sensitivity of the optimal reaction norm to temperature (i.e., plasticity) remained constant over time, or (2) the slope, if the sensitivity of LD
+   <sub>θ</sub> to temperatures changed over time. We therefore determined LD
+   <sub>θ</sub> in each year and regressed it against the temperature cues used by the birds (i.e., the mean temperature across March 11–April 20). LD
+   <sub>θ</sub> was defined as the peak date of caterpillar biomass minus 33 (see Chevin et al. 
+   <a rid="evo13660-bib-0016" ref-type="ref" href="#evo13660-bib-0016">2015</a>). The rationale behind this was that it takes approximately 33 days from the laying date to the moment when chicks’ food requirements are highest, assuming a clutch size of 9–10, followed by 12–13 days of incubation, and a peak in food demands at chick age 9–11 d (e.g., Keller and Van Noordwijk 
+   <a rid="evo13660-bib-0043" ref-type="ref" href="#evo13660-bib-0043">1994</a>; Mols et al. 
+   <a rid="evo13660-bib-0054" ref-type="ref" href="#evo13660-bib-0054">2005</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To test whether the optimal reaction norm changed over time, we divided the datasets into three equal‐interval time periods (spanning 14–15 years: 1973–1987, 1988–2001, 2002–2016; Table 
+   <a rid="evo13660-tbl-0001" ref-type="table" href="#evo13660-tbl-0001">1</a>). We then fitted a linear model with LD
+   <sub>θ</sub> as a function of temperature and time period. We assessed statistical significance of model terms by bootstrapping (1000 iterations, bias‐corrected, and accelerated confidence intervals) estimates for each period, as well as the temperature slope. We then ran a model that contained an interaction between temperature and period and bootstrapped the change in the slope of the optimal reaction norm between periods to determine whether the slope changed over time. The year 1991 was excluded from this analysis as an exceptionally late frost spell in that year damaged all fresh oak leaves and hence the food peak was exceptionally late (see also Visser et al. 
+   <a rid="evo13660-bib-0104" ref-type="ref" href="#evo13660-bib-0104">2002</a>, 
+   <a rid="evo13660-bib-0103" ref-type="ref" href="#evo13660-bib-0103">2006</a>).
+  </p>
+ </sec>
+ <sec id="evo13660-sec-0050" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">SELECTION ON THE SLOPE AND ELEVATION OF THE GREAT TIT REACTION NORM</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To estimate period‐specific (fecundity) selection on plasticity, we assigned each female with at least two breeding attempts to a breeding cohort (based on the first year a bird was observed breeding) and split the phenotypic dataset into three time periods as above. A female's lifetime reproductive success (LRS) was the sum of all recruits she produced over her lifetime. To avoid truncation of LRS of birds breeding in 1973, we added broods from earlier years (before 1973) to complete each individual's LRS. For the same reason, we removed all observations of birds from the 2013 breeding cohort or later, as some birds from these cohorts were still known to be breeding in 2017 and therefore had incomplete LRS. Hence, the periods in this analysis were 1969–1987, 1988–2001 and 2002–2012 (Table 
+   <a rid="evo13660-tbl-0001" ref-type="table" href="#evo13660-tbl-0001">1</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">As pointed out above, some broods had been manipulated, likely affecting the female's fitness. Since we were interested in the lifetime fitness consequences of being more or less phenotypically plastic with respect to temperature, as well as having a higher or lower mean response (i.e., the elevation of the reaction norm), we opted to include manipulated broods in this analysis. The reason for this was that because the probability of having any of her broods manipulated increases with a female's age, discarding data from manipulated females would lead to a biased subset of shorter lived individuals. Consequently, the inclusion of manipulated broods in our analysis may create some noise in the selection estimates, but we nevertheless believe it is a superior approach to removing a nonrandom subset of individuals from the dataset.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For each of the three periods, we fitted a bivariate random regression model (RRM) in “MCMCglmm” (Hadfield 
+   <a rid="evo13660-bib-0035" ref-type="ref" href="#evo13660-bib-0035">2010</a>; Hadfield 
+   <a rid="evo13660-bib-0034" ref-type="ref" href="#evo13660-bib-0034">2014</a>) with laying date as a Gaussian and LRS as a (overdispersed) Poisson trait. Breaking down this bivariate model in scalar notation, the laying date (
+   <span class="italic">z</span>) of the 
+   <span class="italic">i</span>
+   <span class="sup">th</span> individual in the 
+   <span class="italic">j</span>
+   <span class="sup">th</span> year in the 
+   <span class="italic">k</span>
+   <span class="sup">th</span> nest box within the 
+   <span class="italic">l</span>
+   <span class="sup">th</span> “environmental block” was modelled as 
+   <div id="evo13660-disp-0001" class="disp-formula">
+    <span class="label">(1)</span>
+    <div id="nlm-math-2" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="msub">
+         <span class="mi">z</span>
+         <span mathvariant="italic" class="mi">ijkl</span>
+        </div>
+       </div>
+       <div class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">α</span>
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">a</span>
+          <span class="mi">i</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">b</span>
+          <span class="mi">i</span>
+         </div>
+         <div separators="" open="(" close=")" class="mfenced">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">T</span>
+            <span mathvariant="italic" class="mi">ij</span>
+           </div>
+           <span class="mo">−</span>
+           <div class="msub">
+            <div class="mover">
+             <span class="mi">T</span>
+             <span class="mo">¯</span>
+            </div>
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div class="mtd"/>
+       <div class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <span class="mo">+</span>
+         <span width="0.33em" class="mspace"/>
+         <span class="mi">b</span>
+         <div class="msub">
+          <div class="mover">
+           <span class="mi">T</span>
+           <span class="mo">¯</span>
+          </div>
+          <span class="mi">i</span>
+         </div>
+         <span class="mo">+</span>
+         <span mathvariant="italic" class="mi">age</span>
+         <div class="msub">
+          <div class="mrow"/>
+          <span mathvariant="italic" class="mi">ij</span>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">n</span>
+         <div class="msub">
+          <span class="mi">b</span>
+          <span class="mi">k</span>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">y</span>
+         <div class="msub">
+          <span class="mi">r</span>
+          <span class="mi">j</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">e</span>
+          <div class="mrow">
+           <span class="mi">z</span>
+           <span class="mo">,</span>
+           <span mathvariant="italic" class="mi">ijl</span>
+          </div>
+         </div>
+         <span width="0.16em" class="mspace"/>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>where 
+   <div id="nlm-math-3" class="math">
+    <div class="msub">
+     <span class="mi">α</span>
+     <span class="mi">z</span>
+    </div>
+   </div> is the overall mean laying date (intercept), 
+   <div id="nlm-math-4" class="math">
+    <div class="msub">
+     <span class="mi">a</span>
+     <span class="mi">i</span>
+    </div>
+   </div> and 
+   <div id="nlm-math-5" class="math">
+    <div class="msub">
+     <span class="mi">b</span>
+     <span class="mi">i</span>
+    </div>
+   </div> are the individual intercept and slope, respectively, related to temperature (
+   <span class="italic">T</span>) and 
+   <span class="italic">b</span> is the population‐level slope, 
+   <div id="nlm-math-6" class="math">
+    <div class="mrow">
+     <span mathvariant="italic" class="mi">age</span>
+     <div class="msub">
+      <div class="mrow"/>
+      <span mathvariant="italic" class="mi">ij</span>
+     </div>
+    </div>
+   </div> is the female's age (first‐year breeder, older, or unknown), 
+   <div id="nlm-math-7" class="math">
+    <div class="mrow">
+     <span class="mi">n</span>
+     <div class="msub">
+      <span class="mi">b</span>
+      <span class="mi">k</span>
+     </div>
+    </div>
+   </div> and 
+   <div id="nlm-math-8" class="math">
+    <div class="mrow">
+     <span class="mi">y</span>
+     <div class="msub">
+      <span class="mi">r</span>
+      <span class="mi">j</span>
+     </div>
+    </div>
+   </div> are the 
+   <span class="italic">k</span>
+   <span class="sup">th</span> nest box and 
+   <span class="italic">j</span>
+   <span class="sup">h</span> year, respectively (treated as random effects with estimated variance 
+   <div id="nlm-math-9" class="math">
+    <div class="mrow">
+     <span class="mi">n</span>
+     <div class="msub">
+      <span class="mi">b</span>
+      <span class="mi">k</span>
+     </div>
+     <span class="mo">∼</span>
+     <span class="mi">N</span>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="mrow">
+       <span class="mn">0</span>
+       <span class="mo">,</span>
+       <div class="msubsup">
+        <span class="mi">σ</span>
+        <div class="mrow">
+         <span class="mi">n</span>
+         <span class="mi">b</span>
+        </div>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div> and 
+   <div id="nlm-math-10" class="math">
+    <div class="mrow">
+     <span class="mi">y</span>
+     <div class="msub">
+      <span class="mi">r</span>
+      <span class="mi">j</span>
+     </div>
+     <span class="mo">∼</span>
+     <span class="mi">N</span>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="mrow">
+       <span class="mn">0</span>
+       <span class="mo">,</span>
+       <div class="msubsup">
+        <span class="mi">σ</span>
+        <div class="mrow">
+         <span class="mi">y</span>
+         <span class="mi">r</span>
+        </div>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>) and 
+   <div id="nlm-math-11" class="math">
+    <div class="msub">
+     <span class="mi">e</span>
+     <div class="mrow">
+      <span class="mi">z</span>
+      <span class="mo">,</span>
+      <span mathvariant="italic" class="mi">ijl</span>
+     </div>
+    </div>
+   </div> is the residual term. This residual term was estimated as 
+   <div id="nlm-math-12" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">e</span>
+      <div class="mrow">
+       <span class="mi">z</span>
+       <span class="mo">,</span>
+       <span mathvariant="italic" class="mi">ijl</span>
+      </div>
+     </div>
+     <span class="mo">∼</span>
+     <span class="mi">N</span>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="mrow">
+       <span class="mn">0</span>
+       <span class="mo">,</span>
+       <div class="msubsup">
+        <span class="mi">σ</span>
+        <div class="mrow">
+         <span class="mi">e</span>
+         <span class="mo">,</span>
+         <span class="mi">l</span>
+        </div>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>, where 
+   <span class="italic">l</span> is one of two equal‐interval groups of years with similar temperatures, which was done to accommodate changes in residual variance along the temperature gradient (Lillehammer et al. 
+   <a rid="evo13660-bib-0051" ref-type="ref" href="#evo13660-bib-0051">2009</a>; Nicolaus et al. 
+   <a rid="evo13660-bib-0060" ref-type="ref" href="#evo13660-bib-0060">2013</a>). Temperature was divided into a within‐individual (
+   <div id="nlm-math-13" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">b</span>
+      <span class="mi">i</span>
+     </div>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <span class="mi">T</span>
+        <span mathvariant="italic" class="mi">ij</span>
+       </div>
+       <span class="mo">−</span>
+       <div class="msub">
+        <div class="mover">
+         <span class="mi">T</span>
+         <span class="mo">¯</span>
+        </div>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>) and a between‐individual (
+   <div id="nlm-math-14" class="math">
+    <div class="mrow">
+     <span class="mi">b</span>
+     <div class="msub">
+      <div class="mover">
+       <span class="mi">T</span>
+       <span class="mo">¯</span>
+      </div>
+      <span class="mi">i</span>
+     </div>
+    </div>
+   </div>) component, following Van de Pol and Wright (
+   <a rid="evo13660-bib-0090" ref-type="ref" href="#evo13660-bib-0090">2009</a>). This method disentangles any effect of temperature on laying date caused by having observed certain individuals only under certain temperatures and others under different temperatures (a between‐subject effect of 
+   <span class="italic">T</span> on 
+   <span class="italic">z</span>) from a real, within‐subject effect (but note that for the purpose of estimating variance in intercepts, centring may not be desired in all context; see Kreft et al. (
+   <a rid="evo13660-bib-0045" ref-type="ref" href="#evo13660-bib-0045">1995</a>)).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">A female's LRS (
+   <span class="italic">W</span>) is described as 
+   <div id="evo13660-disp-0002" class="disp-formula">
+    <span class="label">(2)</span>
+    <div id="nlm-math-15" class="math">
+     <div class="mrow">
+      <span form="prefix" class="mo">log</span>
+      <span width="0.28em" class="mspace"/>
+      <div class="mrow">
+       <span stretchy="false" class="mo">(</span>
+       <span class="mi">E</span>
+       <div class="msub">
+        <div class="mrow">
+         <span stretchy="false" class="mo">[</span>
+         <span class="mi">W</span>
+         <span stretchy="false" class="mo">]</span>
+        </div>
+        <span class="mi">i</span>
+       </div>
+       <span stretchy="false" class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">α</span>
+       <span class="mi">W</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">c</span>
+       <span class="mi">i</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <span class="mi">W</span>
+        <span class="mo">,</span>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>where 
+   <div id="nlm-math-16" class="math">
+    <div class="msub">
+     <span class="mi">α</span>
+     <span class="mi">W</span>
+    </div>
+   </div> is the overall mean LRS, 
+   <div id="nlm-math-17" class="math">
+    <div class="msub">
+     <span class="mi">c</span>
+     <span class="mi">i</span>
+    </div>
+   </div> is the individual intercept and 
+   <div id="nlm-math-18" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">W</span>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">∼</span>
+     <span mathvariant="italic" class="mi">Poisson</span>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <span class="mi">E</span>
+      <div class="msub">
+       <div class="mrow">
+        <span stretchy="false" class="mo">[</span>
+        <span class="mi">W</span>
+        <span stretchy="false" class="mo">]</span>
+       </div>
+       <span class="mi">i</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>. We set the residual term, 
+   <div id="nlm-math-19" class="math">
+    <div class="msub">
+     <span class="mi">e</span>
+     <div class="mrow">
+      <span class="mi">W</span>
+      <span class="mo">,</span>
+      <span class="mi">i</span>
+     </div>
+    </div>
+   </div>, to a fixed small variance (0.01) since LRS is a repeated measures trait and laying date is not; ideally, we would constrain variance to 0 (Brommer et al. 
+   <a rid="evo13660-bib-0008" ref-type="ref" href="#evo13660-bib-0008">2012</a>; Morrissey et al. 
+   <a rid="evo13660-bib-0057" ref-type="ref" href="#evo13660-bib-0057">2012</a>), but since the MCMC chain does not mix well under these conditions a minimum nonzero value needs to be assigned.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Variance in intercepts (
+   <span class="italic">a</span>) and slopes (
+   <span class="italic">b</span>) of the reaction norm (eq. 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a>), as well as in intercepts of LRS (
+   <div id="nlm-math-20" class="math">
+    <div class="mrow">
+     <span class="mi">c</span>
+     <span class="mo">;</span>
+     <span width="0.33em" class="mspace"/>
+    </div>
+   </div>eq. 
+   <a rid="evo13660-disp-0002" ref-type="disp-formula" href="#evo13660-disp-0002">(2)</a>) were jointly fitted as the random effect “female identity,” such that individual values were estimated as 
+   <div id="evo13660-disp-0003" class="disp-formula">
+    <div id="nlm-math-21" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <div separators="" open="[" close="]" class="mfenced">
+        <div class="mtable">
+         <div class="mtr">
+          <div class="mtd">
+           <span class="mi">a</span>
+          </div>
+         </div>
+         <div class="mtr">
+          <div class="mtd">
+           <span class="mi">b</span>
+          </div>
+         </div>
+         <div class="mtr">
+          <div class="mtd">
+           <span class="mi">c</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mi">i</span>
+      </div>
+      <span class="mo">∼</span>
+      <span class="mi">N</span>
+      <div separators="" open="(" close=")" class="mfenced">
+       <div class="mrow">
+        <div separators="" open="[" close="]" class="mfenced">
+         <div class="mtable">
+          <div class="mtr">
+           <div class="mtd">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <div class="mtr">
+           <div class="mtd">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <div class="mtr">
+           <div class="mtd">
+            <span class="mn">0</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div separators="" open="[" close="]" class="mfenced">
+          <div class="mtable">
+           <div class="mtr">
+            <div class="mtd">
+             <div class="msubsup">
+              <span class="mi">σ</span>
+              <span class="mi">a</span>
+              <span class="mn">2</span>
+             </div>
+            </div>
+            <div class="mtd">
+             <div class="mrow">
+              <span width="1em" class="mspace"/>
+              <div class="msub">
+               <span class="mi">σ</span>
+               <div class="mrow">
+                <span class="mi">a</span>
+                <span class="mo">,</span>
+                <span class="mi">b</span>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="mtd">
+             <div class="mrow">
+              <span width="1em" class="mspace"/>
+              <div class="msub">
+               <span class="mi">σ</span>
+               <div class="mrow">
+                <span class="mi">a</span>
+                <span class="mo">,</span>
+                <span class="mi">c</span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="mtr">
+            <div class="mtd">
+             <div class="msub">
+              <span class="mi">σ</span>
+              <div class="mrow">
+               <span class="mi">a</span>
+               <span class="mo">,</span>
+               <span class="mi">b</span>
+              </div>
+             </div>
+            </div>
+            <div class="mtd">
+             <div class="mrow">
+              <span width="1em" class="mspace"/>
+              <div class="msubsup">
+               <span class="mi">σ</span>
+               <span class="mi">b</span>
+               <span class="mn">2</span>
+              </div>
+             </div>
+            </div>
+            <div class="mtd">
+             <div class="mrow">
+              <span width="1em" class="mspace"/>
+              <div class="msub">
+               <span class="mi">σ</span>
+               <div class="mrow">
+                <span class="mi">b</span>
+                <span class="mo">,</span>
+                <span class="mi">c</span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="mtr">
+            <div class="mtd">
+             <div class="msub">
+              <span class="mi">σ</span>
+              <div class="mrow">
+               <span class="mi">a</span>
+               <span class="mo">,</span>
+               <span class="mi">c</span>
+              </div>
+             </div>
+            </div>
+            <div class="mtd">
+             <div class="mrow">
+              <span width="1em" class="mspace"/>
+              <div class="msub">
+               <span class="mi">σ</span>
+               <div class="mrow">
+                <span class="mi">b</span>
+                <span class="mo">,</span>
+                <span class="mi">c</span>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="mtd">
+             <div class="mrow">
+              <span width="1em" class="mspace"/>
+              <div class="msubsup">
+               <span class="mi">σ</span>
+               <span class="mi">c</span>
+               <span class="mn">2</span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>that is, drawn from a 3 × 3 unstructured, phenotypic covariance matrix with the variance components on the diagonals and the covariances between them on the off‐diagonals.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To obtain independent samples from the MCMC sampling process, we used a thinning interval of 10
+   <span class="sup">4</span>, a burn‐in period of 10
+   <span class="sup">5</span> and a total sample size of 10.1 × 10
+   <span class="sup">6</span> (i.e., an effective sample size of 1000). We used default normal priors for the fixed effects and parameter‐expanded priors for the random terms (V = diag(
+   <span class="italic">n</span>), nu = 
+   <span class="italic">n</span>, alpha.mu = 0, alpha.V = diag(
+   <span class="italic">n</span>)*25^2, 
+   <span class="italic">n</span> being the dimension of the matrix), following Hadfield (
+   <a rid="evo13660-bib-0034" ref-type="ref" href="#evo13660-bib-0034">2014</a>). For the residual variance in equation 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a>, we used inverse‐Wishart priors with V = diag(2) and nu = 0.002.
+  </p>
+ </sec>
+ <sec id="evo13660-sec-0060" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">PREDICTING CHANGES IN THE REACTION NORM</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used a multivariate version of the breeder's equation to predict changes in the reaction norm as a result of selection across the three time periods (Table 
+   <a rid="evo13660-tbl-0001" ref-type="table" href="#evo13660-tbl-0001">1</a>). The evolutionary response to selection from one year to the next is defined as the trait heritability times the selection differential (
+   <span class="italic">R</span> = 
+   <span class="italic">h</span>
+   <span class="sup">2</span>
+   <span class="italic">S</span>, i.e., the breeder's equation; Falconer and Mackay 
+   <a rid="evo13660-bib-0022" ref-type="ref" href="#evo13660-bib-0022">1996</a>). Even in its multivariate form (Lande 
+   <a rid="evo13660-bib-0048" ref-type="ref" href="#evo13660-bib-0048">1979</a>), however, this would require estimating the heritability of both components of the reaction norm (elevation and slope), which is not straightforward (Hadfield et al. 
+   <a rid="evo13660-bib-0036" ref-type="ref" href="#evo13660-bib-0036">2010</a>). We therefore used a derivation of the breeder's equation for reaction norms (Van Tienderen and Koelewijn 
+   <a rid="evo13660-bib-0094" ref-type="ref" href="#evo13660-bib-0094">1994</a>). In their Appendix 1, Van Tienderen and Koelewijn (
+   <a rid="evo13660-bib-0094" ref-type="ref" href="#evo13660-bib-0094">1994</a>) show that the selection gradients on reaction norm components, that is intercept and slope in our case, can be calculated from environment‐specific—here hence annual—selection gradients: 
+   <div id="evo13660-disp-0004" class="disp-formula">
+    <span class="label">(3)</span>
+    <div id="nlm-math-22" class="math">
+     <div class="mrow">
+      <span width="0.33em" class="mspace"/>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">β</span>
+       </div>
+       <span class="mi">g</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">Φ</span>
+       </div>
+       <span class="mi">t</span>
+      </div>
+      <span width="0.33em" class="mspace"/>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">β</span>
+       </div>
+       <span class="mi">z</span>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>where 
+   <div id="nlm-math-23" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi">β</span>
+     </div>
+     <span class="mi">g</span>
+    </div>
+   </div> is the vector of selection gradients on intercept and slope, 
+   <div id="nlm-math-24" class="math">
+    <div class="msup">
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">Φ</span>
+     </div>
+     <span class="mi">t</span>
+    </div>
+   </div> is the transposed matrix of vectors consisting of the environmental values in environments 
+   <span class="italic">i…k</span> with a leading 1, and 
+   <div id="nlm-math-25" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi">β</span>
+     </div>
+     <span class="mi">z</span>
+    </div>
+   </div> the vector of selection gradients in environments 
+   <span class="italic">i…k</span>. The (expected) genetic change in the breeding values for intercept and slope is given by the multivariate breeders’ equation: 
+   <div id="evo13660-disp-0005" class="disp-formula">
+    <span class="label">(4)</span>
+    <div id="nlm-math-26" class="math">
+     <div class="mrow">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+       <span width="0.33em" class="mspace"/>
+      </div>
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi"/>
+       <div accent="true" class="mover">
+        <span mathvariant="bold" class="mi">g</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="bold-italic" class="mi">G</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">β</span>
+       </div>
+       <span mathvariant="bold-italic" class="mi">g</span>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>where 
+   <div id="nlm-math-27" class="math">
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi"/>
+      <div accent="true" class="mover">
+       <span mathvariant="bold" class="mi">g</span>
+       <span class="mo">¯</span>
+      </div>
+     </div>
+    </div>
+   </div> is the change in intercept and slope breeding values, and 
+   <span class="bold">
+    <span class="italic">G</span>
+   </span> the additive genetic variance‐covariance matrix for intercept and slope. Substituting equations 
+   <a rid="evo13660-disp-0004" ref-type="disp-formula" href="#evo13660-disp-0004">(3)</a> and 
+   <a rid="evo13660-disp-0005" ref-type="disp-formula" href="#evo13660-disp-0005">(4)</a> allows the change in reaction norm components (
+   <div id="nlm-math-28" class="math">
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi"/>
+      <div accent="true" class="mover">
+       <span mathvariant="bold" class="mi">g</span>
+       <span class="mo">¯</span>
+      </div>
+     </div>
+    </div>
+   </div>) as a result of selection in year 
+   <span class="italic">j</span> following 
+   <div id="evo13660-disp-0006" class="disp-formula">
+    <span class="label">(5a)</span>
+    <div id="nlm-math-29" class="math">
+     <div class="mrow">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+       <span width="0.33em" class="mspace"/>
+      </div>
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi"/>
+       <div accent="true" class="mover">
+        <span mathvariant="bold" class="mi">g</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="bold-italic" class="mi">G</span>
+      <div class="msup">
+       <div class="mrow">
+        <span stretchy="false" class="mo">[</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">j</span>
+        </div>
+        <span stretchy="false" class="mo">]</span>
+       </div>
+       <span class="mi">t</span>
+      </div>
+      <div class="msub">
+       <span class="mi">β</span>
+       <div class="msub">
+        <span class="mi">z</span>
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>where 
+   <div id="nlm-math-30" class="math">
+    <div class="msup">
+     <div class="mrow">
+      <span stretchy="false" class="mo">[</span>
+      <span class="mn">1</span>
+      <span class="mo">,</span>
+      <div class="msub">
+       <span class="mi">x</span>
+       <span class="mi">j</span>
+      </div>
+      <span stretchy="false" class="mo">]</span>
+     </div>
+     <span class="mi">t</span>
+    </div>
+   </div> is a transposed vector characterising the environment in a given year (
+   <div id="nlm-math-31" class="math">
+    <div class="msub">
+     <span class="mi">x</span>
+     <span class="mi">j</span>
+    </div>
+   </div>), and 
+   <div id="nlm-math-32" class="math">
+    <div class="msub">
+     <span class="mi">β</span>
+     <div class="msub">
+      <span class="mi">z</span>
+      <span class="mi">j</span>
+     </div>
+    </div>
+   </div> the selection gradient. We then only need to accommodate generation time by multiplying the response by the proportion of the breeding population in environment 
+   <span class="italic">j</span>+1 represented by recruits (
+   <div id="nlm-math-33" class="math">
+    <div class="msub">
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mi">r</span>
+      <span class="mi">e</span>
+      <span class="mi">c</span>
+      <div class="msub">
+       <span class="mi">r</span>
+       <div class="mrow">
+        <span class="mi">j</span>
+        <span class="mo">+</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>) and further halve the response because laying date is only expressed by females (following Gienapp et al. 
+   <a rid="evo13660-bib-0030" ref-type="ref" href="#evo13660-bib-0030">2006</a>): 
+   <div id="evo13660-disp-0007" class="disp-formula">
+    <span class="label">(5b)</span>
+    <div id="nlm-math-34" class="math">
+     <div class="mrow">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+       <span width="0.33em" class="mspace"/>
+      </div>
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi"/>
+       <div accent="true" class="mover">
+        <span mathvariant="bold" class="mi">g</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="bold-italic" class="mi">G</span>
+      <div class="msup">
+       <div class="mrow">
+        <span stretchy="false" class="mo">[</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">j</span>
+        </div>
+        <span stretchy="false" class="mo">]</span>
+       </div>
+       <span class="mi">t</span>
+      </div>
+      <div class="msub">
+       <span class="mi">β</span>
+       <div class="msub">
+        <span class="mi">z</span>
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="msub">
+       <span class="mi">p</span>
+       <div class="mrow">
+        <span class="mi">r</span>
+        <span class="mi">e</span>
+        <span class="mi">c</span>
+        <div class="msub">
+         <span class="mi">r</span>
+         <div class="mrow">
+          <span class="mi">j</span>
+          <span class="mo">+</span>
+          <span class="mn">1</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <span width="0.33em" class="mspace"/>
+      <span class="mn">0.5</span>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To estimate 
+   <span class="bold">
+    <span class="italic">G</span>,
+   </span> we fitted a univariate RRM on the entire dataset (i.e., all years and all observations) that included an additive genetic term (“animal model,” RRAM; Henderson 
+   <a rid="evo13660-bib-0039" ref-type="ref" href="#evo13660-bib-0039">1988</a>; Kruuk 
+   <a rid="evo13660-bib-0046" ref-type="ref" href="#evo13660-bib-0046">2004</a>) in “MCMCglmm”. Random effects were as in equation 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a>, with the addition of an additive genetic term (via the pedigree) to estimate additive genetic variance in laying date. The difference was that we allowed both the permanent environment term (i.e., female identity) and the additive genetic term to vary with grand‐mean‐centred, as opposed to individual‐mean‐centred, temperature. Thus, the RRAM took the form: 
+   <div id="evo13660-disp-0008" class="disp-formula">
+    <span class="label">(6)</span>
+    <div id="nlm-math-35" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <span width="0.33em" class="mspace"/>
+         <div class="msub">
+          <span class="mi">z</span>
+          <span mathvariant="italic" class="mi">ijkl</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">α</span>
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">a</span>
+          <span class="mi">i</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">A</span>
+          <span class="mi">i</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="mrow">
+          <span stretchy="false" class="mo">(</span>
+          <span class="mi">b</span>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">b</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">B</span>
+           <span class="mi">i</span>
+          </div>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <div separators="" open="(" close=")" class="mfenced">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">T</span>
+            <span mathvariant="italic" class="mi">ij</span>
+           </div>
+           <span class="mo">−</span>
+           <div class="mover">
+            <span class="mi">T</span>
+            <span class="mo">¯</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div class="mtd"/>
+       <div class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <span class="mo">+</span>
+         <span width="0.33em" class="mspace"/>
+         <span mathvariant="italic" class="mi">age</span>
+         <div class="msub">
+          <div class="mrow"/>
+          <span mathvariant="italic" class="mi">ij</span>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">n</span>
+         <div class="msub">
+          <span class="mi">b</span>
+          <span class="mi">k</span>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">y</span>
+         <div class="msub">
+          <span class="mi">r</span>
+          <span class="mi">j</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">e</span>
+          <div class="mrow">
+           <span class="mi">z</span>
+           <span class="mo">,</span>
+           <span mathvariant="italic" class="mi">ijl</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>where definitions and indices are as for equation 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a>, but where the individual intercepts and slopes of the laying date–temperature reaction norm are now estimated on the grand‐mean‐centred temperature (
+   <div id="nlm-math-36" class="math">
+    <div class="mover">
+     <span class="mi">T</span>
+     <span class="mo">¯</span>
+    </div>
+   </div>) and partitioned into a permanent environment (
+   <div id="nlm-math-37" class="math">
+    <div class="msub">
+     <span class="mi">a</span>
+     <span class="mi">i</span>
+    </div>
+   </div> and 
+   <div id="nlm-math-38" class="math">
+    <div class="msub">
+     <span class="mi">b</span>
+     <span class="mi">i</span>
+    </div>
+   </div>) and additive genetic component (
+   <div id="nlm-math-39" class="math">
+    <div class="msub">
+     <span class="mi">A</span>
+     <span class="mi">i</span>
+    </div>
+   </div> and 
+   <div id="nlm-math-40" class="math">
+    <div class="msub">
+     <span class="mi">B</span>
+     <span class="mi">i</span>
+    </div>
+   </div>; breeding values). Phenotypic and additive genetic variance in these components was estimated using two separate, 2 × 2 unstructured phenotypic and additive genetic (
+   <span class="bold">
+    <span class="italic">G</span>
+   </span>) variance–covariance matrices containing 
+   <div id="nlm-math-41" class="math">
+    <div class="msubsup">
+     <span class="mi">σ</span>
+     <span class="mi">a</span>
+     <span class="mn">2</span>
+    </div>
+   </div> and 
+   <div id="nlm-math-42" class="math">
+    <div class="msubsup">
+     <span class="mi">σ</span>
+     <span class="mi">b</span>
+     <span class="mn">2</span>
+    </div>
+   </div> or 
+   <div id="nlm-math-43" class="math">
+    <div class="msubsup">
+     <span class="mi">σ</span>
+     <span class="mi">A</span>
+     <span class="mn">2</span>
+    </div>
+   </div> and 
+   <div id="nlm-math-44" class="math">
+    <div class="msubsup">
+     <span class="mi">σ</span>
+     <span class="mi">B</span>
+     <span class="mn">2</span>
+    </div>
+   </div>, respectively, as well as the covariance between each component. The residual term was estimated from a 4 × 4 matrix to allow for independent and heterogeneous variance as in equation 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a>, where 4 is the rounded number of years divided by 10, grouped based on temperature. We extracted posterior medians from 
+   <span class="bold">
+    <span class="italic">G</span>
+   </span>, along with 95% HPDIs (note that because variance estimates are constrained to be positive, they have a skewed posterior sample distribution when close to 0, hence making the median a more appropriate point summary than the mean). We applied the same prior structure and sampling procedures as for equation 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a>. Estimates resulting from the RRAM were robust to excluding individuals with only one or only two breeding records.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To estimate the selection gradient, 
+   <div id="nlm-math-45" class="math">
+    <div class="msub">
+     <span class="mi">β</span>
+     <div class="msub">
+      <span class="mi">z</span>
+      <span class="mi">j</span>
+     </div>
+    </div>
+   </div>, we ran annual Generalized Additive Models (GAMs; package “mgcv”; Wood 
+   <a rid="evo13660-bib-0109" ref-type="ref" href="#evo13660-bib-0109">2017</a>) on unmanipulated broods, with annual reproductive success (ARS; number of recruited offspring) as response variable with a negative binomial distribution and laying date as the predictor variable. We then used the “gam.gradients” function from the “gsg” package (Morrissey and Sakrejda 
+   <a rid="evo13660-bib-0058" ref-type="ref" href="#evo13660-bib-0058">2015</a>) to calculate 
+   <div id="nlm-math-46" class="math">
+    <div class="msub">
+     <span class="mi">β</span>
+     <div class="msub">
+      <span class="mi">z</span>
+      <span class="mi">j</span>
+     </div>
+    </div>
+   </div> (see Lande and Arnold 
+   <a rid="evo13660-bib-0050" ref-type="ref" href="#evo13660-bib-0050">1983</a>) along with the standard error through parametric bootstrapping (1000 iterations). Females with unknown identity were included in these analyses as they comprise a potentially biased subset of individuals that laid their eggs too early or too late, in some cases leading to brood desertion before the nestling stage when adults could be identified.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">With 
+   <span class="bold">
+    <span class="italic">G</span>
+   </span> and 
+   <div id="nlm-math-47" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi">β</span>
+     </div>
+     <span mathvariant="bold-italic" class="mi">z</span>
+    </div>
+   </div> in place, we could predict the evolution of the reaction norm throughout the study period. Since the reaction norm has to be estimated across years (because each year has only one temperature average and one breeding event), we could not predict change from the first year onward. Instead, we estimated the observed population reaction norm across years in period 1 (see Table 
+   <a rid="evo13660-tbl-0001" ref-type="table" href="#evo13660-tbl-0001">1</a>) using a slightly modified version of equation 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a> ( 
+   <div id="nlm-math-48" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">z</span>
+      <span mathvariant="italic" class="mi">ijkl</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <span class="mi">α</span>
+      <span class="mi">z</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span class="mi">a</span>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">b</span>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <span class="mi">T</span>
+        <span mathvariant="italic" class="mi">ij</span>
+       </div>
+       <span class="mo">−</span>
+       <div class="msub">
+        <div class="mover">
+         <span class="mi">T</span>
+         <span class="mo">¯</span>
+        </div>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">b</span>
+     <div class="msub">
+      <div class="mover">
+       <span class="mi">T</span>
+       <span class="mo">¯</span>
+      </div>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">+</span>
+     <span mathvariant="italic" class="mi">age</span>
+     <div class="msub">
+      <div class="mrow"/>
+      <span mathvariant="italic" class="mi">ij</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">n</span>
+     <div class="msub">
+      <span class="mi">b</span>
+      <span class="mi">k</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">y</span>
+     <div class="msub">
+      <span class="mi">r</span>
+      <span class="mi">j</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span class="mi">e</span>
+      <div class="mrow">
+       <span class="mi">z</span>
+       <span class="mo">,</span>
+       <span mathvariant="italic" class="mi">ijl</span>
+      </div>
+     </div>
+    </div>
+   </div>, i.e. a random‐intercept model) and predicted the evolutionary outcome of selection in all subsequent years (i.e., excluding years in period 1) using equation 
+   <a rid="evo13660-disp-0007" ref-type="disp-formula" href="#evo13660-disp-0007">(5b)</a>. Note that the predicted reaction norm after selection is then a property of a single year and will hence never accurately match the observed reaction norm, which is necessarily estimated across multiple years. We therefore view the predicted change as the upper limit of possible change within the studied period.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Since both 
+   <span class="bold">
+    <span class="italic">G</span>
+   </span> and 
+   <span class="bold">
+    <span class="italic">β</span>
+   </span>
+   <sub>
+    <span class="bold">
+     <span class="italic">z</span>
+    </span>
+   </sub> came with estimation errors, we accommodated uncertainty in predicted cumulative change in the following way. We used the upper and lower 95% HPDI of 
+   <span class="bold">
+    <span class="italic">G</span>
+   </span> to calculate the variance (
+   <span class="italic">V</span>) for 
+   <div id="nlm-math-49" class="math">
+    <div class="mrow">
+     <span mathvariant="bold-italic" class="mi">G</span>
+     <div class="msup">
+      <div class="mrow">
+       <span stretchy="false" class="mo">[</span>
+       <div class="mrow">
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span stretchy="false" class="mo">]</span>
+      </div>
+      <span class="mi">t</span>
+     </div>
+    </div>
+   </div> in each year by squaring its standard error (half the 95% HPD range divided by 1.96); similarly, we squared the standard error of 
+   <div id="nlm-math-50" class="math">
+    <div class="msub">
+     <span class="mi">β</span>
+     <div class="msub">
+      <span class="mi">z</span>
+      <span class="mi">j</span>
+     </div>
+    </div>
+   </div> to get its variance. The standard error of the full product was then calculated following simple error‐propagation rules (Taylor 
+   <a rid="evo13660-bib-0081" ref-type="ref" href="#evo13660-bib-0081">1997</a>): 
+   <div id="evo13660-disp-0009" class="disp-formula">
+    <span class="label">(7)</span>
+    <div id="nlm-math-51" class="math">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">SE</span>
+      <div class="msub">
+       <div class="mrow"/>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">Δ</span>
+        <div accent="true" class="mover">
+         <span class="mi">g</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span stretchy="false" class="mo">(</span>
+          <span mathvariant="bold-italic" class="mi">G</span>
+          <div class="msup">
+           <div class="mrow">
+            <span stretchy="false" class="mo">[</span>
+            <span class="mn">1</span>
+            <span class="mo">,</span>
+            <div class="msub">
+             <span class="mi">x</span>
+             <span class="mi">j</span>
+            </div>
+            <span stretchy="false" class="mo">]</span>
+           </div>
+           <span class="mi">t</span>
+          </div>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div class="msub">
+         <span class="mi">V</span>
+         <div class="msub">
+          <span class="mi">β</span>
+          <div class="msub">
+           <span class="mi">z</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msup">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">β</span>
+           <div class="msub">
+            <span class="mi">z</span>
+            <span class="mi">j</span>
+           </div>
+          </div>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div class="msub">
+         <span class="mi">V</span>
+         <div class="mrow">
+          <span mathvariant="bold-italic" class="mi">G</span>
+          <div class="msup">
+           <div class="mrow">
+            <div separators="" open="[" close="]" class="mfenced">
+             <div class="mrow">
+              <span class="mn">1</span>
+              <span class="mo">,</span>
+              <div class="msub">
+               <span class="mi">x</span>
+               <span class="mi">j</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mi">t</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span width="0.16em" class="mspace"/>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>which, in the case of equation 
+   <a rid="evo13660-disp-0007" ref-type="disp-formula" href="#evo13660-disp-0007">(5b)</a>, was in turn multiplied by 
+   <div id="nlm-math-52" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">p</span>
+      <div class="mrow">
+       <span class="mi">r</span>
+       <span class="mi">e</span>
+       <span class="mi">c</span>
+       <div class="msub">
+        <span class="mi">r</span>
+        <div class="mrow">
+         <span class="mi">j</span>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">×</span>
+     <span width="0.33em" class="mspace"/>
+     <span class="mn">0.5</span>
+    </div>
+   </div>. We calculated the cumulative difference across years (
+   <div id="nlm-math-53" class="math">
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi"/>
+       <div accent="true" class="mover">
+        <span mathvariant="bold" class="mi">g</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">c</span>
+       <span class="mi">u</span>
+       <span class="mi">m</span>
+       <span class="mo">.</span>
+      </div>
+     </div>
+    </div>
+   </div>) by summing 
+   <div id="nlm-math-54" class="math">
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="mrow">
+      <span mathvariant="bold-italic" class="mi"/>
+      <div accent="true" class="mover">
+       <span mathvariant="bold" class="mi">g</span>
+       <span class="mo">¯</span>
+      </div>
+     </div>
+    </div>
+   </div> of each year; the 95% CI was calculated as 
+   <div id="nlm-math-55" class="math">
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi"/>
+       <div accent="true" class="mover">
+        <span mathvariant="bold" class="mi">g</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">c</span>
+       <span class="mi">u</span>
+       <span class="mi">m</span>
+       <span class="mo">.</span>
+      </div>
+     </div>
+     <span class="mo">±</span>
+    </div>
+   </div>
+   <div id="nlm-math-56" class="math">
+    <div class="mrow">
+     <span class="mn">1.96</span>
+     <span width="0.33em" class="mspace"/>
+     <span class="mo">×</span>
+     <div class="msup">
+      <div class="mrow">
+       <span stretchy="false" class="mo">(</span>
+       <span mathvariant="italic" class="mi">SE</span>
+       <div class="msup">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow"/>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">Δ</span>
+           <div class="msub">
+            <div accent="true" class="mover">
+             <span class="mi">g</span>
+             <span class="mo">¯</span>
+            </div>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mn">2</span>
+       </div>
+       <span class="mo">+</span>
+       <span class="mo">⋯</span>
+       <span class="mo">+</span>
+       <span mathvariant="italic" class="mi">SE</span>
+       <div class="msup">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow"/>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">Δ</span>
+           <div class="msub">
+            <div accent="true" class="mover">
+             <span class="mi">g</span>
+             <span class="mo">¯</span>
+            </div>
+            <span class="mi">n</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mn">2</span>
+       </div>
+       <span stretchy="false" class="mo">)</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">0.5</span>
+      </div>
+     </div>
+    </div>
+   </div>, where 
+   <span class="italic">n</span> is the number of years in period 2 and 3 combined. We need to make the cautionary note that although this way of calculating of errors should work satisfactorily when posterior distributions approximate normality, it may cause upward bias (i.e., be conservative) for variance estimates that are skewed because they are bounded at 0.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We visually compared the predicted reaction norm with the observed reaction norms in each of the three periods, which we estimated in “MCMCglmm” using a trimmed version of equation 
+   <a rid="evo13660-disp-0008" ref-type="disp-formula" href="#evo13660-disp-0008">(6)</a> as described above and using the same priors and MCMC sampling procedures as described for equation 
+   <a rid="evo13660-disp-0001" ref-type="disp-formula" href="#evo13660-disp-0001">(1)</a>. Although we cannot compare the predicted and observed reaction norms quantitatively for the reasons given above, we do present them alongside one another as the latter serves as an empirical validation of the former.
+  </p>
+ </sec>
+</sec>

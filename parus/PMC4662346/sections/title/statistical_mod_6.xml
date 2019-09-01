@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical modelling of provenance effects on gall abundance</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">To investigate the influence of tree provenance on the abundance of each individual gall type, we combined the data for the two survey years and used generalized linear mixed models (GLMMs) to partition the variance of gall counts per shoot into the effects of year (as a fixed effect with two levels) and provenance, soil zone, plot and tree (all as random effects). When applying an identity model for the relationship between provenances, the effect of provenance was represented by a single random effect with a unique independent level for each provenance. In models that incorporated the relationship between provenances, provenance co-variance was represented by two random effects. One incorporated the specified variance–covariance matrix (1−
+  <span class="italic">F</span>
+  <sub>ST</sub> or 1−
+  <span class="italic">GeoF</span>
+  <sub>ST</sub>) to account for provenance nonindependence, while the second incorporated an identity matrix to capture the ‘nugget effect’ (Matheron 
+  <a rid="b201" ref-type="bibr" href="#b201">1963</a>), in which variation in the response variable exceeds that expected through correlation between levels of the effect. Models were fitted in a Bayesian Markov Chain Monte Carlo (MCMC) framework using the package MCMCglmm version 2.16 (Hadfield 
+  <a rid="b32" ref-type="bibr" href="#b32">2010</a>) in 
+  <span class="sc">r</span> version 2.15.1. For fixed effects, prior settings assumed a normal distribution with a mean (
+  <span class="italic">µ</span>) of 0 and a variance (
+  <span class="italic">V</span>) of 10
+  <span class="sup">8</span>. For random effect variances, scaled 
+  <span class="italic">F</span>_{1,1} priors (with scale 1000) were used (Gelman 
+  <a rid="b28" ref-type="bibr" href="#b28">2006</a>) except for the residual variance for which an inverse-gamma prior was used with shape and scale equal to 0.001. Models were run for 500 000 iterations with a burn-in of 50 000 and parameter sampling every 450 iterations. As the response variable was count data and usually contained many zeros, a Poisson error distribution was applied. Our incorporation of 
+  <span class="italic">year</span> as a fixed effect allowed for variation in abundance between years, while estimating the relationship between gall abundance and tree phenotypic traits across both years. The proportion of variance explained by the 
+  <span class="italic">year</span> fixed effect was estimated as the marginal 
+  <span class="italic">R</span>
+  <span class="sup">2</span> of the model (RsqM), following Nakagawa and Schielzeth (
+  <a rid="b55" ref-type="bibr" href="#b55">2013</a>) (
+  <span class="sc">r</span> code for deriving RsqM from MCMCglmm objects is provided in 
+  <a ref-type="supplementary-material" rid="sd3" href="#sd3">Data S3</a>). The variance component of each random effect was calculated by dividing its estimated variance parameter by the sum of all the random effect variance parameters, including the residual UNIT term – a random effect with a distinct level for each data unit that is fitted automatically for Poisson distributed models in the MCMCglmm package to account for overdispersion – and then multiplying each by the proportion of variance not explained by the fixed effect (i.e., 1−RsqM). We addressed the effects of multiple tests on false discovery rates – the expected proportion of false discoveries among the rejected hypotheses – following Benjamini and Hochberg (
+  <a rid="b8" ref-type="bibr" href="#b8">1995</a>) and Benjamini and Yekutieli (
+  <a rid="b9" ref-type="bibr" href="#b9">2001</a>). The false discovery rate is a less stringent condition than the family-wise error rate, so this approach is more powerful than alternatives such as Bonferroni (Nakagawa 
+  <a rid="b54" ref-type="bibr" href="#b54">2004</a>).
+ </p>
+</sec>

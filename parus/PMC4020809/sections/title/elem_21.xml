@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s3b" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Detector of Recordings Void of Biotic Sounds</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">A useful by-product of building a classifier of multiple species is to make a binary classifier that decides whether there is any animal sound in a recording. The binary classifier uses the same features as for species classification (i.e. 
+  <span class="bold">S</span>
+  <span class="sup">687×16988</span>) but employs only the first column of the labels (i.e. if there is animal vocalization in the recording or not represented by the matrix 
+  <span class="bold">Y</span>
+  <span class="sup">687×1</span>). This detector can be used to derive statistics concerning activity patterns of animal vocalisations vs abiotic or anthropogenic noise sources in general. This is useful as a statistical measure of the healthiness of a habitat (which is associated to species’ vocalisation activity) and also as a means to screen out recordings that do not include animal sounds. Recordings void of any animal vocalisation are common in long-term continuous acoustical monitoring of habitats and discarding empty recordings helps to reduce the time of further processing of events as well as the storage capacity required. The test set of 1000 recordings was inspected manually and categorized into 209 recordings void of biotic sounds and 791 with at least one call per animal. The machine learning technique we used after a small set of comparisons with randomized trees and random forests was a large Gradient Boosting Classifier 
+  <a rid="pone.0096936-Breiman1" ref-type="bibr" href="#pone.0096936-Breiman1">[22]</a>.The performance was 97.05% over a 10-fold cross-validation of the training set and 96.3% over the test set. The analytic results are depicted in 
+  <a rid="pone-0096936-t003" ref-type="table" href="#pone-0096936-t003">Table 3</a>.
+ </p>
+ <div id="pone-0096936-t003" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0096936.t003</span>
+  <span class="label">Table 3</span>
+  <div class="caption">
+   <div class="title">A detector of animal vocalizations vs. records containing exclusively abiotic sounds.</div>
+  </div>
+  <div class="alternatives">
+   <div id="pone-0096936-t003-3" xlink:href="pone.0096936.t003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <table frame="hsides" rules="groups">
+    <colgroup span="1">
+     <col align="left" span="1"/>
+     <col align="center" span="1"/>
+     <col align="center" span="1"/>
+     <col align="center" span="1"/>
+     <col align="center" span="1"/>
+    </colgroup>
+    <thead>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">precision</td>
+      <td align="left" rowspan="1" colspan="1">recall</td>
+      <td align="left" rowspan="1" colspan="1">f-score</td>
+      <td align="left" rowspan="1" colspan="1">Support</td>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="bold">Animal Voc.</span>
+      </td>
+      <td align="left" rowspan="1" colspan="1">0.86</td>
+      <td align="left" rowspan="1" colspan="1">0.99</td>
+      <td align="left" rowspan="1" colspan="1">0.92</td>
+      <td align="left" rowspan="1" colspan="1">791</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="bold">Abiotic sounds</span>
+      </td>
+      <td align="left" rowspan="1" colspan="1">0.94</td>
+      <td align="left" rowspan="1" colspan="1">0.38</td>
+      <td align="left" rowspan="1" colspan="1">0.54</td>
+      <td align="left" rowspan="1" colspan="1">209</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="bold">Avg/total</span>
+      </td>
+      <td align="left" rowspan="1" colspan="1">0.88</td>
+      <td align="left" rowspan="1" colspan="1">0.86</td>
+      <td align="left" rowspan="1" colspan="1">0.84</td>
+      <td align="left" rowspan="1" colspan="1">1000</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </div>
+</sec>

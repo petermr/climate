@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="mec13452-sec-0007" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pedigree‐ and marker‐based heritabilities</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Trait heritabilities were determined by two approaches, first (i) using pedigree information from each population and second (ii) using the genomic marker relatedness between individuals. For each trait in each population, heritabilities were estimated using a linear mixed model (the ‘animal model’, Henderson 
+  <a rid="mec13452-bib-0029" ref-type="ref" href="#mec13452-bib-0029">1984</a>; Kruuk 
+  <a rid="mec13452-bib-0038" ref-type="ref" href="#mec13452-bib-0038">2004</a>), where the relatedness between individuals was estimated from the pedigree (A matrix; approach i) or where the relatedness between individuals was estimated from the marker data (G matrix; approach ii).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For (i), for consistency with the quantitative trait locus analysis (see below), the pedigree was restricted to genotyped related individuals. By including all first‐ to fourth‐degree family links, 666 NL individuals and 1733 UK individuals (Santure 
+  <span class="italic">et al</span>. 
+  <a rid="mec13452-bib-0054" ref-type="ref" href="#mec13452-bib-0054">2013</a>) were included in a ‘QTL pedigree’ for the NL and UK, respectively. Variance components were estimated in a restricted maximum‐likelihood (REML) framework using 
+  <span class="sc">asreml</span> v3 (Gilmour 
+  <span class="italic">et al</span>. 
+  <a rid="mec13452-bib-0022" ref-type="ref" href="#mec13452-bib-0022">2009</a>), fitting random and fixed effects as described in Appendix S1 (Supporting information). The significance of the heritabilities was tested by comparing the log likelihood of a model where the heritability was set to zero (
+  <span class="italic">L</span>
+  <sub>0</sub>) to the log likelihood of the full model (
+  <span class="italic">L</span>
+  <sub>1</sub>) with a likelihood ratio test (LRT):
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">LRT = −2(
+  <span class="italic">L</span>
+  <sub>0</sub>−
+  <span class="italic">L</span>
+  <sub>1</sub>)
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Under the null hypothesis, the LRT follows a 50:50 distribution of a chi‐square with zero degrees of freedom and a chi‐square with one degree of freedom (Almasy &amp; Blangero 
+  <a rid="mec13452-bib-0001" ref-type="ref" href="#mec13452-bib-0001">1998</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For (ii), the genomic relatedness between every pair of individuals within each population was calculated using an approach that scales by the actual variance in relatedness (approach 3; Robinson 
+  <span class="italic">et al</span>. 
+  <a rid="mec13452-bib-0053" ref-type="ref" href="#mec13452-bib-0053">2013</a>). These genomic estimates of relatedness were then adjusted by the known pedigree relationships between individuals, weighting the marker‐derived relatedness values towards their expected pedigree‐based values. This approach reduces the sampling error around the expected relatedness values and gives more accurate additive genetic variance estimates (Robinson 
+  <span class="italic">et al</span>. 
+  <a rid="mec13452-bib-0053" ref-type="ref" href="#mec13452-bib-0053">2013</a>). Variance components were estimated with 
+  <span class="sc">asreml</span>, fitting random and fixed effects as described in Appendix S1 (Supporting information).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Approach ii, in addition to allowing estimation of the population‐specific variances, also enables marker‐based additive genetic variances to be compared between the two populations. To do so, a global matrix of pairwise relatedness was calculated for all genotyped individuals across the two populations. Genotypes were first standardized by the allele frequencies within each population, and the relatedness between all individuals was then calculated following approach 3 in Robinson 
+  <span class="italic">et al</span>. (
+  <a rid="mec13452-bib-0053" ref-type="ref" href="#mec13452-bib-0053">2013</a>). As above, genomic relatedness estimates were adjusted by known pedigree relationships within the two populations to reduce sampling error. To test whether, for each trait, additive genetic variances differed between the NL and UK, the likelihood of a model where additive genetic variances and the covariance were free to vary was tested against a model where the additive variances and covariance were free to vary but the variances were forced to be equal, with significance tested using a chi‐square with one degree of freedom. For each trait, only fixed and random effects that were measured in both populations were included in the model.
+ </p>
+</sec>

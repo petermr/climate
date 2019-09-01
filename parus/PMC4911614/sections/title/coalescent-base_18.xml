@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Coalescent-based analysis using Migrate-n</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">All methods used above provide a robust framework for identifying groups even in weakly structured populations. However, all are, to some extent, functions of the covariance of allele frequencies between populations. In the hypothesis that our estimate of the frequency spectrum may be biased is some way, for example, by moderate sample size, we also performed a coalescent-based structure analysis using Migrate-n
+  <a ref-type="bibr" rid="b38" href="#b38">38</a>. As opposed to frequency-spectrum-based approaches (see above), coalescent-based analysis relies on phased polymorphisms to infer population parameters. After verifying that the number of polymorphisms in each RAD locus followed a Poisson distribution of 
+  <span class="italic">λ</span> equal to the mean number of polymorphisms per locus, we selected 50 random loci comprising between five and six polymorphisms as an unbiased representation of the neutrally evolving part of the genome
+  <a ref-type="bibr" rid="b32" href="#b32">32</a>. To correct for potential over-representation of sequences in case a heterozygous individual was mis-called as homozygous, we randomly sampled one allele only for each individual. For all colonies except WSH, we randomly picked a set of haplotypes in the population (16 in MZE, DDU, HAL and NEU, 14 in MZW, and 4 in WSH). We ran a cold chain and three heated chain of 50,000,000 generations, recording every 500 generations, with a 5,000,000-generation burn-in. We used a static heating scheme, raising the cold chain to a power of 1.5, 3 and 1e6, and proposing chain swapping every 100 steps. We used a uniform prior for population sizes (
+  <span class="italic">Θ</span>), bounded between 0 and 0.1 (with a 
+  <span class="italic">δ</span> of 0.01), and for the migration rates (
+  <span class="italic">M</span>), bounded at 4,000 with a 
+  <span class="italic">δ</span> of 400. Proper mixing under these conditions was ensured using the highest parametrization model (model 2, see below). We compared five models of increasing complexity: (i) a panmictic model, in which all colonies were gathered in one population, estimating only a general 
+  <span class="italic">Θ</span>, (ii) a full-matrix model, in which asymmetric migrations were allowed between all pairs of colonies, (iii) a stepwise model, in which asymmetric migrations were allowed, but only between neighbouring colonies, in a closed circle, (iv) a first meta-population model, in which the Ross Sea (WSH), George V and Adélie Lands (MZE, MZW and DDU) and the South Atlantic (NEU and HAL) were treated as three populations, with an asymmetric migrations between them, (v) a second meta-population model, in which the northernmost colonies (MZE, MZW, DDU and NEU) were separated from the Weddell Sea (HAL) and the Ross Sea (WSH). Models were ordered by log Bayes factor defined by Kass and Raftery as 
+  <span class="italic">ln</span>BF=2[
+  <span class="italic">ln</span>(mL(model1))-
+  <span class="italic">ln</span>(mL(model2))], with mL(model1) and mL(model2) being the marginal likelihoods for the two compared models, as calculated by thermodynamic integration. Under this model, each migration rate can also be expressed as a proportion of the receiving population's effective size as 
+  <span class="italic">m</span>=4·
+  <span class="italic">M</span>·
+  <span class="italic">μ.</span> Hence, the relative demographic importance of immigration for any given colony can also be expressed as Σ
+  <sub>i</sub>=
+  <span class="italic">n</span>(4·
+  <span class="italic">Mi·μ</span>), with 
+  <span class="italic">n</span> being the total number of populations identified as gene sources for the focal population. To convert mutation-scaled estimates of 
+  <span class="italic">M</span> and 
+  <span class="italic">Θ</span>, we therefore need an estimate of 
+  <span class="italic">μ</span> (the mean number of substitutions·per site per·Myr) for the set of loci used in the analysis. As the number of sites in each locus is mainly due to the stochastic nature of the mutational process, and follows a Poisson distribution of parameter 
+  <span class="italic">λ</span> equal to the mean SNP density per locus (see above), we can consider that a single true mutation rate (
+  <span class="italic">μ</span>) applies to the whole RADome. However, as our analysis is restricted to loci containing five to six SNPs, our estimates of 
+  <span class="italic">Θ</span> and 
+  <span class="italic">M</span> are not directly scaled by 
+  <span class="italic">μ</span>, but rather by posterior probabilities of 
+  <span class="italic">μ</span> conditional on the number of SNPs in each locus class. We used the class-specific mutation rate posterior probabilities as calculated for the King penguin
+  <a ref-type="bibr" rid="b32" href="#b32">32</a>. As a conservative estimate, we used a range of rates fitting the 3-SNPs to 6-SNPs class loci. Using a generation time of 16 years
+  <a ref-type="bibr" rid="b15" href="#b15">15</a>, these are 
+  <span class="italic">μ</span>
+  <sub>3snps</sub>=1.14e
+  <span class="sup">−6</span> and 
+  <span class="italic">μ</span>
+  <sub>6snps</sub>=2.16e
+  <span class="sup">−6</span>. As these were estimated from a subset of 16 haplotypes, and we included 82 haplotypes in our analysis, we considered that variability was likely to be underestimated by Trucchi and colleagues
+  <a ref-type="bibr" rid="b32" href="#b32">32</a> compared with our sample. Thus, we did not consider higher estimates than those made for 6-SNPs loci.
+ </p>
+</sec>

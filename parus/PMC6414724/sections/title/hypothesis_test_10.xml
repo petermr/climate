@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec11" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Hypothesis testing</div>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Each hypothesis and sub-hypothesis was tested by comparing the AUC values (see Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a> for a detailed description) between the following:
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">(H1) crossvalidation and temporal transferability assessments (i.e. ‘Internal TT’ and ‘External TT’),</p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">(H2) model types (i.e. ‘individual’ vs ‘combined’; e.g. ‘climate’ vs ‘climate + land cover’),</p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">(H3) modelling approaches (i.e. ‘hierarchical’ vs ‘non-hierarchical’), and</p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">(H4) species traits (e.g. ‘sedentary’ vs ‘migratory’).</p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">We used box plots to display the variability of predictive accuracy obtained from crossvalidation, ‘Internal TT’ and ‘External TT’ assessments, across all predictor combinations (i.e. from ‘individual’ to ‘combined’ models), the two modelling approaches (i.e. ‘hierarchical’ and ‘non-hierarchical’) and all species traits (see Table 
+  <a rid="Tab2" ref-type="table" href="#Tab2">2</a>). All plots were constructed with R software and the 
+  <span class="italic">ggplot2</span> package
+  <span class="sup">
+   <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+  </span>.
+ </p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">In addition, the effect of environmental predictor, modelling approach and species traits on AUC values were estimated using GLMs with a Gaussian error distribution and the ‘identity’ link function
+  <span class="sup">
+   <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+  </span> separately for crossvalidation, ‘TT Internal’ and ‘TT External’. In particular, we fitted a set of competing models and applied the multimodel inference approach
+  <span class="sup">
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>. We applied a data dredging analysis (the 
+  <span class="italic">dredge</span> function, available in the R package 
+  <span class="italic">MuMIn</span>; R Core Team 2015) to run the GLMs for all (valid) combinations of environmental predictors (interactions between predictor, modelling approach and species trait not included). For each model, we calculated the Akaike Information Criterion (AIC) and ∆
+  <sub>
+   <span class="italic">I</span>
+  </sub>, where ∆
+  <sub>
+   <span class="italic">I</span>
+  </sub> = AIC
+  <sub>i</sub>−AIC
+  <sub>minimum</sub>. All the models with ∆
+  <sub>
+   <span class="italic">I</span>
+  </sub> &lt; 7 were considered to have support
+  <span class="sup">
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>. The importance of each predictor was obtained by adding the Akaike weights (W
+  <sub>i</sub>) to the models in which that variable is present
+  <span class="sup">
+   <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+  </span>. The addition of the weights of each variable was considered consequential when ΣW
+  <sub>i</sub> &gt; 0.5, meaning that half or more of the total Akaike weight for the model set was represented by models that contained that variable
+  <span class="sup">
+   <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+  </span>. The AUC values for species traits were compared by a Wilcoxon signed rank test for paired samples. To be conservative, we only considered significant changes associated with 
+  <span class="italic">p</span>-values smaller than 0.001.
+ </p>
+</sec>

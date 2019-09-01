@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sequence Alignment and CpG Site Identification</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The sequence processing and alignment has been described in detail in Mäkinen et al. (forthcoming) . In short, prior to alignment, the obtained sequences were adaptively trimmed and quality filtered to a minimum of 20 bp and a quality of 25 using Trim Galore! 0.4.2. Genome alignment and methylation site identification were performed with Bismark v0.16.3 using Bowtie2 v2.2.3 in the alignment step. Reads were aligned against the Parus_major1.1 genome (NCBI) using single-end mode and default settings in Bismark (
+  <span class="italic">L</span> = 20 and 
+  <span class="italic">N</span> = 0). CpG sites were then identified from each sample; a site was accepted for downstream analysis when it had a minimum coverage of 10× and when it was identified across all samples. In total, the final data set for downstream analysis consisted of 522,645 CpG sites (
+  <a ref-type="supplementary-material" rid="sup1" href="#sup1">supplementary table S2</a>, 
+  <a ref-type="supplementary-material" rid="sup1" href="#sup1">Supplementary Material</a> online).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We first performed hierarchical clustering on the final data set as well as for a reduced data set with only unrelated individuals using the “cluster” (
+  <a rid="evz044-B37" ref-type="bibr" href="#evz044-B37">Maechler et al. 2016</a>) and “factoextra” (
+  <a rid="evz044-B22" ref-type="bibr" href="#evz044-B22">Kassambara and Mundt 2017</a>) packages in R. The distance method used was Euclidian and the clustering method Ward.D2. We also calculated mean methylation values over the 522,645 CpG sites for the whole data set, and for each time point, each individual and for both treatments separately.
+ </p>
+</sec>

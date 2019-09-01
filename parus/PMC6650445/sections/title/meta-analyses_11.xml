@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec11" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Meta-analyses</div>
+ <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">To demonstrate general responses across species and locations, we require each of the three conditions necessary to infer adaptive responses to be met consistently across studies, for example, that, on average, temperature increased over time, warmer temperatures were associated with advancing phenology and advancing phenology corresponded to fitness benefits (i.e. negative selection on phenological traits given the two above-mentioned conditions are satisfied). To test for such general trends in adaptive responses across studies, we fitted three mixed-effects meta-analyses to the PRCS dataset, two for the first two conditions and the third to assess whether WMSD differed from zero. We tested the third condition in two ways. First, we performed a binomial test to compare the proportion of studies exhibiting adaptive (i.e. same sign for WMSD and the climate-driven trait change over time) vs. maladaptive (i.e. WMSD and the climate-driven trait change over time differ in their signs) responses to climate change. Second, we performed a mixed-effects meta-analysis similar to the three other ones.</p>
+ <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">First, we assessed whether, across studies, the values of the climatic factor changed with time by using the slope of a climatic factor on year (obtained from the mixed-effects models of condition 1 for each study, see above) as response (i.e. effect size in meta-analysis terminology), and study identity and publication identity as qualitative variables defining random effects influencing the intercept. Second, to assess whether climate change was associated with trait changes across studies, we used the slope of the z-transformed trait on the climatic factor (obtained from the mixed-effects models of condition 2 while accounting for the effect of year on the trait) as response and study identity and publication identity as qualitative variables defining random effects influencing the intercept. We fitted separate models for phenological and morphological traits, because our dataset contained fewer studies of the latter compared to the former. Since morphological traits included either measures of body mass or size (e.g. wing, tarsus and skull length), we tested whether the effect of temperature depended on the type of measure by including it as a fixed-effect covariate with three levels (body mass, size and body condition index; we distinguished body condition index from the two other levels as it has elements of both of them). Analogously, we assessed whether the effect of temperature on phenology depended on the type of phenological measure used, by including it as a fixed-effect covariate with three levels, similarly to Cohen et al.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+  </span>: arrival, breeding/rearing (e.g. nesting, egg laying, birth, hatching) and development (e.g. time in a certain developmental stage, antler casting date). Third, to assess whether, across studies, traits were under positive or negative selection during the study period, we used as response the WMSD values obtained from the mixed-effect models for the first step assessing condition 3. In this model, we also used study identity and publication identity as qualitative variables defining random effects influencing the intercept. We tested whether selection depended on generation length and differed among fitness components by including these latter variables as fixed effects in the model. Generation length was extracted from the literature, mainly using the electronic database of BirdLife International. Similarly, to assess whether across studies there was a directional linear change in the annual linear selection differentials over time, we fitted a mixed-effects model using as response the slopes of the annual linear selection differentials on time (obtained with Eq. (
+  <a rid="Equ4" ref-type="" href="#Equ4">4</a>)). This model included study identity and publication identity as qualitative variables defining random effects influencing the intercept. Finally, to assess whether responses were on average adaptive, we also ran a mixed-effects meta-analytic model using as response the product of the WMSD with the sign of the climate-driven trait change over time. We included study identity and publication identity as qualitative variables defining the random effects in this model. We fitted separate models for phenological and morphological traits to test whether both WMSD and the product of WMSD with the sign of the climate-driven trait change differed from zero.
+ </p>
+ <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">For each type of climatic variable (temperature and precipitation) in the PRC dataset, we fitted two mixed-effects meta-analyses, analogous to the mixed-effects meta-analytic models we ran on the PRCS dataset. With these meta-analyses we assessed whether across the studies (1) there was a directional change in the climatic values over time and (2) traits were affected by the climatic variable. As responses (i.e. effect sizes) in these models, we used the slopes extracted for each study from the respective mixed-effects models fitted analogously to those used for the PRCS dataset (see section above). For both morphological and phenological traits, we assessed whether the effect of climate on traits differed among taxa by including taxon as a fixed effect. For morphological traits, we also assessed whether the responses to climate differed among endothermic and ectothermic animals, by including endothermy as a fixed effect in the model.</p>
+ <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">All data analyses were conducted in R version 3.5.0
+  <span class="sup">
+   <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+  </span> and implemented in the R package ‘adRes’, which is provided for the sake of transparency and reproducibility. Mixed-effects models for each study and mixed-effects meta-analytic models were fitted using restricted maximum likelihood (ML) with the spaMM package version 2.4.94
+  <span class="sup">
+   <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+  </span>. For each meta-analytic mixed-effects model, we conducted model diagnostics by inspecting whether the standardized residuals deviated from a normal distribution and whether there were any patterns in standardized residuals when regressed on the predictor. Model diagnostics were satisfactory for all models. We assessed the significance of fixed effects and intercepts with asymptotic likelihood ratio 
+  <span class="italic">χ</span>
+  <span class="sup">2</span> tests by comparing the model with a given effect vs. the model without the effect, both fitted using ML in spaMM.
+ </p>
+ <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">We assessed the amount of heterogeneity among studies in our meta-analyses using commonly recommended approaches
+  <span class="sup">
+   <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+  </span>. In particular, we tested whether the total amount of heterogeneity (
+  <span class="italic">Q</span>) was statistically significant and estimated Higgins 
+  <span class="italic">I</span>
+  <span class="sup">2</span> and 
+  <span class="italic">H</span>
+  <span class="sup">2</span> (ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+  </span>). Higgins 
+  <span class="italic">I</span>
+  <span class="sup">2</span> reflects the proportion of total heterogeneity due to between-study variation (i.e. random effects) and ranges from 0 to 1. A value of 0 means that heterogeneity is due to within-study variation exclusively, whereas a value of 1 indicates that heterogeneity is due to between-study variation. This metric is, therefore, comparable among different meta-analyses. 
+  <span class="italic">H</span>
+  <span class="sup">2</span> is a ratio showing the proportion of observed heterogeneity in relation to what would be expected under the null hypothesis of homogeneity. For example, a value of 2 means that there is twice as much variation as would be expected if no between-study variation were present (i.e. 
+  <span class="italic">H</span>
+  <span class="sup">2</span> = 1). We found that the amount of heterogeneity differed among the two datasets and tested models, with moderate heterogeneity for models testing conditions 1 and 2 and considerable heterogeneity for models testing condition 3 (Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>, Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>).
+ </p>
+ <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">We also tested for the evidence of publication bias by (1) visual inspection of the funnel plots and (2) Egger’s test
+  <span class="sup">
+   <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+  </span>. No evidence of small-study effect (that may be an indication of publication bias) was found for effect sizes used to test all three conditions in the PRCS dataset (Supplementary Figs. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">16</a>–
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">17</a>, Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>).
+ </p>
+</sec>

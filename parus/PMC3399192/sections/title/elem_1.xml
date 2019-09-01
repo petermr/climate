@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods: Random-Regression Approach</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We outline the model approach in terms of the analysis of clutch size and laying date. We here adhere to this specific scenario, instead of a more generic one, in order to facilitate understanding the approach and linking it to the example scenario presented in this paper and the code for implementing this model, which is presented in the Supporting Information. Nevertheless, the approach is applicable to also other combinations of traits that are expressed repeatedly during an individual's lifetime.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Model construction and evaluation was performed in two stages. We started by modeling the clutch size–laying date relationships, such that 
+  <div id="e4" class="disp-formula">
+   <div xlink:href="ece30002-0695-m4" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <span class="label">4</span>
+  </div> where 
+  <span class="italic">c
+   <sub>yr,i</sub>
+  </span> denotes the clutch size of female 
+  <span class="italic">i</span> in year 
+  <span class="italic">yr</span>. The “µ
+  <sub>c</sub>” fits the overall fixed effects mean clutch size, 
+  <span class="italic">Age</span>F
+  <span class="italic">
+   <sub>yr,i</sub>
+  </span> is a fixed effect that denotes the factor age of individual 
+  <span class="italic">i</span> in year 
+  <span class="italic">yr</span>, 
+  <span class="italic">d
+   <sub>yr,i</sub>
+  </span> the laying date of female 
+  <span class="italic">i</span> in year 
+  <span class="italic">yr</span>, and 
+  <span class="italic">b</span> the fixed-effect slope of clutch size as a function of laying date. Any annual variation that is not explained by the fixed effects is modeled by the random effect 
+  <span class="italic">yr</span>. The random regression element is given by the polynomial function 
+  <div class="inline-formula">
+   <span xlink:href="ece30002-0695-mu1.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div> in 
+  <a ref-type="disp-formula" rid="e4" href="#e4">Equation (4)</a>, which specifies the individual-specific deviations from the fixed-effect slope 
+  <span class="italic">b</span> of clutch size on laying date. For each individual 
+  <span class="italic">i</span>, a polynomial function of increasing order 
+  <span class="italic">x</span> is specified. Thus, when 
+  <span class="italic">x</span>= 0, the variance across individuals (
+  <span class="italic">ind</span>
+  <sub>0</sub>) is estimated at the average laying date value. When 
+  <span class="italic">x</span>= 1, the variance in the coefficients 
+  <span class="italic">ind</span>
+  <sub>0</sub> (elevation) and the variance in 
+  <span class="italic">ind</span>
+  <sub>1</sub> (slope) of the function 
+  <span class="italic">ind</span>
+  <sub>0</sub>+
+  <span class="italic">ind</span>
+  <sub>1</sub>
+  <span class="italic">d
+   <sub>year</sub>
+  </span> is estimated and the covariance between these, and so on for higher order polynomials. 
+  <a ref-type="disp-formula" rid="e4" href="#e4">Equation (4)</a> is a standard random regression model, with the exception that typically an environmental variable is used as explanatory variable (e.g., 
+  <a ref-type="bibr" rid="b35" href="#b35">Schaeffer 2004</a>; 
+  <a ref-type="bibr" rid="b27" href="#b27">Nussey et al. 2007</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To decide the order 
+  <span class="italic">x</span> of the random regression, we assumed that the most parsimonious random regression model was reached when higher order polynomials did not achieve a significant increase in log-likelihood. That is, the order 
+  <span class="italic">x</span> of the random regression polynomial function was increased stepwise, and its significance was tested by a likelihood ratio test, which is two times the difference in log-likelihood between hierarchically nested models, tested against a chi-square distribution assuming that the degrees of freedom are given by the additional number of (co)variances estimated. Based on the most parsimonious random regression model, estimates of variance in clutch size at each laying date and its approximate standard error can be calculated following 
+  <a ref-type="bibr" rid="b14" href="#b14">Fischer et al. (2004)</a>.
+ </p>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Selection on reaction-norm properties</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Having determined the most parsimonious order of the polynomial random regression, we extended the univariate random regression (Equation[4]) to a bivariate one by in addition to 
+   <a ref-type="disp-formula" rid="e4" href="#e4">Equation (4)</a> considering that 
+   <div id="e5" class="disp-formula">
+    <div xlink:href="ece30002-0695-m5" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <span class="label">5</span>
+   </div> where 
+   <span class="italic">w
+    <sub>i</sub>
+   </span> is the relative fitness of individual 
+   <span class="italic">i</span>. The µ
+   <span class="italic">
+    <sub>w</sub>
+   </span> denotes the overall fixed effect mean fitness, and 
+   <span class="italic">Cohort</span>F
+   <span class="italic">
+    <sub>i</sub>
+   </span> a fixed effect denoting the year of first breeding of individual 
+   <span class="italic">i</span>, which is entered to correct for temporal variation in fitness and the possible truncation of lifetime fitness in the last cohorts considered in the analysis. The bivariate element in the random regression is specified by the polynomial 
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu2.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>. Thus, for order 
+   <span class="italic">x</span>, the variances in 
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu3.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> and 
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu4.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> are both estimated, in addition to all possible covariances between these parameters. Nevertheless, because each individual has only one estimate of lifetime fitness, only the variance in elevation (
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu5.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>) is estimable and all other variances (including the residual variance) must be constrained to zero. Thus, for a first-order random regression, the mixed model procedure needs to estimate the (co)variances (written in matrix form, omitting the upper diagonal that is symmetric to the lower diagonal). 
+   <div id="e6" class="disp-formula">
+    <div xlink:href="ece30002-0695-m6" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <span class="label">6</span>
+   </div> where 
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu6.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> denotes the selection differential on the elevation of the clutch size–laying date relationship (
+   <span class="italic">S</span>
+   <sub>elevation</sub>) and 
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu7.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> the selection differential on the slope of the clutch size–laying date relationship (
+   <span class="italic">S</span>
+   <sub>slope</sub>). These selection differentials can be expressed as a selection gradient by dividing them with 
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu8.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> and 
+   <div class="inline-formula">
+    <span xlink:href="ece30002-0695-mu9.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>, respectively, or as selection intensity (standardized selection gradient) by dividing them with the square root of these variances.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Higher order polynomials can be introduced as an extension of this matrix. Thus, bivariate random regression allows estimating directional selection on the properties of a polynomial individual-specific relationship between labile life-history traits. Testing the formal significance of the selection differential can be performed by constraining the appropriate covariance to zero and performing a likelihood ratio test between the unconstrained and constrained models. The procedure does not, however, allow description of nonlinear selection. In order to evaluate the potential for nonlinear selection on these properties, we suggest investigation of the map of relative fitness on the BLUP values for all reaction-norm properties. Under the paradigm of optimal reaction norms, one would expect that variation in slope may be under stabilizing selection, which can hereby be graphically evaluated.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">All random regression models were solved using Restricted Maximum Likelihood (REML) in the programe ASReml (VSN International). This programe uses the delta method (see e.g., 
+   <a ref-type="bibr" rid="b24" href="#b24">Lynch and Walsh 1998</a>) to estimate the standard errors of functions of variances. The code used in this paper and example file of data is provided in the Supporting Information. In the implementation of the above equations in AsReml, the following need to be observed. (1) In random regression with a linear covariate, the variances of first-order and higher order terms are dependent on the scaling of the covariate (e.g., 
+   <a ref-type="bibr" rid="b30" href="#b30">Pinheiro and Bates 2000</a>; 
+   <a ref-type="bibr" rid="b35" href="#b35">Schaeffer 2004</a>), which is dependent on the software used to implement the models. AsReml standardizes the covariate such that its minimal value is –1 and the average of the covariate values is zero. Hence, variances in elevation are defined for the average of all the covariate values (which may or may not equal the average covariate when taking the number of observations into account). Random-regression slope is then defined as change in response variable per unit equal to the difference between minimum and mean value of the covariate. (2) The within-individual variance and variance in slope(s) of lifetime fitness cannot be constrained to exactly zero and must, in practice, be constrained to a very small value. See the Supporting Information for additional details.
+  </p>
+ </sec>
+</sec>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Raw seasonal NAO indices vs. masting index model</div>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">To test at the sub-continental scale the consistency of NAO-mast correlations reported by previous studies at the regional scale (Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>), we built a regression model. The building of this initial model was limited to 1952–2015 and 1959–2014 for beech and spruce respectively, when NUTS-1 chronologies were numerous (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>), and evenly spread across the study area
+  <span class="sup">
+   <a ref-type="bibr" rid="CR3" href="#CR3">3</a>
+  </span>. To build the predictors, we used the monthly NAO series provided by the Climate Prediction Center of the NOAA, which covers the entire period of analysis (i.e., 1950–2015). As in previous studies (Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>), we computed raw seasonal NAO indices (i.e., without extracting high- and low-frequency components) by averaging monthly values as follows: December of the previous year to March (winter-NAO), April to May (spring-NAO), and June to September (summer-NAO). The shorter window for spring-NAO was justified by the fact that beech and spruce flowering and pollination in Central-Northern Europe occur mostly between April and May. We then fitted M_index of both species as a function of summer-NAO 
+  <span class="italic">Y</span>
+  <sub>M−2</sub>, winter-NAO 
+  <span class="italic">Y</span>
+  <sub>M−1</sub> and summer-NAO 
+  <span class="italic">Y</span>
+  <sub>M−1</sub>, and spring-NAO 
+  <span class="italic">Y</span>
+  <sub>M</sub>. We accounted for the effect of resource depletion by previous masting events
+  <span class="sup">
+   <a ref-type="bibr" rid="CR4" href="#CR4">4</a>,
+   <a ref-type="bibr" rid="CR5" href="#CR5">5</a>
+  </span> by adding an autoregressive term with a lag of − 1 year. All predictors were standardized and checked for the absence of collinearity (pairwise Pearson correlation &lt; 0.4). As the response was 
+  <span class="italic">β</span>-distributed for both beech and spruce (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>, left column), we rescaled M_index from 0 to 1 and fitted a 
+  <span class="italic">β</span>-regression model via maximum likelihood using the R 
+  <span class="italic">betareg</span> package
+  <span class="sup">
+   <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+  </span> for the R statistical framework.
+ </p>
+</sec>

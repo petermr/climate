@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modeling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Previous researches have been show that sometimes, sampling effort is associated with the proximity to roads (cites) (
+  <a rid="ref-3" ref-type="bibr" href="#ref-3">Beck et al., 2014</a>; 
+  <a rid="ref-30" ref-type="bibr" href="#ref-30">Marks, 2012</a>; 
+  <a rid="ref-35" ref-type="bibr" href="#ref-35">Ponder et al., 2001</a>). Therefore, we obtained information about roads close to the Nature Reserve. Then we created 2,000 random points within a buffer area of two km wide around the considered road (only main roads that have existed for more than 30 years were selected).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Collinearity problems can lead to bias. Given the problems in predicting, it is necessary to assess collinearity both in training and in prediction data sets. Following the suggestions described in 
+  <a rid="ref-11" ref-type="bibr" href="#ref-11">Dormann et al. (2013)</a>, we used a Variance Inflation Factor (VIF) analysis in this research. This analysis was calculated in R and the threshold was set as 10 (only VIF values lower than 10 were selected). For each species, different variables were selected for modeling (
+  <a rid="ref-37" ref-type="bibr" href="#ref-37">Ranjitkar et al., 2016</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We estimated the potential distribution for species using BIOMOD2 implemented in the BIOMOD2 R package (version 3.3-7) (
+  <a rid="ref-34" ref-type="bibr" href="#ref-34">Phillips, Anderson &amp; Schapire, 2006</a>; 
+  <a rid="ref-43" ref-type="bibr" href="#ref-43">Thuiller et al., 2009</a>) and used five modeling techniques: generalized additive modeling (
+  <a rid="ref-17" ref-type="bibr" href="#ref-17">Hastie &amp; Tibshirani, 1986</a>), generalized linear modeling (GLM) (
+  <a rid="ref-42" ref-type="bibr" href="#ref-42">Thompson et al., 1985</a>), multivariate adaptive regression splines (MARS) (
+  <a rid="ref-14" ref-type="bibr" href="#ref-14">Friedman, 1991</a>), random forest (RF) (
+  <a rid="ref-4" ref-type="bibr" href="#ref-4">Breiman, 2001</a>), and maximum entropy (MAXENT, Phillips) (
+  <a rid="ref-34" ref-type="bibr" href="#ref-34">Phillips, Anderson &amp; Schapire, 2006</a>). All techniques were applied to presence data for each species and to the pseudo-absences for the models developed in BIOMOD2 (use default option). Model parameters (GLM, MARS, and RF) were tuned by BIOMOD2, except MAXENT, Phillips which was tuned by ENMeval package (
+  <a rid="ref-1" ref-type="bibr" href="#ref-1">Aiello-Lammens et al., 2015</a>; 
+  <a rid="ref-36" ref-type="bibr" href="#ref-36">Radosavljevic, Anderson &amp; Araújo, 2014</a>). For each species, each ENM was evaluated measuring the true skill statistic (TSS) (
+  <a rid="ref-2" ref-type="bibr" href="#ref-2">Allouche, Tsoar &amp; Kadmon, 2006</a>), with 10 evaluation runs. For the TSS, 50 modeling evaluation results were obtained, and the average of the TSS was set as the threshold for building the ensemble models. Then, the potential distribution was calculated from an ensemble set of models or predictions. To transform the models from environmental suitability into presence–absence distributions, we used the threshold (
+  <span class="italic">P</span>, cut-off) calculated by BIOMOD2. From this, all outputs were divided into two groups; outputs above the threshold (&gt;
+  <span class="italic">P</span>) were grouped as “present,” while all other values (&lt;
+  <span class="italic">P</span>) were considered “absent.” Finally, the potential distribution through time were obtained.
+ </p>
+</sec>

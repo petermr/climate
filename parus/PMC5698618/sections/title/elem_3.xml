@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2a" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">(a)</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Variation across distantly related eukaryote taxa</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">There have been several comparisons of the GwRR per base, kilobase (Kb) or megabase (Mb) across distantly related taxa [
+  <a rid="RSTB20160455C23" ref-type="bibr" href="#RSTB20160455C23">23</a>,
+  <a rid="RSTB20160455C24" ref-type="bibr" href="#RSTB20160455C24">24</a>,
+  <a rid="RSTB20160455C50" ref-type="bibr" href="#RSTB20160455C50">50</a>,
+  <a rid="RSTB20160455C51" ref-type="bibr" href="#RSTB20160455C51">51</a>]. The most striking pattern to emerge was that microorganisms and fungi have much higher recombination rates compared to animals and plants [
+  <a rid="RSTB20160455C23" ref-type="bibr" href="#RSTB20160455C23">23</a>,
+  <a rid="RSTB20160455C24" ref-type="bibr" href="#RSTB20160455C24">24</a>]. However, these studies were carried out in a relatively small number of species, often relying on chiasma count data in a single sex. Therefore, we compiled data on linkage map length, haploid chromosome number (HCN) and genome size from all the major groups of eukaryotes, to provide a more comprehensive and up-to-date picture of recombination rate variation. Details of the methods and data are provided in the electronic supplementary material, and a summary of the species included in our dataset is in 
+  <a rid="RSTB20160455TB1" ref-type="table" href="#RSTB20160455TB1">table 1</a> (see the electronic supplementary material for full list). Briefly, we obtained sex-averaged linkage map lengths, genome size and HCN from the published literature and public databases. In cases where a species had multiple maps, we chose the map with the most markers or the most individuals in cases where two maps had a similar number of markers. We omitted linkage maps with fewer than 50 markers and where the number of linkage groups (LG) and the HCN differed markedly (absolute(LG–HCN)/HCN &gt; 0.7). In our analyses, we controlled for phylogeny by fitting a Phylogenetic Generalized Linear Model with the R Package ‘Caper’ [
+  <a rid="RSTB20160455C52" ref-type="bibr" href="#RSTB20160455C52">52</a>]. The phylogeny was obtained using the Phylotastic Web Service (
+  <span xlink:href="https://github.com/phylotastic/phylo_services_docs/blob/master/ServiceDescription/PhyloServicesDescription.md" class="uri" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/phylotastic/phylo_services_docs/blob/master/ServiceDescription/PhyloServicesDescription.md</span>), which extracts a Supertree from openTree [
+  <a rid="RSTB20160455C53" ref-type="bibr" href="#RSTB20160455C53">53</a>]. All branch lengths were set to 1 in the Supertree. In total, we obtained data for 353 species, across animals, plants, fungi and the SAR (Stramenopiles-Alveolates-Rhizaria Eukaryote) supergroup. Not surprisingly, there is a bias towards model species, domestic and crop species, and parasitic or disease-causing species, for which quantitative trait locus (QTL) mapping studies have been the focus of much research. 
+  <div id="RSTB20160455TB1" orientation="portrait" position="float" class="table-wrap">
+   <span class="label">Table 1.</span>
+   <div class="caption">
+    <p>Summary of the linkage map data compiled from the literature; linkage map length (centimorgans, cM), genome size (megabases, Mb), haploid chromosome number and recombination rate (cM/Mb). SAR, Stramenopiles-Alveolates-Rhizaria Eukaryote.</p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <colgroup span="1">
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+     <col align="left" span="1"/>
+    </colgroup>
+    <thead valign="bottom">
+     <tr>
+      <th rowspan="2" align="left" colspan="1">group</th>
+      <th rowspan="2" align="left" colspan="1">
+       <span class="italic">n</span>
+      </th>
+      <th colspan="3" align="left" rowspan="1">linkage map length (cM)
+       <span class="hr"/>
+      </th>
+      <th colspan="3" align="left" rowspan="1">genome size (Mb)
+       <span class="hr"/>
+      </th>
+      <th colspan="3" align="left" rowspan="1">haploid chromosome number
+       <span class="hr"/>
+      </th>
+      <th colspan="3" align="left" rowspan="1">recombination rate (cM/Mb)
+       <span class="hr"/>
+      </th>
+     </tr>
+     <tr>
+      <th align="left" rowspan="1" colspan="1">mean</th>
+      <th align="left" rowspan="1" colspan="1">min</th>
+      <th align="left" rowspan="1" colspan="1">max</th>
+      <th align="left" rowspan="1" colspan="1">mean</th>
+      <th align="left" rowspan="1" colspan="1">min</th>
+      <th align="left" rowspan="1" colspan="1">max</th>
+      <th align="left" rowspan="1" colspan="1">mean</th>
+      <th align="left" rowspan="1" colspan="1">min</th>
+      <th align="left" rowspan="1" colspan="1">max</th>
+      <th align="left" rowspan="1" colspan="1">mean</th>
+      <th align="left" rowspan="1" colspan="1">min</th>
+      <th align="left" rowspan="1" colspan="1">max</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td rowspan="1" colspan="1">SAR</td>
+      <td rowspan="1" colspan="1">9</td>
+      <td rowspan="1" colspan="1">1782</td>
+      <td rowspan="1" colspan="1">653</td>
+      <td rowspan="1" colspan="1">2884</td>
+      <td rowspan="1" colspan="1">189</td>
+      <td rowspan="1" colspan="1">18.87</td>
+      <td rowspan="1" colspan="1">560</td>
+      <td rowspan="1" colspan="1">18.78</td>
+      <td rowspan="1" colspan="1">9</td>
+      <td rowspan="1" colspan="1">34</td>
+      <td rowspan="1" colspan="1">38.67</td>
+      <td rowspan="1" colspan="1">3.24</td>
+      <td rowspan="1" colspan="1">108.00</td>
+     </tr>
+     <tr>
+      <td rowspan="1" colspan="1">fungi</td>
+      <td rowspan="1" colspan="1">15</td>
+      <td rowspan="1" colspan="1">2068</td>
+      <td rowspan="1" colspan="1">86</td>
+      <td rowspan="1" colspan="1">5860</td>
+      <td rowspan="1" colspan="1">49.26</td>
+      <td rowspan="1" colspan="1">19.05</td>
+      <td rowspan="1" colspan="1">170.2</td>
+      <td rowspan="1" colspan="1">13.27</td>
+      <td rowspan="1" colspan="1">4</td>
+      <td rowspan="1" colspan="1">21</td>
+      <td rowspan="1" colspan="1">48.68</td>
+      <td rowspan="1" colspan="1">1.40</td>
+      <td rowspan="1" colspan="1">119.90</td>
+     </tr>
+     <tr>
+      <td rowspan="1" colspan="1">animals</td>
+      <td rowspan="1" colspan="1">140</td>
+      <td rowspan="1" colspan="1">1813</td>
+      <td rowspan="1" colspan="1">90</td>
+      <td rowspan="1" colspan="1">5961</td>
+      <td rowspan="1" colspan="1">1538</td>
+      <td rowspan="1" colspan="1">43.15</td>
+      <td rowspan="1" colspan="1">30 880</td>
+      <td rowspan="1" colspan="1">22.27</td>
+      <td rowspan="1" colspan="1">3</td>
+      <td rowspan="1" colspan="1">73</td>
+      <td rowspan="1" colspan="1">2.52</td>
+      <td rowspan="1" colspan="1">0.12</td>
+      <td rowspan="1" colspan="1">28.10</td>
+     </tr>
+     <tr>
+      <td rowspan="1" colspan="1">plants</td>
+      <td rowspan="1" colspan="1">189</td>
+      <td rowspan="1" colspan="1">1567</td>
+      <td rowspan="1" colspan="1">309</td>
+      <td rowspan="1" colspan="1">8184</td>
+      <td rowspan="1" colspan="1">2956</td>
+      <td rowspan="1" colspan="1">120.40</td>
+      <td rowspan="1" colspan="1">29 280</td>
+      <td rowspan="1" colspan="1">13.91</td>
+      <td rowspan="1" colspan="1">5</td>
+      <td rowspan="1" colspan="1">90</td>
+      <td rowspan="1" colspan="1">1.85</td>
+      <td rowspan="1" colspan="1">0.03</td>
+      <td rowspan="1" colspan="1">9.22</td>
+     </tr>
+     <tr>
+      <td rowspan="1" colspan="1">total or mean</td>
+      <td rowspan="1" colspan="1">353</td>
+      <td rowspan="1" colspan="1">1807.5</td>
+      <td rowspan="1" colspan="1"/>
+      <td rowspan="1" colspan="1"/>
+      <td rowspan="1" colspan="1">1183.0</td>
+      <td rowspan="1" colspan="1"/>
+      <td rowspan="1" colspan="1"/>
+      <td rowspan="1" colspan="1">17.05</td>
+      <td rowspan="1" colspan="1"/>
+      <td rowspan="1" colspan="1"/>
+      <td rowspan="1" colspan="1">22.93</td>
+      <td rowspan="1" colspan="1"/>
+      <td rowspan="1" colspan="1"/>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To estimate the GwRR from linkage map data, we divided the linkage map length (the sum of the length of all sex-averaged LGs) by the haploid genome size (in Mb) (
+  <a ref-type="boxed-text" rid="RSTB20160455BX2" href="#RSTB20160455BX2">box 2</a> and 
+  <a ref-type="fig" rid="RSTB20160455F2" href="#RSTB20160455F2">figure 2</a>). This is a commonly reported measure of recombination rate [
+  <a rid="RSTB20160455C11" ref-type="bibr" href="#RSTB20160455C11">11</a>,
+  <a rid="RSTB20160455C23" ref-type="bibr" href="#RSTB20160455C23">23</a>–
+  <a rid="RSTB20160455C27" ref-type="bibr" href="#RSTB20160455C27">27</a>] and provides a useful metric to compare across taxa with vastly different genome sizes. This measure averages recombination across both the open and transcriptionally active euchromatic region and the closed and inactive heterochromatic regions of the genome. Recombination is often suppressed in heterochromatic regions, and the strength of suppression and the proportion of the genome that is heterochromatic vary greatly between organisms (see [
+  <a rid="RSTB20160455C69" ref-type="bibr" href="#RSTB20160455C69">69</a>]). Thus, the GwRR represents a genome average that reveals differences in recombination rate, but will be related to differences in the amount of heterochromatin in the genome and how strongly recombination is suppressed in these regions. Taking account of the proportion of the genome that is heterochromatic may provide more informative estimates of recombination with respect to evolutionary processes [
+  <a rid="RSTB20160455C27" ref-type="bibr" href="#RSTB20160455C27">27</a>,
+  <a rid="RSTB20160455C69" ref-type="bibr" href="#RSTB20160455C69">69</a>]; however, these data are only available for relatively few organisms, so we have not included them in this analysis. Overall, our analysis confirms the previously reported pattern of a higher GwRR in fungi and SAR compared to plants and animals, but also provides estimates for new taxonomic groups (electronic supplementary material, figures S1–S3) and opportunities to begin to address enduring questions about the evolution of recombination rate (
+  <a ref-type="fig" rid="RSTB20160455F1" href="#RSTB20160455F1">figure 1</a>). 
+  <div id="RSTB20160455F2" orientation="portrait" position="float" class="fig">
+   <span class="label">Figure 2.</span>
+   <div class="caption">
+    <p>Variation in the log of recombination rate, estimated by dividing linkage map length in centimorgans (cM) by genome size (Mb) across eukaryotic taxa. Other plants: Pteridophyta, Chlorophyta, Bryophyta. Other animals: Anthzoa, Holothuriodea, Ascidacae. unseg, unsegmented.</p>
+   </div>
+   <div xlink:href="rstb20160455-g2" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <div id="RSTB20160455BX2" position="float" orientation="portrait" class="boxed-text" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="label">Box 2.</span>
+  <div class="caption">
+   <div class="title">How does recombination rate vary with genome architecture?</div>
+  </div>
+  <p>
+   <span class="bold">Genome size</span>
+  </p>
+  <p>Following the observation that linkage map length was similar across eukaryotes despite large variation in genome size, it was proposed that larger genomes have several orders of magnitude lower recombination rates [
+   <a rid="RSTB20160455C51" ref-type="bibr" href="#RSTB20160455C51">51</a>]. This is consistent with the observed relationships between recombination rate and sequence features; recombination rate is positively correlated with gene density and negatively with the density of repetitive elements, which could drive lower recombination rates in large, repeat-rich genomes [
+   <a rid="RSTB20160455C27" ref-type="bibr" href="#RSTB20160455C27">27</a>,
+   <a rid="RSTB20160455C54" ref-type="bibr" href="#RSTB20160455C54">54</a>]. Higher recombination rates can also lead to reductions in genome size—if recombination rate increases the mutation rate and small deletions are more common than small insertions (mutational bias), purifying selection on these mutations can drive genome contraction [
+   <a rid="RSTB20160455C55" ref-type="bibr" href="#RSTB20160455C55">55</a>,
+   <a rid="RSTB20160455C56" ref-type="bibr" href="#RSTB20160455C56">56</a>]. Both positive and negative relationships between genome size and recombination rate have been found (positive [
+   <a rid="RSTB20160455C57" ref-type="bibr" href="#RSTB20160455C57">57</a>], negative [
+   <a rid="RSTB20160455C24" ref-type="bibr" href="#RSTB20160455C24">24</a>,
+   <a rid="RSTB20160455C27" ref-type="bibr" href="#RSTB20160455C27">27</a>,
+   <a rid="RSTB20160455C50" ref-type="bibr" href="#RSTB20160455C50">50</a>]). The disparity in results may be attributed to differences in the methods used and taxonomic breadths considered, but may also be due to statistical problems. When the recombination rate is calculated as the linkage map length (cM) divided by genome size (Kb or Mb), then genome size and recombination are mathematically coupled; it is not appropriate to test for relationship between mathematically coupled variables [
+   <a rid="RSTB20160455C58" ref-type="bibr" href="#RSTB20160455C58">58</a>]. To investigate the relationship between genome size and recombination rate, we examined the fit of linear and quadratic relationships between linkage map length and genome size, while controlling for phylogeny. In animals and fungi, a linear model best fit the data, but in plants, a quadratic model was a better fit (
+   <a ref-type="fig" rid="RSTB20160455F3" href="#RSTB20160455F3">figure 3</a>
+   <span class="italic">a</span>; electronic supplementary material). This suggests that recombination rate is lower in larger plant genomes, but in animals and fungi there is no evidence to suggest recombination rate declines with genome size. 
+   <div id="RSTB20160455F3" orientation="portrait" position="float" class="fig">
+    <span class="label">Figure 3.</span>
+    <div class="caption">
+     <p>Observed (points) and fitted (lines) relationships between: (
+      <span class="italic">a</span>) log genome size (megabases, Mb) and log linkage map length (centimorgans, cM), (
+      <span class="italic">b</span>) log haploid chromosome number (HCN) and log linkage map length (cM) and (
+      <span class="italic">c</span>) log HCN and log recombination rate measured as linkage map (cM) divided by genome size (Mb). Fitted linear and quadratic relationships were obtained by fitting a phylogenetic generalized linear model separately for plants, animals and fungi.
+     </p>
+    </div>
+    <div xlink:href="rstb20160455-g3" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p>
+   <span class="bold">Haploid chromosome number</span>
+  </p>
+  <p>The number and size of chromosomes can explain variation in the GwRR because a minimum of one CO per chromosome (or chromosome arm) is often required to ensure proper segregation of chromosomes during meiosis [
+   <a rid="RSTB20160455C13" ref-type="bibr" href="#RSTB20160455C13">13</a>,
+   <a rid="RSTB20160455C59" ref-type="bibr" href="#RSTB20160455C59">59</a>–
+   <a rid="RSTB20160455C62" ref-type="bibr" href="#RSTB20160455C62">62</a>]. There are several exceptions: some chromosomes do not recombine in one sex (e.g. achiasmate species; see §2c) and often more than one CO per chromosome is observed on larger chromosomes (see [
+   <a rid="RSTB20160455C62" ref-type="bibr" href="#RSTB20160455C62">62</a>]). Under the obligate CO requirement, a higher recombination rate could be achieved by increasing the number of chromosomes or by having smaller chromosomes; bird genomes, containing many microchromosomes, provide support for this hypothesis [
+   <a rid="RSTB20160455C37" ref-type="bibr" href="#RSTB20160455C37">37</a>,
+   <a rid="RSTB20160455C63" ref-type="bibr" href="#RSTB20160455C63">63</a>]. Whether karyotypic variation is driven by selection on recombination rate is unclear (e.g. [
+   <a rid="RSTB20160455C64" ref-type="bibr" href="#RSTB20160455C64">64</a>,
+   <a rid="RSTB20160455C65" ref-type="bibr" href="#RSTB20160455C65">65</a>]), but Burt [
+   <a rid="RSTB20160455C66" ref-type="bibr" href="#RSTB20160455C66">66</a>] demonstrated that an increase in the efficacy of selection was better achieved by increasing the number of COs per chromosome rather than increasing the number of chromosomes. Whole-genome duplication and polyploidy are dramatic ways to increase chromosome number, and under an obligate CO requirement, this should result in at least a doubling of chiasma frequency. Polyploids' ability to achieve stable meiosis may be partly due to a reduction in the GwRR (and increase in interference distance) to ensure only one CO per pair of homologous chromosomes, as a mechanism to avoid the pairing of three or more homologous chromosomes [
+   <a rid="RSTB20160455C67" ref-type="bibr" href="#RSTB20160455C67">67</a>,
+   <a rid="RSTB20160455C68" ref-type="bibr" href="#RSTB20160455C68">68</a>]. The data we compiled provide an opportunity to test whether HCN explains variation in linkage map length and the GwRR (cM/Mb) across eukaryotes. A positive linear relationship between linkage map length and HCN was found for plants and fungi, while in animals a quadratic relationship was slightly better at explaining this relationship (
+   <a ref-type="fig" rid="RSTB20160455F3" href="#RSTB20160455F3">figure 3</a>
+   <span class="italic">b</span>; electronic supplementary material). We found that the HCN was not related to GwRR (per Mb) in fungi and animals, and although a relationship was found in plants, the amount of variation explained was low (
+   <span class="italic">r</span>
+   <span class="sup">2</span> = 0.02) (
+   <a ref-type="fig" rid="RSTB20160455F3" href="#RSTB20160455F3">figure 3</a>
+   <span class="italic">c</span>; electronic supplementary material). Despite explaining little variation, we do suggest that scaling the GwRR by HCN provides a useful comparative measure of recombination rate and removes variation attributable to the obligate CO requirement.
+  </p>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">In contrast with comparing recombination rate across distantly related taxa, comparisons within specific taxonomic groups are more common (i.e. mammals [
+  <a rid="RSTB20160455C59" ref-type="bibr" href="#RSTB20160455C59">59</a>], plants [
+  <a rid="RSTB20160455C25" ref-type="bibr" href="#RSTB20160455C25">25</a>,
+  <a rid="RSTB20160455C27" ref-type="bibr" href="#RSTB20160455C27">27</a>,
+  <a rid="RSTB20160455C57" ref-type="bibr" href="#RSTB20160455C57">57</a>,
+  <a rid="RSTB20160455C70" ref-type="bibr" href="#RSTB20160455C70">70</a>], homopterous insects [
+  <a rid="RSTB20160455C71" ref-type="bibr" href="#RSTB20160455C71">71</a>] and hymenoptera [
+  <a rid="RSTB20160455C64" ref-type="bibr" href="#RSTB20160455C64">64</a>]), and several notable patterns have been identified. For example, among insects, social hymenoptera have much higher recombination rates [
+  <a rid="RSTB20160455C23" ref-type="bibr" href="#RSTB20160455C23">23</a>]; among mammals, marsupials have lower recombination rates [
+  <a rid="RSTB20160455C72" ref-type="bibr" href="#RSTB20160455C72">72</a>]; and among plants, conifers have very low recombination rates [
+  <a rid="RSTB20160455C25" ref-type="bibr" href="#RSTB20160455C25">25</a>]. Comparing within taxonomic groups in our data, we also observed these patterns and make several new observations: among Crustaceans, the Cladocerans (represented by two species of Daphnia) have much higher recombination rates (electronic supplementary material, figure S1), Dipterans have the lowest rates of recombination rate across insects (electronic supplementary material, figure S1) and fishes have the highest recombination rate among vertebrates (
+  <a ref-type="fig" rid="RSTB20160455F2" href="#RSTB20160455F2">figure 2</a>).
+ </p>
+</sec>
