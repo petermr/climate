@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Genome sequence assembly and annotation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A blood sample from a male 
+   <span class="italic">Parus major</span> was obtained for whole-genome sequencing and stored in queens buffer. This reference bird originated from a captive population that was derived from wild-caught birds from the Netherlands four generations ago and has since been artificially selected for avian personality
+   <a ref-type="bibr" rid="b39" href="#b39">39</a>. In the great tit genome assembling, we relied on the creation of de Bruijn graphical structures, a directed graph that evolves from defined sequence length (kmer) progression (see 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Methods</a> for a detailed description of genome assembly and annotation). In brief, our genome assembling involved four principal steps that progressed from sequence quality revisions, to forming contigs from these sequence reads, to connecting contigs into scaffolds using paired-end sequence of large fragments (jumping libraries) and finally gap filling. In this study, the total input genome coverage of Illumina HiSeq sequences was ∼95 × (fragments, 3 and 8 kb spanning inserts) based on a genome size estimate of 1.2 Gb. The combined sequence reads were assembled using the ALLPATHS software
+   <a ref-type="bibr" rid="b40" href="#b40">40</a>. This draft assembly was referred to as Parus_major 1.0.1. This version has been gap filled and cleaned of contaminating contigs. The assembly is made up of a total of 2,066 scaffolds with an N50 scaffold length of over 7.7 Mb (N50 contig length was 133 kb). The total assembled contigs spans 1.0 Gb, and has an assembled coverage of 40 × using fragment reads aligned to the assembly. The final assembly (Pmajor1.04) has been deposited at DDBJ/EMBL/GenBank under the accession 
+   <span ext-link-type="DDBJ/EMBL/GenBank" xlink:href="JRXK00000000" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">JRXK00000000</span>. The version described in this paper is version JRXK01000000. The genome is also publicly available in 
+   <span ext-link-type="uri" xlink:href="https://genomes.bioinf.nioo.knaw.nl/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://genomes.bioinf.nioo.knaw.nl/</span>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Assembly chromosome builds</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Assembled scaffolds were assigned to specific chromosomes using two 
+   <span class="italic">Parus major</span> linkage maps
+   <a ref-type="bibr" rid="b19" href="#b19">19</a> constructed from different populations; one at Wytham Woods, Oxford (UK) and the other at de Hoge Veluwe (Netherlands), which is the population that the reference bird descended from. Flanking sequences of single-nucleotide polymorphisms (SNPs) positioned on the linkage map were aligned against the assembled scaffolds using BLAT. Scaffolds that contained multiple SNP markers were then oriented and positioned on the basis of the positions of the SNP markers on the linkage map. The order of the SNP markers on the scaffolds and the linkage map were in good agreement (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 6</a>). Regardless of whether the Netherlands or UK map was used, the Spearman rank correlation coefficient between the linkage map marker order and the assembly marker order was 0.99 or greater for nearly all the chromosomes. Exceptions were only on microchromosomes with just a few markers, for example, linkage group 25LG22. If anything, correlation coefficients were slightly higher when the UK map was used, despite the genome assembly being performed on a Netherlands bird. This indicates that the assembly is equally applicable to other great tit populations as it is to the ‘source' population. Most discrepancies between the orders on the sequence and linkage map were caused by the lower resolution of the linkage map involving SNPs that were less than 1 cM apart. Two scaffolds (22 and 28) appeared to be chimeric and were manually split between contigs Contig22.251-Contig22.250 and contigs Contig28.53-Contig28.51, respectively. Because of a lack of any genetic marker on Contig28.52, this contig was not assigned to a specific chromosome.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Small scaffolds that were assigned to a chromosome based on only a single marker were oriented based on the zebra finch-great tit comparative map, taking into account the orientation of the flanking scaffolds assigned to that chromosome. Next, we used MUMMER to align all unassigned scaffolds against the zebra finch genome
+   <a ref-type="bibr" rid="b20" href="#b20">20</a> and larger scaffolds that unambiguously mapped to a specific region of the zebra finch genome at a location between assigned scaffolds were assigned to that location in the genome. The orientation of these scaffolds was chosen in relation to the adjacent mapped scaffolds, thus minimizing the number of rearrangements. In total, 300 scaffolds could be assigned to a chromosomal location based on the linkage map
+   <a ref-type="bibr" rid="b19" href="#b19">19</a> totalling 975,330,736 bp and 124 scaffolds were assigned to a chromosomal location based on the alignment with the zebra finch genome, totalling 23,489,268 bp (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 1</a>). Although the final genome assembly therefore is not completely 
+   <span class="italic">de novo</span>, these contigs only represent 2.4% of the assembled sequence and 97.6% of the assembly represents a truly 
+   <span class="italic">de novo</span> genome assembly.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">RNA sequencing and assembly</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">RNA was extracted from eight tissues (bone marrow, homogenized half of the brain, breast filet, higher intestine, kidney, liver, lung and testis) from the reference bird and was then used to prepare tissue-specific tagged Illumina sequencing libraries. The tagged libraries were pooled and sequenced using five lanes on one flowcell of Illumina HiSeq 2000 (same run on the machine). This resulted in 100 bp paired-end unstranded RNA sequencing data. The number of reads per tissue ranged from 98 to 229 million with a total number of 1.25 billion paired-end reads (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 7</a>). The sequence reads were checked for quality with FastQC (
+   <span ext-link-type="uri" xlink:href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</span>) and low-quality sequences were trimmed with Fastq-Mcf
+   <a ref-type="bibr" rid="b41" href="#b41">41</a> resulting in a final number of 1,096,140,415 paired-end reads that were used for the annotation. The RNA sequencing data per individual tissue has been submitted to Genbank (GT_BoneMarrow SRS863935, GT_Brain SRS866013, GT_BreastFilet SRS86603, GT_HigherIntestine SRS866033, GT_Liver SRS866035, GT_Kidney SRS866036, GT_Lung SRS866044, GT_Testis SRS866048).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The combined 1 billion reads from all eight tissues were simultaneously 
+   <span class="italic">de novo</span> assembled using the Trinity software package
+   <a ref-type="bibr" rid="b42" href="#b42">42</a> v. r2013-02-25. Because of the high depth of the RNA sequencing data, we first normalized the data. Following the normalization, the Trinity assembly was subsequently run using the default settings. We obtained a total of 101,289 assembled transcripts ranging in size from 201 to 16,061 bp, with an average size of 1,335 bp. We also did a reference-based RNA assembling by using the normalized RNA sequencing data in Tophat version v2.0.10 (ref. 
+   <a ref-type="bibr" rid="b43" href="#b43">43</a>; Bowtie v2.1.0 (ref. 
+   <a ref-type="bibr" rid="b44" href="#b44">44</a>)).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Genome annotation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">For the genome annotation, both PASA v. 2-r20130605 (ref. 
+   <a ref-type="bibr" rid="b45" href="#b45">45</a>) and MAKER v. 2.31.5 (ref. 
+   <a ref-type="bibr" rid="b46" href="#b46">46</a>) pipelines were used (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 7</a>). First PASA (program to assemble spliced alignments) was used for the identification of spliced transcripts and the grouping of the identified transcripts belonging to the same gene. PASA was run using the assembled Trinity transcripts and the Cufflinks gtf output file from Tophat/Bowtie as input. Alignment within PASA was done using gmap. The PASA analysis resulted in a total of 74,229 different assembled transcripts with an average size of 1,564 bp. A comparison (using blast) with the annotated transcriptomes of chicken
+   <a ref-type="bibr" rid="b21" href="#b21">21</a>, zebra finch
+   <a ref-type="bibr" rid="b20" href="#b20">20</a>, flycatcher
+   <a ref-type="bibr" rid="b47" href="#b47">47</a> and ground tit
+   <a ref-type="bibr" rid="b48" href="#b48">48</a> (derived from Ensembl release 75 or NCBI refseq release 66) indicated that these transcripts represented 13,626 different genes in these other birds.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In the MAKER pipeline, the output of PASA was used as EST evidence. From the 
+   <span class="italic">ab initio</span> predictors, AUGUSTUS version 3.0.2 (ref. 
+   <a ref-type="bibr" rid="b49" href="#b49">49</a>) was applied by using the chicken gene model. The same RNA-seq 
+   <span class="italic">de novo</span> assembly as used in PASA was included in MAKER. In addition to 
+   <span class="italic">de novo</span> assembly, reference-based RNA-seq assembly was used. Last, protein evidence from zebra finch (version 3.2.4.75) and chicken (version 4.75) obtained from Ensembl version 75 was aligned to the great tit genome. By combining these two pipelines, we obtained 21,057 transcripts for 13,036 great tit genes. See additional information about functional annotation and repeat/RNA masking in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Information</a> and 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 8</a>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Resequencing and SNP calling</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We analysed 29 wild great tit individuals (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 2</a>) covering a wide range of the species distribution (
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1</a>); 10 individuals were from the Wytham population in Oxford (UK), and the remaining 19 birds were sampled from 15 European populations. Each bird was sequenced to ≈10 × coverage. Paired-end sequencing libraries of each sample were built with an insert size of 300 bp and sequencing was performed on a HiSeq 2000 platform with a read length of 100 bp. The raw reads were trimmed and filtered with Sickle (
+   <span ext-link-type="uri" xlink:href="https://github.com/najoshi/sickle" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/najoshi/sickle</span>) using default parameters and a length restriction of 75. We then used the Burrows–Wheeler Aligner
+   <a ref-type="bibr" rid="b50" href="#b50">50</a> to map the filtered raw reads onto the assembled great tit reference genome. Subsequently, we removed duplicates and conducted local realignments following the best practices of the GATK pipeline
+   <a ref-type="bibr" rid="b51" href="#b51">51</a>. We used ANGSD
+   <a ref-type="bibr" rid="b52" href="#b52">52</a> to call SNPs based on the genotype likelihoods estimated by the GATK model from the mapped reads
+   <a ref-type="bibr" rid="b51" href="#b51">51</a>; this approach has been shown to produce more accurate estimates of the Site Frequency Spectrum (SFS) than other widely used SNP-calling pipelines when sequencing coverage is low (&lt;10 × )
+   <a ref-type="bibr" rid="b53" href="#b53">53</a>, which is critical for our analysis because our average coverage is 10 × . However, for comparison, we also called SNPs using three additional approaches: (1) GATK using data from each individual separately (the ‘Single' approach); (2) GATK using data from all individuals simultaneously (the ‘Multi' approach); (3) Platypus, which calls SNPs directly from the Burrows–Wheeler Aligner alignments, independent of the GATK pipeline
+   <a ref-type="bibr" rid="b54" href="#b54">54</a>. We also tested the reliability of the SNP data, see details in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Information</a> and 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 9 and 10</a> and 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 9</a>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Population differentiation and demography</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We found very little differentiation among populations (
+   <span class="italic">F</span>
+   <sub>ST</sub>&lt;0.015; 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 3</a>). The most differentiated population pairs were Spain–UK (ES versus WW, UK; 
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1</a>) and France–Spain (FR–ES; 
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1</a>) with 
+   <span class="italic">F</span>
+   <sub>ST</sub>=0.012.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We analysed the demographic history with pairwise sequential Markovian coalescent analysis (PSMC
+   <a ref-type="bibr" rid="b23" href="#b23">23</a>). PSMC estimates rates of coalescent events across a single genome and uses these to infer 
+   <span class="italic">N</span>
+   <sub>e</sub> (the effective population size) in the past
+   <a ref-type="bibr" rid="b23" href="#b23">23</a>. The model relies significantly on confidently called polymorphic sites and requires that both alleles are called. Therefore we conducted this analysis with variants called on the high coverage reference genome sequence. We set the mutation rate to 2.0 × 10
+   <span class="sup">−9</span> per year per site and the generation time to 2 years.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Genome-wide diversity and Tajima's D</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We obtained genome-wide sliding window estimates (step size 10 kb, window size 50 kb) of Watterson's Θ (
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>) and Tajima's 
+   <span class="italic">D</span> (
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>) along each chromosome based on the SNP calls from ANGSD. For most macrochromosomes, diversity is increased towards the chromosome ends, and there are remarkable local drops of diversity on chromosomes 3, 6 and Z (
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>; more details about low diversity in chromosome Z in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Information</a> and 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 10</a>). By calculating Watterson's Θ for synonymous sites in protein-coding genes we found a clear negative correlation between chromosome length and diversity levels (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 8</a>); we observed the same pattern when diversity was estimated using all sites (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 8</a>).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Selective sweep detection</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We scanned the genome for target regions of positive selection using Sweepfinder
+   <a ref-type="bibr" rid="b55" href="#b55">55</a> which uses local deviations of the site frequency spectrum (SFS) compared with a standard neutral model or chromosome/genome-wide reference to infer the action of positive selection. We used SNP calls from the ANGSD pipeline to construct SFS. ANGSD assumes that each variable position is biallelic and determines allele frequencies based on the genotype likelihoods
+   <a ref-type="bibr" rid="b56" href="#b56">56</a>. Whole-genome alignments constructed with MAUVE
+   <a ref-type="bibr" rid="b57" href="#b57">57</a> for zebra finch
+   <a ref-type="bibr" rid="b20" href="#b20">20</a>, flycatcher
+   <a ref-type="bibr" rid="b47" href="#b47">47</a>, ground tit
+   <a ref-type="bibr" rid="b48" href="#b48">48</a> and chicken
+   <a ref-type="bibr" rid="b21" href="#b21">21</a> were used to infer the ancestral state based on maximum parsimony. Sites for which the ancestral state could not be reconstructed with confidence were included in the analysis as folded sites (unpolarized). The chromosome-wide SFS was used as reference for each chromosome as recommended by Sweepfinder, which helps to reduce false positives caused by past demographic changes. We used a dense grid size of 100 bp and extracted sweep targets that had a composite likelihood score (CLR) within the top 1%. Neighbouring sweep targets were merged to sweep regions, with the total CLR score of a sweep region being the sum of the CLR score of each sweep target. The top 3% of genes that overlapped with or were near (within 5 kB flanking the sweep region) sweep regions larger than 300 bp were extracted (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 4</a>). Targets for positive selection included the low diversity region of chromosome 3, 6 and Z. Further details of the Sweepfinder pipeline can be found in the 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Materials and Methods</a>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Multiple alignment construction for substitution rate analyses</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Natural selection affects the composition of genomes and we were interested in estimating gene-specific rates of molecular evolution (dN/dS) and finding evidence for the action of positive selection in protein coding genes. Since alignment quality is crucial for reliably conducting tests of positive selection using substitution rate analyses, we chose a very conservative approach. We used homologous genes from zebra finch and chicken, the two best annotated bird genomes to date. We only analysed genes with a homologue in both, and used MUSCLE
+   <a ref-type="bibr" rid="b58" href="#b58">58</a> along with ZORRO
+   <a ref-type="bibr" rid="b59" href="#b59">59</a> to exclude positions of low alignment certainty. To obtain the corresponding multiple DNA codon alignments, protein alignments along with the unaligned DNA sequences were prepared with PAL2NAL
+   <a ref-type="bibr" rid="b60" href="#b60">60</a>. Altogether, we constructed ≈11,107 triplet alignments. Substitution rates were calculated using PAML
+   <a ref-type="bibr" rid="b61" href="#b61">61</a> to obtain the nonsynonymous to synonymous substitution rate ratio (dN/dS=
+   <span class="italic">ω</span>). 
+   <span class="italic">ω</span> values &lt;1, =1 and &gt;1 indicate purifying selection, neutral evolution and diversifying (positive) selection, respectively. Rates of molecular evolution (dN/dS) for each gene were obtained from the one-ratio model M0 from PAML that assumes a constant 
+   <span class="italic">ω</span> for the whole gene phylogeny. In addition, a site test was used to detect positive selection. Specifically, we compared the likelihoods calculated using model M8, which assumes a proportion of sites to evolve under positive selection, and model M7, which does not assume a site class with 
+   <span class="italic">ω</span> exceeding one. Positive selection was inferred when the model M7 and M8 were significantly different as assessed by a likelihood-ratio test that assumes that 2ΔlnL (twice the log likelihood difference) is 
+   <span class="italic">χ</span>
+   <span class="sup">2</span> distributed with two degrees of freedom. The 
+   <span class="italic">P</span> values were adjusted for multiple testing (Benjamini and Hochberg) with a false discovery rate of 0.2; 
+   <span class="italic">χ</span>
+   <span class="sup">2</span> test results for an enrichment of positively selected genes were qualitatively similar for FDRs=0.1, 0.3, 0.4 and 0.5 (
+   <span class="italic">P</span>=2.17 × 10
+   <span class="sup">−5</span>, 3.97 × 10
+   <span class="sup">−3</span>, 2.58 × 10
+   <span class="sup">−3</span> and 2.17 × 10
+   <span class="sup">−3</span>, respectively).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">GO enrichment analyses</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Human orthologues were obtained for the great tit genes by using a combination of Ensembl and Uniprot databases. In the sweep areas, orthologues were found for 460 genes. Functional relatedness of GO terms was done using the Cytoscape plugin ClueGo 2.1.4 (ref. 
+   <a ref-type="bibr" rid="b62" href="#b62">62</a>). ClueGo constructs and compares networks of functionally related GO terms with kappa statistics. A two-sided hypergeometric test (enrichment/depletion) was applied with GO term fusion, network specificity was set to ‘medium' and false discovery correction was carried out using the Bonferroni step-down method. We used both human (08.10.2015) and chicken gene ontologies (08.10.2015) for comparison. With human gene ontologies, we detected 13 functional groups of GO terms across all sweep areas (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 5a</a>). These groups were largely involved in functions concerning dendrite, cytoskeleton organization, protein oligomerization, synaptic transmission, regulation of phosphatase activity, synaptic membrane and cognition. We also did a GO enrichment analysis for the positively selected genes, as defined by the PAML-based analysis, in the same way as for the sweep genes, and obtained 12 functional GO groups (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 5b</a>). When using the chicken orthologues for both sweep and positively selected genes, the results were comparable but with lower significance levels (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 5c,d</a>) because the chicken genes were not as well GO annotated as the human ones.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To further confirm our GO enrichment results, we randomly selected 50 sets of genes from outside the sweep area, each containing ∼460 genes (the same number as in our selective sweep set), and analysed them using the same Cluego settings. We found that the GO term groups significantly enriched in our selective sweep set appeared no more than three times except for phosphatidylinositol-mediated signalling GO group which appeared seven times. This additional analysis further supports the robustness of our results.</p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Test of accelerated evolution in great tit 
+   <span class="italic">EGR1</span>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used BLAST to obtain orthologous sequences of the 
+   <span class="italic">EGR1</span> gene from 45 additional bird species
+   <a ref-type="bibr" rid="b37" href="#b37">37</a>
+   <a ref-type="bibr" rid="b38" href="#b38">38</a> downloaded from Ensembl version 75 or from Gigascience (
+   <span ext-link-type="uri" xlink:href="http://gigadb.org/dataset/101000" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://gigadb.org/dataset/101000</span>, 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 2</a>, detailed species list provided in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Data 6</a>) to test whether there was additional evidence for the action of positive selection during the evolution of 
+   <span class="italic">EGR1</span> in birds. Pairwise dN/dS rates revealed that there is a substantial increase in dN/dS between great tit and ground tit relative to other pairwise values (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 2</a>, upper panel). We also tested whether the increased fixations are unique to the captive reference bird by using variable positions from the 29 re-sequenced birds, the reference bird and the ground tit genome and found no evidence for this (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 2</a> lower panel).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Brain gene expression</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To compare expression levels and methylation in the brain, 200,793,186 trimmed paired-end reads from the brain were aligned against the assembled genome using Tophat version v2.0.10 (ref. 
+   <a ref-type="bibr" rid="b43" href="#b43">43</a>; Bowtie v2.1.0 (ref. 
+   <a ref-type="bibr" rid="b44" href="#b44">44</a>)) with the same settings as described above, except that multiple hits were prefiltered against the genome (-M option) and the reads were first aligned against the final annotation (-G option). The brain Tophat alignment was analysed with Cufflinks v2.2.0 using the same settings as above, except that the annotation was also included (-g option). Expression levels of brain genes were extracted from the Cufflinks output.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methylation analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Blood and brain DNA libraries were constructed according to the Epitect whole-genome bisulfite sequencing workflow (Illumina) with 18 PCR cycles. Whole-genome sequencing data were generated using the Illumina HiSeq 2,500 platform at Business Unit Bioscience, Wageningen UR. The number of paired-end reads (101 bp) were 358M and 292M for the brain and the blood, respectively. Raw sequencing reads were trimmed for quality (⩾20) and adaptor sequence using trim_galore v.0.1.4 (
+   <span ext-link-type="uri" xlink:href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/</span>). The methylation data has been submitted to NCBI with accession numbers SRR2070790 and SRR2070791 for the brain and the blood, respectively. Trimmed sequences were aligned to the reference genome using BSseeker2 v2.0.6 (ref. 
+   <a ref-type="bibr" rid="b63" href="#b63">63</a>) with Bowtie2 v.2.1.0 (ref. 
+   <a ref-type="bibr" rid="b44" href="#b44">44</a>) in the local alignment mode. A total, 97.63% and 99.93% of the genome was covered to an average depth of 31.88 × and 33.04 × in brain and blood, respectively. Methylation levels for each site were determined using the BSseeker2 methylation call script. All the analyses were done using sites covered by a minimum of 10 reads in both the samples. Only genes found to be 1:1:1 orthologues with chicken and zebra finch were used for methylation analysis. Gene bodies (annotated gene boundaries excluding the 5′ 5% of genes) and TSS (300 bp upstream to 50 bp downstream of the annotated starting position of each gene) for which we had information from at least 50% of the potential methylation sites were used in the dN/dS and expression correlation analysis. Average methylation levels for TSS and gene bodies were calculated for each individual gene. The upper (highly methylated) and lower (lowly methylated) quartiles were compared for differences in their evolutionary rates (dN/dS) using a Mann–Whitney 
+   <span class="italic">U</span>-test. Correlations between the average methylation level of a given region (TSS or gene body) per gene with expression were performed using Spearman's rank correlation. A sliding window approach was used to infer differences in methylation levels between sweep and non-sweep gene regions. Non-sweep genes located on scaffolds were not included in the analysis, as these regions were not tested for sweeps. For this, genes were divided into different regions: the gene body (described above), 10 kb upstream and 10 kb downstream of the gene body and the TSS region (described above). Each gene body was subdivided into 40 bins, with the length of each bin therefore depending on the length of the gene. We calculated the mean methylation levels of these 40 bins with an overlap between neighbouring bins of 250 bp. Upstream and downstream regions were divided into bins of exactly 250 bp with an overlap of 125 bp between consecutive bins.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To compare TSS methylation between sweep and non-sweep genes, we conducted a 
+   <span class="italic">t</span>-test with equal variance assumed. Only TSS regions with a minimum of 10 covered sites were used for comparative analysis. To compare methylation levels between sweep and non-sweep genes for other gene regions, we conducted LMM analyses with methylation level as the dependent variable, sweep (yes or no) as a fixed factor and bin as a random factor. A likelihood-ratio test was conducted comparing the model with and without sweep as a fixed factor. All criteria were met for conducting parametric analyses.
+  </p>
+ </sec>
+</sec>

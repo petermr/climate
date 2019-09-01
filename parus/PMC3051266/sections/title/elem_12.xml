@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s4a" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Study System and Data Collection</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The data were collected in the Hoge Veluwe National Park, the Netherlands (52°05′ N, 05°50′ E), during the period 1973 to 2007. Nest boxes were visited at least once every week during the breeding season (April–June). The laying date of the first egg of a female's clutch (laying date, LD) was calculated from the number of eggs found during the weekly checks, assuming that one egg was laid per day. Both parents were caught and individually marked on the nest using a spring trap when the young were 7–10 d old. Laying dates are presented as the number of days after March 31 (day 1 =  April 1, day 31 =  May 1). We only used information on the first clutch, defined as any clutch started within 30 d of the first laid egg in any given year. Replacement and second clutches (which currently compromise &lt;5% of breeding attempts, 21]) were thus excluded from the analysis. In total, therefore, we had information about 3,852 breeding records from 2,394 females. More details about the study population can be found in van Balen 
+   <a rid="pbio.1000585-Visser3" ref-type="bibr" href="#pbio.1000585-Visser3">[37]</a>.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Temperature data were obtained from the De Bilt weather station of the Royal Dutch Meteorological Institute (
+   <span ext-link-type="uri" xlink:href="http://www.knmi.nl/klimatologie/daggegevens" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.knmi.nl/klimatologie/daggegevens</span>) and used to calculate the daily average temperature over the period March 13–April 20, which is the period that best predicts the onset of laying using a sliding window analysis (see 
+   <a rid="pbio.1000585-Husby1" ref-type="bibr" href="#pbio.1000585-Husby1">[18]</a> for more detail).
+  </p>
+ </sec>
+ <sec id="s4b" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Selection Analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To test for a relationship between spring temperature and the strength of selection on laying date, we took two approaches. First, we used a generalized linear mixed effects model (GLMM) with a Poisson error link fitted in ASREML-R 
+   <a rid="pbio.1000585-vanBalen1" ref-type="bibr" href="#pbio.1000585-vanBalen1">[38]</a> to model the relationship between number of recruits a female produced for the given year (as the measure of fitness) and her laying date that year, and to test its dependence on spring temperature (as measured by the interaction term between laying date and spring temperature). Individual identity and year were included as random effects to account for repeated measures on the same individuals and on years. Second, we estimated the annual strength of selection using the number of recruits produced per year divided by the mean number of recruits produced in the given year as a measure of relative fitness (ω) for each individual. Selection was then measured as the selection gradients (β) defined as the covariance between relative fitness and observed laying date divided by the variance in observed laying date, i.e. β  =  cov(ω, LD)/V
+   <sub>PLD</sub>. Using this measure of selection allows us to predict the response to selection using the Lande equation: R  =  V
+   <sub>A</sub>*β 
+   <a rid="pbio.1000585-Lande1" ref-type="bibr" href="#pbio.1000585-Lande1">[13]</a>. Predicting the response to selection can also be done using the more familiar Breeder's equation, R  =  h
+   <span class="sup">2</span>*S 
+   <a rid="pbio.1000585-Falconer1" ref-type="bibr" href="#pbio.1000585-Falconer1">[16]</a>, which uses an alternative measure of selection, the selection differentials defined as the covariance between a female's relative fitness (ω) and her observed laying date (LD), i.e. S  =  cov(ω, LD) 
+   <a rid="pbio.1000585-Lande2" ref-type="bibr" href="#pbio.1000585-Lande2">[15]</a>. Because a previous study examining the association between strength of selection and expression of genetic variance used S and h
+   <span class="sup">2</span> as parameters 
+   <a rid="pbio.1000585-Wilson1" ref-type="bibr" href="#pbio.1000585-Wilson1">[4]</a>, we also present our results using these parameters for comparison. We note, however, that using selection gradients may represent a better measure of selection when the phenotypic variance in a trait changes 
+   <a rid="pbio.1000585-Hereford1" ref-type="bibr" href="#pbio.1000585-Hereford1">[14]</a>, which it does here. We then regressed the annual selection gradients (and differentials) against the environmental values using a least-squares regression (with 1/se
+   <span class="sup">2</span> as weights when considering the selection gradients) in R 2.8.0 
+   <a rid="pbio.1000585-Gilmour1" ref-type="bibr" href="#pbio.1000585-Gilmour1">[39]</a>.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Finally, to allow comparison with other studies 
+   <a rid="pbio.1000585-RDevelopmentCoreTeam1" ref-type="bibr" href="#pbio.1000585-RDevelopmentCoreTeam1">[40]</a>, we repeated all selection analyses using variance-standardized laying dates (i.e. standardizing laying date values to have zero mean and unit variance within each year). This did not change our conclusions and we report the results from these analyses in the Supporting Information section (
+   <a ref-type="supplementary-material" rid="pbio.1000585.s003" href="#pbio.1000585.s003">Text S1</a>, 
+   <a ref-type="supplementary-material" rid="pbio.1000585.s001" href="#pbio.1000585.s001">Table S1</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Yearly spring temperature values, standardized spring temperature values, sample size, mean laying dates, selection gradients (β), selection differentials (S), standardized selection differentials, estimated additive genetic variance, and heritability estimates along with annual predicted responses to selection (V
+   <sub>A</sub>*β) are all reported in 
+   <a ref-type="supplementary-material" rid="pbio.1000585.s002" href="#pbio.1000585.s002">Table S2</a>.
+  </p>
+ </sec>
+ <sec id="s4c" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pedigree Structure</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Quantitative genetic analyses require knowledge about the relationships among individuals within a population. Here, a pedigree was constructed where all ringed females known to have bred were assigned a mother and father as determined from observational data. In cases where brood manipulation experiments had been carried out and chicks had been moved between nests, we assigned the genetic parent rather than the social parent. If only one parent was known, we “dummy coded” the missing parent to preserve sibship information (note that we did not assign a phenotype to this parent). The extra-pair paternity (EPP) rate is unknown in this population, but is generally found to be low (3%–9%) in other populations of great tits 
+   <a rid="pbio.1000585-Kingsolver1" ref-type="bibr" href="#pbio.1000585-Kingsolver1">[41]</a>,
+   <a rid="pbio.1000585-Lubjuhn1" ref-type="bibr" href="#pbio.1000585-Lubjuhn1">[42]</a> and as extra pair paternity rates of less than 20% have been shown to have a negligible impact on heritability estimates 
+   <a rid="pbio.1000585-Verboven1" ref-type="bibr" href="#pbio.1000585-Verboven1">[43]</a> using a social pedigree is unlikely to be problematic.
+  </p>
+ </sec>
+ <sec id="s4d" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Quantitative Genetic Analyses</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Phenotypic trait variances can be separated into genetic and environmental causes of variation using an “animal model” 
+   <a rid="pbio.1000585-Charmantier3" ref-type="bibr" href="#pbio.1000585-Charmantier3">[44]</a>–
+   <a rid="pbio.1000585-Kruuk3" ref-type="bibr" href="#pbio.1000585-Kruuk3">[46]</a>. By maximizing the information available in an extensive multi-generational pedigree, the “animal model” minimizes upward inflation of estimates of additive genetic variance (V
+   <sub>A</sub>) due to shared environmental effects between relatives; this approach has been shown in simulation studies to perform well in partitioning environmental and genetic components of variance 
+   <a rid="pbio.1000585-Kruuk1" ref-type="bibr" href="#pbio.1000585-Kruuk1">[29]</a>. There are several additional reasons to believe that the genetic and environmental components have been well separated here. First, a previous study found no indication that common environment effects in the form of maternal effects are important for laying date in this population (V
+   <sub>M</sub>/V
+   <sub>P</sub>  = 0.0023 
+   <a rid="pbio.1000585-Henderson1" ref-type="bibr" href="#pbio.1000585-Henderson1">[47]</a>). Second, although common environmental effects frequently play a major role in inflating covariances between relatives in nestling traits 
+   <a rid="pbio.1000585-Postma1" ref-type="bibr" href="#pbio.1000585-Postma1">[48]</a>, this is rarely the case for traits that are only expressed as adults, like laying date which we study here. Third, we explicitly take common environmental effects into account by fitting a permanent environmental effect 
+   <a rid="pbio.1000585-Lynch1" ref-type="bibr" href="#pbio.1000585-Lynch1">[45]</a>. In summary, therefore, we believe that our estimates of V
+   <sub>A</sub> and h
+   <span class="sup">2</span> are accurate and unbiased by inflation of common environment effects.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Rather than only estimating the amount of genetic and environmental variance in laying date, we are interested here in whether the variance components changed with environmental conditions, and we therefore used a “random regression animal model” 
+   <a rid="pbio.1000585-Meril3" ref-type="bibr" href="#pbio.1000585-Meril3">[49]</a>. Random regression models use covariance functions 
+   <a rid="pbio.1000585-Meyer1" ref-type="bibr" href="#pbio.1000585-Meyer1">[50]</a> to explicitly fit variance components as a function of the environment and hence allow a detailed examination of how environmental heterogeneity—in this case, spring temperature—influences genetic architecture. Thus our model was:
+   <div class="disp-formula">
+    <div xlink:href="pbio.1000585.e001.jpg" mimetype="image" position="float" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <span class="label">(1)</span>
+   </div>where 
+   <span class="bold">LD</span>
+   <span class="italic">
+    <sub>i</sub>
+   </span> is the vector of the individual (
+   <span class="italic">i</span>) laying dates and 
+   <span class="bold">X, Z
+    <sub>1</sub>, Z
+    <sub>2</sub>
+   </span>, and 
+   <span class="bold">Z
+    <sub>3</sub>
+   </span> are the design and incidence matrices relating to the fixed and random effects of the additive genetic (
+   <span class="bold">a</span>
+   <sub>i</sub>), permanent environment (
+   <span class="bold">pe</span>
+   <sub>i</sub>), and year (
+   <span class="bold">yr</span>
+   <sub>i</sub>) observations, respectively. T is the spring temperature each year standardized to a (−1, 1) interval (
+   <a ref-type="supplementary-material" rid="pbio.1000585.s002" href="#pbio.1000585.s002">Table S2</a>). Fixed effects (
+   <span class="bold">b</span>
+   <span class="bold">
+    <span class="italic">
+     <sub>i</sub>
+    </span>
+   </span> vector) included age as a two-level factor (first year breeder or older), to correct for the fact that laying date is generally later in young birds compared to older birds in great tits 
+   <a rid="pbio.1000585-Kirkpatrick1" ref-type="bibr" href="#pbio.1000585-Kirkpatrick1">[51]</a>, and spring temperature to account for the population-level response in mean trait value. Year (
+   <span class="bold">yr</span> vector) was included as a random effect in order to model variation between years not explained by spring temperature and a permanent environment effect (
+   <span class="bold">pe</span>
+   <span class="italic">
+    <sub>i</sub>
+   </span> vector) was fitted because of the repeated sampling of the same individuals; this also reduces inflation of estimates of the additive genetic variance due to environmental factors 
+   <a rid="pbio.1000585-Kruuk1" ref-type="bibr" href="#pbio.1000585-Kruuk1">[29]</a>. The error term (
+   <span class="bold">e</span> vector) was partitioned into three decade–specific (1973–1984, 1985–1996, 1997–2007) groups, thus allowing residual errors to vary between decades. ϕ(
+   <span class="bold">a</span>
+   <sub>i</sub>,n
+   <sub>1</sub>,T) is the random regression function of order n
+   <sub>1</sub> of the additive genetic effect of individual 
+   <span class="italic">i</span>, which varies as a function of the temperature T in a given year, and similarly, ϕ(
+   <span class="bold">pe</span>
+   <span class="italic">
+    <sub>i</sub>
+   </span>,n
+   <sub>2</sub>,T), is the random regression function of order n
+   <sub>2</sub> of the permanent environment effect varying as a function of T.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Because we were only interested in whether the two variance components (and particularly V
+   <sub>A</sub>) changed with the environment, we only fitted two models. The first model was a zero order function (n
+   <sub>1</sub> = n
+   <sub>2</sub> = 0) for both V
+   <sub>A</sub> and V
+   <sub>PE</sub> in which variance components are constant across the environment. In the second model, we fitted a first order polynomial (n
+   <sub>1</sub> = n
+   <sub>2</sub> = 1) for both V
+   <sub>A</sub> and V
+   <sub>PE</sub>, thus allowing both additive genetic effects and permanent environment effects, and hence their corresponding variance components, to vary across the environment T. These two models were then compared using a likelihood-ratio test by calculating twice the difference in log likelihood, which is chi-squared distributed with degrees of freedom equal to the difference in degrees of freedom between the two models 
+   <a rid="pbio.1000585-Wilkin1" ref-type="bibr" href="#pbio.1000585-Wilkin1">[52]</a>, which is here equal to 4 (variance in slopes and covariance between elevation and slope for both V
+   <sub>A</sub> and V
+   <sub>PE</sub>). As the model where both variance components were allowed to vary was significantly better than a model in which they were assumed to be constant (see 
+   <a ref-type="sec" rid="s2" href="#s2">Results</a>) we used the estimates from the first order polynomial model to generate predictions of annual values of V
+   <sub>A</sub> (and V
+   <sub>PE</sub>) across varying temperatures. The environment-specific additive genetic covariance matrix, 
+   <span class="bold">G</span>, was then obtained as 
+   <span class="bold">G</span>  =  
+   <span class="bold">zQz</span>
+   <span class="sup">T</span>, where 
+   <span class="bold">z</span> is the vector of orthogonal polynomials evaluated at standardized temperature values and 
+   <span class="bold">Q</span> is the additive genetic variance-covariance matrix of the random regression parameters. Approximate standard errors for the (co)variance components of 
+   <span class="bold">G</span> as a function of the temperature values were calculated according to Fischer et al. 
+   <a rid="pbio.1000585-Gienapp1" ref-type="bibr" href="#pbio.1000585-Gienapp1">[22]</a>, with confidence intervals defined as twice the standard errors. Finally, environment-specific heritability estimates were calculated as the environment-specific V
+   <sub>A</sub> estimate divided by the environment-specific V
+   <sub>P</sub> estimate from the model in which both V
+   <sub>A</sub> and V
+   <sub>PE</sub> varied with the environment. Because it has been found that random regression models can be sensitive to “edge effects” 
+   <a rid="pbio.1000585-Gienapp1" ref-type="bibr" href="#pbio.1000585-Gienapp1">[22]</a>,
+   <a rid="pbio.1000585-Pinheiro1" ref-type="bibr" href="#pbio.1000585-Pinheiro1">[53]</a>, we repeated our analyses where we look at the association between strength of selection and expression of genetic variance to be conservative. For more information about the use of random regression animal models in natural populations, see 
+   <a rid="pbio.1000585-Husby1" ref-type="bibr" href="#pbio.1000585-Husby1">[18]</a> and 
+   <a rid="pbio.1000585-Wilson2" ref-type="bibr" href="#pbio.1000585-Wilson2">[54]</a>. All animal models were fitted using REML methods implemented in ASReml v 2.0 
+   <a rid="pbio.1000585-vanBalen1" ref-type="bibr" href="#pbio.1000585-vanBalen1">[38]</a>.
+  </p>
+ </sec>
+ <sec id="s4e" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Association between Strength of Selection and Expression of Genetic Variance</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">In order to test for an association between the strength of selection operating on laying date and the expression of additive genetic variance in laying date, we used environment-specific (and thus annual) V
+   <sub>A</sub> and h
+   <span class="sup">2</span> estimates generated from the random regression animal model and regressed the annual selection gradients on our annual estimates of V
+   <sub>A</sub>; we then repeated the regression for annual selection differentials against h
+   <span class="sup">2</span>. Regressions using selection gradients were weighted by the inverse of the square of the standard error.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Because some individuals bred in multiple environments (i.e. years), estimates of selection will not be entirely independent, potentially violating some of the assumptions of least squares regression analyses. Although this is an inherent problem to all longitudinal studies, we assessed the potential for it to bias our conclusions by repeating our selection analyses using only a single record per individual (its first breeding attempt). Because this did not change the direction or significance of our analyses (regression of β on V
+   <sub>A</sub> using 1/se
+   <span class="sup">2</span> as weights: b = −0.009, se = 0.005, t
+   <sub>33</sub> = −1.70, 
+   <span class="italic">p</span> = 0.099; regression of S on h
+   <span class="sup">2</span>: b = −14.54, se = 5.08, t
+   <sub>33</sub> = −2.86, 
+   <span class="italic">p</span> = 0.007), we conclude that the potential violation of the non-independence criteria caused by multiple breeding events from the same individuals is not a significant issue here.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Although annual estimates of V
+   <sub>A</sub> and h
+   <span class="sup">2</span> are derived from the random regression model, note that in testing for a relationship between them and selection, we use them only as predictor variables in a regression, for which there need not be an assumption of independence of data points.
+  </p>
+ </sec>
+</sec>

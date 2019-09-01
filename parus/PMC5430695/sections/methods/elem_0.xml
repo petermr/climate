@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" sec-type="materials|methods" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Range dynamics</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The study site is the western Maghreb which includes Tunisia, Algeria and Morocco. Because we were interested in the changes of the range distribution of European goldfinch during the past 26 years, we compiled data of the species occurrence in western Maghreb within 237 grids (25 × 25 km²) from poachers and field visits, and we built a detection/non-detection dataset which included observations before (1990–1991) and after the intensive poaching (2015–2016) in each site (grid) (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). The selection of the grids was based on our social network that we could establish for this project. The European goldfinch is easy to identify in the wild because of its unique and distinguishable morphological features with respect to other local passerines. Data collected for the period 1990–1991 were based on poachers recalling having observed goldfinches that they personally poached from the wild. We are confident that data obtained from people are accurate since we used the following criteria to increase the quality of detection data: (1) we selected those who used to own the bird and poach it in the wild (expert poachers), and thus the probability of false positive detection is very low; (2) observations/trapping were made when weather conditions were good, so there is no detection-bias related to weather; (3) we included only observers and poachers who made at least 10 visits/year/grid and stayed at least at least 2 hours in the field; (4) poachers were asked whether they observed the species and not whether they trapped it because in many cases the bird is observed but not trapped. To control for consistency in sampling efforts for the two study periods (1990–1991 and 2015–2016), we maintained a balanced sampling effort for both periods by limiting the number of observers (or poachers) to one observer/year/grid.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Since our purpose is to reveal changes of species occupancy resulting from 26 years of intensive poaching, we considered period (1990–1991 or 2015–2016) as a primary sampling occasion and year as a secondary sampling occasion. We used dynamic occupancy models using the R package unmarked
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span> in R 3.2.1
+   <span class="sup">
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span> to estimate the initial occupancy, extinction, colonization, and detection probabilities. We tested for potential relationships of these parameters with covariates namely vegetation density, elevation and longitude estimated with raster map analysis and interpolated digital elevation model using Global Mapper (version 15.0, 
+   <span ext-link-type="uri" xlink:href="http://www.bluemarblegeo.com/products/global-mapper.php" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.bluemarblegeo.com/products/global-mapper.php</span>) and MapInfo Professional software (version 15.0, 
+   <span ext-link-type="uri" xlink:href="http://www.pitneybowes.com/us/location-intelligence/geographic-information-systems/mapinfo-pro.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.pitneybowes.com/us/location-intelligence/geographic-information-systems/mapinfo-pro.html</span>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We conducted model selection using Akaike's information criterion (AIC) on models with increasing complexity in terms of covariates. Both linear and quadratic effects for covariates were fitted. We first fitted the model with constant parameters and compared it with a model where detection was time-dependent. After selecting which model was better, we added to detection probability (
+   <span class="italic">p</span>) the linear and quadratic effects of vegetation cover and elevation. Then we repeated the operation for initial occupancy, extinction and colonization probabilities by increasing covariate complexity and performing AIC-based model selection
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span>. The goodness of fit of the overall best model was assessed with a parametric bootstrapping approach
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span> based on a chi-square test statistic for the AIC-best model (P-value = 0.20) which indicated that there was no lack of fit and thus the model can be used for predictions. To obtain predictions (with statistical uncertainty) for initial occupancy, extinction and colonization and detection probabilities, we used the 
+   <span class="italic">predict</span> function in 
+   <span class="italic">unmarked</span>. Parametric bootstrap (replicates = 1000) was used to calculate confidence intervals for the initial occupancy, extinction and colonization probabilities using the 
+   <span class="italic">parboot</span> function in 
+   <span class="italic">unmarked</span>. We produced maps of predicted occupancy before (1990–1991) and after (2015–2016) the industrial poaching of the species with MapInfo Professional software (version 15.0, 
+   <span ext-link-type="uri" xlink:href="http://www.pitneybowes.com/us/location-intelligence/geographic-information-systems/mapinfo-pro.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.pitneybowes.com/us/location-intelligence/geographic-information-systems/mapinfo-pro.html</span>) based on our best model.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Temporal pattern of prices</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To investigate the changes in the economic value of the European goldfinch in the region, long-term traders in eight flea markets from different Algerian provinces (Oran, Algiers, Blida, Annaba, Guelma, Jijel, Skikda, and Souk Ahras) were asked for the yearly mean price of adults from 1990 to 2015. As the economy and purchasing power changed considerably in Algeria during the past two decades, we also calculated the price corrected for the per capita monthly income (PCI) by dividing the price of the goldfinch of a given year by the monthly per capita income of the same year
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span>. The currency was converted to US dollars
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span>. The temporal pattern of the price and the PCI were fitted with exponential regression models.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Domestic population estimation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To estimate the number of European goldfinches currently in captivity in Algeria, we selected 15 provinces well-distributed across the Northern part of the country (five in the east, five in the center and five in the west, Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>; Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>). In each province, we selected typically 3–5 districts where 3–7 buildings were sampled (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>). Each building has a number of apartments and we assumed that each apartment has one family which is the case in Algeria and western Maghreb. For instance, a typical building has 10 to 12 apartments which corresponds to 10 to 12 families. Overall, 83 (982 families), 52 (949 families) and 51 (790 families) buildings were sampled from the East, center and West, respectively. Given our sample size and geographic coverage, we assume that our sampling do not lead to biased estimations of the average number of goldfinches owned per family and the number of owners that carry out captive breeding. We calculated the total number of goldfinches domesticated in Algeria by multiplying the average number of goldfinches owned per family by the estimated number of families in the country (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>). Because the cultural importance and popularity of the European goldfinch is similar in the three countries of western Maghreb, we also estimated the total number of individuals held in captivity for the entire region using Algerian estimates.
+  </p>
+ </sec>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">International trading</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Given that all or most Tunisian and Algerian populations became extinct or very rare during the last decade and that Moroccan populations are still flourishing, poachers have illegally transported the goldfinch from Morocco to Algeria and Tunisia for trading during the last decade. To reveal the amplitude of the trading network between the three countries, we collected data of the number of seizures, the destination of birds, and the number of goldfinches that the conservation authority seized between January 2008 and August 2016 in Algeria from the DGF (Direction générale des forêts) and gendarmerie. The number of goldfinches and occasions of interceptions were mapped with MapInfo Professional software (version 15.0, 
+   <span ext-link-type="uri" xlink:href="http://www.pitneybowes.com/us/location-intelligence/geographic-information-systems/mapinfo-pro.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.pitneybowes.com/us/location-intelligence/geographic-information-systems/mapinfo-pro.html</span>). We calculated the total number of individuals seized and the average number of individuals per seizure during the nine years (2008–2016).
+  </p>
+ </sec>
+ <sec id="Sec14" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bycatch</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To obtain a list of species captured as by-catch with mist nets, we conducted a survey on 12 poachers from three Algerian provinces (Guelma, Skikda, and Annaba). We obtained data only for the period 2010–2012. We were not able to gather quantitative data regarding the number of individuals captured for each species since poachers were careful﻿ and not willing to fully cooperate on an illegal act punishable by law. To investigate the potential relationship between the changes in the number of cage-bird species sold in the market and mist net trapping, each week we recorded cage-bird species that are sold in the weekly flea markets of the same three provinces at least 20 times every year from 2008 to 2015 (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>). We excluded all exotic species and included only species that are locally resident or migratory. Then, we estimated the temporal pattern of the number of cage-bird species that were sold in the market during 2008–2015 with a generalized Poisson model using year as a fixed effect.
+  </p>
+ </sec>
+</sec>

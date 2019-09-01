@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec007" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistics</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We first tested for assortative mating according to body mass or body condition, running Pearson’s correlation tests between male and female body mass and body condition within pairs. We then calculated between-year repeatabilities for female and male body mass and conditions at egg laying for individual females and males that were included in the dataset at least in two years (N = 241 records of 76 females and 222 records of 78 males). As being paired with the same, or a different partner may affect the reproductive investment [
+  <a rid="pone.0128776.ref032" ref-type="bibr" href="#pone.0128776.ref032">32</a>, 
+  <a rid="pone.0128776.ref065" ref-type="bibr" href="#pone.0128776.ref065">65</a>], we calculated repeatabilities for A-egg mass and B-egg mass separately for individuals that remained with the same partner for at least two years (N = 185 records of 58 females and 64 males; numbers differed between sexes due to few cases of divorces) and those that paired with different partners for at least two years (N = 70 records for 31 females and 41 records for 20 males). Repeatabilities were calculated using restricted maximum likelihood (REML)-based linear mixed models as described in [
+  <a rid="pone.0128776.ref066" ref-type="bibr" href="#pone.0128776.ref066">66</a>], using the rptR package [
+  <a rid="pone.0128776.ref067" ref-type="bibr" href="#pone.0128776.ref067">67</a>] in R (version 3.10; [
+  <a rid="pone.0128776.ref068" ref-type="bibr" href="#pone.0128776.ref068">68</a>]).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Subsequently, we tested the influence of environmental variables (explanatory variables) on body mass (dependent variables) by fitting linear mixed effects models to the complete dataset (N = 366 pairs). As several environmental variables were correlated with each other (e.g. SAM &amp; SSTA: Pearson’s R = -0.11, P = 0.029) and to avoid collinearity, we decided against fitting several explanatory variables into a unique model but instead ran one model per explanatory variable, separately for female and male body mass. We included female or male identity, respectively, and year as random effects in models, and also ran a null model each. The best model (i.e. best explanatory environmental variable) was identified based on Akaike’s information criterion (AIC). In a final step, we tested the influence of female and male body mass (both as explanatory variables within the same model) on egg mass (A-egg mass and B-egg mass; as dependent variables in separate models) by fitting linear mixed effects models with female identity, male identity and year as independent random effects. When significant, we extracted the model estimates to present the effect sizes of female or male masses on A-egg mass or B-egg mass.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Models were fit with the lme4 package [
+  <a rid="pone.0128776.ref069" ref-type="bibr" href="#pone.0128776.ref069">69</a>] in R, and all compared models were fit with restricted maximum likelihood (REML). We present t-values from model summaries. To obtain P-values, we compared the model with the variable in question and the null model, and only for this case based models on maximum likelihood (ML). We followed Nakagawa and Schielzeth [
+  <a rid="pone.0128776.ref070" ref-type="bibr" href="#pone.0128776.ref070">70</a>] to calculate marginal R
+  <span class="sup">2</span> values (R
+  <span class="sup">2</span>
+  <sub>m</sub>, for the variance explained only by fixed effects) and conditional R
+  <span class="sup">2</span> values (R
+  <span class="sup">2</span>
+  <sub>c</sub>, based on the variance explained by both fixed and random effects).
+ </p>
+</sec>

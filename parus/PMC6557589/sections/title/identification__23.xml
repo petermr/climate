@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="S0004-S2008-S3003" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Identification of genetic variants</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The aligned reads were then used as input in the Tassel v.3.0 default pipeline [
+  <a rid="CIT0073" href="#CIT0073">73</a>] for SNP identification. We aligned the sequences of each individual (from each breed) against our sequenced Red Jungle Fowl (RJF) reference genome. We filtered the polymorphisms initially identified based on the sequencing quality criteria and on the genomic bases identified. After individual SNP calling, we merged all the SNPs called for each breed to be filtered together following the parameters: i) minimum taxon call rate (mnTCov) of 20%; ii) minimum site coverage (mnScov) of 70%; iii) mismatch rate (misMat) of 5%; iv) minimum minor allele frequency (mnMAF) of 0.01. A more detailed description of these filters parameters was provided by Glaubitz et al. [
+  <a rid="CIT0073" href="#CIT0073">73</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For CNV calling, the aligned sequence files (.bam) of each individual (from each breed) were merged into unique files representing CNVs emerging within each breed (regarding RJF). The “view“ option from Samtools v.1.3.14 was used to generate a “hit” file from each unique file containing the coverage information for each base pair sequenced from each breed. This ”hit” file was then used for CNV calling by the CNV-Seq tool [
+  <a rid="CIT0077" href="#CIT0077">77</a>] across the chicken genome (
+  <span class="italic">Gallus_gallus</span> 4.0, NCBI) using default parameters.
+ </p>
+</sec>

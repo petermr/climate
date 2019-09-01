@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecological niche modeling</div>
+ <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">We used ENM analyses to model range dynamics between the LIG, LGM and Present. Raw occurrence records for each of the 11 species (see details in Additional file 
+  <a rid="MOESM2" ref-type="media" href="#MOESM2">2</a>), following the taxonomy in the 
+  <span class="italic">Handbook of the Birds of the World (HBW)</span> series, were compiled from the eBird Basic Dataset (
+  <span ext-link-type="uri" xlink:href="http://ebird.org/content/ebird" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://ebird.org/content/ebird</span>, accessed Aug 2015) and China Bird Report (
+  <span ext-link-type="uri" xlink:href="http://www.birdreport.cn" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.birdreport.cn</span>, accessed Aug 2015), and outliers from their known distributions were removed. To avoid spatial autocorrelation, the retained records were then rarefied at a 5-km spatial resolution under a south Asian continent equidistant conic projection in SDMtoolbox 1.1c [
+  <a ref-type="bibr" rid="CR32" href="#CR32">32</a>] (see dataset in Additional file 
+  <a rid="MOESM3" ref-type="media" href="#MOESM3">3</a>), roughly equivalent to the resolution of climatic layers (e.g. 2.5 arc-minute resolution). Climate grids for the present and LGM (under the Community Climate System Model) were downloaded from the WorldClim website [
+  <a ref-type="bibr" rid="CR33" href="#CR33">33</a>] (
+  <span ext-link-type="uri" xlink:href="http://www.worldclim.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.worldclim.org</span>) with 2.5 arc-minute resolutions. The LIG model was initially obtained with a 30 arc-second resolution and then resampled to 2.5 arc-minute using a “NEAREST” algorithm using SDMtoolbox. The reasonability of study area extent is crucial for accuracy of ENM analyses and is difficult to determine [
+  <a ref-type="bibr" rid="CR34" href="#CR34">34</a>]. Given present distributions, we set an enlarged area exceeding the mainland Oriental Region [
+  <a ref-type="bibr" rid="CR35" href="#CR35">35</a>], sufficiency of which was verified by whether or not embracing the species’ distribution changes across historical climate changes.
+ </p>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">To reduce model overfitting associated with factor autocorrelation, highly correlated (
+  <span class="italic">r</span> &gt; 0.90) bioclimatic variables were identified and finally 10 variables were reserved, namely Bio_2 (mean diurnal range in temperature), Bio_3 (isothermality, monthly/ annual temperature range), Bio_5 (maximum temperature of warmest month), Bio_7 (temperature annual range), Bio_11 (mean temperature of coldest quarter), Bio_14 (precipitation of driest month), Bio_15 (precipitation seasonality, coefficient variation), Bio_16 (precipitation of wettest quarter), Bio_18 (precipitation of warmest quarter) and Bio_19 (precipitation of coldest quarter). In addition, winter records for species with significant seasonal migration (e.g. 
+  <span class="italic">S. semitorques</span> and 
+  <span class="italic">C. fortipes</span>, see details in Additional file 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>: Table S1) were excluded from the downstream analyses to improve prediction accuracy. The present-day ENM for each species was created and then extrapolated to palaeoclimatic layers at the LGM and LIG in MAXENT 3.3.3 k [
+  <a ref-type="bibr" rid="CR36" href="#CR36">36</a>]. Model parameters were trained with 75% of the occurrence records randomly sampled for each species and test by the other 25%, except that for species (
+  <span class="italic">F. ruficapilla</span> and 
+  <span class="italic">L. chrysotis</span>) with fewer occurrence records (e.g. &lt;100) all data were used to train the models (see details in Additional file 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>: Table S3). Two options in MAXENT were applied to reduce model over-prediction, with the maximum training sensitivity plus specificity (MTSS) threshold and the fade-by-clamping (i.e. to mitigate clamping issues during extrapolation among nonanalogous climates) procedure. Model performance was evaluated with the statistics of the area under the receiver operating characteristic curve (AUC).
+ </p>
+</sec>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="S0004-S2008-S3001" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sequence processing</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Quality trimming was performed in short sequences with SeqyClean tool v. 1.9.10 [
+  <a rid="CIT0039" href="#CIT0039">39</a>] using a Phred quality score ≥24 and a fragment size ≥50. The quality of the 
+  <span class="italic">reads</span> was checked before and after the cleaning by FastQC v.0.11.3 [
+  <a rid="CIT0072" href="#CIT0072">72</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For the SNP assessment, the Tassel v.3.0 program was used to process the data [
+  <a rid="CIT0073" href="#CIT0073">73</a>], while for CNV and methylation assessments, Stacks v.1.39 was used for de-multiplex the barcodes identifying individuals. For each sample stored in a FASTQ file, one identification map key file exists. This key file has the matching information of the sample, flow-cell and lane. The reads that begin with one of the expected barcodes (found in the key map) are followed by the expected cut site remnant (CTGCA for 
+  <span class="italic">PstI</span>). For SNP calling, fragments were then trimmed to 64 bases and grouped into a single list called “master” by the TASSEL-GBS Discovery Pipeline. For methylation analysis and CNV calling this FASTQ information of each individual sample was stored to be further analyzed.
+ </p>
+</sec>

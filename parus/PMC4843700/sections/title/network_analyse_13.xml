@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s6b" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">(b)</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Network analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Several algorithms to detect modules in networks are available (see [
+  <a rid="RSTB20150280C28" ref-type="bibr" href="#RSTB20150280C28">28</a>,
+  <a rid="RSTB20150280C47" ref-type="bibr" href="#RSTB20150280C47">47</a>–
+  <a rid="RSTB20150280C50" ref-type="bibr" href="#RSTB20150280C50">50</a>]). Recently, the equation introduced by Barber [
+  <a rid="RSTB20150280C48" ref-type="bibr" href="#RSTB20150280C48">48</a>] to calculate the modularity for bipartite networks was expanded by Dormann &amp; Strauss [
+  <a rid="RSTB20150280C51" ref-type="bibr" href="#RSTB20150280C51">51</a>], allowing both the matrix of observed links in the network and the matrix of expected links to be weighted (following [
+  <a rid="RSTB20150280C52" ref-type="bibr" href="#RSTB20150280C52">52</a>]). In contrast, with the goal of maximizing modularity in qualitative networks (by maximizing the number of links within modules and minimizing the number of links among modules), modules are formed in quantitative networks by attempting to maximize the density of link weights within modules, and minimize the density of link weights among modules. Therefore, in the latter, modules are likely to form around the strongest interactions between nodes. Dormann &amp; Strauss [
+  <a rid="RSTB20150280C51" ref-type="bibr" href="#RSTB20150280C51">51</a>] have proposed an algorithm written in C
+  <span class="sup">++</span> and available through the open-source R-package ‘
+  <span class="italic">bipartite</span>’ based on simulated annealing (QuanBiMo) to maximize weighted modularity in bipartite networks, which we used to perform the modularity analysis. The algorithm returns a global modularity value, 
+  <span class="italic">Q</span>, and the composition of the identified modules.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The modularity value, 
+  <span class="italic">Q</span>, cannot be used 
+  <span class="italic">per se</span> to compare different networks because the expected density of links within modules depends on network size (number of trees and seed-plots) as well as the number of links between trees and seed-plots, and the total number of seeds found in the seed-plots. Therefore, we used a null model to compare the observed value of modularity with the null model expectations. We used the null model implemented in the QuanBiMo algorithm to generate 1000 random networks with the same number of seeds contributed by each tree and the same number of seeds found in each seed-plot (i.e. the same marginal totals). We then computed the 
+  <span class="italic">p-</span>value for the local and regional networks as the fraction of those 1000 random networks having a modularity value equal or larger than the observed one.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In order to determine to what extent two seed-plots (trees) that are within the same module in the local network are also within the same module in the regional network, we computed the mutual information between the two assignments based on the variation of information introduced by Karrer 
+  <span class="italic">et al.</span> [
+  <a rid="RSTB20150280C53" ref-type="bibr" href="#RSTB20150280C53">53</a>]. The variation of information between the modular structure of two networks is the sum of the information needed to describe the modular structure of the former network given the latter, and the information needed to describe the modular structure of the latter considering the former. Specifically, the variation of information between the local and regional networks for the set of nodes common to both is defined by 
+  <div id="RSTB20150280UM1" class="disp-formula">
+   <span class="label">6.1</span>
+   <div xlink:href="rstb20150280-e2.jpg" position="float" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>where 
+  <span class="italic">P</span>(
+  <span class="italic">x</span>) is the fraction of nodes assigned to module 
+  <span class="italic">x</span> in the local network; 
+  <span class="italic">P</span>(
+  <span class="italic">y</span>) is the fraction of nodes assigned to module 
+  <span class="italic">y</span> in the regional network; and 
+  <span class="italic">P</span>(
+  <span class="italic">x, y</span>) is the fraction of nodes assigned to module 
+  <span class="italic">x</span> in the local network and to module 
+  <span class="italic">y</span> in the regional network. The variation index was computed separately for the set of trees (10), 
+  <span class="italic">V
+   <sub>m</sub>
+  </span>, and the set of seed-plots (49), 
+  <span class="italic">V
+   <sub>s</sub>
+  </span>, common to the local and regional network.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The above index goes from zero (the arrangement of the nodes within modules is the same across the two networks) to log 
+  <span class="italic">n</span> (each node constitutes its own module in one network, and all nodes are assigned to a single module in the other network), 
+  <span class="italic">n</span> being the number of nodes. As we are comparing networks of different sizes, we normalize this value by 1/log 
+  <span class="italic">n</span>, and therefore our measure of change in modular organization goes from zero to one.
+ </p>
+</sec>

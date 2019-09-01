@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="evl3103-sec-0050" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">CALCULATION OF GEBVs</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">There are two conceptually different ways to calculate genomic breeding values (GEBVs). In so‐called “whole genome regression” phenotypes are regressed simultaneously against all markers and the GEBV is calculated as the sum of all estimated marker effects multiplied with the corresponding genotypes (de los Campos et al. 
+  <a rid="evl3103-bib-0018" ref-type="ref" href="#evl3103-bib-0018">2013</a>). However, the fact that the number of estimated parameters, the marker effects, exceeds the number of observations prevents the use of “simple” least‐squares multiple regression and instead variable selection or shrinkage estimation procedures need to be used. Various approaches as, for example, ridge regression (Hoerl and Kennard 
+  <a rid="evl3103-bib-0041" ref-type="ref" href="#evl3103-bib-0041">1970</a>), LASSO (Tibshirani 
+  <a rid="evl3103-bib-0068" ref-type="ref" href="#evl3103-bib-0068">1996</a>) or Bayesian methods with various priors (e.g., Gianola 
+  <a rid="evl3103-bib-0023" ref-type="ref" href="#evl3103-bib-0023">2013</a>) have been proposed and used. The other approach is replacing the pedigree‐based relatedness matrix in an animal model by the marker‐based relatedness matrix (VanRaden 
+  <a rid="evl3103-bib-0071" ref-type="ref" href="#evl3103-bib-0071">2008</a>; Yang et al. 
+  <a rid="evl3103-bib-0079" ref-type="ref" href="#evl3103-bib-0079">2010</a>), generally known as GBLUP. While conceptually very different, this approach can be shown to be mathematically identical to ridge regression or a Bayesian approach with a Gaussian distribution of marker effects. Generally, the accuracies of GEBVs that can be obtained with these different approaches are comparable (e.g., Hayes et al. 
+  <a rid="evl3103-bib-0036" ref-type="ref" href="#evl3103-bib-0036">2009a</a>; Daetwyler et al. 
+  <a rid="evl3103-bib-0017" ref-type="ref" href="#evl3103-bib-0017">2010</a>; Gao et al. 
+  <a rid="evl3103-bib-0020" ref-type="ref" href="#evl3103-bib-0020">2013</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We here calculated GEBVs using the GBLUP approach. The marker‐based or “genomic” relatedness matrix (GRM) was calculated using the pairwise relatedness estimators of VanRaden (
+  <a rid="evl3103-bib-0071" ref-type="ref" href="#evl3103-bib-0071">2008</a>), method 1, and Yang et al. (
+  <a rid="evl3103-bib-0079" ref-type="ref" href="#evl3103-bib-0079">2010</a>) using the program calc_grm (Calus and Vandenplas 
+  <a rid="evl3103-bib-0011" ref-type="ref" href="#evl3103-bib-0011">2016</a>). When using the option VanRaden 1, the GRM is calculated following VanRaden (
+  <a rid="evl3103-bib-0071" ref-type="ref" href="#evl3103-bib-0071">2008</a>) as 
+  <div id="evl3103-disp-0001" class="disp-formula">
+   <div id="nlm-math-1" class="math">
+    <div class="mrow">
+     <span mathvariant="bold-italic" class="mi">G</span>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">ZZ</span>
+       </div>
+       <span class="mo">′</span>
+      </div>
+      <div scriptlevel="0" displaystyle="true" class="mstyle">
+       <div class="mrow">
+        <span class="mn">2</span>
+        <span class="mo">∑</span>
+        <div class="msub">
+         <span class="mi">p</span>
+         <span class="mi">i</span>
+        </div>
+        <div class="mrow">
+         <span stretchy="false" class="mo">(</span>
+         <span class="mn">1</span>
+         <span class="mo">−</span>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mi">i</span>
+         </div>
+         <span stretchy="false" class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span width="0.33em" class="mspace"/>
+    </div>
+   </div>
+  </div>with 
+  <span class="bold">
+   <span class="italic">G</span>
+  </span> being the GRM, 
+  <span class="bold">
+   <span class="italic">Z</span>
+  </span> being a centered matrix of marker genotypes of all individuals, and 
+  <span class="italic">p
+   <sub>i</sub>
+  </span> the frequency of the second allele at locus 
+  <span class="italic">i</span>. 
+  <span class="bold">
+   <span class="italic">Z</span>
+  </span> is calculated from the matrix of marker genotypes, coded as –1, 0, 1 for the homozygote, heterozygote, and other homozygote, by subtracting 2(
+  <span class="italic">p
+   <sub>i</sub>
+  </span> – 0.5). Dividing 
+  <span class="bold">
+   <span class="italic">ZZ</span>
+  </span>′ by 
+  <div id="nlm-math-2" class="math">
+   <div scriptlevel="0" displaystyle="true" class="mstyle">
+    <div class="mrow">
+     <span class="mn">2</span>
+     <span class="mo">∑</span>
+     <div class="msub">
+      <span class="mi">p</span>
+      <span class="mi">i</span>
+     </div>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">−</span>
+       <div class="msub">
+        <span class="mi">p</span>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>
+  </div> scales 
+  <span class="bold">
+   <span class="italic">G</span>
+  </span> to be analogous to the relatedness matrix obtained from a pedigree.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">When using the option Yang, the GRM is calculated following Yang et al. (
+  <a rid="evl3103-bib-0079" ref-type="ref" href="#evl3103-bib-0079">2010</a>) as 
+  <div id="evl3103-disp-0002" class="disp-formula">
+   <div id="nlm-math-3" class="math">
+    <div class="mrow">
+     <span mathvariant="bold-italic" class="mi">G</span>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="bold-italic" class="mi">WW</span>
+       </div>
+       <span class="mo">′</span>
+      </div>
+      <span class="mi">n</span>
+     </div>
+     <span width="0.33em" class="mspace"/>
+    </div>
+   </div>
+  </div>with 
+  <span class="bold">
+   <span class="italic">G</span>
+  </span> being the GRM, 
+  <span class="bold">
+   <span class="italic">W</span>
+  </span> being a matrix containing the scaled and centered marker genotypes and 
+  <span class="italic">n</span> being the number of markers. The elements of 
+  <span class="bold">
+   <span class="italic">W</span>
+  </span> are computed as 
+  <div id="evl3103-disp-0003" class="disp-formula">
+   <div id="nlm-math-4" class="math">
+    <div class="mrow">
+     <span width="0.33em" class="mspace"/>
+     <div class="msub">
+      <span class="mi">w</span>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mi">j</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msub">
+        <span class="mi">x</span>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">−</span>
+       <span class="mn">2</span>
+       <div class="msub">
+        <span class="mi">p</span>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <div class="msqrt">
+       <div class="mrow">
+        <span class="mn">2</span>
+        <div class="msub">
+         <span class="mi">p</span>
+         <span class="mi">i</span>
+        </div>
+        <div class="mrow">
+         <span stretchy="false" class="mo">(</span>
+         <span class="mn">1</span>
+         <span class="mo">−</span>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mi">i</span>
+         </div>
+         <span stretchy="false" class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span width="0.33em" class="mspace"/>
+    </div>
+   </div>
+  </div>with 
+  <span class="italic">x
+   <sub>ij</sub>
+  </span> being the marker genotype of individual 
+  <span class="italic">j</span> at locus 
+  <span class="italic">i</span>.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">When a pedigree is known calc_grm offers the option to scale the GRM to the level of inbreeding in the pedigree following Powell et al. (
+  <a rid="evl3103-bib-0060" ref-type="ref" href="#evl3103-bib-0060">2010</a>). Finally, the GRM is adjusted for sampling error in the relatedness due to the limited number of markers following Yang et al. (
+  <a rid="evl3103-bib-0079" ref-type="ref" href="#evl3103-bib-0079">2010</a>). We here calculated the GRM with and without scaling according to the pedigree.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To explore the relative importance of relationship information contained in the pedigree and in the genomic relatedness matrix, we calculated a “weighted” (genomic) relatedness matrix 
+  <span class="bold">
+   <span class="italic">G</span>
+  </span>
+  <span class="sup">*</span> as 
+  <div id="evl3103-disp-0004" class="disp-formula">
+   <div id="nlm-math-5" class="math">
+    <div class="mrow">
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi">G</span>
+      </div>
+      <span class="mo">∗</span>
+     </div>
+     <span class="mo">=</span>
+     <span mathvariant="bold-italic" class="mi">G</span>
+     <span class="mi">α</span>
+     <span class="mo">+</span>
+     <span mathvariant="bold-italic" class="mi">A</span>
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <span class="mn">1</span>
+      <span class="mo">−</span>
+      <span class="mi">α</span>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>
+  </div>with 
+  <span class="bold">
+   <span class="italic">G</span>
+  </span> being the GRM, 
+  <span class="bold">
+   <span class="italic">A</span>
+  </span> being the pedigree‐based relatedness matrix and α the weighting factor ranging from 0 to 1. Here, we used values for α of 0.05, 0.5, 0.8, and 0.95.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Because egg‐laying date is affected by spring temperature (e.g., Gienapp et al. 
+  <a rid="evl3103-bib-0025" ref-type="ref" href="#evl3103-bib-0025">2005</a>) and can also differ among habitats, we fitted the following model to all recorded egg‐laying dates and used the year and area estimates from this model to “precorrect” the recorded phenotypes of the genotyped individuals: 
+  <div id="evl3103-disp-0005" class="disp-formula">
+   <div id="nlm-math-6" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">y</span>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mo">,</span>
+       <span class="mi">j</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">μ</span>
+     <span class="mo">+</span>
+     <span class="mi">y</span>
+     <div class="msub">
+      <span class="mi">r</span>
+      <span class="mi">j</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">a</span>
+     <div class="msub">
+      <span class="mi">r</span>
+      <span class="mi">a</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span mathvariant="italic" class="mi">age</span>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span mathvariant="italic" class="mi">ind</span>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ε</span>
+    </div>
+   </div>
+  </div>with 
+  <span class="italic">y
+   <sub>i,j</sub>
+  </span> being the phenotype of individual 
+  <span class="italic">i</span> in year 
+  <span class="italic">j</span>, 
+  <span class="italic">μ</span> the overall intercept, 
+  <span class="italic">yr
+   <sub>j</sub>
+  </span> and 
+  <span class="italic">ar
+   <sub>a</sub>
+  </span> the fixed effects for year (as factor) and area, respectively, 
+  <span class="italic">age
+   <sub>i</sub>
+  </span> the age of individual 
+  <span class="italic">i</span> (as factor, 1st year breeder vs older) and 
+  <span class="italic">ind
+   <sub>i</sub>
+  </span> the random effect of individual 
+  <span class="italic">i</span>. We did this, instead of fitting year and area in our GBLUP model, because not all individuals in all years were genotyped, which could have led to biases in the estimates for year‐area combinations with few genotyped individuals.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To estimate variance components and predict the GEBV at the same time we ran the following mixed model, our GBLUP model, in ASReml‐R: 
+  <div id="evl3103-disp-0006" class="disp-formula">
+   <div id="nlm-math-7" class="math">
+    <div class="mrow">
+     <span class="mi">y</span>
+     <div class="msubsup">
+      <div class="mrow"/>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mo">,</span>
+       <span class="mi">j</span>
+      </div>
+      <span class="mo">′</span>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">μ</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span mathvariant="italic" class="mi">age</span>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">p</span>
+     <div class="msub">
+      <span class="mi">e</span>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span class="mi">a</span>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ε</span>
+    </div>
+   </div>
+  </div>with 
+  <span class="italic">y′
+   <sub>i,j</sub>
+  </span> being the pre‐corrected phenotype of individual 
+  <span class="italic">i</span> in year 
+  <span class="italic">j</span>, that is 
+  <div id="nlm-math-8" class="math">
+   <div class="mrow">
+    <span class="mi">y</span>
+    <div class="msubsup">
+     <div class="mrow"/>
+     <div class="mrow">
+      <span class="mi">i</span>
+      <span class="mo">,</span>
+      <span class="mi">j</span>
+     </div>
+     <span class="mo">′</span>
+    </div>
+    <span class="mo">=</span>
+    <div class="msub">
+     <span class="mi">y</span>
+     <div class="mrow">
+      <span class="mi">i</span>
+      <span class="mo">,</span>
+      <span class="mi">j</span>
+     </div>
+    </div>
+    <span width="0.33em" class="mspace"/>
+    <span class="mo">−</span>
+    <div class="msub">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">y</span>
+       <span class="mi">r</span>
+      </div>
+      <span class="mo">^</span>
+     </div>
+     <span class="mi">j</span>
+    </div>
+    <span class="mo">−</span>
+    <div class="msub">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">a</span>
+       <span class="mi">r</span>
+      </div>
+      <span class="mo">^</span>
+     </div>
+     <span class="mi">a</span>
+    </div>
+   </div>
+  </div>, 
+  <span class="italic">age
+   <sub>i</sub>
+  </span> the age of individual 
+  <span class="italic">i</span>, 
+  <span class="italic">pe
+   <sub>i</sub>
+  </span> the nongenetic (permanent environment) random effect of individual 
+  <span class="italic">i</span>, and 
+  <span class="italic">a
+   <sub>i</sub>
+  </span> the additive genetic random effect of individual 
+  <span class="italic">i</span>. The covariance between the additive genetic effects was given by the GRM or the weighted GRM (
+  <span class="bold">
+   <span class="italic">G</span>
+  </span>
+  <span class="sup">*</span>). For comparison, we also fitted a pedigree‐based model where the covariance between the additive genetic effects was given the pedigree‐based relatedness matrix, while the model was otherwise identical. The scripts to calculate the GRM and to run the animal model are available as Supplementary Material.
+ </p>
+</sec>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modelling disease risk in Hb compromised species</div>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">For comparison of infection status across three parasite genera, we carried out four distinct analyses. We classified each sampled species as either an elevational migrant (EM status = 1) where almost all individuals migrate to significantly lower elevations or as sedentary (EM status = 0) were species that are consistently found in their breeding range in the winter in our study site. Information on elevational movement and distribution was obtained from a field survey [
+  <a ref-type="bibr" rid="CR31" href="#CR31">31</a>] in our study site and Rasmussen and Anderton [
+  <a ref-type="bibr" rid="CR41" href="#CR41">41</a>]. The first analysis consisted of generalized linear mixed models (GLMMs, function glmer in lme4; Bates et al. [
+  <a ref-type="bibr" rid="CR42" href="#CR42">42</a>]) to assess whether individual infection status with 
+  <span class="italic">Plasmodium</span>, 
+  <span class="italic">Haemoproteus</span> and 
+  <span class="italic">Leucocytozoon</span> was influenced by elevation, bird migration strategy and season, as fixed effects, and bird taxonomy (species nested in genus and genus nested in family) as a random effect. All models were specified with a binomial error distribution and logit link function. The significance of fixed effects was evaluated with Wald’s χ
+  <span class="sup">2</span>-tests [
+  <a ref-type="bibr" rid="CR43" href="#CR43">43</a>].
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">In the second analysis, we used a linear mixed effect models to assess differences in infection intensity of the three parasite genera (
+  <span class="italic">Plasmodium</span>, 
+  <span class="italic">Haemoproteu</span>s and 
+  <span class="italic">Leucocytozoon</span>) with elevation, season and migration status as fixed effects, and bird species as a random effect. For the intensity data, we used only positive samples with microscopy and qPCR methods. We further analysed the relationship between infection status and parasite intensity with Hct sampled across species. Owing to limited data, Hct was not analysed for migration strategies and season. Finally, we sought to tease apart the effects of migration status, parasite intensity, elevation, and season, on Hb levels. In order to investigate factors relating to Hb (at a variety of complexities/scales), we constructed predictive regression models using the linear mixed-effects kinship model fit by maximum likelihood (lmekin) within the “coxme” package [
+  <a ref-type="bibr" rid="CR44" href="#CR44">44</a>]. For each model, we controlled for phylogenetic effects by including a phylogenetic correlation matrix as a random effect using the “ape” package [
+  <a ref-type="bibr" rid="CR45" href="#CR45">45</a>]. The phylogenetic correlation matrix was derived from a phylogeny constructed from information by Jetz et al. [
+  <a ref-type="bibr" rid="CR46" href="#CR46">46</a>]. All data was checked for normality and corrected for over-dispersion as required.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Prior to running predictive models, correlations between predictor variables were assessed to test for collinearity using correlation matrices and simple linear models generated for each pairwise combination of predictors. There was a significant positive relationship between Hb and elevation in both elevational migrants (R
+  <span class="sup">2</span> = 0.24, 
+  <span class="italic">P</span> &lt; 0.001) and residents (R
+  <span class="sup">2</span> = 0.16, 
+  <span class="italic">P</span> &lt; 0.001; [
+  <a ref-type="bibr" rid="CR32" href="#CR32">32</a>]). We used intensity as an interactive term in all models since infection intensity can vary with time, seasons, age and sex [
+  <a ref-type="bibr" rid="CR20" href="#CR20">20</a>, 
+  <a ref-type="bibr" rid="CR47" href="#CR47">47</a>] and showed a negative association with Hb levels (see below). All other pairwise comparisons yielded absolute correlation values and variance explained by linear models (adjusted R
+  <span class="sup">2</span>) of &lt; 0.5, indicating no issues of collinearity, so all predictors were retained.
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">Using data for 15 species in summer and nine species in winter (18 species in total), we fitted 18 linear mixed models separately for 
+  <span class="italic">Leucocytozoon</span>, 
+  <span class="italic">Plasmodium</span>, 
+  <span class="italic">Haemoproteus</span>, mixed infections and total infected birds. We used AIC-based multi-model inference to identify well-supported statistical models that describe the relationships between Hb and biological parameters relevant to elevational distribution, such as (i) infection intensity, (ii) elevation (low, mid, high), (iii) EM status (1 = elevational migrants, 0 = resident species), (iv) season (breeding = 1, nonbreeding = 0), as fixed effects. In all cases, bird species was included as a random effect. The models were written based on variables that were ecologically relevant to hypoxia physiology (Additional file 
+  <a rid="MOESM3" ref-type="media" href="#MOESM3">3</a>: Table S3) and model selection was done using the MuMIn package [
+  <a ref-type="bibr" rid="CR48" href="#CR48">48</a>].
+ </p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">We used the Akaike Information Criteria (AIC; see [
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>]), to select the best-fit model. We generated a set of 18 candidate models (including global model and single predictor models) which were ranked by AICc (Additional file 
+  <a rid="MOESM3" ref-type="media" href="#MOESM3">3</a>: Table S3). Models with a difference (ΔAICc) of ≤ 2 are as parsimonious as the best-fit model (lowest AICc), and is considered strong evidence that the quality of the candidate models differ from one another [
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>]. Relative importance of the traits was assessed and model-averaged estimates were derived to account for model uncertainty [
+  <a ref-type="bibr" rid="CR50" href="#CR50">50</a>]. We used a model-averaging approach to check the validity of the top-ranking model in each case, only including models with ΔAICc &lt; 2 [
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>]. The relative importance (RI) of each parameter after model-averaging, was calculated by summing 
+  <span class="italic">wi</span> across all models in which the parameter was present. Analyses were conducted in R v. 3.0.1 [
+  <a ref-type="bibr" rid="CR51" href="#CR51">51</a>].
+ </p>
+</sec>

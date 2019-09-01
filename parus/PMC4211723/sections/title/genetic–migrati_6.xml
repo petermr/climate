@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Genetic–migration correlates</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">After GPS radio collars were recovered and data were downloaded, we calculated the initiation and termination dates of spring and fall migration (i.e., the dates at which deer started or finished their migration) in 
+  <span class="sc">arcmap</span> 10.1 (Environmental Systems Research Institute, Redlands, CA, USA). Migration was demarcated as the time period during which deer travelled between their winter and summer home ranges. Home ranges were determined by outlining a minimum convex polygon around all locations that occurred prior to directed movement, without return, away from the summer or winter range areas.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We first examined the relationship between mtDNA haplogroup (derived from haplotype and phylogenetic analyses) and the dates of spring and fall migrations. For this analysis, we corrected the Julian date of migration to the earliest date among all individuals. The resulting data represented a count of the number of days since the earliest arriving or leaving migrant had terminated or initiated their migration. These data were analyzed using negative binomial regression (see Appendix S3 for model formulation). We included covariates for the mtDNA haplogroup to which each deer was assigned (categorical) as well as a covariate for the age of the animal and binary covariates indicating winter range study area (i.e., three separate covariates indicating whether the deer was from a winter range study area [1] or not [0]). Before models were run, correlations among covariates were examined to assess collinearity (no predictors were correlated at |
+  <span class="italic">r</span>| &gt; 0.7) and age was standardized 
+  <div class="inline-formula">
+   <span xlink:href="eva0007-0937-mu1.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>, a common procedure in regression to aid in interpretability of coefficient estimates (Gelman and Hill 
+  <a rid="b27" ref-type="bibr" href="#b27">2007</a>). We fitted all models under a Bayesian framework in JAGS (Plummer 
+  <a rid="b55" ref-type="bibr" href="#b55">2012</a>) and 
+  <span class="sc">r</span>3.0.1 (R Core Team 
+  <a rid="b63" ref-type="bibr" href="#b63">2013</a>), using the ‘rjags’ package (Plummer 
+  <a rid="b56" ref-type="bibr" href="#b56">2013</a>). See Appendix S3 for specifics of model runs and assessment of convergence. To assess the fit of the models, we calculated residuals (observed – predicted values) and plotted them against the fitted values to examine any potential patterns in residuals.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Secondly, we examined correlations between genetic relatedness metrics and similarity in migration using Mantel tests. For this analysis, we calculated absolute pairwise distances (calculated in days) between each individual's migration termination or initiation dates leaving us with four matrices representing differences in migration timing for spring and fall. The relationships between relatedness indices (QG and coancestry) and migratory behavior (dates) were evaluated in 
+  <span class="sc">r</span>3.0.1 (R Core Team 
+  <a rid="b63" ref-type="bibr" href="#b63">2013</a>) using Mantel tests (Mantel 
+  <a rid="b42" ref-type="bibr" href="#b42">1967</a>) under 10 000 permutations as implemented by the Ecodist library (Goslee and Urban 
+  <a rid="b29" ref-type="bibr" href="#b29">2007</a>). Here, a comparison is made between relatedness and the difference in migration timing, and thus, a negative relationship is expected if there is a genetic signature – that is, more closely related individuals have more similar migration timing. To account for similarities among individuals inhabiting similar areas or grouping together, we ran two partial Mantel tests controlling for the distance between the centroids of individuals' winter range and summer range (Fig. 
+  <a ref-type="fig" rid="fig01" href="#fig01">1</a>). Significance was assessed by examining 95% confidence intervals.
+ </p>
+</sec>

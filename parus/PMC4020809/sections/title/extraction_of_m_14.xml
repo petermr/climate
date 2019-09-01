@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2e" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Extraction of Marginal Over Time Measurements</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Spectrogram reconstruction from ROIs entails that an enhanced spectrogram is extracted from the original one by imposing the ROIs of the original spectrum on an empty spectrogram (see 
+  <a ref-type="fig" rid="pone-0096936-g004" href="#pone-0096936-g004">Fig. 4</a>). Each spectrogram is partitioned in 16 equal and non-overlapping horizontal bands. Subsequently several statistics are derived over this enhanced spectrum on a per band basis. This approach resembles filterbank analysis in audio. We do not apply mel-spacing as different birds and insects can vocalize anywhere in the spectrum. This approach allows us to make use of the band-limited character of most species and leave the marginalization process to the multi-label approach. For each band a set of basic descriptive statistics to represent the essence of each band concisely is derived from the intensities of each band, namely: Mean, standard deviation, median and kurtosis and the 90% percentile. The median is found by sorting the values and picking the middle one and is a way to summarize statistical distribution. Kurtosis (fourth central moment) is used as a measure of peaky vs. flat. In order to derive the 90% percentiles the data are ordered and the one at the highest 90% position is derived. A percentile is a statistical measure below which a given percentage of measurements in a group of measurements fall. Other descriptive statistics have been tried, such as entropy and skewness, but without presenting any statistically significant difference in the classification accuracy. Therefore, 5 descriptors for each of the 16 bands is derived resulting to a 5×16 = 80 dimensional vector per recording and a total training matrix 
+  <span class="bold">S
+   <sub>1</sub>
+  </span>
+  <span class="sup">687×80</span>. One should note that with this feature alone the multi-label approach achieves 86.37% average accuracy (see Results section).
+ </p>
+</sec>

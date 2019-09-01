@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Quality Control of Genotypes</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The GenABEL package v1.8-0 (
+  <a rid="B3" ref-type="bibr" href="#B3">Aulchenko et al., 2007</a>) implemented in R v3.2.0 (
+  <a rid="B38" ref-type="bibr" href="#B38">R Core Team, 2015</a>) was used to perform a quality control on the dataset. 15719 SNPs and 24 individuals were discarded, because of being monomorphic and/or a low call rate (&lt;95%). The mean autosomal heterozygosity was 0.342 and nine additional individuals were discarded because of a high heterozygosity (FDR &lt; 1%). The mean identity by state of SNPs (IBS) was 0.696 and 14 individuals were discarded because of high IBS value (≥0.95). We did not exclude SNPs that deviated from Hardy-Weinberg equilibrium (HWE) because egg-laying date in our study populations is under directional selection and causal loci may therefore deviate from HWE. We used a MAF-threshold of 0.1 because we wanted to avoid small numbers of individuals for any genotype-temperature class group. We furthermore excluded all SNPs for that not all three genotypes were present and also SNPs that had less than 20 individuals in any genotype-temperature class group.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In PLINK 1.07 (
+  <a rid="B37" ref-type="bibr" href="#B37">Purcell et al., 2007</a>) we calculated genomic relatedness, based on IBS, for all individuals across all SNPs and a genetic distance from this. This genetic distance matrix was then used, also in PLINK, for multi-dimensional scaling (MDS) to identify whether there was clustering of genetically similar individuals. Twenty-one individuals were identified as outliers and excluded (Supplementary Figure 
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">S1</a>). In total 384081 SNPs and 2249 individuals passed the quality control. Given the size of the great tit genome of about 1.02 Gbp (
+  <a rid="B25" ref-type="bibr" href="#B25">Laine et al., 2015</a>) we have a coverage of roughly 1 SNP per 2700 bp. Of these individuals 2045 had records for at least one egg-laying date and could be included in the analysis.
+ </p>
+</sec>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Plant Material, Genome Sequencing, and Assembly.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Seedlings of 
+   <span class="italic">C. himalaica</span> were sampled from Batang County (altitude 4,010 m, N 30.313°, E 99.358°) of QTP. Seedlings from the same individual were cultivated in the greenhouse at Kunming Institute of Botany. High-quality genomic DNA was extracted using the Qiagen DNeasy Plant Mini Kit. The 
+   <span class="italic">C. himalaica</span> genome assembly was performed using sequence data obtained from a combination of sequencing technologies: Illumina PE reads, Illumina MP reads, and PacBio RS II reads (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1817580116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Table S2
+   </span>). The whole step of library construction and sequencing was performed at Novogene Bioinformatics Technology Co., Ltd. First, six PE libraries were prepared to sequence the 
+   <span class="italic">C. himalaica</span> genome. These included two PE libraries with insert sizes of 250 and 450 bp and four MP libraries with insert sizes of 2, 5, 10 and 15 kb. Whole genomic sequence (44.49 Gb) data were generated solely using Illumina platforms (HiSEq. 2500) and assembled using ALLPATHS -LG (
+   <a rid="r15" ref-type="bibr" href="#r15">15</a>). Next, the PacBio reads (6.19 Gb) were used to fill gaps using the PBJelly2 tool (
+   <a rid="r16" ref-type="bibr" href="#r16">16</a>), followed by scaffold assembly with SSPACE (
+   <a rid="r82" ref-type="bibr" href="#r82">82</a>) using long-insert-size PE reads. The accuracy and completeness of the assemblies were assessed by aligning the reads from short-insert-size libraries back to the scaffolds using BWA-mem (v. 0.7.17) (
+   <a rid="r83" ref-type="bibr" href="#r83">83</a>).
+  </p>
+ </sec>
+ <sec id="s11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Gene Prediction and Annotation.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Gene prediction was performed using a combination of homology, de novo, and transcriptome-based approaches. Gene models were integrated by EvidenceModeler (
+   <span ext-link-type="uri" xlink:href="http://evidencemodeler.github.io/" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">evidencemodeler.github.io/</span>). Gene models were further updated by PASA (
+   <a rid="r84" ref-type="bibr" href="#r84">84</a>) to generate UTRs and provide information on alternative splicing variants. The predicted genes were analyzed for functional domains and homologs using InterProScan and BLAST against the NCBI nonredundant protein sequence database, TrEMBL and SwissProt with an E-value cutoff 1E-15 and Blast2GO with default parameters. Completeness of the genome was also assessed by performing core gene annotation using the BUSCO (
+   <a rid="r17" ref-type="bibr" href="#r17">17</a>) methods. Transcription factors were identified and classified into different families using the iTAK pipeline (
+   <span ext-link-type="uri" xlink:href="http://bioinfo.bti.cornell.edu/cgi-bin/itak/index.cgi" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">bioinfo.bti.cornell.edu/cgi-bin/itak/index.cgi</span>) (
+   <a rid="r85" ref-type="bibr" href="#r85">85</a>).
+  </p>
+ </sec>
+ <sec id="s12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Repetitive Elements Identification and Dynamic Analysis.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A combined strategy based on homologous sequence alignment and de novo searches was used to identify repeat elements in the 
+   <span class="italic">C. himalaica</span> genome. We de novo predicted TEs using RepeatModeler (
+   <span ext-link-type="uri" xlink:href="http://www.repeatmasker.org/RepeatModeler" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.repeatmasker.org/RepeatModeler</span>), RepeatScout (
+   <span ext-link-type="uri" xlink:href="http://www.repeatmasker.org/" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.repeatmasker.org</span>), Piler (
+   <a rid="r86" ref-type="bibr" href="#r86">86</a>) (
+   <span ext-link-type="uri" xlink:href="http://www.drive5.com/piler/" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.drive5.com/piler/</span>), and LTR-Finder (
+   <a rid="r87" ref-type="bibr" href="#r87">87</a>) (
+   <span ext-link-type="uri" xlink:href="http://tlife.fudan.edu.cn/tlife/ltr_finder" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">tlife.fudan.edu.cn/tlife/ltr_finder</span>) with default parameters. For alignment of homologous sequences to identify repeats in the assembled genome, we used RepeatProteinMask and RepeatMasker (
+   <span ext-link-type="uri" xlink:href="http://www.repeatmasker.org/" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.repeatmasker.org</span>) with the repbase library (
+   <a rid="r88" ref-type="bibr" href="#r88">88</a>). TEs overlapping with the same type of repeats were integrated, while those with low scores were removed if they overlapped over 80% of their lengths and belonged to different types.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Intact LTR retrotransposons were identified by searching the genomes of 
+   <span class="italic">C. himalaica</span> with LTRharvest (
+   <a rid="r89" ref-type="bibr" href="#r89">89</a>) (-motif tgca -motifmis 1) and LTR_Finder (LTR length 100 to 5,000 nt; length between two LTRs: 1,000 to 2,0000 nt). We combined results from both analyses after integrating the overlap sites. Candidate sequences were filtered by a two-step procedure to reduce false positives. First, LTRdigest (
+   <a rid="r90" ref-type="bibr" href="#r90">90</a>) was used to identify the primer binding site (PBS) motif, and only elements containing PBS were retained; then, protein domains (pol, gag, and env) in candidate LTR retrotransposons were identified by searching against HMM profiles considered as intact. Second, clustering of candidate LTR retrotransposons was performed using the SiLiX software package (
+   <span ext-link-type="uri" xlink:href="http://lbbe.univ-lyon1.fr/SiLiX" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">lbbe.univ-lyon1.fr/SiLiX</span>). Using a substitution rate (r) of 7*10
+   <span class="sup">−9</span> substitutions per site per year (
+   <a rid="r91" ref-type="bibr" href="#r91">91</a>, 
+   <a rid="r92" ref-type="bibr" href="#r92">92</a>), the insertion date (T) can be calculated for each LTR retrotransposons (T = K/2r, K: genetic distance). Tandemly repeated gene arrays were identified using BLASTP with a threshold E value &lt; 10
+   <span class="sup">−8</span>; fragmental alignments were conjoined for each gene pair. The tandem repeat gene clusters were identified using a cutoff of sequence identity &gt;70% and distance &lt;150 kb. Each cluster with more than two genes was retained.
+  </p>
+ </sec>
+ <sec id="s13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Whole-Genome Alignment and Duplication Analysis.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We aligned the 
+   <span class="italic">C. himalaica</span> genome to those of 
+   <span class="italic">A. thaliana, A. lyrata</span>, and 
+   <span class="italic">C. rubella</span> using LASTZ (
+   <a rid="r93" ref-type="bibr" href="#r93">93</a>) with the following parameter values: M = 254 K = 4500 L = 3000 Y = 15000 -seed = match 12 -step = 20 -identity = 85. To avoid the interference caused by repetitive sequences for sequence alignment, RepeatMasker and RepBase library were used to mask repetitive sequences of the above four genomes. The raw alignments were combined into larger blocks using the ChainNet algorithm. We identified orthologous genes among the 
+   <span class="italic">C. himalaica</span>, 
+   <span class="italic">A. thaliana</span>, 
+   <span class="italic">A. lyrata</span>, and 
+   <span class="italic">C. rubella</span> genomes and paralogous genes within 
+   <span class="italic">C. himalaica</span> and other relatives using BLASTP (E value &lt; 1E-7). MCscanx (
+   <a rid="r94" ref-type="bibr" href="#r94">94</a>) was used to identify syntenic blocks within the genome. For each gene pair in a syntenic block, the 4DTv distance was calculated; values of all gene pairs were plotted to identify putative whole-genome duplication events and divergence in two species.
+  </p>
+ </sec>
+ <sec id="s14" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Phylogenetic Tree Construction and Estimation of Species Divergence Times.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We selected genomes of 
+   <span class="italic">C. himalaica</span> and eight other species (
+   <span class="italic">A. thaliana</span>, 
+   <span class="italic">A. lyrata</span>, 
+   <span class="italic">C. rubella</span>, 
+   <span class="italic">C. hirsuta</span>, 
+   <span class="italic">Eutrema salsugineum</span>, 
+   <span class="italic">B. rapa</span>, 
+   <span class="italic">Schrenkiella parvula</span>, and 
+   <span class="italic">Aethionema arabicum</span>) to identify orthologs. To remove redundancy caused by alternative splicing variations, we retained only gene models at each gene locus that encoded the longest protein sequence. To exclude putative fragmented genes, genes encoding protein sequences shorter than 50 aa were filtered out. All filtered protein sequences of these plants were compared with each other using BLASTP (E value &lt; 1E-7) and clustered into orthologous groups using OrthoMCL (inflation parameter, 1.5) (
+   <a rid="r33" ref-type="bibr" href="#r33">33</a>). Protein sequences from 4,586 single-copy gene families were used for phylogenetic tree construction. MUSCLE (
+   <a rid="r95" ref-type="bibr" href="#r95">95</a>) was used to generate multiple sequence alignment for protein sequences in each single-copy family with default parameters. The alignments of each family were concatenated to a super alignment matrix, which was then used for phylogenetic tree reconstruction through the PROTCATJTT model in RAxML software.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Divergence time between nine species was estimated using MCMCtree in PAML (
+   <a rid="r35" ref-type="bibr" href="#r35">35</a>) with the options “independent rates” and “GTR” model. A Markov chain Monte Carlo analysis was run for 10,000 generations, using a burn-in of 1,000 iterations. Three calibration points were applied based on a recent study using 53 plastomes of Brassicales: 
+   <span class="italic">A. arabicum</span> and other crucifers divergence time (29.0 to 41.8 Mya), core Brassicaceae origination time (21.3 to 29.8 Mya), and core 
+   <span class="italic">Arabidopsis</span> origination time (4.8 to 9.7 Mya) (
+   <a rid="r36" ref-type="bibr" href="#r36">36</a>).
+  </p>
+ </sec>
+ <sec id="s15" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Gene Family Expansion and Contraction.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We selected four close relatives (
+   <span class="italic">A. thaliana</span>, 
+   <span class="italic">A</span>. 
+   <span class="italic">lyrata</span>, 
+   <span class="italic">C. rubella</span>, and 
+   <span class="italic">C. hirsuta</span>) of 
+   <span class="italic">C. himalaica</span> to identify orthogroups (gene families). Expansions and contractions of orthologous gene families were determined using CAFÉ v. 4.1 (
+   <a rid="r96" ref-type="bibr" href="#r96">96</a>). The program uses a birth and death process to model gene gain and loss over a phylogeny. For each significantly expanded and contracted gene family in 
+   <span class="italic">C. himalaica</span>, functional information was inferred based on its ortholog in 
+   <span class="italic">A. thaliana</span>. GO enrichment analyses of genes were conducted using web-based agriGO (
+   <span ext-link-type="uri" xlink:href="systemsbiology.cau.edu.cn/agriGOv2" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">systemsbiology.cau.edu.cn/agriGOv2</span>) (
+   <a rid="r97" ref-type="bibr" href="#r97">97</a>) with the singular enrichment analysis method and TAIR10 database. The KOBAS and BlastKOALA software (
+   <a rid="r98" ref-type="bibr" href="#r98">98</a>) was also used to test the statistical enrichment of genes in KEGG pathways (
+   <a rid="r99" ref-type="bibr" href="#r99">99</a>).
+  </p>
+ </sec>
+ <sec id="s16" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Identification and Classification of Putative NBS Resistance Genes.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A hidden Markov model search (
+   <span ext-link-type="uri" xlink:href="http://hmmer.janelia.org/" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">hmmer.janelia.org</span>) was used to identify NBS-encoding R genes in the 
+   <span class="italic">C. himalaica</span> genome and four close relatives (
+   <span class="italic">A. thaliana</span>, 
+   <span class="italic">A. lyrata</span>, 
+   <span class="italic">C. rubella</span>, and 
+   <span class="italic">C. hirsuta</span>). The sequences were screened using HMMs to search for the Pfam NBS (NB-ARC) family PF00931 domain (
+   <span ext-link-type="uri" xlink:href="http://pfam.xfam.org/" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">pfam.xfam.org/</span>). Pfam HMM searches were performed using a TIR model (PF01582) and several LRR models (PF00560, PF07723, PF07725, PF12799, PF13306, PF13516, PF13504, PF13855, and PF08263) to detect TIR domains and LRR motifs in the NBS-encoding amino acid sequences. CC motifs were detected using the COILS prediction program 2.2 (
+   <span ext-link-type="uri" xlink:href="http://embnet.vital-it.ch/software/COILS_form.html" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">embnet.vital-it.ch/software/COILS_form.html</span>) with a 
+   <span class="italic">p</span>-score cutoff of 0.9.
+  </p>
+ </sec>
+ <sec id="s17" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Gene Family-Based Positive Selection Tests.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">For positive selection analyses we also selected the four most closely related species with assembled genomes (
+   <span class="italic">A. thaliana</span>, 
+   <span class="italic">A</span>. 
+   <span class="italic">lyrata</span>, 
+   <span class="italic">C. rubella</span>, and 
+   <span class="italic">C. hirsuta</span>) and 
+   <span class="italic">C. himalaica</span> to identify orthologs based on our phylogenetic tree. The analysis procedure is similar to the phylogenetic tree analysis. First, we used OrthoMCL (
+   <a rid="r32" ref-type="bibr" href="#r32">32</a>) to identify homologous gene clusters (orthogroups) among the five genomes. OrthoMCL was run with an E-value cutoff of 1E-15 and an inflation parameter of 1.5 due to the close genetic relationship between five relatives. Orthogroups with single-copy genes shared by all five genomes were retained for further analyses. Multiple sequence alignment was performed for each orthogroup using MUSCLE v. 3.8.31 (
+   <a rid="r97" ref-type="bibr" href="#r97">97</a>) with default parameters. Poorly aligned regions were further trimmed using the trimAl v. 1.4 software (
+   <a rid="r100" ref-type="bibr" href="#r100">100</a>) with the parameter “-gt 0.8 -st 0.001”. Maximum likelihood trees were generated using RAxML v7.0.4 (
+   <a rid="r101" ref-type="bibr" href="#r101">101</a>) with the PROTCATJTT model. To calculate the nonsynonymous (
+   <span class="italic">K</span>
+   <sub>a</sub>) and synonymous (Ks) substitution rates between pairs of orthogroups, we reverse-translated amino acid alignments to the corresponding codon-based nucleotide alignments using PAL2NAL (
+   <a rid="r102" ref-type="bibr" href="#r102">102</a>). To increase the power of tests for positive selection, we applied the branch-site model (
+   <a rid="r103" ref-type="bibr" href="#r103">103</a>) implemented in codeml program (
+   <a rid="r35" ref-type="bibr" href="#r35">35</a>) to estimate the dN/dS substitution rates (ω value). We also deleted all gaps (clean data = 1) from the alignments to lower the effect of ambiguous bases on the inference of positive selection. A foreground branch was specified as the clade of 
+   <span class="italic">C. himalaica</span>. A likelihood ratio test was conducted to determine whether positive selection is operating in the foreground branch. In this study, PSGs were inferred if the 
+   <span class="italic">P</span> value was less than 0.01. The functional annotation of PSGs in 
+   <span class="italic">C. himalaica</span> was also conducted using the same approach and the same 
+   <span class="italic">P-</span>value cutoff with the gene family expansion and contraction analysis.
+  </p>
+ </sec>
+ <sec id="s18" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">S-Locus Structure and Self-Fertilization of 
+   <span class="italic">C. himalaica.</span>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Known S-haplogroups from 
+   <span class="italic">Arabidopsis</span> and 
+   <span class="italic">Capsella</span> were used as query to search the genome assembly of 
+   <span class="italic">C. himalaica</span> (
+   <a rid="r70" ref-type="bibr" href="#r70">70</a>, 
+   <a rid="r104" ref-type="bibr" href="#r104">104</a>) using BLASTP. We manually annotated both flanking genes of the S-locus on scaffold 29: the 
+   <span class="italic">ARK3</span> gene and 
+   <span class="italic">U-box</span> gene. However, no homologs were detected in our search for the 
+   <span class="italic">SRK</span> gene. Using the standard BWA-mem (v. 0.7.17) (
+   <a rid="r83" ref-type="bibr" href="#r83">83</a>) and Samtools (v. 1.6) (
+   <a rid="r105" ref-type="bibr" href="#r105">105</a>) pipeline, we mapped short reads (450-bp insert size library) of 
+   <span class="italic">C. himalaica</span> to the combined reference of 
+   <span class="italic">C. himalaica</span> genome and 
+   <span class="italic">A. halleri</span> S15 haplogroup of S-locus (
+   <a rid="r70" ref-type="bibr" href="#r70">70</a>) and then manually explored the coverage of the 
+   <span class="italic">SRK</span> region of the S15 haplogroup using IGV (v. 2.4.13) (
+   <a rid="r106" ref-type="bibr" href="#r106">106</a>). The coding sequence of the predicted 
+   <span class="italic">SCR</span> gene (ID = AT4G22105.1_Ath-D2 on scaffold29:1034290-1034749), together with SCR sequences from 
+   <span class="italic">A. thaliana</span>, 
+   <span class="italic">C. rubella</span>, 
+   <span class="italic">C. grandiflora</span>, and 
+   <span class="italic">C. hirsuta,</span> was added to the curated alignment of the publicly available SCR genes kindly provided by Vincent Castric (Unité Evo-Eco-Paléo, CNRS/Université de Lille 1, Villeneuve d’Ascq, France) from 
+   <span class="italic">A. halleri</span> and 
+   <span class="italic">A. lyrata</span> using MUSCLE (v. 3.8.31) (
+   <a rid="r97" ref-type="bibr" href="#r97">97</a>), and a maximum likelihood tree with 500 bootstrap replicates was constructed using MEGAX (
+   <a rid="r107" ref-type="bibr" href="#r107">107</a>) and visualized using Jalview2 (
+   <a rid="r108" ref-type="bibr" href="#r108">108</a>). A comparative structure plot of 
+   <span class="italic">C. himalaica</span> and 
+   <span class="italic">A. halleri</span> S15 S-loci (
+   <a ref-type="fig" rid="fig04" href="#fig04">Fig. 4
+    <span class="italic">B</span>
+   </a>) was constructed using the R library genoPlotR (
+   <a rid="r109" ref-type="bibr" href="#r109">109</a>).
+  </p>
+ </sec>
+</sec>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bird Population Modeling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We applied a generalized additive model approach to analyze the population development of each of the 15 bird species. This statistical approach was first developed by Fewster et al. (
+  <a rid="R31" ref-type="bibr" href="#R31">
+   <span class="italic">31</span>
+  </a>) to describe population trends in breeding birds and later successfully used to model bird and bat populations (
+  <a rid="R32" ref-type="bibr" href="#R32">
+   <span class="italic">32</span>
+  </a>
+  <span class="italic">,</span>
+  <a rid="R33" ref-type="bibr" href="#R33">
+   <span class="italic">33</span>
+  </a>). We used the GAM framework to fit a single smoothed curve to the trend of the number of bird specimens in the USUV-positive areas and USUV-negative areas per year. In addition, to allow for differences in relative abundances between sites, we included a site term in the models. Following the suggestion by Fewster et al. (
+  <a rid="R31" ref-type="bibr" href="#R31">
+   <span class="italic">31</span>
+  </a>), we set the selection of the degree of smoothing in the GAM to 0.3 times the number of years of the survey data (df = 3).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We avoided the problems of temporal autocorrelation within the abundance data (
+  <a rid="R31" ref-type="bibr" href="#R31">
+   <span class="italic">31</span>
+  </a>) and overdispersion (
+  <a rid="R34" ref-type="bibr" href="#R34">
+   <span class="italic">34</span>
+  </a>) by using a bootstrap approach. We produced CIs around the smoothed trends with a total of 300 bootstrap samples by resampling with replacement observations from the original dataset for each bird species. We classified each sampling site of the bird population data to be located in the USUV-positive or USUV-negative area on the basis of site coordinates and the USUV binary map. Spatial information of the bird observation sites was available only at the level of postal code regions; therefore, for each bootstrap sample, we took the mean of observed specimens per species within each region and then randomly assigned it within its postal code region to classify it as within the USUV-suitable or USUV-unsuitable area.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We set 2011 as the baseline year (index = 100); this year was the last time bird abundance data were collected before the first epizootic outbreak of USUV in Germany (
+  <a rid="R14" ref-type="bibr" href="#R14">
+   <span class="italic">14</span>
+  </a>). Nonoverlapping 95% bootstrap CIs with index = 100 and nonoverlapping 95% bootstrap CIs between the USUV-suitable areas and USUV-unsuitable areas in 2016 were interpreted as a statistically significant difference (p&lt;0.05).
+ </p>
+</sec>

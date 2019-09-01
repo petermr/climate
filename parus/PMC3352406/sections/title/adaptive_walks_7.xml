@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Adaptive walks</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Selection in a constant environment will result in an adaptive walk, the substitution of a series of beneficial mutations of successively higher fitness. At any particular point in time, all alleles at a locus affecting fitness can be ranked from the most to the least fit. The fitnesses of the very small fraction of alleles whose fitness exceeds that of the wild type will follow an extreme-value distribution, almost regardless of the overall distribution of fitness (
+  <a ref-type="bibr" rid="b36" href="#b36">Gillespie 1984</a>). Supposing the difference in fitness between the best and second-best alleles to be Δ
+  <sub>1</sub>, the difference between alleles with adjacent ranks 
+  <span class="italic">i</span> and 
+  <span class="italic">j</span> is a random variable with expected value Δ
+  <sub>
+   <span class="italic">i</span>
+  </sub> = Δ
+  <sub>1</sub>/
+  <span class="italic">i</span>. This does not apply to the great majority of low-fitness alleles, but these can be neglected because they will never contribute to adaptation. Most beneficial alleles have only slightly greater fitness than the wild type, but rare alleles with very high fitness are less likely to be lost stochastically soon after they arise; hence, the first step of the adaptive walk will often involve a mutation with a large effect on fitness (
+  <a ref-type="bibr" rid="b68" href="#b68">Orr 2002</a>). To model the walk as a whole, we could treat the extreme-value distribution based on the current wild type as a fixed allelic series, and follow the successive substitution of mutations of greater effect until the most fit allele has been fixed. A more realistic procedure is to regenerate a random series of allelic values whenever a substitution occurs, until the walk ends because no allele is superior to the current wild type; this is the ‘mutational landscape’ model of 
+  <a ref-type="bibr" rid="b36" href="#b36">Gillespie (1984)</a>.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In practice, no population becomes permanently adapted, because conditions will change sooner or later. If the environment changes only rarely, each successive adaptive walk will be completed, and the population will be well adapted most of the time. If it changes more rapidly, few adaptive walks will be completed, and the population will be poorly adapted most of the time. If it changes very rapidly selection may be inadequate to restore adaptation quickly enough, and the population will dwindle and eventually become extinct. Recurrent change can be modeled by shifting the distribution of fitness to the left at intervals, reducing the fitness and increasing the rank of the current wild type. In a mutational landscape model, this can be accomplished by drawing new random values for each fitness rank while increasing the rank of each allele by a specified amount and thereby creating a new series of alleles whose fitness in the changed conditions exceeds that of any pre-existing type.</p>
+</sec>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece33629-sec-0015" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3.4</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Habitat suitability function</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Habitat suitability (HS) modeling uses information on a species dependency on the habitat to predict the likelihood of occurrence in a given area based on environmental variables (Franklin, 
+  <a rid="ece33629-bib-0022" ref-type="ref" href="#ece33629-bib-0022">1995</a>; Hirzel &amp; Le Lay, 
+  <a rid="ece33629-bib-0029" ref-type="ref" href="#ece33629-bib-0029">2008</a>; Pereira &amp; Itami, 
+  <a rid="ece33629-bib-0049" ref-type="ref" href="#ece33629-bib-0049">1991</a>). It describes the quantitative relationship between the physical and biological factors in a given environment, and further the suitability of the given habitat for a specific species (Akçakaya &amp; Root, 
+  <a rid="ece33629-bib-0003" ref-type="ref" href="#ece33629-bib-0003">2013</a>). We projected the model to the entire area of interest using Equation 2. As a logistic regression (
+  <span class="italic">y</span>, Equation 3) was used to describe presence/absence of the Little Owl, the logit link function (Equation 2) describes the probability (
+  <span class="italic">p</span>) that the owl is present (Akçakaya &amp; Root, 
+  <a rid="ece33629-bib-0003" ref-type="ref" href="#ece33629-bib-0003">2013</a>):
+  <div id="ece33629-disp-0002" class="disp-formula">
+   <span class="label">(2)</span>
+   <div id="nlm-math-2" class="math">
+    <div class="mrow">
+     <span class="mi">p</span>
+     <span width="0.166667em" class="mspace"/>
+     <span class="mo">=</span>
+     <span width="0.166667em" class="mspace"/>
+     <div class="mfrac">
+      <span class="mn">1</span>
+      <div class="mrow">
+       <span class="mo">exp</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mo">−</span>
+         <span class="mi">y</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <span width="0.166667em" class="mspace"/>
+     <span width="0.166667em" class="mspace"/>
+     <span class="mtext">where</span>
+    </div>
+   </div>
+  </div>
+  <div id="ece33629-disp-0003" class="disp-formula">
+   <span class="label">(3)</span>
+   <div id="nlm-math-3" class="math">
+    <div class="mrow">
+     <span class="mi">y</span>
+     <span width="0.166667em" class="mspace"/>
+     <span class="mo">=</span>
+     <span width="0.166667em" class="mspace"/>
+     <span mathvariant="normal" class="mi">β</span>
+     <span width="0.166667em" class="mspace"/>
+     <span class="mo">+</span>
+     <span width="0.166667em" class="mspace"/>
+     <div class="msub">
+      <span mathvariant="normal" class="mi">β</span>
+      <span class="mn">1</span>
+     </div>
+     <span class="mo">·</span>
+     <div class="msub">
+      <span class="mi">x</span>
+      <span class="mn">1</span>
+     </div>
+     <span width="0.166667em" class="mspace"/>
+     <span class="mo">+</span>
+     <span width="0.166667em" class="mspace"/>
+     <div class="msub">
+      <span mathvariant="normal" class="mi">β</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">·</span>
+     <span width="0.166667em" class="mspace"/>
+     <div class="msub">
+      <span class="mi">x</span>
+      <span class="mn">2</span>
+     </div>
+     <span width="0.166667em" class="mspace"/>
+     <span class="mo">+</span>
+     <span class="mo">⋯</span>
+     <span class="mo">+</span>
+     <span width="0.166667em" class="mspace"/>
+     <div class="msub">
+      <span mathvariant="normal" class="mi">β</span>
+      <span class="mi">n</span>
+     </div>
+     <span class="mo">·</span>
+     <span width="0.166667em" class="mspace"/>
+     <div class="msub">
+      <span class="mi">x</span>
+      <span class="mi">n</span>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+</sec>

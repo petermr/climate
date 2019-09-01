@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="evl3103-sec-0060" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">VALIDATION OF GEBVs</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">In the “validation” step a subset of individuals that have both phenotypes and genotypes are excluded from the training population, and their precorrected phenotypes (see above) are regressed against the GEBVs predicted from their genotypes. The correlation between the GEBVs and phenotypes of these individuals is used to compute the accuracy of the GEBVs, which is defined as the correlation between the true and the estimated breeding values. Since the true breeding values are not known, phenotypes (P) that were precorrected for all fixed effects and averaged per individual are used instead: 
+  <div id="evl3103-disp-0007" class="disp-formula">
+   <div id="nlm-math-9" class="math">
+    <div class="mrow">
+     <span mathvariant="italic" class="mi">accuracy</span>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mi">c</span>
+       <span class="mi">o</span>
+       <span class="mi">r</span>
+       <span stretchy="false" class="mo">(</span>
+       <span class="mi">P</span>
+       <span class="mo">,</span>
+       <span width="0.33em" class="mspace"/>
+       <span mathvariant="italic" class="mi">GEBV</span>
+       <span stretchy="false" class="mo">)</span>
+      </div>
+      <div class="msqrt">
+       <div class="msup">
+        <span class="mi">h</span>
+        <span class="mn">2</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>where division by 
+  <div id="nlm-math-10" class="math">
+   <div class="msqrt">
+    <div class="msup">
+     <span class="mi">h</span>
+     <span class="mn">2</span>
+    </div>
+   </div>
+  </div> corrects for the fact that the maximum correlation between P and GEBV is equal to 
+  <div id="nlm-math-11" class="math">
+   <div class="msqrt">
+    <div class="msup">
+     <span class="mi">h</span>
+     <span class="mn">2</span>
+    </div>
+   </div>
+  </div>, which is achieved if the accuracy is 1, that is when GEBV are equal to the true breeding values. To allow comparison of the accuracy obtained using different numbers of SNPs we used the 
+  <span class="italic">h</span>
+  <span class="sup">2</span> obtained from the VanRaden model with all SNPs for scaling. For this comparison, we could hence equally well have used the correlation between phenotype and GEBV but choose to present the (identically scaled) accuracies to minimize potential confusion.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Since the standard error of the calculated accuracy depends on the size of the set of individuals excluded from the training population (Daetwyler et al. 
+  <a rid="evl3103-bib-0016" ref-type="ref" href="#evl3103-bib-0016">2013</a>), we followed a modified “leave‐one‐out” approach. In this approach each individual is in turn excluded from the training population, that is in practice its phenotype is set to missing and the standard GBLUP model is run. This means that this individual's GEBV is predicted based on all phenotypes except its own. To reduce computation time, we here did not exclude each individual separately from the training population but instead excluded 20 individuals at once, which reduced computation time by a factor 20. We randomly excluded 20 individuals from the training population, predicted their GEBVs and then selected the next 20 individuals (each individual was only excluded once) until all individuals were excluded once and their GEBVs predicted. When GEBVs for all individuals had been predicted, the GEBVs were correlated with the individuals’ phenotypes. 95% confidence intervals were obtained by bootstrapping. The 1000 bootstrap samples were obtained by randomly drawing—with replacement—2015 observations from the data. We also report the (approximate) standard errors of the accuracy and the root mean square error (RMSE) of the GEBVs. The standard error was based on the sampling variance of a correlation coefficient calculated as the square root of the sampling variance divided by the square root of the heritability. The RMSE was calculated as the square root of the mean squared difference between an individual's phenotype and its GEBV estimated including the individual's phenotype. The scripts that were used to run the validation analyses are available as Supplementary Material.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Since our data are from a natural population, there is some relatedness structure in the sampled individuals. Out of the 2015 individuals included in the analysis more than half (1520) had no known relatives within the genotyped individuals. This may be partly due to parents not being captured but overall capture rates of breeding adult individuals are at least 90%. Based on the recorded pedigree information, there were 185 individuals related as full‐sibs, 79 individuals related as maternal half‐sibs and 80 individuals related as paternal half‐sibs in the pedigree. Overall mean pairwise pedigree‐based relatedness was 0.00033.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To test the effect of the number of SNPs used to estimate relatedness we reran our analysis for subsets of 1000, 50,000, 100,000, 250,000, and 400,000 SNPs. For 100 replicates the corresponding number of SNPs was sampled randomly from the total number of SNPs, the GRM calculated using the VanRaden‐estimator, and GEBVs predicted using the approach described above for each random sample. That is, for the first replicate the phenotypes of the first 20 individuals were excluded and their GEBVs predicted, for the second replicate the phenotypes of the next 20 individuals were excluded and their GEBVs predicted and so forth.</p>
+</sec>

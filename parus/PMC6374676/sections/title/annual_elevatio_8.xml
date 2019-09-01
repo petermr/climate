@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece34838-sec-0008" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Annual elevational distribution curves of species</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Since the data came from different projects, we were dealing with different sampling effort along the elevation gradient among years. This prevented a direct analysis of temporal changes occurred in the species elevational distribution, which would result biased among years according the year sampling efforts. Thus, we were forced to use a modeling approach to first assess the yearly species distribution, and subsequently, analyze its temporal trend. Indeed, for each species, we calculated the annual elevational distribution curve following the “curve response shape” method (Heegaard, 
+  <a rid="ece34838-bib-0034" ref-type="ref" href="#ece34838-bib-0034">2002</a>; Maggini et al., 
+  <a rid="ece34838-bib-0043" ref-type="ref" href="#ece34838-bib-0043">2011</a>), which defines a presence probability curve for a bird species along the elevational gradient. The curve was assessed as a smooth function (thin plate regression spline; Wood, 
+  <a rid="ece34838-bib-0075" ref-type="ref" href="#ece34838-bib-0075">2017</a>) of the elevation, other than northing and easting to account for spatial autocorrelation, using generalized additive models (Maggini et al., 
+  <a rid="ece34838-bib-0043" ref-type="ref" href="#ece34838-bib-0043">2011</a>; Wood, 
+  <a rid="ece34838-bib-0075" ref-type="ref" href="#ece34838-bib-0075">2017</a>). We set the maximum degrees of freedom to three for the elevation, in order to avoid overfitting and to obtain unimodal curves, and 15 for the space smooth (geographic coordinates; Maggini et al., 
+  <a rid="ece34838-bib-0043" ref-type="ref" href="#ece34838-bib-0043">2011</a>; Massimino et al., 
+  <a rid="ece34838-bib-0046" ref-type="ref" href="#ece34838-bib-0046">2015</a>). The analysis was performed using the 
+  <span class="italic">mgcv</span> package (Wood, 
+  <a rid="ece34838-bib-0073" ref-type="ref" href="#ece34838-bib-0073">2003</a>, 
+  <a rid="ece34838-bib-0074" ref-type="ref" href="#ece34838-bib-0074">2011</a>, 
+  <a rid="ece34838-bib-0075" ref-type="ref" href="#ece34838-bib-0075">2017</a>) in R version 3.4.3 (R Core Team, 
+  <a rid="ece34838-bib-0058" ref-type="ref" href="#ece34838-bib-0058">2017</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Theoretically, up to five reference points characterize the curve: an optimum point (OPT; the central point of the curve), in which projection on the elevation axis indicates the elevation associated with the highest presence probability of the species; a central border left point and an outer border left point (CBL and OBL, two points at lower elevations), with a decreasing probability of the presence of the species; and a central border right point and an outer border right point (CBR and OBR, two points at higher elevations), with decreasing probability of the presence of the species. The central and the outer borders result from a fraction of the maximum response (Heegaard, 
+  <a rid="ece34838-bib-0034" ref-type="ref" href="#ece34838-bib-0034">2002</a>). The two central border points were defined by the projections on the elevation axis of the value densities corresponding to OPT*exp(−0.5), while the two outer border points by the projections on the elevation axis of the value densities corresponding to OPT*exp(−2). However, as we were working within a delimited elevational range, we could deal with truncated curves when some reference points fell outside the investigated range. Indeed, for several species, the distribution curve might fall under the 600 m asl or over 2,700 m asl.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For each year, bird occurrence data were bootstrapped (
+  <span class="italic">n</span> = 200) and one curve for each bootstrapped sample was fitted in order to assess the estimated variability of the reference points. We considered a reference point estimate as reliable when the fitting procedure succeeded for at least 50% of the bootstrapped samples. Then, for each species and for each of its (up to 5) reliable reference points, we built a time series (reference points’ time series). Moreover, we considered the reference points having at least 10 reliable values along the time series as informative for the long‐term analysis.
+ </p>
+</sec>

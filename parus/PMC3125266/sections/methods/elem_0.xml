@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="methods" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sequencing</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Ten unrelated great tit nestlings, at 14 days post hatching, were sampled from across the Wytham Woods population and brain, heart, kidney, liver, muscle (pectoralis major), pancreas, skin and testes/ovaries dissected from each individual at between three and 23 minutes after death. Each chick was sexed at sampling and sex was later confirmed molecularly with the Z-002A marker [
+   <a ref-type="bibr" rid="B35" href="#B35">35</a>]. Tissues were stored in RNALater (Ambion) to prevent RNA degradation. RNA was extracted using the TRIzol
+   <span class="sup">® </span>(Invitrogen) method. RNA quantity and degradation was tested using a Nanodrop (Agilent) with each tissue yielding a mean (standard error) of 44.4 (7.5) μg of RNA with mean (standard error) RNA integrity number (RIN) of 8.37 (0.21). For each tissue 1 μg of RNA from each bird was pooled, i.e. to make 8 tissue pools, each containing 10 μg of RNA. Complementary DNA (cDNA) was synthesised by Evrogen (Moscow, Russia) from the eight tissue-specific pools using SMART kits [
+   <a ref-type="bibr" rid="B36" href="#B36">36</a>]. cDNA was normalised, also by Evrogen. cDNA sequencing was performed by the Liverpool Advanced Genomics Facility, with 3 μg of normalised cDNA sequenced on a 454 FLX Titanium Genome Sequencer. Each tissue was sequenced on half a plate, i.e. four plates were sequenced in total, giving an expected 1600 Mbp of sequence (mean read length 400, 1 M reads per plate; 
+   <span ext-link-type="uri" xlink:href="http://454.com" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://454.com</span>). The zebra finch transcriptome is 26.3 Mbp; assuming that ~68% [
+   <a ref-type="bibr" rid="B37" href="#B37">37</a>] of the total sequence meets quality criteria and assembles into contigs, a transcriptome coverage of ~41 is estimated.
+  </p>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Assembly</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Our strategy for transcriptome assembly was to first combine sequences from all tissues to create a de novo assembly, and then map sequences from each tissue onto the assembly to examine tissue-specific expression. Using the program NGen (version 2) (DNASTAR, Inc), sequences within each tissue pool were combined and screened to remove poly(A) tails, SMART kit primer sequences (added during cDNA library construction), adaptor sequences (added to enable purification, amplification and sequencing by the FLX technology) and poor quality sequences (average sequence quality less than 14 in a 30 base window). The trimmed sequences were then assembled de novo (i.e., assembled without a reference) with NGen after first assessing the impact of varying various assembly parameters. The final parameter settings of match size 41 (default 19), match percentage 90 (default 85), mismatch penalty 25, gap penalty 25 and minimum average sequence quality 14 were chosen on the basis that they (i) obtained coverage most similar to our expectation of 41x, (ii) had strict settings for match size and minimum match percentage, and should therefore be conservative and (iii) produced the overall highest mean contig length and number of sequences per contig. The choice of assembly was verified by visual examination of the quality of the alignments within a random subset of contigs. For all assemblies, contigs with less than four sequences were excluded from further analysis.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Tissue-specific assemblies were also made. Following removal of poly(A) tails, SMART kit primer sequences, adaptor sequences and poor quality sequences with NGen, each of the eight tissue pools was separately mapped onto the all-tissues transcriptome assembly. Default parameters for a reference-guided assembly were used, except for a longer match size (41, default 19) and higher match percentage (90, default 85) than the default settings.</p>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Tissue specificity</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Potentially some contigs may be expressed in all eight tissues, and some in only one tissue. For each tissue assembly, we assessed how many sequences were assembled into each contig (i.e. by examining the read depth of the contig). Contigs which were absent from a tissue-specific assembly were regarded as not expressed in that tissue at the time of sampling. Contigs which are expressed in all tissues (i.e. each tissue contributes at least one sequence read to the contig) and contigs which were tissue specific (all reads come from a single tissue, with a minimum of four reads from that tissue) were identified. In addition, more formally for each contig a measure of tissue specificity (τ) was calculated. Values for τ range from 0 (transcripts equally expressed in all tissues) to 1 (transcript expression is highly tissue-specific, i.e. very high expression in one tissue). τ accounts for differences in the total number of reads in different tissues [
+    <a ref-type="bibr" rid="B38" href="#B38">38</a>], and was calculated following the approach of Mank 
+    <span class="italic">et al</span>. [
+    <a ref-type="bibr" rid="B39" href="#B39">39</a>] to account for small levels of undetected expression;
+    <div id="bmcM1" class="disp-formula">
+     <span class="label">(1)</span>
+     <div xlink:href="1471-2164-12-283-i7.gif" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">where 
+    <span class="italic">N </span>is the number of tissues and TPM
+    <sub>max </sub>is the highest level of expression of a given contig over all 
+    <span class="italic">i </span>tissues examined. Expression for each contig is standardised to number of reads per million (TPM), i.e. the number of reads contributing to the contig, per million reads expressed in the whole tissue;
+    <div id="bmcM2" class="disp-formula">
+     <span class="label">(2)</span>
+     <div xlink:href="1471-2164-12-283-i8.gif" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">where library
+    <span class="italic">
+     <sub>i </sub>
+    </span>is the total number of reads expressed in library 
+    <span class="italic">i</span>. To reduce sampling stochasticity, TPM
+    <span class="italic">
+     <sub>i </sub>
+    </span>is set to 2 for values of TPM
+    <sub>max </sub>and reads
+    <span class="italic">
+     <sub>i </sub>
+    </span>close to 0 [
+    <a ref-type="bibr" rid="B39" href="#B39">39</a>].
+   </p>
+  </sec>
+ </sec>
+ <sec class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Transcriptome analysis</div>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Blast against zebra finch, chicken and self</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">To estimate transcriptome coverage and to identify genes which have been sequenced, the great tit contigs were aligned with 
+    <span class="italic">Gallus gallus </span>(chicken/red junglefowl) and 
+    <span class="italic">Taeniopygia guttata </span>(zebra finch) sequences. The latest 
+    <span class="italic">Taeniopygia guttata </span>(version 3.2.4.58) and 
+    <span class="italic">Gallus gallus </span>(version 2.58) genome (DNA), predicted gene (cDNA) and predicted peptide (protein) databases were downloaded from the Ensembl ftp site 
+    <span ext-link-type="uri" xlink:href="http://www.ensembl.org/info/data/ftp/index.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.ensembl.org/info/data/ftp/index.html</span>. The great tit contigs were blasted against each database using stand-alone BLAST (version 2.2.22 for 64 bit Windows). The blastn program was used for searching against DNA and cDNA databases and blastx against peptide databases, with a cut-off expectation value (e-value) of 10
+    <span class="sup">-5 </span>and all other settings as default. The best alignment was retained for each contig.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">To examine whether the assembly contained contigs with high sequence similarity (which could be suggestive of sequences from the same gene being assembled into more than one contig), contigs were clustered using blastclust 
+    <span ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/staff/tao/URLAPI/blastall" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.ncbi.nlm.nih.gov/staff/tao/URLAPI/blastall</span> with options-S 95.0-b F-p F-W 30 and -L 0.95 or 1.0, the latter option specifying alignments across either 95% or the whole length of the shortest contig. Contigs were also blasted against each other, with a cutoff e-value of 10
+    <span class="sup">-5</span>. Contig pairs with a single alignment which does not extend over the full length of the shortest contig may represent different genes which share a conserved protein domain. In contrast, multiple alignments between two contigs may indicate that the contigs represent different splice variants of the same gene, or that one contig is an incompletely processed form of the mRNA sequence containing introns and other features not present in the final mRNA molecule (i.e., pre-mRNA) while the other contig is the final mRNA (Figure 
+    <a ref-type="fig" rid="F2" href="#F2">2a</a>).
+   </p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Gene Ontologies</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Gene Ontology (GO) terms are available for a large number of zebra finch genes, providing the opportunity to infer the function of those contigs in the great tit assembly which align with zebra finch genes. The latest Ensembl 
+    <span class="italic">T. guttata </span>(version 3.2.4.58) gene database was downloaded from the Ensembl website 
+    <span ext-link-type="uri" xlink:href="http://www.ensembl.org/index.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.ensembl.org/index.html</span> using the MartView interface of the BioMart data management system 
+    <span ext-link-type="uri" xlink:href="http://www.biomart.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.biomart.org</span>. The Gene Ontology full ontology relationship file was downloaded from the Gene Ontology website (OBO version 1.2; 
+    <span ext-link-type="uri" xlink:href="http://www.geneontology.org/GO.downloads.ontology.shtml" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.geneontology.org/GO.downloads.ontology.shtml</span>). Using the full ontology file and the outputs from blasting the great tit assembly against the 
+    <span class="italic">T. guttata </span>cDNA database, GO terms for each great tit contig were inferred. Note that 74% of the 18,191 zebra finch unique transcript identification numbers downloaded from Ensembl have been assigned GO terms, so GO terms could not be assigned to all contigs.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">For contigs previously identified as tissue-specific or expressed in all tissues (see "Tissue specificity" above), tissue-unique GO terms were identified by finding GO terms associated with tissue-unique contigs which were not associated with contigs from any other tissue. To investigate whether individual tissues were associated with specific GO terms, the 'pedigree' of each of these tissue-unique GO terms was determined from the GO full ontology file. All GO terms are assigned a domain ('namespace', or equivalently 'root term') of either biological process, molecular function or cellular component [
+    <a ref-type="bibr" rid="B40" href="#B40">40</a>]. Note that although all GO terms map to one namespace through subtype 'is_a' relationships, it is possible to map to alternate namespaces through 'part_of' relationships. For each GO term, we extracted the full "pedigree" of the term by finding all possible paths from the GO term to the root term following (i) 'is_a' and 'part_of' relationships, and (ii) by following only 'is_a' relationships. An example pedigree is shown in Additional file 
+    <a ref-type="supplementary-material" rid="S3" href="#S3">3</a> Figure S2.
+   </p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Mapping non-gene contigs</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Contigs may align with a region of the zebra finch genome but not have significant blast alignments with any of the genes in the zebra finch cDNA database, either because some genes are not yet annotated in zebra finch, or because they are aligning to non-exonic gene features, i.e. introns, 5' untranslated regions (5' UTR) or 3' UTR. It is generally assumed that transcriptome sequencing preferentially sequences mRNA, and that other RNA species such as pre-mRNA, the precursor molecule to mRNA, are either not amplified or are present in such small quantities in the cell that sequencing them is unlikely (although see Bakel 
+    <span class="italic">et al</span>. [
+    <a ref-type="bibr" rid="B41" href="#B41">41</a>]). To determine whether non-coding contigs represent pre-mRNA, the location of the nearest gene was calculated by finding the shortest distance between the genome location of known zebra finch genes and the position of the contig alignment to the zebra finch genome (that is, the shortest distance to the start of the 5' UTR or the end of the 3' UTR). The contig was classified into one of six classes according to its genome location relative to the closest mapped gene; class A-contig is downstream from the nearest gene, class B-contig is upstream from the gene, class C-contig is downstream but overlapping one end of the gene, class D-contig is upstream but overlapping one end of the gene, class E-the contig spans the gene, class F-the gene spans the contig (Table 
+    <a ref-type="table" rid="T5" href="#T5">5</a>). Note that "upstream" and "downstream" refer to the orientation of the zebra finch genome assembly, for example, position 345 on Tgu1 is upstream from position 350 on Tgu1. Contigs in classes C, D, E and F were further classified to determine whether the 5' and 3' ends of the contig aligned to the 5' UTR, exons, introns or 3' UTR of the gene.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">In order to determine whether non-coding contigs were closer to genes than expected by chance, the distribution of contigs relative to genes in the zebra finch genome was assessed by simulating the random placement of contigs onto the zebra finch genome and calculating the minimum distance from the start or end of a contig to the start or end of a gene. Contigs were selected at random, placed at a randomly chosen position in the genome, and the minimum distance to a gene calculated. One million replicates were performed to generate a distribution of the distance between randomly placed contigs and the nearest gene, i.e., the distribution expected if contigs were not cDNA generated from mRNA (i.e., gene sequences) but were random fragments of genomic DNA. The observed and simulated distributions were compared with a Kolmogorov-Smirnov test.</p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Given that class A and B contigs do not overlap annotated coding regions in the zebra finch genome, these "non-gene" contig sequences may represent non-coding RNA, although it is possible that they instead represent gene sequences which are unannotated in the zebra finch genome, or that the start or end position of genes is imprecise or differs between great tit and zebra finch. To assess the alignment between class A and B contigs with non-coding RNA, non-coding RNA sequences (including miRNA (micro), rRNA (ribosomal), snoRNA (small nucleolar), snRNA (small nuclear) and misc_RNA (miscellaneous)) were downloaded from the Ensembl website 
+    <span ext-link-type="uri" xlink:href="http://www.ensembl.org/index.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.ensembl.org/index.html</span> using the MartView interface of the BioMart data management system 
+    <span ext-link-type="uri" xlink:href="http://www.biomart.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.biomart.org</span>. The downloaded sequences were blasted against class A and B contig sequences (blastn with stand-alone BLAST, e-value 10
+    <span class="sup">-5</span>, all other settings default). The best alignment was retained for each contig.
+   </p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Metagenomics of non-great tit sequences</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Some of the assembled contigs may not represent true great tit sequences, for instance if great tit tissue was contaminated with parasites, or RNA from other species was amplified and sequenced due to lab error. Contigs which did not align with zebra finch or chicken genome, cDNA or protein sequences were compared to sequences of other organisms by blasting against the latest NCBI Transcript Reference Sequence RNA database (RefSeq RNA; 
+    <span ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/RefSeq/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.ncbi.nlm.nih.gov/RefSeq/</span>) using an e-value of 10
+    <span class="sup">-10 </span>and a word size of 20. For each contig, we extracted the genus names of all alignments ("hits") and classified genera as archea, bacteria, algae, protozoa, plant, fungi, invertebrate, vertebrate_fish, vertebrate_amphibians, vertebrate_mammalian, vertebrate_reptiles, vertebrate_birds, unknown or no_hits. Contigs with at least one hit to vertebrate_birds were considered likely to represent true great tit sequences, while contigs which aligned with no vertebrate sequences were further investigated by blasting against sequences from species important in the ecology of the great tit. All available DNA sequences from common great tit ectoparasites (genus 
+    <span class="italic">Ceratophyllus </span>(flea) and 
+    <span class="italic">Ixodes ricinus </span>(tick)), endoparasites (
+    <span class="italic">Plasmodium relictum</span>, 
+    <span class="italic">Trypanosoma everetti</span>, 
+    <span class="italic">Trypanosoma avium </span>and genera 
+    <span class="italic">Haemoproteus</span>, 
+    <span class="italic">Hepatozoon </span>and 
+    <span class="italic">Leucocytozoon</span>), common trees in Wytham Woods (
+    <span class="italic">Quercus robur </span>(oak), 
+    <span class="italic">Fraxinus excelsior </span>(ash), 
+    <span class="italic">Fagus sylvatica </span>(beech), 
+    <span class="italic">Corylus avellana </span>(hazel) and 
+    <span class="italic">Acer pseudoplatanus </span>(sycamore)), a common foodsource (
+    <span class="italic">Operophtera brumata </span>(winter moth)), and species whose fibre/hair is used in great tit nest-building (genus 
+    <span class="italic">Poa </span>(grass), 
+    <span class="italic">Meles meles </span>(badger) and 
+    <span class="italic">Ovis aries </span>(sheep)) were downloaded from NCBI (
+    <span ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/nuccore" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.ncbi.nlm.nih.gov/nuccore</span>, microsatellites excluded) and saved as a file of 'environmental' sequences. Environmental sequences were blasted against contigs with e-value of 10
+    <span class="sup">-10</span>. Singleton reads which were not assembled into contigs were also blasted against the 'environmental' sequences, with e-value cut-off of 10
+    <span class="sup">-10</span>.
+   </p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Microsatellite repeat discovery</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Microsatellite markers remain an informative and cost-effective tool for small scale population genetic studies. To detect repeats which may be screened to find polymorphic microsatellite markers in the great tit, a modified version of SPUTNIK (
+    <span ext-link-type="uri" xlink:href="http://wheat.pw.usda.gov/ITMI/EST-SSR/LaRota" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://wheat.pw.usda.gov/ITMI/EST-SSR/LaRota</span>) was run to find contigs containing microsatellites with five or more di-, tri-, tetra-and penta-nucleotide repeats (program parameters: unit length = 2-5, points for a mismatch = -6, minimum score = 6, adjust scores for the first unit cell). Repeats and their flanking sequences (100 bp) were blasted against passerine microsatellite sequences (downloaded from NCBI; 
+    <span ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/nuccore" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.ncbi.nlm.nih.gov/nuccore</span>, search term 'passeriformes[orgn] AND microsatellite') to determine whether they had already been isolated in other passerines.
+   </p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Single Nucleotide Polymorphism (SNP) discovery</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">One of the objectives of the transcriptome sequencing was to identify SNPs which could eventually be typed in a large sample of well-phenotyped individuals as part of a QTL mapping experiment. SeqMan NGen was used to produce a summary file of all SNPs and insertion-deletions (indels) in the great tit contig sequences, selecting only those SNPs with base call quality score greater than 30 and where the six neighbouring bases had a quality score more than 20. The summary file was filtered in a hierarchical manner to give a set of SNPs most likely to be segregating in the Wytham Woods population. The summary file was first screened to remove indels, polymorphisms of depth less than eight reads, and polymorphisms of depth 8-20 with minor allele frequency of less than 25%. Polymorphisms were then further screened to produce "high" and "modest" quality SNP files. For the high quality SNPs, (i) polymorphisms of depth greater than 20 with minor allele count of less than five were removed and (ii) polymorphisms located less than 50 bases from another polymorphism or from the start or end of a contig were removed. For the modest quality SNPs, (i) polymorphisms of depth greater than 20 with minor allele count of less than three were removed and (ii) polymorphisms located less than 40 bases from another polymorphism or from the start or end of a contig were removed. The majority of the high quality SNPs were reported in the modest quality file, although some previously detected high quality SNPs were excluded from the modest quality file because the inclusion of lower stringency SNPs meant they now mapped within 40 bases of another SNP.</p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The SNP discovery process was then repeated by reassembling the reads onto the great tit assembly using a higher match percentage (90, default 85) than the default settings ('remap assembly'). The match size was kept at the default value (25) rather than increased to 41 (as previously) to allow some movement of sequences from the contigs they were initially assembled to. Any SNPs from the first discovery phase that were not detected in the remap assembly were excluded from further analysis, as they are not robust to small changes in assembly parameters, and hence may not be true polymorphisms.</p>
+  </sec>
+  <sec class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Alternative splicing</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Alternative splicing produces genetic variation without the need for additional genes [
+    <a ref-type="bibr" rid="B33" href="#B33">33</a>,
+    <a ref-type="bibr" rid="B42" href="#B42">42</a>]. However, genes which are alternatively spliced are a challenge to the assembly of transcriptome sequence into contigs, as it is difficult to predict whether reads extending over alternative splice sites will be assembled into the same contig, or split into two or more different contigs (Figure 
+    <a ref-type="fig" rid="F2" href="#F2">2b</a>). For the scenario where reads from alternative splice variants are assembled into a single contig, some reads will "jump" one or more exons, resulting in a region of very poor alignment to the consensus sequence. Across many aligned reads, these regions of poor sequence similarity tend to produce a 'string' of putative (probably false) single nucleotide polymorphisms in close proximity. SNPs were extracted from the original unfiltered SNP summary file, and two or more SNPs were defined as being part of a 'string' provided the distance between them was less than eight bases (for example, a SNP string of five could at most be spread over 33 bases). Strings of six or more SNPs were considered likely to represent splice variants.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Unless otherwise stated, all analyses and data management (blast summaries, GO mapping, tissue specificity, alternative splice sites, SNP summaries) were coded in Visual Basic and all graphs produced in R v2.11.</p>
+  </sec>
+ </sec>
+</sec>

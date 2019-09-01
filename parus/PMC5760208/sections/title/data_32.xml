@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s4-1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Organismal data were obtained from VertNet, a publicly available data platform for digitized specimen records from museum collections primarily in North America, but also includes global data (
+  <a rid="bib28" ref-type="bibr" href="#bib28">Constable et al., 2010</a>). Body mass is routinely measured when organisms are collected, with relatively high precision and consistent methods, by most field biologists, whose intent is to use those organisms for research and preservation in natural history collections (
+  <a rid="bib113" ref-type="bibr" href="#bib113">Winker, 2000</a>; 
+  <a rid="bib48" ref-type="bibr" href="#bib48">Hoffmann et al., 2010</a>). These measurements are included on written labels and ledgers associated with specimens, which are digitized and provided in standard formats, e.g., Darwin Core (
+  <a rid="bib111" ref-type="bibr" href="#bib111">Wieczorek et al., 2012</a>). In addition to other trait information, mass has recently been extracted and converted to a more usable form from Darwin Core formatted records published in VertNet (
+  <a rid="bib45" ref-type="bibr" href="#bib45">Guralnick et al., 2016</a>). This crucial step reduces variation in how these measurements are reported by standardizing the naming conventions and harmonizing all measurement values to the same units (
+  <a rid="bib45" ref-type="bibr" href="#bib45">Guralnick et al., 2016</a>). We downloaded the entire datasets for Mammalia, Aves, Amphibia, and Reptilia available in September 2016 (
+  <a rid="bib11" ref-type="bibr" href="#bib11">Bloom et al., 2016a</a>, 
+  <a rid="bib12" ref-type="bibr" href="#bib12">Bloom et al., 2016b</a>, 
+  <a rid="bib13" ref-type="bibr" href="#bib13">Bloom et al., 2016c</a>, 
+  <a rid="bib14" ref-type="bibr" href="#bib14">Bloom et al., 2016d</a>) using the Data Retriever (
+  <a rid="bib53" ref-type="bibr" href="#bib53">Kironde et al., 2017</a>; 
+  <a rid="bib67" ref-type="bibr" href="#bib67">Morris and White, 2013</a>) and filtered for those records that had mass measurements available. Fossil specimen records with mass measurements were removed.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We only analyzed species with at least 30 georeferenced individuals whose collection dates spanned at least 20 years and collection locations at least five degrees latitude, in order to ensure sufficient sample size and spatiotemporal extent to accurately represent each species' temperature-mass relationship. We conducted sensitivity analyses to determine if these thresholds were appropriate (
+  <a ref-type="fig" rid="fig2s6" href="#fig2s6">Figure 2—figure supplements 6</a> and 
+  <a ref-type="fig" rid="fig2s7" href="#fig2s7">7</a>). We selected individual records with geographic coordinates for collection location, collection dates between 1900 and 2010, and species-level taxonomic identification, which were evaluated to ensure no issues with synonymy or clear taxon concept issues. To minimize inclusion of records of non-adult specimens, we identified the smallest mass associated with an identified adult life stage category for each species and removed all records with mass values below this minimum adult size. Results were not qualitatively different due to either additional filtering based on specimen lifestage (
+  <a ref-type="fig" rid="fig2s4" href="#fig2s4">Figure 2—figure supplement 4</a>) or removal of outliers (
+  <a ref-type="fig" rid="fig2s5" href="#fig2s5">Figure 2—figure supplement 5</a>). Temperatures were obtained from the Udel_AirT_Precip global terrestrial raster provided by NOAA from their website at 
+  <span ext-link-type="uri" xlink:href="http://www.esrl.noaa.gov/psd/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.esrl.noaa.gov/psd/</span>, a 0.5 by 0.5 decimal degree grid of monthly mean temperatures from 1900 to 2010 (
+  <a rid="bib112" ref-type="bibr" href="#bib112">Willmott and Matsuura, 2001</a>). For each specimen, the mean annual temperature at its collection location was extracted for the year of collection.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">This resulted in a final dataset containing records for 273,901 individuals from 952 bird and mammal species (
+  <a rid="bib69" ref-type="bibr" href="#bib69">MSB Mammal Collection (Arctos), 2015</a>; 
+  <a rid="bib76" ref-type="bibr" href="#bib76">Ornithology Collection Passeriformes - Royal Ontario Museum, 2015</a>; 
+  <a rid="bib71" ref-type="bibr" href="#bib71">MVZ Mammal Collection (Arctos), 2015</a>; 
+  <a rid="bib70" ref-type="bibr" href="#bib70">MVZ Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib55" ref-type="bibr" href="#bib55">KUBI Mammalogy Collection, 2016</a>; 
+  <a rid="bib22" ref-type="bibr" href="#bib22">CAS Ornithology (ORN), 2015</a>; 
+  <a rid="bib36" ref-type="bibr" href="#bib36">DMNS Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib97" ref-type="bibr" href="#bib97">UCLA Donald R, 2015</a>; 
+  <a rid="bib37" ref-type="bibr" href="#bib37">DMNS Mammal Collection (Arctos), 2015</a>; 
+  <a rid="bib95" ref-type="bibr" href="#bib95">UAM Mammal Collection (Arctos), 2015</a>; 
+  <a rid="bib104" ref-type="bibr" href="#bib104">UWBM Mammalogy Collection, 2015</a>; 
+  <a rid="bib94" ref-type="bibr" href="#bib94">UAM Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib100" ref-type="bibr" href="#bib100">UMMZ Birds Collection, 2015</a>; 
+  <a rid="bib31" ref-type="bibr" href="#bib31">CUMV Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib32" ref-type="bibr" href="#bib32">CUMV Mammal Collection (Arctos), 2015</a>; 
+  <a rid="bib65" ref-type="bibr" href="#bib65">MLZ Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib57" ref-type="bibr" href="#bib57">LACM Vertebrate Collection, 2015</a>; 
+  <a rid="bib24" ref-type="bibr" href="#bib24">CHAS Mammalogy Collection (Arctos), 2016</a>; 
+  <a rid="bib75" ref-type="bibr" href="#bib75">Ornithology Collection Non Passeriformes - Royal Ontario Museum, 2015</a>; 
+  <a rid="bib56" ref-type="bibr" href="#bib56">KUBI Ornithology Collection, 2014</a>; 
+  <a rid="bib68" ref-type="bibr" href="#bib68">MSB Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib7" ref-type="bibr" href="#bib7">Biodiversity Research and Teaching Collections - TCWC Vertebrates, 2015</a>; 
+  <a rid="bib93" ref-type="bibr" href="#bib93">TTU Mammals Collection, 2015</a>; 
+  <a rid="bib21" ref-type="bibr" href="#bib21">CAS Mammalogy (MAM), 2015</a>; 
+  <a rid="bib108" ref-type="bibr" href="#bib108">Vertebrate Zoology Division - Ornithology, Yale Peabody Museum, 2015</a>; 
+  <a rid="bib101" ref-type="bibr" href="#bib101">University of Alberta Mammalogy Collection (UAMZ), 2015</a>; 
+  <a rid="bib96" ref-type="bibr" href="#bib96">UAZ Mammal Collection, 2016</a>; 
+  <a rid="bib23" ref-type="bibr" href="#bib23">Charles and Conner Museum, 2015</a>; 
+  <a rid="bib82" ref-type="bibr" href="#bib82">SBMNH Vertebrate Zoology, 2015</a>; 
+  <a rid="bib29" ref-type="bibr" href="#bib29">Cowan Tetrapod Collection - Birds, 2015</a>; 
+  <a rid="bib30" ref-type="bibr" href="#bib30">Cowan Tetrapod Collection - Mammals, 2015</a>; 
+  <a rid="bib73" ref-type="bibr" href="#bib73">NMMNH Mammal, 2015</a>; 
+  <a rid="bib83" ref-type="bibr" href="#bib83">Schmidt Museum of Natural History_Mammals, 2015</a>; 
+  <a rid="bib103" ref-type="bibr" href="#bib103">USAC Mammals Collection, 2013</a>; 
+  <a rid="bib66" ref-type="bibr" href="#bib66">MLZ Mammal Collection (Arctos), 2015</a>; 
+  <a rid="bib74" ref-type="bibr" href="#bib74">Ohio State University Tetrapod Division - Bird Collection (OSUM), 2015</a>; 
+  <a rid="bib27" ref-type="bibr" href="#bib27">Collections, 2015</a>; 
+  <a rid="bib35" ref-type="bibr" href="#bib35">DMNH Birds, 2015</a>; 
+  <a rid="bib26" ref-type="bibr" href="#bib26">CM Birds Collection, 2015</a>; 
+  <a rid="bib115" ref-type="bibr" href="#bib115">WNMU Mammal Collection (Arctos), 2015</a>; 
+  <a rid="bib99" ref-type="bibr" href="#bib99">UCM Mammals Collection, 2015</a>; 
+  <a rid="bib106" ref-type="bibr" href="#bib106">UWYMV Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib72" ref-type="bibr" href="#bib72">NCSM Mammals Collection, 2015</a>; 
+  <a rid="bib107" ref-type="bibr" href="#bib107">Vertebrate Zoology Division - Mammalogy, Yale Peabody Museum, 2015</a>; 
+  <a rid="bib49" ref-type="bibr" href="#bib49">HSU Wildlife Mammals, 2016</a>; 
+  <a rid="bib114" ref-type="bibr" href="#bib114">WNMU Bird Collection (Arctos), 2015</a>; 
+  <a rid="bib105" ref-type="bibr" href="#bib105">UWBM Ornithology Collection, 2015</a>; 
+  <a rid="bib98" ref-type="bibr" href="#bib98">UCM Birds, 2015</a>; 
+  <a rid="bib102" ref-type="bibr" href="#bib102">University of Alberta Ornithology Collection (UAMZ), 2015</a>; 
+  <a rid="bib84" ref-type="bibr" href="#bib84">SDNHM Birds Collection, 2015</a>). The average number of individuals per species was 288, ranging from 30 to 15,415 individuals. The species in the dataset were diverse, including volant, non-volant, placental, and marsupial mammals, and both migratory and non-migratory birds. There were species from all continents except Antarctica, though the majority of the data were concentrated in North America (
+  <a ref-type="fig" rid="fig1" href="#fig1">Figure 1A</a>). The distribution of the species' mean masses was strongly right-skewed, as expected for broad scale size distributions (
+  <a rid="bib18" ref-type="bibr" href="#bib18">Brown and Nicoletto, 1991</a>), with 74% of species having average masses less than 100 g. Size ranged from very small (3.7 g desert shrew 
+  <span class="italic">Notiosorex crawfordi</span> and 2.6 g calliope hummingbird 
+  <span class="italic">Stellula calliope</span>) to very large (63 kg harbor seal 
+  <span class="italic">Phoca vitulina</span> and 5.8 kg wild turkey 
+  <span class="italic">Meleagris gallopavo</span>).
+ </p>
+</sec>

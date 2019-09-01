@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2b" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Signal Processing &amp; Pattern Recognition as Applied to Animal Vocalisations</div>
+ <sec id="s2b1" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Single- and multi-label approaches</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Recognizers of animal vocalisations use prototypes of the target species extracted from examples of annotated training data. These recordings come out of large bioacoustics inventories (e.g. DORSA (
+   <span ext-link-type="uri" xlink:href="http://www.dorsa.de" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.dorsa.de</span>), MacAulay Library (
+   <span ext-link-type="uri" xlink:href="http://macaulaylibrary.org/index.do" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://macaulaylibrary.org/index.do</span>), Tierstimmenarchivb (
+   <span ext-link-type="uri" xlink:href="http://www.tierstimmenarchiv.de" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.tierstimmenarchiv.de</span>), and Xeno-canto (
+   <span ext-link-type="uri" xlink:href="http://www.xeno-canto.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.xeno-canto.org</span>) or from private corpora.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">These inventories, at the time of their compilation did not follow a common protocol on how to log the target species. Some contain just a clip of the target species, others contain the target species in the presence of several others or in the presence of noise or they are even human narrated. The vast majority of reported research on classifying animal vocalisations follow the single label paradigm (a recording holds a single species). The reference library of a single instance recognizer should contain a large number of only the target species and nothing else, as the recognizer will learn the sound that is unrelated to the target species, which in the end will increase its false alarms. The single label approach comes with a major drawback. Not many people are qualified to recognize species efficiently by sound. In the single-instance case, the construction of a reference library is a quite laborious task as the expert must screen all recordings and apply delicate time-frequency cleaning to any possible interference. Most experts are unwilling to undertake this task for a large number of species and recordings. Again, single-instance recognizers are vulnerable to false positives, i.e. species that are not the target but sound like it and are included by mistake in the reference library. The Multi-label approach on bird recognition is in our opinion a breakthrough and was originally proposed for the task of bird recognition in 
+   <a rid="pone.0096936-Briggs1" ref-type="bibr" href="#pone.0096936-Briggs1">[5]</a>. In this approach the expert does not need to clean or time-stamp the recordings at all.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The expert just writes down the acoustic classes that appear in a recording e.g. European Robin, Common Chaffinch, without any particular order or time stamp. That is, he/she has to select the set of labels attributed to the recording without having to clean, remove, isolate or timestamp parts of the recording. Each recording in the NIPS 20134B database has vocalisations from a varying number of species and the training corpus is annotated to the species level. We transformed the annotation data of all recordings to a binary matrix of a dimension 687×88 (687 training files, 87 for the species and 1 for noise only recordings as seen in 
+   <a rid="pone-0096936-t001" ref-type="table" href="#pone-0096936-t001">Table 1</a>). Note that any all noise types as well as recording void of vocalisations can be pooled to a general noise class.
+  </p>
+  <div id="pone-0096936-t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0096936.t001</span>
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <div class="title">Annotation sample of the training data under the multi-label framework.</div>
+   </div>
+   <div class="alternatives">
+    <div id="pone-0096936-t001-1" xlink:href="pone.0096936.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <table frame="hsides" rules="groups">
+     <colgroup span="1">
+      <col align="left" span="1"/>
+      <col align="center" span="1"/>
+      <col align="center" span="1"/>
+      <col align="center" span="1"/>
+      <col align="center" span="1"/>
+     </colgroup>
+     <thead>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">#File</td>
+       <td align="left" rowspan="1" colspan="1">Noise</td>
+       <td align="left" rowspan="1" colspan="1">Long-tailed Tit</td>
+       <td align="left" rowspan="1" colspan="1">…</td>
+       <td align="left" rowspan="1" colspan="1">Turdus philomelos</td>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">001</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">1</td>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">1</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">002</td>
+       <td align="left" rowspan="1" colspan="1">1</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">1</td>
+       <td align="left" rowspan="1" colspan="1">1</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The multi-label approach is responsible for marginalizing over the multiple labels and associate probabilities to species. This procedure accelerates the annotation of the human expert by far, as it alleviates the necessity of isolating the target signal. The expert, either by spectrographic analysis or by listening to the dubious cases, selects the appropriate tags and moves on to the next recording. Therefore, the multi-label approach relaxes by far the effort of constructing more complete reference databases.</p>
+ </sec>
+</sec>

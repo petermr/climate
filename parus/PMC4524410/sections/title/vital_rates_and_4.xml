@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Vital rates and projection kernel</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The vital rates are one way to summarise the life history of an organism (Caswell, 
+  <a rid="b7" ref-type="bibr" href="#b7">2001</a>). In IPMs, these are functions describing how survival, reproduction and trait development depend on the static and dynamic traits and the environment. For the sake of simplicity, we will consider cases with only one static and one dynamic trait, but note that in general the framework can include more than one trait of each type. Let 
+  <span class="italic">x</span> and 
+  <span class="italic">y</span> denote the dynamic and static trait, respectively, and let the environment be described by a variable 
+  <span class="italic">θ</span> representing one or more environmental variables like temperature, rainfall or resource availability, taking a new value each time step. For simpler notation, we will omit 
+  <span class="italic">θ</span> where suitable. Interactions between 
+  <span class="italic">x</span>, 
+  <span class="italic">y</span> and 
+  <span class="italic">θ</span> over time will shape the life history (i.e. vital rates) of each individual, including mechanisms of inheritance (
+  <a ref-type="fig" rid="fig01" href="#fig01">Fig. 1</a>). Each individual will have a constant value of 
+  <span class="italic">y</span> set at birth, but will experience different values of 
+  <span class="italic">x</span> and 
+  <span class="italic">θ</span> over the lifetime. Together, the effects of the static and dynamic traits on the vital rates can be combined in a number of ways, including interactions between them, so that a range of different life histories can be modelled using only two traits.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The population density distribution describing the expected number of individuals across the two traits is given by the function 
+  <span class="italic">n</span>(
+  <span class="italic">x</span>,
+  <span class="italic">y</span>). Changes in this joint distribution over time is described by the projection kernel, which is a function of all the underlying vital rate functions (Easterling 
+  <span class="italic">et al</span>. 
+  <a rid="b21" ref-type="bibr" href="#b21">2000</a>). For an IPM of static and dynamic traits, it is given by
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div id="m3" class="disp-formula">
+   <div xlink:href="ele0018-0417-m3.jpg" mimetype="image" position="float" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <span class="label">(1)</span>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">where the survival kernel 
+  <span class="bold">S</span> describes survival and transitions of the dynamic trait, while the reproduction kernel 
+  <span class="bold">B</span> describes production of offspring including the offspring distribution of both traits. Two important aspects separate this model from a model defined for only one trait: (1) the Dirac delta function 
+  <div class="inline-formula">
+   <span xlink:href="ele0018-0417-mu4.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div> enters the survival kernel to keep the static trait 
+  <span class="italic">y</span> constant for an individual during its lifetime (in the case of a discrete trait matrix model this would be replaced by a Kronecker delta), and (2) in the reproduction kernel, the joint distribution 
+  <div class="inline-formula">
+   <span xlink:href="ele0018-0417-mu5.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div> allows the static and the dynamic trait to be correlated at birth (or whenever offspring are counted), which is likely often the case. For example, if the static trait is within-season timing of birth and the dynamic trait is body size, then early born individuals will have more time to grow so that if offspring are counted as 1-year-olds the two traits will be correlated at this point.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The joint distribution 
+  <div class="inline-formula">
+   <span xlink:href="ele0018-0417-mu6.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div> allows for many mechanisms of inheritance to be considered (Danchin, 
+  <a rid="b19" ref-type="bibr" href="#b19">2013</a>), including (1) no inheritance, i.e. no effect of parental traits, (2) cohort effects through the environment 
+  <span class="italic">θ</span>, (3) additive genetic inheritance of the static trait 
+  <span class="italic">y</span> and (4) maternal effects (including epigenetic inheritance) through the dynamic trait 
+  <span class="italic">x</span> and interactions with 
+  <span class="italic">y</span> and/or 
+  <span class="italic">θ</span>. The specific form of the offspring trait distribution 
+  <div class="inline-formula">
+   <span xlink:href="ele0018-0417-mu7.jpg" mimetype="image" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div> will in each case depend on the relevant mechanisms for inheritance, that may lead to a frequency-dependent model. The model definition here is general, and for each specific application, the potential mechanisms of inheritance should be considered. For instance, the general definition does not preclude mechanisms causing runaway selection (Darwinian demons). This could occur, for instance with directional selection on a trait where offspring values do not regress towards a mean.
+ </p>
+</sec>

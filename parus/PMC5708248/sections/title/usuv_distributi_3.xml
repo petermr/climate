@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">USUV Distribution Modeling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We applied an ensemble boosted regression tree (BRT) approach using R software (
+  <span ext-link-type="uri" xlink:href="https://www.r-project.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://www.r-project.org</span>) with the packages raster, dismo, and ecospat and visualized with ggplot2, which was successfully applied to other mosquitoborne viruses in the past (e.g., Zika virus) (
+  <a rid="R28" ref-type="bibr" href="#R28">
+   <span class="italic">28</span>
+  </a>). We calibrated BRT models with presence-only data and 10,000 random background points selected from the entire area of Germany. To account for the biased bird collection due to the unsystematic dead bird surveillance program and to increase the robustness of model predictions and quantify model uncertainty, we selected 300 random subsamples of the presence data with replacement. Due to locality uncertainties in the presence data (e.g., mobility of the birds and imprecise reporting by the volunteer senders), we applied a random point selection within the corresponding German postal code areas (0.31–891.68 km
+  <span class="sup">2</span>, mean size 32.00 km
+  <span class="sup">2</span>) for all presence points (i.e., sites with birds testing positive for USUV) in each subsample. In addition, we selected a new set of 10,000 random background points for each model. We weighted background points and occurrence points equally in each of the 300 BRT models, which we averaged for the final USUV distribution map. We converted the continuous distribution map for USUV to a binary map with areas that are suitable or unsuitable for USUV. Following Pigott et al. (
+  <a rid="R29" ref-type="bibr" href="#R29">
+   <span class="italic">29</span>
+  </a>), we selected a threshold that included 90% of the USUV occurrence points. We chose a threshold cutoff of 90% instead of 100% to account for potential spatial inaccuracies of the occurrence point dataset.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We validated the models with a 10-fold cross-validation approach. We produced a total of 300 random split sampling datasets with 10 subsets for training datasets (comprising 10% of the presence and background observations) and 10 subsets for test datasets (comprising 90% of the presence and background observations) each. We used the training datasets to assess the ability of the models to predict the test dataset with the area under the curve (AUC) statistic. We averaged the AUC values of the models across the 10 models of each split sampling dataset and finally across the 300 average AUC values. Furthermore, we applied a pairwise distance sampling procedure to avoid AUC inflation due to spatial sorting bias, which is considered to give a more realistic quantification of the model performance especially regarding its transferability (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>).
+ </p>
+</sec>

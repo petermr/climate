@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec012" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data Analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We estimated annual standardised directional selection gradients following methods outlined in [
+  <a rid="pbio.1002120.ref069" ref-type="bibr" href="#pbio.1002120.ref069">69</a>]. Briefly, we first characterised the relationship between egg-laying date and the number of local recruits produced, in each year using generalised linear models with a Poisson error structure. GLMs included linear and quadratic linear predictor scale regression terms (to detect directional, stabilising or disruptive selection), except for 1981, 1989, 1990, 1991, and 2006, where we fitted only linear regression terms because low numbers of recruits (&lt; 15) precluded fitting more complex models. Next, we used the R package gsg [
+  <a rid="pbio.1002120.ref069" ref-type="bibr" href="#pbio.1002120.ref069">69</a>] to obtain yearly standardised directional selection gradients (sensu [
+  <a rid="pbio.1002120.ref070" ref-type="bibr" href="#pbio.1002120.ref070">70</a>]), and their standard errors and 
+  <span class="italic">p</span>-values using a parametric bootstrap algorithm. Because of the large statistical uncertainty associated with each annual selection gradient, we developed a method to robustly estimate the regression of selection gradients against predictors (e.g., year or environmental variables). We fitted the model β
+  <sub>
+   <span class="italic">t</span>
+  </sub> ~ μ + 
+  <span class="italic">b</span>
+  <sub>1
+   <span class="italic">t</span>
+  </sub> + 
+  <span class="italic">b</span>
+  <sub>2
+   <span class="italic">t</span>
+  </sub>
+  <span class="sup">2</span> + 
+  <span class="italic">m</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> + 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub>, where β
+  <sub>
+   <span class="italic">t</span>
+  </sub> are estimated selection gradients for year t, and 
+  <span class="italic">m</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> are deviates of estimated selection gradients from their unknown true values and are assumed to be drawn from the distributions N(0, SE
+  <sub>
+   <span class="italic">t</span>
+  </sub>
+  <span class="sup">2</span>), where SE
+  <sub>
+   <span class="italic">t</span>
+  </sub> are the standard errors associated with each estimated selection gradients. 
+  <span class="italic">b</span>
+  <sub>1</sub> and 
+  <span class="italic">b</span>
+  <sub>2</sub> are regression coefficients relating selection to year. When testing whether other environmental variables affected selection strength, coefficients relating selection to these environmental variables were included similarly in addition to linear and quadratic effects of year. 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> are residuals, and are assumed to be normally distributed with estimated variance. We fitted the model by maximum likelihood, tested regression terms with LRTs, and approximated the standard errors of regression coefficients from the information matrix. The maximum likelihood techniques provided nearly identical inferences to a complimentary Bayesian approach implemented by extending the meta-analytic approaches used in [
+  <a rid="pbio.1002120.ref071" ref-type="bibr" href="#pbio.1002120.ref071">71</a>]. When formally analysing stabilising selection, we pooled data (for reasons mentioned above), into the periods (1980–1989, 1990–1999, and 2000–2010) and regressed relative fitness against the linear and quadratic term of centred egg-laying date using the approach described above.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The relationship of single fitness components (number of recruits, number of fledglings and recruitment probability) with egg-laying date and environmental variables was tested with GLMMs, with year as random effect, to account for nonindependence of data from the same year with respect to the environmental variables that were measured at an annual scale. Female identity was included as random effect to account for females breeding in more than one year. Number of fledglings and recruits were analysed using a log-link and a Poisson error-distribution. An observation-level random effect was included in the Poisson models, the commonly observed overdispersion in reproductive success [
+  <a rid="pbio.1002120.ref072" ref-type="bibr" href="#pbio.1002120.ref072">72</a>]. The recruitment probability per brood was analysed using a logit-link and a Binomial error-distribution.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The heritability of egg-laying date was calculated based on standard quantitative genetic approaches implemented in the so-called “animal model” ([
+  <a rid="pbio.1002120.ref073" ref-type="bibr" href="#pbio.1002120.ref073">73</a>]. To account for year-to-year variation and age effects, year and age were included as fixed factors. Female identity was included as “permanent environment” random effect to account for repeated breeding events of the same female. The additive genetic effect was included as random effect to estimate heritability as the ration of the variance explained by the additive genetic effect over the total phenotypic variance (excluding year and age effects as these were fitted as fixed effects).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">All estimates are reported ± standard error.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Data deposited in the Dryad repository: 
+  <span ext-link-type="uri" xlink:href="http://dx.doi.org/10.5061/dryad.cv24c" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://dx.doi.org/10.5061/dryad.cv24c</span> [
+  <a rid="pbio.1002120.ref074" ref-type="bibr" href="#pbio.1002120.ref074">74</a>].
+ </p>
+</sec>

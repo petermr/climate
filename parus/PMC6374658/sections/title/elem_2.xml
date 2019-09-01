@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece34812-sec-0002" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">MATERIALS AND METHODS</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Data were collected by the British and Irish Ringing Scheme run by the British Trust for Ornithology (BTO), which recorded 932,722 captures of blue tits (514,235), coal tits (99,737), and great tits (318,751) in Britain and Ireland between 1965 and 2017 in which both body mass and wing length were recorded. Initial inspection of the data indicated that 16 measurements were likely to be erroneous (outside the plausible range of values), and these were therefore removed from the subsequent analysis. The remaining measurements were then sorted by month and year of capture, and multiple captures of the same individual within the same month and year were combined to reduce multiple counting of individuals, leaving 452,599 blue tits, 76,743 coal tits, and 271,641 great tits.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Individual birds were assigned to one of two age classes (adult or juvenile) based on the BTO ringing code assigned at capture. Juveniles were defined as birds of age 0, and adults were defined as birds of ages greater than 0. Birds not confirmed to be of age 0 between January 1st and June 30th were omitted from the analysis because they could potentially have been either juveniles hatched in the previous calendar year, or adults.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Data processing was performed using the Matlab computing program (Mathworks, 
+  <a rid="ece34812-bib-0014" ref-type="ref" href="#ece34812-bib-0014">2016</a>). Subsequent statistical analyses were performed in R (R Core Team, 
+  <a rid="ece34812-bib-0026" ref-type="ref" href="#ece34812-bib-0026">2016</a>). Analysis was divided into four sections: (a) A preliminary analysis of within‐year changes in body mass, to ensure that all three investigated species displayed similar patterns of body mass change and were therefore likely affected by the same environmental factors, (b) Identification of the trend in long‐term change in body mass, (c) Identification of the trend in long‐term change in wing length and (d) A linear model correlating long‐term changes in body mass with changes in environmental factors.
+ </p>
+ <sec id="ece34812-sec-0003" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.1</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Within‐year variations in body mass</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Mean body mass was calculated for each species, age class, and month to show seasonal trends in absolute body mass. A 
+   <span class="italic">t</span> test was performed for each species to determine the difference in mean annual body mass between adults and juveniles. Additionally, birds with ages coded as 3 or 5 under the BTO ringing scheme were separated from each other during this analysis to demonstrate changes in juvenile mass from fledging to adulthood. Great tits show pronounced sexual dimorphism and were therefore also separated by sex (134,442 female records and 149,666 male records, with 34,643 unsexed or inconsistently sexed records removed from the analysis) to identify differences in seasonal body mass patterns between males and females.
+  </p>
+ </sec>
+ <sec id="ece34812-sec-0004" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.2</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Long‐term changes in body mass</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A linear regression of body mass against year was performed for each species, age class, and month to reveal any long‐term changes in body mass since the 1960s. We used these regressions to fit curves for each species and age class to describe seasonal differences in long‐term rates of change of the mean population body mass. One possibility is that apparent changes in body mass over time may be accounted for by changes in average timing of ringing over the study period, interacting with changes in bird body mass over the course of a day. To test this, a liner regression was performed for juvenile blue tits in January, including only birds caught at noon.</p>
+ </sec>
+ <sec id="ece34812-sec-0005" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Long‐term changes in wing length</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A linear regression of wing length against year was performed for each species, age class, and month to compare long‐term changes in body mass with long‐term changes in body size, using wing length as a proxy for body size (Gosler et al., 
+   <a rid="ece34812-bib-0008" ref-type="ref" href="#ece34812-bib-0008">1995</a>).
+  </p>
+ </sec>
+ <sec id="ece34812-sec-0006" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.4</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Linear model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A linear model was produced to identify the mechanisms responsible for the observed long‐term trends in body mass. Each body mass record was transformed into a standard deviation from the mean mass for that species and age class to allow standardized comparisons between groups. Temperatures and sparrowhawk abundances were also standardized. Based on visual similarity between the December and January datasets and among the three study species, data from all three species and both age classes in December and January were then pooled to produce a midwinter dataset, making the assumption that approximately the same pressures would be acting on each age class and species. A linear model was then fitted to determine the effects of year of capture (centered on the year 2000), mean monthly UK temperature in the year of capture (MET Office, 
+   <a rid="ece34812-bib-0017" ref-type="ref" href="#ece34812-bib-0017">2018</a>), and an index of sparrowhawk abundance in England in the year of capture (Robinson et al., 
+   <a rid="ece34812-bib-0027" ref-type="ref" href="#ece34812-bib-0027">2016</a>) on the standardized mass of the captured individuals. All variables were added both separately and as pairwise interactions, and the “dredge” function (Bartoń, 
+   <a rid="ece34812-bib-0004" ref-type="ref" href="#ece34812-bib-0004">2018</a>) was used to compare models to determine which model had the strongest Akaike information criterion (AIC) support. The three‐way interaction between all variables was not included, as it is difficult to justify biologically.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Although wing length is likely to have a major impact on individual body mass (because wing length acts as a proxy for body size, and larger birds are typically heavier; Gosler et al., 
+   <a rid="ece34812-bib-0008" ref-type="ref" href="#ece34812-bib-0008">1995</a>), wing length was omitted from this model because mean population wing length is liable to change over time in response to changing wing‐loading demands driven by changes in body mass. Consequently, inclusion of wing length in the model would be liable to mask the effects of other factors on bird body mass.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Sparrowhawk abundance indices were not available after January 2015 or before December 1974, and birds from years outside these bounds were therefore excluded from the model. Sparrowhawk abundance was recorded in the summer, and winter indices were therefore approximated by interpolating between adjacent summer measurements.</p>
+ </sec>
+</sec>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece34038-sec-0005" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">As bill surface area often co‐varies with body size in birds (Field et al., 
+  <a rid="ece34038-bib-0028" ref-type="ref" href="#ece34038-bib-0028">2013</a>), we took the residuals of bill size regressed on tarsus length as a measure of corrected bill size. Given concerns about the use of residuals (Freckleton, 
+  <a rid="ece34038-bib-0029" ref-type="ref" href="#ece34038-bib-0029">2002</a>), we also included tarsus as a predictor in all models (Tables 
+  <a rid="ece34038-sup-0001" ref-type="supplementary-material" href="#ece34038-sup-0001">S2</a> and 
+  <a rid="ece34038-sup-0001" ref-type="supplementary-material" href="#ece34038-sup-0001">S3</a>). Positive residuals indicate a larger bill size relative to body size, while negative residuals indicate bill size proportionately smaller than body size. Northern cardinals express sexual dimorphism not only in body size, but also in corrected bill surface area. Males have larger bills than females throughout their range (Figure 
+  <a rid="ece34038-sup-0001" ref-type="supplementary-material" href="#ece34038-sup-0001">S1</a>) and may experience higher exposure to air temperature and humidity variation as a result of singing more compared to females (Conner, Anderson, &amp; Dickson, 
+  <a rid="ece34038-bib-0017" ref-type="ref" href="#ece34038-bib-0017">1986</a>) and increased respiratory water loss (Greenberg &amp; Danner, 
+  <a rid="ece34038-bib-0040" ref-type="ref" href="#ece34038-bib-0040">2012</a>; Greenberg, Cadena et al., 
+  <a rid="ece34038-bib-0039" ref-type="ref" href="#ece34038-bib-0039">2012</a>). Therefore, we investigated the sexes separately for all analyses.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used linear mixed models (LMM) using a Gaussian error distribution to assess the variation in bill surface area across range‐wide gradients of temperature and relative humidity for all birds and each sex separately. We ran two sets of models: one set for average minimum temperature and one set for average maximum temperature. We first aggregated our raw data by sex and collection location. We weighted cardinal bill surface area by the number of birds measured at each location to account for differences in the precision of estimates at each location and included an exponential correlation structure based on geographic coordinates accommodating spatial model inference (
+  <span class="italic">N</span> = 345). We included the fixed effects of year, temperature, housing density, and humidity. Temperature, housing density, and humidity were all taken relative to their 30‐year average. We also included an interaction between temperature and humidity and an interaction between temperature and housing density. We incorporated observation ID as a random effect to serve as a grouping factor for the spatial correlation matrix. We ran models using the R package “nlme” (Pinheiro, Bates, DebRoy, &amp; Sarkar, 
+  <a rid="ece34038-bib-0061" ref-type="ref" href="#ece34038-bib-0061">2011</a>). We used an alpha level of 0.05 for significant results.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For purposes of visualization, we used geographically weighted regression (GWR) to allow modeled relationships between climate and bill surface area to vary across geographic regions (Charlton &amp; Fotheringham, 
+  <a rid="ece34038-bib-0016" ref-type="ref" href="#ece34038-bib-0016">2009</a>). GWR is primarily an exploratory approach, which allows local and regional non‐stationarity in parameter coefficients. We included two separate relationships in this analysis, investigating the relationship between bill surface area and relative humidity, and bill surface area and relative humidity x average minimum temperature for all birds. We used fixed bandwidths (selected using AIC
+  <sub>
+   <span class="italic">c</span>
+  </sub> in R package “spgwr”) to inform spatial weighting of each data point (Bivand &amp; Yu, 
+  <a rid="ece34038-bib-0009" ref-type="ref" href="#ece34038-bib-0009">2008</a>) and estimated local coefficients using a Gaussian kernel function in the R package “spgwr” (Bivand &amp; Yu, 
+  <a rid="ece34038-bib-0009" ref-type="ref" href="#ece34038-bib-0009">2008</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Due to a sparsity of samples during the full 85‐year period over all regions within our study range, we investigated temporal variation of bill surface area in three separate subregions that had adequate coverage across the 85‐year time span: Chicago, IL, Ithaca, NY, and Washington, D.C. (Figure 
+  <a rid="ece34038-fig-0001" ref-type="fig" href="#ece34038-fig-0001">1</a>). The northern cardinal dispersal distance is conservatively estimated at 10 km; therefore, we used a 10 km radius distance for each location in this subregion analysis (Ausprey &amp; Rodewald, 
+  <a rid="ece34038-bib-0006" ref-type="ref" href="#ece34038-bib-0006">2013</a>; Donovan &amp; Flather, 
+  <a rid="ece34038-bib-0023" ref-type="ref" href="#ece34038-bib-0023">2002</a>). Using general linear models, we tested the relationship between bill surface area and year, bill surface area and housing density, and bill surface area and minimum temperature for three groups: females, males, and all birds. We used decadal estimates for housing density in this temporal analysis. 
+  <span class="italic">R</span>
+  <span class="sup">2</span> values for our generalized mixed models and simple linear models were calculated using the package “MuMIn” in R (Barton, 
+  <a rid="ece34038-bib-0008" ref-type="ref" href="#ece34038-bib-0008">2018</a>). We z‐standardized all independent variables to allow straightforward comparison and interpretation of the coefficient estimates and conducted all analyses in R Version 3.3.1 (R Core Team 
+  <a rid="ece34038-bib-0063" ref-type="ref" href="#ece34038-bib-0063">2016</a>).
+ </p>
+</sec>

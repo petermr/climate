@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="mec13452-sec-0013" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Estimating the number of SNPs contributing to variance</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">QTL mapping and GWAS aim to identify loci that make a large contribution to trait variation, but do not provide an estimate for the total number of loci contributing to phenotypic variation. The number of SNPs explaining trait variation and the overall phenotypic variance explained by the SNPs were estimated using a Bayesian variable selection regression model (Guan &amp; Stephens 
+  <a rid="mec13452-bib-0025" ref-type="ref" href="#mec13452-bib-0025">2011</a>) implemented in the software 
+  <span class="sc">pimass</span> (
+  <span ext-link-type="uri" xlink:href="http://www.haplotype.org/pimass.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.haplotype.org/pimass.html</span>). This approach fits a linear model where phenotype is determined by a subset of SNPs, each of which have an estimated effect size on the phenotype. In each iteration, SNPs may be kept, added or removed from the model, with SNPs with strongest associations with the phenotype added to the model with highest probability. The total number of SNPs contributing to the phenotype, and the total amount of variation explained by these SNPs, is calculated from the model at each iteration and defines the posterior distributions on these parameters. While this approach does not explicitly account for population stratification due to the presence of related individuals, the likelihood of false‐positive associations between SNPs and traits caused by this population structure is reduced by estimating SNP effect sizes after controlling for other SNPs in the model (some of which may already account for population structure) (Guan &amp; Stephens 
+  <a rid="mec13452-bib-0025" ref-type="ref" href="#mec13452-bib-0025">2011</a>; Gompert 
+  <span class="italic">et al</span>. 
+  <a rid="mec13452-bib-0023" ref-type="ref" href="#mec13452-bib-0023">2013</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The multi‐SNP analysis was performed on EPVs for each trait using 
+  <span class="sc">pimass</span> to obtain MCMC samples from the joint posterior probability distribution of the model parameters. For each trait, the model was run three times for 110 000 iterations, with parameter values recorded every 10th iteration after discarding the first 10 000 iterations. Results were similar across replicate runs; therefore, results (median values, mean values and 95% equal tail probability credible intervals) are presented across all three replicates for all but two traits, where poor convergence was observed in one replicate, and hence, results are presented for the remaining two replicates.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The estimated number of SNPs contributing to trait variance, and the total proportion of variance explained, was compared for each trait between the two populations, by determining whether 95% credible intervals on the estimates overlapped.</p>
+</sec>

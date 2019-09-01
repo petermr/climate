@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Assessing whether the responses are adaptive</div>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Separate analyses were conducted for the PRCS and PRC datasets and, within each of them, for temperature and precipitation. All analyses were conducted using linear models as no deviation from linearity was detected by visual inspection of the relations between (1) year and climate, (2) trait and climate and (3) selection and year for each study (Supplementary Figs. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">11</a>–
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">15</a>). First, we assessed for each study condition 1 necessary to infer adaptive responses (i.e. the extent to which the climatic variable changed directionally over years). To this end, we fitted for each study a mixed-effects model with the climatic variable as the response and the year as a fixed covariate, taking into account temporal autocorrelation (as random effect):
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{Clim}}_t = \alpha + \beta _{{\mathrm{Clim}}} \times {\mathrm{Year}}_t + \varepsilon _t + \varepsilon ,$$\end{document}</span>
+    <div id="M2" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Clim</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">α</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">β</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Clim</span>
+      </div>
+     </div>
+     <span class="mo">×</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Year</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ε</span>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_10924_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where Clim is the quantitative climate variable, Year the quantitative year covariate, 
+  <span class="italic">t</span> the time, 
+  <span class="italic">ε</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> is a Gaussian random variable with mean zero and following an AR1 model over years, and 
+  <span class="italic">ε</span> is an independent Gaussian random variable with mean zero and variance representing the residual variance of the study. 
+  <span class="italic">β</span>
+  <sub>Clim</sub> is the regression coefficient reflecting the slope of the climatic variable on the year for the study (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1b</a>). To avoid overfitting, we refitted the same model without the AR1 structure and retained, for each study, the model structure leading to the lowest marginal AIC
+  <span class="sup">
+   <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+  </span>. This approach was applied to all the models fitted to each study (i.e. to assess conditions 2 and 3, and change of selection across years, as described below).
+ </p>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">We assessed condition 2, the relation between the trait and the climatic variable, separately for phenological and morphological traits. For this, we fitted a mixed-effects model for each study with mean annual population trait values as a response and the climatic variable and the year as fixed effects. Year was included as a quantitative predictor in this model to account for the effects of variables other than the considered climatic variable, which had changed with time and could have affected the trait. Examples of such variables are any environmental alterations, such as land use change and succession but also other climatic variables, which potentially could have affected the trait, but for which we did not have data. In this model, we took into account temporal autocorrelation in the response variable and weighted the residual variance by the variance of the response variable (i.e. the reported squared SE of the mean annual population trait values) to account for between-year variation in uncertainty associated with mean annual population trait values. Prior to fitting the models we z-transformed trait values (i.e. subtracted the mean and divided by their reported standard deviation) to later compare the effect of the climatic variable on different traits. Accordingly, we also transformed the weights of the residual variance by dividing the reported SEs by the SD of the mean annual population trait values per study. The fitted model was:
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{Trait}}_t = \alpha + \beta _{{\mathrm{Trait}}} \times {\mathrm{Clim}}_t + \gamma\, \times {\mathrm{Year}}_t + \varepsilon _t + \varepsilon ,$$\end{document}</span>
+    <div id="M4" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Trait</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">α</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">β</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Trait</span>
+      </div>
+     </div>
+     <span class="mo">×</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Clim</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">γ</span>
+     <span width="0.25em" class="mspace"/>
+     <span class="mo">×</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Year</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ε</span>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_10924_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where Trait is the mean phenotypic trait (z-scaled across the years within the study), Clim the quantitative climate covariate, Year the quantitative year covariate, 
+  <span class="italic">t</span> the time, 
+  <span class="italic">ε</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> is a Gaussian random variable with mean zero and following a AR1 model over years, and 
+  <span class="italic">ε</span> is an independent Gaussian random variable with mean zero and variance proportional to the estimated variance of the mean phenotypic trait (which depends on 
+  <span class="italic">t</span>). 
+  <span class="italic">β</span>
+  <sub>Trait</sub> is the regression coefficient reflecting the slope of the trait on the climatic variable for the study (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1c</a>).
+ </p>
+ <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">We assessed condition 3 of whether the trait change was associated with fitness benefits in a two-step procedure. In the first step, we fitted for each study an intercept-only mixed-effects model with annual linear selection differentials as a response. We allowed for temporal autocorrelation and weighted the residual variance by the variance of the annual linear selection differentials (i.e. the reported squared SE of the annual selection differentials). The fitted model was:
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{Sel}}_t = \alpha + \varepsilon _t + \varepsilon ,$$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Sel</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">α</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ε</span>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_10924_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where Sel is the estimate of the yearly linear selection differential, 
+  <span class="italic">t</span> is the time, 
+  <span class="italic">ε</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> is a Gaussian random variable with mean zero and following an AR1 model over years, and 
+  <span class="italic">ε</span> is an independent Gaussian random variable with mean zero and variance proportional to the estimated variance of the annual linear selection differential (which depends on 
+  <span class="italic">t</span>). The intercept 
+  <span class="italic">α</span> describes a non-zero mean of the autoregressive process. The predictions from the fitted model (Sel
+  <sub>
+   <span class="italic">t</span>
+  </sub>), including the random effect, are estimates of annual linear selection differentials, and their inverse-variance weighted average is termed ‘weighted mean annual selection differential’, WMSD (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1e</a>). The variance used in weighting is the prediction variance. The SE of the WMSD is deduced from these weights and from the covariance matrix of the predictions (see source code of the function extract_effects() in our R package ‘adRes’ for details).
+ </p>
+ <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">In the second step, to assess whether the response is adaptive, we considered WMSD in combination with the slopes obtained for the previous two conditions, as follows: we defined a trait change to be adaptive in response to climate if the climate-driven change in phenotype occurred in the same direction as linear selection. In contrast, if the climate-driven change in phenotype occurred in the direction opposite to selection, then the response was considered maladaptive. We measured the climate-driven change in phenotype as the product of the slopes obtained for conditions 1 and 2. A WMSD estimate of zero indicates a lack of selection
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+  </span>. A WMSD of zero together with no trait change could indicate a stationary optimum phenotype, and a WMSD of zero together with a significant change in trait could indicate that a moving optimum phenotype is perfectly tracked by phenotypic plasticity (a negligible WMSD could also imply a flat fitness surface, i.e. no fitness penalty for deviating from the optimum). To assess whether the trait is adaptive, we plotted for each study the WMSD against the product of slopes extracted from conditions 1 and 2, which quantifies the observed climate-driven trait change over time (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>). The studies qualify as adaptive if their WMSD has the same sign as the product of the slopes assessing conditions 1 and 2.
+ </p>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">We also fitted a modified version of the model specified in Eq. (
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) to assess a potential temporal (linear) change in the annual linear selection differentials over years. To this end, for each study we fitted a mixed-effects model that accounted for temporal autocorrelation. We weighted the residual variance by the variance of the annual linear selection differentials (i.e. the reported squared SE) to account for uncertainty in the estimates of annual selection differentials. The fitted model was:
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{Sel}}_t = \alpha + \beta _{{\mathrm{Sel}}} \times {\mathrm{Year}}_t + \varepsilon _t + \varepsilon ,$$\end{document}</span>
+    <div id="M8" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Sel</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">α</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">β</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Sel</span>
+      </div>
+     </div>
+     <span class="mo">×</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Year</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ε</span>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_10924_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where Sel is the estimate of the yearly linear selection differential, Year the quantitative year covariate, 
+  <span class="italic">t</span> the time, 
+  <span class="italic">ε</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> a Gaussian random variable with mean zero and following an AR1 model over years, and 
+  <span class="italic">ε</span> is an independent Gaussian random variable with mean zero and variance proportional to the estimated variance of the yearly linear selection differential (which depends on t). 
+  <span class="italic">β</span>
+  <sub>Sel</sub> is the regression coefficient that corresponds to the slope of the annual linear selection differentials on the year for the study.
+ </p>
+</sec>

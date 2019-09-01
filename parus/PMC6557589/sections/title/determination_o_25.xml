@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="S0004-S2008-S3005" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Determination of states of methylation in CpG sites</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">A combination of R packages from both the CRAN and the Bioconductor projects was used to handle the DNA methylation data. A reference set of CpGs that contained all the CpG sites within the chicken (
+  <span class="italic">Gallus gallus</span>) genome (UCSC version galGal4) was built to be compared with the CpGs obtained by our 
+  <span class="italic">PstI</span>-MeDIP method. Based on this, the number of CpGs covered by our approach was defined. For the normalization of CpG coverage, we used the ‘calcNormFactors’ function from the edgeR package [
+  <a rid="CIT0081" href="#CIT0081">81</a>]. With the normalized data, we performed a quasi-likelihood pipeline for differential methylation using negative binomial generalized linear models [
+  <a rid="CIT0082" href="#CIT0082">82</a>] with F-tests instead of likelihood ratio tests [
+  <a rid="CIT0083" href="#CIT0083">83</a>]. Dispersion estimates were then calculated based on the normalized data to determine the biological coefficient of variation (BCV), which represents inter-individual variability in DNA methylation. The BCV was then plotted using the edgeR function against the level of DNA methylation measured per window, represented by the average of CpGs coverage (expressed as the log of counts per million, logCPM) and termed ‘tags’ [
+  <a rid="CIT0084" href="#CIT0084">84</a>] (
+  <a rid="F0006" href="#F0006">Figure 6(a</a>)).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We then proceeded to calculate tag-wise dispersion trends to determine how DNA methylation levels relate to BCV in general. As DNA methylation levels have non-identical and dependent distribution between windows, we employed an Empirical Bayes strategy that generated two kinds of trends [
+  <a rid="CIT0085" href="#CIT0085">85</a>]. One trend line (red line in 
+  <a rid="F0006" href="#F0006">Figure 6(a</a>)) assumes a normal distribution of all the tags (common dispersion), while the other (green line in 
+  <a rid="F0006" href="#F0006">Figure 6(a</a>)) corresponds to the distribution of tags assuming non-identical methylation levels across the genome (adjusted dispersion) [
+  <a rid="CIT0084" href="#CIT0084">84</a>]. In addition, we generated a distribution based on the ‘square root of the trended dispersion’ (blue line in 
+  <a rid="F0006" href="#F0006">Figure 6(a</a>)). Information from these different distributions was used to establish the limits of our categories of CpG methylation levels and inter-individual variability in the sperm of RJF. The two intersection points between the ‘common’ and the ‘trended’ dispersions (coordinates −0.25; 1.35 Y and 2.40; 1.35) were calculated to define the X-axis thresholds dividing three coverage states, which correspond to levels of DNA methylation categorized as low (containing 71.1% of all tags), medium (containing 26.6% of all tags) or high (containing 2.3% of all tags).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To define the Y-axis thresholds that divide states of inter-individual variation, we calculated the lowest and highest values of the ‘square root of the trended dispersion’, which corresponds, respectively, to the Y-axis values 0.86 and 1.83. These thresholds delimited three categories of inter-individual variation, namely low (containing 15.4% of all tags), medium (containing 67.7% of all tags) and high (containing 16.9% of all tags).</p>
+</sec>

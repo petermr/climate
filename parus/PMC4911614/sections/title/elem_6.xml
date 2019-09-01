@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sample collection and DNA extraction</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Material was collected from six locations of East Antarctica, between 2004 and 2012: Cape Washington in the Ross Sea area (‘WSH'), Pointe Géologie (‘DDU') in Adélie Land, ‘MZE' and ‘MZW' in George V Land, Atka Bay (‘NEU') in Dronning Maud Land area and ‘HAL' in the Weddell Sea area. All procedures employed during field work were approved by national Ethical Committees, and authorizations to enter the breeding site and to collect samples from living or dead birds were delivered by the US Antarctic Conservation Act (permit no 2004-010), the French ‘Ministère de l'Enseignement Supérieur et de la Recherche' and the ‘Terres Australes et Antarctiques Françaises' (permit nos 2012-126, 2012-111 and 2012-117), the German Environmental Agency (Umweltbundesamt, permit no I 3.5–94003-3/295) and the British Antarctic Survey/University of Cambridge Animal Ethics Review Committee. On the DDU colony, blood samples were collected from 23 chicks before fledging. In WSH, MZE, MZW, NEU and HAL, muscle samples were collected from frozen chick carcasses collected around the colony (WSH: 
+   <span class="italic">N</span>=4, MZE: 
+   <span class="italic">N</span>=25, MZW: 
+   <span class="italic">N</span>=14, NEU: 
+   <span class="italic">N</span>=24, HAL: 
+   <span class="italic">N</span>=20). DNA was extracted using a spin-column protocol (Qiagen DNEasy Blood and Tissue kit, Qiagen) with minor modifications.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Genome-wide SNP typing</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">SNP discovery and sequencing followed a single-digest RAD-sequencing protocol
+   <a ref-type="bibr" rid="b24" href="#b24">24</a>. Genomic DNA was checked for degradation on a 1.5% agarose gel, and only samples with consistently high molecular weight were retained and quantified by fluorometry (Life technologies Qubit). A total of 110 samples were retained and sequenced in 5 distinct libraries. (i) ∼150 ng of genomic DNA per sample were digested with the restriction enzyme 
+   <span class="italic">Sbf</span>-I-HF (NEB); (ii) each sample was then ligated to a unique barcoded P1 adapter before pooling in a single library. The library was then sheared by sonication (7 cycles of 30 s ON—30 s OFF); (iii) sonicated libraries were concentrated to 25 μl by DNA capture on magnetic beads (beads solution/DNA=0.8:1), thus further reducing the carry-over of non-ligated P1 adapters, and the target size range fraction (350–650 bp) was then selected by automated gel electrophoresis (BluePippin); (iv) capture on magnetic beads using the same beads/DNA ratio (0.8:1) was then employed in all following purification steps (after blunt-end repairing, poly-A tailing, P2 adapter ligation and library enrichment by PCR). Magnetic beads were kept together with the library throughout the pre-PCR steps, and DNA was re-bound to the beads for purification using a PEG-8000-binding solution; (v) PCR amplification was performed in 8 × 12.5 μl aliquots pooled after the amplification in order to reduce amplification bias on few loci because of random drift. PCR was performed using NEB Phusion polymerase with the following cycles: 30 s denaturation at 98 °C, 18 cycles of amplification (10 min at 98 °C, 30 s at 65 °C and 30 s at 72 °C), and a final elongation of 5 min at 72 °C; (vi) the library was then quantified by a fluorimetry-based method (Life technologies Qubit), and molarity was checked on an Agilent Bioanalyzer chip (Invitrogen). A final volume of 20 μl for each library was submitted for paired-end sequencing on an Illumina HiSeq2000 sequencer (V3 chemistry, libraries 1–3) or HiSeq2500 (V4 chemistry, libraries 4–5), at the Norwegian Sequencing Centre, University of Oslo, spiked with 20% PhiX control library in order to reduce low-diversity bias.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sequence alignment and genotyping</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Data processing was performed using the following workflow: (i) 
+   <span class="italic">Sequence demultiplexing.</span> Read quality assessment was made in FastQC (
+   <span ext-link-type="uri" xlink:href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.bioinformatics.babraham.ac.uk/projects/fastqc/</span>). Samples were de-multiplexed according to in-line barcodes using Stacks v1.20 (ref. 
+   <a ref-type="bibr" rid="b44" href="#b44">44</a>), low-quality reads were discarded and sequences trimmed to 95 bp. (ii) 
+   <span class="italic">Read mapping and filtering</span>. Demultiplexed fastq files were mapped to the published contigs of the Emperor penguin genome
+   <a ref-type="bibr" rid="b45" href="#b45">45</a> using Bowtie2 2.2.3 (ref. 
+   <a ref-type="bibr" rid="b46" href="#b46">46</a>), with standard settings, allowing only end-to-end mapping. Resulting SAM files were filtered using Samtools 0.1.19 (ref. 
+   <a ref-type="bibr" rid="b47" href="#b47">47</a>), PicardTools 1.113 (
+   <span ext-link-type="uri" xlink:href="http://picard.sorceforge.net" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://picard.sorceforge.net</span>), and custom R and shell scripts in order to discard unpaired reads and full read pairs where at least one mate has a mapping quality score below 30. The resulting BAM files were then filtered for PCR and optical duplicates by comparing mapping position and CIGAR string, using Picard MarkDuplicates. This process also allowed to filter out most sequencing errors, as MarkDuplicates only retains the read with the highest average Phred score in each duplicate cluster. (iii) 
+   <span class="italic">SNP calling and genotyping</span>. Three independent algorithms were used for SNP and genotype calling, all of them built on a maximum-likelihood framework. (i) First-in-pair reads were exported as BAM files for the maximum-likelihood-based genotype caller built in the Stacks pipeline (ref_map.pl), with a maximum of five mismatches allowed between alleles at a single locus (both within and between individuals), correcting genotype calls using the information from the whole data set in the rxstacks programme. (ii) We used the same cleaned BAM files to simultaneously call both mismatch and indel polymorphisms in all samples using the GATK HaplotypeCaller pipeline
+   <a ref-type="bibr" rid="b48" href="#b48">48</a>, with standard parameters, except for population heterozygosity which was set to 0.01. (iii) ANGSD 0.900 (ref. 
+   <a ref-type="bibr" rid="b49" href="#b49">49</a>) was used to call SNPs and genotypes using a maximum-likelihood process with the Samtools mpileup/bcftools algorithm, using the complete sample allele frequency information as a prior. Genotype calls were only retained for comparison purposes with Stacks and GATK, however, downstream analysis was performed directly on raw genotype likelihoods, as this approach has been shown to be much more sensitive to weak structure than classical SNP-calling analysis
+   <a ref-type="bibr" rid="b50" href="#b50">50</a>. Genotype calls from all three processes were formatted into VCF format using software-specific (Stacks and GATK) or custom scripts (ANGSD); further filtering and manipulation were done using VCFtools 0.1.12 (ref. 
+   <a ref-type="bibr" rid="b51" href="#b51">51</a>). For analyses relying on SNP calls, an additional filtering step was performed by (i) extracting the list of consensus loci called as SNPs by all three independent algorithms, (ii) discarding genotypes with a coverage under 3 × for analyses sensitive to sequencing depth, (iii) removing loci genotyped in less than 75% of all individuals, and finally (iv) thinning down loci to keep only polymorphism distant of at least 1 kb, in order to minimize linkage between markers. (iv) 
+   <span class="italic">Sex-linked marker analysis</span>. To check for sex-specific dispersal or structure patterns, we repeated analyses for each sex separately, using either autosomal loci only or Z-linked loci only. We used the published genome annotations for bird gametologs
+   <a ref-type="bibr" rid="b52" href="#b52">52</a> to identify potentially Z-linked scaffolds. As females are heterogametic in birds, we expect non pseudo-autosomal Z-linked regions to be fully homozygous in females, but to be neutrally heterozygous in males. We therefore retained only scaffolds that had a clearly bimodal distribution of heterozygosity, with one mode at or close to 0 (a slight tolerance was allowed to account for misalignment, sequencing errors mistyped as SNPs due to low coverage, or the presence of a transposable elements with autosomal homologues). Fifteen scaffolds were ultimately retained. Scaffolds containing candidate Z-linked coding DNA sequences, but with no visible bimodal heterozygosity distribution, were excluded altogether from the analysis. Sex assignment was performed independently from each of the non-recombining Z scaffolds, and consistency of sex calls between scaffolds was checked manually.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">RAD data description</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Each HiSeq sequencing lane yielded an ∼201,000,000 paired-end reads (±16,000) with a mean Phred score of 37, only part of which was dedicated to that project. After barcode demultiplexing and quality filtering, we retained an average 147,000,000 read pairs per library (±13,000,000). Concordant alignment rate was high (70.7±9.1%). However, after filtering, a large proportion of the reads was identified as duplicates and removed from further analysis. On average, 479,000 read pairs were retained per individual. We built an average 78,000 loci per individual (±17,000). Overlap between SNP calling methods was high: 111,686 SNPs were called by GATK (173,704 SNPs total), ANGSD (203,801 SNPs total) and Stacks (148,721 SNPs total; 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 1</a>). After filtering by coverage (minimum 3 ×) and missing data (minimum 75% representation), 59,037 highly confident SNPs (hereafter our ‘consensus SNP set', as opposed to the ‘full data set', which includes all sequencing data that passed our quality checks and aligned successfully to autosomal or pseudo-autosomal scaffolds) were retained for analysis, with a mean depth of 6.8 × . Of these, 582, spread across 15 scaffolds, were identified as unambiguously belonging to the non-recombining region of the Z chromosome.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pairwise FST, AMOVA and summary statistics</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Pairwise fixation index was estimated by two independent methods. We calculated Reich's estimator
+   <a ref-type="bibr" rid="b28" href="#b28">28</a> on called genotypes of our consensus SNP set, using custom R scripts. Without calling genotypes, we calculated Reynolds' estimator
+   <a ref-type="bibr" rid="b53" href="#b53">53</a> on the full data set, taking into account uncertainty in site-allele-frequency, according to the method implemented in ngsTools
+   <a ref-type="bibr" rid="b50" href="#b50">50</a>
+   <a ref-type="bibr" rid="b54" href="#b54">54</a>. Both methods were performed on a per-site basis and averaged over 1-kb non-overlapping sliding windows, as the ratio of the windowed sum of inter-population variance over the windowed sum of total variance. For the genotype-call-free method, only sites with a probability of being variant at least equal to 0.95 were included in the estimation. Mean homozygosity, nucleotide diversity and Tajima's 
+   <span class="italic">D</span> were calculated on a per-locus basis, using the consensus SNP set. To avoid possible biases due to low coverage in estimating nucleotide diversity and Tajima's 
+   <span class="italic">D</span>, we randomly sampled one haplotype for each individual, and performed calculations on this haploid subset. Calculations were made using 
+   <span class="italic">adegenet</span>
+   <a ref-type="bibr" rid="b55" href="#b55">55</a> and 
+   <span class="italic">pegas</span>
+   <a ref-type="bibr" rid="b56" href="#b56">56</a> packages, as well as custom R scripts. To quantify the proportion of variation at each organization level, AMOVA was performed on a 22,875 unlinked SNP data using Arlequin
+   <a ref-type="bibr" rid="b57" href="#b57">57</a>, on a per-locus basis, with 1,000 permutations.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Identity-by-state (IBS) and identity-by-descent (IBD)</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Pairwise indicators of IBS and IBD were calculated in PLINK v1.9 (ref. 
+   <a ref-type="bibr" rid="b58" href="#b58">58</a>) based on the consensus SNP set. Allelic distance for pairs of individuals is rather sensitive to uneven coverage (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 4</a>, lower triangle), with lower-depth individuals appearing more similar to all other individuals than higher-depth ones. However, IBD inference, which takes into account the total genetic variance in the whole sample, appears more robust to coverage variation (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 4</a>, upper triangle). Three individuals in the HAL colony (HAL13, HAL14 and HAL16, visible on 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 4</a>), as well as two in the MZE colony (MZE01 and MZE04, visible on 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 4</a>), appear markedly more related to each other than to the rest of the sample. Of these two clusters, only one individual was retained for inbreeding-sensitive analyses, such as PCA. Pairwise IBS (Hamming) distances were used to generate a neighbour-net using SplitsTree
+   <a ref-type="bibr" rid="b59" href="#b59">59</a>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Principal component analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">PCA was performed on called genotypes in the consensus SNP set using R library 
+   <span class="italic">adegenet</span>
+   <a ref-type="bibr" rid="b55" href="#b55">55</a>, and on genotype likelihoods for the full data set using ngsCovar
+   <a ref-type="bibr" rid="b54" href="#b54">54</a>. Analysis was performed either on all samples or keeping only one individual for each highly related cluster. When performed on all samples, analysis was mostly driven by the HAL relatedness cluster, with the first principal component of variance (PC) accounting for 2.84% of total variance. Interestingly, these outliers are also identified as a separate group in admixture analyses (see below), with high repeatability, although with only a slight gain in model fit compared with a single-population model (Evanno's Δ
+   <span class="italic">K</span> over 10 replicates). However, discriminant analysis of principal components
+   <a ref-type="bibr" rid="b60" href="#b60">60</a> performed in 
+   <span class="italic">adegenet</span> on the consensus SNP set, and contrasting these outliers and the main sample group, showed that single-locus contributions were very low and evenly spread across the genome, thus excluding any strong directional selective phenomenon. After removal of all samples but one in each high-relatedness cluster, variation did not appear to be driven by outliers anymore.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Population splits and migration topology</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used TreeMix
+   <a ref-type="bibr" rid="b61" href="#b61">61</a> to infer the topology of population splits and migrations from allele frequency variation among colonies. We produced RAD-sequencing data for the Emperor's sister species, the King penguin and processed it with the same protocol as for our Emperor penguin samples. We genotyped 15 King penguins from the Baie du Marin colony, on Crozet Archipelago, that were used as an outgroup for the analysis. We restricted our data set to ca 15,000 highly confident, unlinked SNPs shared between the two species. Three-population and four-population tests did not allow us to reject a tree-like topology in our data. Analysis was performed first using the King penguin outgroup, and bootstrapping over blocks of 500 SNPs, in order to assess the topology of relationships between our six Emperor penguin colonies. We used this topology to re-run TreeMix without the King penguin samples, but fixing the root according to our first results, in order to increase the resolution of the analysis (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 3</a>).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Clustering analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Clustering analyses were performed both on called genotypes, using fastStructure
+   <a ref-type="bibr" rid="b62" href="#b62">62</a>, and on genotype likelihoods, using ngsAdmix
+   <a ref-type="bibr" rid="b63" href="#b63">63</a> and a stricter filtering was applied: as input in fastStructure we selected unlinked 6,825 SNPs with a maximum amount of missing data of 10%. In ngsAdmix, we filtered the data set to 3,020 high-confidence sites on the basis of probability of being variable, coverage and phred score. We tested a number of components ranging from 1 to 10, with three independent replicates. For fastStructure, we used a simple prior for 
+   <span class="italic">K</span> values ranging from 1 to 10, and a logistic prior for values from 1 to 3. Most likely number of components was chosen using fastStructure's chooseK.py script for fastStructure models and Evanno's Δ
+   <span class="italic">K</span> method for ngsAdmix models.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Coalescent-based analysis using BEAST2</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">An independent estimate of population size changes through time was performed in BEAST2 (ref. 
+   <a ref-type="bibr" rid="b30" href="#b30">30</a>). We proceeded as above for locus selection and haplotype down-sampling. To remain agnostic as to population structure, we performed analysis on each colony separately, as well as on the whole data set, as the lack of strong population structure, evidenced by all other analyses, allowed us to sample haplotypes from the whole species without violating the model's assumptions. We used an extended bayesian skyline plot model
+   <a ref-type="bibr" rid="b64" href="#b64">64</a> in order to co-estimate present-day 
+   <span class="italic">Θ</span> and possible past fluctuations. We followed the protocol of Trucchi and colleagues
+   <a ref-type="bibr" rid="b32" href="#b32">32</a>, but reduced the parameter space by defining only one site-model per locus class (five or six SNPs), using HKY models with empirical base frequencies, and allowing for rate variation in four discrete gamma categories. Kappa was linked across site models, according to our expectation for neutral variation, in order to alleviate computational load. All chains were run in duplicate to check for convergence and for a sufficient length to gather effective sample sizes (ESS)&gt;200 for all parameters, which necessitated ca 1,000,000,000 steps on all models. We used the same estimates for mutation rate and generation time as in Migrate-n analyses. Reconstruction for WSH colony is much less precise because of the very small number of haplotypes (
+   <span class="italic">N</span>=4) sampled per locus. However, present-day population size estimate converges with reconstructions based on the other colonies.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Fastsimcoal2 analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Joint derived-allele frequency spectra were generated from the full data set in ANGSD 0.900 (ref. 
+   <a ref-type="bibr" rid="b49" href="#b49">49</a>) for a subset of four colonies that encompass the whole continent (MZE, DDU, NEU and HAL). To polarize these spectra, we reconstructed the most likely ancestral base for all positions in the RADome. We selected 12 high-quality Emperor penguin samples covering the whole species' range, as well as 12 high-quality King penguin samples processed according to the same protocol. States at all positions were determined using GATK's Haplotype Caller pipeline
+   <a ref-type="bibr" rid="b48" href="#b48">48</a>. We used BEDtools
+   <a ref-type="bibr" rid="b65" href="#b65">65</a> and VCFtools' vcf-consensus script
+   <a ref-type="bibr" rid="b51" href="#b51">51</a> to update the published Emperor penguin genome and establish a reference RADome for both the King penguin and the Emperor penguin, using only high-quality polymorphisms (phred-scale genotype quality ≥80), and including variable sites as ambiguity codes according to the International Union of Pure and Applied Chemistry (IUPAC) standard notation. We aligned this RADome to the Adélie penguin genome 
+   <span class="italic">Pygoscelis adeliae</span>
+   <a ref-type="bibr" rid="b66" href="#b66">66</a> using Bowtie2 (ref. 
+   <a ref-type="bibr" rid="b46" href="#b46">46</a>), and extracted the corresponding regions. For each RAD locus, a maximum-likelihood unrooted tree was built in PhyML
+   <a ref-type="bibr" rid="b67" href="#b67">67</a>, and maximum-likelihood ancestral sequence for crown-
+   <span class="italic">Aptenodytes</span> was reconstructed using PAML
+   <a ref-type="bibr" rid="b68" href="#b68">68</a> and Lazarus (
+   <span ext-link-type="uri" xlink:href="https://project-lazarus.googlecode.com/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://project-lazarus.googlecode.com/</span>), using PhyML tree topology as a prior. Ancestral states were then used to determine the ancestral and derived alleles in the Emperor penguin.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Reconstruction of population sizes and migration events was performed through composite-likelihood maximization
+   <a ref-type="bibr" rid="b34" href="#b34">34</a>, by simulating joint-spectra under a continuous-time Markovian coalescent model in fastsimcoal2.5.11 (ref. 
+   <a ref-type="bibr" rid="b69" href="#b69">69</a>). For each run, we performed a maximum of 80 expectation-conditional maximisation (ECM) optimization cycles over the 12 retained parameters (population sizes and asymmetric migration rates between the four analysed colonies), each parameter optimization step requiring the generation of 100,000 simulated joint-spectra. We generated 50 non-parametric bootstrap replicates for each spectrum. For each bootstrap data set, and for the original data set, we ran 50 independent replicates, and retained the one with the highest log-likelihood. We assumed a mutation rate of 2.6e
+   <span class="sup">−7</span> subsitutions per site per generation as calculated for the King penguin
+   <a ref-type="bibr" rid="b32" href="#b32">32</a>, and a generation time of 16 years
+   <a ref-type="bibr" rid="b15" href="#b15">15</a>. Computation was performed on the high-performance Abel cluster at the University of Oslo, and required a total of ∼30,000 CPU hours.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We chose to restrict our analysis to a stepwise migration model for two main reasons. First, computational load increases rapidly with the number of estimated parameters, and higher complexity models could not be run with the necessary amount of replication. Second, as our model is not supposed to represent precisely the present-day state of the colonies, but rather parameters averaged over a long period of time, we do not expect the intensity of the migration flow to be much affected by the structure of the connectivity.</p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Coalescent-based analysis using Migrate-n</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All methods used above provide a robust framework for identifying groups even in weakly structured populations. However, all are, to some extent, functions of the covariance of allele frequencies between populations. In the hypothesis that our estimate of the frequency spectrum may be biased is some way, for example, by moderate sample size, we also performed a coalescent-based structure analysis using Migrate-n
+   <a ref-type="bibr" rid="b38" href="#b38">38</a>. As opposed to frequency-spectrum-based approaches (see above), coalescent-based analysis relies on phased polymorphisms to infer population parameters. After verifying that the number of polymorphisms in each RAD locus followed a Poisson distribution of 
+   <span class="italic">λ</span> equal to the mean number of polymorphisms per locus, we selected 50 random loci comprising between five and six polymorphisms as an unbiased representation of the neutrally evolving part of the genome
+   <a ref-type="bibr" rid="b32" href="#b32">32</a>. To correct for potential over-representation of sequences in case a heterozygous individual was mis-called as homozygous, we randomly sampled one allele only for each individual. For all colonies except WSH, we randomly picked a set of haplotypes in the population (16 in MZE, DDU, HAL and NEU, 14 in MZW, and 4 in WSH). We ran a cold chain and three heated chain of 50,000,000 generations, recording every 500 generations, with a 5,000,000-generation burn-in. We used a static heating scheme, raising the cold chain to a power of 1.5, 3 and 1e6, and proposing chain swapping every 100 steps. We used a uniform prior for population sizes (
+   <span class="italic">Θ</span>), bounded between 0 and 0.1 (with a 
+   <span class="italic">δ</span> of 0.01), and for the migration rates (
+   <span class="italic">M</span>), bounded at 4,000 with a 
+   <span class="italic">δ</span> of 400. Proper mixing under these conditions was ensured using the highest parametrization model (model 2, see below). We compared five models of increasing complexity: (i) a panmictic model, in which all colonies were gathered in one population, estimating only a general 
+   <span class="italic">Θ</span>, (ii) a full-matrix model, in which asymmetric migrations were allowed between all pairs of colonies, (iii) a stepwise model, in which asymmetric migrations were allowed, but only between neighbouring colonies, in a closed circle, (iv) a first meta-population model, in which the Ross Sea (WSH), George V and Adélie Lands (MZE, MZW and DDU) and the South Atlantic (NEU and HAL) were treated as three populations, with an asymmetric migrations between them, (v) a second meta-population model, in which the northernmost colonies (MZE, MZW, DDU and NEU) were separated from the Weddell Sea (HAL) and the Ross Sea (WSH). Models were ordered by log Bayes factor defined by Kass and Raftery as 
+   <span class="italic">ln</span>BF=2[
+   <span class="italic">ln</span>(mL(model1))-
+   <span class="italic">ln</span>(mL(model2))], with mL(model1) and mL(model2) being the marginal likelihoods for the two compared models, as calculated by thermodynamic integration. Under this model, each migration rate can also be expressed as a proportion of the receiving population's effective size as 
+   <span class="italic">m</span>=4·
+   <span class="italic">M</span>·
+   <span class="italic">μ.</span> Hence, the relative demographic importance of immigration for any given colony can also be expressed as Σ
+   <sub>i</sub>=
+   <span class="italic">n</span>(4·
+   <span class="italic">Mi·μ</span>), with 
+   <span class="italic">n</span> being the total number of populations identified as gene sources for the focal population. To convert mutation-scaled estimates of 
+   <span class="italic">M</span> and 
+   <span class="italic">Θ</span>, we therefore need an estimate of 
+   <span class="italic">μ</span> (the mean number of substitutions·per site per·Myr) for the set of loci used in the analysis. As the number of sites in each locus is mainly due to the stochastic nature of the mutational process, and follows a Poisson distribution of parameter 
+   <span class="italic">λ</span> equal to the mean SNP density per locus (see above), we can consider that a single true mutation rate (
+   <span class="italic">μ</span>) applies to the whole RADome. However, as our analysis is restricted to loci containing five to six SNPs, our estimates of 
+   <span class="italic">Θ</span> and 
+   <span class="italic">M</span> are not directly scaled by 
+   <span class="italic">μ</span>, but rather by posterior probabilities of 
+   <span class="italic">μ</span> conditional on the number of SNPs in each locus class. We used the class-specific mutation rate posterior probabilities as calculated for the King penguin
+   <a ref-type="bibr" rid="b32" href="#b32">32</a>. As a conservative estimate, we used a range of rates fitting the 3-SNPs to 6-SNPs class loci. Using a generation time of 16 years
+   <a ref-type="bibr" rid="b15" href="#b15">15</a>, these are 
+   <span class="italic">μ</span>
+   <sub>3snps</sub>=1.14e
+   <span class="sup">−6</span> and 
+   <span class="italic">μ</span>
+   <sub>6snps</sub>=2.16e
+   <span class="sup">−6</span>. As these were estimated from a subset of 16 haplotypes, and we included 82 haplotypes in our analysis, we considered that variability was likely to be underestimated by Trucchi and colleagues
+   <a ref-type="bibr" rid="b32" href="#b32">32</a> compared with our sample. Thus, we did not consider higher estimates than those made for 6-SNPs loci.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Demultiplexed sequencing data are available from the Short Read Archive with the accession number 
+   <span ext-link-type="NCBI:sra" xlink:href="SRP070516" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">SRP070516</span>. Input files used in the main analyses are available from figshare.com (
+   <span ext-link-type="uri" xlink:href="https://dx.doi.org/10.6084/m9.figshare.2949508.v1" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://dx.doi.org/10.6084/m9.figshare.2949508.v1</span>).
+  </p>
+ </sec>
+</sec>
