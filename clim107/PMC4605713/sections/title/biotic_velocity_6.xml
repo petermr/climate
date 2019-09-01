@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec004" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Biotic velocity</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Climatic niche models for the North and South American continents, at 50 km resolution, were drawn from a previously-published study [
+  <a rid="pone.0140486.ref022" ref-type="bibr" href="#pone.0140486.ref022">22</a>], which assessed the potential effects of climate change on distribution of 2954 vertebrate species (1818 birds, 723 mammals, and 413 amphibians) in the Western Hemisphere. Species distribution data were taken from digital range maps for birds [
+  <a rid="pone.0140486.ref031" ref-type="bibr" href="#pone.0140486.ref031">31</a>], mammals [
+  <a rid="pone.0140486.ref032" ref-type="bibr" href="#pone.0140486.ref032">32</a>] and amphibians (data available online, 
+  <span ext-link-type="uri" xlink:href="http://www.globalamphibians.org/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.globalamphibians.org</span>). For birds, only breeding ranges were included. Range maps are scale-dependent abstractions of species distributions which overestimate species’ occurrences [
+  <a rid="pone.0140486.ref033" ref-type="bibr" href="#pone.0140486.ref033">33</a>]. However, they are useful in taxonomically comprehensive assessments where point locations of species’ occurrences are unavailable for a subset of the species considered [
+  <a rid="pone.0140486.ref034" ref-type="bibr" href="#pone.0140486.ref034">34</a>, 
+  <a rid="pone.0140486.ref035" ref-type="bibr" href="#pone.0140486.ref035">35</a>]. The 50 km resolution was chosen to strike a balance between inaccuracies due to applying a fine-resolution grid to relatively coarse resolution digital-range maps and inaccuracies due to mapping climate at too coarse a resolution. Niche models were developed using the same 37 bioclimatic variables used in deriving climatic velocity (
+  <a rid="pone.0140486.s009" ref-type="supplementary-material" href="#pone.0140486.s009">S2 Table</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Niche models were built using random forest predictors, an ensemble-based machine-learning approach based on combining predictions from multiple classification or regression trees built using random subsets of the data and predictor variables [
+  <a rid="pone.0140486.ref036" ref-type="bibr" href="#pone.0140486.ref036">36</a>]. For each model, a threshold for predicting presence was determined using the receiver-operating characteristic curve with the assumption that correctly predicting a presence was as important as predicting an absence [
+  <a rid="pone.0140486.ref037" ref-type="bibr" href="#pone.0140486.ref037">37</a>]. Models for 2954 species were able to correctly predict at least 90% of the absences and 80% of the presences in the reserved test data sets. These models were then used to project areas that will likely be climatically suitable under the ten GCM projections of future climates.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We calculated biotic velocity based on climatic niche model projections from each of the ten GCMs. To calculate forward velocity, we assigned each cell within the current range of the species a velocity based on the distance to the nearest cell of future climatically suitable habitat (see 
+  <a rid="pone.0140486.s007" ref-type="supplementary-material" href="#pone.0140486.s007">S1 File</a> and 
+  <span ext-link-type="uri" xlink:href="http://adaptwest.databasin.org/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://adaptwest.databasin.org</span> for code). To calculate backward velocity, we assigned each cell within the future projected range of a species a velocity based on the distance to the nearest cell of current climatically suitable habitat. We averaged resultant velocities to derive a mean value for each of the three taxa groups (birds, mammals, and amphibians). For each cell, we also calculated the probability of a species disappearing at that site. We used probability rather than number of species disappearing at each site to reduce correlation of the metric with gradients in current species diversity.
+ </p>
+</sec>

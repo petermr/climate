@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">ET Algorithm</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The remote-sensing-driven ET algorithm used in this study is called Process-based Land Surface Evapotranspiration/Heat Fluxes algorithm (P-LSH). P-LSH quantifies canopy transpiration using the Penman-Monteith (PM) approach coupled with biome-specific canopy conductance determined from NDVI, soil evaporation through a modified PM approach, and open water evaporation using the Penman equation. The core components of this algorithm (i.e., the baseline algorithm) are described in Zhang 
+   <span class="italic">et al.</span>
+   <a ref-type="bibr" rid="b30" href="#b30">30</a>. In this study, we made the following improvements to the baseline algorithm to account for the influence of variable wind speed and atmospheric CO
+   <sub>2</sub> concentrations on respective model aerodynamic conductance and canopy stomatal conductance terms, and resulting ET calculations: (1) quantify the impacts of increasing atmospheric CO
+   <sub>2</sub> concentrations on canopy stomatal conductance through a CO
+   <sub>2</sub> constraint function used in the MOSES land surface scheme
+   <a ref-type="bibr" rid="b31" href="#b31">31</a>, (2) use surface wind speed to calculate aerodynamic conductance following Monteith and Unsworth
+   <a ref-type="bibr" rid="b32" href="#b32">32</a>, and (3) replace the Priestley-Taylor method
+   <a ref-type="bibr" rid="b33" href="#b33">33</a> in the base algorithm with Penman equation
+   <a ref-type="bibr" rid="b34" href="#b34">34</a> to estimate open water evaporation and potential evaporation (PET) for considering the impacts of changes in surface wind speed on open water evaporation. More details on the improvements of this P-LSH algorithm are described in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Section 1</a>. Although the P-LSH algorithm do not explicitly account for the effects of local perturbations, such as land use and irrigation, on ET, which may influence local ET estimates, it at least takes these effects into account to some extent from the satellite-observed NDVI data. Besides the vegetation dynamics (V) quantified by the NDVI data, the other forcing data of this algorithm include air temperature (T) and vapor pressure (H), wind speed (W), surface radiation fluxes (R), and atmospheric CO
+   <sub>2</sub> concentration (C).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The global datasets used in this study include daily surface meteorology records, satellite remote sensing data for driving the ET and PET algorithms, and precipitation and discharge records for the water balance analyses and ET validation. Daily meteorological data were from the NCEP/DOE AMIP-II Reanalysis (NCEP2)
+   <a ref-type="bibr" rid="b35" href="#b35">35</a>. We verified the quality of surface meteorological inputs against measurements from ground observation networks and through intercomparison with two other meteorological reanalyses, and confirmed a generally good quality in these forcings (see 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Section 4</a>). Remote sensing radiative flux data, including clear-sky incoming solar shortwave radiation, all-sky downward solar shortwave radiation, and all-sky net shortwave solar radiation, were from the NASA World Climate Research Programme/Global Energy and Water-Cycle Experiment (WCRP/GEWEX) Surface Radiation Budget (SRB) Release-3.0 datasets (hereafter denoted as the SRB3.0) and the Clouds and the Earth’s Radiant Energy System (CERES) SYN1deg radiative fluxes. The SRB3.0 grid has a resolution of 1 degree latitude globally, and longitudinal resolution ranging from 1 degree in the tropics and subtropics to 120 degrees at the poles, while CERES SYN1deg has a resolution of 1° × 1°. We applied a statistical method to fuse the SRB3.0 data with CERES SYN1deg data by preserving the inter-annual variabilities and temporal trends of SRB3.0 on a grid cell-by-cell basis (see 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Section 5</a>). The other remote sensing inputs data include the 500-m MODIS-IGBP collection 5 global land cover classification
+   <a ref-type="bibr" rid="b36" href="#b36">36</a>, 1-km global canopy height data
+   <a ref-type="bibr" rid="b37" href="#b37">37</a>, 1-km AVHRR Tree Cover Continuous Fields data
+   <a ref-type="bibr" rid="b38" href="#b38">38</a>, 1/12° semi-monthly Global Inventory Modeling and Mapping Studies (GIMMS3g) NDVI
+   <a ref-type="bibr" rid="b39" href="#b39">39</a>, 0.05° bi-weekly University of Arizona Vegetation Index and Phenology lab (VIP) NDVI
+   <a ref-type="bibr" rid="b40" href="#b40">40</a>, and 500-m MODIS NDVI. The GIMMS3g, VIP, and MODIS records are available from 1982–2011, 1982–2010, 2000-present, respectively. We applied the same fusion method for the radiation data to adjust the GIMMS3g and VIP records to match the MODIS record by preserving their inter-annual variabilities and temporal trends on a grid cell-by-cell basis (see 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Section 5</a>). The adjusted GIMMS3g and VIP records were combined with the MODIS record to produce a consistent long-term NDVI record as the input to derive biome-specific canopy conductance for our ET algorithm
+   <a ref-type="bibr" rid="b9" href="#b9">9</a>. Global monthly precipitation data were derived from four independent sources, including Global Precipitation Climatology Project Version 2.1 (GPCP)
+   <a ref-type="bibr" rid="b41" href="#b41">41</a>, Global Precipitation Climatology Centre Version 6.0 (GPCC)
+   <a ref-type="bibr" rid="b42" href="#b42">42</a>, and Climate Research Unit TS3.22 (CRU) (
+   <span ext-link-type="uri" xlink:href="http://www.cru.uea.ac.uk/cru/data/hrg/cru_ts_3.22" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.cru.uea.ac.uk/cru/data/hrg/cru_ts_3.22</span>) datasets. The global basin observed monthly river discharge data were compiled and provided by Dai 
+   <span class="italic">et al.</span>
+   <a ref-type="bibr" rid="b43" href="#b43">43</a>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Factorial Experiments and Trend Analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">As deterministic models like the ET algorithm used in this study don’t have stochastic element and relevant replications, a common method to assess the average contribution of each input factor (main effect) to the response variable is to compare the difference of response variable between the simulation with only one varied factor and the control simulation
+   <a ref-type="bibr" rid="b44" href="#b44">44</a>
+   <a ref-type="bibr" rid="b45" href="#b45">45</a>
+   <a ref-type="bibr" rid="b46" href="#b46">46</a>. The control simulation (CONTROL) in this study is the simulation driven by the mean (i.e. the multi-year mean for individual day of the Julian days) environmental and vegetation conditions of the 1980’s (1982–1989). The ET result from the control simulation represents the expected value given the normal 1980’s environmental and vegetation conditions. For example, the main effects of 
+   <span class="italic">R</span> (E
+   <sub>R</sub>) and 
+   <span class="italic">T</span> (E
+   <sub>T</sub>) are:
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq1" class="disp-formula">
+    <span id="d33e703" xlink:href="srep15956-m1.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">and</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq2" class="disp-formula">
+    <span id="d33e708" xlink:href="srep15956-m2.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Following previous studies
+   <a ref-type="bibr" rid="b45" href="#b45">45</a>
+   <a ref-type="bibr" rid="b47" href="#b47">47</a>, a two-way interaction between 
+   <span class="italic">R</span> and 
+   <span class="italic">T</span> (E
+   <sub>R×T</sub>) is the subtraction of the main effects of R and T from the effect of the joint R plus T treatment and was calculated by:
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq3" class="disp-formula">
+    <span id="d33e724" xlink:href="srep15956-m3.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The other two-way interactive effects are calculated using the same methods. To derive the main and two-way interactive effects of all six factors, we conducted 23 sets of factorial simulations (summarized in 
+   <a ref-type="table" rid="t1" href="#t1">Table 1</a>): one control simulation driven by mean environmental and vegetation conditions of the 1980’s (1982–1989); six simulations where only one of the six factors is varied each time; and fifteen simulations where two of six factors were varied for each model run. The sum of all higher-order interactive effects is the difference between (
+   <span class="italic">f</span>(
+   <span class="italic">R,T,H,W,V,C</span>) − 
+   <span class="italic">f</span>(
+   <span class="italic">control</span>)) and the sum of six main effects and fifteen two-way interactive effects.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">All temporal trends in this study were estimated using the Kendall-Theil robust line and tested by the Mann-Kendall non-parametric test. Temporal anomalies were computed on a grid cell-by-cell basis and over the entire global domain relative to average conditions defined by the 32-year record. The null hypothesis of the trend testing is: there is no trend. The null hypothesis of the linear correlation testing is: there is no linear correlation between two variables. Statistical significance of the resulting trends was classified at α values of 0.1, 0.05, and 0.01. If a 
+   <span class="italic">P</span>-value is smaller than a given α, the null hypothesis is rejected at a significance level of α.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Quantification of Primary Climatic Control Factors for ET</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We combined the climatic factors affecting terrestrial ET into the three dominant environmental control factors; namely, demand, supply and energy. We quantified these three control factors by defining three dimensionless damping indices ranging from 0 (fully constrained) to 1 (no constraint) with decreasing constraints to ET. To calculate the demand multiplier, we first calculated annual PET (PET
+   <sub>FixedSW</sub>) using the Penman equation driven by changing air temperatures and vapor pressure from NCEP2, with fixed daily shortwave radiation inputs from the fused SRB-CERES. We then calculated the multi-year average annual downward shortwave radiation (
+   <div id="d33e755" class="inline-formula">
+    <span id="d33e756" xlink:href="srep15956-m4.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>) and the ratio of PET
+   <sub>FixedSW</sub> to 
+   <div id="d33e761" class="inline-formula">
+    <span id="d33e762" xlink:href="srep15956-m5.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>. The ratio of PET
+   <sub>FixedSW</sub> to 
+   <div id="d33e768" class="inline-formula">
+    <span id="d33e769" xlink:href="srep15956-m6.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> was then linearly scaled between 0 and 1 using the tenth and ninetieth percentiles of the resulting distribution. The scaled ratio of PET
+   <sub>FixedSW</sub> to 
+   <div id="d33e774" class="inline-formula">
+    <span id="d33e775" xlink:href="srep15956-m7.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> is defined as the demand multiplier, of which higher values coincide with higher atmospheric moisture demand. The ratio of annual P to multi-year mean annual PET
+   <sub>FixedSW</sub> (
+   <div id="d33e780" class="inline-formula">
+    <span id="d33e781" xlink:href="srep15956-m8.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>) was scaled between 0 and 1, representing the tenth and ninetieth percentiles of the resulting variable distribution and is called the water supply multiplier. Higher and lower supply multiplier values indicate greater and lower potential moisture availability for ET, respectively. The ratio of all-sky to multi-year mean clear-sky downward shortwave radiation denotes the impacts of cloudiness and atmospheric constituents and the percentage of solar energy reaching the ground. This ratio was scaled between 0 and 1 according to the respective tenth and ninetieth percentiles of the resulting variable distribution and is defined as the energy multiplier.
+  </p>
+ </sec>
+</sec>

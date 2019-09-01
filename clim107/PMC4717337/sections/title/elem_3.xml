@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece31848-sec-0003" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Building and validating the biophysical model</div>
+ <sec id="ece31848-sec-0004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Microclimate data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We deployed AQA 8000 Series LogTag
+   <span class="sup">™</span> data loggers (
+   <span ext-link-type="uri" xlink:href="http://www.logtagrecorders.com" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.logtagrecorders.com</span>) at sites occupied by pikas in two stages. In the first stage, we used the loggers to estimate an altitudinal lapse rate for interpolating the elevation–temperature relationship across GNP. In June and July 2008, we placed seven loggers in protected crevices 1–2 m below the talus surface adjacent to a pika's food cache (or “hay‐pile”), one at each of seven sites with varying slope aspects and elevations ranging from 1512 to 2274 m. Two of these loggers at intermediate elevations were placed within 100 m of each other to assess small‐scale and potential logger variability. The loggers recorded temperature and relative humidity at 15‐min intervals. We calculated the lapse rate by fitting a linear regression to the instantaneous morning (07:00), midday (14:00), and evening (20:00) temperatures at each of the sites at one‐week intervals from July 28 to September 15.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In the second stage, we used four loggers to measure the thermal refuge provided by the talus by measuring above‐ and below‐talus temperature at two locations representing elevation extremes (1056 m and 2521 m). At both sites, one logger was placed, unshaded, on top of the talus. The other was placed under the same rock and next to a hay‐pile. These loggers recorded temperature and relative humidity at 20‐min intervals. We did not deploy loggers at all behavioral observation sites, so in order to interpolate above‐ and below‐talus temperatures at those sites, we applied our estimated lapse rate of −8°C/km (from stage one) to the stage‐two thermal refuge data. Our estimated lapse rate fell within the range considered appropriate for GNP (Ray et al. 
+   <a rid="ece31848-bib-0046" ref-type="ref" href="#ece31848-bib-0046">2010</a>).
+  </p>
+ </sec>
+ <sec id="ece31848-sec-0005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pika physical parameters</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The pika physical properties used for biophysical modeling (see below) were either measured directly using a preserved pika specimen from the University of Wisconsin‐Madison Zoology Museum (with summer pelage, obtained in Colorado) or gleaned from the literature. We directly measured fur length and reflectivity for dorsal and ventral sections of the torso and legs. We assumed that winter fur was 50% longer than summer fur (Howell 
+   <a rid="ece31848-bib-0022" ref-type="ref" href="#ece31848-bib-0022">1924</a>), and that fur depth was always 50% of fur length. Animal model inputs are summarized in Table S1 of the Supporting Information.
+  </p>
+ </sec>
+ <sec id="ece31848-sec-0006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Mechanistic model simulations</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Niche Mapper is described in detail elsewhere (Porter and Mitchell 
+   <a rid="ece31848-bib-0044" ref-type="ref" href="#ece31848-bib-0044">2006</a>; Mathewson and Porter 
+   <a rid="ece31848-bib-0032" ref-type="ref" href="#ece31848-bib-0032">2013</a>). In brief, Niche Mapper consists of two submodels: a microclimate model and an endotherm model. The microclimate model computes the hourly values of local air temperature at animal height, ground surface temperatures, below ground soil temperatures, local wind speed and relative humidity, and direct and diffuse solar radiation in the sun and shade. The endotherm model numerically solves for metabolic rates that allow an animal to maintain its core temperature within a defined range under the computed environmental conditions. To do so, both models solve the generic heat balance model, 
+   <span class="italic">Q</span>
+   <sub>in</sub>
+   <span class="italic"> + Q</span>
+   <sub>gen</sub>
+   <span class="italic"> = Q</span>
+   <sub>out </sub>
+   <span class="italic">+ Q</span>
+   <sub>st</sub>; where heat in (
+   <span class="italic">Q</span>
+   <sub>in</sub>) comes from solar and infrared radiation; 
+   <span class="italic">Q</span>
+   <sub>gen</sub> is metabolic heat generated (set to zero for the microclimate model); heat out (
+   <span class="italic">Q</span>
+   <sub>out</sub>), is infrared radiation from the surface (ground or fur–air interface), convective heat loss, and evaporative heat loss; and stored heat (
+   <span class="italic">Q</span>
+   <sub>st</sub>), which is set to zero in the endotherm model for steady‐state simulations. Niche Mapper solves these equations for each hour of the day, enabling analyses such as how many hours of a month's “average” day a model animal will be either heat or cold stressed when trying to maintain a given activity level (quantified as a multiple of BMR). If the metabolic rate that solves the heat balance equation is below the target activity level, the animal is predicted to overheat if active in those conditions and thus activity is not possible.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We tested Niche Mapper's ability to predict metabolic rates as a function of ambient air temperature prior to field simulations of pikas in GNP by simulating the metabolic chamber experiments of MacArthur and Wang (
+   <a rid="ece31848-bib-0030" ref-type="ref" href="#ece31848-bib-0030">1973</a>), using the same mean pika mass (109 g) and constant wind speed (0.1 m/s) used in the experiments. We also conducted a series of sensitivity analyses to determine the influence of various animal and environmental properties on the model's metabolic rate predictions.
+  </p>
+ </sec>
+</sec>

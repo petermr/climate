@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec009" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Future Climate Projections</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Future climate conditions were taken from a dynamically downscaled regional climate model, the Conformal Cubic Atmospheric Model (CCAM), developed by the Commonwealth Scientific and Industrial Research Organisation (CSIRO), Australia. Six CMIP3 global climate models (ECHAM5/MPI-OM, GFDL-CM2.0, GFDL-CM2.1, UKMO-HadCM3, CSIRO Mk3.5 and MIROC3.2 (medres)) were downscaled to ~10km resolution by the Climate Futures for Tasmania project. These models were chosen because they represent current south-east Australian climate means and variability well [
+  <a rid="pone.0124014.ref035" ref-type="bibr" href="#pone.0124014.ref035">35</a>], and cover the spread of projected rainfall change in southeast Australia present in the CMIP3 set of models [
+  <a rid="pone.0124014.ref036" ref-type="bibr" href="#pone.0124014.ref036">36</a>]. Details of the modelling can be found in Corney 
+  <span class="italic">et al</span>. [
+  <a rid="pone.0124014.ref037" ref-type="bibr" href="#pone.0124014.ref037">37</a>, 
+  <a rid="pone.0124014.ref038" ref-type="bibr" href="#pone.0124014.ref038">38</a>], and the modelled projections are available through the Tasmanian Partnership for Advanced Computing (TPAC) portal (
+  <span ext-link-type="uri" xlink:href="https://dl.tpac.org.au/tpacportal/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://dl.tpac.org.au/tpacportal/</span>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We present results based on the A2 emissions scenario because global emissions are currently tracking at the higher level of this scenario [
+  <a rid="pone.0124014.ref039" ref-type="bibr" href="#pone.0124014.ref039">39</a>]. The A2 scenario is broadly similar to the Representative Concentration Pathway (RCP) 8.5, which replaced the Special Report on Emissions Scenarios (SRES) emissions scenarios in the Intergovernmental Panel on Climate Change’s (IPCC’s) fifth assessment report (AR5) and Phase 5 of the Coupled Model Inter-comparison Project (CMIP5). Regional comparisons of projections from the CMIP5 and CMIP3 models have found surface temperature, wind and rainfall patterns to be highly consistent between the archives [
+  <a rid="pone.0124014.ref040" ref-type="bibr" href="#pone.0124014.ref040">40</a>–
+  <a rid="pone.0124014.ref042" ref-type="bibr" href="#pone.0124014.ref042">42</a>]. The release of the CMIP5 archive models has therefore not made the CMIP3 models redundant.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Current baseline climate surfaces were obtained from ANUCLIM version 6.1 [
+  <a rid="pone.0124014.ref043" ref-type="bibr" href="#pone.0124014.ref043">43</a>], based on the 0.01° (~1 km) Digital Elevation Model for Australia. Climate change grids for maximum and minimum temperature (Tmax, Tmin), precipitation and pan evaporation were calculated relative to the ANUCLIM baseline (1976–2005; 1970–1995 for evaporation), for two future periods representing 2040–2069 and 2070–2099 (hereafter 2050 and 2080, the mean values of the 30 year periods). ANUCLIM was used to interpolate the regional climate model output to 1km and generate monthly mean data and the thirty-five bioclimatic variables for the current and future periods (
+  <a rid="pone.0124014.t001" ref-type="table" href="#pone.0124014.t001">Table 1</a>).
+ </p>
+ <div id="pone.0124014.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0124014.t001</span>
+  <span class="label">Table 1</span>
+  <div class="caption">
+   <div class="title">The set of bioclimatic variables used in the Maxent models of grassland communities and species.</div>
+  </div>
+  <div class="alternatives">
+   <div id="pone.0124014.t001g" xlink:href="pone.0124014.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <table frame="hsides" rules="groups">
+    <colgroup span="1">
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+    </colgroup>
+    <thead>
+     <tr>
+      <th align="left" rowspan="1" colspan="1">Bio ID</th>
+      <th align="left" rowspan="1" colspan="1">Bioclimatic parameters</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio1</td>
+      <td align="left" rowspan="1" colspan="1">Annual Mean Temperature</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio2</td>
+      <td align="left" rowspan="1" colspan="1">Mean Diurnal Range (Mean(period max-min))</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio3
+       <a rid="t001fn001" ref-type="table-fn" href="#t001fn001">*</a>
+      </td>
+      <td align="left" rowspan="1" colspan="1">Isothermality (bio2/bio7)</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio4</td>
+      <td align="left" rowspan="1" colspan="1">Temperature Seasonality (Coefficient of Variation)</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio5</td>
+      <td align="left" rowspan="1" colspan="1">Max Temperature of Warmest Period</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio6</td>
+      <td align="left" rowspan="1" colspan="1">Min Temperature of Coldest Period</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio7</td>
+      <td align="left" rowspan="1" colspan="1">Temperature Annual Range (bio5-bio6)</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio8</td>
+      <td align="left" rowspan="1" colspan="1">Mean Temperature of Wettest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio9</td>
+      <td align="left" rowspan="1" colspan="1">Mean Temperature of Driest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio10</td>
+      <td align="left" rowspan="1" colspan="1">Mean Temperature of Warmest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio11</td>
+      <td align="left" rowspan="1" colspan="1">Mean Temperature of Coldest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio12</td>
+      <td align="left" rowspan="1" colspan="1">Annual Precipitation</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio13</td>
+      <td align="left" rowspan="1" colspan="1">Precipitation of Wettest Period</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio14</td>
+      <td align="left" rowspan="1" colspan="1">Precipitation of Driest Period</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio15</td>
+      <td align="left" rowspan="1" colspan="1">Precipitation Seasonality (Coefficient of Variation)</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio16</td>
+      <td align="left" rowspan="1" colspan="1">Precipitation of Wettest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio17</td>
+      <td align="left" rowspan="1" colspan="1">Precipitation of Driest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio18</td>
+      <td align="left" rowspan="1" colspan="1">Precipitation of Warmest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio19</td>
+      <td align="left" rowspan="1" colspan="1">Precipitation of Coldest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio20</td>
+      <td align="left" rowspan="1" colspan="1">Annual Mean Radiation</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio21</td>
+      <td align="left" rowspan="1" colspan="1">Highest Period Radiation</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio22</td>
+      <td align="left" rowspan="1" colspan="1">Lowest Period Radiation</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio23</td>
+      <td align="left" rowspan="1" colspan="1">Radiation Seasonality (Coefficient of Variation)</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio24</td>
+      <td align="left" rowspan="1" colspan="1">Radiation of Wettest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio25</td>
+      <td align="left" rowspan="1" colspan="1">Radiation of Driest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio26</td>
+      <td align="left" rowspan="1" colspan="1">Radiation of Warmest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio27</td>
+      <td align="left" rowspan="1" colspan="1">Radiation of Coldest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio28</td>
+      <td align="left" rowspan="1" colspan="1">Annual Mean Moisture Index</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio29</td>
+      <td align="left" rowspan="1" colspan="1">Highest Period Moisture Index</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio30</td>
+      <td align="left" rowspan="1" colspan="1">Lowest Period Moisture Index</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio31
+       <a rid="t001fn001" ref-type="table-fn" href="#t001fn001">*</a>
+      </td>
+      <td align="left" rowspan="1" colspan="1">Moisture Index Seasonality (CV)</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio32</td>
+      <td align="left" rowspan="1" colspan="1">Mean Moisture Index of Highest Quarter MI</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio33</td>
+      <td align="left" rowspan="1" colspan="1">Mean Moisture Index of Lowest Quarter MI</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio34</td>
+      <td align="left" rowspan="1" colspan="1">Mean Moisture Index of Warmest Quarter</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">bio35</td>
+      <td align="left" rowspan="1" colspan="1">Mean Moisture Index of Coldest Quarter</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="table-wrap-foot">
+   <fn id="t001fn001" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">* bio3 (isothermality) can be interpreted as the evenness of temperature over the course of a year, or a quantification of how large the day-to-night temperature oscillation is in comparison to the summer-to-winter oscillation. A value of 100 would represent a site where the diurnal temperature range is equal to the annual temperature range.</p>
+   </fn>
+   <fn id="t001fn002" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">**bio31 was not used because the Coefficient of Variation could not be calculated in areas where the standard deviation was zero (large areas of western Tasmania).</p>
+   </fn>
+  </div>
+ </div>
+</sec>
