@@ -32,6 +32,6 @@ Gitter chat https://gitter.im/open-climate/community and use the hashtags on Twi
 
 TBC
 
-### Anotated Corpus
+### Annotated Corpora
 
 TBC
