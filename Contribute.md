@@ -1,6 +1,6 @@
 ﻿# Contribute
 
-In the initial phases of the project aimed at freeing all climate change research and having it published as open access help is needed in creating a knowledgebase via **listing important information** and in the **extraction of information from publication databases**.
+In the initial phases of the project aimed at freeing all climate change research and having it published as open access. Help is needed in creating a knowledgebase via **listing important information** and in the **extraction of information from publication databases**.
 
 ## Tasks
 
