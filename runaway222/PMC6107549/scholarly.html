@@ -1,0 +1,835 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head> <style type="text/css">
+         	     		 
+         	    a                          {background : #ffffff; }
+         	    article                    {border-style : dotted; border-width : 2px; }
+         		 	
+         		 	div                        {background : #ffffcc;}
+         		 	div.abstract-title         {font-weight : bold ; font-size : 16pt;}
+         		 	div.ack                    {border-style : solid ; border-color : red; margin
+         : 2em; }
+         		 	div.article-meta           {border-style : solid; border-width : 1 pt; margin
+         1em;}
+         		 	div.boxed-text             {margin : 5em; border-style : solid;}
+         		 	div.contrib-group          {margin : 1em; }
+         		 	div.fig                    {border-style : solid; border-width : 2px; margin :
+         2em; }
+         		 	div.funding                {font-weight : bold ; font-size : 16pt;}
+         		 	div.given-names            {font-style : italic;}
+         		 	div.intro                  {border-style : inset; margin : 5px;}
+         		 	div.introduction           {border-style : inset; margin : 5px;}
+         		 	div.journal-meta           {border-style : solid; border-width : 1 pt; margin
+         1em;}
+         		 	div.journal-title-group    {background : #ffeeee;}
+         		 	div.article-title          {font-weight : bold ; font-size : 18pt;}
+         		 	div.kwd                    {font-style : italic}
+         		 	div.meta-name              {font-weight : bold ; font-size : 16pt;}
+         		 	div.name                   {font-weight : bold;}
+         		 	div.alt-title              {font-style : italic; font-size : 12px;}
+         		 	
+         		 	div.sec                    {border : 2px; margin 5px; padding 2px;}
+         		 	div.title                  {font-family : courier; font-weight : bold;
+         		 	                            font-size : 16pt; margin : 5px;}
+         		 	
+         		 	div.materials_methods      {border-style : double; margin : 5px; }
+         		 	div.methods                {border-style : double; margin : 5px; }
+         		 	
+         		 	div.results                {border-style : solid; margin : 5px;}
+         		 	div.background             {border-style : dotted; margin : 5px;}
+         		 	
+         		 	div.discussion             {border-style : groove; margin : 5px;}
+         		 	div.conclusion             {border-style : ridge; margin : 5px;}
+         		 	div.conclusions             {border-style : ridge; margin : 5px;}
+         		 	div.supplementary-material {border-style : inset; margin : 5px;}
+         		 	div.abbreviations          {border-style : double; border-color : red; margin
+         : 5px;}
+         		 	div.competinginterests     {border-style : double; border-color : blue; margin
+         : 5px;}
+         		 	div.acknowledgements       {border-style : double; border-color : green; margin
+         : 5px;}
+         		 	div.authors_contributions   {border-style : double; border-color : purple; margin
+         : 5px;}
+         		 	
+         		 	div.publisher              {border-style : outset; margin : 5px;}
+         		 	div.fn-type-conflict       {background : #f88; }
+         		 	div.fn-type-con            {background : #ddf; }
+         		 	div.fn-type-other          {background : #ddd; }
+         		 	
+         		 	div.unknown                {background : #ffd;
+         									 	  border-style : solid;
+         									 	  border-width : 1px;
+         									 	  padding : 2 px;}
+         		 	  
+         	    table                      {background : #ffffdd;}
+         		 	tr                         {background : #ddddff; padding : 1px;}
+         		 	
+         		 	span                       {background : #ffcccc;}
+         		 	
+         		 	span.citation-author       {font-family : helvetica; background : #ffeeee;}
+         		 	span.collab                {background : #ddffff; }
+         		 	span.comment               {font-family : courier; font-size : 6px; background
+         : #ffaaff;}
+         		 	span.contrib               {background : #ffffff;}
+         		 	span.corresp               {background : #ddffdd; }
+         		 	span.doi                   {background : #ffffff;}
+         		 	span.email                 {font-family : courier; }
+         		 	span.etal                  {font-style : italic;}
+         		 	span.fpage                 {font-family : courier;}
+         		 	span.given-names           {background : #ffffff;}
+         		 	span.iso-abbrev            {background : #ffffff;}
+         		 	span.issn-epub             {background : #ffffff;}
+         		 	span.issn-ppub             {background : #ffffff;}
+         		 	span.journal-title         {background : #ffffff;}
+         		 	span.lpage                 {font-family : courier;}
+         		 	span.mixed-article-title   {font-style : italic ;}
+         		 	span.nlm-ta                {background : #ffffff;}
+         		 	span.pmc                   {background : #ffffff;}
+         		 	span.pmcid                 {background : #ffffff;}
+         		 	span.pmid                  {background : #ffffff;}
+         		 	span.publisher             {background : #ffffff;}
+         		 	span.publisher-id          {background : #ffffff;}
+         		 	span.publisher-name        {background : #ffffff;}
+         		 	span.source                {background : #ffffff;}
+         		 	span.subject               {background : #ffffff;}
+         		 	span.surname               {background : #ffffff;}
+         		 	span.volume                {font-family : courier; font-weight : bold;}
+         		 	span.year                  {font-family : courier ; font-style : italic;}
+         			
+      </style> </head> <body> <div class="front" title="front"> <div class="journal-meta" tagx="journal-meta" title="journal-meta"> <span class="nlm-ta" title="nlm-ta">Sci Rep</span> <span class="iso-abbrev" title="iso-abbrev">Sci Rep</span> <div class="journal-title-group" tagx="journal-title-group" title="journal-title-group"> <span class="journal-title" tagx="journal-title" title="journal-title">Scientific Reports</span> </div> <span class="issn-epub" tagx="issn" title="issn-epub">2045-2322</span> <div class="publisher" tagx="publisher" title="publisher"> <span class="publisher-name" tagx="publisher-name" title="publisher-name">Nature Publishing Group UK</span> <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">London</span> </div> </div> <div class="article-meta" tagx="article-meta" title="article-meta"> <span class="pmcid" title="pmcid"> pmcid: <a href="http://www.ncbi.nlm.nih.gov/pubmed/6107549">6107549</a> </span> <span class="publisher-id" title="publisher-id">30829</span> <span class="doi" title="doi"> doi: <a href="https://dx.doi.org/10.1038/s41598-018-30829-4">10.1038/s41598-018-30829-4</a> </span> <div class="article-categories" title="article-categories">
+: <span class="subject" title="subject">Article</span> </div> <div class="title-group"> <div class="article-title" title="article-title">
+Spectra, intermittency, and extremes of weather, macroweather and climate</div> </div> <div class="contrib-group" title="contrib-group"> <span class="contrib" title="contrib"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">http://orcid.org/0000-0002-9367-3137</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S.</span> </span> <span class="address" title="address"> <span class="email" tagx="email" title="email">lovejoy@physics.mcgill.ca</span> </span> <a href="#Aff1" /> </span> <span class="citation_author_institution" id="Aff1">[], <div class="institution-wrap" title="institution-wrap"> <span class="institution-id" title="institution-id">0000 0004 1936 8649</span> <span class="institution-id" title="institution-id">grid.14709.3b</span> <span class="institution" title="institution">Physics, McGill University, </span> </div> </span> </div> <span class="pub-date-epub" title="pub-date-epub">epub: <span>2018-8-8</span> </span> <span class="pub-date-pmc-release" title="pub-date-pmc-release">pmc-release: <span>2018-8-8</span> </span> <span class="pub-date-collection" title="pub-date-collection">collection: <span>2018</span> </span> <span class="volume" tagx="volume" title="volume">8</span> <span class="elocation-id" tagx="elocation-id" title="elocation-id">12697</span> <span class="history" title="history"> <span class="received" title="received">received: 2017-12-20</span> <span class="accepted" title="accepted">accepted: 2018-8-3</span> </span> <div class="permissions"> <span class="copyright" title="copyright">(C) , </span> <span class="license" title="license"> <span class="license-p" title="license-p"> <b>Open Access</b> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article’s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>. </span> </span> </div> <div class="abstract" title="abstract"> <div class="abstract-title" title="abstract-title">
+Abstract</div> <p>It was recently found that the accepted picture of atmospheric variability was in error by a large factor. Rather than being dominated by a series of narrow scale-range quasi-oscillatory processes with an unimportant white noise "background", it turned out that the variance was instead dominated by a few wide range scaling processes albeit occasionally interspersed with superposed quasi-oscillations. Although the classical model implied that successive million year global temperature averages would differ by mere micro Kelvins, the implausibility had not been noticed. In contrast, the new picture inverts the roles of background and foreground and involves four (possibly five) wide range scaling processes. As with any new paradigm, there are consequences; in this paper we focus on the implications for the spectra, intermittency and the extremes. Intermittency is an expression of the spatio-temporal sparseness of strong events whereas the extremes refer to the tails of their probability distributions and both affect the spectra. Although we give some results for the macro and mega climate regimes, we focus on weather, macroweather and climate: from dissipation to Milankovitch scales. </p> </div> <div class="custom-meta-group" title="custom-meta-group"> <meta name="issue-copyright-statement" value="© The Author(s) 2018" /> </div> </div> </div> <div class="body" title="body"> <div class="introduction" title="introduction"> <div class="title" tagx="title" title="title">
+Introduction</div> <p>The quasi-oscillatory model of atmospheric variability was first clearly articulated at the dawn of the paleo climate revolution by M. Mitchell <sup> <a href="#CR1">1</a> </sup> who admitted that it was largely "an educated guess". In spite of weak empirical support, it survived because even sophisticated analysis techniques were only applied over narrow ranges of scale so that the bigger picture was obscured. In addition, analyses were not sufficiently <i>simple</i>. Figure <a href="#Fig1">1a</a> spanning over 17 orders of magnitude in time (updated from <sup> <a href="#CR2">2</a> </sup>), clearly and simply shows how temperature and paleo temperatures vary with time scale; Fig. <a href="#Fig1">1b</a> shows examples of corresponding spatial statistics which are also scaling over large ranges. </p><div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 1</span> </a> </div>   <p>(a) (top panel): A wide scale range composite of temporal Root Mean Square (RMS) Haar temperature fluctuations with the data described in Table <a href="#Tab1">1</a> in thick lines (from left to right, the solid curves are data set #1, bottom, #2, top #3), #4, #5, #7, #8). The dashed lines are reproduced from ref. <sup> <a href="#CR2">2</a> </sup> left to right, datasets #2, #6, #7, #8. Here as in b, the fluctuations were multiplied by the canonical calibration constant of 2 so that when the slopes are positive, the fluctuations are close to difference fluctuations. The various scaling regimes are indicated at the bottom. (b) (bottom panel): Same as ( <b>a</b>) but for spatial transects. The bottom aircraft (data set #9) and top (daily resolution, data set #10) data are in the weather regime ("W"), the line labelled "M" is in the macroweather regime (data set #11), and the one labelled ("C"), the climate regime (data set #12, see Table <a href="#Tab1">1</a> for details). At scales &amp;gt;≈2500 km, the aircraft fluctuations from a single flight, have a dip caused by poor statistics. The breaks in the other (weather, macroweather and climate) transects only occur at scales of about 10,000 km (upper right). </p>   </div> <p /> <p>New clarity was possible thanks to the rejuvenation of a fluctuation definition first proposed over a century ago <sup> <a href="#CR3">3</a> </sup>. For a time series <i>T</i>( <i>t</i>), the Haar fluctuation Δ <i>T</i>(Δ <i>t</i>) over a time scale Δ <i>t</i>, is simply the difference between the average of the first and second halves of the interval Δ <i>t</i>. Although technically, the Haar fluctuation is a wavelet, one doesn’t need any knowledge of wavelets to use them. The utility of the Haar fluctuation is not only that it is easy to define and implement numerically - even on series with missing data - but rather that its <i>interpretation</i> is simple. In regimes where the average fluctuations Δ <i>T</i>(Δ <i>t</i>) increase with scale Δ <i>t</i>, it is nearly the same as the difference <i>T</i>( <i>t</i>) −  <i>T</i>( <i>t</i> − Δ <i>t</i>), in regimes where the average fluctuation decreases with scale, it is nearly the same as the anomaly – the average value of segments of length Δ <i>t</i> of a series whose mean has been removed <sup> <a href="#CR4">4</a> </sup>. The Haar fluctuations are adequate as long as the fluctuation exponent <i>H</i> is in the range −1 to 1 and this includes nearly all geophysical series (time) and transects (space; see below). With Haar fluctuations, wide scale range composites are both easy to produce and to interpret. </p> <p>Yet, this is more than just new picture for classifying atmospheric variability. In this paper, we explore some of its consequences: extremes, sparseness, spurious spectral spikes, oscillations, outliers and tipping points. </p> </div> <div class="spikeplots" title="sec"> <div class="title" tagx="title" title="title">
+Spike Plots</div> <p>In order to vividly display the extreme nonclassical behaviour, it suffices to introduce a seemingly trivial tool - a "spike plot". A spike plot is the series (or transect) of the absolute first differences Δ <i>T</i> normalized by their means ( <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M1">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\overline{{\rm{\Delta }}T}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> ): <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M3">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}T/\overline{{\rm{\Delta }}T}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>, the overbar is the series or transect mean. Figure <a href="#Fig2">2a</a> shows examples for weather, macroweather and climate. The resolutions have been chosen to be within the corresponding regimes (see the details in Table <a href="#Tab1">1</a>). One immediately notices that with a single exception - macroweather in time – all of the regimes are highly "spiky", exceeding the maximum expected for Gaussian processes by a large margin (the solid horizontal line). Indeed, for the other five plots, the maxima correspond to (Gaussian) probabilities <i>p</i> &amp;lt; 10 <sup>−9</sup> (the top dashed line), and four of the six to <i>p</i> &amp;lt; 10 <sup>−20</sup>. The exception - macroweather in time - is the only process that is not very far from Gaussian behaviour, but it is nevertheless highly non Gaussian in space (bottom, middle). Physically, the spikes in the weather regime (left column) would correspond to meteorological fronts, whereas in the climate regime (upper right), they might correspond to Dansgaard-Oeschger events or (bottom right) to boundaries between different climate zones. More examples are shown in Fig. <a href="#Fig2">2b,c</a>, where we have included series both from high frequencies (showing "ramps", bottom) as well as from the low frequency macro and mega climate regimes (top). <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 2</span> </a> </div>   <p>(a) (top panel): Temperature spike plots for weather, macroweather, climate (left to right) and time and space (top and bottom). The solid horizontal black line indicates the expected maximum for a Gaussian process with the same number of points (360 for each with the exception of the lower right which had only 180), the dashed lines are the corresponding Gaussian probability levels <i>p</i> = 10 <sup>−6</sup>, <i>p</i> = 10 <sup>−9</sup>, two of the spikes exceed 14; <i>p</i> &amp;lt; 10 <sup>−77</sup>. The upper left is Montreal at 1 hour resolution (data set #3; these numbers refer to Table <a href="#Tab1">1</a>), upper middle, Montreal at 4 month resolution (#4), upper right, GRIP at 240 year resolution (#5), lower left, aircraft at 280 m resolution (#9), ECMWF, space, one month, 1° in space (#11), Twentieth Century Reanalysis (20 CR), 140 year res, 2° in space at 45°N, (#12). ( <b>b</b>) (middle panel): Left: similar to ( <b>a</b>) but for time only, and all series have 1000 points; the original series (normalized by their standard deviations and displaced vertically by 15 units for clarity) are shown on the right in the corresponding order. Bottom to top: The data are from sets #1,#2, #3, #4, #5, #7, #8 (Table <a href="#Tab1">1</a>). The "mC" and "MC" are for macro and mega climate respectively. The solid horizontal lines are the Gaussian levels corresponding to probability of 10 <sup>−3</sup>, the dashed lines are for 10 <sup>−6</sup>, 10 <sup>−9</sup>. (c) (bottom panel): Same as ( <b>a</b>) but for transects, bottom to top: length 1000 (aircraft, data #9), daily reanalysis (360 points, #10), monthly reanalysis, #11, 360 points, 140 year resolution, #12, 180 points. </p>   </div> <div class="table-wrap_UNKNOWN"> <span class="label" tagx="label" title="label">Table 1</span>  <p>A summary of the data used in this study, see Methods for more details.</p>  <table> <thead> <tr> <th /> <th>No.</th> <th>Regime</th> <th>Description</th> <th>Resolution, time</th> <th>Resolution, space</th> </tr> </thead> <tbody> <tr> <td>Time</td> <td>1</td> <td>weather</td> <td>Thermistor, 2 hours</td> <td>1/15 s</td> <td>1 mm</td> </tr> <tr> <td>2</td> <td>weather</td> <td>Lander, 3 yrs</td> <td>hourly</td> <td>1 m</td> </tr> <tr> <td>3</td> <td>weather</td> <td>Montreal, 17 yrs</td> <td>hourly</td> <td>1 m</td> </tr> <tr> <td>4</td> <td>macroweather</td> <td>20 CR: 0–40 N, every 2° longitude</td> <td>monthly</td> <td>2° × 2°</td> </tr> <tr> <td>5</td> <td>climate</td> <td>GRIP paleo temp.</td> <td>85 years</td> <td>0.2 m</td> </tr> <tr> <td>6</td> <td>climate</td> <td>EPICA paleo temp.</td> <td>30–700</td> <td>0.55 m</td> </tr> <tr> <td>7</td> <td>macroclimate</td> <td>Zachos stack</td> <td>5 kyrs</td> <td>global</td> </tr> <tr> <td>8</td> <td>megaclimate</td> <td>Veizer stack</td> <td>553 kyrs</td> <td>global</td> </tr> <tr> <td>Space</td> <td>9</td> <td>weather</td> <td>Aircraft</td> <td>0.5s</td> <td>280 m</td> </tr> <tr> <td>10</td> <td>weather</td> <td>ECMWF reanalysis</td> <td>daily</td> <td>1°</td> </tr> <tr> <td>11</td> <td>macroweather</td> <td>ECMWF reanalysis</td> <td>monthly</td> <td>1° × 1°</td> </tr> <tr> <td>12</td> <td>climate</td> <td>20CR reanalysis</td> <td>140 years</td> <td>2° × 2°</td> </tr> </tbody> </table> </div> <p /> <p>In order to understand the spike plots, recall that if a process is scaling over time interval Δ <i>t</i> or spatial lag Δ <i>x</i>, fluctuations are generally of the form: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">1</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M5">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{cc}{\rm{\Delta }}T({\rm{\Delta }}t)={{\rm{\phi }}}_{{\rm{\Delta }}t}{\rm{\Delta }}{t}^{{H}_{t}}; &amp;amp; {\rm{\Delta }}T({\rm{\Delta }}x)={{\rm{\phi }}}_{{\rm{\Delta }}x}{\rm{\Delta }}{x}^{{H}_{x}}\end{array}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+H</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+;</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+x</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+x</div> </div> </div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+x</div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+H</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+x</div> </div> </div> </div> </div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>where φ is a dimensional quantity driving the process and the equality is understood in a statistical sense, the subscript indicates the resolution in time or in space. <i>H</i> is the fluctuation exponent; it is used in honour of Edwin Hurst who introduced it in hydrology <sup> <a href="#CR5">5</a> </sup>, but it is only the same as Hurst’s exponent for Gaussian processes; the fluctuation exponent is of more general utility. For example, in turbulence in space, if we replace <i>T</i> by a velocity component, and φ by the energy flux to the one third power, then <i>H</i> = 1/3 and the equation represents the Kolmogorov law. In general <i>H</i> (and the other scaling exponents) are different in space and in time and different in the horizontal and vertical directions. This is the problem of scaling stratification, scaling anisotropy, "Generalized Scale Invariance" <sup> <a href="#CR6">6</a> </sup> it is out of our present scope; hence to lighten the notation we drop the <i>t</i>, <i>x</i> indices. <p /> <p>In the basic picture, φ is a Fourier space flux, in this example, the energy per time passing from small to large wavenumbers (large to small scales). The normalized spikes <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M7">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}T/\overline{{\rm{\Delta }}T}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div>  can thus be interpreted as an estimate of the nondimensional, normalized driving flux: <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">2</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M9">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{cc}{{\rm{\phi }}}_{{\rm{\Delta }}t}/\bar{{{\rm{\phi }}}_{{\rm{\Delta }}t}}={\rm{\Delta }}T({\rm{\Delta }}t)/\overline{{\rm{\Delta }}T({\rm{\Delta }}t)}; &amp;amp; {{\rm{\phi }}}_{{\rm{\Delta }}x}/\bar{{{\rm{\phi }}}_{{\rm{\Delta }}x}}={\rm{\Delta }}T({\rm{\Delta }}x)/\overline{{\rm{\Delta }}T({\rm{\Delta }}x)}\end{array}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> <div class="mo_UNKNOWN">
+;</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+x</div> </div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+x</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+x</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+x</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div> <p /> <p>The interpretation in terms of fluxes comes from turbulence theory and is routinely used to quantify turbulence (the physically significant flux may be some power of φ), but it turns out that for scaling processes, eq. <a href="#Equ1">1</a> is of general validity. In the weather regime, in respectively time and space, the squares and cubes of the wind spikes are estimates of the turbulent energy fluxes. The spikiness is because most of the dynamically important events are sparse, hierarchically clustered (fractal), occurring mostly in storms and the centre of storms. The scaling in eq. <a href="#Equ1">1</a> implies that the statistics of the fluctuations fall off in a (scale free) power law way. In comparison, classical autoregressive or moving average processes (time) or Kriging (space) involve much more rapid (exponential) decays of correlations. In contrast, scaling implies "long range" statistical dependencies, in series (time) they have "long range memories" (in Gaussian models, more restrictive definitions of long range memory are occasionally used that depend on the value of <i>H</i>). </p> <p>The spikes could be considered as manifestations of "sudden transitions from quiescence to chaos"; a rather general definition of intermittency. Quantitative definitions applicable to fields (space) are of the "on-off" type, the idea being that when the temperature, wind or other field exceeds a threshold then it is "on" i.e. in a special state - perhaps of strong/violent activity. At a specific measurement resolution, the on-off intermittency can be defined as the fraction of space that the field is "on" (where it exceeds the threshold). In a scaling system, for any threshold the "on" region will be a fractal set and both the fraction and threshold will be characterized by exponents ( <i>c</i> and by γ, eq. <a href="#Equ4">4</a>) that describe the intermittency over all scales and all intensities (thresholds). The spikes of each amplitude thus each have their own sparseness, and intermittency. In scaling time series, the same intermittency definition applies; note however that other definitions are sometimes used in series in deterministic chaos. </p> <p>As long as <i>H</i> &amp;lt; 1 (true for nearly all geoprocesses), the differencing that yields the spikes acts as a high pass filter, the spikes are dominated by the high frequencies. Smoothed Gaussian white noises such as the scaling fractional Gaussian noise (fGn) and fractional Brownian motion (fBm) processes, or nonscaling processes such as autoregressive and moving average processes and the hybrid fractional versions of these, will have spikes that look like the macroweather spikes: in Fig. <a href="#Fig2">2a</a>, they will be roughly bounded by the solid horizontal lines. Mathematically, the scaling fGn, fBm are the results of power law filters (fractional integrals) of Gaussian white noises whereas more generally scaling processes are power law filters of densities of multifractal measures (the Fractionally Integrated Flux model <sup> <a href="#CR7">7</a> </sup>). </p> <p>To go beyond Gaussians, each spike is considered to be a singularity of order γ: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">3</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M11">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\lambda }^{\gamma }=\frac{|{\rm{\Delta }}T|}{\overline{|{\rm{\Delta }}T|}}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+λ</div> </div> <div class="mi_UNKNOWN">
+γ</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>λ is the scale ratio: λ = (the length of the series)/(the resolution of the series) = the number of pixels; in Fig. <a href="#Fig2">2a,b</a>, λ = 360, 1000 respectively. The extreme spikes ( <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M13">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$|{\rm{\Delta }}T|/\overline{|{\rm{\Delta }}T|}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>) in any 1000 point long series (e.g. Fig. <a href="#Fig2">2b</a>) have a probability ≈1/1000. For Gaussian processes, the spikes with this probability are <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M15">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$|{\rm{\Delta }}T|/\overline{|{\rm{\Delta }}T|}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span> = 4.12, this is shown by the solid lines in Fig. <a href="#Fig2">2b</a>, the line therefore corresponds to <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M17">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\gamma }}=\,\mathrm{log}(|{\rm{\Delta }}T|/\overline{|{\rm{\Delta }}T|})/\mathrm{log}\,{\rm{\lambda }}\approx \,\mathrm{log}\,4.12/\,\mathrm{log}\,1000\approx 0.20$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> <div class="mo_UNKNOWN">
+=</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+log</div> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+/</div> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+λ</div> <div class="mo_UNKNOWN">
+≈</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mn_UNKNOWN">
+4.12</div> <div class="mo_UNKNOWN">
+/</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mn_UNKNOWN">
+1000</div> <div class="mo_UNKNOWN">
+≈</div> <div class="mn_UNKNOWN">
+0.20</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>. For comparison, Table <a href="#Tab2">2</a> gives the both the observed maximum γ for each series in Fig. <a href="#Fig2">2</a> as well as the generally comparable theoretically expected maxima for the multifractal processes with the parameters estimated for the series in question. <div class="table-wrap_UNKNOWN"> <span class="label" tagx="label" title="label">Table 2</span>  <p>The scaling parameters <i>H</i>, <i>C</i> <sub>1</sub>, α and probability exponents <i>q</i> <sub> <i>D</i> </sub>. </p>  <table> <thead> <tr> <th /> <th>No.</th> <th> <i>H</i> </th> <th> <i>C</i> <sub>1</sub> </th> <th> <i>α</i> </th> <th> <i>q</i> <sub> <i>D</i> </sub> </th> <th> <i>γ</i> <sub> <i>max</i> </sub> ( <i>theory</i>) </th> <th> <i>γ</i> <sub> <i>max</i> </sub> ( <i>observed</i>) </th> </tr> </thead> <tbody> <tr> <td>Time</td> <td>1</td> <td>0.54 ± 0.003</td> <td>0.013 ± 0.001</td> <td>1.60 ± 0.08</td> <td>3.1</td> <td>0.34</td> <td>0.39</td> </tr> <tr> <td>2</td> <td>0.36 ± 0.02</td> <td>0.011 ± 0.002</td> <td>1.46 ± 0.05</td> <td>3.4</td> <td>0.31</td> <td>0.38</td> </tr> <tr> <td>3</td> <td>0.38 ± 0.01</td> <td>0.021 ± 0.001</td> <td>1.50 ± 0.07</td> <td>6.2</td> <td>0.22</td> <td>0.27</td> </tr> <tr> <td>4</td> <td>−0.24 ± 0.01</td> <td>0.052 ± 0.003</td> <td>1.56 ± 0.02</td> <td>7.2</td> <td>0.32</td> <td>0.22</td> </tr> <tr> <td>5</td> <td>0.20 ± 0.02</td> <td>0.047 ± 0.006</td> <td>1.40 ± 0.12</td> <td>5.1</td> <td>0.30</td> <td>0.30</td> </tr> <tr> <td>6</td> <td>0.41 ± 0.01</td> <td>0.01 ± 0.01</td> <td>1.46 ± 0.15</td> <td>5.0</td> <td>0.24</td> <td>0.28</td> </tr> <tr> <td>7</td> <td>−0.30 ± 0.03</td> <td>0.083 ± 0.014</td> <td>1.49 ± 0.13</td> <td>3.3</td> <td>0.44</td> <td>0.31</td> </tr> <tr> <td>8</td> <td>0.33 ± 0.03</td> <td>0.107 ± 0.016</td> <td>1.52 ± 0.31</td> <td>1.7</td> <td>0.65</td> <td>0.52</td> </tr> <tr> <td>Space</td> <td>9</td> <td>0.485 ± 0.004</td> <td>0.055 ± 0.002</td> <td>1.52 ± 0.16</td> <td>3.5</td> <td>0.38</td> <td>0.38</td> </tr> <tr> <td>10</td> <td>0.55 ± 0.02</td> <td>0.070 ± 0.005</td> <td>1.41 ± 0.06</td> <td>13.0</td> <td>0.35</td> <td>0.38</td> </tr> <tr> <td>11</td> <td>0.56 ± 0. 018</td> <td>0.154 ± 0.006</td> <td>1.55 ± 0.03</td> <td>8.4</td> <td>0.56</td> <td>0.43</td> </tr> <tr> <td>12</td> <td>0.47 ± 0.02</td> <td>0.182 ± 0.011</td> <td>1.64 ± 0.11</td> <td>5.2</td> <td>0.62</td> <td>0.51</td> </tr> </tbody> </table> <div class="table-wrap-foot_UNKNOWN"> <p>The far right columns give theoretical estimates of the maximum spike heights using the parameters <i>C</i> <sub>1</sub>, α, <i>q</i> <sub> <i>D</i> </sub> and the scale ratio λ of the plots in Fig. <a href="#Fig2">2</a> (=1000 except for data sets 10, 11, 12 where λ = 360, 360, 180 respectively; the spike plot for data set #6 is not shown). The theory column uses these parameters with the multifractal theory described in the text to estimate the solution to the equation <i>c</i>(γ <sub>max</sub>) = 1. The "observed" column determines γ <sub> <i>max</i> </sub> from the spike plot directly: <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M19">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${{\rm{\gamma }}}_{{\rm{\max }}}=\,\mathrm{log}(|{\rm{\Delta }}T|/\overline{|{\rm{\Delta }}T|}{)}_{{\rm{\max }}}/\mathrm{log}\,{\rm{\lambda }}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+max</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+log</div> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+max</div> </div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+λ</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div>  where <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M21">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${(|{\rm{\Delta }}T|/\overline{|{\rm{\Delta }}T|})}_{{\rm{\max }}}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+max</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>is the maximum spike. For comparison, for λ = 1000, Gaussian probabilities of 10 <sup>−3</sup>, 10 <sup>−6</sup>, 10 <sup>−9</sup> yield respectively γ <sub> <i>max</i> </sub> = 0.20, 0.26, 0.30. Error estimates for the right hand columns (extremes) were not given due to their sensitivity to the somewhat subjective choice of range over which the regressions were made. <p /> </div> </div> <p /> <p>In the general scaling case, the set of spikes that exceed a given threshold form a fractal set whose sparseness is quantified by the fractal codimension <i>c</i>(γ) =  <i>D</i> −  <i>d</i>(γ) where <i>D</i> is dimension of the space ( <i>D</i> = 1 for series and transects) and <i>d</i>(γ) is the corresponding fractal dimension. The codimension is fundamental since it is the exponent of the probability distribution: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">4</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M23">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{cc}{\rm{\Pr }}(\frac{|{\rm{\Delta }}T|}{\overline{|{\rm{\Delta }}T|}} &amp;gt; s)\approx P(s){\lambda }^{-c({\rm{\gamma }})}; &amp;amp; {\rm{\gamma }}=\frac{\mathrm{log}\,s}{\mathrm{log}\,{\rm{\lambda }}}\end{array}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Pr</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+&amp;gt;</div> <div class="mi_UNKNOWN">
+s</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+≈</div> <div class="mi_UNKNOWN">
+P</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+s</div> <div class="mo_UNKNOWN">
+)</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+λ</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+c</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+γ</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+;</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+s</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+λ</div> </div> </div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div> <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M25">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Pr }}(\frac{|{\rm{\Delta }}T|}{\overline{|{\rm{\Delta }}T|}} &amp;gt; s)$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+Pr</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+&amp;gt;</div> <div class="mi_UNKNOWN">
+s</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span> is the probability that a randomly chosen spike <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M27">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$|{\rm{\Delta }}T|/\overline{|{\rm{\Delta }}T|}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span> exceeds a fixed threshold <i>s, P</i>( <i>s</i>) is a nonscaling prefactor. <i>c</i>(γ) characterizes sparseness because it quantifies how the probabilities of spikes of different amplitudes change with resolution λ (for example when they are smoothed out by averaging). The larger <i>c</i>(γ), the sparser the set of spikes that exceed the threshold <i>s</i> = λ <sup>γ</sup>. A series is intermittent whenever it has spikes with <i>c</i> &amp;gt; 0. <p /> <p>Gaussian series are not intermittent since <i>c</i>(γ) = 0 for all the spikes. To see this, note that for Gaussian processes the cumulative probability of a spike exceeding a fixed threshold <i>s</i> is independent of the resolution λ, <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M29">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Pr }}(|{\rm{\Delta }}T|/\overline{|{\rm{\Delta }}T|} &amp;gt; s)\approx P(s)$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+Pr</div> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> <div class="mo_UNKNOWN">
+&amp;gt;</div> <div class="mi_UNKNOWN">
+s</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+≈</div> <div class="mi_UNKNOWN">
+P</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+s</div> <div class="mo_UNKNOWN">
+)</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> , where here, <i>P</i>( <i>s</i>) is related to the error function. Comparing this with Eq. <a href="#Equ4">4</a>, we see that <i>c</i> = 0. <p /> <p>Equation <a href="#Equ4">4</a> is true for scaling series of any scale ratio λ (i.e. any length, any resolution); its characterization in terms of γ and <i>c</i>(γ) is independent of λ, scale invariant. Scale invariance is in fact the physical symmetry principle respected by the dynamics. Eq. <a href="#Equ4">4</a> can be used to estimate the most extreme spike expected on a series with λ pixels. The probability of the corresponding singularity γ <sub> <i>max</i> </sub> is ≈1/λ, hence from eq. <a href="#Equ4">4</a>, <i>c</i>(γ <sub> <i>max</i> </sub>) = 1 (equivalently, <i>d</i>(γ <sub> <i>max</i> </sub>) = 0) so that γ <sub> <i>max</i> </sub> can be estimated from the inverse codimension function: γ <sub> <i>max</i> </sub> =  <i>c</i> <sup>−1</sup>(1); the far right column of Table <a href="#Tab2">2</a> shows that this provides reasonable estimates. </p> <p>Finally, we may note that <i>c</i>(γ) is not changed under certain transformations; for example under a linear change of variables. This means that although many of the analyses discussed here are proxy-based, as long as their calibration is linear, <i>c</i>(γ) and hence the intermittency will not be affected. In contrast, noise in the proxies (e.g. from bioturbation in ocean sediments, or isotope diffusion in ice cores) breaks the scaling at high frequencies; it will not affect the exponents estimated over the lower frequency scaling ranges. It is more difficult to generalize about the consequences of variable and uncertain chronologies, but at least in some cases - such as ice cores - the sampling intervals themselves can be highly variable – indeed spiky and scaling – yet at least in principle, the sampling intermittency may be statistically separated from the proxy intermittency (see box 11.3 in ref. <sup> <a href="#CR8">8</a> </sup>). </p> </div> <div class="spectra" title="sec"> <div class="title" tagx="title" title="title">
+Spectra</div> <p>Figure <a href="#Fig2">2</a> shows that superficially routine series and transects can hide enormous nonclassical statistical variability. Until revealed by the spike plots, these fluctuations are virtually invisible yet they do not hide from spectral analysis which is highly sensitive to jumps. To explore this, we made a sample of 5000 realizations of a mildly intermittent multifractal process with parameters similar to those of the spiky regimes in Fig. <a href="#Fig2">2</a>, see Table <a href="#Tab1">1</a> and Methods; here <i>H</i> = 0.33, <i>C</i> <sub>1</sub> = 0.05, α = 1.6 and each realization had 2048 points. Figure <a href="#Fig3">3</a> (bottom left) shows one of the simulations and the corresponding spike plot (top left) confirming that while the process itself is apparently only weakly variable (bottom left), it is nevertheless highly spiky and non-Gaussian with two of the spikes having Gaussian <i>p</i> ≪ 10 <sup>−9</sup>. The spikiness is well detected by the spectral analysis which itself has spikes. The spectrum (the black curve) is of a single realization, it is a "periodogram" obtained with a standard Hanning window. The right panel of Fig. <a href="#Fig3">3</a> reveals that with respect to the ensemble averaged spectrum (over 5000 periodograms from the same process, smooth, blue), nearly a dozen spectral spikes exceeded the conventional 2 standard deviation significance level (the arrows), with some exceeding the 4 standard deviation level ( <i>p</i> ≈ 10 <sup>−5</sup>). Although to make our point, we subjectively chose one of the more extreme of the first 50 simulations, this mild selection effect cannot explain the numerous strong spectral spikes. However, these spikes were to be expected since for each frequency, the tail of the probability distribution of the Fourier components was found to be a power law (here with exponent <i>q</i> <sub> <i>D</i> </sub> ≈ 5, see below). </p><div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 3</span> </a> </div>   <p>A multifractal simulation of a 2048 point series (lower left) with spike plot (upper left), and the corresponding spectrum (black, right). In the spike plot, the lower horizontal line corresponds to the maximum expected for a Gaussian process, the top dashed line indicates the 10 <sup>−10</sup> probability level. This realization was one of 5000 that were made with multifractal parameters <i>H</i> = 1/3, C <sub>1</sub> = 0.05, α = 1.8 (see Methods and Table <a href="#Tab1">1</a>). The smooth blue curve is the ensemble average of the process (with theory and numerics superposed: they cannot be distinguished). Above the blue curve, is an orange 2 standard deviation curve, and (red), 3, 4 standard deviation curves (probabilities 0.1%, 0.003% respectively). The arrows indicate spikes with Gaussian <i>p</i> &amp;lt; 0.05. </p>   </div> <p /> <p>Imagine that we performed a spectral analysis, but didn’t know what to expect; e.g. an early analysis of ice core paleo temperatures. Encouraged by the idea that variability is synonymous with oscillations (e.g. the NOAA paleo-data website states that "because a particular phenomenon is called an oscillation, it does not necessarily mean there is a particular oscillator causing the pattern. Some prefer to refer to such processes as variability", cited in ref. <sup> <a href="#CR2">2</a> </sup>), we might attempt to find a physical interpretation for some of the stronger spectral spikes. This temptation would be strengthened by the finding that some spikes are broad whereas (Gaussian) theory leads us to expect nearly independent Fourier components. Using sophisticated statistical methods such as multi-taper analysis (MTA) or singular spectral analysis (SSA), we could estimate the precise positions of the spectral spikes (see e.g. ref. <sup> <a href="#CR9">9</a> </sup>). With this, we could judge their statistical significance. The conventional null hypothesis is that the background residuals are autoregressive order 1 Gaussian processes. For many of the spikes in Fig. <a href="#Fig3">3</a>, we could reject this null hypothesis with very highly levels of confidence. For example, out the 100 lowest Fourier components shown, 10 would be significant at the 95% level (the arrows) and one would have a probability of less than 10 <sup>−6</sup>. With a confidence level exceeding 99.9999%, we would be sorely tempted to postulate that we had uncovered strong evidence for the presence of a new quasi-periodic process. </p> <p>It is tempting to conclude that many ephemeral (and presumably spurious) claims of oscillatory atmospheric (and other) processes might have been consequences of fast computers, Fast Fourier Transforms, combined with inappropriate null hypotheses. </p> </div> <div class="understandingandquantifyingthespikiness" title="sec"> <div class="title" tagx="title" title="title">
+Understanding and Quantifying the Spikiness</div> <p>In scaling processes, the variability systematically grows with scale range; this is the idea behind the cascade processes used in simulations (Fig. <a href="#Fig3">3</a>). Building up over a wide range of scales, the spikes exhibit clusters within clusters within clusters; we have seen how their sparseness can be quantified by fractal codimensions that decrease for stronger and stronger spikes. While it is possible to estimate <i>c</i>(γ) by directly analyzing the probabilities, it turns out to be advantageous to use mathematically equivalent, but technically simpler methods based on statistical moments. Although more details are given in Methods, the idea can be simply illustrated by plotting the ratio of the average absolute fluctuation to the root mean square fluctuation: the hierarchical clustering (i.e. clusters within clusters within clusters...) implies that this changes with scale in a power law manner: <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M31">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\langle {\rm{\Delta }}T({\rm{\Delta }}t)\rangle /{\langle {\rm{\Delta }}T{({\rm{\Delta }}t)}^{2}\rangle }^{1/2}\propto {\rm{\Delta }}{t}^{a{C}_{1}}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+a</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+C</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div>  where <i>a</i> is a constant close to 1 (Methods) and <i>C</i> <sub>1</sub> is the codimension of the mean, the basic intermittency exponent. The notation "&amp;lt;.&amp;gt;" denotes an average in the statistical (ensemble) sense. Figure <a href="#Fig4">4a,b</a> shows how the ratio changes with resolution for the different data sets. For Gaussian processes, <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M33">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${{\rm{\sigma }}=\langle |{\rm{\Delta }}{\rm{T}}/\overline{{\rm{\Delta }}{\rm{T}}}|\rangle /{({\rm{\Delta }}{\rm{T}}/\overline{{\rm{\Delta }}{\rm{T}}})}^{2}\rangle }^{1/2}=\sqrt{\begin{array}{c}2\\ {\rm{\pi }}\end{array}}=0.798\ldots $$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mo_UNKNOWN">
+=</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+|</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <div class="mo_UNKNOWN">
+|</div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+/</div> <div class="mover_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+¯</div> </div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msqrt_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mi_UNKNOWN">
+π</div> </div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+0.798</div> <div class="mo_UNKNOWN">
+…</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>; it is a scale-independent constant indicated as a dashed line. Although more precise estimates of <i>C</i> <sub>1</sub> are given in Table <a href="#Tab1">1</a>, the reference lines show that they are of the order of 0.03–0.10 in time and 0.075 to 0.15 in space (the ratios are noisy because of the large statistical fluctuations in each of the estimates of <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M35">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\langle {\rm{\Delta }}T({\rm{\Delta }}t)\rangle $$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span> and <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M37">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\langle {\rm{\Delta }}T{({\rm{\Delta }}t)}^{2}\rangle }^{1/2}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span> that are amplified when the ratio is taken). The <i>C</i> <sub>1</sub> values quantify how the intermittency near the mean builds up from one scale to another; even these apparently small <i>C</i> <sub>1</sub> values can imply significant effects when λ is large. In addition, as shown in Methods their importance for moments grows rapidly with their order. For example, for the fourth order moment important for the kurtosis (the ratio of the fourth moment to the square of the second), the effective codimension is amplified by a factor of ≈9 (see Eq. <a href="#Equ7">M2</a> with <i>q</i> = 4, α = 1.6). In this case, even if the scaling only holds over a range of λ = 1000 and C <sub>1</sub> = 0.1, this implies a kurtosis ≈36 compared to the Gaussian value 3. <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 4</span> </a> </div>   <p>(a) (top panel): The ratios of the first moments ( <i>S</i> <sub>1</sub>(Δ <i>t</i>)) to RMS moments ( <i>S</i> <sub>2</sub>(Δ <i>t</i>) <sup>1/2</sup>) for the same data used in Fig. <a href="#Fig2">2b</a>. The slopes give the exponent <i>aC</i> <sub>1</sub> (see the text). Using estimates of <i>a</i> = 0.86 (see Methods), reference lines with various intermittency exponents <i>C</i> <sub>1</sub> are shown. Gaussian processes are independent of scale Δ <i>t</i>, they would lie along the dashed line. Since each curve is from <i>ratios</i> of statistics taken from data at different resolutions, we do not expect that the separate curves will be part of a single overall curve as they were in Fig. <a href="#Fig1">1</a>. (b) (bottom panel): The same as ( <b>a</b>) but for the transects used in Fig. <a href="#Fig2">2c</a>. </p>   </div> <p /> </div> <div class="extremes,outliers,blackswansandtippingpoints" title="sec"> <div class="title" tagx="title" title="title">
+Extremes, Outliers, Black Swans and Tipping Points</div> <p>The codimension <i>c</i>(γ) quantifies the <i>rate</i> at which – due to the clustering - the spike levels λ <sup>γ</sup> build up as a function of the range of scales over which the dynamical processes act (eq. <a href="#Equ3">3</a>). <i>c</i>(γ) is nonlinear, requiring at least two parameters: the codimension near the mean ( <i>C</i> <sub>1</sub>) and the multifractal index α that determines its curvature near the mean (eq. <a href="#Equ8">M3</a>). However, it generally requires an additional third parameter <i>q</i> <sub> <i>D</i> </sub> that characterizes the large γ behaviour, i.e. the tails of the probability distributions (eq. <a href="#Equ13">M8</a>). This is because scaling in space and/or time generically gives rise to power law probability distributions (also known as "Pareto" or "fat-tailed" distributions). Specifically, the probability of a random temperature fluctuation Δ <i>T</i> exceeding a fixed threshold <i>s</i> is: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">5</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M39">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{cc}{\rm{\Pr }}({\rm{\Delta }}T &amp;gt; s)\approx {s}^{{q}_{D}}; &amp;amp; s\gg 1\end{array}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Pr</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mo_UNKNOWN">
+&amp;gt;</div> <div class="mi_UNKNOWN">
+s</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+≈</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+s</div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+;</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+s</div> <div class="mo_UNKNOWN">
+≫</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>where <i>q</i> <sub> <i>D</i> </sub> is a different exponent, this time characterizing the extremes. <p /> <p>To get an idea of how extreme the extremes can be, consider an example with <i>q</i> <sub> <i>D</i> </sub> = 5 (as has been estimated for the wind or temperature going back to ref. <sup> <a href="#CR10">10</a> </sup> see Fig. <a href="#Fig5">5</a> and Table <a href="#Tab2">2</a>). With this exponent, temperature fluctuations 10 times larger than typical fluctuations occur only 10 <sup>5</sup> times less frequently. In comparison, for a Gaussian, they would be ≈10 <sup>23</sup> times less likely; they would never be observed. Understanding the nature of the extremes is fundamental since it determines our interpretation of large events as either extreme - but nevertheless within the expected range, and hence "normal" - or outside this range, hence an "outlier" or perhaps even a "tipping point". </p><div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 5</span> </a> </div>   <p>(a) (top panel): The probability distribution for absolute changes in the time series of Fig. <a href="#Fig2">2b</a> are shown. For clarity, they have been shifted to the right by factors left to right, respectively: 10, 1, 2, 4, 8, 16, 32). As discussed in Methods, reference lines give estimates of − <i>q</i> <sub> <i>D</i> </sub> indicated in the figure and in Table <a href="#Tab2">2</a>. Also shown for reference (dashed curves) are the Gaussian distributions that give the same mean and standard deviations. (b) (bottom panel): The same as ( <b>a</b>) but for the transects used in Fig. <a href="#Fig2">2c</a>. Note that there plausible arguments that numerical model outputs and reanalyses (the two middle curves) tend to be too smooth and to underestimate extremes; this might explain some of the larger <i>q</i> <sub> <i>D</i> </sub> values (for weather and macroweather). </p>   </div> <p /> <p>A relevant example is global warming. Over about a century, there has been 1 °C warming of the globally averaged temperature - a roughly a 5 standard deviation event (with Gaussian probability ≈3 × 10 <sup>−6</sup>). In spite of this, climate skeptics claim that it is no more than a Giant Natural Fluctuation (GNF) i.e. a change that might nevertheless be normal - albeit extreme. The relevant extreme centennial changes are indeed non-Gaussian, and bounding the probability tail between power laws with 4 &amp;lt;  <i>q</i> <sub> <i>D</i> </sub> &amp;lt; 6, ref. <sup> <a href="#CR11">11</a> </sup> showed that the probability of extremes were enhanced by a factor of as much a factor of 1000. Yet the GNF hypothesis could nevertheless be statistically rejected with more than 99.9% confidence. </p> <p>In the log-log plots shown in Fig. <a href="#Fig5">5</a>, we see that - as expected from eq. <a href="#Equ5">5</a> - most of the distributions show evidence of log-log linearity near the extremes. When judging possible deviations, it could be recalled that due to inadequate instrumental response times, post-processing noise reduction procedures (e.g. smoothing) or via "outlier" elimination algorithms, that extremes can easily be underestimated. Also, several of the distributions in Fig. <a href="#Fig5">5</a> are from reanalyses which are numerical model outputs. Since physically, the extremes are consequences of variability building up over a wide range of spatial scales, the models’ small hyperviscous scale range (truncated at ≈10 <sup>5</sup> m rather than at the viscous scale of ≈10 <sup>−3</sup> m), effectively truncates the extreme tails. Any of these effects could explain deviations from perfect power law tails or might explain some of the larger (i.e. less extreme) <i>q</i> <sub> <i>D</i> </sub> values in Table <a href="#Tab2">2</a>. Finally, while power law probabilities arise naturally in scaling systems, the distributions are not <i>necessarily</i> power laws; non-power law (curved tails in Fig. <a href="#Fig5">5</a>) may simply correspond to the special cases where <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M41">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${q}_{D}\to \infty $$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> </div> </div> <div class="mo_UNKNOWN">
+→</div> <div class="mi_UNKNOWN">
+∞</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> . <p /> <p>In any event, for each empirical distribution, Fig. <a href="#Fig5">5</a> shows the Gaussian with the same mean and standard deviation (dashed). We see that the empirical distributions are generally quite far from Gaussian. </p> <p>The power law fluctuations in Fig. <a href="#Fig5">5a,b</a> are so large that according to classical assumptions, they would be outliers. While Gaussians are mathematically convenient and can be justified when dealing with measurement errors, in atmospheric science thanks to the scaling, very few <i>processes</i> are Gaussian. Extremes occur much too frequently, a fact that colleagues and I regularly underscored starting in the 1980’s (for a review see Table 5.1a,b. in ref. <sup> <a href="#CR8">8</a> </sup>). </p> <p>At best, Gaussians can be justified for additive processes, with the added restriction that the variance is finite. However, once this restriction is dropped, we obtain "Levy distributions" with power law extremes, but with exponents <i>q</i> <sub> <i>D</i> </sub> &amp;lt; 2. The Gaussian assumption also fails for the additive but scaling <i>H</i> model <sup> <a href="#CR2">2</a>, <a href="#CR12">12</a> </sup>. Most importantly, Gaussians are irrelevant for multiplicative <i>processes</i>: these generally lead to power law extremes but without any restriction on the value of <i>q</i> <sub> <i>D</i> </sub> <sup> <a href="#CR7">7</a>, <a href="#CR13">13</a> </sup>. Related models include Self-Organized Criticality <sup> <a href="#CR14">14</a> </sup> and Correlated Additive and Multiplicative noise <sup> <a href="#CR15">15</a> </sup>. Note that purely multiplicative random <i>variables</i> lead to somewhat less extreme log Levy and lognormal distributions (i.e. the logarithms are Levy or Gaussian; for the latter, see <sup> <a href="#CR16">16</a> </sup> for an early review: their tails are "long" but not "fat"). The enhanced variability of multiplicative processes when compared to multiplicative variables is due to the singular small scale limit of the former; it has been theorized in the framework of multifractal phase transitions <sup> <a href="#CR17">17</a> </sup>. We could also mention that power law distributions also appear as the special (Frechet) case of Generalized Extreme Value Distributions although due to long range statistical dependencies, standard Extreme Value theory does not generally apply to scaling processes. </p> <p>To underscore the importance of nonclassical extremes, Taleb <sup> <a href="#CR18">18</a> </sup> introduced the terms "grey and black swans". Originally, the former designated Levy extremes, and the latter was reserved for extremes that were so strong that they were outliers with respect to any existing theory. However, the term "grey swan" never stuck, and the better-known expression "black swan" is increasingly used for any power law extremes. </p> <p>All of this is important in climate science where extreme events are often associated with tipping points. The existence of black swan extremes leads to a conundrum: since black swans already lead to exceptionally big extremes, how can we distinguish "mere" black swans from true tipping points? </p> </div> <div class="discussion" title="discussion"> <div class="title" tagx="title" title="title">
+Discussion</div> <p>The emerging picture of atmospheric dynamics is based on processes acting over wide ranges of scale occasionally interspersed with narrow scale range, quasi periodic processes, most notably the daily, annual and Milankovitch cycles. This picture not only clarifies the distinction between weather, macroweather and climate, it has implications for our understanding of spectra, intermittency and extremes. To make these obvious, we introduced spike plots that highlight hidden extreme jumps in series and transects, showing that the only regime plausibly compatible with Gaussian assumptions was macroweather in time. Unsurprisingly, Fourier analysis is sensitive to these jumps so that we expected (and found) random spikes in Fourier space (spectra) as well, potentially explaining numerous ephemeral claims of quasi-periodic behaviour. </p> <p>The spikes have two features: they are clustered, occurring on sparse fractal sets, and their probability distributions have "fat" power law tails. Both features can be quantified by a codimension function <i>c</i>(γ) that quantifies how the sparseness changes with resolution, and is itself determined by three parameters. The first was quantified by estimating the exponent <i>C</i> <sub>1</sub> from the variation of the ratio of the first and RMS moments, another (α) by the curvature of <i>c</i>(γ), and a final parameter ( <i>q</i> <sub> <i>D</i> </sub>) from log-log plots of the probabilities of exceeding thresholds. We argued that in the atmosphere, strong intermittency and extreme black swan events are ubiquitous and that this has numerous consequences including for spectral analysis and for distinguishing "normal", "expected" extremes from tipping points. </p> </div> <div class="methods" title="sec"> <div class="title" tagx="title" title="title">
+Methods</div> <div class="datadescriptions" title="sec"> <div class="title" tagx="title" title="title">
+Data descriptions</div> <p>The following are detailed descriptions of the data described in Table <a href="#Tab1">1</a> and analyzed in the text. In Fig. <a href="#Fig1">1a</a> the solid lines are analyzed over the ranges indicated; the dashed lines are from the same sources but analyzed over wider scale ranges. The dashed and solid analyses of data # 2 differ lightly due to different daily and annual detrendings, </p><ol> <li> <p>A series of 97,480 measurements from a thermistor (about 1 mm in size) that were taken at 15 Hz, from a location 0.44 m above the roof of the Physics building, McGill University, Montreal. The data was broken into 270 segments 24 s long. </p> </li> <li> <p>Hourly temperature data from a station in Lander, USA (2006–2009). The data were detrended daily and annually and 144 sections (20 days each) were analyzed: 144 × 240 = 34,560 points in all. </p> </li> <li> <p>Hourly temperature data from a station in Montreal, Canada (2000–2016). The data were detrended daily and annually and 419 sections (15 days each) were analyzed (419 × 15 × 24 = 150,840 points in all). </p> </li> <li> <p>Monthly resolution data, from the 20 <sup>th</sup> Century Reanalysis (2° × 2°, monthly resolution) from 1871–2011 were used <sup> <a href="#CR19">19</a> </sup>. Data from 0 to 40 °N (21 latitude bands, 180 longitude bands) were broken into five 28 year segments (=336 months each), a total of 21 × 180 × 5 × 336 = 6,350,400 points. 28 years is roughly the longest possible without the low frequencies being dominated by anthropogenic warming. </p> </li> <li> <p>Greenland GRIP paleo temperatures at 5 year resolution were degraded by factor of 17 (to 85 years) so as to have (roughly) pre-industrial climate regime resolution with a series 1032 points long (87,720 years). For analysis, this was broken into 20,000 year segments (the rough limit of the climate regime). </p> </li> <li> <p>EPICA (Antarctica) ice core paleo temperatures; there were 5788 points spanning 801,000 years. In order to avoid highly nonuniform sampling, the <i>q</i> <sub> <i>D</i> </sub> estimate was made from the equal depth data (55 cm resolution), see Fig. 5.21 in ref. <sup> <a href="#CR8">8</a> </sup>; the Haar analysis (shown as a dashed "S" shaped line in Fig. <a href="#Fig1">1a</a>) was performed using the offical chronology and a non interpolation algorithm <sup> <a href="#CR2">2</a> </sup> and is reproduced from the latter. </p> </li> <li> <p>A stack of benthic δ <sup>18</sup>O ratios <sup> <a href="#CR20">20</a> </sup>, with 14,825 points over the last 67 million years using the recommended −6.5 °C/mil calibration. The data from the first 6.85 million year were averaged to a 5,000 year resolutions (with only 3 missing data points being interpolated), 1,368 points in all. To avoid the larger scale mega-climate regime, this was then segmented into 8 segments each 855,000 years long to roughly represent the macroclimate period. The full length of the series was analyzed in ref. <sup> <a href="#CR2">2</a> </sup>, and is reproduced in Fig. <a href="#Fig1">1a</a> as a dashed line. </p> </li> <li> <p>A stack of benthic δ <sup>18</sup>O ratios 2980 points <sup> <a href="#CR21">21</a> </sup> very unevenly distributed over the Phanerozoic – back 553 million years. For the spike plot (Fig. <a href="#Fig2">2b</a>) and probability distribution (Fig. <a href="#Fig5">5a</a>), the range was broken into 1000 intervals (553 k year resolution) and the missing data was filled by linear interpolation. For the scaling exponents, the data was further degraded to 1.54 M year resolution to avoid the macroclimate regime at small scales (Fig. <a href="#Fig1">1a</a> which also shows the full analysis from ref. <sup> <a href="#CR2">2</a> </sup>, where it is indicated by a dashed line). The temperature calibration was the recommended value −4.5 °C/mil. This was the only series with significant interpolation (visible in Fig. <a href="#Fig2">2b</a>, top, right). </p> </li> <li> <p>Data from an aircraft transect at 196 mb altitude (to within ±0.1%, about 12 km altitude) at 0.5 s resolution (the spatial resolution was 280 ± 2.8 m). This was from leg 1 of the Pacific Storms 2004 experiment (see ref. <sup> <a href="#CR22">22</a> </sup>), it had a total of 14,665 points covering a distance of 14,665 × 0.28 = 4102 km. </p> </li> <li> <p>Data are from the European Centre for Medium Range Weather Forecasting (ECMWF) ERA-interim reanalyses at daily resolution for all the 31 days in January 2000 and from latitudes between 70°S and 70°N, 1° × 1° resolution. The spatial analysis was performed along the 141 lines of constant latitude for each of the days (141 × 31 = 4371 transects); each transect was over 360 points in longitude for a total of = 1,573,560 points. </p> </li> <li> <p>Data are from ECMWF ERA-interim reanalyses at monthly and 1° × 1° resolution for the 12 months for 2000, from latitudes between 70°S and 70°N, resolution (12 months × 141 latitudes). The spatial analysis was over 360 longitudes for a total of 12 × 141 × 360 = 609,120 points. </p> </li> <li> <p>Data are from the Twentieth Century Reanalysis (20 CR <sup> <a href="#CR19">19</a> </sup>) at monthly and 2° resolution, averaged over the period 1871–2012. All latitudes between ±60° were used (61 transects, each with 180 longitudes) for a total of 61 × 180 = 10980 points. </p> </li> </ol> <p /> </div> <div class="analysistechniques" title="sec"> <div class="title" tagx="title" title="title">
+Analysis techniques</div> <p>The Haar fluctuation analyses (Fig. <a href="#Fig1">1</a>), the spike plots (Fig. <a href="#Fig2">2</a>), the spectral analysis (Fig. <a href="#Fig3">3</a>), the intermittency plot (Fig. <a href="#Fig4">4</a>) and the probability distributions (Fig. <a href="#Fig5">5</a>) are straightforward and were described in the main text. In this section, we indicate how the exponents (Table <a href="#Tab2">2</a>) were estimated. </p> <p>In terms of fluctuations, we can conveniently express the generic scaling result by taking the <i>q</i> <sup>th</sup> order statistical moments of eq. <a href="#Equ1">1</a>: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M1</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M43">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{cc}\langle {\rm{\Delta }}T{({\rm{\Delta }}t)}^{q}\rangle =\langle {{\rm{\phi }}}_{{\rm{\Delta }}t}^{q}\rangle {\rm{\Delta }}{t}^{qH}\propto {\rm{\Delta }}{t}^{{\rm{\xi }}(q)}; &amp;amp; {\rm{\xi }}(q)=qH-K(q)\end{array}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mi_UNKNOWN">
+q</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> </div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> <div class="mi_UNKNOWN">
+H</div> </div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ξ</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+;</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ξ</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+q</div> <div class="mi_UNKNOWN">
+H</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>where <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M45">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\langle {{\rm{\phi }}}_{{\rm{\Delta }}t}^{q}\rangle \propto {\rm{\Delta }}{t}^{-K(q)}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> </div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>, and "&amp;lt;.&amp;gt;" is the ensemble average. <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M47">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\langle {\rm{\Delta }}T{({\rm{\Delta }}t)}^{q}\rangle $$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mi_UNKNOWN">
+q</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>is the (generalized) structure function and ξ( <i>q</i>) is its exponent (it is often convenient - e.g. eqs <a href="#Equ3">3</a>, <a href="#Equ4">4</a> - to express the above in terms of the scale ratio λ. For series of length <i>T</i>, resolution Δ <i>t</i>, we have λ =  <i>T</i>/Δ <i>t</i> so that λ ∝ 1/Δ <i>t</i>). <i>K</i>( <i>q</i>) is the exponent that characterizes how the statistics of the driving flux φ <sub>Δ <i>t</i> </sub> change with scale Δ <i>t</i>; it directly characterizes the spikes (eq. <a href="#Equ2">2</a>). When φ <sub>Δ <i>t</i> </sub>is fairly constant - e.g. quasi Gaussian - then the various moments <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M49">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\langle {\phi }_{{\rm{\Delta }}t}^{q}\rangle $$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="msubsup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ϕ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> </div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span> are independent of scale so that <i>K</i>( <i>q</i>) = 0 and the structure function exponent ξ( <i>q</i>) is linear (= <i>qH</i>, e.g. fGn or fBm). More generally, <i>K</i>( <i>q</i>) is a convex function ( <i>K</i>″ &amp;gt; 0) with only constraints <i>K</i>(0) = 0 (for a nonzero process) and <i>K</i>(1) = 0 (the mean is independent of scale). A convenient characterization of the intermittency is thus <i>K</i>′(1) =  <i>C</i> <sub>1</sub>, where <i>C</i> <sub>1</sub> is the fractal co-dimension of the regions that give the dominant contribution to the mean of the process. More generally, due to the existence of stable, attractive, "universal" scaling processes: <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M2</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M51">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$K(q)=\frac{{C}_{1}}{({\rm{\alpha }}-1)}({q}^{{\rm{\alpha }}}-q)$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+C</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+α</div> <div class="mo_UNKNOWN">
+−</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+(</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> </div> <div class="mi_UNKNOWN">
+α</div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="graphic_UNKNOWN" /> </div> </div>where 0 ≤ α ≤ 2 is the Levy index that characterizes the degree of multifractality <sup> <a href="#CR7">7</a> </sup> since α =  <i>K</i>″(1)/ <i>K</i>′(1), it also characterizes the curvature of <i>K</i> near the mean ( <i>q</i> = 1). The relationship in eq. <a href="#Equ7">M2</a> is only valid for <i>q</i> &amp;lt;  <i>q</i> <sub> <i>D</i> </sub> (below); for larger <i>q</i>, <i>K</i> diverges (note: this is only true for an infinite ensemble, for a finite ensemble, there will be "spurious scaling" and estimates of <i>K</i> will grow with the sample size). <p /> <p>We have already introduced the codimension function <i>c</i>(γ) that characterizes how the probability distributions change with scale ratio λ (eq. <a href="#Equ4">4</a>). Since a description in terms of probabilities is equivalent to one in terms of moments, it turns out that <i>c</i>(γ) and <i>K</i>( <i>q</i>) are related in a surprisingly simple way: by a Legendre transformation <sup> <a href="#CR23">23</a> </sup>. A consequence is that each order of moment is determined by a single level of spikes (singularities, γ). <i>C</i> <sub>1</sub> is therefore the codimension of the set of spikes that dominates the calculation of the mean level of the spikes. The Legendre transformation of eq. <a href="#Equ7">M2</a> yields: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M3</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M53">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$c({\rm{\gamma }})={C}_{1}{(\frac{{\rm{\gamma }}}{{C}_{1}{\rm{\alpha }}^{\prime} }+\frac{1}{{\rm{\alpha }}})}^{{\rm{\alpha }}^{\prime} }$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+c</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+γ</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+C</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> </div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+C</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> </div> </div> <div class="mi_UNKNOWN">
+α</div> <div class="mo_UNKNOWN">
+′</div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mi_UNKNOWN">
+α</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+α</div> <div class="mo_UNKNOWN">
+′</div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>valid for γ &amp;gt; − C <sub>1</sub>α′/α otherwise = 0 and where the auxiliary variable α′ is defined by: 1/α′ + 1/α = 1. This means that processes whose moments have exponents <i>K</i>( <i>q</i>) given by eq. <a href="#Equ7">M2</a>, have probabilities with exponents <i>c</i>(γ) given by eq. <a href="#Equ8">M3</a>. <p /> <p>Since Gaussian processes are specified by their variances (the means of their signed fluctuations are zero), in Fig. <a href="#Fig1">1a,b</a> we have plotted the conventional the Root Mean Square fluctuation <span class="inline-formula" title="inline-formula"> </span></p><div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M55">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\langle {\rm{\Delta }}T{({\rm{\Delta }}t)}^{2}\rangle }^{1/2}\propto {\rm{\Delta }}{t}^{H-K(2)/2}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+H</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div>  (eq. <a href="#Equ6">M1</a>) - rather than the scaling of the absolute mean <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M57">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\langle {\rm{\Delta }}T({\rm{\Delta }}t)\rangle \propto {\rm{\Delta }}{t}^{H}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mi_UNKNOWN">
+H</div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>. For a Gaussian, <i>K</i>(2) = 0, the two would be the same; here they are different. In order to bring out this difference, and to quantify the intermittency which is responsible for it, in Fig. <a href="#Fig4">4a,b</a> we show the ratio <span class="inline-formula" title="inline-formula"> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M59">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\langle {\rm{\Delta }}T({\rm{\Delta }}t)\rangle /{\langle {\rm{\Delta }}T{({\rm{\Delta }}t)}^{2}\rangle }^{1/2}\propto {\rm{\Delta }}{t}^{K(2)/2}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+∝</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+K</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> <span class="inline-graphic" title="inline-graphic" /> </div> </span>. In ref. <sup> <a href="#CR8">8</a> </sup> we show how to construct a scaling function whose exponent yields <i>C</i> <sub>1</sub> directly; however, since empirically, α ≈ 1.6 (see Table <a href="#Tab1">1</a>) the exponent ratio: <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M4</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M61">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$a=\frac{(K(2)/2)}{{C}_{1}}=\frac{({2}^{{\rm{\alpha }}-1}-1)}{{\rm{\alpha }}-1}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+a</div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+K</div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+C</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+α</div> <div class="mo_UNKNOWN">
+−</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+α</div> <div class="mo_UNKNOWN">
+−</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>varies in only a narrow range with α, (for α = 1.6, <i>a</i> = 0.86) in Fig. <a href="#Fig4">4</a> we used this to plot various reference lines for <i>C</i> <sub>1</sub>. We see that <i>C</i> <sub>1</sub> is larger in space than in time and is largest of all for the climate transects (Fig. <a href="#Fig4">4b</a> far right). This large intermittency is the statistical expression of the existence of various climate zones. For comparison, values of C <sub>1</sub> in the range 0.05–0.10 are typical of turbulent fields; see Table 4.5 in the review ref. <sup> <a href="#CR8">8</a> </sup>. <p /> <p>In this paper, we estimated Δ <i>T</i>(Δ <i>t</i>) using Haar fluctuations; these were estimated by dividing the series and transects into disjoint intervals each of length Δ <i>t</i> or Δ <i>x</i> and taking the absolute difference of the first and second halves. Each interval yielded an estimate of a single fluctuation from which various powers were calculated. The corresponding statistical moments were estimated by averaging the powers over all the available fluctuations. For each order of magnitude of scale spanned by the data, 20 logarithmically spaced Δ <i>t</i>’s were chosen. The exponents ξ( <i>q</i>) were estimated by linear regression on a plot of the log(moments) versus logΔ <i>t</i>, and the uncertainties were estimated in the standard way. The use of more sophisticated regressions (and uncertainty estimation) techniques is not warranted since the values of ξ( <i>q</i>) depend on the somewhat subjective choice of scaling range used for their estimation. In addition, one would require the use of multifractal (rather than Gaussian) models for the underlying variability, and the corresponding statistical results are not yet available. </p> </div> <div class="estimatingα" title="sec"> <div class="title" tagx="title" title="title">
+Estimating α</div> <p>The exponent α (eq. <a href="#Equ7">M2</a>) is difficult to estimate since it characterizes how the nonlinear part of the structure function exponent ξ( <i>q</i>) varies with statistical moment <i>q</i>. Although various methods have been suggested, in Table <a href="#Tab1">1</a> it was estimated by the following method. Following ref. <sup> <a href="#CR8">8</a> </sup>, section 11.2.3, we define: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M5</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M63">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{cc}F({\rm{\Delta }}t)=\langle {\rm{\Delta }}T\rangle {(\frac{\langle {\rm{\Delta }}{T}^{1-{\rm{\Delta }}q}\rangle }{\langle {\rm{\Delta }}{T}^{1+{\rm{\Delta }}q}\rangle })}^{1/(2{\rm{\Delta }}q)}\approx {\rm{\Delta }}{t}^{{\rm{\xi }}(1)-{\rm{\xi }}^{\prime} (1)}\approx {\rm{\Delta }}{t}^{{C}_{1}}; &amp;amp; {\rm{\Delta }}q\ll 1\end{array}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+F</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+(</div> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+q</div> </div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
++</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+q</div> </div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> </div> </div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+/</div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+≈</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ξ</div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+ξ</div> <div class="mo_UNKNOWN">
+′</div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> <div class="mo_UNKNOWN">
+≈</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+C</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+;</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+q</div> <div class="mo_UNKNOWN">
+≪</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>(here we numerically took Δ <i>q</i> = 0.1). Then, following the discussion on intermittency, we defined the ratio: <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M6</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M65">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$R({\rm{\Delta }}t)=\frac{\langle {\rm{\Delta }}T\rangle }{{\langle {\rm{\Delta }}{T}^{2}\rangle }^{1/2}}\approx {\rm{\Delta }}{t}^{{\rm{\xi }}(1)-{\rm{\xi }}(2)/2}\approx {\rm{\Delta }}{t}^{a{C}_{1}}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+〈</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+〉</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+≈</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+ξ</div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+ξ</div> <div class="mo_UNKNOWN">
+(</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+/</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mo_UNKNOWN">
+≈</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+a</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+C</div> </div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div>where <i>a</i> is defined in eq. S3. Finally, we estimate α from the ratio: <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M7</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M67">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$a=\frac{\mathrm{log}\,R({\rm{\Delta }}t)}{\mathrm{log}\,F({\rm{\Delta }}t)}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mi_UNKNOWN">
+a</div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+R</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+log</div> <div class="mspace_UNKNOWN" /> <div class="mi_UNKNOWN">
+F</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+Δ</div> <div class="mi_UNKNOWN">
+t</div> <div class="mo_UNKNOWN">
+)</div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div> <p /> <p>which is independent of Δ <i>t</i> (uncertainties can be estimated from its small variations about a constant mean level). We can numerically invert eq. <a href="#Equ9">M4</a> to obtain α from knowledge of <i>a</i>. </p> </div> <div class="estimatingqd" title="sec"> <div class="title" tagx="title" title="title">
+Estimating <i>q</i> <sub> <i>D</i> </sub> </div> <p>We made histograms of absolute first differences of the series and transects using logarithmically spaced bins. We then accumulated these absolute changes starting with the largest to the smallest, yielding <i>Pr</i>(Δ <i>t</i> &amp;gt;  <i>s</i>) for the probability that an absolute change Δ <i>t</i> exceeds the threshold <i>s</i> (note that the usual Cumulative Distribution Function (CDF) is <i>Pr</i>(Δ <i>t</i> &amp;lt;  <i>s</i>) = 1 −  <i>Pr</i>(Δ <i>t</i> &amp;gt;  <i>s</i>)). </p> <p>Figure <a href="#Fig4">4a,b</a> shows the resulting log-log plots whose slope is expected to asymptote to a constant value = − <i>q</i> <sub> <i>D</i> </sub> (see eq. <a href="#Equ5">5</a>). The difficulty in the estimation is that the theory does not tell us the probability levels over which the power law is expected to hold and the value of <i>q</i> <sub> <i>D</i> </sub> depends on which part of the probability distribution that the regressions are made. Once the power law region is identified, then an unbiased "Hill" estimator can be used to determine <i>q</i> <sub> <i>D</i> </sub>, (alternatively, the maximum likelihood method <sup> <a href="#CR24">24</a> </sup>) but the basic problem remains. In Fig. <a href="#Fig5">5a,b</a>, plausible reference lines were shown, and in Table <a href="#Tab2">2</a>, their slopes are given. For a review of several dozen relevant atmospheric <i>q</i> <sub> <i>D</i> </sub> estimates, see Table 5.1a,b in ref. <sup> <a href="#CR8">8</a> </sup>. </p> <p>In terms of <i>c</i>(γ), the extreme power law behaviour (eq. <a href="#Equ5">5</a>) corresponds to the linear large γ behaviour: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">M8</span> <div class="alternatives" title="alternatives"> <div class="tex" title="tex"> <div class="tex-math_UNKNOWN" id="M69">
+\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{cc}c({\rm{\gamma }})=c({{\rm{\gamma }}}_{D})+({\rm{\gamma }}-{{\rm{\gamma }}}_{D}){q}_{D}; &amp;amp; {\rm{\gamma }} &amp;gt; {{\rm{\gamma }}}_{D}\end{array}$$\end{document} </div> </div> <div class="math_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+c</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+γ</div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+c</div> <div class="mo_UNKNOWN">
+(</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> <div class="mo_UNKNOWN">
++</div> <div class="mo_UNKNOWN">
+(</div> <div class="mi_UNKNOWN">
+γ</div> <div class="mo_UNKNOWN">
+−</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> </div> </div> <div class="mo_UNKNOWN">
+)</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+q</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> </div> </div> <div class="mo_UNKNOWN">
+;</div> </div> </div> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> <div class="mo_UNKNOWN">
+&amp;gt;</div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+γ</div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> </div> </div> </div> </div> </div> </div> </div> <div class="graphic_UNKNOWN" /> </div> </div> <p /> <p>where γ <sub> <i>D</i> </sub> is a critical singularity, given by the solution to the equation: <i>q</i> <sub> <i>D</i> </sub> = c′(γ <sub> <i>D</i> </sub>). For universal multifractals, eq. <a href="#Equ8">M3</a> holds for γ &amp;lt; γ <sub> <i>D</i> </sub> and so that <i>C</i> <sub>1</sub>, α, <i>q</i> <sub> <i>D</i> </sub> completely determine <i>c</i>(γ), and hence (via eq. <a href="#Equ4">4</a>), the probabilities at all scales. Since, we showed that the expected maximum γ <sub> <i>max</i> </sub> satisfies <i>c</i>(γ <sub> <i>max</i> </sub>) = 1, we can therefore theoretically calculate the maximum expected "spikes" in Fig. <a href="#Fig2">2</a>. The results are shown in Table <a href="#Tab2">2</a> in the column γ <sub> <i>max</i> </sub> (theory). </p> </div> </div> </div> <div class="back" title="back"> <div class="fn-group" title="fn-group"> <div class="fn-type-" title=""> <p> <b>Publisher's note:</b> Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations. </p> </div> </div> <div class="title" tagx="title" title="title">
+Data availability</div> <p>All the data used are from publically accessible sources. The only exceptions are the thermistor data (#1) and the aircraft data (#9) that are available from the author on request. </p> <div class="competinginterests" title="sec"> <div class="title" tagx="title" title="title">
+Competing Interests</div> <p>The author declares no competing interests.</p> </div> <div class="references">
+References</div> <div tag="ref-list"> <ul> <div class="title" tagx="title" title="title">
+References</div> <li tag="ref"> <a name="CR1" /> <span class="label" tagx="label" title="label">1.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Mitchell</span> <span class="given-names" tagx="given-names" title="given-names">JM</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">An overview of climatic variability and its causal mechanisms</span> <span class="source" tagx="source" title="source">Quaternary Res.</span> <span class="year" tagx="year" title="year">1976</span> <span class="volume" tagx="volume" title="volume">6</span> <span class="fpage" tagx="fpage" title="fpage">481</span> <span class="lpage" tagx="lpage" title="lpage">493</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1016/0033-5894(76)90021-1">10.1016/0033-5894(76)90021-1</a> </span> </span> </li> <li tag="ref"> <a name="CR2" /> <span class="label" tagx="label" title="label">2.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">A voyage through scales, a missing quadrillion and why the climate is not what you expect </span> <span class="source" tagx="source" title="source">Climate Dyn.</span> <span class="year" tagx="year" title="year">2015</span> <span class="volume" tagx="volume" title="volume">44</span> <span class="fpage" tagx="fpage" title="fpage">3187</span> <span class="lpage" tagx="lpage" title="lpage">3210</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1007/s00382-014-2324-0">10.1007/s00382-014-2324-0</a> </span> </span> </li> <li tag="ref"> <a name="CR3" /> <span class="label" tagx="label" title="label">3.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Haar</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Zur Theorie des orthogonalen Funktionsysteme</span> <span class="source" tagx="source" title="source">Mathematische Annalen</span> <span class="year" tagx="year" title="year">1910</span> <span class="volume" tagx="volume" title="volume">69</span> <span class="fpage" tagx="fpage" title="fpage">331</span> <span class="lpage" tagx="lpage" title="lpage">371</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1007/BF01456326">10.1007/BF01456326</a> </span> </span> </li> <li tag="ref"> <a name="CR4" /> <span class="label" tagx="label" title="label">4.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Schertzer</span> <span class="given-names" tagx="given-names" title="given-names">D</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Haar wavelets, fluctuations and structure functions: convenient choices for geophysics</span> <span class="source" tagx="source" title="source">Nonlinear Proc. Geophys.</span> <span class="year" tagx="year" title="year">2012</span> <span class="volume" tagx="volume" title="volume">19</span> <span class="fpage" tagx="fpage" title="fpage">1</span> <span class="lpage" tagx="lpage" title="lpage">14</span> <span class="pub-id"> <a href="https://dx.doi.org/10.5194/npg-19-513-2012">10.5194/npg-19-513-2012</a> </span> </span> </li> <li tag="ref"> <a name="CR5" /> <span class="label" tagx="label" title="label">5.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Hurst</span> <span class="given-names" tagx="given-names" title="given-names">HE</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Long-term storage capacity of reservoirs</span> <span class="source" tagx="source" title="source">Transactions of the American Society of Civil Engineers</span> <span class="year" tagx="year" title="year">1951</span> <span class="volume" tagx="volume" title="volume">116</span> <span class="fpage" tagx="fpage" title="fpage">770</span> <span class="lpage" tagx="lpage" title="lpage">808</span> </span> </li> <li tag="ref"> <a name="CR6" /> <span class="label" tagx="label" title="label">6.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Schertzer</span> <span class="given-names" tagx="given-names" title="given-names">D</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Generalised scale invariance in turbulent phenomena</span> <span class="source" tagx="source" title="source">Physico-Chemical Hydrodynamics Journal</span> <span class="year" tagx="year" title="year">1985</span> <span class="volume" tagx="volume" title="volume">6</span> <span class="fpage" tagx="fpage" title="fpage">623</span> <span class="lpage" tagx="lpage" title="lpage">635</span> </span> </li> <li tag="ref"> <a name="CR7" /> <span class="label" tagx="label" title="label">7.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Schertzer</span> <span class="given-names" tagx="given-names" title="given-names">D</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Physical modeling and Analysis of Rain and Clouds by Anisotropic Scaling of Multiplicative Processes </span> <span class="source" tagx="source" title="source">Journal of Geophysical Research</span> <span class="year" tagx="year" title="year">1987</span> <span class="volume" tagx="volume" title="volume">92</span> <span class="fpage" tagx="fpage" title="fpage">9693</span> <span class="lpage" tagx="lpage" title="lpage">9714</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1029/JD092iD08p09693">10.1029/JD092iD08p09693</a> </span> </span> </li> <li tag="ref"> <a name="CR8" /> <span class="label" tagx="label" title="label">8.</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation">Lovejoy, S. &amp;amp; Schertzer, D. <i>The Weather and Climate: Emergent Laws and Multifractal Cascades</i>. (Cambridge University Press, 2013). </span> </li> <li tag="ref"> <a name="CR9" /> <span class="label" tagx="label" title="label">9.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Vautard</span> <span class="given-names" tagx="given-names" title="given-names">R</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ghil</span> <span class="given-names" tagx="given-names" title="given-names">M</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Singular spectrum analysis in nonlinear dynamics, with applications to paleoclimatic time series </span> <span class="source" tagx="source" title="source">Physica D</span> <span class="year" tagx="year" title="year">1989</span> <span class="volume" tagx="volume" title="volume">35</span> <span class="fpage" tagx="fpage" title="fpage">395</span> <span class="lpage" tagx="lpage" title="lpage">424</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1016/0167-2789(89)90077-8">10.1016/0167-2789(89)90077-8</a> </span> </span> </li> <li tag="ref"> <a name="CR10" /> <span class="label" tagx="label" title="label">10.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Schertzer</span> <span class="given-names" tagx="given-names" title="given-names">D</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Scale invariance in climatological temperatures and the local spectral plateau</span> <span class="source" tagx="source" title="source">Annales Geophysicae</span> <span class="year" tagx="year" title="year">1986</span> <span class="volume" tagx="volume" title="volume">4B</span> <span class="fpage" tagx="fpage" title="fpage">401</span> <span class="lpage" tagx="lpage" title="lpage">410</span> </span> </li> <li tag="ref"> <a name="CR11" /> <span class="label" tagx="label" title="label">11.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Scaling fluctuation analysis and statistical hypothesis testing of anthropogenic warming</span> <span class="source" tagx="source" title="source">Climate Dynamics</span> <span class="year" tagx="year" title="year">2014</span> <span class="volume" tagx="volume" title="volume">42</span> <span class="fpage" tagx="fpage" title="fpage">2339</span> <span class="lpage" tagx="lpage" title="lpage">2351</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1007/s00382-014-2128-2">10.1007/s00382-014-2128-2</a> </span> </span> </li> <li tag="ref"> <a name="CR12" /> <span class="label" tagx="label" title="label">12.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">&amp;amp; Mandelbrot, B. B. Fractal properties of rain and a fractal model</span> <span class="source" tagx="source" title="source">Tellus</span> <span class="year" tagx="year" title="year">1985</span> <span class="volume" tagx="volume" title="volume">37A</span> <span class="fpage" tagx="fpage" title="fpage">209</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1111/j.1600-0870.1985.tb00423.x">10.1111/j.1600-0870.1985.tb00423.x</a> </span> </span> </li> <li tag="ref"> <a name="CR13" /> <span class="label" tagx="label" title="label">13.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Mandelbrot</span> <span class="given-names" tagx="given-names" title="given-names">BB</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Intermittent turbulence in self-similar cascades: divergence of high moments and dimension of the carrier </span> <span class="source" tagx="source" title="source">Journal of Fluid Mechanics</span> <span class="year" tagx="year" title="year">1974</span> <span class="volume" tagx="volume" title="volume">62</span> <span class="fpage" tagx="fpage" title="fpage">331</span> <span class="lpage" tagx="lpage" title="lpage">350</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1017/S0022112074000711">10.1017/S0022112074000711</a> </span> </span> </li> <li tag="ref"> <a name="CR14" /> <span class="label" tagx="label" title="label">14.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Bak</span> <span class="given-names" tagx="given-names" title="given-names">P</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Tang</span> <span class="given-names" tagx="given-names" title="given-names">C</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Weiessenfeld</span> <span class="given-names" tagx="given-names" title="given-names">K</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Self-Organized Criticality: An explanation of 1/f noise</span> <span class="source" tagx="source" title="source">Physical Review Letter</span> <span class="year" tagx="year" title="year">1987</span> <span class="volume" tagx="volume" title="volume">59</span> <span class="fpage" tagx="fpage" title="fpage">381</span> <span class="lpage" tagx="lpage" title="lpage">384</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1103/PhysRevLett.59.381">10.1103/PhysRevLett.59.381</a> </span> </span> </li> <li tag="ref"> <a name="CR15" /> <span class="label" tagx="label" title="label">15.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sardeshmukh</span> <span class="given-names" tagx="given-names" title="given-names">PD</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sura</span> <span class="given-names" tagx="given-names" title="given-names">P</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Reconciling non-gaussian climate statistics with linear dynamics</span> <span class="source" tagx="source" title="source">J. of Climate</span> <span class="year" tagx="year" title="year">2009</span> <span class="volume" tagx="volume" title="volume">22</span> <span class="fpage" tagx="fpage" title="fpage">1193</span> <span class="lpage" tagx="lpage" title="lpage">1207</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1175/2008JCLI2358.1">10.1175/2008JCLI2358.1</a> </span> </span> </li> <li tag="ref"> <a name="CR16" /> <span class="label" tagx="label" title="label">16.</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation">Aitchison, J. &amp;amp; Brown, J. A. C. <i>The lognormal distribution</i>, <i>with special reference to its uses in economics</i>. (Cambridge University Press, 1957). </span> </li> <li tag="ref"> <a name="CR17" /> <span class="label" tagx="label" title="label">17.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Schertzer</span> <span class="given-names" tagx="given-names" title="given-names">D</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Hard and Soft Multifractal processes</span> <span class="source" tagx="source" title="source">Physica A</span> <span class="year" tagx="year" title="year">1992</span> <span class="volume" tagx="volume" title="volume">185</span> <span class="fpage" tagx="fpage" title="fpage">187</span> <span class="lpage" tagx="lpage" title="lpage">194</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1016/0378-4371(92)90455-Y">10.1016/0378-4371(92)90455-Y</a> </span> </span> </li> <li tag="ref"> <a name="CR18" /> <span class="label" tagx="label" title="label">18.</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation">Taleb, N. N. <i>The Black Swan: The Impact of the Highly Improbable</i>. (Random House, 2010). </span> </li> <li tag="ref"> <a name="CR19" /> <span class="label" tagx="label" title="label">19.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Compo</span> <span class="given-names" tagx="given-names" title="given-names">GP</span> </span> <span class="etal" title="etal"> <i>et al.</i> </span> </span> <span class="mixed-article-title" title="mixed-article-title">The Twentieth Century Reanalysis Project</span> <span class="source" tagx="source" title="source">Quarterly J. Roy. Meteorol. Soc.</span> <span class="year" tagx="year" title="year">2011</span> <span class="volume" tagx="volume" title="volume">137</span> <span class="fpage" tagx="fpage" title="fpage">1</span> <span class="lpage" tagx="lpage" title="lpage">28</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1002/qj.776">10.1002/qj.776</a> </span> </span> </li> <li tag="ref"> <a name="CR20" /> <span class="label" tagx="label" title="label">20.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zachos</span> <span class="given-names" tagx="given-names" title="given-names">J</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Pagani</span> <span class="given-names" tagx="given-names" title="given-names">M</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sloan</span> <span class="given-names" tagx="given-names" title="given-names">L</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Thomas</span> <span class="given-names" tagx="given-names" title="given-names">E</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Billups</span> <span class="given-names" tagx="given-names" title="given-names">K</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Trends, Rhythms, and Aberrations in Global Climate 65 Ma to Present</span> <span class="source" tagx="source" title="source">Science</span> <span class="year" tagx="year" title="year">2001</span> <span class="volume" tagx="volume" title="volume">292</span> <span class="fpage" tagx="fpage" title="fpage">686</span> <span class="lpage" tagx="lpage" title="lpage">693</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1126/science.1059412">10.1126/science.1059412</a> </span> <span class="pub-id"> <a href="http://www.ncbi.nlm.nih.gov/pubmed/11326091">11326091</a> </span> </span> </li> <li tag="ref"> <a name="CR21" /> <span class="label" tagx="label" title="label">21.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Veizer</span> <span class="given-names" tagx="given-names" title="given-names">J</span> </span> <span class="etal" title="etal"> <i>et al.</i> </span> </span> <span class="mixed-article-title" title="mixed-article-title">87Sr/86Sr, d18O and d13C Evolution Of Phanerozoic Seawater</span> <span class="source" tagx="source" title="source">Chemical Geology</span> <span class="year" tagx="year" title="year">1999</span> <span class="volume" tagx="volume" title="volume">161</span> <span class="fpage" tagx="fpage" title="fpage">59</span> <span class="lpage" tagx="lpage" title="lpage">88</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1016/S0009-2541(99)00081-9">10.1016/S0009-2541(99)00081-9</a> </span> </span> </li> <li tag="ref"> <a name="CR22" /> <span class="label" tagx="label" title="label">22.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lovejoy</span> <span class="given-names" tagx="given-names" title="given-names">S</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Tuck</span> <span class="given-names" tagx="given-names" title="given-names">AF</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Schertzer</span> <span class="given-names" tagx="given-names" title="given-names">D</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Hovde</span> <span class="given-names" tagx="given-names" title="given-names">SJ</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Reinterpreting aircraft measurements in anisotropic scaling turbulence</span> <span class="source" tagx="source" title="source">Atmos. Chem. and Phys.</span> <span class="year" tagx="year" title="year">2009</span> <span class="volume" tagx="volume" title="volume">9</span> <span class="fpage" tagx="fpage" title="fpage">1</span> <span class="lpage" tagx="lpage" title="lpage">19</span> <span class="pub-id"> <a href="https://dx.doi.org/10.5194/acp-9-5007-2009">10.5194/acp-9-5007-2009</a> </span> </span> </li> <li tag="ref"> <a name="CR23" /> <span class="label" tagx="label" title="label">23.</span> <span class="mixed-citation" tagx="mixed-citation" title="mixed-citation">Parisi, G. &amp;amp; Frisch, U. In <i>Turbulence and predictability in geophysical fluid dynamics and climate dynamics</i> (eds Ghil, M., Benzi, R. &amp;amp; Parisi, G.) 84–88 (North Holland, 1985). </span> </li> <li tag="ref"> <a name="CR24" /> <span class="label" tagx="label" title="label">24.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Clauset</span> <span class="given-names" tagx="given-names" title="given-names">A</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Shalizi</span> <span class="given-names" tagx="given-names" title="given-names">CR</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Newman</span> <span class="given-names" tagx="given-names" title="given-names">MEJ</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Power law distributions in empirical data</span> <span class="source" tagx="source" title="source">SIAM Review</span> <span class="year" tagx="year" title="year">2009</span> <span class="volume" tagx="volume" title="volume">51</span> <span class="fpage" tagx="fpage" title="fpage">661</span> <span class="lpage" tagx="lpage" title="lpage">703</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1137/070710111">10.1137/070710111</a> </span> </span> </li> </ul> </div> </div>  </body></html>
