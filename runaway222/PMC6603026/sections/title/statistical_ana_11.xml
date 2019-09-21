@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec11" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analysis</div>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Differences in migration speed (km day
+  <span class="sup">−1</span>) between seasons were examined using a generalized linear mixed model (GLMM)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR79" href="#CR79">79</a>
+  </span>. The model included migration speed (km day
+  <span class="sup">−1</span>) as the predicted variable with year and capture site as random factors. We started with a full model including season, average tailwind along all segments, age, species and all possible interactions, and then simplified the model using a backwards elimination process based on a log-likelihood ratio test (LRT) with 
+  <span class="italic">P</span> &lt; 0.05 as the selection criterion (“drop1” in R) until reaching the minimal adequate model. Unexpectedly, age and tailwind were not included in the final model.
+ </p>
+ <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">To determine differences in airspeed between seasons, airspeed was calculated only for the period when individuals were flying (i.e., stopover time was not included). Because some individuals were detected along several segments of the journey, they reoccur in the analysis. Therefore, we used a GLMM with airspeed as the predicted variable, and year, capture site and bird-id as random factors. The predictor variables were season, species, age, days after capture and all possible interactions and we simplified the model based on a log-likelihood ratio test (LRT). The final model included season and species. In order to identify whether airspeeds differed prior to and after the predator front, we selected two periods in the post-breeding season based on a visual inspection of the predator front (Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3a</a>); early (&gt; 29 July &amp; &lt; 1 Sept) and late (&gt; 31 Aug). We used a GLMM with airspeed as the predicted variable, and year, capture site and bird-id as random factors. The predictor variables were season, species, age and all possible interactions and simplified the model based on a LRT. The final model included season, species and the interaction term. In order to visualize these patterns, we used generalized additive models (GAM) to describe patterns of predator abundance and airspeed during the post-breeding season and used separate models for each species. The response variable for these models was either relative predator frequency or airspeed. For both models we used day of year as an explanatory variable. The models were fitted using the ‘mgcv’ package
+  <span class="sup">
+   <a ref-type="bibr" rid="CR80" href="#CR80">80</a>
+  </span> in R ver. 3.4.1, and compared with linear models (LM) based on the Akaike information criterion, and the final model was considered to be substantially better when its value was at least two AIC units lower than the next best model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+  </span>.
+ </p>
+ <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">Minimum stopover duration was analysed in the following way: the full model included minimum stopover duration (d) as the response variable with year and capture site as random factors, and season, average tailwind, age, species and all possible interactions as covariates. We then simplified the model based on a LRT until we reached a minimal adequate model.</p>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">We calculated the relative proportion of birds departing daily from Delaware Bay during the pre-breeding season and from the southern James Bay region in the post-breeding season to assess the total time of the migration as a measure of time constraints. We used adults only, as age classes are known to differ in timing at our study sites
+  <span class="sup">
+   <a ref-type="bibr" rid="CR82" href="#CR82">82</a>
+  </span>, and these sites were chosen because most birds were detected at these sites.
+ </p>
+ <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">In order to investigate whether wind selectivity differed between the seasons, wind support for each segment was analysed using LRT of GLMM’s with year and bird-id as random factors and species and season as fixed factors. We used the flow-assistance from NCEP, (see above) to calculate wind support for each migratory trajectory up to 10 days before actual departure.</p>
+ <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">Prior to all analyses, explanatory variables were assessed for collinearity using the variance inflation factor (VIF) function. All variables had a VIF &lt; 2 and coefficients did not switch between positive and negative values, indicating low multicollinearity
+  <span class="sup">
+   <a ref-type="bibr" rid="CR83" href="#CR83">83</a>
+  </span>.
+ </p>
+</sec>

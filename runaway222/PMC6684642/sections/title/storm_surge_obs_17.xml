@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec17" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Storm surge observations and projections</div>
+ <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">To generate historical observations with associated return periods (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4a</a> and Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>), we use hourly records of observed water levels from the Sewell’s Point tide gauge
+  <span class="sup">
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+  </span>. The observed water levels are relative to the MSL datum of the NTDE. The record we use is 88 years in length from 1928 to 2015. These observations contain the longer-term signal (SLR), which masks the effects of day-to-day weather, tides, and seasons. Following previous work (e.g.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR60" href="#CR60">60</a>,
+   <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+  </span>), we subtract the annual means from the record to approximately remove the SLR trend. We then approximate the annual block maxima by grouping the values into non-overlapping annual observation periods (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2a</a>). To calculate the return period associated with the annual block maxima (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2b</a>), we use a numerical median probability return period method
+  <span class="sup">
+   <a ref-type="bibr" rid="CR73" href="#CR73">73</a>–
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>. We use this method to reduce plotting biases by calculating the median probability of a return period instead of the mean
+  <span class="sup">
+   <a ref-type="bibr" rid="CR73" href="#CR73">73</a>–
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>. This method calculates the median probability of a return period for an annual block maxima by estimating the binomial distribution that places the ranked event at the median of the distribution
+  <span class="sup">
+   <a ref-type="bibr" rid="CR73" href="#CR73">73</a>–
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>.
+ </p>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Similar to the approach in Oddo 
+  <span class="italic">et al</span>.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+  </span>, our model uses hourly tide gauge data from 1926 to 2016 and a Bayesian calibration approach to fit an ensemble of stationary GEV distributions for the storm surge projections at the Sewell’s Point tide gauge. To set up the GEV analysis, we first subtract the annual means from the tide gauge record followed by calculating the annual block maxima from the detrended record. Using the detrended record, we calculate a maximum likelihood estimate for the GEV distribution parameters using the extRemes R package
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>,
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+  </span>. The resulting estimates act as the starting point for a 500,000-iteration Markov chain Monte Carlo simulation of the GEV parameters. We discard the first 50,000 iterations of each chain to remove the effects of starting values.
+ </p>
+</sec>

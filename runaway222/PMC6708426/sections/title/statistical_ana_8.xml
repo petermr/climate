@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="eva12803-sec-0008" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.6</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">To detect differences in phenological traits (i.e., days to emergence and first flower), between generations and among populations occupying different elevations, we conducted survival analyses using Cox Proportional Hazards models (Fox, 
+  <a rid="eva12803-bib-0034" ref-type="ref" href="#eva12803-bib-0034">2001</a>). These analyses can accept censored values, which in this experiment were individuals that never emerged when testing time to emergence and individuals that emerged but never flowered when testing differences in days to first flower. Due to the disruption in timing of the GA and vernalization treatments (e.g., most of the GA‐treated plants emerged simultaneously), only the untreated cohort is included in phenological analyses for the greenhouse experiment (see Germination section in Results). For the second generation in the growth chamber experiment, all seeds were included, and cohort was included in the model to control for cohort effects. We fit models for response variables days to emergence, days to flower, and days to first flower; we included generation (pre‐drought or drought), elevation (covariate), elevation by generation interaction, cohort, and mean seed mass (covariate) as explanatory variables; tray and population were included as random effects. Significance of explanatory variables was tested using likelihood ratio tests. The survival analyses were conducted in R Version 0.99.903 (R Core Team, 
+  <a rid="eva12803-bib-0086" ref-type="ref" href="#eva12803-bib-0086">2016</a>) using the coxme package (Therneau, 
+  <a rid="eva12803-bib-0104" ref-type="ref" href="#eva12803-bib-0104">2018</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For analyses of morphological traits, all variables were transformed using average ranks (Conover &amp; Iman, 
+  <a rid="eva12803-bib-0018" ref-type="ref" href="#eva12803-bib-0018">1981</a>) because standard transformations (i.e., log, square root, box cox, etc.) did not sufficiently meet the assumptions of parametric analyses. We created a Pearson correlation matrix in R using the Hmisc package (Harrell &amp; Dupont, 
+  <a rid="eva12803-bib-0050" ref-type="ref" href="#eva12803-bib-0050">2016</a>) to examine whether any traits are highly correlated. We used a REML model (Shaw, 
+  <a rid="eva12803-bib-0098" ref-type="ref" href="#eva12803-bib-0098">1987</a>) with total plant mass, fruit mass, vegetative biomass, number of fruits, plant height, and SLA as response variables; generation (pre‐drought or drought), elevation (covariate), elevation by generation interaction, germination cohort (untreated, GA, or vernalized), and mean seed mass (covariate) as explanatory variables; tray and population were included as random variables. REML analyses were conducted in JMP
+  <span class="bold">
+   <span class="sup">®</span>
+  </span> Pro (Version 12.0.1. SAS Institute Inc., 1989–2007) and were restricted to plants that emerged.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Finally, we conducted Levene's tests of homogeneity of variance in R (R Core Team, 
+  <a rid="eva12803-bib-0086" ref-type="ref" href="#eva12803-bib-0086">2016</a>), using the car package (Fox &amp; Weisberg, 
+  <a rid="eva12803-bib-0035" ref-type="ref" href="#eva12803-bib-0035">2011</a>), to determine whether trait variance differed by generation or population. For a highly selfing plant like 
+  <span class="italic">M. laciniatus</span>, variance among full‐sibling families (i.e., genetic lineages) is the most relevant measure of genetic variance (Conner &amp; Hartl, 
+  <a rid="eva12803-bib-0016" ref-type="ref" href="#eva12803-bib-0016">2004</a>). Thus, we used population trait variance as a proxy for trait genetic variance. We also calculated the coefficient of variation (CV) for each trait using the raster package (Hijmans &amp; van Etten, 
+  <a rid="eva12803-bib-0055" ref-type="ref" href="#eva12803-bib-0055">2012</a>) to estimate trait variance among maternal families. These data were used as a proxy to compare genetic variation among populations and whether variance was reduced during the drought of 2012–2014.
+ </p>
+</sec>

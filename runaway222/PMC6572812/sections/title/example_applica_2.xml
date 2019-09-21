@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Example applications of causal inference methods</div>
+ <p id="Par8" xmlns="http://www.w3.org/1999/xhtml">As in many other fields, methods based on correlation and univariate regression are still the most common data-based tools to analyze relationships in Earth system sciences. Such association approaches are useful in daily practice, but provide few insights into the causal mechanisms that underlie the dynamics of a system. Causal inference methods can overcome some of the key shortcomings of such approaches. In this section, we discuss application examples where causal inference methods have already led to important insights before providing a systematic overview.</p>
+ <p id="Par9" xmlns="http://www.w3.org/1999/xhtml">Concurrently to Wright’s
+  <span class="sup">
+   <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+  </span> seminal works on causation in the 1920s, Walker was the first to introduce systematic correlation and regression analysis into climate science
+  <span class="sup">
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>. He discovered the temperature and pressure relationships between the East and West Pacific giving rise to the Walker circulation, which has by now been established not only from observational studies, but also detailed physical simulation experiments
+  <span class="sup">
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+  </span>. In Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1a</a>, we illustrate these relationships using different methods: classical correlation, standard bivariate Granger causality (GC), and PCMCI
+  <span class="sup">
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span> (described later) that is better suited to this problem. Whereas GC and standard correlation analysis results in unphysical links, the example demonstrates that with the correct application of an appropriate method the Walker circulation can be inferred from data alone.
+  <div id="Fig1" class="fig">
+   <span class="label">Fig. 1</span>
+   <div class="caption">
+    <p>Example applications of causal inference methods in Earth system sciences. 
+     <span class="bold">a</span> Tropical climate example of dependencies between monthly surface pressure anomalies in the West Pacific (WPAC, regions depicted as shaded boxes below nodes), as well as surface air temperature anomalies in the Central Pacific (CPAC) and East Pacific (EPAC). Correlation analysis and standard bivariate Granger causality (GC) result in a completely connected graph while a multivariate causal method (PCMCI)
+     <span class="sup">
+      <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+      <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+     </span> better identifies the Walker circulation: Anomalous warm surface air in the East Pacific is carried westward by trade winds across the Central Pacific. Then the moist air rises towards the upper troposphere over the West Pacific and the circulation is closed by the cool and dry air sinking eastward across the entire tropical Pacific. PCMCI systematically identifies common drivers and indirect links among time-lagged variables, in this particular example based on partial correlation tests. Details on data in ref. 
+     <span class="sup">
+      <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+     </span>. 
+     <span class="bold">b</span> Application of a similar method to Arctic climate
+     <span class="sup">
+      <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+     </span>: Barents and Kara sea ice concentrations (BK-SIC) are detected to be important drivers of mid-latitude circulation, influencing winter Arctic Oscillation (AO) via tropospheric mechanisms and through processes involving vertical wave activity fluxes (v-flux) and the stratospheric Polar vortex (PoV). Details on methodology and data in ref. 
+     <span class="sup">
+      <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+     </span>. 
+     <span class="sup">©</span>American Meteorological Society. Used with permission. 
+     <span class="bold">c</span> Application from ecology (details in ref. 
+     <span class="sup">
+      <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+     </span>): dependencies between sea surface temperatures (SST), and California landings of Pacific sardine (Sardinos sagax) and northern anchovy (Engraulis mordax). Granger causality analysis only detects a spurious link, while convergent cross mapping (CCM) shows that sardine and anchovy abundances are both affected by SSTs
+    </p>
+   </div>
+   <div xlink:href="41467_2019_10105_Fig1_HTML" id="d29e906" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">Similary, Kretschmer et al.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> investigated possible Arctic mechanisms which could be pivotal to understand northern hemisphere mid-latitude extreme winters in Eurasia and North America. Arctic teleconnection patterns are much less understood than tropical ones and data-driven causality analyses are especially important because different climate models partly give conflicting results
+  <span class="sup">
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>,
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span>. In Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1b</a> we highlight the Arctic teleconnection pathways of the stratospheric Polar vortex that were extracted from observational data alone: here causal inference methods have confirmed previous model simulation studies, finding that Arctic sea ice extent in autumn is an important driver of winter circulation in the mid-latitudes
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span>.
+ </p>
+ <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">Finally, Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1c</a> shows an example from ecology demonstrating that traditional regression analysis is unable to identify the complex nonlinear interactions among sardines, anchovy, and sea surface temperature in the California Current ecosystem. A nonlinear causal state-space reconstruction method
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+  </span> here extracts the underlying ecologically plausible network of interactions, revealing that sea surface temperatures are a common driver of both sardine and anchovy abundances.
+ </p>
+ <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">These examples demonstrate how causal inference methods can help in distinguishing direct from indirect links and common drivers from observational time series, while classical correlation methods are ambiguous to interpret and can lead to incorrect conclusions.</p>
+ <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">Next to Granger’s seminal works in economics
+  <span class="sup">
+   <a ref-type="bibr" rid="CR9" href="#CR9">9</a>,
+   <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+  </span>, observational causal inference methods have mostly been applied in neuroscience
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>,
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span> and bioinformatics
+  <span class="sup">
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>,
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+  </span> where observational causal inference can also be combined with interventional experiments. The challenges for causal inference on Earth system data, especially the spatio-temporal and nonlinear nature of the system, are more similar to those in neuroscience as further discussed in the application and challenges sections.
+ </p>
+</sec>

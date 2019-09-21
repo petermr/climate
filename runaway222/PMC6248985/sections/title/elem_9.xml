@@ -1,0 +1,843 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec007" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Multi-agent simulation model</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Further to identifying different components of a complex system, capturing mechanisms that dictate dynamic interactions between them is a necessary step towards assessing the long-term resilience performance of the system as a whole. To this end, a Multi-Agent Simulation (MAS) method was adopted in order to capture the coupled human-infrastructure dynamics. MAS enables modeling complex and real-world systems through the adoption of influential concepts such as adaptation, emergence, and self-organization [
+  <a rid="pone.0207674.ref031" ref-type="bibr" href="#pone.0207674.ref031">31</a>]. This method is routinely employed for analyzing problems which require distributed problem-solving capabilities in the absence of a centralized solution [
+  <a rid="pone.0207674.ref032" ref-type="bibr" href="#pone.0207674.ref032">32</a>]. In this method, agents of a complex system are structured such that they are independent entities which function concurrently in the presence of specific relationships that govern the complex system. In MAS, an agent has several essential characteristics: active–initiating actions, reactive–responding to external stimulus, and autonomy [
+  <a rid="pone.0207674.ref033" ref-type="bibr" href="#pone.0207674.ref033">33</a>]. MAS has been shown as an effective simulation approach for analyzing complex processes and interactions in civil infrastructure systems [
+  <a rid="pone.0207674.ref022" ref-type="bibr" href="#pone.0207674.ref022">22</a>,
+  <a rid="pone.0207674.ref034" ref-type="bibr" href="#pone.0207674.ref034">34</a>–
+  <a rid="pone.0207674.ref036" ref-type="bibr" href="#pone.0207674.ref036">36</a>]. Many entities within an infrastructure system (e.g., users, human-decision makers, and physical infrastructure) can be viewed and modeled as an agent. Given that human actors and physical assets of an infrastructure system interact in unique ways at different levels, the MAS method enables capturing such behaviors (i.e., internal dynamics, performance regime, and regime shifts) in a comprehensive framework to assess the long-term resilience of complex systems. Indeed, through developing a MAS model of a water distribution network the proposed framework was tested and used for long-term resilience assessment of this complex infrastructure system. The following section describes the conceptual framework of MAS created for capturing internal dynamics and modeling the impact of external stressors on the performance regime of civil infrastructure, in the context of an urban water distribution system.
+ </p>
+ <sec id="sec008" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Conceptual model for simulation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Water distribution infrastructure is a vital part of urban water supply systems, comprising of expensive and often complex physical assets. When thought of as a complex system, it includes physical pipeline networks delivering water to users, the municipality or private company as an institution that manages the infrastructure and the organizations and individuals who consume the water [
+   <a rid="pone.0207674.ref037" ref-type="bibr" href="#pone.0207674.ref037">37</a>]. In water distribution networks, aging pipelines accelerate the effects produced on the infrastructure by external stressors, leading to a faster decay in the performance of this complex system as a whole. The three important drivers of dynamic interactions between agents of a water distribution are shown in 
+   <a ref-type="fig" rid="pone.0207674.g003" href="#pone.0207674.g003">Fig 3</a> below. They include (i) physical degradation of the infrastructure network and its components, which is a function of several factors such as aging, erosion and environmental conditions (ii) renewal decision-making processes and adaptive behavior of institutional actors [
+   <a rid="pone.0207674.ref038" ref-type="bibr" href="#pone.0207674.ref038">38</a>] (iii) external stressors such as population change and fluctuations in funding, which either exacerbate physical degradation of the system or affect the response behavior/decision-making processes of its institutional actors.
+  </p>
+  <div id="pone.0207674.g003" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0207674.g003</span>
+   <span class="label">Fig 3</span>
+   <div class="caption">
+    <div class="title">Conceptual modeling framework for water distribution infrastructure systems.</div>
+   </div>
+   <div xlink:href="pone.0207674.g003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <sec id="sec009" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Physical network degradation</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The physical condition of an infrastructure asset denotes its structural capacity and ability to withstand different types of stressors. On the other hand, the functionality of infrastructure indicates its ability to serve its intended function at the desired level of service. The approach to modeling the mechanisms of physical degradation varies for different infrastructure (e.g., roadways vs. water systems) [
+    <a rid="pone.0207674.ref039" ref-type="bibr" href="#pone.0207674.ref039">39</a>]. However, the modeling of infrastructure degradation essentially involves identifying indicators of physical and functional conditions of an asset and then integrating them into a unified performance measure [
+    <a rid="pone.0207674.ref040" ref-type="bibr" href="#pone.0207674.ref040">40</a>]. A unified performance measure quantifies the state of an infrastructure asset at any given time based on variables such as design characteristics of the asset, asset’s age, ambient climate, and service load of the asset in that period [
+    <a rid="pone.0207674.ref040" ref-type="bibr" href="#pone.0207674.ref040">40</a>]. Typical physical attributes of a water distribution network are pipeline age, materials used, length of pipes, fluid pressure and flow rate. The deterioration of physical assets in a network decreases the reliability of the infrastructure and affects the system as a whole in terms of maintenance and operation costs, rehabilitation needs and exposure of actors in the system to risks. Therefore, a complex system model of water distribution infrastructure needs to account for degradation and the effect that it has on service life, condition states, future maintenance and rehabilitation expenses. The physical degradation process of pipework is not clearly understood, with published literature citing several factors such as age, material and network pressure as driving mechanisms, meaning, different functions may be implemented to capture the process [
+    <a rid="pone.0207674.ref041" ref-type="bibr" href="#pone.0207674.ref041">41</a>]. However, several deterioration model studies have correlated age with condition thereby establishing that the process is age-dependent [
+    <a rid="pone.0207674.ref042" ref-type="bibr" href="#pone.0207674.ref042">42</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">From a system perspective, age-based deterioration can be used as a criterion to sort various sections (lengths) of piping in the network into discrete age groups based on pre-defined age ranges. As a consequence, aging sections would move from one age group to the next during the process of deterioration. Thus, modeling degradation as a dynamic process would capture long-term transformation effects in the network which would lend greater accuracy to the assessment of the system’s resilience.</p>
+  </sec>
+  <sec id="sec010" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Renewal decision-making processes</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">In addition to physical network degradation, human actors (users and administrative agencies) play an important role in the long-term dynamics of water distribution infrastructure. For instance, expectation of and demands placed by users determine the actual quantity of water supplied by the network, while municipalities and private institutions (administrative agencies) which manage the decision-making processes related to renewal and restoration, affect the ability of the network to maintain the required supply. Consider the following scenario which illustrates the interplay of human behavior in the network. The demand placed on the network fluctuates with changes to the user population. These fluctuations drive the price of water, which in turn affects the revenue generated by administrative agencies. Since revenue drives renewal decision processes as well as regular maintenance work, a direct consequence of this interplay is the degradation rate of physical assets in the water distribution network.</p>
+   <p xmlns="http://www.w3.org/1999/xhtml">In response to the various factors which affect the decision-making process, administrative agencies often identify strategy targets to pursue when maintaining large infrastructure networks. A strategy target may be defined as that indicator of network performance (e.g. average condition and break frequency) which is deemed acceptable by the administrative agency. Thus, any strategy target is a combination of various factors in the behavior spectrum of its human actors. The proposed model captures various behavioral factors affecting the decision-making process such as capital and operational expenses, revenue, water price and capital improvement funds, which are uniquely combined to create three heuristic renewal strategy targets for the network: (i) controlling the average break frequency (ii) controlling average condition of network and (iii) regular renewal based on age of pipes. When the agency adopts a break-control strategy, the motive is to keep the frequency of breaks below a certain target threshold. The annual pipe renewal process would be maintained until the desired average annual break frequency over a five-year horizon is reached. If the target is average condition control, the agency strives to maintain the condition of the network below the required threshold through the renewal process. In either of these strategies, renewal costs exceeding the base allotment are met through the activation of a surplus called the capital improvement fund. This fund is allocated based on a 5-year budget from which 20% can be used annually towards the renewal process if expected costs are exceeded. In the case of an age-based (regular) renewal strategy, the agency performs maintenance work only on sections of the pipeline which are older than 100 years (100 years is the average service life of water pipes as reported by [
+    <a rid="pone.0207674.ref043" ref-type="bibr" href="#pone.0207674.ref043">43</a>]). The capital improvement fund is unavailable when an age-based strategy target is adopted. Therefore, when faced with a deficit, the agency performs renewal based on the amount of available revenue.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">It is apparent that renewal decision-making processes of the utility agency and other adaptive actions affect the dynamic variables of the infrastructure, resulting in different performance regimes. Hence, a long-term resilience assessment of the water distribution infrastructure system would be incomplete in their absence.</p>
+  </sec>
+  <sec id="sec011" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">External stressors</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The impact of stressors on civil infrastructure systems has been highlighted in the previous sections. The impact of chronic stressors in particular, has greater bearing when the long-term dynamics of a water distribution infrastructure are being investigated. The proposed model framework considers the impact of population change and funding fluctuations as external stressors. Accordingly, different levels of capital improvement fund and various rates of population change are accounted for, to investigate its influence on the dynamics of the infrastructure. Together, water demand fluctuations arising from population change, and availability of funds for renewal, produce critical points which lead to shifts in performance regimes of the water distribution network.</p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The following section presents the methodology and estimation procedures required to parameterize the MAS model and develop its computational components for a numerical case study of water distribution infrastructure system.</p>
+  </sec>
+ </sec>
+ <sec id="sec012" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Computational simulation model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The MAS model in this study was created based on the conceptual logic and principals representing the real-world behaviors of an urban water distribution infrastructure system. The creation of a computation representation for all the input and output parameters of the conceptual model entails constructing mathematical algorithms to match the conceptual logic representing the behaviors of water distribution infrastructure. The computational representation of the MAS model was developed in an object-oriented programming platform (i.e., AnyLogic 7). It integrates the institutional actors’ renewal decision-making processes with the physical infrastructure performance in order to assess the long-term resilience behavior of water distribution infrastructure system under different stressors (e.g., user population changes) and various scenarios (e.g., renewal strategies). A numerical case of a water distribution network composed of 180 miles of pipes with different materials and age categories was used to create the computational simulation model that captures the dynamics of the system to examine its resilience. The population in the service area of this case is 113,000 (60,000 households). This MAS model of the water distribution infrastructure system includes three classes of agents: water pipeline network, water users, and utility agency, each of which is simulated in the model as an object (i.e., function, variable, or data structure that has memory in the computational model). 
+   <a ref-type="fig" rid="pone.0207674.g004" href="#pone.0207674.g004">Fig 4</a> depicts the Unified Modeling Language (UML) class diagram of the computational MAS model and summarizes the information regarding the attributes and functions implemented.
+  </p>
+  <div id="pone.0207674.g004" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0207674.g004</span>
+   <span class="label">Fig 4</span>
+   <div class="caption">
+    <div class="title">Unified Modeling Language (UML) class diagram of the model.</div>
+   </div>
+   <div xlink:href="pone.0207674.g004" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The relationships among agent classes and their attributes are based on the existing literature and empirical information. 
+   <a ref-type="fig" rid="pone.0207674.g004" href="#pone.0207674.g004">Fig 4</a> shows the attributes, functions, and relationships among different agent classes. The following subsections represent the mathematical implementation for the model agents and their attributes.
+  </p>
+  <sec id="sec013" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pipeline network agent</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The pipeline network agent includes different pipe classes with a defined total length (in miles) divided into 5 condition (age) group states (
+    <span class="italic">i</span> = 20,40,60,80,100). For each group, which represents a certain condition level, there is a defined material (e.g., percentage of PVC and CIP type). Deterioration of pipes is modeled based on their age. As pipes age, their condition group may change; every year, 5 percent of pipes in each condition group (except condition group 100) moves to the next condition group. Another mechanism that affects the transition of pipes into different condition group states is pipe renewal. Based on the renewal decision-making outcomes of the agency agent (which is explained later), a certain percentage of pipes is renewed and moves from condition group 100 to condition group 20, annually. 
+    <a ref-type="fig" rid="pone.0207674.g005" href="#pone.0207674.g005">Fig 5</a> depicts the modeling deterioration mechanism of pipes in the model.
+   </p>
+   <div id="pone.0207674.g005" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0207674.g005</span>
+    <span class="label">Fig 5</span>
+    <div class="caption">
+     <div class="title">Modeling physical pipeline deterioration process.</div>
+    </div>
+    <div xlink:href="pone.0207674.g005" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The aging of the pipes is also reflected in the changes in the percentage of materials for each group. At the beginning of simulation, the model starts with a defined percentage of PVC and CIP pipes for each group. As pipes age, these percentages change (because renewal is by PVC). Based on the portion of pipe length in each condition group, the model computes the network average condition (
+    <div id="pone.0207674.e001" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e001.jpg" id="pone.0207674.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M1" class="math">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">C</span>
+        </div>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+     </div>
+    </div>) using 
+    <a ref-type="disp-formula" rid="pone.0207674.e002" href="#pone.0207674.e002">Eq 1</a> [
+    <a rid="pone.0207674.ref043" ref-type="bibr" href="#pone.0207674.ref043">43</a>]: 
+    <div id="pone.0207674.e002" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e002.jpg" id="pone.0207674.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M2" class="math">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">C</span>
+         <span class="mo">¯</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msub">
+           <div displaystyle="false" class="mstyle">
+            <span class="mo">∑</span>
+           </div>
+           <span class="mi">i</span>
+          </div>
+          <span stretchy="false" class="mo">(</span>
+          <div class="msub">
+           <span class="mi">l</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">*</span>
+          <span class="mi">i</span>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">L</span>
+           <span class="mi">N</span>
+          </div>
+         </div>
+        </div>
+        <span width="1em" class="mspace"/>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">20</span>
+          <span class="mo">,</span>
+          <span class="mn">40</span>
+          <span class="mo">,</span>
+          <span class="mn">60</span>
+          <span class="mo">,</span>
+          <span width="0.25em" class="mspace"/>
+          <span class="mn">80</span>
+          <span class="mo">,</span>
+          <span class="mn">100</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(1)</span>
+    </div> where 
+    <span class="italic">l</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> and 
+    <span class="italic">L</span>
+    <sub>
+     <span class="italic">N</span>
+    </sub> are the total length of pipes (mile) in condition group 
+    <span class="italic">i</span> and in the network, respectively. The other attributes of the pipeline network agent include breakage, leakage, and service reliability. Breakage is modeled using a stochastic process that determines the frequency of pipe breaks during one year. The frequency of breaks for each mile of pipes is a function of pipe’s material and age. The model uses a Poisson Process with a mean rate of break (
+    <span class="italic">λ</span>) (shown in 
+    <a ref-type="disp-formula" rid="pone.0207674.e003" href="#pone.0207674.e003">Eq 2</a>) to calculate the annual frequency of pipe breaks per each mile of pipeline. In 
+    <a ref-type="disp-formula" rid="pone.0207674.e003" href="#pone.0207674.e003">Eq 2</a>, the Lambda (
+    <span class="italic">λ</span>) represents the mean rate of break per mile per year [
+    <a rid="pone.0207674.ref044" ref-type="bibr" href="#pone.0207674.ref044">44</a>]: 
+    <div id="pone.0207674.e003" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e003.jpg" id="pone.0207674.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M3" class="math">
+       <div class="mrow">
+        <span class="mi">λ</span>
+        <span class="mo">=</span>
+        <div class="msub">
+         <span class="mi">N</span>
+         <span class="mn">0</span>
+        </div>
+        <span class="mo">.</span>
+        <div class="msup">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <span class="mi">g</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">−</span>
+            <span class="mn">10</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(2)</span>
+    </div> where 
+    <span class="italic">N</span>
+    <sub>0</sub> is the initial number of breaks per mile per year in a new pipe, 
+    <span class="italic">g</span> is the growth rate which is 0.07 for PVC and 0.078 for CIP pipes [
+    <a rid="pone.0207674.ref045" ref-type="bibr" href="#pone.0207674.ref045">45</a>], and 
+    <span class="italic">i</span> is the pipe’s condition group. The total number of breaks in the network per year (
+    <span class="italic">N</span>
+    <sub>
+     <span class="italic">B</span>
+    </sub>) would be sum of the breaks in each mile of the entire network pipes. The annual water loss due to network breaks is calculated using 
+    <a ref-type="disp-formula" rid="pone.0207674.e004" href="#pone.0207674.e004">Eq 3</a> [
+    <a rid="pone.0207674.ref046" ref-type="bibr" href="#pone.0207674.ref046">46</a>]: 
+    <div id="pone.0207674.e004" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e004.jpg" id="pone.0207674.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M4" class="math">
+       <div class="mrow">
+        <span class="mi">W</span>
+        <div class="msub">
+         <span class="mi">L</span>
+         <span class="mi">B</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mn">1440</span>
+        <span class="mo">*</span>
+        <div class="msub">
+         <span class="mi">N</span>
+         <span class="mi">B</span>
+        </div>
+        <span class="mo">*</span>
+        <div accent="true" class="mover">
+         <span class="mi">F</span>
+         <span class="mo">¯</span>
+        </div>
+        <span class="mo">*</span>
+        <span class="mi">d</span>
+        <span class="mo">*</span>
+        <div class="msqrt">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">P</span>
+           <span class="mo">¯</span>
+          </div>
+          <span class="mo">/</span>
+          <span class="mn">70</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(3)</span>
+    </div> where, 
+    <span class="italic">WL</span>
+    <sub>
+     <span class="italic">B</span>
+    </sub> is the annual water loss due to network breaks (gallon), 
+    <span class="italic">N</span>
+    <sub>
+     <span class="italic">B</span>
+    </sub> is the total number of annual breaks, 
+    <div id="pone.0207674.e005" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e005.jpg" id="pone.0207674.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M5" class="math">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">F</span>
+        </div>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+     </div>
+    </div> is the network average flow rate (gallon per minute), 
+    <span class="italic">d</span> is the total duration of disruption due to break (day), and 
+    <div id="pone.0207674.e006" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e006.jpg" id="pone.0207674.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M6" class="math">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">P</span>
+        </div>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+     </div>
+    </div> is the network average pressure (psi). 
+    <div id="pone.0207674.e007" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e007.jpg" id="pone.0207674.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M7" class="math">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">F</span>
+        </div>
+        <span class="mo">¯</span>
+       </div>
+       <span class="mo">,</span>
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">P</span>
+        </div>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+     </div>
+    </div>, and 
+    <span class="italic">d</span> are user-defined input parameters into the model.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Similarly, network leakage is determined as total water volume lost in the network, which is a fraction of annual water demand. Leakage rate (
+    <span class="italic">LR</span>), which is a unitless variable, depends on network average condition (
+    <div id="pone.0207674.e008" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e008.jpg" id="pone.0207674.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M8" class="math">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">C</span>
+        </div>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+     </div>
+    </div>) and is calculated using 
+    <a ref-type="disp-formula" rid="pone.0207674.e009" href="#pone.0207674.e009">Eq 4</a> [
+    <a rid="pone.0207674.ref047" ref-type="bibr" href="#pone.0207674.ref047">47</a>]: 
+    <div id="pone.0207674.e009" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e009.jpg" id="pone.0207674.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M9" class="math">
+       <div class="mrow">
+        <span class="mi">L</span>
+        <span class="mi">R</span>
+        <span class="mo">=</span>
+        <span class="mn">0.00075</span>
+        <span class="mo">*</span>
+        <div class="msup">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">C</span>
+           <span class="mo">¯</span>
+          </div>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mn">0.07</span>
+            <span class="mi">P</span>
+            <span class="mi">V</span>
+            <span class="mi">C</span>
+            <span class="mo">+</span>
+            <span class="mn">0.078</span>
+            <span class="mi">C</span>
+            <span class="mi">I</span>
+            <span class="mi">P</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(4)</span>
+    </div> where 
+    <span class="italic">PVC</span> and 
+    <span class="italic">CIP</span> are the fractions of pipeline network with each material type. Accordingly, the annual water loss due to network leakage is determined by 
+    <a ref-type="disp-formula" rid="pone.0207674.e010" href="#pone.0207674.e010">Eq 5</a>: 
+    <div id="pone.0207674.e010" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e010.jpg" id="pone.0207674.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M10" class="math">
+       <div class="mrow">
+        <span class="mi">W</span>
+        <div class="msub">
+         <span class="mi">L</span>
+         <span class="mi">L</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mi">L</span>
+        <span class="mi">R</span>
+        <span class="mo">*</span>
+        <span class="mi">D</span>
+       </div>
+      </div>
+     </div>
+     <span class="label">(5)</span>
+    </div> where 
+    <span class="italic">WL</span>
+    <sub>
+     <span class="italic">L</span>
+    </sub> and 
+    <span class="italic">D</span> denote the annual water loss due to network leakage (gallon) and the annual water demand (gallon), respectively.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Considering the total water loss in the network due to both breakage and leakage, annual water supply (
+    <span class="italic">S</span>), which represents the delivered water to users (gallon per year), is calculated using 
+    <a ref-type="disp-formula" rid="pone.0207674.e011" href="#pone.0207674.e011">Eq 6</a>: 
+    <div id="pone.0207674.e011" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e011.jpg" id="pone.0207674.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M11" class="math">
+       <div class="mrow">
+        <span class="mi">S</span>
+        <span class="mo">=</span>
+        <span class="mi">D</span>
+        <span class="mo">−</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">W</span>
+          <div class="msub">
+           <span class="mi">L</span>
+           <span class="mi">B</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mi">W</span>
+          <div class="msub">
+           <span class="mi">L</span>
+           <span class="mi">L</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(6)</span>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">In order to determine whether the supply of water transported by the pipes can meet the given demand, a service reliability (
+    <span class="italic">SR</span>) parameter is defined. This parameter represents the extent to which the supplied water through the network met the demand. To determine 
+    <span class="italic">SR</span>, in each year (
+    <span class="italic">t</span>) the cumulative supply is divided by the cumulative demand and this gives the service reliability until that year (
+    <span class="italic">SR</span>
+    <sub>
+     <span class="italic">t</span>
+    </sub>) based on 
+    <a ref-type="disp-formula" rid="pone.0207674.e012" href="#pone.0207674.e012">Eq 7</a>: 
+    <div id="pone.0207674.e012" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e012.jpg" id="pone.0207674.e012g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M12" class="math">
+       <div class="mrow">
+        <span class="mi">S</span>
+        <div class="msub">
+         <span class="mi">R</span>
+         <span class="mi">t</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msubsup">
+           <div displaystyle="false" class="mstyle">
+            <span class="mo">∑</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+            <span class="mo">=</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mi">t</span>
+          </div>
+          <div class="msub">
+           <span class="mi">S</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <div class="msubsup">
+           <div displaystyle="false" class="mstyle">
+            <span class="mo">∑</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+            <span class="mo">=</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mi">t</span>
+          </div>
+          <div class="msub">
+           <span class="mi">D</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(7)</span>
+    </div> where 
+    <span class="italic">S</span>
+    <sub>
+     <span class="italic">j</span>
+    </sub> and 
+    <span class="italic">D</span>
+    <sub>
+     <span class="italic">j</span>
+    </sub> are delivered water and water demand (gallon) in year j, respectively.
+   </p>
+  </sec>
+  <sec id="sec014" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Users agent</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The agent of users represents population (
+    <span class="italic">P</span>) and number of households (
+    <span class="italic">N</span>
+    <sub>
+     <span class="italic">h</span>
+    </sub>) consuming water from the given pipeline network, which determine the amount of water (gallons) demanded from the network. In each year, water demand (
+    <span class="italic">D</span>
+    <sub>
+     <span class="italic">t</span>
+    </sub>) is assumed to be the average indoor water demand (gallon/year) which is calculated using 
+    <a ref-type="disp-formula" rid="pone.0207674.e013" href="#pone.0207674.e013">Eq 8</a> [
+    <a rid="pone.0207674.ref048" ref-type="bibr" href="#pone.0207674.ref048">48</a>]: 
+    <div id="pone.0207674.e013" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e013.jpg" id="pone.0207674.e013g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M13" class="math">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">D</span>
+         <span class="mi">t</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mn">87.4</span>
+        <div class="msup">
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="mfrac">
+             <div class="mrow">
+              <div class="msub">
+               <span class="mi">P</span>
+               <span class="mi">t</span>
+              </div>
+             </div>
+             <div class="mrow">
+              <div class="msub">
+               <span class="mi">N</span>
+               <span class="mi">h</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mn">0.69</span>
+         </div>
+        </div>
+        <span class="mo">*</span>
+        <div class="msub">
+         <span class="mi">N</span>
+         <span class="mi">h</span>
+        </div>
+        <span class="mo">*</span>
+        <span class="mn">365</span>
+       </div>
+      </div>
+     </div>
+     <span class="label">(8)</span>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Population (
+    <span class="italic">P</span>
+    <sub>
+     <span class="italic">t</span>
+    </sub>) is changed in each year based on the user-defined values of growth/decline rate (r) and base population (
+    <span class="italic">P</span>
+    <sub>0</sub>). Population in each year (t) is computed based on 
+    <a ref-type="disp-formula" rid="pone.0207674.e014" href="#pone.0207674.e014">Eq 9</a>: 
+    <div id="pone.0207674.e014" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e014.jpg" id="pone.0207674.e014g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M14" class="math">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">P</span>
+         <span class="mi">t</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <span class="mi">P</span>
+         <span class="mn">0</span>
+        </div>
+        <span class="mo">*</span>
+        <div class="msup">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <span class="mi">t</span>
+          <span class="mo">.</span>
+          <span class="mi">r</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(9)</span>
+    </div>
+   </p>
+  </sec>
+  <sec id="sec015" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Utility agency agent</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The utility agency agent models the decision-making processes of the agency. The renewal decision-making process is affected by revenue, operational and capital expenditures, and capital improvement fund. The initial water price (
+    <span class="italic">WP</span>
+    <sub>0</sub>) in the model is user-defined ($/gallon). Water price (
+    <span class="italic">WP</span>
+    <sub>
+     <span class="italic">t</span>
+    </sub>) can hike annually over the simulation period with a price hike rate (
+    <span class="italic">w</span>) based on 
+    <a ref-type="disp-formula" rid="pone.0207674.e015" href="#pone.0207674.e015">Eq 10</a>. Accordingly, annual revenue (
+    <span class="italic">Rev</span>
+    <sub>
+     <span class="italic">t</span>
+    </sub>) is determined based on that year’s projected water demand (gallon/year) and water price ($/gallon) using 
+    <a ref-type="disp-formula" rid="pone.0207674.e016" href="#pone.0207674.e016">Eq 11</a>.
+   </p>
+   <div id="pone.0207674.e015" class="disp-formula" xmlns="http://www.w3.org/1999/xhtml">
+    <div class="alternatives">
+     <div xlink:href="pone.0207674.e015.jpg" id="pone.0207674.e015g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M15" class="math">
+      <div class="mrow">
+       <span class="mi">W</span>
+       <div class="msub">
+        <span class="mi">P</span>
+        <span class="mi">t</span>
+       </div>
+       <span class="mo">=</span>
+       <span class="mi">W</span>
+       <div class="msub">
+        <span class="mi">P</span>
+        <span class="mn">0</span>
+       </div>
+       <span class="mo">*</span>
+       <div class="msup">
+        <div class="mrow">
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mn">1</span>
+           <span class="mo">+</span>
+           <span class="mi">w</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+        <span class="mi">t</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(10)</span>
+   </div>
+   <div id="pone.0207674.e016" class="disp-formula" xmlns="http://www.w3.org/1999/xhtml">
+    <div class="alternatives">
+     <div xlink:href="pone.0207674.e016.jpg" id="pone.0207674.e016g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M16" class="math">
+      <div class="mrow">
+       <span class="mi">R</span>
+       <span class="mi">e</span>
+       <div class="msub">
+        <span class="mi">v</span>
+        <span class="mi">t</span>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <span class="mi">D</span>
+        <span class="mi">t</span>
+       </div>
+       <span class="mo">*</span>
+       <span class="mi">W</span>
+       <div class="msub">
+        <span class="mi">P</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(11)</span>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The annual operational expenditure (
+    <span class="italic">OpEx</span>), which increases exponentially based on the network average condition (
+    <div id="pone.0207674.e017" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e017.jpg" id="pone.0207674.e017g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M17" class="math">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">C</span>
+        </div>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+     </div>
+    </div>), is determined using 
+    <a ref-type="disp-formula" rid="pone.0207674.e018" href="#pone.0207674.e018">Eq 12</a> [
+    <a rid="pone.0207674.ref047" ref-type="bibr" href="#pone.0207674.ref047">47</a>]: 
+    <div id="pone.0207674.e018" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e018.jpg" id="pone.0207674.e018g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M18" class="math">
+       <div class="mrow">
+        <span class="mi">O</span>
+        <span class="mi">p</span>
+        <span class="mi">E</span>
+        <span class="mi">x</span>
+        <span class="mo">=</span>
+        <div class="msub">
+         <span class="mi">U</span>
+         <div class="mrow">
+          <span class="mi">O</span>
+          <span class="mi">p</span>
+          <span class="mi">E</span>
+          <span class="mi">x</span>
+         </div>
+        </div>
+        <span class="mo">*</span>
+        <div class="msub">
+         <span class="mi">L</span>
+         <span class="mi">N</span>
+        </div>
+        <span class="mo">*</span>
+        <div class="mrow">
+         <span class="mo">[</span>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">+</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mn">1.4877</span>
+            <div class="msup">
+             <span class="mi">e</span>
+             <div class="mrow">
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mn">0.0449</span>
+                <div accent="true" class="mover">
+                 <span class="mi">C</span>
+                 <span class="mo">¯</span>
+                </div>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">/</span>
+          <span class="mn">100</span>
+         </div>
+         <span class="mo">]</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(12)</span>
+    </div> where 
+    <span class="italic">U</span>
+    <sub>
+     <span class="italic">OpEx</span>
+    </sub> is the unit cost (dollar per mile) for operating and maintaining the network (which is $0.06 million per mile per year based on [
+    <a rid="pone.0207674.ref043" ref-type="bibr" href="#pone.0207674.ref043">43</a>]).
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The renewal rate depends on the availability of funding for the capital expenditures. The available funding for the pipes renewal equals to the annual revenue minus the operational expenditures. The required funding for capital expenditures of renewing pipes is determined using 
+    <a ref-type="disp-formula" rid="pone.0207674.e019" href="#pone.0207674.e019">Eq 13</a>. 
+    <div id="pone.0207674.e019" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0207674.e019.jpg" id="pone.0207674.e019g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M19" class="math">
+       <div class="mrow">
+        <span class="mi">C</span>
+        <span class="mi">a</span>
+        <span class="mi">p</span>
+        <span class="mi">E</span>
+        <span class="mi">x</span>
+        <span class="mo">=</span>
+        <div class="msub">
+         <span class="mi">U</span>
+         <div class="mrow">
+          <span class="mi">C</span>
+          <span class="mi">a</span>
+          <span class="mi">p</span>
+          <span class="mi">E</span>
+          <span class="mi">x</span>
+         </div>
+        </div>
+        <span class="mo">*</span>
+        <span class="mi">R</span>
+        <span class="mi">L</span>
+       </div>
+      </div>
+     </div>
+     <span class="label">(13)</span>
+    </div> where, 
+    <span class="italic">U</span>
+    <sub>
+     <span class="italic">CapEx</span>
+    </sub> is the cost of rehabilitation of one mile of pipes with PVC ($1.2 million), and 
+    <span class="italic">RL</span> is the length of pipes (mile) with age 100 or more (5% of pipes in condition group 100). If the available funding for capital expenditures is less than the required capital expenditures, the renewal length would be equal to the available funding divided by the unit cost of rehabilitation.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">For additional renewal and in order to keep the network performance in terms of break frequency or average condition below the user-defined threshold (i.e., strategy target), the agency would use a capital improvement fund (
+    <span class="italic">CIF</span>) in addition to the annual revenues. The 
+    <span class="italic">CIF</span> investment is made every five years, and thus the renewal due to 
+    <span class="italic">CIF</span> occurs over five years. Hence, each year, up to twenty percent of 
+    <span class="italic">CIF</span> is invested for renewal. The annual 
+    <span class="italic">CIF</span> allocation would be utilized to implement more pipe renewals in the network after spending the revenue as explained before (i.e., the excessive revenue wouldn’t be used to replenish 
+    <span class="italic">CIF</span>). In the model, 
+    <span class="italic">CIF</span> ($ Million) is a user-defined input parameter. 
+    <a ref-type="fig" rid="pone.0207674.g006" href="#pone.0207674.g006">Fig 6</a> shows the action chart of annual renewal process under the strategy of controlling network average condition. Based on this action chart, the model identifies to what extent (i.e., mile) the renewal process should be conducted every year (as much as the 
+    <span class="italic">CIF</span> allows) in order for the network to reach the strategy target (i.e., desired average condition). That is, similarly, for the strategy of break control, the model determines to what extent the renewal process should be conducted in order for the network to reach the desired number of breaks.
+   </p>
+   <div id="pone.0207674.g006" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0207674.g006</span>
+    <span class="label">Fig 6</span>
+    <div class="caption">
+     <div class="title">Action chart of renewal strategy for controlling network average condition.</div>
+    </div>
+    <div xlink:href="pone.0207674.g006" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </sec>
+ </sec>
+ <sec id="sec016" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Verification and validation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Verification and validation techniques focus on verifying the data, rules, logic and computational algorithms [
+   <a rid="pone.0207674.ref049" ref-type="bibr" href="#pone.0207674.ref049">49</a>]. They could be as simple as tracking variables at intermediate levels in simulation and running the simulation with extreme values of constructs [
+   <a rid="pone.0207674.ref050" ref-type="bibr" href="#pone.0207674.ref050">50</a>]. Typically, attempts are made to replicate the outcomes seen in theory, failing which, systematic checks are carried out to identify errors in the code. In this study, a gradual, systemic, and iterative procedure was employed to conduct a thorough verification of the computational model. In addition, the validation of the model was ensured through the use of grounded theories, logic and equations utilized by previous studies in modeling the performance of water distribution networks such as [
+   <a rid="pone.0207674.ref042" ref-type="bibr" href="#pone.0207674.ref042">42</a>,
+   <a rid="pone.0207674.ref051" ref-type="bibr" href="#pone.0207674.ref051">51</a>].
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Various internal and external validation techniques (e.g., predictive and face validation) were employed to verify the data, logic, and computational algorithms related to the simulation model. First, the initial conditions and the ranges of the parameters were compared to the existing empirical data to ensure the reliability of the parameters in the model [
+   <a rid="pone.0207674.ref052" ref-type="bibr" href="#pone.0207674.ref052">52</a>]. For example, the parameters related to the physical network, such as pipes’ age, length, and material, were compared to the actual water distribution data related to another network (in Ontario, Canada). Second, the behaviors of model entities (e.g., network average condition) were followed so as to identify unusual model behaviors. Whenever an unusual behavior was observed, the model logic was checked to ensure that the behavior was not due to unreasonable assumptions or imperfect logic. Third, extreme value analyses were performed, where the model was run at different extreme conditions (for each component) to observe its response and verify its functionality under these scenarios. Fourth, several random replications (more than one thousand runs) of the model were compared to check for the consistency of the results [
+   <a rid="pone.0207674.ref053" ref-type="bibr" href="#pone.0207674.ref053">53</a>]. Fifth, predictive validation of the model was conducted. In predictive validation, the model is used to predict the system’s behavior, and then the model’s forecast is compared with actual system’s behavior obtained, for example, from data related to behaviors of an operational system [
+   <a rid="pone.0207674.ref054" ref-type="bibr" href="#pone.0207674.ref054">54</a>]. To conduct the predictive validation, the outputs related to each model specification were compared to the existing data related to the water distribution networks in Fort Collins, CO. For example, the simulated annual leakage and breakage rates of the network were compared to the real values based on historical data. Accordingly, most of the observed errors pertained to incorrect implementation of the algorithm (the algorithm itself proved robust) in the code and were rectified easily. Finally, a face validation was pursued by research team through examining the simulated behaviors of the model (output results) to ensure that they are reasonable for a real case. Following this, the quality of the model components was ensured for completeness, coherence, consistency and correctness (4Cs) [
+   <a rid="pone.0207674.ref038" ref-type="bibr" href="#pone.0207674.ref038">38</a>] based on the performance of the model outputs.
+  </p>
+ </sec>
+</sec>

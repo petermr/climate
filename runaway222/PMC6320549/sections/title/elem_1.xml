@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Long-term data series of cultivar trials between latitudes 37.21° and 61.34° and longitudes −6.02° and 26.24° in nine countries across Europe (Finland, Denmark, Germany, Belgium, Czechia, France, Slovakia, Italy, and Spain) were used. In some countries (
+   <a ref-type="fig" rid="fig01" href="#fig01">Fig. 1</a>), the period was limited by data availability. The trials had a randomized complete block design or an incomplete block design with two to four replicates, and their management was similar to farmer practices. The cultivars in the experiments differed over time, but standard reference cultivars were used over long periods and across several countries. Cultivars with at least 20 yield observations were included in the assessment. The total number of clustered cultivars (minimum number of observations was 20) was 36 for Finland, 90 for Italy, 113 for Belgium, 139 for France, 140 for Germany, 169 for Czechia, 186 for Spain, 188 for Slovakia, and 265 for Denmark. Annual grain yield (kilograms per hectare) was used as the response variable. The entire cultivar yield data set comprised 100,985 observations.
+  </p>
+ </sec>
+ <sec id="s3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Step 1: Identifying Agroclimatic Variables Critical to Wheat Yield.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The agroclimatic variables that were potentially critical to yield (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1804387115/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Table S1
+   </span>) were selected based on responses reported in the literature (
+   <a rid="r5" ref-type="bibr" href="#r5">5</a>, 
+   <a rid="r22" ref-type="bibr" href="#r22">22</a>, 
+   <a rid="r23" ref-type="bibr" href="#r23">23</a>). Data on these agroclimatic variables during crop phenological stages (
+   <a rid="r24" ref-type="bibr" href="#r24">24</a>) were obtained from the stations closest to the cultivar trial sites. Missing data on sowing, heading, or maturity dates were estimated based on the corresponding dates for all of the cultivars from the same site and year. If a sowing date was missing, then it was assumed that the sowing dates of all cultivars did not differ (unless stated otherwise in the metadata). If no sowing date was available for a given site and year, then all data were discarded from further analysis. If the heading and maturity dates were missing, then the missing values were estimated using correlation analysis with overlapping data for the cultivars from the same site across the other seasons. If no overlapping data or limited (five or fewer) data pairs were available, then the heading and/or maturity dates were estimated using the thermal time above 5 °C obtained for the given cultivar from nearby sites and preceding/subsequent seasons. The analysis described below in more detail was based on a previously suggested procedure (
+   <a rid="r25" ref-type="bibr" href="#r25">25</a>, 
+   <a rid="r26" ref-type="bibr" href="#r26">26</a>).
+  </p>
+ </sec>
+ <sec id="s4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Step 2: Estimating Cultivar Yield Responses to the Agroclimatic Variables.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The observations for each agroclimatic variable were classified into three categories because the relations between grain yield and the agroclimatic variables were nonlinear in most cases. Some variables were also strongly correlated, leading to multicollinearity in the regression analysis. The random effects of country, site, and year were known to contain most of the variation and thus had to be taken into account. The 40th and 60th percentiles of the distributions of the agroclimatic variables were used to form categories of low, moderate, and high values for each variable. For example, the grain yield observations were divided into groups based on the number of rainy days experienced from sowing to maturity: fewer than 56, between 56 and 68, and above 68. The interaction of these categories with the grain yield of each of the 991 cultivars was analyzed using the following mixed model:
+   <div id="uneq1" class="disp-formula">
+    <div id="me1" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mtext">y</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">j</span>
+        <span class="mi">k</span>
+        <span class="mi">l</span>
+        <span class="mi">m</span>
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">μ</span>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">cultivar</span>
+       </div>
+       <span class="mi">i</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">category</span>
+       </div>
+       <span class="mi">j</span>
+      </div>
+      <span class="mo">+</span>
+      <span class="mtext">cultivar</span>
+      <span class="mo">×</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">category</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">treated</span>
+       </div>
+       <span class="mi">k</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">country</span>
+       </div>
+       <span class="mi">l</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">site</span>
+       </div>
+       <span class="mi">m</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">year</span>
+       </div>
+       <span class="mi">n</span>
+      </div>
+      <span class="mo">+</span>
+      <span class="mtext">treated</span>
+      <span class="mo">×</span>
+      <span class="mtext">country</span>
+      <span class="mo">×</span>
+      <span class="mtext">site</span>
+      <span class="mo">×</span>
+      <span class="mtext">year</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <span class="mtext">category</span>
+        <span class="mo">)</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">j</span>
+        <span class="mi">k</span>
+        <span class="mi">l</span>
+        <span class="mi">m</span>
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">ε</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">j</span>
+        <span class="mi">k</span>
+        <span class="mi">l</span>
+        <span class="mi">m</span>
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">where 
+   <div class="inline-formula">
+    <div id="i1" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">y</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">j</span>
+        <span class="mi">k</span>
+        <span class="mi">l</span>
+        <span class="mi">m</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> is the observed yield (annual yield), 
+   <div class="inline-formula">
+    <div id="i2" class="math">
+     <span class="mi">μ</span>
+    </div>
+   </div> is the intercept, cultivar
+   <sub>
+    <span class="italic">i</span>
+   </sub> is the average yield level of the 
+   <span class="italic">i</span>th cultivar, category
+   <sub>
+    <span class="italic">j</span>
+   </sub> is the average yield level at the 
+   <span class="italic">j</span>th level of the categorized environment, cultivar × category
+   <sub>
+    <span class="italic">ij</span>
+   </sub> is the cultivar-by-environment interaction, and treated
+   <sub>
+    <span class="italic">k</span>
+   </sub> refers to the use of pesticides. All of the above effects are fixed in the model. Country
+   <sub>
+    <span class="italic">l</span>
+   </sub>, site
+   <sub>
+    <span class="italic">m</span>
+   </sub>, year
+   <sub>
+    <span class="italic">n</span>
+   </sub>, and the interaction of treated × country × site × year (category)
+   <sub>
+    <span class="italic">jklmn</span>
+   </sub> are random effects of the 
+   <span class="italic">l</span>th country, 
+   <span class="italic">m</span>th experimental site, and 
+   <span class="italic">n</span>th year within the 
+   <span class="italic">j</span>th category.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For each cultivar and agroclimatic variable, the relative difference in yield between the extreme categories (high–low) was calculated. The relative difference was used to balance the differences between the yield levels of cultivars, although using the simple difference led to similar results. These data consisted of the grain yield responses of 991 cultivars to 43 agroclimatic variables. For example, the relative difference of the estimated yields of each cultivar that experienced fewer than 56 rainy days from sowing to maturity and the estimated yields of each cultivar that experienced more than 68 rainy days from sowing to maturity was calculated. Consequently, a positive grain yield response implied a positive effect of numerous rainy days.</p>
+ </sec>
+ <sec id="s5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Step 3: Grouping the Responses to the Agroclimatic Variables Using PCA.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">PCA was used to identify a simplified structure that best explained the variance in the data on the yield responses of the cultivars to agroclimatic variables. We also established the agroclimatic variables that behaved in similar ways. The first PC (i.e., agroclimatic factor) always accounts for most of the variability, and the last PC accounts for the least variability; therefore, only a few PCs are needed to contain most of the information. PCs with eigenvalues above one were retained, and the last PC was deleted based on interpretation and cross validation (
+   <a rid="r27" ref-type="bibr" href="#r27">27</a>, 
+   <a rid="r28" ref-type="bibr" href="#r28">28</a>). Nine PCs explained 70% of the total variation (varied from 15 to 5%). An orthogonal varimax rotation was used to achieve a more meaningful and interpretable solution. An oblique promax rotation was also tested but was found unnecessary based on relatively low correlations between PCs. The sampling adequacy, tested with the Kaiser–Melkin–Olkin (KMO) measure, was middling, with a KMO value of 0.77 (
+   <a rid="r29" ref-type="bibr" href="#r29">29</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We excluded 149 cultivars that were missing more than one-third of the yield response observations to the 43 agroclimatic variables to reduce the number of imputations and thus to improve reliability. A small number of cultivars (
+   <span class="italic">n</span> = 17) were excluded as outliers because their score for one of the significant PCs was more than six SDs beyond the sample mean score (
+   <a rid="r30" ref-type="bibr" href="#r30">30</a>). Multiple imputations (MI) with 100 replicates for missing data (10%) were used to obtain the PC scores, which were used to further analyze each cultivar. A multivariate normal approach via the Markov chain Monte Carlo method was used for the MI. The effects of the imputations on the PCA structure were studied by basing the PCA on a correlation matrix without imputations and were found to be negligible. Therefore, the imputations were retained in the data, and the PC scores calculated using the regression method were used in further analyses (
+   <a rid="r31" ref-type="bibr" href="#r31">31</a>). PC scores were left unstandardized to give less weight to a possible noise element and decrease the sensitivity of the clustering results to the number of PCs retained (
+   <a rid="r32" ref-type="bibr" href="#r32">32</a>). The effects of standardization and the use of truncated Mahalanobis distances were also examined but were found less interpretative.
+  </p>
+ </sec>
+ <sec id="s6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Step 4: Clustering Cultivars Based on the Agroclimatic PC Scores.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We clustered the cultivars based on their yield responses to agroclimatic variables (step 2). Clustering was based on the PC scores, calculated as a byproduct of PCA (step 3). The cultivars were clustered with Ward’s (
+   <a rid="r33" ref-type="bibr" href="#r33">33</a>) method, which starts with 
+   <span class="italic">n</span> clusters of size one and continues until all of the observations are included in one cluster. The squared Euclidean distances between data points were used. The number of clusters (nine) was selected based on the dendrogram, the pseudo 
+   <span class="italic">t</span>
+   <span class="sup">2</span> criterion,
+   <span class="sup">,</span> and the variation in 
+   <span class="italic">R</span>
+   <span class="sup">2</span> values (
+   <a rid="r34" ref-type="bibr" href="#r34">34</a>). PC loadings (obtained in step 3) were used to weight the average yield responses to the agroclimatic variables (
+   <a rid="r18" ref-type="bibr" href="#r18">18</a>). The PC loadings were squared and divided by the eigenvalue of each PC. Therefore, 
+   <div class="inline-formula">
+    <div id="i3" class="math">
+     <div class="mrow">
+      <div displaystyle="true" class="mstyle">
+       <div class="msubsup">
+        <span class="mo">∑</span>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+        </div>
+        <span class="mi">n</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">w</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mn">1</span>
+     </div>
+    </div>
+   </div>, where 
+   <span class="italic">n</span> is the number of agroclimatic variables and component loadings. The weighted means and SEs were calculated according to the following equation:
+   <div id="uneq2" class="disp-formula">
+    <div id="me2" class="math">
+     <div class="mrow">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">x</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msubsup">
+         <div displaystyle="true" class="mstyle">
+          <span class="mo">∑</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">n</span>
+        </div>
+        <div class="msub">
+         <span class="mi">w</span>
+         <span class="mi">i</span>
+        </div>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msubsup">
+         <div displaystyle="true" class="mstyle">
+          <span class="mo">∑</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">n</span>
+        </div>
+        <div class="msub">
+         <span class="mi">w</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <span class="mo"> </span>
+      <span class="mi">S</span>
+      <span class="mi">E</span>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msubsup">
+           <div displaystyle="true" class="mstyle">
+            <span class="mo">∑</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">=</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mi">n</span>
+          </div>
+          <div class="msub">
+           <span class="mi">w</span>
+           <span class="mi">i</span>
+          </div>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="msub">
+             <span class="mi">x</span>
+             <span class="mi">i</span>
+            </div>
+            <span class="mo">−</span>
+            <div class="mrow">
+             <div accent="true" class="mover">
+              <span class="mi">x</span>
+              <span class="mo">¯</span>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span class="mi">n</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">w</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is the weight and 
+   <span class="italic">x</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is the average yield response to the 
+   <span class="italic">i</span>th agroclimatic variable.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The connection between the interannual stability of the yield and response diversity was investigated by calculating the relationship between the variation in the yield response to each of the nine PCs and the accumulated number of clusters. The pooled SDs, which are weighted averages of the SDs for several clusters, were calculated for the number of accumulated clusters from one to nine based on the dendrogram. For example, when eight clusters were compared with nine, only one of the former clusters was divided, and all others remained unchanged. The pooled SD was calculated as follows:
+   <div id="uneq3" class="disp-formula">
+    <div id="me3" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mtext">SD</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">p</span>
+        <span class="mi">o</span>
+        <span class="mi">o</span>
+        <span class="mi">l</span>
+        <span class="mi">e</span>
+        <span class="mi">d</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <span class="mi">n</span>
+             <span class="mn">1</span>
+            </div>
+            <span class="mo">−</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <div class="msubsup">
+           <span class="mi">s</span>
+           <span class="mn">1</span>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <span class="mi">n</span>
+             <span class="mn">2</span>
+            </div>
+            <span class="mo">−</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <div class="msubsup">
+           <span class="mi">s</span>
+           <span class="mn">2</span>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mo">…</span>
+          <span class="mo">+</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <span class="mi">n</span>
+             <span class="mi">k</span>
+            </div>
+            <span class="mo">−</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <div class="msubsup">
+           <span class="mi">s</span>
+           <span class="mi">k</span>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">n</span>
+           <span class="mn">1</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">n</span>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mo">…</span>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">n</span>
+           <span class="mi">k</span>
+          </div>
+          <span class="mo">−</span>
+          <span class="mi">k</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <span class="mi">k</span>
+      <span class="mo">=</span>
+      <span class="mn">1</span>
+      <span class="mo">,</span>
+      <span class="mo">…</span>
+      <span class="mo">,</span>
+      <span class="mn">9</span>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">s</span> is the SD of the 
+   <span class="italic">k</span>th cluster and 
+   <span class="italic">n</span> is the number of cultivars of the 
+   <span class="italic">k</span>th cluster.
+  </p>
+ </sec>
+ <sec id="s7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Step 5: Assessing Response Diversity.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The annual Shannon diversity index (
+   <span class="italic">H</span>), which reflects the richness and evenness (
+   <a rid="r35" ref-type="bibr" href="#r35">35</a>) of the distribution (
+   <a rid="r36" ref-type="bibr" href="#r36">36</a>), was calculated for the cultivated area of cultivars (cultivar diversity) and for the clusters (response diversity) in every country, because the weather extremes relative to the phenological stages of wheat appear nationally rather than throughout Europe. The statistics on the national cultivation areas for cultivars in Finland, Denmark, Belgium, France, Germany, Czechia, and Spain apart from Andalusia during the period from 1991 to 2014 were utilized. In addition, the annual response diversities were calculated based on the relative number of cultivars in each cluster in the trials by country. A Shannon index equal to zero indicates that only one cultivar (or cluster) was cultivated in the country; the Shannon index increases as the number of cultivars or clusters (richness) and/or the evenness of the distribution of hectares or trials among them increases. The Shannon index gives an equal weight to each observation and is comparable among cases with different compositions (
+   <a rid="r35" ref-type="bibr" href="#r35">35</a>, 
+   <a rid="r36" ref-type="bibr" href="#r36">36</a>). The Shannon index was calculated according to the following equation:
+   <div id="uneq4" class="disp-formula">
+    <div id="me4" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">H</span>
+       <span class="mi">i</span>
+      </div>
+      <span class="mo">=</span>
+      <span class="mo">−</span>
+      <div displaystyle="true" class="mstyle">
+       <div class="munderover">
+        <span class="mo">∑</span>
+        <div class="mrow">
+         <span class="mi">k</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+        </div>
+        <span class="mi">K</span>
+       </div>
+      </div>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">w</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">k</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">W</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mi">l</span>
+      <span class="mi">n</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">w</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">k</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">W</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <span class="mi">i</span>
+      <span class="mo">=</span>
+      <span class="mn">1</span>
+      <span class="mo">,</span>
+      <span class="mo">…</span>
+      <span class="mo">,</span>
+      <span class="mi">n</span>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">n</span> refers to the number of countries, 
+   <span class="italic">k</span> = 1, …, 
+   <span class="italic">K</span> refers to the number of clusters; 
+   <span class="italic">w</span>
+   <sub>
+    <span class="italic">ik</span>
+   </sub> is the area cultivated by cluster 
+   <span class="italic">k</span> in country 
+   <span class="italic">i</span>; 
+   <span class="italic">W</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> represents the total area cultivated in country 
+   <span class="italic">i</span>; and 
+   <span class="italic">w</span>
+   <sub>
+    <span class="italic">ik</span>
+   </sub>/
+   <span class="italic">w</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is the proportion of area cultivated by cluster 
+   <span class="italic">k</span>. Indices were interpreted based on the exponent of the Shannon index, which is the true diversity (i.e., the effective number of cultivars or response clusters). On this scale, a community with a true diversity four times larger than that of another community is four times as diverse as the other community (
+   <a rid="r37" ref-type="bibr" href="#r37">37</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">All statistical analyses applied the procedures MIXED, FACTOR, MI, SCORE, DISTANCE, and CLUSTER in SAS (version 9.4; SAS Institute Inc.).</p>
+ </sec>
+</sec>

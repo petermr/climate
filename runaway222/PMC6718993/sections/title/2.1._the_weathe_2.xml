@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2dot1-ijerph-16-02890" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.1. The Weather Forecast Model</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The HEAT-SHIELD platform was developed on the basis of the monthly ensemble forecasts of the European Center for Medium Range Weather Forecasts (ECMWF) [
+  <a rid="B25-ijerph-16-02890" ref-type="bibr" href="#B25-ijerph-16-02890">25</a>]. The forecast ensemble consists of 51 members, with the control being the member with initial conditions corresponding to the best estimate of the operational analysis. All members (and the control simulation) represent equally probable atmospheric situations. This operational forecast model provides monthly numerical weather forecasts twice a week, initialized on Monday and Thursday at 0 UTC, and are referred to as ECMWF extended range predictions (ENS-EXT). The current ENS-EXT system has a horizontal resolution of 0.2° × 0.2° (lat × lon, ~18 km mesh size) for the first 15 days and 0.4° × 0.4° (~36 km) from days 16 to 46. Daily forecast values of temperature, humidity, radiation, and wind speed are bilinearly interpolated onto the desired coordinates. 
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Due to the coarse spatial resolution and systematic model biases of the ensemble forecast model, it is certainly not suitable for providing detailed information related to the heat warning for workers. Location-specific forecasts rather than gridded forecast products were developed through downscaling and bias correction procedures, namely empirical quantile mapping (hereafter EQM) [
+  <a rid="B26-ijerph-16-02890" ref-type="bibr" href="#B26-ijerph-16-02890">26</a>]. This method establishes a quantile-dependent correction function between the observed and simulated distributions [
+  <a rid="B27-ijerph-16-02890" ref-type="bibr" href="#B27-ijerph-16-02890">27</a>,
+  <a rid="B28-ijerph-16-02890" ref-type="bibr" href="#B28-ijerph-16-02890">28</a>,
+  <a rid="B29-ijerph-16-02890" ref-type="bibr" href="#B29-ijerph-16-02890">29</a>]. EQM was first calibrated with paired forecasts and observations from the past 20 years in a lead-time dependent manner [
+  <a rid="B30-ijerph-16-02890" ref-type="bibr" href="#B30-ijerph-16-02890">30</a>]. Secondly, the EQM corrections were applied to the actual forecasts. The correction procedure was performed separately to each of the input variables of the heat stress index. In this way, location-specific forecasts were provided for sites where sufficiently long observation records (20 years) of the relevant meteorological variables exist. For this reason, several meteorological datasets were combined in order to get a representative and dense enough, ground-based observational dataset over the entire Europe (
+  <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>): 
+  <div list-type="order" class="list">
+   <div class="list-item">
+    <p>The European Climate Assessment and Dataset project (ECA &amp; D) [
+     <a rid="B31-ijerph-16-02890" ref-type="bibr" href="#B31-ijerph-16-02890">31</a>] was the primary source for the observational dataset. There is, however, a limited number of stations with non-standard parameters such as humidity and wind (see green points in 
+     <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>). Thus, the following datasets were used to complete the full set of stations.
+    </p>
+   </div>
+   <div class="list-item">
+    <p>Dataset of the Global Surface Summary of the Day (GSOD, see blue points in 
+     <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>) from the National Oceanic Atmospheric Administration (NOAA). Stations exceeding more than 20% of missing values in ECA &amp; D and GSOD in the period between 1996 and 2016 were removed from the dataset.
+    </p>
+   </div>
+   <div class="list-item">
+    <p>The Swiss national observing system SwissMetNet (SMN, see red points in 
+     <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>) [
+     <a rid="B32-ijerph-16-02890" ref-type="bibr" href="#B32-ijerph-16-02890">32</a>].
+    </p>
+   </div>
+   <div class="list-item">
+    <p>A couple of stations from HEAT-SHIELD case studies were included in the set of stations: Data from one station in Celje (Slovenia), near the Odelo d.o.o. manufacturing plant [
+     <a rid="B33-ijerph-16-02890" ref-type="bibr" href="#B33-ijerph-16-02890">33</a>], provided by the Slovenian Environment Agency (ARSO), and from one station in Arezzo (Tuscany, Italy) provided by Regional Service of Tuscany (CFR).
+    </p>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The resulting observational dataset contains daily measurements of air temperature, dew point temperature, and wind speed from 1798 meteorological stations across Europe and covering a period of 20 years (from 1998 to 2017 for summer 2018 forecasts). As only few of these stations also provide radiation measurements, satellite data for the same period as the other variables were used as best estimates for radiation observations. Specifically, the surface incoming solar radiation product from EUMETSAT’s Satellite Application Facility on Climate Monitoring (CM SAF) [
+  <a rid="B34-ijerph-16-02890" ref-type="bibr" href="#B34-ijerph-16-02890">34</a>] was used. The reader is referred to Casanueva et al. [
+  <a rid="B2-ijerph-16-02890" ref-type="bibr" href="#B2-ijerph-16-02890">2</a>] for more details on the observational datasets.
+ </p>
+</sec>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec13" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Reindeer population projections with different ROS scenarios</div>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Finally, we analysed how increasing frequency of rainy winters affects the population growth rate (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). To simulate realizations of ROS (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>), we used the observed ROS data from 1962 to 2014 and an inverse transformation method. Given a continuous uniform variable 
+  <span class="italic">U</span> in [0,1] and a cumulative distribution function 
+  <span class="italic">D</span>, the random variable 
+  <span class="italic">X</span> = 
+  <span class="italic">D</span>
+  <span class="sup">−1</span>(
+  <span class="italic">U</span>) has distribution 
+  <span class="italic">D</span>. We can change the distribution (i.e. different scenarios of ROS) by using a non-uniform distribution of 
+  <span class="italic">U</span>. Thus, because the cumulative ROS distribution is bounded between 0 and 1, we used a beta distribution 
+  <div id="IEq5" class="inline-formula">
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$f(U) \propto U^{\alpha _1 - 1}(1 - U)^{\alpha _2 - 1}$$\end{document}</span>
+    <div id="M22" class="math">
+     <span class="mi">f</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">U</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">∝</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">U</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">α</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">-</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <div class="msup">
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">U</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">α</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">-</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_9332_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> where 
+  <span class="italic">α</span>
+  <sub>1</sub> and 
+  <span class="italic">α</span>
+  <sub>2</sub> are shape parameters to simulate five different ROS scenarios. We used the following parameters to obtain different ROS scenarios (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>): very high frequency of extreme ROS winters (
+  <span class="italic">α</span>
+  <sub>1</sub> = 4, 
+  <span class="italic">α</span>
+  <sub>2</sub> = 1), high frequency (
+  <span class="italic">α</span>
+  <sub>1</sub> = 2, 
+  <span class="italic">α</span>
+  <sub>2</sub> = 1), low frequency (
+  <span class="italic">α</span>
+  <sub>1</sub> = 1, 
+  <span class="italic">α</span>
+  <sub>2</sub> = 2), and very low frequency (
+  <span class="italic">α</span>
+  <sub>1</sub> = 1, 
+  <span class="italic">α</span>
+  <sub>2</sub> = 4). In addition, the medium frequency scenario simulating the historical state (1962–2014) was obtained by setting 
+  <span class="italic">α</span>
+  <sub>1</sub> = 1 and 
+  <span class="italic">α</span>
+  <sub>2</sub> = 1 leading to a uniform distribution as a special case of the beta distribution. Note that 0 &lt; 
+  <span class="italic">U</span> &lt; 1 for all scenarios. Accordingly, our simulations (Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>, Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>) are conservative as the simulated realizations will fall within the range of observed (historical) values of ROS.
+ </p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Using the estimated mean age-specific population sizes in 2014 and each of our 9090 age-structured population models (i.e. based on 9090 posterior samples, see Modelling step 2), we simulated for each of the five ROS scenarios (i.e. distributions) 100 stochastic population size trajectories for 100-year projections. This resulted in 4,545,000 population size time-series (454,500,000 population sizes) in total. In other words, instead of using a step-by-step approach (as described above), we fed our age-structured population model with the observed age-specific numbers in 2014 and the ROS trajectories. Note that, for each simulated trajectory, winter length was drawn from a normal distribution with the mean and the standard deviation observed between 1994 and 2014, i.e. our reindeer study period.</p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">We explored how increasing amount of ROS affects the population growth rate, under different age structures and population densities. To do so, we considered two initial age structures (low prime-aged [3–8-year olds] proportion = 28%, high prime-aged proportion = 51%). Note that the two age structures reflect the observed demography before and after the 1996 population crash (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1b</a>, Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>), respectively. For each age structure, we considered two initial population densities (low 
+  <span class="italic">N</span> = 1200, high 
+  <span class="italic">N</span> = 1700). We simulated an increasing amount of ROS (from 0 to 4.2, on a log-scale) from the deterministic version of our population model, keeping winter length constant at its mean observed value (1994–2014). From these population projections, the expected population growth rate for each ROS value was determined for each combination of density/age structure (see Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>).
+ </p>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">Finally, we examined how the time elapsed since the previous extreme ROS winter affects the population growth rate during a second extreme ROS winter. An extreme ROS winter reflects the conditions in 1996 (i.e. 1995/96), with the highest ROS value recorded (log ROS = 4.2). We simulated different ROS sequences where ROS was kept at its mean recorded value (1994–2014) except for a first extreme ROS winter always occurring at 
+  <span class="italic">t</span> = 0, and a second extreme ROS winter occurring at 
+  <span class="italic">t</span> = 1, then at 
+  <span class="italic">t</span> = 2, and so on until 
+  <span class="italic">t</span> = 7. We also included a ROS sequence with no second extreme ROS winter and a sequence with many consecutive extreme ROS winters. Keeping winter length constant at its mean observed value, we then used the deterministic version of our population model to calculate time-series of population sizes (Figs. 
+  <a rid="Fig6" ref-type="fig" href="#Fig6">6a</a> and 
+  <a rid="Fig7" ref-type="fig" href="#Fig7">7</a>) and age structures (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">7</a>) following a rather high initial population density (
+  <span class="italic">N</span> = 1700) and a low initial proportion of prime-aged individuals (28%), reflecting the population state prior to the 1996 crash. We fed our population model with the eight different sequences of ROS and estimated the expected population growth rate for the second extreme ROS winter (Fig. 
+  <a rid="Fig6" ref-type="fig" href="#Fig6">6b</a>). All analyses were performed with the statistical software R
+  <span class="sup">
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+  </span>.
+ </p>
+</sec>

@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate scenarios and model setup in PAGE-ICE</div>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">We defined the scenarios consistent with the Paris Agreement and current climate change projections by pairing representative concentration pathways (RCPs) and shared socio-economic pathways (SSPs) according to the feasible ranges of emissions for each of the five main SSPs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR22" href="#CR22">22</a>,
+    <a ref-type="bibr" rid="CR23" href="#CR23">23</a>
+   </span>. Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a> summarises the scenarios. The imaginary Zero Emissions scenario in which all global emissions stop in the base year 2020 characterises the effect of the historic emissions on the PCF and SAF.
+   <div id="Tab1" class="table-wrap">
+    <span class="label">Table 1</span>
+    <div class="caption">
+     <p>Climate and socio-economic scenarios obtained by pairing RCPs with SSPs</p>
+    </div>
+    <table frame="hsides" rules="groups">
+     <thead>
+      <tr>
+       <th>Scenario</th>
+       <th>Description</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Zero Emissions</td>
+       <td>GHG emissions stop immediately after 2020</td>
+      </tr>
+      <tr>
+       <td>1.5 °C Target</td>
+       <td>50% chance of staying below 1.5 °C relative to pre-industrial in 2100</td>
+      </tr>
+      <tr>
+       <td>2 °C Target</td>
+       <td>50% chance of staying below 2 °C relative to pre-industrial in 2100</td>
+      </tr>
+      <tr>
+       <td>2.5 °C Target</td>
+       <td>50% chance of staying below 2.5 °C relative to pre-industrial in 2100</td>
+      </tr>
+      <tr>
+       <td>NDCs</td>
+       <td>Current nationally determined contributions (pledges) to reducing GHG emissions</td>
+      </tr>
+      <tr>
+       <td>NDCs Partial</td>
+       <td>Around 30% of the NDCs are not met, consistent with long-term effects of the US’s withdrawal</td>
+      </tr>
+      <tr>
+       <td>Business as usual (BaU)</td>
+       <td>Projections for GHG emissions without NDCs</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">First, we defined a new SSPM scenario by averaging SSP2, SSP3 and SSP4 with equal weights, and paired it with RCP4.5 to represent a likely world with medium levels of emissions. Second, we paired SSP1 with RCP2.6 and SSP5 with RCP8.5, which represents the likely lower and the upper ends of the emissions range and the associated socio-economic makeup of the world. Using these low, medium and high emissions pairs, we introduced a weighting scheme that covers the entire range as the weighting parameter 
+   <span class="italic">w</span> changes from −1 (lower end) to +1 (upper end):
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left\{ {\begin{array}{*{20}{c}} {{\mathrm{SSPW}}} \\ {{\mathrm{RCPW}}} \end{array}} \right\} = \left( {\frac{{1 - w}}{2}} \right)^2 \cdot \left\{ {\begin{array}{*{20}{c}} {{\mathrm{SSP}}1} \\ {{\mathrm{RCP}}2.6} \end{array}} \right\} + \frac{{1 - w^2}}{2} \cdot \left\{ {\begin{array}{*{20}{c}} {{\mathrm{SSPM}}} \\ {{\mathrm{RCP}}4.5} \end{array}} \right\} \\ + \left( {\frac{{1 + w}}{2}} \right)^2 \cdot \left\{ {\begin{array}{*{20}{c}} {{\mathrm{SSP}}5} \\ {{\mathrm{RCP}}8.5}\end{array}} \right\}$$\end{document}</span>
+     <div id="M2" class="math">
+      <div close="}" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mtable">
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">SSPW</span>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">RCPW</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msup">
+       <div class="mrow">
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">-</span>
+            <span class="mi">w</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mo">⋅</span>
+      <div close="}" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mtable">
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">SSP</span>
+           <span class="mn">1</span>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">RCP</span>
+           <span class="mn">2.6</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">1</span>
+        <span class="mo">-</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">w</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mo">⋅</span>
+      <div close="}" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mtable">
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">SSPM</span>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">RCP </span>
+           <span class="mn">4.5</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="msup">
+       <div class="mrow">
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">+</span>
+            <span class="mi">w</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mo">⋅</span>
+      <div close="}" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mtable">
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">SSP</span>
+           <span class="mn">5</span>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">RCP</span>
+           <span class="mn">8.5</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9863_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">A statistical optimisation algorithm (Risk Optimiser) was then employed in PAGE-ICE to find the values of 
+   <span class="italic">w</span> in Equation 1 that result in a 50% probability for the GMST in 2100 to reach the levels consistent with: first, NDCs from the Paris Agreement extrapolated until 2100 (3.3 °C, 
+   <span class="italic">w</span> = −0.14);
+   <span class="sup">
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span> second, partially implemented NDCs representing an estimated long-term effect of the US’s withdrawal from the NDCs (3.6 °C, 
+   <span class="italic">w</span> = 0.1);
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+   </span> and third, business as usual projections without the Paris Agreement (4.2 °C, 
+   <span class="italic">w</span> = 0.52)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>. We also added a 2.5 °C target scenario (
+   <span class="italic">w</span> = −0.7) which is more ambitious than the NDCs but falls short of the 2 °C target.
+  </p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">The 1.5 °C and 2 °C scenarios, defined as having a 50% chance of keeping the GMST rise in 2100 below the 1.5 °C and 2 °C targets based on PAGE-ICE simulations, require extra abatement relative to RCP2.6. They fall outside the range covered by the SSPW and RCPW pairs described above. We, therefore, introduced an additional abatement rate relative to RCP2.6, the same for all the major GHGs represented in PAGE-ICE, and employed Risk Optimiser to find that it is equal to 0.24% per year for the 2 °C target and 4.05% per year for the 2 °C target scenario. Both of these scenarios overshoot their respective targets during the second half of the 21st century and imply negative CO
+   <sub>2</sub> emissions thereafter.
+  </p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">All the RCP scenarios in PAGE-ICE are emissions-driven
+   <span class="sup">
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>, unlike the concentration-driven RCP scenarios that were used in most CMIP5 experiments
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>. We simulated each SSP-RCP pair out to 2300 assuming constant levels of annual emissions, constant GDP growth rates and zero population growth rates beyond 2100. Under each scenario, we ran 100,000 Monte-Carlo simulations in PAGE-ICE to perform sensitivity experiments for the climatic and economic effects of the PCF and SAF.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Emulator for the nonlinear PCF</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">The new dynamic emulator for CO
+   <sub>2</sub> and methane emissions from thawing land permafrost is based on simulations from the SiBCASA and JULES LSMs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR7" href="#CR7">7</a>,
+    <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+   </span>, forced by multiple CMIP5 and CMIP3 general circulation models (GCMs) run under a range of climate scenarios out to 2300. The simulated CO
+   <sub>2</sub> and methane fluxes from thawing permafrost as a function of time represent the strength and timing of the PCF.
+  </p>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">SiBCASA has fully integrated water, energy, and carbon cycles, and a modified snow model to better simulate permafrost dynamics
+   <span class="sup">
+    <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+   </span>. The soil model separately tracks liquid water, ice, and frozen organic matter at each time step as prognostic variables, accounting for the effects of latent heat
+   <span class="sup">
+    <a ref-type="bibr" rid="CR7" href="#CR7">7</a>,
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span>. SiBCASA separately tracks CO
+   <sub>2</sub> and methane emissions. The model was used to make one of the first estimates of future permafrost degradation and global carbon emissions from thawing permafrost
+   <span class="sup">
+    <a ref-type="bibr" rid="CR7" href="#CR7">7</a>
+   </span>. Here we ran multiple projections from 1901 to 2300 starting from the same initial conditions. We spun up the model until the release from permafrost carbon was negligible, ending up with 560 GtC of frozen permafrost carbon in the top three metres of soil
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>,
+    <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+   </span> by initializing the model with the observed values from the Northern Circumpolar Soil Carbon Dataset version 2 (NCSCDv2)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+   </span>. We used the Climatic Research Unit National Centre for Environmental Predictions (CRUNCEP) reanalysis
+   <span class="sup">
+    <a ref-type="bibr" rid="CR78" href="#CR78">78</a>
+   </span> scaled by global climate projections from CMIP5
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>. We chose CMIP5 models that ran both RCP4.5 and RCP8.5 scenarios out to 2300 and that represent a broad range of warming above pre-industrial temperatures: CNRM-CM5, GISS-E2-H, HadGEM2-ES, IPSL-CM5A-LR and MPI-ESM-LR.
+  </p>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">The version of JULES used here has an improved representation of physical and biogeochemical processes in the cold regions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR79" href="#CR79">79</a>,
+    <a ref-type="bibr" rid="CR80" href="#CR80">80</a>
+   </span>. Competition of vegetation was enabled, allowing the models to determine both their initial vegetation distributions and litterfall, and the response of the vegetation distribution and litterfall to climate change. The profile of soil carbon was spun up until it was in equilibrium with the 1860’s climate, giving 738 GtC in the top 3m of soil. Any soil carbon in the permafrost in 1860 was labelled as permafrost carbon and traced throughout the simulation. We assumed that any part of this permafrost carbon which is emitted to the atmosphere is emitted in the form of CO
+   <sub>2</sub> only. JULES was forced by climate patterns from the full set of 22 CMIP3 climate model simulations under the RCP2.6, RCP4.5 and RCP8.5 scenarios, extended out to 2300 using the IMOGEN climate emulator
+   <span class="sup">
+    <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+   </span>.
+  </p>
+  <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">The dynamic emulator of the permafrost carbon emissions is based on a nonlinear first order ODE:
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{{\mathrm{d}}C}}{{{\mathrm{d}}t}} = \frac{{C_{{\mathrm{max}}}}}{{{\rm{\tau}} \;\varphi _{\rm{\tau}}\left( T \right)}} \cdot \left( {\frac{{\max \left( {C_{{\mathrm{eq}}}\left( T \right) - C,0} \right)}}{{C_{{\mathrm{max}}}}}} \right)^{\left( {1 + p} \right)\;\varphi _{\mathrm{p}}\left( T \right)}$$\end{document}</span>
+     <div id="M4" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">C</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">C</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">max</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">τ</span>
+        <span width="0.16em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">φ</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">τ</span>
+         </div>
+        </div>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">⋅</span>
+      <div class="msup">
+       <div class="mrow">
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mo">max</span>
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">C</span>
+               </div>
+               <div class="mrow">
+                <span mathvariant="normal" class="mi">eq</span>
+               </div>
+              </div>
+              <div close=")" open="(" separators="" class="mfenced">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+              </div>
+              <span class="mo">-</span>
+              <span class="mi">C</span>
+              <span class="mo">,</span>
+              <span class="mn">0</span>
+             </div>
+            </div>
+           </div>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">C</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">max</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">+</span>
+          <span class="mi">p</span>
+         </div>
+        </div>
+        <span width="0.16em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">φ</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">p</span>
+         </div>
+        </div>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9863_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Here 
+   <span class="italic">T</span> = AF
+   <sub>p</sub>·GMST is mean annual permafrost temperature anomaly in year 
+   <span class="italic">t</span>, averaged spatially across the estimated pre-industrial permafrost regions (□C relative to pre-industrial levels); AFp is the permafrost amplification factor which links 
+   <span class="italic">T</span> with the GMST anomaly; 
+   <span class="italic">C</span> is cumulative permafrost carbon emitted since the pre-industrial period as of time 
+   <span class="italic">t</span> (GtC, either CO
+   <sub>2</sub> or methane component); 
+   <span class="italic">C</span>
+   <sub>eq</sub>(
+   <span class="italic">T</span>) is equilibrium cumulative carbon emitted for a constant permafrost temperature anomaly 
+   <span class="italic">T</span>, expressed as
+   <div id="Equ3" class="disp-formula">
+    <span class="label">3</span>
+    <div class="alternatives">
+     <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$C_{{\mathrm{eq}}}\left( T \right) = \min \left( {{\rm{\omega}}} \;\varphi _{\rm{\omega }}\left( T \right) \cdot T,C_{{\mathrm{max}}} \right);$$\end{document}</span>
+     <div id="M6" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">C</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">eq</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">T</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mo"> min</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">ω</span>
+        <span width="0.16em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">φ</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">ω</span>
+         </div>
+        </div>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+        </div>
+        <span class="mo">⋅</span>
+        <span class="mi">T</span>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">C</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">max</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">;</span>
+     </div>
+     <div xlink:href="41467_2019_9863_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="italic">C</span>
+   <sub>max</sub> is a limit on the maximum possible cumulative emissions determined by the initial carbon stock estimates in SiBCASA (560 GtC) and JULES (738 GtC); ω (GtC K
+   <span class="sup">−1</span>) is equilibrium sensitivity of the carbon emissions to permafrost warming; τ (yr) is the time lag at 
+   <span class="italic">t</span> = 0 (pre-industrial) corresponding to the given 
+   <span class="italic">C</span>
+   <sub>max</sub>; 
+   <span class="italic">p</span> is a fixed power that defines the dynamics of how the equilibrium is approached; 
+   <span class="italic">φ</span>
+   <sub>ω</sub> (Equation 3), 
+   <span class="italic">φ</span>
+   <sub>τ</sub> and 
+   <span class="italic">φ</span>
+   <sub>p</sub> (Equation 2) are temperature-driven corrections to the parameters 
+   <span class="italic">ω,τ,p</span>. All the parameters are assumed to be constant unless they are marked as functions. Equation 2 implies no regeneration of permafrost carbon stocks on the timescales considered
+   <span class="sup">
+    <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+   </span>.
+  </p>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">The emulator is calibrated, separately, to the CO
+   <sub>2</sub> components of the permafrost emissions simulated by SiBCASA and JULES, and the methane component simulated by SiBCASA. Each combination of a GCM (
+   <span class="italic">m</span>) and climate scenario (
+   <span class="italic">s</span>), either in SiBCASA or JULES simulations, produces its own set of optimal equilibrium carbon, lag and power parameters (ω,τ, 
+   <span class="italic">p</span>)
+   <sub>
+    <span class="italic">m,s</span>
+   </sub> that achieves the best emulator fit. The resulting statistics for the ω,τ, 
+   <span class="italic">p</span> parameters is based on the assumptions of equal weights between the GCMs and the scenarios. The corrections 
+   <span class="italic">φ</span>
+   <sub>ω</sub>, 
+   <span class="italic">φ</span>
+   <sub>τ</sub>, 
+   <span class="italic">φ</span>
+   <sub>p</sub> (all non-negative) ensure quasi-independence of the (ω,τ, 
+   <span class="italic">p</span>)
+   <sub>
+    <span class="italic">m,s</span>
+   </sub> set as a whole from the scenarios or climate models used. The latter allows us to use these sets of values to construct the corresponding probability distributions for ω,τ, 
+   <span class="italic">p</span> in PAGE-ICE, which are expected to work throughout the simulated range of temperatures. The full technical details of the calibration algorithm and the resulting numerical values for the SIBCASA and JULES emulators are provided in Supplementary Note 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>, Supplementary Figs 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>–
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">17</a> and Supplementary Tables 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>–
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>.
+  </p>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">The type of a model described by Equation 2 and Equation 3 is often referred to as pursuit curve, and its simpler quasi-linear version (
+   <span class="italic">p</span> = 0) has been employed for sea level rise emulators previously
+   <span class="sup">
+    <a ref-type="bibr" rid="CR82" href="#CR82">82</a>,
+    <a ref-type="bibr" rid="CR83" href="#CR83">83</a>
+   </span>. Even in its simpler form, such a model has never been applied to projected permafrost emissions from process-based simulations of LSMs. The pursuit curve model ensures that there is an equilibrium level of cumulative carbon emissions from permafrost for any given level of warming globally (providing 
+   <span class="italic">p</span> &gt; −1). The dynamic model formulation employed here contains the following layers of nonlinearity: nonlinear response of the equilibrium cumulative carbon to GMST changes, represented by the 
+   <span class="italic">ωφ</span>
+   <sub>ω</sub>(
+   <span class="italic">T</span>)·
+   <span class="italic">T</span> term; evolution of the characteristic time lag for cumulative permafrost emissions with the difference between the equilibrium and realised cumulative carbon, represented by 
+   <span class="italic">p</span> (in the corresponding linear model 
+   <span class="italic">p</span> = 0 and the lag is simply equal to 
+   <span class="italic">τ</span>); temperature-dependence in the lag and power parameters, represented by 
+   <span class="italic">φ</span>
+   <sub>τ</sub>, 
+   <span class="italic">φ</span>
+   <sub>p</sub>; and, saturation of the cumulative carbon emissions due to the permafrost carbon stock exhaustion, represented by 
+   <span class="italic">C</span>
+   <sub>max</sub>.
+  </p>
+  <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">The cumulative carbon emissions from the emulators, calibrated separately to SiBCASA and JULES simulations, were averaged with equal weights, both for CO
+   <sub>2</sub> and methane, and scaled according to the uncertainty in the observed permafrost carbon stocks
+   <span class="sup">
+    <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+   </span>. As JULES does not model permafrost methane emissions explicitly, the latter were inferred from its CO
+   <sub>2</sub> emissions using observational constraints
+   <span class="sup">
+    <a ref-type="bibr" rid="CR84" href="#CR84">84</a>
+   </span>. The resulting cumulative CO
+   <sub>2</sub> and methane emissions from permafrost simulated by PAGE-ICE are plotted in Fig. 
+   <a rid="Fig7" ref-type="fig" href="#Fig7">7</a> under the range of scenarios considered.
+   <div id="Fig7" class="fig">
+    <span class="label">Fig. 7</span>
+    <div class="caption">
+     <p>Cumulative carbon emissions from the permafrost simulated using the dynamic emulator. Cumulative carbon emissions from thawing land permafrost for 
+      <span class="bold">a</span> CO
+      <sub>2</sub> and 
+      <span class="bold">b</span> methane components simulated by the new statistical emulator of SiBCASA and JULES (equal weighting) under the chosen range of climate scenarios until the year 2300 (solid lines: mean; shaded areas: ±1SD). 100,000 Monte-Carlo runs of PAGE-ICE. Units: GtC. Note the difference in the Y-axis scale between the plots. Source data are provided as a Source Data file
+     </p>
+    </div>
+    <div xlink:href="41467_2019_9863_Fig7_HTML" id="d29e1754" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Emulator for the nonlinear SAF</div>
+  <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">Our nonlinear SAF estimates are based on the ALL/CLR method with atmospheric reflectivity parameterisation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR32" href="#CR32">32</a>,
+    <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+   </span>, which uses CMIP5 GCM simulations for atmospheric shortwave radiation fluxes from pre-industrial conditions until either 2100 or 2300 under RCP8.5 scenario (Supplementary Note 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>). None of the GCM variables were bias-corrected in order to preserve internal consistency of the sea ice and land snow physics in each model. The statistics of the nonlinear SAF assumes model democracy in the CMIP5 sample used (equal weights for all GCMs).
+  </p>
+  <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">Applying the ALL/CLR method to the transient GCM simulations produced time series for the global RF associated with the surface albedo changes. These were differentiated with respect to GMST trends over 30-year climatological windows, separately for each model, using linear polynomial fitting to obtain climatologically-averaged SAF in each year. A Savitzky–Golay filter (base period = 31 years; polynomial order = 1) was applied to obtain smooth time series for GMST and SAF. The SAF (both global total and separately for the three main components) was then represented as a function of the GMST rise individually for each model, at which point the multi-model statistics was calculated.</p>
+  <p id="Par46" xmlns="http://www.w3.org/1999/xhtml">We based the emulator of the global nonlinear SAF on a two-segment approximation described by the following expressions for the SAF, 
+   <span class="italic">f</span>(
+   <span class="italic">T</span>), and the associated RF, 
+   <span class="italic">F</span>(
+   <span class="italic">T</span>):
+   <div id="Equ4" class="disp-formula">
+    <span class="label">4</span>
+    <div class="alternatives">
+     <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\begin{array}{l}f\left( T \right) = \left\{ {\begin{array}{*{20}{c}} {a_0 + a_1T + a_2T^2 + \sigma \varepsilon ,\;T &lt; T_ \ast } \\ {b_0 + \rho \varepsilon ,\;T \ge T_ \ast } \end{array}} \right.\\ F\left( T \right) = \mathop{\displaystyle\int}\limits_0^T {f\left( {T\prime } \right){\mathrm{d}}T\prime = \left\{ {\begin{array}{*{20}{c}} {(a_0 + \sigma \varepsilon )T + \frac{1}{2}a_1T^2 + \frac{1}{3}a_2T^3,\;T &lt; T_ \ast } \\ {(a_0 + \sigma \varepsilon )T_ \ast + \frac{1}{2}a_1T_ \ast ^2 + \frac{1}{3}a_2T_ \ast ^3 + (b_0 + \rho \varepsilon ) \cdot (T - T_ \ast ),\;T \ge T_ \ast } \end{array}} \right.} \end{array}}$$\end{document}</span>
+     <div id="M8" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">f</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <div close="" open="{" separators="" class="mfenced">
+          <div class="mrow">
+           <div class="mtable">
+            <div class="mtr">
+             <div columnalign="center" class="mtd">
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">a</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">0</span>
+               </div>
+              </div>
+              <span class="mo">+</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">a</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">1</span>
+               </div>
+              </div>
+              <span class="mi">T</span>
+              <span class="mo">+</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">a</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <div class="msup">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <span class="mo">+</span>
+              <span class="mi">σ</span>
+              <span class="mi">ε</span>
+              <span class="mo">,</span>
+              <span width="0.16em" class="mspace"/>
+              <span class="mi">T</span>
+              <span class="mo">&lt;</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mo">*</span>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="mtr">
+             <div columnalign="center" class="mtd">
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">b</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">0</span>
+               </div>
+              </div>
+              <span class="mo">+</span>
+              <span class="mi">ρ</span>
+              <span class="mi">ε</span>
+              <span class="mo">,</span>
+              <span width="0.16em" class="mspace"/>
+              <span class="mi">T</span>
+              <span class="mo">≥</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mo">*</span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">F</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <div accent="false" accentunder="false" class="munderover">
+          <div class="mrow">
+           <span class="mo"> ∫</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+         </div>
+         <span class="mi">f</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <span class="mi">T</span>
+           <span class="mo">′</span>
+          </div>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">T</span>
+         <span class="mo">′</span>
+         <span class="mo">=</span>
+         <div close="" open="{" separators="" class="mfenced">
+          <div class="mrow">
+           <div class="mtable">
+            <div class="mtr">
+             <div columnalign="center" class="mtd">
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">a</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mn">0</span>
+                 </div>
+                </div>
+                <span class="mo">+</span>
+                <span class="mi">σ</span>
+                <span class="mi">ε</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+              <span class="mi">T</span>
+              <span class="mo">+</span>
+              <div class="mfrac">
+               <div class="mrow">
+                <span class="mn">1</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">a</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">1</span>
+               </div>
+              </div>
+              <div class="msup">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <span class="mo">+</span>
+              <div class="mfrac">
+               <div class="mrow">
+                <span class="mn">1</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">3</span>
+               </div>
+              </div>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">a</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <div class="msup">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">3</span>
+               </div>
+              </div>
+              <span class="mo">,</span>
+              <span width="0.16em" class="mspace"/>
+              <span class="mi">T</span>
+              <span class="mo">&lt;</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mo">*</span>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="mtr">
+             <div columnalign="center" class="mtd">
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">a</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mn">0</span>
+                 </div>
+                </div>
+                <span class="mo">+</span>
+                <span class="mi">σ</span>
+                <span class="mi">ε</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mo">*</span>
+               </div>
+              </div>
+              <span class="mo">+</span>
+              <div class="mfrac">
+               <div class="mrow">
+                <span class="mn">1</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">a</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">1</span>
+               </div>
+              </div>
+              <div class="msubsup">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mo">*</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <span class="mo">+</span>
+              <div class="mfrac">
+               <div class="mrow">
+                <span class="mn">1</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">3</span>
+               </div>
+              </div>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">a</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">2</span>
+               </div>
+              </div>
+              <div class="msubsup">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mo">*</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">3</span>
+               </div>
+              </div>
+              <span class="mo">+</span>
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">b</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mn">0</span>
+                 </div>
+                </div>
+                <span class="mo">+</span>
+                <span class="mi">ρ</span>
+                <span class="mi">ε</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+              <span class="mo">⋅</span>
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">T</span>
+                <span class="mo">-</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">T</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mo">*</span>
+                 </div>
+                </div>
+               </div>
+               <span class="mo">)</span>
+              </div>
+              <span class="mo">,</span>
+              <span width="0.16em" class="mspace"/>
+              <span class="mi">T</span>
+              <span class="mo">≥</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">T</span>
+               </div>
+               <div class="mrow">
+                <span class="mo">*</span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9863_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par47" xmlns="http://www.w3.org/1999/xhtml">Here 
+   <span class="italic">T</span> is the GMST anomaly (not to be confused with the permafrost temperature), 
+   <span class="italic">T</span>
+   <sub>*</sub> = 10 °C is an empirically determined switch between the quadratic and constant SAF segments (Fig. 
+   <a rid="Fig8" ref-type="fig" href="#Fig8">8</a>), 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">j</span>
+   </sub> are the coefficients of quadratic polynomial fitting to the multi-model mean global SAF over the 
+   <span class="italic">T</span> &lt; 
+   <span class="italic">T</span>
+   <sub>*</sub> segment, 
+   <span class="italic">b</span>
+   <sub>0</sub> is average of the multi-model mean global SAF over the 
+   <span class="italic">T</span> ≥ 
+   <span class="italic">T</span>
+   <sub>*</sub> segment, 
+   <span class="italic">σ</span>(
+   <span class="italic">ρ</span>) is average of the multi-model SD of the global SAF over the 
+   <span class="italic">T</span>  
+   <span class="italic">&lt;T</span>
+   <sub>*</sub> (
+   <span class="italic">T</span> ≥ 
+   <span class="italic">T</span>
+   <sub>*</sub>) segment, and 
+   <div id="IEq1" class="inline-formula">
+    <div class="alternatives">
+     <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\varepsilon = {\cal{N}}(0,1)$$\end{document}</span>
+     <div id="M10" class="math">
+      <span class="mi">ε</span>
+      <span class="mo">=</span>
+      <span mathvariant="script" class="mi">N</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mn">0</span>
+        <span class="mo">,</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9863_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>. The full technical description of the implementation of the SAF emulator in PAGE-ICE is provided in Supplementary Note 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>.
+   <div id="Fig8" class="fig">
+    <span class="label">Fig. 8</span>
+    <div class="caption">
+     <p>Emulator of the global surface albedo feedback and its legacy value. Global SAF as a function of the GMST rise relative to pre-industrial conditions obtained from 16 CMIP5 GCMs using the ALL/CLR method. Red line: multi-model mean; shaded red area: ±1SD; blue line and shaded area: mean and ±1SD of the two-segment emulator. The dashed line and grey shaded area show statistical mean and ±1SD of the SAF averaged between pre-industrial conditions and the level of warming corresponding to the 2xCO
+      <sub>2</sub> ECS experiment (mean value of 2.8 °C, 5–95% range of 1.7 °C–4.2 °C according to IPCC AR5). Source data are provided as a Source Data file
+     </p>
+    </div>
+    <div xlink:href="41467_2019_9863_Fig8_HTML" id="d29e2258" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">PAGE-ICE IAM</div>
+  <p id="Par48" xmlns="http://www.w3.org/1999/xhtml">PAGE-ICE (v6.22) is based on the PAGE09 IAM
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>,
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+   </span>. It includes several updates both to climate science and economics from IPCC AR5 and literature that followed, as well as several novel developments presented in this paper. The updates are summarised below, with the full technical description provided in Supplementary Note 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>, Supplementary Figs 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">18</a>–
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">23</a> and Supplementary Tables 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">7</a>–
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">17</a>.
+  </p>
+  <p id="Par49" xmlns="http://www.w3.org/1999/xhtml">PAGE and similar IAMs do not model natural climate variability, and therefore each Monte-Carlo run is deterministic in time. This allows us to work with Monte-Carlo generated probability distributions of multiple climatic and economic parameters in any fixed analysis year like 2100, as opposed to taking averages over the 30-year climatological windows (a standard requirement for any climate model data with multiple natural variability cycles). The ranges for all the uncertain parameters in PAGE-ICE are listed in the Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">17</a>.
+  </p>
+  <p id="Par50" xmlns="http://www.w3.org/1999/xhtml">Generic updates in PAGE-ICE: first, adjusted analysis years starting with 2015 (base year), 2020, 2030, 2040, 2050, 2075, 2100, 2150, 2200, 2250 and 2300, allowing for a better representation of the essential long-term processes: permafrost emissions, winter sea ice and land snow decline and melting of the ice sheets; second, updated base year (2015) data for the emissions, temperature, population, GDP-PPP, cumulative permafrost emissions and surface albedo feedback, with uncertainty ranges for most parameters; third, updated set of emissions (RCP) and socio-economic (SSP) scenarios paired according to the RCP-SSP compatibility conditions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+   </span>, and modified to cover the range of scenarios in line with the Paris Agreement, as well as the possibility of a reversal of climate policies in the US and globally.
+  </p>
+  <p id="Par51" xmlns="http://www.w3.org/1999/xhtml">Climate science updates in PAGE-ICE: first, internal dynamic representation of the nonlinear PCF and SAF using emulators based on simulations from multiple CMIP5 and CMIP3 GCMs and SiBCASA and JULES LSMs run under the extended RCP8.5, 4.5 and 2.6 (only JULES) scenarios out to 2300 (see the relevant Methods sections above); second, adjusted transient climate response (TCR), feedback response time (FRT) and ECS parameter ranges according to IPCC AR5 based on CMIP5 models, paleo-records and climate models of intermediate complexity; third, revised CO
+   <sub>2</sub> cycle in line with the latest multi-model assessment of the atmospheric CO
+   <sub>2</sub> response function;
+   <span class="sup">
+    <a ref-type="bibr" rid="CR85" href="#CR85">85</a>
+   </span> fourth, improved GMST equation using a better numerical scheme for finite analysis periods; fifth, CMIP5-based amplification factors for the regional temperatures; sixth, changes in the implementation of the regional sulphate cooling: sulphates now add to the global forcing and affect the regional temperatures implicitly through the CMIP5-based amplification factors (their RF is not included in the regional temperature equation directly due to the complexity of climatic response to regional RFs, which requires regional climate sensitivities to be introduced;
+   <span class="sup">
+    <a ref-type="bibr" rid="CR86" href="#CR86">86</a>
+   </span> seventh, approximately halved indirect sulphate cooling effect; eighth, fat-tailed distribution for the sea level rise (SLR) time lag (at the lower values end) to account for the possible acceleration in the discharge from the West Antarctica and Greenland ice sheets
+   <span class="sup">
+    <a ref-type="bibr" rid="CR87" href="#CR87">87</a>–
+    <a ref-type="bibr" rid="CR90" href="#CR90">90</a>
+   </span>.
+  </p>
+  <p id="Par52" xmlns="http://www.w3.org/1999/xhtml">Economics updates in PAGE-ICE: first, new economic impact function based on the recent macro-econometric analysis of the effect of historic temperature shocks on economic growth in multiple countries by Burke et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>, projected onto the 8 major regions of the PAGE model using population-weighted temperatures, and adapted to fit with the single year consumption-only approach for climate impacts used in PAGE; second, considerably downscaled saturation limit for the impacts; third, modified uncertainty range for the BaU scenario, which is used as a reference point for calculating the abatement costs, covering the range roughly between RCP6.0 and a pathway exceeding RCP8.5;
+   <span class="sup">
+    <a ref-type="bibr" rid="CR23" href="#CR23">23</a>
+   </span> fourth, revised present-day marginal abatement cost (MAC) curves
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span>, technological learning rate (CO
+   <sub>2</sub> only)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span> and autonomous technological change based on energy efficiency improvements;
+   <span class="sup">
+    <a ref-type="bibr" rid="CR91" href="#CR91">91</a>
+   </span> fifth, significantly downscaled discontinuity sector, which now accounts only for socio-economic tipping points such as pandemics, mass migration and wars, as well as possible other tipping points in the climate than permafrost, sea ice, land snow and lea level rise from ice sheets (the catastrophic loss of the ice sheets has been moved to the fat-tailed distribution in the sea level rise module); sixth, reduced tolerable temperature rise that gives no chance of a discontinuity; seventh, significantly decreased time constant of a discontinuity in line with its new interpretation; eighth, focus on autonomous adaptation as part of the Burke et al. economic impact function, with planned adaptation restricted to SLR impacts.
+  </p>
+ </sec>
+ <sec id="Sec120" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate model data</div>
+  <p id="Par251" xmlns="http://www.w3.org/1999/xhtml">The complete lists of the CMIP5 and CMIP3 models used in the study are provided in Supplementary Tables 18 and 19.</p>
+ </sec>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Image processing</div>
+  <p id="Par53" xmlns="http://www.w3.org/1999/xhtml">The Figures were plotted using Matlab R2018a, IDL (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>) and Palisade Risk 7.5 (Fig. 
+   <a rid="Fig6" ref-type="fig" href="#Fig6">6</a>). We used Matlab’s Savitzky–Golay smoothing for the SAF results from CMIP5 (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>) and Piecewise Cubic Hermite Interpolating Polynomial (PCHIP) interpolation for the time-series results from PAGE-ICE.
+  </p>
+ </sec>
+</sec>

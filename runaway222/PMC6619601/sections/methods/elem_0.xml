@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Surveys</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Surveys were conducted in the state of Arunachal Pradesh, NE India (
+   <a ref-type="fig" rid="pone.0217549.g001" href="#pone.0217549.g001">Fig 1A</a>) from 2013–2015. The coordinates for all survey points fell between 27.006 and 28.622 degrees North, and between 91.985 and 96.545 degrees East. Surveys were carried out during the monsoon (May-July), which is the breeding season for the majority of the regional avifauna. 201 survey points were selected at elevations ranging from 118–4354 meters in altitude; areas both along and away from roads were included, as were points from both protected and non-protected areas. Efforts were made to randomize across vegetation types at particular altitudes. At each survey point, two observers compiled comprehensive lists of all species seen/heard at ten minute intervals. Most sites were visited multiple times in order to assess detectability; sites were visited for an average of 9 intervals (range 1–30). In all, surveys totaled 328 hours of effort. Point localities for some species, generally those of conservation concern, were also collected opportunistically. We were able to record 375 species, 215 of which were recorded at a minimum of five survey points (see 
+   <a ref-type="supplementary-material" rid="pone.0217549.s001" href="#pone.0217549.s001">S1 Table</a> in the Supporting Information).
+  </p>
+  <div id="pone.0217549.g001" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0217549.g001</span>
+   <span class="label">Fig 1</span>
+   <div class="caption">
+    <div class="title">Maps of the study area.</div>
+    <p>(a) ASTER digital elevation model (DEM) of Arunachal Pradesh draped over a hillshade map, courtesy NASA/JPL-Caltech. Regular survey points are in black; locations where species localities were collected opportunistically are in red. (b) Subregions used for the purpose of this study. From west to east, dividing lines between subregions are the Sela Massif, Kameng River, Subansiri River, Siang River, Dibang River and Lohit River. Arunachal Pradesh outline courtesy the Data{Meet} Community Created Maps of India project; subregions were digitized in QGIS software using the DEM above as a guide.</p>
+   </div>
+   <div xlink:href="pone.0217549.g001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec id="sec004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modelling elevational ranges and range overlaps</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">For each species at each point, the data consisted of a series of successes (1) or failures (0) to detect the species at each interval at each survey point (see 
+   <a ref-type="supplementary-material" rid="pone.0217549.s002" href="#pone.0217549.s002">S2 Table</a> in the Supporting Information for the full dataset of species detections). We modelled the elevational range using a generalized additive model (GAM) with a logit link function on this binomial data; we constrained the fit to a cubic smoothing spline with three knots, as elevational ranges are generally unimodal. The GAM output was then normalized to have a maximum value of 1. Pairwise elevational overlaps were taken to be ratio of the intersection to the union for the output curves (
+   <a ref-type="fig" rid="pone.0217549.g002" href="#pone.0217549.g002">Fig 2</a>); these were calculated using numerical integration. For each species, we also determined the central elevation as the 50
+   <span class="sup">th</span> percentile value of the GAM curve.
+  </p>
+  <div id="pone.0217549.g002" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0217549.g002</span>
+   <span class="label">Fig 2</span>
+   <div class="caption">
+    <div class="title">Predicted habitat suitability relative to altitude for three species of 
+     <span class="italic">Psilopogon</span> barbet.
+    </div>
+    <p>Solid lines represent generalized additive model (GAM) predictions based on survey data; open circles represent the proportion of surveys at a given location in which each species was detected. Notably, Blue-throated and Golden-throated Barbet are similarly sized and segregate altitudinally; Great Barbet, which is much larger, overlaps broadly with both.</p>
+   </div>
+   <div xlink:href="pone.0217549.g002" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A common critique of studies using coexistence to make ecological inferences is the lack of a suitable null model [
+   <a rid="pone.0217549.ref034" ref-type="bibr" href="#pone.0217549.ref034">34</a>,
+   <a rid="pone.0217549.ref037" ref-type="bibr" href="#pone.0217549.ref037">37</a>]. Through chance alone, species occupying wide ranges of elevation will overlap more than species occupying narrow ranges of elevation. We therefore generated a null expectation for the elevational overlap for a given pair of species based on the size of their altitudinal preferences. It is known that bird diversity in the Eastern Himalayas relates to elevation [
+   <a rid="pone.0217549.ref022" ref-type="bibr" href="#pone.0217549.ref022">22</a>]. We used a smoothing spline to estimate this relationship based on the average number of species observed per ten minute interval at each site. For both species being compared, we used this relationship as the basis of a Monte Carlo draw to provide a randomized central elevation. We then shifted the actual altitudinal preferences of both species upslope or downslope to align it with the randomized central elevation and calculated the resulting altitudinal overlap. This was performed 100 times for each species pair, with the calculated altitudinal overlaps then averaged to create a null expectation. We then subtracted this value from the observed elevational overlap. A value of zero indicates a species pair that was observed to overlap in altitude as much as would be expected from chance alone given the size of the altitudinal bands they occupy; values below and above zero indicate less overlap than expected from chance and more overlap than expected from chance respectively. We refer to this as the range-size corrected elevational overlap (RSCEO).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Moreover, elevational overlap alone is not necessarily indicative of sympatric coexistence. It is possible for a given species pair to overlap broadly in altitude, yet seldom coexist at a smaller spatial scale, which would be evidence of competition not captured by altitudinal overlap alone (
+   <a ref-type="fig" rid="pone.0217549.g003" href="#pone.0217549.g003">Fig 3</a>). We therefore developed a simulation model to determine the expected number of points at which a given pair of species would be found together assuming no competition, based on the GAM models above. The non-normalized GAM output is probability that a species would be detected at a given elevation during a single time interval during our surveys. We used this probability as the basis to simulate survey data at each survey point using a Monte Carlo approach; the length of the series at each point was based on the number of intervals that site was visited. We collapsed this series of detections into a single presence/absence value, with a species being considered present if there was at least one simulated detection at a site. This was done independently for both species being compared. The simulated presence-absence data for both species was then compared site by site in order to generate a predicted number of co-occurrences, and then compared to the actual number of points the species was found together at during our surveys. From each set of simulated survey data, we calculated a competition coefficient: 
+   <div id="pone.0217549.e001" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0217549.e001.jpg" id="pone.0217549.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M1" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">c</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mfrac">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Actual</span>
+         <span width="0.25em" class="mspace"/>
+         <span mathvariant="normal" class="mi">co</span>
+         <span mathvariant="normal" class="mi">‐</span>
+         <span mathvariant="normal" class="mi">occurences</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Expected</span>
+         <span width="0.25em" class="mspace"/>
+         <span mathvariant="normal" class="mi">co</span>
+         <span mathvariant="normal" class="mi">‐</span>
+         <span mathvariant="normal" class="mi">occurences</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> The final value for the competition coefficient, 
+   <span class="italic">c</span>, was averaged over the 
+   <span class="italic">c</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> obtained from 5000 simulations. If the number of expected co-occurences from a simulation was 0, the value of c
+   <sub>i</sub> for that simulation was taken to be 1, a conservative choice. We multiplied the elevational overlap by 
+   <span class="italic">c</span>; we refer to this as spatial co-occurrence (SC).
+  </p>
+  <div id="pone.0217549.g003" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0217549.g003</span>
+   <span class="label">Fig 3</span>
+   <div class="caption">
+    <div class="title">Simulated vs. actual co-occurrence in three species of 
+     <span class="italic">Psilopogon</span> barbet.
+    </div>
+    <p>(a) Golden-throated (yellow) and Blue-throated Barbet (blue). (b) Golden-throated (yellow) and Great Barbet (red). Left figures show relationship between habitat suitability and elevation for each species; open circles represent presence/absence at each survey point. Right figures show box-and-whisker plots of simulated co-occurrences across 5000 simulations; red dashed line represents the actual number of co-occurrences during surveys. Golden-throated and Blue-throated Barbets are similar sized; Great Barbet is much larger.</p>
+   </div>
+   <div xlink:href="pone.0217549.g003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Our study area, Arunachal Pradesh, has several major rivers and ridges. It is known that some of these features present geographical dispersal barriers. For example, the Sela Massif forms a border between the sister species Rufous Sibia 
+   <span class="italic">Heterophasia capistrata</span> in the north/west, and Beautiful Sibia 
+   <span class="italic">H</span>. 
+   <span class="italic">pulchella</span> in the south/east [
+   <a rid="pone.0217549.ref048" ref-type="bibr" href="#pone.0217549.ref048">48</a>,
+   <a rid="pone.0217549.ref049" ref-type="bibr" href="#pone.0217549.ref049">49</a>]. Similarly, the Rusty-throated Wren Babbler 
+   <span class="italic">Spelaeornis badeigularis</span> is found to the west of the Dibang River, while its sister species, the Rufous-throated Wren-Babbler 
+   <span class="italic">S</span>. 
+   <span class="italic">caudatus</span> is found to the east [
+   <a rid="pone.0217549.ref048" ref-type="bibr" href="#pone.0217549.ref048">48</a>,
+   <a rid="pone.0217549.ref049" ref-type="bibr" href="#pone.0217549.ref049">49</a>]. In order to avoid false negatives in our data, we divided Arunachal Pradesh into several subregions (
+   <a ref-type="fig" rid="pone.0217549.g001" href="#pone.0217549.g001">Fig 1B</a>) based on a set of rivers and high-altitude ridges. From west to east, the dividing lines were taken to be the Sela Massif, the Kameng River, the Subansiri River, the Siang River, the Dibang River, and the Lohit River. We determined whether each species was present or absent in each subregion based on a combination of field guide maps along with our own surveys. In subregions where a species was not present, the survey data was taken to be NA rather than a 0 for GAM fitting; we also omitted pairwise comparisons of congeners not found sympatrically in at least one subregion.
+  </p>
+ </sec>
+ <sec id="sec005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Trait and phylogenetic data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We had two main sources of trait data. Measures of head length, body length and overall length for all species were obtained from Rasmussen and Anderton 2005; measures of bill length/width/depth, tarsal thickness and wing chord for most passerine species were obtained from the supplemental material of Price et al 2014. These traits are known to correspond to functional aspects of a bird’s ecology and foraging behaviour [
+   <a rid="pone.0217549.ref050" ref-type="bibr" href="#pone.0217549.ref050">50</a>]. The set of morphological trait measurements is available in the Supporting Information, 
+   <a ref-type="supplementary-material" rid="pone.0217549.s003" href="#pone.0217549.s003">S3 Table</a>.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For phylogenetic data, we relied on global bird phylogeny created by Jetz et al [
+   <a rid="pone.0217549.ref025" ref-type="bibr" href="#pone.0217549.ref025">25</a>]. This phylogeny was generated by assigning species to a set of crown clades and generating trees for these clades, then combining them onto a set of backbone clades [
+   <a rid="pone.0217549.ref025" ref-type="bibr" href="#pone.0217549.ref025">25</a>]. We downloaded a sample of 1000 trees from a pseudo-posterior distribution, including all species found during our surveys as tips [
+   <a rid="pone.0217549.ref025" ref-type="bibr" href="#pone.0217549.ref025">25</a>] (trees available in Supporting Information, 
+   <a ref-type="supplementary-material" rid="pone.0217549.s005" href="#pone.0217549.s005">S1 Tree</a> and 
+   <a ref-type="supplementary-material" rid="pone.0217549.s006" href="#pone.0217549.s006">S2 Tree</a>). From these, we calculated the pairwise patristic distance between all species. These distances were used to select a set of congeneric sister species (CSS) found during our surveys, as it is generally thought that the competition is strongest between closely related taxa; species belonging to a genus with only two representatives in our surveys were considered a part of the CSS set. It is worth noting that the sister taxon for the majority of Eastern Himalayan passerine species is extralimital [
+   <a rid="pone.0217549.ref022" ref-type="bibr" href="#pone.0217549.ref022">22</a>]. Among the 210 species detected at 5 or more points, we were able to form 35 CSS pairs. From these, we excluded the aerial insectivores 
+   <span class="italic">Delichon nipalense</span> and 
+   <span class="italic">Delichon dasypus</span>, as their habit of foraging at high altitudes makes it difficult to interpret survey occurrences as being representative of their breeding ranges. The full list of 34 CSS pairs is available in the Supporting Information, 
+   <a ref-type="supplementary-material" rid="pone.0217549.s004" href="#pone.0217549.s004">S4 Table</a>.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We based the taxonomy for this study on the IOC World List v. 7.1; all datasets describe above were reconciled to this taxonomy. One species pair, 
+   <span class="italic">Psittiparus ruficeps</span> &amp; 
+   <span class="italic">P</span>. 
+   <span class="italic">bakeri</span>, was not found in the phylogenetic data and was therefore excluded from those analyses; the two taxa were considered conspecific unt recently and are currently thought to exist only in allopatry.
+  </p>
+ </sec>
+ <sec id="sec006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical and phylogenetic methods</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The available morphological variables were highly collinear, making direct interpretation complex. To overcome this, the morphological variables were log-transformed and a principal component analysis (PCA) was performed (
+   <a ref-type="fig" rid="pone.0217549.g004" href="#pone.0217549.g004">Fig 4</a>). The first component, corresponding to overall size, explained over 78% of the variation in the data; the first three explained over 93% of the variation. Missing passerine data was predicted using the PCA fit from the passerine species in the Price et al dataset, based on values in the Rasmussen and Anderton dataset. We tested the relationship between morphological dissimilarity and range overlaps by regressing measures of range overlaps against the Euclidean distance between species in PC space.
+  </p>
+  <div id="pone.0217549.g004" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0217549.g004</span>
+   <span class="label">Fig 4</span>
+   <div class="caption">
+    <div class="title">Principal component analysis of morphological variance.</div>
+    <p>PC1 explains the vast majority of the data, 78.9%; the first three principal components explain 93.6% of the data. PC1 broadly corresponds to overall body size; PC2 corresponds to large-billedness, and PC3 corresponds to long-tailedness.</p>
+   </div>
+   <div xlink:href="pone.0217549.g004" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Additionally, we wanted to test the oft-asserted notion that the strength of competition is stronger among closely related species. We did this by applying varying time cutoffs to the phylogeny. For each individual cutoff, we selected species pairs with a most recent common ancestor (MRCA) more recent than the cutoff. We then calculated the correlation between range overlaps and morphological similarity for those species pairs. Finally, we looked at the relationship between the cutoff chosen and the correlation between range overlap and morphological similarity.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We examined the effects of phylogenetics on traits using several methods. Moran’s I is a measure of spatial autocorrelation, which gives the relationship between a matrix of pairwise differences of some quantity and a matrix of pairwise spatial distances between them [
+   <a rid="pone.0217549.ref051" ref-type="bibr" href="#pone.0217549.ref051">51</a>]. However, it can be extended to use in a phylogenetic context by replacing spatial distances with phylogenetic distances [
+   <a rid="pone.0217549.ref052" ref-type="bibr" href="#pone.0217549.ref052">52</a>]. Positive values of Moran’s I indicate that closely related species are closer in trait space than would be expected; we generated the null expectation for Moran’s I by using Brownian Motion (BM) simulations on the consensus phylogeny. Abouheif’s C
+   <sub>mean</sub> is a similar test that uses a distance matrix where the major diagonal can take on nonzero values [
+   <a rid="pone.0217549.ref053" ref-type="bibr" href="#pone.0217549.ref053">53</a>]. We calculated Moran’s I and Abouheif’s C
+   <sub>mean</sub> for morphology by assigning the values of PC1-PC4 as continuous traits. We calculated these measures for the altitude occupied by treating the central altitude as a quantitative trait, and creating a pairwise distance matrix accordingly. To test whether phylogenetic uncertainty could affect these results, we calculated Moran’s I and Abouheif’s C
+   <sub>mean</sub> for 100 randomly selected trees individual phylogenetic trees, as well as for our consensus tree.
+  </p>
+ </sec>
+ <sec id="sec007" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Software used</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All analyses, including simulation models, were carried out in R [
+   <a rid="pone.0217549.ref054" ref-type="bibr" href="#pone.0217549.ref054">54</a>]. In addition to the base packages, we used functions from ape, adephylo, geiger, missMDA, mgcv, phylobase and phytools [
+   <a rid="pone.0217549.ref054" ref-type="bibr" href="#pone.0217549.ref054">54</a>–
+   <a rid="pone.0217549.ref061" ref-type="bibr" href="#pone.0217549.ref061">61</a>]. Basic GIS processing (e.g. extracting the elevation of each survey point from a digital elevation model) was accomplished using QGIS v 2.18 [
+   <a rid="pone.0217549.ref062" ref-type="bibr" href="#pone.0217549.ref062">62</a>].
+  </p>
+ </sec>
+</sec>

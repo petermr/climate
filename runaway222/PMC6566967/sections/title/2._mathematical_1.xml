@@ -1,0 +1,2395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2-sensors-19-02284" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2. Mathematical Model of Detection Range in Semi-Active Laser Guidance System</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The typical working mode of the semi-active laser guidance system is shown in 
+  <a ref-type="fig" rid="sensors-19-02284-f001" href="#sensors-19-02284-f001">Figure 1</a>. The designator and the image tracking system with visible or infrared band are mounted on a gyro-stabilized platform which is loaded onto the aircraft as a payload. The designator keeps the spot illuminating on the target object with assistance of the image tracker. The seeker of the semi-active laser guidance system can detect the echo signals of the illuminated target in real time, within an effective range and calculate the angle of sight line which can generate guidance information to guide a missile to the target.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The parts in 
+  <a ref-type="fig" rid="sensors-19-02284-f001" href="#sensors-19-02284-f001">Figure 1</a> are abstracted and modeled, as shown in 
+  <a ref-type="fig" rid="sensors-19-02284-f002" href="#sensors-19-02284-f002">Figure 2</a>.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div class="inline-formula">
+   <div id="mm1" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mi">L</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the distance between the laser designator and the target. The laser pulse emitted by the designator is approximately Gaussian. The full-width at half-maximum (FWHM) of the laser pulse equals to 
+  <div class="inline-formula">
+   <div id="mm209" class="math">
+    <div class="mrow">
+     <span class="mi">τ</span>
+    </div>
+   </div>
+  </div>. 
+  <div class="inline-formula">
+   <div id="mm2" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">E</span>
+       <span class="mi">T</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the energy of pulse, 
+  <div class="inline-formula">
+   <div id="mm3" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">β</span>
+       <span class="mi">T</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the laser beam angle, 
+  <div class="inline-formula">
+   <div id="mm4" class="math">
+    <div class="mrow">
+     <span class="mi">σ</span>
+    </div>
+   </div>
+  </div> is the attenuation coefficient of laser in atmosphere, 
+  <div class="inline-formula">
+   <div id="mm207" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">θ</span>
+      <span class="mi">L</span>
+     </div>
+    </div>
+   </div>
+  </div> is the angle between the object surface normal and the laser beam. Considering the background and the object, a diffuse reflector is assumed, which is reflected as a Lambertian source [
+  <a rid="B17-sensors-19-02284" ref-type="bibr" href="#B17-sensors-19-02284">17</a>]. 
+  <div class="inline-formula">
+   <div id="mm208" class="math">
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">ρ</span>
+      <span class="mi">T</span>
+     </div>
+    </div>
+   </div>
+  </div> is the target reflectance.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Therefore, the peak power of the laser pulse of designator can be calculated as:
+  <div id="FD1-sensors-19-02284" class="disp-formula">
+   <span class="label">(1)</span>
+   <div id="mm5" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">L</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">E</span>
+         <span class="mi">T</span>
+        </div>
+       </div>
+       <span class="mi">τ</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The spectral radiance is:
+  <div id="FD2-sensors-19-02284" class="disp-formula">
+   <span class="label">(2)</span>
+   <div id="mm6" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">L</span>
+       <span class="mi">T</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">4</span>
+        <div class="msub">
+         <span class="mi">P</span>
+         <span class="mi">L</span>
+        </div>
+        <div class="msub">
+         <span class="mi">ρ</span>
+         <span class="mi">T</span>
+        </div>
+        <div class="msup">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <span class="mo">−</span>
+          <span class="mi">σ</span>
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mi">L</span>
+          </div>
+         </div>
+        </div>
+        <span class="mi">cos</span>
+        <div class="msub">
+         <span class="mi">θ</span>
+         <span class="mi">L</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">π</span>
+        <div class="msubsup">
+         <span class="mi">β</span>
+         <span class="mi">T</span>
+         <span class="mn">2</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">R</span>
+         <span class="mi">L</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Assuming that the laser spot falls on the target totally, the area of laser spot on the target is:
+  <div id="FD3-sensors-19-02284" class="disp-formula">
+   <span class="label">(3)</span>
+   <div id="mm7" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">A</span>
+       <span class="mi">T</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">π</span>
+        <div class="msubsup">
+         <span class="mi">β</span>
+         <span class="mi">T</span>
+         <span class="mn">2</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">R</span>
+         <span class="mi">L</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">4</span>
+        <span class="mi">cos</span>
+        <div class="msub">
+         <span class="mi">θ</span>
+         <span class="mi">L</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">And the solid angle of the spot to the optics is:
+  <div id="FD4-sensors-19-02284" class="disp-formula">
+   <span class="label">(4)</span>
+   <div id="mm8" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span mathvariant="sans-serif" class="mi">Ω</span>
+       <span class="mi">D</span>
+      </div>
+      <span class="mo">≈</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">π</span>
+        <div class="msup">
+         <span class="mi">D</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">4</span>
+        <div class="msubsup">
+         <span class="mi">R</span>
+         <span class="mi">M</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div class="inline-formula">
+   <div id="mm9" class="math">
+    <div class="mrow">
+     <span class="mi">D</span>
+    </div>
+   </div>
+  </div> is the optical aperture of the optical system, 
+  <div class="inline-formula">
+   <div id="mm10" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mi">M</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the distance between the target and the receiving optics. The received optical signal power, 
+  <div class="inline-formula">
+   <div id="mm11" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">S</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, of the reflected laser radiation from the illuminated object is [
+  <a rid="B18-sensors-19-02284" ref-type="bibr" href="#B18-sensors-19-02284">18</a>]:
+  <div id="FD5-sensors-19-02284" class="disp-formula">
+   <span class="label">(5)</span>
+   <div id="mm12" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">S</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">L</span>
+       <span class="mi">T</span>
+      </div>
+      <div class="msub">
+       <span class="mi">A</span>
+       <span class="mi">T</span>
+      </div>
+      <div class="msub">
+       <span mathvariant="sans-serif" class="mi">Ω</span>
+       <span class="mi">D</span>
+      </div>
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">R</span>
+      </div>
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">F</span>
+      </div>
+      <div class="msup">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mi">σ</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mi">M</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mi">L</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <span class="mi">cos</span>
+      <span class="mi">θ</span>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div class="inline-formula">
+   <div id="mm13" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">R</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the receiving optics transmission coefficient, 
+  <div class="inline-formula">
+   <div id="mm14" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">F</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the optical filter transmission coefficient. Combing Equations (1)–(4) with Equation (5) we can obtain the 
+  <div class="inline-formula">
+   <div id="mm15" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">S</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> as follows:
+  <div id="FD6-sensors-19-02284" class="disp-formula">
+   <span class="label">(6)</span>
+   <div id="mm16" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">S</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msup">
+         <span class="mi">D</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">4</span>
+        <div class="msubsup">
+         <span class="mi">R</span>
+         <span class="mi">M</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">L</span>
+      </div>
+      <div class="msub">
+       <span class="mi">ρ</span>
+       <span class="mi">T</span>
+      </div>
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">R</span>
+      </div>
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">F</span>
+      </div>
+      <div class="msup">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mi">σ</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mi">M</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mi">L</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <span class="mi">cos</span>
+      <span class="mi">θ</span>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The received optical signal power of the reflected background radiation from the solar is:
+  <div id="FD7-sensors-19-02284" class="disp-formula">
+   <span class="label">(7)</span>
+   <div id="mm17" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">B</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mi">π</span>
+       <div class="mrow">
+        <span class="mn">16</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">E</span>
+       <span class="mi">λ</span>
+      </div>
+      <div class="msub">
+       <span class="mo">Δ</span>
+       <span class="mi">λ</span>
+      </div>
+      <div class="msub">
+       <span class="mi">ρ</span>
+       <span class="mi">B</span>
+      </div>
+      <span class="mi">β</span>
+      <div class="msup">
+       <span class="mi">D</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">R</span>
+      </div>
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">F</span>
+      </div>
+      <div class="msup">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mi">σ</span>
+        <div class="msub">
+         <span class="mi">R</span>
+         <span class="mi">M</span>
+        </div>
+       </div>
+      </div>
+      <span class="mi">cos</span>
+      <span class="mi">θ</span>
+     </div>
+    </div>
+   </div>
+  </div> where 
+  <div class="inline-formula">
+   <div id="mm18" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">E</span>
+       <span class="mi">λ</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the solar spectral irradiance, 
+  <div class="inline-formula">
+   <div id="mm19" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mo">Δ</span>
+       <span class="mi">λ</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the optical spectral filter bandwidth and 
+  <div class="inline-formula">
+   <div id="mm20" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">ρ</span>
+       <span class="mi">B</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the background reflectance.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The four-quadrant PIN detector and post-processing circuit are shown in 
+  <a ref-type="fig" rid="sensors-19-02284-f003" href="#sensors-19-02284-f003">Figure 3</a>.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The current generated by each quadrant of the four-quadrant PIN detectors enters the channels of the signal processing circuit. Each channel converts the analog current signal into a digital voltage signal for the processor to calculate the displacement of the target by the sum and difference algorithm. At the same time, the processor controls the bias voltage of the four-quadrant PIN detector and the gain of the variable gain amplifier according to the value of the digital signal.As a result, the signal amplitude can always remain within the input range of the ADC to avoid saturation. The structure of each channel of the four-quadrant PIN detector and its post-processing chain is the same.The channel consists of a transmission impedance amplifier (TIA), an operational amplifier (OPA), a variable gain amplifier (VGA) and an analog-to-digital converter (ADC).</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The gain model of QD and its signal processing chain in a channel is shown in 
+  <a ref-type="fig" rid="sensors-19-02284-f004" href="#sensors-19-02284-f004">Figure 4</a>. 
+  <div class="inline-formula">
+   <div id="mm21" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">Q</span>
+        <span class="mi">D</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm22" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm23" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm24" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">V</span>
+        <span class="mi">G</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> and 
+  <div class="inline-formula">
+   <div id="mm25" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">A</span>
+        <span class="mi">D</span>
+        <span class="mi">C</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> are the gains of QD, TIA, OPA, VGA and ADC, respectively. The reflected laser 
+  <div class="inline-formula">
+   <div id="mm26" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">0</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> forms a spot on the surface of QD after passing through the optics. The QD converts the optical power signal 
+  <div class="inline-formula">
+   <div id="mm27" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">0</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> into a current signal 
+  <div class="inline-formula">
+   <div id="mm28" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>. The TIA converts 
+  <div class="inline-formula">
+   <div id="mm29" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> into a voltage signal 
+  <div class="inline-formula">
+   <div id="mm30" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>. The secondary amplifier OPA amplifies 
+  <div class="inline-formula">
+   <div id="mm31" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> and generates 
+  <div class="inline-formula">
+   <div id="mm32" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">3</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>. The 
+  <div class="inline-formula">
+   <div id="mm33" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">3</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is conditioned by VGA to a certain amplitude within the input range of the ADC. The ADC converts the signal 
+  <div class="inline-formula">
+   <div id="mm34" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">4</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> to a digital signal 
+  <div class="inline-formula">
+   <div id="mm35" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">5</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> for the processor.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">As can be seen from 
+  <a ref-type="fig" rid="sensors-19-02284-f004" href="#sensors-19-02284-f004">Figure 4</a>, the output of ADC is:
+  <div id="FD8-sensors-19-02284" class="disp-formula">
+   <span class="label">(8)</span>
+   <div id="mm36" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">5</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">Q</span>
+        <span class="mi">D</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">V</span>
+        <span class="mi">G</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">A</span>
+        <span class="mi">D</span>
+        <span class="mi">C</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">S</span>
+       <span class="mn">0</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The signal-to-noise ratio of the laser semi-active guidance system is:
+  <div id="FD9-sensors-19-02284" class="disp-formula">
+   <span class="label">(9)</span>
+   <div id="mm37" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span class="mi">S</span>
+      <span class="mi">N</span>
+      <span class="mi">R</span>
+      <span class="mo">=</span>
+      <span class="mn">20</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">log</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">10</span>
+       </div>
+      </div>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">u</span>
+         <span class="mi">s</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">u</span>
+         <div class="mrow">
+          <span class="mi">N</span>
+          <span class="mo">_</span>
+          <span class="mi">T</span>
+          <span class="mi">O</span>
+          <span class="mi">T</span>
+          <span class="mi">A</span>
+          <span class="mi">L</span>
+          <span stretchy="false" class="mo">(</span>
+          <span class="mi">R</span>
+          <span class="mi">T</span>
+          <span class="mi">O</span>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> where 
+  <div class="inline-formula">
+   <div id="mm38" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <span class="mi">s</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the received digital signal derived from the reflected laserradiation from the illuminated object. The 
+  <div class="inline-formula">
+   <div id="mm39" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the RMS value of system noise measured at the output of the ADC. It is known by Equation (8) that:
+  <div id="FD10-sensors-19-02284" class="disp-formula">
+   <span class="label">(10)</span>
+   <div id="mm40" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <span class="mi">s</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">s</span>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">Q</span>
+        <span class="mi">D</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">V</span>
+        <span class="mi">G</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">A</span>
+        <span class="mi">D</span>
+        <span class="mi">C</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The 
+  <div class="inline-formula">
+   <div id="mm41" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is contributed by each node which composed the entire signal chain. The noise of QD is a combination of shot noise and thermal noise. The shot noise is the main contributor to the QD noise when a bias voltage is applied to the QD [
+  <a rid="B19-sensors-19-02284" ref-type="bibr" href="#B19-sensors-19-02284">19</a>]. The noise of QD is given by:
+  <div id="FD11-sensors-19-02284" class="disp-formula">
+   <span class="label">(11)</span>
+   <div id="mm42" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">i</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">Q</span>
+        <span class="mi">D</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <span class="mn">2</span>
+        <span class="mi">q</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">i</span>
+           <span class="mi">s</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">i</span>
+           <span class="mi">d</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <span class="mi">i</span>
+           <span class="mi">B</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">B</span>
+        <span class="mi">W</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> where 
+  <div class="inline-formula">
+   <div id="mm43" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">i</span>
+       <span class="mi">s</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the photocurrent generated by 
+  <div class="inline-formula">
+   <div id="mm44" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">S</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm45" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">i</span>
+       <span class="mi">B</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the photocurrent generated by 
+  <div class="inline-formula">
+   <div id="mm46" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">B</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm47" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">i</span>
+       <span class="mi">D</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the dart current of the QD, 
+  <div class="inline-formula">
+   <div id="mm48" class="math">
+    <div class="mrow">
+     <span class="mi">q</span>
+    </div>
+   </div>
+  </div> is electron charge and 
+  <div class="inline-formula">
+   <div id="mm49" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span class="mi">B</span>
+      <span class="mi">W</span>
+     </div>
+    </div>
+   </div>
+  </div> is the noise bandwidth.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The noise of TIA referenced to the input is as follows [
+  <a rid="B20-sensors-19-02284" ref-type="bibr" href="#B20-sensors-19-02284">20</a>]:
+  <div id="FD12-sensors-19-02284" class="disp-formula">
+   <span class="label">(12)</span>
+   <div id="mm50" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">i</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msubsup">
+           <span class="mi">I</span>
+           <div class="mrow">
+            <span class="mi">n</span>
+            <span class="mo">_</span>
+            <span class="mi">T</span>
+            <span class="mi">I</span>
+            <span class="mi">A</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <span class="mn">2</span>
+              <span class="mi">π</span>
+              <span class="mi">f</span>
+              <div class="msub">
+               <span class="mi">V</span>
+               <div class="mrow">
+                <span class="mi">n</span>
+                <span class="mo">_</span>
+                <span class="mi">T</span>
+                <span class="mi">I</span>
+                <span class="mi">A</span>
+               </div>
+              </div>
+              <div class="msub">
+               <span class="mi">C</span>
+               <div class="mrow">
+                <span class="mi">i</span>
+                <span class="mi">n</span>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mn">4</span>
+          <span class="mi">k</span>
+          <span class="mi">T</span>
+          <span class="mo">/</span>
+          <div class="msub">
+           <span class="mi">R</span>
+           <div class="mrow">
+            <span class="mi">G</span>
+            <span class="mo">_</span>
+            <span class="mi">T</span>
+            <span class="mi">I</span>
+            <span class="mi">A</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">B</span>
+        <span class="mi">W</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> where 
+  <div class="inline-formula">
+   <div id="mm51" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">I</span>
+       <div class="mrow">
+        <span class="mi">n</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the TIA current noise, 
+  <div class="inline-formula">
+   <div id="mm52" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">V</span>
+       <div class="mrow">
+        <span class="mi">n</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the TIA voltage noise, 
+  <div class="inline-formula">
+   <div id="mm53" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">C</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">n</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the total input capacitance seen by the TIA, 
+  <div class="inline-formula">
+   <div id="mm54" class="math">
+    <div class="mrow">
+     <span class="mi">f</span>
+    </div>
+   </div>
+  </div> is the frequency, 
+  <div class="inline-formula">
+   <div id="mm55" class="math">
+    <div class="mrow">
+     <span class="mi">k</span>
+    </div>
+   </div>
+  </div> is Boltzmann’s constant, 
+  <div class="inline-formula">
+   <div id="mm56" class="math">
+    <div class="mrow">
+     <span class="mi">T</span>
+    </div>
+   </div>
+  </div> is temperature in Kelvin, and 
+  <div class="inline-formula">
+   <div id="mm57" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <div class="mrow">
+        <span class="mi">G</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the feedback resistance of the TIA.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The noise of OPA is given by:
+  <div id="FD13-sensors-19-02284" class="disp-formula">
+   <span class="label">(13)</span>
+   <div id="mm58" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msubsup">
+           <span class="mi">V</span>
+           <div class="mrow">
+            <span class="mi">n</span>
+            <span class="mo">_</span>
+            <span class="mi">O</span>
+            <span class="mi">P</span>
+            <span class="mi">A</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mn">4</span>
+          <span class="mi">k</span>
+          <span class="mi">T</span>
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mn">3</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mn">4</span>
+          <span class="mi">k</span>
+          <span class="mi">T</span>
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mn">1</span>
+          </div>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <div class="mfrac">
+               <div class="mrow">
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">2</span>
+                </div>
+               </div>
+               <div class="mrow">
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">1</span>
+                </div>
+                <span class="mo">+</span>
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">2</span>
+                </div>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msubsup">
+           <span class="mi">I</span>
+           <div class="mrow">
+            <span class="mi">n</span>
+            <span class="mo">+</span>
+            <span class="mo">_</span>
+            <span class="mi">O</span>
+            <span class="mi">P</span>
+            <span class="mi">A</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <div class="msubsup">
+           <span class="mi">R</span>
+           <span class="mn">3</span>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msubsup">
+           <span class="mi">I</span>
+           <div class="mrow">
+            <span class="mi">n</span>
+            <span class="mo">−</span>
+            <span class="mo">_</span>
+            <span class="mi">O</span>
+            <span class="mi">P</span>
+            <span class="mi">A</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <div class="msubsup">
+           <span class="mi">R</span>
+           <span class="mn">3</span>
+           <span class="mn">2</span>
+          </div>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <div class="mfrac">
+               <div class="mrow">
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">1</span>
+                </div>
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">2</span>
+                </div>
+               </div>
+               <div class="mrow">
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">1</span>
+                </div>
+                <span class="mo">+</span>
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">2</span>
+                </div>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mn">4</span>
+          <span class="mi">k</span>
+          <span class="mi">T</span>
+          <div class="msub">
+           <span class="mi">R</span>
+           <span class="mn">2</span>
+          </div>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <div class="mfrac">
+               <div class="mrow">
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">2</span>
+                </div>
+               </div>
+               <div class="mrow">
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">1</span>
+                </div>
+                <span class="mo">+</span>
+                <div class="msub">
+                 <span class="mi">R</span>
+                 <span class="mn">2</span>
+                </div>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">B</span>
+        <span class="mi">W</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> where 
+  <div class="inline-formula">
+   <div id="mm59" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">V</span>
+       <div class="mrow">
+        <span class="mi">n</span>
+        <span class="mo">_</span>
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the OPA voltage noise, 
+  <div class="inline-formula">
+   <div id="mm60" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">I</span>
+       <div class="mrow">
+        <span class="mi">n</span>
+        <span class="mo">+</span>
+        <span class="mo">_</span>
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the non-inverting input current noise of OPA, 
+  <div class="inline-formula">
+   <div id="mm61" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">I</span>
+       <div class="mrow">
+        <span class="mi">n</span>
+        <span class="mo">−</span>
+        <span class="mo">_</span>
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the inverting input current noise of OPA, 
+  <div class="inline-formula">
+   <div id="mm62" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> and 
+  <div class="inline-formula">
+   <div id="mm63" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> compose the feedback network, and 
+  <div class="inline-formula">
+   <div id="mm64" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mn">3</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the source impendence of the non-inverting input of OPA.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The noise generated by VGA and ADC will be attenuated by a factor of 
+  <div class="inline-formula">
+   <div id="mm65" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> when it is referenced to the input of TIA because the amplification is mainly achieved by TIA and OPA. By selecting a VGA and ADC withlow noise that is equivalent to the noise of TIA, the main contributors of noise in the analog signal process chain are QD, TIA and OPA.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The total noise reference to the output of ADC is as follows:
+  <div id="FD14-sensors-19-02284" class="disp-formula">
+   <span class="label">(14)</span>
+   <div id="mm66" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msubsup">
+             <span class="mi">i</span>
+             <div class="mrow">
+              <span class="mi">N</span>
+              <span class="mo">_</span>
+              <span class="mi">Q</span>
+              <span class="mi">D</span>
+             </div>
+             <span class="mn">2</span>
+            </div>
+            <span class="mo">+</span>
+            <div class="msubsup">
+             <span class="mi">i</span>
+             <div class="mrow">
+              <span class="mi">N</span>
+              <span class="mo">_</span>
+              <span class="mi">T</span>
+              <span class="mi">I</span>
+              <span class="mi">A</span>
+              <span stretchy="false" class="mo">(</span>
+              <span class="mi">R</span>
+              <span class="mi">T</span>
+              <span class="mi">I</span>
+              <span stretchy="false" class="mo">)</span>
+             </div>
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <div class="msubsup">
+           <span class="mi">R</span>
+           <div class="mrow">
+            <span class="mi">G</span>
+            <span class="mo">_</span>
+            <span class="mi">T</span>
+            <span class="mi">I</span>
+            <span class="mi">A</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">+</span>
+          <div class="msubsup">
+           <span class="mi">u</span>
+           <div class="mrow">
+            <span class="mi">N</span>
+            <span class="mo">_</span>
+            <span class="mi">O</span>
+            <span class="mi">P</span>
+            <span class="mi">A</span>
+            <span stretchy="false" class="mo">(</span>
+            <span class="mi">R</span>
+            <span class="mi">T</span>
+            <span class="mi">I</span>
+            <span stretchy="false" class="mo">)</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">O</span>
+          <span class="mi">P</span>
+          <span class="mi">A</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">V</span>
+          <span class="mi">G</span>
+          <span class="mi">A</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mi">D</span>
+          <span class="mi">C</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <span class="mi">u</span>
+         <div class="mrow">
+          <span class="mi">N</span>
+          <span class="mo">_</span>
+          <span class="mi">V</span>
+          <span class="mi">G</span>
+          <span class="mi">A</span>
+          <span stretchy="false" class="mo">(</span>
+          <span class="mi">R</span>
+          <span class="mi">T</span>
+          <span class="mi">I</span>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">V</span>
+          <span class="mi">G</span>
+          <span class="mi">A</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mi">D</span>
+          <span class="mi">C</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <span class="mi">u</span>
+         <div class="mrow">
+          <span class="mi">N</span>
+          <span class="mo">_</span>
+          <span class="mi">A</span>
+          <span class="mi">D</span>
+          <span class="mi">C</span>
+          <span stretchy="false" class="mo">(</span>
+          <span class="mi">R</span>
+          <span class="mi">T</span>
+          <span class="mi">I</span>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div class="msubsup">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mi">D</span>
+          <span class="mi">C</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Combing Equations (10)–(14) with Equation (9) we can obtain the 
+  <div class="inline-formula">
+   <div id="mm67" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span class="mi">S</span>
+      <span class="mi">N</span>
+      <span class="mi">R</span>
+     </div>
+    </div>
+   </div>
+  </div> as follows:
+  <div id="FD15-sensors-19-02284" class="disp-formula">
+   <span class="label">(15)</span>
+   <div id="mm68" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span class="mi">S</span>
+      <span class="mi">N</span>
+      <span class="mi">R</span>
+      <span class="mo">=</span>
+      <span class="mn">20</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">log</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">10</span>
+       </div>
+      </div>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msup">
+           <span class="mi">D</span>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mn">4</span>
+          <div class="msubsup">
+           <span class="mi">R</span>
+           <span class="mi">M</span>
+           <span class="mn">2</span>
+          </div>
+         </div>
+        </div>
+        <div class="msub">
+         <span class="mi">P</span>
+         <span class="mi">L</span>
+        </div>
+        <div class="msub">
+         <span class="mi">ρ</span>
+         <span class="mi">T</span>
+        </div>
+        <div class="msub">
+         <span class="mi">T</span>
+         <span class="mi">R</span>
+        </div>
+        <div class="msub">
+         <span class="mi">T</span>
+         <span class="mi">F</span>
+        </div>
+        <div class="msup">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <span class="mo">−</span>
+          <span class="mi">σ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <span class="mi">R</span>
+             <span class="mi">M</span>
+            </div>
+            <span class="mo">+</span>
+            <div class="msub">
+             <span class="mi">R</span>
+             <span class="mi">L</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+        </div>
+        <span class="mi">cos</span>
+        <span class="mi">θ</span>
+        <div class="msub">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">Q</span>
+          <span class="mi">D</span>
+         </div>
+        </div>
+        <div class="msub">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">T</span>
+          <span class="mi">I</span>
+          <span class="mi">A</span>
+         </div>
+        </div>
+        <div class="msub">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">O</span>
+          <span class="mi">P</span>
+          <span class="mi">A</span>
+         </div>
+        </div>
+        <div class="msub">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">V</span>
+          <span class="mi">G</span>
+          <span class="mi">A</span>
+         </div>
+        </div>
+        <div class="msub">
+         <span class="mi">G</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mi">D</span>
+          <span class="mi">C</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">u</span>
+         <div class="mrow">
+          <span class="mi">N</span>
+          <span class="mo">_</span>
+          <span class="mi">T</span>
+          <span class="mi">O</span>
+          <span class="mi">T</span>
+          <span class="mi">A</span>
+          <span class="mi">L</span>
+          <span stretchy="false" class="mo">(</span>
+          <span class="mi">R</span>
+          <span class="mi">T</span>
+          <span class="mi">O</span>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The distance between the target and the receiving optics 
+  <div class="inline-formula">
+   <div id="mm69" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mi">M</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> change from far to near until the missile hits the target during the process of guidance. 
+  <div class="inline-formula">
+   <div id="mm70" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <div class="mrow">
+        <span class="mi">M</span>
+        <span class="mo">_</span>
+        <span class="mi">M</span>
+        <span class="mi">A</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the maximum value of 
+  <div class="inline-formula">
+   <div id="mm71" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mi">M</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> which characterizes how far the semi-active laser guidance system can detect targets. The 
+  <div class="inline-formula">
+   <div id="mm72" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">_</span>
+        <span class="mi">P</span>
+        <span class="mi">P</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is used to represent the peak-to-peak value of 
+  <div class="inline-formula">
+   <div id="mm73" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>. For Gaussian noise and a given value of RMS noise, the ratio of 
+  <div class="inline-formula">
+   <div id="mm74" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">_</span>
+        <span class="mi">P</span>
+        <span class="mi">P</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> to 
+  <div class="inline-formula">
+   <div id="mm75" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is set to 6.6 to obtain the 99.9% of the time noise will not exceed the nominal peak-to-peak value. The ratio of 
+  <div class="inline-formula">
+   <div id="mm76" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <span class="mi">s</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> to 
+  <div class="inline-formula">
+   <div id="mm77" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">_</span>
+        <span class="mi">P</span>
+        <span class="mi">P</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is at least 2 in order to detect the target. Therefore, it is required that the minimum value of the SNR of the receiving system is 22.4 dB in order to detect the target. Meanwhile, the value of 
+  <div class="inline-formula">
+   <div id="mm78" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mi">M</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is 
+  <div class="inline-formula">
+   <div id="mm79" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <div class="mrow">
+        <span class="mi">M</span>
+        <span class="mo">_</span>
+        <span class="mi">M</span>
+        <span class="mi">A</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>. When the ambient temperature changes drastically, 
+  <div class="inline-formula">
+   <div id="mm80" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <div class="mrow">
+        <span class="mi">M</span>
+        <span class="mo">_</span>
+        <span class="mi">M</span>
+        <span class="mi">A</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> will change accordingly and deviate from the desiredvalue of the design point. It can be seen from Equation (15) that 
+  <div class="inline-formula">
+   <div id="mm81" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">P</span>
+       <span class="mi">L</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm82" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">ρ</span>
+       <span class="mi">T</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm83" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">ρ</span>
+       <span class="mi">B</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm84" class="math">
+    <div class="mrow">
+     <span class="mi">σ</span>
+    </div>
+   </div>
+  </div> and 
+  <div class="inline-formula">
+   <div id="mm85" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">E</span>
+       <span class="mi">λ</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> are not changed under the same illumination conditions and target characteristics. 
+  <div class="inline-formula">
+   <div id="mm86" class="math">
+    <div class="mrow">
+     <span class="mi">D</span>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm87" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">R</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> and 
+  <div class="inline-formula">
+   <div id="mm88" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">T</span>
+       <span class="mi">F</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> can change a little with temperature by selecting the appropriate material and optimizing the optical design. Usually the characteristics of electronic devices change greatlywith temperature. Therefore, the main factors affecting 
+  <div class="inline-formula">
+   <div id="mm89" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">R</span>
+       <div class="mrow">
+        <span class="mi">M</span>
+        <span class="mo">_</span>
+        <span class="mi">M</span>
+        <span class="mi">A</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> are 
+  <div class="inline-formula">
+   <div id="mm90" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">Q</span>
+        <span class="mi">D</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm91" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">T</span>
+        <span class="mi">I</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm92" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">O</span>
+        <span class="mi">P</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm93" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">V</span>
+        <span class="mi">G</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm94" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">G</span>
+       <div class="mrow">
+        <span class="mi">A</span>
+        <span class="mi">D</span>
+        <span class="mi">C</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> and 
+  <div class="inline-formula">
+   <div id="mm95" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">u</span>
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">_</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span class="mi">T</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">R</span>
+        <span class="mi">T</span>
+        <span class="mi">O</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, according to Equation (15), and they will be analyzed in following sections.
+ </p>
+</sec>

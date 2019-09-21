@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec010" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model and methods</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Formally, the resource dynamics of the SPDm are given by 
+  <div id="pone.0218440.e004" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e004.jpg" id="pone.0218440.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M4" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <div accent="true" class="mover">
+        <span class="mi">x</span>
+        <span class="mo">˙</span>
+       </div>
+       <span class="mn">1</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <span class="mi">t</span>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">G</span>
+       <span class="mn">1</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="msub">
+        <span class="mi">x</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">-</span>
+      <span class="mi">d</span>
+      <div class="msub">
+       <span class="mi">x</span>
+       <span class="mn">1</span>
+      </div>
+      <span class="mo">-</span>
+      <div class="msub">
+       <span class="mi">H</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div>
+  <div id="pone.0218440.e005" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e005.jpg" id="pone.0218440.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M5" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <div accent="true" class="mover">
+        <span class="mi">x</span>
+        <span class="mo">˙</span>
+       </div>
+       <span class="mn">2</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <span class="mi">t</span>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">G</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="msub">
+        <span class="mi">x</span>
+        <span class="mn">2</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">-</span>
+      <span class="mi">d</span>
+      <div class="msub">
+       <span class="mi">x</span>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">-</span>
+      <div class="msub">
+       <span class="mi">H</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(2)</span>
+  </div> where the change in the abundance of resources in habitat one (
+  <div id="pone.0218440.e006" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e006.jpg" id="pone.0218440.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M6" class="math">
+     <div class="msub">
+      <div accent="true" class="mover">
+       <span class="mi">x</span>
+       <span class="mo">˙</span>
+      </div>
+      <span class="mn">1</span>
+     </div>
+    </div>
+   </div>
+  </div>) is the growth of the resource (
+  <span class="italic">G</span>
+  <sub>1</sub>(
+  <span class="italic">x</span>
+  <sub>1</sub>)) in habitat one less the natural decay 
+  <span class="italic">dx</span>
+  <sub>1</sub>, less the total biomass harvested by foragers, 
+  <span class="italic">H</span>
+  <sub>1</sub>. The total harvest in habitat 
+  <span class="italic">i</span> is the sum of the harvests from each group. 
+  <a rid="pone.0218440.t001" ref-type="table" href="#pone.0218440.t001">Table 1</a> summarizes the model’s state variables and parameters.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The growth of resources in each habitat, 
+  <span class="italic">G</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>(
+  <span class="italic">x</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) is defined by the logistic function 
+  <span class="italic">G</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>(
+  <span class="italic">x</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) = 
+  <span class="italic">x</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>
+  <span class="italic">r</span>(1 − 
+  <span class="italic">x</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>/(
+  <span class="italic">K</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> + 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>)); where 
+  <span class="italic">r</span> is the growth rate of a resource base, and scales the response of a given ecosystem to an external driver, which scales the variation of the resource, and 
+  <span class="italic">K</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the initial carrying capacity of a resource base. In a two habitat model, we have two inflows (external drivers), 
+  <span class="italic">I</span>
+  <sub>1</sub> and 
+  <span class="italic">I</span>
+  <sub>2</sub>. These inflows represent an influx of energy or water that seasonally change the carrying capacity, 
+  <span class="italic">K</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> of a resource base, and these inflows are sinusoids with a mean of 1. For example, if 
+  <span class="italic">I</span>
+  <sub>1</sub> = 1 + 
+  <span class="italic">α</span> sin(2
+  <span class="italic">πt</span>) and 
+  <span class="italic">I</span>
+  <sub>2</sub> = 1 − 
+  <span class="italic">α</span> sin(2
+  <span class="italic">πt</span>), then 
+  <span class="italic">I</span>
+  <sub>1</sub> and 
+  <span class="italic">I</span>
+  <sub>2</sub> are 180 degrees out of phase, which may represent summer–winter peaks and valleys in the availability of resources, respectively; while 
+  <span class="italic">α</span> is the amplitude of the peaks and valleys (
+  <a ref-type="fig" rid="pone.0218440.g003" href="#pone.0218440.g003">Fig 3a</a>).
+ </p>
+ <div id="pone.0218440.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0218440.t001</span>
+  <span class="label">Table 1</span>
+  <div class="caption">
+   <div class="title">Model state variables and parameters.</div>
+  </div>
+  <div class="alternatives">
+   <div id="pone.0218440.t001g" xlink:href="pone.0218440.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <table frame="box" rules="all" border="0">
+    <colgroup span="1">
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+    </colgroup>
+    <tbody>
+     <tr>
+      <td align="left" style="border-bottom:thick" rowspan="1" colspan="1">
+       <span class="bold">State Variables</span>
+      </td>
+      <td align="left" style="border-bottom:thick" rowspan="1" colspan="1">
+       <span class="bold">Definitions</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">x</span>
+       <sub>
+        <span class="italic">i</span>
+       </sub>(
+       <span class="italic">t</span>)
+      </td>
+      <td align="left" rowspan="1" colspan="1">The density of resources (biomass/area) in habitat i at time 
+       <span class="italic">t</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">p</span>
+       <sub>
+        <span class="italic">i</span>
+       </sub>(
+       <span class="italic">t</span>)
+      </td>
+      <td align="left" rowspan="1" colspan="1">The proportion of effort spent in habitat i at time 
+       <span class="italic">t</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">e</span>
+       <sub>
+        <span class="italic">ij</span>
+       </sub>(
+       <span class="italic">t</span>)
+      </td>
+      <td align="left" rowspan="1" colspan="1">The effort spent in the harvest of resources in habitat i by group j at time 
+       <span class="italic">t</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" style="border-bottom:thick" rowspan="1" colspan="1">
+       <span class="bold">Parameters</span>
+      </td>
+      <td align="left" style="border-bottom:thick" rowspan="1" colspan="1">
+       <span class="bold">Definitions</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">α</span>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The amplitude of resource variation (the severity of boom-busts)</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">r</span>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The mean intrinsic rate of resource growth (yr
+       <span class="sup">−1</span>)
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">K</span>
+       <sub>
+        <span class="italic">i</span>
+       </sub>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The maximum abundance of resources in habitat 
+       <span class="italic">i</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">I</span>
+       <sub>
+        <span class="italic">i</span>
+       </sub>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The inflow of energy into habitat i</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">d</span>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The natural decay of resources</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">q</span>
+       <sub>
+        <span class="italic">ij</span>
+       </sub>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The transaction cost of accessing habitat i for group j</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">N</span>
+       <sub>
+        <span class="italic">j</span>
+       </sub>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The population of foragers in group j</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">h</span>
+       <sub>
+        <span class="italic">m</span>
+       </sub>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The energy target per forager</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">r</span>
+       <sub>
+        <span class="italic">p</span>
+       </sub>
+      </td>
+      <td align="left" rowspan="1" colspan="1">The strategy adjustment rate</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The variable 
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is the total harvest from habitat 
+  <span class="italic">i</span> by group 
+  <span class="italic">j</span> (
+  <span class="italic">H</span>
+  <sub>11</sub>, 
+  <span class="italic">H</span>
+  <sub>21</sub>, etc.). We define the harvest of an individual as 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> = 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub>
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub>
+  <span class="italic">x</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>, where 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is the effort an individual from group 
+  <span class="italic">j</span> spends harvesting in habitat 
+  <span class="italic">i</span>. The parameter 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> defines the “harvestability” of the resource per unit of resource, per unit of effort of an individual from group 
+  <span class="italic">j</span> in habitat 
+  <span class="italic">i</span>. Total harvests are, then, individual harvest multiplied by population size: 
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> = 
+  <span class="italic">N</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub>, where 
+  <span class="italic">N</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> is the population size of group 
+  <span class="italic">j</span>. The parameter 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> scales (sets the units on) the sustainable population size of a given habitat. We set, initially, 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> = 1 for 
+  <span class="italic">i</span> = 
+  <span class="italic">j</span> and 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> = 
+  <span class="italic">q</span>. This means that there is no cost to access resources within habitats or between habitats, either in terms of mobility or participating in a gift exchange ceremony to access a habitat (e.g., [
+  <a rid="pone.0218440.ref038" ref-type="bibr" href="#pone.0218440.ref038">38</a>]). The notion of territorial rights can be operationalized mathematically as 
+  <span class="italic">q</span>
+  <sub>11</sub> &gt; 
+  <span class="italic">q</span>
+  <sub>12</sub> and 
+  <span class="italic">q</span>
+  <sub>22</sub> &gt; 
+  <span class="italic">q</span>
+  <sub>21</sub>. Under this condition, it is more costly for an individual in group one to enter the home-range of group two than forage in their own home-range.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Two basic assumptions guide how we model foraging effort (time spent harvesting food within a habitat). The first is that there exists some social convention that links individuals (kin or networks of kin) and that these social conventions are tied to home-ranges via a shared knowledge system [
+  <a rid="pone.0218440.ref030" ref-type="bibr" href="#pone.0218440.ref030">30</a>]. Second, because we are interested in aggregate-level organizational patterns, we keep the individual model of decision making ecologically bounded. We model a representative agent that wants to meet their minimum harvest target, 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">m</span>
+  </sub>. Once this is met, foraging effort stops. A reasonable assumption among foragers who do not store food [
+  <a rid="pone.0218440.ref054" ref-type="bibr" href="#pone.0218440.ref054">54</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We assume that foragers attempt to meet a target resource uptake rate with a minimum expenditure of labor because this maximizes the time available for other fitness enhancing activities. 
+  <a ref-type="fig" rid="pone.0218440.g003" href="#pone.0218440.g003">Fig 3b</a> shows the target resource level (the red curve) and the effort level necessary to achieve a constant resource target (black curve) for a partitioned forager in habitat one. When resources are scarce during the winter (blue curve in 
+  <a ref-type="fig" rid="pone.0218440.g003" href="#pone.0218440.g003">Fig 3a</a> is at a minimum), effort is at a maximum. The dynamic is: Partitioned foragers adjust their work load to compensate for variation in the resource and, by doing so, maintain a constant intake of food.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In cases where variation in the availability of resources occurs out of phase, foragers may have incentives to migrate, in addition to adjusting their habitat specific foraging effort, to a habitat with more abundant resources to smooth out variation in their effort and returns from labor. To investigate this dynamic, we let 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> represent the total harvest effort of a representative agent from group 
+  <span class="italic">j</span>, and 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> the proportion of time individuals in group 
+  <span class="italic">j</span> spend in their “home-range.” Thus, 
+  <div id="pone.0218440.e007" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e007.jpg" id="pone.0218440.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M7" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">11</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mo">,</span>
+         <span width="0.166667em" class="mspace"/>
+         <span width="0.166667em" class="mspace"/>
+         <span width="0.166667em" class="mspace"/>
+        </div>
+       </div>
+       <div class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">21</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <span class="mn">1</span>
+          <span class="mo">-</span>
+          <div class="msub">
+           <span class="mi">p</span>
+           <span class="mn">1</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mo">,</span>
+         <span width="0.166667em" class="mspace"/>
+         <span width="0.166667em" class="mspace"/>
+         <span width="0.166667em" class="mspace"/>
+        </div>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">12</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <span class="mn">1</span>
+          <span class="mo">-</span>
+          <div class="msub">
+           <span class="mi">p</span>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">2</span>
+         </div>
+         <span class="mo">,</span>
+         <span width="0.166667em" class="mspace"/>
+         <span width="0.166667em" class="mspace"/>
+         <span width="0.166667em" class="mspace"/>
+        </div>
+       </div>
+       <div class="mtd">
+        <div class="mrow">
+         <span width="4pt" class="mspace"/>
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">12</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mn">2</span>
+         </div>
+         <div class="msub">
+          <span class="mi">e</span>
+          <span class="mn">2</span>
+         </div>
+         <span class="mo">.</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(3)</span>
+  </div> Where 
+  <span class="italic">e</span>
+  <sub>11</sub> is the effort (time) expended to harvest resources in habitat one by group one, which is the effort expended on foraging by group one multiplied by the proportion of time spent in habitat one (
+  <span class="italic">p</span>
+  <sub>1</sub>). The term 
+  <span class="italic">e</span>
+  <sub>21</sub> is the effort expended to harvest resources in habitat two by group one and so on.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The harvest per unit effort in each habitat depends on resource abundance and the transaction costs associated with gaining access to those resources, which, holding effort equal, was represented above as: 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> = 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub>
+  <span class="italic">x</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>. Where 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is, as defined above, the harvestability of resources in habitat 
+  <span class="italic">i</span> by group 
+  <span class="italic">j</span>. Thus, 
+  <div id="pone.0218440.e008" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e008.jpg" id="pone.0218440.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M8" class="math">
+     <div class="msub">
+      <span class="mi">h</span>
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span width="2pt" class="mspace"/>
+      </div>
+     </div>
+     <span width="2pt" class="mspace"/>
+     <span class="mo">=</span>
+     <span width="2pt" class="mspace"/>
+     <div class="msub">
+      <span class="mi">e</span>
+      <div class="mrow">
+       <span class="mn">11</span>
+      </div>
+     </div>
+     <div class="msub">
+      <span class="mi">h</span>
+      <div class="mrow">
+       <span class="mn">11</span>
+      </div>
+     </div>
+     <span width="2pt" class="mspace"/>
+     <span class="mo">+</span>
+     <span width="2pt" class="mspace"/>
+     <div class="msub">
+      <span class="mi">e</span>
+      <div class="mrow">
+       <span class="mn">21</span>
+      </div>
+     </div>
+     <div class="msub">
+      <span class="mi">h</span>
+      <div class="mrow">
+       <span class="mn">21</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(4)</span>
+  </div>
+  <div id="pone.0218440.e009" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e009.jpg" id="pone.0218440.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M9" class="math">
+     <div class="msub">
+      <span class="mi">h</span>
+      <div class="mrow">
+       <span class="mn">2</span>
+       <span width="2pt" class="mspace"/>
+      </div>
+     </div>
+     <span width="2pt" class="mspace"/>
+     <span class="mo">=</span>
+     <span width="2pt" class="mspace"/>
+     <div class="msub">
+      <span class="mi">e</span>
+      <div class="mrow">
+       <span class="mn">12</span>
+      </div>
+     </div>
+     <div class="msub">
+      <span class="mi">h</span>
+      <div class="mrow">
+       <span class="mn">12</span>
+      </div>
+     </div>
+     <span width="2pt" class="mspace"/>
+     <span class="mo">+</span>
+     <span width="2pt" class="mspace"/>
+     <div class="msub">
+      <span class="mi">e</span>
+      <div class="mrow">
+       <span class="mn">22</span>
+      </div>
+     </div>
+     <div class="msub">
+      <span class="mi">h</span>
+      <div class="mrow">
+       <span class="mn">22</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(5)</span>
+  </div> where 
+  <span class="italic">h</span>
+  <sub>1</sub> and 
+  <span class="italic">h</span>
+  <sub>2</sub> are the total harvests of a representative agent in group one and two, respectively.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">An individual’s strategy about how much effort to expend (
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>) and how to divide effort between habitats (
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>) adjusts according to the following heuristic: First, “Do I feel hungry (is 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> &lt; 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">m</span>
+  </sub>)?” If so, increase 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> until either 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> = 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">m</span>
+  </sub> or foraging effort reaches a maximum tolerable level 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">x</span>
+  </sub>. Assuming that the decision to adjust foraging effort occurs on a smaller time-scale (days-months) than migration decisions (months-years), we formalize the change in foraging effort as an instantaneous process relative to the proportion of time spent in either habitat, and, thus, represent changes in foraging effort algebraically. That is, given 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>, agents choose 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> such that 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> = 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">m</span>
+  </sub> subject to constraint 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> &lt; 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">x</span>
+  </sub>, 
+  <div id="pone.0218440.e010" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e010.jpg" id="pone.0218440.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M10" class="math">
+     <div class="msub">
+      <span class="mi">e</span>
+      <span class="mn">1</span>
+     </div>
+     <div class="mrow">
+      <span class="mo">=</span>
+      <span form="prefix" movablelimits="true" class="mo">min</span>
+      <span class="mo">(</span>
+      <div class="mfrac">
+       <div class="msub">
+        <span class="mi">h</span>
+        <span class="mi">m</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">p</span>
+         <span class="mn">1</span>
+        </div>
+        <div class="msub">
+         <span class="mi">h</span>
+         <span class="mn">11</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <div class="msub">
+         <span class="mi">h</span>
+         <span class="mn">21</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <div class="msub">
+       <span class="mi">e</span>
+       <span class="mi">x</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(6)</span>
+  </div>
+  <div id="pone.0218440.e011" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e011.jpg" id="pone.0218440.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M11" class="math">
+     <div class="msub">
+      <span class="mi">e</span>
+      <span class="mn">2</span>
+     </div>
+     <div class="mrow">
+      <span class="mo">=</span>
+      <span form="prefix" movablelimits="true" class="mo">min</span>
+      <span class="mo">(</span>
+      <div class="mfrac">
+       <div class="msub">
+        <span class="mi">h</span>
+        <span class="mi">m</span>
+       </div>
+       <div class="mrow">
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mn">2</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <div class="msub">
+         <span class="mi">h</span>
+         <span class="mn">12</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <span class="mi">p</span>
+         <span class="mn">2</span>
+        </div>
+        <div class="msub">
+         <span class="mi">h</span>
+         <span class="mn">22</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <div class="msub">
+       <span class="mi">e</span>
+       <span class="mi">x</span>
+      </div>
+      <span class="mo">)</span>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(7)</span>
+  </div> Eqs 
+  <a ref-type="disp-formula" rid="pone.0218440.e009" href="#pone.0218440.e009">(6)</a> and 
+  <a ref-type="disp-formula" rid="pone.0218440.e011" href="#pone.0218440.e011">(7)</a> state that each representative agent minimizes their foraging effort in a given habitat to obtain their desired level of calories, unless this exceeds the maximum tolerable effort (
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">x</span>
+  </sub>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Second, “Does changing my proportion of time in a habitat (
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>) affect my harvest?” That is, is 
+  <div id="pone.0218440.e012" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e012.jpg" id="pone.0218440.e012g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M12" class="math">
+     <div class="mrow">
+      <div class="msubsup">
+       <span class="mi">h</span>
+       <span class="mi">j</span>
+       <span class="mo">′</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="msub">
+        <span class="mi">p</span>
+        <span class="mi">j</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> positive or negative? If it is positive, then a forager is more willing to change 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>. Willingness to change, however, also depends on how well a forager knows the other habitat. If 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> is high, foragers do not know much about the other non-home-range habitat. If 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> is low, foragers have been away from their home-range a lot, and don’t know it as well. This uncertainty reduces willingness to change 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>. When 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> is an intermediate value (e.g., 0.5), foragers spend roughly equal time in both habitats, know both well, and are more willing to alter their existing strategy. The simplest way to say this is that information moderates decisions about whether to change habitats, which are made based on resource differences.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">There are a number of specific ways the comparison between habitats could be made by foragers. To avoid the problem of the overall scale of resource productivity impacting the comparison between habitats, we normalize by the average background productivity per unit effort. This is similar to the Marginal Value Theorem in which a forager compares their current return rate with the overall mean of all potential habitats in an environment. That is, let 
+  <div id="pone.0218440.e013" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e013.jpg" id="pone.0218440.e013g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M13" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mover">
+           <span class="mi">h</span>
+           <span class="mo">¯</span>
+          </div>
+          <span class="mi">j</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="mfrac">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">h</span>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mi">j</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <span class="mi">h</span>
+            <div class="mrow">
+             <span class="mn">2</span>
+             <span class="mi">j</span>
+            </div>
+           </div>
+          </div>
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(8)</span>
+  </div> where the average harvest of group j equals their harvest in habitats one and two dived by two. Thus, adjustments in 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> are described by 
+  <div id="pone.0218440.e014" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e014.jpg" id="pone.0218440.e014g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M14" class="math">
+     <div class="msub">
+      <div accent="true" class="mover">
+       <span class="mi">p</span>
+       <span class="mo">˙</span>
+      </div>
+      <span class="mn">1</span>
+     </div>
+     <div class="mrow">
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">B</span>
+       <span class="mn">1</span>
+      </div>
+      <div class="msub">
+       <span class="mi">e</span>
+       <span class="mn">1</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="msub">
+        <span class="mi">h</span>
+        <span class="mn">11</span>
+       </div>
+       <span class="mo">-</span>
+       <div class="msub">
+        <span class="mi">h</span>
+        <span class="mn">21</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">/</span>
+      <div class="msub">
+       <div class="mover">
+        <span class="mi">h</span>
+        <span class="mo">¯</span>
+       </div>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(9)</span>
+  </div>
+  <div id="pone.0218440.e015" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e015.jpg" id="pone.0218440.e015g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M15" class="math">
+     <div class="msub">
+      <div accent="true" class="mover">
+       <span class="mi">p</span>
+       <span class="mo">˙</span>
+      </div>
+      <span class="mn">2</span>
+     </div>
+     <div class="mrow">
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">B</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="msub">
+       <span class="mi">e</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="msub">
+        <span class="mi">h</span>
+        <span class="mn">22</span>
+       </div>
+       <span class="mo">-</span>
+       <div class="msub">
+        <span class="mi">h</span>
+        <span class="mn">12</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">/</span>
+      <div class="msub">
+       <div class="mover">
+        <span class="mi">h</span>
+        <span class="mo">¯</span>
+       </div>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(10)</span>
+  </div> where 
+  <span class="italic">B</span>
+  <sub>1</sub> and 
+  <span class="italic">B</span>
+  <sub>2</sub> are the balance of time currently spent in both habitats for the representative agent from group one and two respectively. More formally, 
+  <span class="italic">B</span>
+  <sub>1</sub> = 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">p</span>
+  </sub>(
+  <span class="italic">p</span>
+  <sub>1</sub>)(1 − 
+  <span class="italic">p</span>
+  <sub>1</sub>), and 
+  <span class="italic">B</span>
+  <sub>2</sub> = 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">p</span>
+  </sub>(
+  <span class="italic">p</span>
+  <sub>2</sub>)(1 − 
+  <span class="italic">p</span>
+  <sub>2</sub>) where 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">p</span>
+  </sub> is the strategy adjustment rate. When 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">p</span>
+  </sub> is higher, a forager adjusts to differences in normalized harvest per unit effort more strongly, placing less importance on information as 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">p</span>
+  </sub> increases. Here we set 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">p</span>
+  </sub> = 1. 
+  <a ref-type="fig" rid="pone.0218440.g010" href="#pone.0218440.g010">Fig 10</a> provides an illustration of the moderating effect of the balance of time spent in habitat one on how the forager from group one responds to normalized differences in harvest per unit effort between habitats one and two. In this case, we hold the difference in harvest per unit effort constant at two values: Habitat two provides a 0.01 and 0.02 greater harvest per unit effort than habitat one. Thus, the forager from group one should decrease the proportion of time they spend in habitat one (
+  <div id="pone.0218440.e016" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218440.e016.jpg" id="pone.0218440.e016g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M16" class="math">
+     <div accent="true" class="mover">
+      <div class="msub">
+       <span class="mi">p</span>
+       <span class="mn">1</span>
+      </div>
+      <span class="mo">˙</span>
+     </div>
+    </div>
+   </div>
+  </div>). The main point is that when the balance of time between the two habitats is equal at 0.5, a forager more quickly decreases the proportion of her time spent in habitat one because information is abundant on habitat two. However, as the proportion of time in habitat one approaches 1, the forager more strongly discounts the potential for resources in habitat two due to uncertainty about those resources. Thus, a smaller change in the proportion of time spent in habitat one.
+ </p>
+ <div id="pone.0218440.g010" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0218440.g010</span>
+  <span class="label">Fig 10</span>
+  <div class="caption">
+   <div class="title">Illustration of how the proportion of time in a habitat moderates the effect of normalized differences in harvest per unit effort upon the change in proportion of time devoted by the group one forager to habitat one.</div>
+   <p>In this case, harvest per unit effort is higher in habitat two than habitat one at two constant levels: 0.01 (orange dots) and 0.02 (blue triangles). Thus, the group one forager decreases the proportion of time spent in habitat one (y-axis), and this is moderated by the current balance of time spent in habitat one (x-axis). As the proportion of time spent in habitat one decreases, the forager discounts the potential value of resources in habitat two less and adjusts her balance of time away from habitat one more strongly.</p>
+  </div>
+  <div xlink:href="pone.0218440.g010" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+ </div>
+ <sec id="sec011" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods of analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We analyze the SPDm numerically in XPPAUT [
+   <a rid="pone.0218440.ref055" ref-type="bibr" href="#pone.0218440.ref055">55</a>], which is specialty software for analyzing non-linear dynamic systems models, and report our results at two different time scales. The smaller-time scale illustrates the mechanisms that drive the behavior of the model and subtle tradeoffs associated with rapid cycling through multiple habitats vs. habitat partitioning. The larger time-scale illustrates the conditions under which rapid cycling and habitat partitioning should emerge from individual decisions about how to best maintain a consistent supply of food in a variable environment. Our analysis of the larger-time scale focuses on two different perturbations that affect foraging economies: (1) declines in the availability of resources due to, for instance, a dry period, and (2) the process of periodic aggregations of foragers for important ceremonies or due to a climate perturbation. We used XPPAUT to run simulations and generate the phase plots illustrated in Figs 
+   <a ref-type="fig" rid="pone.0218440.g007" href="#pone.0218440.g007">7</a> and 
+   <a ref-type="fig" rid="pone.0218440.g008" href="#pone.0218440.g008">8</a>. We used R to make simple graphs of the relationship between model parameters and simulated outcomes.
+  </p>
+ </sec>
+</sec>

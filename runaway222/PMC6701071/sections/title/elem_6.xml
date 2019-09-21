@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Method</div>
+ <sec id="Sec3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Causal loop diagram</div>
+  <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">A causal loop diagram (CLD) is a conceptual model that represents the formalized hypothesized causal relationships in a system, with an emphasis on relationships that form complete feedback loops. A CLD was constructed to represent well-known risk factors and causes of smoking among youth, namely, parental and peer smoking, secondhand smoke exposure, nicotine dependence, risk perception, and exposure to secondhand smoke. Though there are a multitude of risk factors for smoking, not all of them produce 
+   <span class="italic">dynamic</span> (as opposed to static or constant) effects; consistent with principles of system dynamics [
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>]. In other words, a CLD is intended to display the minimal essential set of feedback relationships in the more complex quantitative stock-and-flow simulation model.
+  </p>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">Figure 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a> shows the CLD that was developed. Five major feedback loops were identified that affect smoking behavior, with 3 being reinforcing/positive feedback loops (in which any change becomes amplified and self-perpetuating) and 2 being balancing/negative feedback loops (in which any change is counteracted and self-limited). Specifically, R1 shows the reinforcing effect of social pressure (from both peers and parents) on youth smoking: the more common smoking is among adolescents, the more susceptible never-smokers become to initiate smoking due to social norms [
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>], peer pressure [
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>, 
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>], behavioral modeling of smoking [
+   <a ref-type="bibr" rid="CR34" href="#CR34">34</a>, 
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>], perceived availability of cigarettes [
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>, 
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>], etc.; and the loop is closed when these new smokers are added to the pool of peers who smoke and (eventually) parents who smoke. Similarly, R2 shows the effect of secondhand smoke on nicotine dependence among non-smoking youth, which makes them more likely to initiate smoking [
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>, 
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>]; the loop again is closed when these youth contribute to further secondhand smoke in the environment. Finally, R3 shows the positive loop introduced by nicotine dependence: smoking increases nicotine dependence [
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>, 
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>], and nicotine dependence perpetuates smoking [
+   <a ref-type="bibr" rid="CR18" href="#CR18">18</a>, 
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>, 
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>]. 
+   <div id="Fig2" class="fig">
+    <span class="label">Fig. 2</span>
+    <div class="caption">
+     <p>Causal loop diagram of smoking behavior. Curved arrows represent (hypothesized) causal relationships, and the polarity of each relationship is labeled as +/−. Feedback loops are labeled as B (balancing or negative feedback loop) and R (reinforcing or positive feedback loop) and numbered. ND: nicotine dependence</p>
+    </div>
+    <div xlink:href="13011_2019_219_Fig2_HTML" id="MO2" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">Balancing loops also exist that attenuate the reinforcing effects in the system (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). Risk perception counteracts increases in youth smoking (loop B1): such an increase in smoking would result in higher prevalence of tobacco-related death and disease, which increases risk perception and lowers the likelihood that future generations of smokers will initiate. Risk perception also motivates the development and implementation of anti-smoking policies (B2) such as tax increases, which reduces susceptibility of initiation among non-smoking youth.
+  </p>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">The contribution of these feedback loops to the dynamics of the simulation model are explained in 
+   <a rid="Sec10" ref-type="sec" href="#Sec10">Results</a>.
+  </p>
+ </sec>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stock-and-flow simulation model</div>
+  <sec id="Sec5" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stocks and flows</div>
+   <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">A detailed stock-and-flow diagram was constructed based on the CLD, and equations and parameters were entered for all variables. The stock-and-flow diagram thus represents the system of hypothesized causal relationships in the system (i.e. the causal factors that determine smoking behavior). System Dynamics models are broken up into a series of “stocks” (a terminology used in system dynamics that refers to some quantity that can accumulate, e.g. people in different stages of addiction, such as experimental smokers) and “flows” (transition rates between stocks, e.g. smoking initiation rates that describe transitioning from a never-smoker to an experimenter), and is especially appropriate for systems that contain positive or negative feedback relationships and show dynamic (i.e. changing over time) behavior (e.g. declining rates of cigarette use over time) [
+    <a ref-type="bibr" rid="CR30" href="#CR30">30</a>]. The stocks represent mutually-exclusive categories of smokers: never-smokers, experimenters, former experimenters, current smokers, and ex-smokers. The distinction between experimenters and smokers was the commonly used criterion of 100 cigarettes/lifetime [
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>] for characterizing lifetime smoking status; thus, once an individual becomes a smoker, he/she cannot again become an experimenter. The distinction between current and former smoking behavior (for both experimenters and current smokers) was any smoking in the past 30 days.
+   </p>
+   <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">These stocks were changed through their corresponding inflows and outflows: smoking initiation, smoking progression, cessation, and relapse. The modeling task, therefore, was to hypothesize how the risk factors influence these flows that in turn, change the levels of the stocks. Figure 
+    <a rid="Fig3" ref-type="fig" href="#Fig3">3</a> shows a simplified version of the stock-and-flow model; the full model with all structure and equations is available online [
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>]. 
+    <div id="Fig3" class="fig">
+     <span class="label">Fig. 3</span>
+     <div class="caption">
+      <p>Simplified stock-and-flow diagram of smoking behavior. Experimenters: smoked &lt; 100 cigarettes/lifetime. Smokers: smoked ≥100 cigarettes/lifetime; current smokers/experimenters: smoked within past 30 days; ex-smokers: did not smoke within past 30 days</p>
+     </div>
+     <div xlink:href="13011_2019_219_Fig3_HTML" id="MO3" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </p>
+  </sec>
+  <sec id="Sec6" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model structure</div>
+   <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">Using variables and feedback relationships from the CLD, a stock-and-flow simulation was then developed to model the initiation and progression of smoking behavior among youth. The crux of the model is an “aging chain” representing different categories of smokers as “stocks” and transitions between these categories as “flows.” Different age groups representing middle school or younger (ages 11–14) and high school (ages 15–18) were modeled in parallel through the use of array variables, to reflect this common age distinction in national surveys such as Monitoring the Future [
+    <a ref-type="bibr" rid="CR42" href="#CR42">42</a>].
+   </p>
+   <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">The model was built and run using Stella (Systems Thinking, Experimental Learning Laboratory with Animation) Architect, version 1.3.1. Stella Architect is produced by Isee Systems, one of the leading developers of system dynamics software. This software is frequently used in educational settings [
+    <a ref-type="bibr" rid="CR43" href="#CR43">43</a>] as well as research settings [
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>]. Stella reaches its results through numeric approximation of a series of differential equations. Specifically, values of stocks are calculated as a function of their initial value (a parameter set by the user) and the integration of net inflows and net outflows, which are in turn determined by their user-specified equations and other variable inputs. Stella uses numeric approximation at each time step (a user-determined fraction of the underlying time unit) and calculates throughout the chosen range of time.
+   </p>
+  </sec>
+ </sec>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Calibration to real data</div>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">The time horizon of the model was set to 1992–2032 (a 40-year range), so that the explanatory power of the model (simulation vs. real data) could be evaluated over the first approximately 20-year period, and projections could be made 20 years into the future.</p>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">Model parameters were selected to replicate actual trends in youth smoking behavior in North Dakota, USA over the observed period. North Dakota was selected as a case study because it has one of the lowest tax rates on cigarettes in the US at $0.44. At the time of this research, legislation was being considered to increase the excise tax by $1.00 or by $1.76 (North Dakota Tobacco Tax Increase, Initiated Statutory Measure 4). Parameters were selected using several methods, including using publicly available population-level statistics, using coefficient estimates from regression models in scientific literature, and (in cases where quantitative data were not available) estimating based on qualitative information, according to standard procedures for incorporating “soft variables” in system dynamics [
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>]. Parameters were validated based on the tests described below. All equations and parameters are available in the model which is available online [
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>].
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model validation</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">A series of model validation tests were conducted identify and eliminate errors in the model and increase the validity of the results. Model testing is conducted throughout the entire model building process. This process exposes limitations or errors in the model and allows for continuous improvements. Using a wide variety of model validation tests, rather than a single validity test, helps to ensure the validity of the model’s output. The current study primarily utilized three separate types of validation tests: boundary adequacy tests, structure tests, and stock-and-flow assessment tests. Some validation tests are based on judgment of the modeler (e.g. boundary of the model), while others are based on software output (e.g. match between simulation data and real data; unit errors).</p>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">First, boundary adequacy tests were performed to make decisions about inclusion/exclusion of many risk factors. Only variables that were directly relevant to youth smoking were considered. Variables were generally included if they were hypothesized to 1) causally affect other variables in the model, 2) be endogenous to the model (i.e. are affected by other variables contained within feedback loops in the model) and 2) contribute dynamically to the model. These inclusion criteria, for example, excluded variables such as demographic characteristics because 1) they may represent associations rather than causal relationships, 2) they cannot be affected by other variables in the model, and 3) despite being associated with an individual’s risk for smoking, they do not produce 
+   <span class="italic">dynamic</span> effects over time at the population level.
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">Next, a series of structure tests were performed. Equations in the model were motivated by, and compared with, logic and findings from scientific literature. For example, monthly smoking quantity was defined as smoking frequency (number of days smoked in 1 month) times cigarettes per day. Parameters were also assessed using sensitivity testing, which is especially important for qualitative or “soft” variables. This was done by re-running many simulations, each time with a different value of a given parameter; thus, the full range of plausible parameter values are tested, and the overall sensitivity of the model (i.e. outcomes of youth smoking rates) to changes in specific parameters was evaluated. All models will display some numeric sensitivity (i.e. at least a small change in the overall 
+   <span class="italic">level</span> of the outcome) but a more serious issue is sensitivity of the behavior mode itself (i.e. the 
+   <span class="italic">shape</span> of the outcome’s behavior over time) [
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>]. Therefore, this test determines whether the model can produce a consistent mode of behavior, regardless of the stochastic variability which results from variation in parameters.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Finally, the stock-and-flow model was assessed with respect to whether it could replicate trends in actual data drawn from national and state survey data, namely the prevalence of past-month smoking from 1992 to 2015 according to the Monitoring the Future (MTF) survey [
+   <a ref-type="bibr" rid="CR42" href="#CR42">42</a>]. In SD, a good match between simulated and observed data is evidence for the appropriateness of the model; for this purpose, replicating the overall dynamics (i.e. the shape of the curve of smoking prevalence over time) is more important than achieving an exact numeric match. Our explanatory model was able to replicate the observed data well, as indicated by the consistency in periods of increase, periods of decrease, and timing the peak of past-month smoking prevalence (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). The key feedback loops contributing to this behavior are explained in 
+   <a rid="Sec10" ref-type="sec" href="#Sec10">Results</a>.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Anti-smoking policy tests</div>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Once the main (explanatory) model was completed, three policies were tested: 1) an increase in the excise tax (from $0.44 to either $1.44 or $2.20, representing the actual and two proposed excise tax rates in North Dakota at the time of this research); 2) an increase in funding for comprehensive tobacco control programs (from $9.80 per capita—the CDC recommended level for North Dakota [
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>]—to $20 per capita, chosen somewhat arbitrarily as roughly double the 2014 value), which was modeled as affecting anti-tobacco media and promotions from the tobacco industry; and 3) improving compliance of retailers regarding sales to minors (from 78% compliance to high school adolescents and 73% compliance to middle school adolescents [
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>], both to 95% compliance).
+  </p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Policies were added to the model as follows. Increases in the excise tax were modeled as reducing the average smoking quantity which in turn reduces initiation and progression rates, and separately as increasing cessation rates. Increased funding for comprehensive tobacco control programs was modeled as lowering tobacco marketing and as increasing perception of health risks. Improved retailer compliance was modeled as reducing perceived cigarette availability, which in turn reduces initiation and progression rates. Policies were implemented in simulation year 2015, and results were simulated through 2032 (allowing approximately 20 years of actual, historical data and 20 years of simulated projections). Each policy was tested in isolation in different simulation runs, and a final simulation run tested all policies together. Policies were evaluated with respect to the projected smoking prevalence resulting from each simulation run, in terms of the percent change in smoking prevalence among adolescents (averaged across middle and high school students). As mentioned in 
+   <a rid="Sec8" ref-type="sec" href="#Sec8">Model Validation</a>, parameter uncertainty produces some uncertainty in the projected smoking prevalence, so the relative 
+   <span class="italic">ranking</span> of effectiveness across policies is of more use than the exact numerical projections, provided that the same ranking is preserved across sensitivity testing of different plausible parameter values.
+  </p>
+ </sec>
+</sec>

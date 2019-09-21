@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Geophysical models in the climate science literature span a wide range of different complexities depending on the associated research objective. Highly complex models are the state-of-the-art for weather and climate prediction [
+   <a rid="pcbi.1007000.ref011" ref-type="bibr" href="#pcbi.1007000.ref011">11</a>, 
+   <a rid="pcbi.1007000.ref023" ref-type="bibr" href="#pcbi.1007000.ref023">23</a>, 
+   <a rid="pcbi.1007000.ref024" ref-type="bibr" href="#pcbi.1007000.ref024">24</a>], whereas simple models allow us to assess processes and feedbacks, thereby improving our intuition of climate system dynamics [
+   <a rid="pcbi.1007000.ref025" ref-type="bibr" href="#pcbi.1007000.ref025">25</a>–
+   <a rid="pcbi.1007000.ref029" ref-type="bibr" href="#pcbi.1007000.ref029">29</a>]. Likewise, the behavioural sciences have benefited from a variety of modelling approaches, that address the diverse set of social processes that take place on the individual and societal level [
+   <a rid="pcbi.1007000.ref030" ref-type="bibr" href="#pcbi.1007000.ref030">30</a>]. Here, we use minimal models for both social and climate dynamics. Starting simple allows us to build intuition on the effect of socio-climate feedbacks that have yet been considered in the climate change literature. The social model is widespread and, despite its simplicity, captures the salient aspects of social dynamics [
+   <a rid="pcbi.1007000.ref002" ref-type="bibr" href="#pcbi.1007000.ref002">2</a>, 
+   <a rid="pcbi.1007000.ref030" ref-type="bibr" href="#pcbi.1007000.ref030">30</a>, 
+   <a rid="pcbi.1007000.ref031" ref-type="bibr" href="#pcbi.1007000.ref031">31</a>]. Moreover, the simple Earth system model that we use [
+   <a rid="pcbi.1007000.ref025" ref-type="bibr" href="#pcbi.1007000.ref025">25</a>] accurately follows the projections of the state-of-the-art CMIP5 models when forced with the IPCC emission scenarios (
+   <a ref-type="supplementary-material" rid="pcbi.1007000.s004" href="#pcbi.1007000.s004">S1 Fig</a>).
+  </p>
+  <sec id="sec004" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Behaviour dynamics</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Individuals in our model are either ‘mitigators’ or ‘non-mitigators’ and they learn these behaviours from others at a specified social learning rate. They switch to the more attractive behaviour according to a utility function governed by the costs of climate change mitigation (such as the cost of installing solar panels or buying gas-electric hybrid vehicles), the costs imposed on non-mitigative behaviour (such as a carbon tax), the costs associated with the average global temperature anomaly, and the utility associated with social norms that reinforce the majority behaviour, whether it be mitigation or non-mitigation. Social norms strengthen as the majority behaviour becomes more prevalent, consistent with empirical studies [
+    <a rid="pcbi.1007000.ref007" ref-type="bibr" href="#pcbi.1007000.ref007">7</a>, 
+    <a rid="pcbi.1007000.ref018" ref-type="bibr" href="#pcbi.1007000.ref018">18</a>]. Formally, the utility of being a mitigator is taken as 
+    <div id="pcbi.1007000.e001" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e001.jpg" id="pcbi.1007000.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M1" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">e</span>
+            <span class="mi">M</span>
+           </div>
+           <span class="mo">=</span>
+           <span class="mo">−</span>
+           <span class="mi">α</span>
+           <span class="mo">+</span>
+           <span class="mi">c</span>
+           <div accent="true" class="mover">
+            <span class="mi">f</span>
+            <span class="mo">˜</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="msub">
+             <span class="mi">T</span>
+             <span class="mi">f</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">δ</span>
+           <span class="mi">x</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(1)</span>
+    </div> where 
+    <span class="italic">α</span> is the cost of adopting mitigative strategies, 
+    <span class="italic">c</span> is a proportionality constant that regulates the extent to which climate change costs influence incentive to mitigate, 
+    <div id="pcbi.1007000.e002" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e002.jpg" id="pcbi.1007000.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M2" class="math">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">f</span>
+         <span class="mo">˜</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mi">T</span>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div> is the cost associated with with a temperature anomaly of 
+    <span class="italic">T</span> degrees Celsius, 
+    <span class="italic">T</span>
+    <sub>
+     <span class="italic">f</span>
+    </sub> is a projected temperature anomaly (see below), 
+    <span class="italic">δ</span> is the strength of social norms and 
+    <span class="italic">x</span> is the proportion of mitigators in the population. The utility of being a non-mitigator is taken as 
+    <div id="pcbi.1007000.e003" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e003.jpg" id="pcbi.1007000.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M3" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">e</span>
+            <span class="mi">N</span>
+           </div>
+           <span class="mo">=</span>
+           <span class="mo">−</span>
+           <span class="mi">γ</span>
+           <span class="mo">−</span>
+           <div accent="true" class="mover">
+            <span class="mi">f</span>
+            <span class="mo">˜</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="msub">
+             <span class="mi">T</span>
+             <span class="mi">f</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">δ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <span class="mi">x</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(2)</span>
+    </div> where 
+    <span class="italic">γ</span> is the cost of non-mitigative behaviour, representing for example a carbon tax. Note that the utility due to social norms here is instead weighted by the proportion of non-mitigators, 1 − 
+    <span class="italic">x</span>.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Social learning is implemented as follows. Each individual samples other members of the population at a fixed rate 
+    <span class="italic">κ</span>. If ‘individual A’ samples ‘individual B’ and B’s strategy has a higher payoff that of A, then A will switch to B’s strategy with a probability proportional to the difference in payoffs. Thus if there are 
+    <span class="italic">x</span> mitigators in the population, the rate at which a non-mitigator encounters a mitigator is 
+    <span class="italic">κx</span>. Should there be a utility gain in switching (
+    <span class="italic">e</span>
+    <sub>
+     <span class="italic">M</span>
+    </sub> &gt; 
+    <span class="italic">e</span>
+    <sub>
+     <span class="italic">N</span>
+    </sub>), the non-mitigator will switch their strategy with a probability proportional to the payoff difference, 
+    <span class="italic">e</span>
+    <sub>
+     <span class="italic">M</span>
+    </sub> − 
+    <span class="italic">e</span>
+    <sub>
+     <span class="italic">N</span>
+    </sub>. Since there are a total of 1 − 
+    <span class="italic">x</span> non-mitigators in the population, the total rate at which non-mitigators switch to being mitigators is 
+    <div id="pcbi.1007000.e004" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e004.jpg" id="pcbi.1007000.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M4" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">r</span>
+            <div class="mrow">
+             <span class="mi">N</span>
+             <span class="mo">→</span>
+             <span class="mi">M</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">κ</span>
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <span class="mi">x</span>
+            <span class="mo">)</span>
+           </div>
+           <span width="2pt" class="mspace"/>
+           <span class="mtext">max</span>
+           <div class="mrow">
+            <span class="mo">{</span>
+            <div class="msub">
+             <span class="mi">e</span>
+             <span class="mi">M</span>
+            </div>
+            <span class="mo">−</span>
+            <div class="msub">
+             <span class="mi">e</span>
+             <span class="mi">N</span>
+            </div>
+            <span class="mo">,</span>
+            <span class="mn">0</span>
+            <span class="mo">}</span>
+           </div>
+           <span class="mo">.</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(3)</span>
+    </div> Using similar arguments, one can show 
+    <div id="pcbi.1007000.e005" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e005.jpg" id="pcbi.1007000.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M5" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">r</span>
+            <div class="mrow">
+             <span class="mi">M</span>
+             <span class="mo">→</span>
+             <span class="mi">N</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">κ</span>
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <span class="mi">x</span>
+            <span class="mo">)</span>
+           </div>
+           <span width="2pt" class="mspace"/>
+           <span class="mtext">max</span>
+           <div class="mrow">
+            <span class="mo">{</span>
+            <div class="msub">
+             <span class="mi">e</span>
+             <span class="mi">N</span>
+            </div>
+            <span class="mo">−</span>
+            <div class="msub">
+             <span class="mi">e</span>
+             <span class="mi">M</span>
+            </div>
+            <span class="mo">,</span>
+            <span class="mn">0</span>
+            <span class="mo">}</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(4)</span>
+    </div> and so the net rate of change in mitigators is 
+    <div id="pcbi.1007000.e006" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e006.jpg" id="pcbi.1007000.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M6" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="mfrac">
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">x</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <span class="mi">r</span>
+            <div class="mrow">
+             <span class="mi">N</span>
+             <span class="mo">→</span>
+             <span class="mi">M</span>
+            </div>
+           </div>
+           <span class="mo">−</span>
+           <div class="msub">
+            <span class="mi">r</span>
+            <div class="mrow">
+             <span class="mi">M</span>
+             <span class="mo">→</span>
+             <span class="mi">N</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">κ</span>
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <span class="mi">x</span>
+            <span class="mo">)</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="msub">
+             <span class="mi">e</span>
+             <span class="mi">M</span>
+            </div>
+            <span class="mo">−</span>
+            <div class="msub">
+             <span class="mi">e</span>
+             <span class="mi">N</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(5)</span>
+    </div> which has an equivalent form to the replicator equations of evolutionary game theory [
+    <a rid="pcbi.1007000.ref032" ref-type="bibr" href="#pcbi.1007000.ref032">32</a>]. Writing the payoff functions explicitly gives 
+    <div id="pcbi.1007000.e007" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e007.jpg" id="pcbi.1007000.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M7" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="mfrac">
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">x</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">κ</span>
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <span class="mi">x</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">[</span>
+           <span class="mi">γ</span>
+           <span class="mo">−</span>
+           <span class="mi">α</span>
+           <span class="mo">+</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">c</span>
+            <span class="mo">+</span>
+            <span class="mn">1</span>
+            <span class="mo">)</span>
+           </div>
+           <div accent="true" class="mover">
+            <span class="mi">f</span>
+            <span class="mo">˜</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="msub">
+             <span class="mi">T</span>
+             <span class="mi">f</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">δ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">2</span>
+            <span class="mi">x</span>
+            <span class="mo">−</span>
+            <span class="mn">1</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">]</span>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(6)</span>
+    </div> which can be reduced to 
+    <div id="pcbi.1007000.e008" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e008.jpg" id="pcbi.1007000.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M8" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="mfrac">
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">x</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">κ</span>
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <span class="mi">x</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">[</span>
+           <span class="mo">−</span>
+           <span class="mi">β</span>
+           <span class="mo">+</span>
+           <span class="mi">f</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="msub">
+             <span class="mi">T</span>
+             <span class="mi">f</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">δ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">2</span>
+            <span class="mi">x</span>
+            <span class="mo">−</span>
+            <span class="mn">1</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">]</span>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(7)</span>
+    </div> by introducing the new parameter 
+    <span class="italic">β</span> = 
+    <span class="italic">α</span> − 
+    <span class="italic">γ</span> (the net cost to mitigate) scaled function 
+    <div id="pcbi.1007000.e009" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e009.jpg" id="pcbi.1007000.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M9" class="math">
+       <div class="mrow">
+        <span class="mi">f</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mi">T</span>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mi">c</span>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+         <span class="mo">)</span>
+        </div>
+        <div accent="true" class="mover">
+         <span class="mi">f</span>
+         <span class="mo">˜</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mi">T</span>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div> (the net temperature associated gain to mitigate).
+   </p>
+  </sec>
+  <sec id="sec005" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Temperature projection</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Because long-term climate forecasts are known to influence individual decisions on whether to support mitigation [
+    <a rid="pcbi.1007000.ref014" ref-type="bibr" href="#pcbi.1007000.ref014">14</a>], the utility function assumes that individuals base decisions on long-term extrapolations of recently experienced climate trends. The projected temperature takes the form 
+    <div id="pcbi.1007000.e010" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e010.jpg" id="pcbi.1007000.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M10" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">T</span>
+            <span class="mi">f</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">t</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">T</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">t</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">+</span>
+           <span class="mo">(</span>
+           <div class="mfrac">
+            <div class="msub">
+             <span class="mi">t</span>
+             <span class="mi">f</span>
+            </div>
+            <div class="msub">
+             <span class="mi">t</span>
+             <span class="mi">p</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">T</span>
+            <div class="mrow">
+             <span class="mo">(</span>
+             <span class="mi">t</span>
+             <span class="mo">)</span>
+            </div>
+            <span class="mo">−</span>
+            <span class="mi">T</span>
+            <div class="mrow">
+             <span class="mo">(</span>
+             <span class="mi">t</span>
+             <span class="mo">−</span>
+             <div class="msub">
+              <span class="mi">t</span>
+              <span class="mi">p</span>
+             </div>
+             <span class="mo">)</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(8)</span>
+    </div> where 
+    <span class="italic">t</span>
+    <sub>
+     <span class="italic">p</span>
+    </sub> is the number of years back to extrapolate from and 
+    <span class="italic">t</span>
+    <sub>
+     <span class="italic">f</span>
+    </sub> is the number of years forward to extrapolate to.
+   </p>
+  </sec>
+  <sec id="sec006" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Perceived costs associated with climate change</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">We assume that the costs associated with climate change have a sigmoidal relationship with the global temperature anomaly. This is motivated by the slow mitigative response to global warming over the past decade (
+    <a ref-type="supplementary-material" rid="pcbi.1007000.s011" href="#pcbi.1007000.s011">S8</a>–
+    <a ref-type="supplementary-material" rid="pcbi.1007000.s013" href="#pcbi.1007000.s013">S10</a> Figs) and the anticipated non-linear alterations in the Earth system with increasing temperature [
+    <a rid="pcbi.1007000.ref033" ref-type="bibr" href="#pcbi.1007000.ref033">33</a>]. Specifically 
+    <div id="pcbi.1007000.e011" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e011.jpg" id="pcbi.1007000.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M11" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div accent="true" class="mover">
+            <span class="mi">f</span>
+            <span class="mo">˜</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">T</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">=</span>
+           <div class="mfrac">
+            <div class="msub">
+             <div accent="true" class="mover">
+              <span class="mi">f</span>
+              <span class="mo">˜</span>
+             </div>
+             <span class="mtext">max</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">+</span>
+             <div class="msup">
+              <span class="mi">e</span>
+              <div class="mrow">
+               <span class="mo">−</span>
+               <span class="mi">ω</span>
+               <span class="mo">(</span>
+               <span class="mi">T</span>
+               <span class="mo">−</span>
+               <div class="msub">
+                <span class="mi">T</span>
+                <span class="mi">c</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(9)</span>
+    </div> where 
+    <div id="pcbi.1007000.e012" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e012.jpg" id="pcbi.1007000.e012g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M12" class="math">
+       <div class="msub">
+        <div accent="true" class="mover">
+         <span class="mi">f</span>
+         <span class="mo">˜</span>
+        </div>
+        <span class="mtext">max</span>
+       </div>
+      </div>
+     </div>
+    </div> corresponds to a maximum cost, 
+    <span class="italic">ω</span> is the degree of nonlinearity of the sigmoid, and 
+    <span class="italic">T</span>
+    <sub>
+     <span class="italic">c</span>
+    </sub> is the critical temperature about which costs are most sensitive to change (
+    <a ref-type="supplementary-material" rid="pcbi.1007000.s008" href="#pcbi.1007000.s008">S5 Fig</a>). We combine 
+    <span class="italic">c</span> and 
+    <div id="pcbi.1007000.e013" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e013.jpg" id="pcbi.1007000.e013g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M13" class="math">
+       <div class="msub">
+        <div accent="true" class="mover">
+         <span class="mi">f</span>
+         <span class="mo">˜</span>
+        </div>
+        <span class="mtext">max</span>
+       </div>
+      </div>
+     </div>
+    </div> into the single parameter 
+    <div id="pcbi.1007000.e014" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e014.jpg" id="pcbi.1007000.e014g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M14" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">f</span>
+            <span class="mtext">max</span>
+           </div>
+           <span class="mo">=</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">c</span>
+            <span class="mo">+</span>
+            <span class="mn">1</span>
+            <span class="mo">)</span>
+           </div>
+           <div class="msub">
+            <div accent="true" class="mover">
+             <span class="mi">f</span>
+             <span class="mo">˜</span>
+            </div>
+            <span class="mtext">max</span>
+           </div>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(10)</span>
+    </div> which yields the functional form 
+    <div id="pcbi.1007000.e015" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e015.jpg" id="pcbi.1007000.e015g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M15" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <span class="mi">f</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">T</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">=</span>
+           <div class="mfrac">
+            <div class="msub">
+             <span class="mi">f</span>
+             <span class="mtext">max</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">+</span>
+             <div class="msup">
+              <span class="mi">e</span>
+              <div class="mrow">
+               <span class="mo">−</span>
+               <span class="mi">ω</span>
+               <span class="mo">(</span>
+               <span class="mi">T</span>
+               <span class="mo">−</span>
+               <div class="msub">
+                <span class="mi">T</span>
+                <span class="mi">c</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(11)</span>
+    </div> as used in (
+    <a ref-type="disp-formula" rid="pcbi.1007000.e008" href="#pcbi.1007000.e008">7</a>).
+   </p>
+  </sec>
+  <sec id="sec007" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Earth system model</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">We couple the social model to an Earth system model [
+    <a rid="pcbi.1007000.ref025" ref-type="bibr" href="#pcbi.1007000.ref025">25</a>] with reduced ocean dynamics [
+    <a rid="pcbi.1007000.ref034" ref-type="bibr" href="#pcbi.1007000.ref034">34</a>]. Dynamics for atmospheric CO
+    <sub>2</sub> is modified to include an anthropogenic emission term, dependent on the proportion of non-mitigators. Specifically 
+    <div id="pcbi.1007000.e016" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e016.jpg" id="pcbi.1007000.e016g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M16" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <div class="mfrac">
+            <div class="mrow">
+             <span class="mi">d</span>
+             <div class="msub">
+              <span class="mi">C</span>
+              <span class="mtext">at</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">ϵ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">t</span>
+            <span class="mo">)</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <span class="mi">x</span>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">−</span>
+           <span class="mi">P</span>
+           <span class="mo">+</span>
+           <div class="msub">
+            <span class="mi">R</span>
+            <span class="mtext">veg</span>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <span class="mi">R</span>
+            <span class="mtext">so</span>
+           </div>
+           <span class="mo">−</span>
+           <div class="msub">
+            <span class="mi">F</span>
+            <span class="mtext">oc</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(12)</span>
+    </div> where 
+    <span class="italic">C</span>
+    <sub>at</sub> is the deviation in atmospheric CO
+    <sub>2</sub> from pre-industrial values, 
+    <span class="italic">ϵ</span>(
+    <span class="italic">t</span>) is the baseline rate of CO
+    <sub>2</sub> emissions in the absence of mitigation, 
+    <span class="italic">P</span> is the rate of carbon uptake via photosynthesis, 
+    <span class="italic">R</span>
+    <sub>
+     <span class="italic">veg</span>
+    </sub> is the outward carbon flux via plant respiration, 
+    <span class="italic">R</span>
+    <sub>
+     <span class="italic">so</span>
+    </sub> is the outward carbon flux via soil respiration and 
+    <span class="italic">F</span>
+    <sub>
+     <span class="italic">oc</span>
+    </sub> is the net uptake of carbon by the oceans. Functional forms for the transfer of carbon via these processes are provided in 
+    <a ref-type="supplementary-material" rid="pcbi.1007000.s001" href="#pcbi.1007000.s001">S1 Text</a>. Global surface temperature is assumed to evolve with the carbon cycle according to [
+    <a rid="pcbi.1007000.ref025" ref-type="bibr" href="#pcbi.1007000.ref025">25</a>] 
+    <div id="pcbi.1007000.e017" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pcbi.1007000.e017.jpg" id="pcbi.1007000.e017g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M17" class="math">
+       <div displaystyle="true" class="mtable">
+        <div class="mtr">
+         <div columnalign="right" class="mtd">
+          <div class="mrow">
+           <span class="mi">c</span>
+           <div class="mfrac">
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">d</span>
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="msub">
+             <span class="mi">F</span>
+             <span class="mi">d</span>
+            </div>
+            <span class="mo">−</span>
+            <span class="mi">σ</span>
+            <div class="msup">
+             <span class="mi">T</span>
+             <span class="mn">4</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <div class="msub">
+            <span class="mi">a</span>
+            <span class="mi">E</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(13)</span>
+    </div> where 
+    <span class="italic">T</span> is the deviation in global surface temperature from pre-industrial values, 
+    <span class="italic">c</span> is the thermal capacity specific heat capacity of the Earth’s surface, 
+    <span class="italic">F</span>
+    <sub>
+     <span class="italic">d</span>
+    </sub> is the net downward flux of radiation absorbed at the planet’s surface (which depends on the opacity of CO
+    <sub>2</sub>), 
+    <span class="italic">σ</span> is the Stefan-Boltzmann constant, and 
+    <span class="italic">a</span>
+    <sub>
+     <span class="italic">E</span>
+    </sub> is the Earth’s surface area. Full details are provided in 
+    <a ref-type="supplementary-material" rid="pcbi.1007000.s001" href="#pcbi.1007000.s001">S1 Text</a>.
+   </p>
+  </sec>
+ </sec>
+ <sec id="sec008" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Simulation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Over the period from 1800 to 2014, the socio-climate model is simulated with a fixed social component, forced with historical anthropogenic carbon emissions. Initial conditions for all climate variables are zero since they represent deviations from pre-industrial values. Social dynamics are initiated in 2014 with an initial proportion of mitigators 
+   <span class="italic">x</span>
+   <sub>0</sub> = 0.05. The ensuing dynamics of 
+   <span class="italic">ϵ</span>(
+   <span class="italic">t</span>) follow an increasing but saturating trend corresponding to the world’s increasing but saturating population size and energy demands. Specifically 
+   <div id="pcbi.1007000.e018" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pcbi.1007000.e018.jpg" id="pcbi.1007000.e018g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M18" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="right" class="mtd">
+         <div class="mrow">
+          <span class="mi">ϵ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <span class="mi">t</span>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mo">{</span>
+          <div class="mtable">
+           <div class="mtr">
+            <div columnalign="left" class="mtd">
+             <div class="mrow">
+              <span class="mtext">linear</span>
+              <span width="4.pt" class="mspace"/>
+              <span class="mtext">interpolation</span>
+              <span width="4.pt" class="mspace"/>
+              <span class="mtext">of</span>
+              <span width="4.pt" class="mspace"/>
+              <span class="mtext">historical</span>
+              <span width="4.pt" class="mspace"/>
+              <span class="mtext">emissions</span>
+             </div>
+            </div>
+            <div columnalign="left" class="mtd">
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">≤</span>
+              <span class="mn">2014</span>
+             </div>
+            </div>
+           </div>
+           <div class="mtr">
+            <div columnalign="left" class="mtd">
+             <div class="mrow">
+              <div class="msub">
+               <span class="mi">ϵ</span>
+               <span class="mn">2014</span>
+              </div>
+              <span class="mo">+</span>
+              <div class="mfrac">
+               <div class="mrow">
+                <div class="mrow">
+                 <span class="mo">(</span>
+                 <span class="mi">t</span>
+                 <span class="mo">−</span>
+                 <span class="mn">2014</span>
+                 <span class="mo">)</span>
+                </div>
+                <div class="msub">
+                 <span class="mi">ϵ</span>
+                 <span class="mtext">max</span>
+                </div>
+               </div>
+               <div class="mrow">
+                <span class="mi">t</span>
+                <span class="mo">−</span>
+                <span class="mn">2014</span>
+                <span class="mo">+</span>
+                <span class="mi">s</span>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div columnalign="left" class="mtd">
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">≥</span>
+              <span class="mn">2014</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="mo"/>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(14)</span>
+   </div> where 
+   <span class="italic">ϵ</span>
+   <sub>max</sub> is the saturating value, and 
+   <span class="italic">s</span> the half-saturation constant, of 
+   <span class="italic">ϵ</span>(
+   <span class="italic">t</span>). This expression is shown graphically in 
+   <a ref-type="supplementary-material" rid="pcbi.1007000.s010" href="#pcbi.1007000.s010">S7 Fig</a>. The system of (delay) ordinary differential equations is simulated using the NDSolve package in Wolfram Mathematica. Historical CO
+   <sub>2</sub> emissions were obtained from the CDIAC data repository [
+   <a rid="pcbi.1007000.ref035" ref-type="bibr" href="#pcbi.1007000.ref035">35</a>].
+  </p>
+ </sec>
+ <sec id="sec009" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Parameters and sensitivity analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Baseline climate parameters are obtained from the original Earth system model [
+   <a rid="pcbi.1007000.ref025" ref-type="bibr" href="#pcbi.1007000.ref025">25</a>] where they were fitted to obtain historical trends of temperature and carbon dynamics. Social parameters are more speculative and so are given wide upper and lower bounds. The relative cost of warming (
+   <span class="italic">f</span>(
+   <span class="italic">T</span>)) with respect to the net cost of mitigation (
+   <span class="italic">β</span>) is chosen in accordance with the argument that the costs of preventative action will be far less than the cost implied otherwise by global warming [
+   <a rid="pcbi.1007000.ref036" ref-type="bibr" href="#pcbi.1007000.ref036">36</a>]. For sensitivity analyses we draw parameters from triangular distributions that peak at baseline values and extend to upper and lower bounds (
+   <a ref-type="supplementary-material" rid="pcbi.1007000.s003" href="#pcbi.1007000.s003">S2 Table</a>). Parameters are kept fixed preceding 2014 to retain historical trends in the simulations.
+  </p>
+ </sec>
+</sec>

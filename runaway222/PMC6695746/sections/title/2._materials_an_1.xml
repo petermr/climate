@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2-ijerph-16-02724" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2. Materials and Methods</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">This study was performed using data collected from the medicalized information system program (MISP) and Emergency Medical Records (EMR) of Cayenne General Hospital. Hospital admissions and emergency visits for VOC in SC patients who lived in Cayenne and the surrounding area, between 1 January 2010 and 31 December 2016, were considered for the analysis.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The weather conditions of Cayenne and the surrounding area in the study period were provided by Météo France, the national meteorological and climatological organization. The data included minimum, maximum, and mean measurements for: Daily temperature, daily humidity, and daily cumulative precipitation. The regional health monitoring unit, CIRE Guyane, provided the weekly number of cases of flu.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">Data analysis</span>—The analysis used weekly data for each time series. First, time series were plotted to look for macroscopic trends. Then, ARIMA models were used to study the potential impact of weather conditions and flu epidemics on VOC occurrence [
+  <a rid="B11-ijerph-16-02724" ref-type="bibr" href="#B11-ijerph-16-02724">11</a>]. ARIMA models allow time series modelling, which takes into account potential residual autocorrelations, under the hypothesis that each measure may be correlated to the previous ones. Previous values are also called ‘lagged’ values, with ‘lag 
+  <span class="italic">i’</span> representing the value recorded 
+  <span class="italic">i</span> week(s) ago, when the unit used is the week. Such models allow the combination of three types of temporal processes. The contribution of each temporal process is specified in the notation ARIMA (p,d,q), where p is the order of the autoregressive process AR(p), d the integrated part corresponding to the degree of differencing I(d), and q the order of the moving average model MA(q). ARIMA models including a seasonal trend are specified as ARIMA (p,d,q)(ps,ds,qs).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">Identification stage for the VOC series</span>—Based on a descriptive analysis (plots) of the weekly number of VOC, and of the series’ autocorrelation function (ACF), and partial autocorrelation functions (PACF), different ARIMA models were tested.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">Estimation and diagnostic checking stage for the VOC series</span>—Models with significant parameters at the 10% level and where the residual series was Gaussian white noise were retained. The Ljung Box Q test was used to check the non-autocorrelation of residuals of the selected models. Normality was examined graphically based on the histogram of residuals and on the normality plot. Akaike’s Information Criterion (AIC), the principle of parsimony, and the control of the model variance were the performance criteria used to decide for the final model for VOC occurrence, among the potential models retained.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">Testing of explanatory series</span>—The explanatory series were a weekly average of the minimum, maximum, and mean measurements of daily temperature, and daily humidity. As well as, the weekly average of cumulative precipitation per day and weekly number of flu cases. Lags of 0 (representing the parameter value of the current week) and lag of 1 week (representing the parameter value of the previous week) of each explanatory series were individually integrated in the ARIMA model of VOC occurrence and retained only if significant at the 10% level. In the case of several significant lags for a given series or for different measures of the same series, clinical relevance and control of variance were used to select the parameter leading to the best model.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">Final model</span>—The explanatory series retained at the end of the previous stage were simultaneously integrated to the VOC model. A backward selection procedure was then used to retain, within the final model, only parameters significant at a 5% level. The Ljung-Box Q test, the residuals histogram, and the normality plot were used to confirm that the residual series of the final model were Gaussian white noise.
+ </p>
+</sec>

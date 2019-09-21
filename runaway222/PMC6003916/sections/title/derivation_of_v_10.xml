@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec11" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Derivation of value functions</div>
+ <p id="Par50" xmlns="http://www.w3.org/1999/xhtml">There are four deterministic policies in our Markov decision process model: (1) 
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">r</span>
+  </sub>(
+  <span class="italic">p</span>) = 
+  <span class="italic">h</span>, 
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">r</span>
+  </sub>(
+  <span class="italic">d</span>) = 
+  <span class="italic">l</span>, (2) 
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">c</span>
+  </sub>(
+  <span class="italic">p</span>) = 
+  <span class="italic">l</span>, 
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">c</span>
+  </sub>(
+  <span class="italic">d</span>) = 
+  <span class="italic">l</span>, (3) 
+  <span class="italic">π</span>
+  <sub>3</sub>(
+  <span class="italic">p</span>) = 
+  <span class="italic">h</span>, 
+  <span class="italic">π</span>
+  <sub>3</sub>(
+  <span class="italic">d</span>) = 
+  <span class="italic">h</span>, (4) 
+  <span class="italic">π</span>
+  <sub>4</sub>(
+  <span class="italic">p</span>) = 
+  <span class="italic">l</span>, 
+  <span class="italic">π</span>
+  <sub>4</sub>(
+  <span class="italic">d</span>) = 
+  <span class="italic">h</span>. We concentrate on deterministic policies only to simplify the calculation without loss of generality, because if an optimal policy exits there exits also a deterministic optimal policy
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>. We further focus here only on the first two policies, named the risky and the cautious policy, since the remaining two apply a high pressure action at the degraded state. This will trap the agent at this position for eternity without receiving any reward. The math on these policies is left to the interested reader.
+ </p>
+ <p id="Par51" xmlns="http://www.w3.org/1999/xhtml">In the following we derive the analytical expressions of the state values of these policies as functions of the parameters (
+  <span class="italic">δ</span>, 
+  <span class="italic">ρ</span>, 
+  <span class="italic">γ</span>, 
+  <span class="italic">r</span>
+  <sub>l</sub>, 
+  <span class="italic">r</span>
+  <sub>h</sub>). From Eq. 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a> and for 
+  <span class="italic">γ</span> &lt; 1 one can derive the recursive relationship between state values, known as the Bellman Equation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR69" href="#CR69">69</a>
+  </span>:
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi} \left( s \right) = \mathop {\sum}\limits_{s{\prime}} p\left( {s{\prime}|s,\pi \left( s \right)} \right)\left[ {\left( {1 - {\gamma} } \right){r}\left( {s,\,{\pi} \left( s \right),{s}{\prime}} \right) + {\gamma} {v}_{\pi} \left( {s{\prime}} \right)} \right]$$\end{document}</span>
+    <div id="M8" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="munder">
+      <div class="mrow">
+       <span class="mo"> ∑</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mo">′</span>
+      </div>
+     </div>
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mo">′</span>
+       <span class="mo">∣</span>
+       <span class="mi">s</span>
+       <span class="mo">,</span>
+       <span class="mi">π</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close="]" open="[" separators="" class="mfenced">
+      <div class="mrow">
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">γ</span>
+        </div>
+       </div>
+       <span class="mi">r</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mi">s</span>
+         <span class="mo">,</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mi">π</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <span class="mi">s</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <span class="mi">s</span>
+         <span class="mo">′</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <span class="mi">γ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">v</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+       </div>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mi">s</span>
+         <span class="mo">′</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>with 
+  <span class="italic">p</span>(
+  <span class="italic">s</span>′|
+  <span class="italic">s</span>, 
+  <span class="italic">π</span>(
+  <span class="italic">s</span>)) being the probability to enter state 
+  <span class="italic">s</span>′ given the agent has started in state s and applied action 
+  <span class="italic">π</span>(
+  <span class="italic">s</span>).
+ </p>
+ <p id="Par52" xmlns="http://www.w3.org/1999/xhtml">Applied to our model the value for the prosperous state reads
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${v}_{\pi} \left( p \right) = \left\{ {\begin{array}{*{20}{l}} {\delta \gamma {v}_{\pi} \left( d \right) + \left( {1 - {\delta} } \right)\left[ {\left( {1 - \gamma } \right){r}_{\mathrm{h}} + \gamma {v}_{\pi} \left( p \right)} \right]} \hfill &amp; {{\mathrm{for}}\;a = h} \hfill \\ {\left( {1 - \gamma } \right){r}_{\mathrm{l}} + \gamma {v}_{\pi} \left( p \right)} \hfill &amp; {{\mathrm{for}}\;a = l} \hfill \end{array}} \right..$$\end{document}</span>
+    <div id="M10" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div close="" open="{" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="mtable">
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <span class="mi">δ</span>
+          <span class="mi">γ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">v</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">π</span>
+           </div>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mi">d</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">-</span>
+            <span class="mi">δ</span>
+           </div>
+          </div>
+          <div close="]" open="[" separators="" class="mfenced">
+           <div class="mrow">
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <span class="mn">1</span>
+              <span class="mo">-</span>
+              <span class="mi">γ</span>
+             </div>
+            </div>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">r</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">h</span>
+             </div>
+            </div>
+            <span class="mo">+</span>
+            <span class="mi">γ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">v</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">π</span>
+             </div>
+            </div>
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <span class="mi">p</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd">
+          <span mathvariant="normal" class="mi">for</span>
+          <span width="2.77626pt" class="mspace"/>
+          <span class="mi">a</span>
+          <span class="mo">=</span>
+          <span class="mi">h</span>
+         </div>
+        </div>
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">-</span>
+            <span class="mi">γ</span>
+           </div>
+          </div>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">r</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">l</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <span class="mi">γ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">v</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">π</span>
+           </div>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mi">p</span>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd">
+          <span mathvariant="normal" class="mi">for</span>
+          <span width="2.77626pt" class="mspace"/>
+          <span class="mi">a</span>
+          <span class="mo">=</span>
+          <span class="mi">l</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par53" xmlns="http://www.w3.org/1999/xhtml">The value for the degraded state is given by
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_\pi \left( d \right) = \left\{ {\begin{array}{*{20}{l}} {\gamma v_\pi \left( d \right)} \hfill &amp; {{\mathrm{for}}\;a = h} \hfill \\ {\left( {1 - \rho } \right)\gamma v_\pi \left( d \right) + \rho \gamma v_\pi \left( p \right)} \hfill &amp; {{\mathrm{for}}\;a = l} \hfill \end{array}} \right..$$\end{document}</span>
+    <div id="M12" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div close="" open="{" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="mtable">
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <span class="mi">γ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">v</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">π</span>
+           </div>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mi">d</span>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd">
+          <span mathvariant="normal" class="mi">for</span>
+          <span width="2.77626pt" class="mspace"/>
+          <span class="mi">a</span>
+          <span class="mo">=</span>
+          <span class="mi">h</span>
+         </div>
+        </div>
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">-</span>
+            <span class="mi">ρ</span>
+           </div>
+          </div>
+          <span class="mi">γ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">v</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">π</span>
+           </div>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mi">d</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <span class="mi">ρ</span>
+          <span class="mi">γ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">v</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">π</span>
+           </div>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mi">p</span>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd">
+          <span mathvariant="normal" class="mi">for</span>
+          <span width="2.77626pt" class="mspace"/>
+          <span class="mi">a</span>
+          <span class="mo">=</span>
+          <span class="mi">l</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par54" xmlns="http://www.w3.org/1999/xhtml">To obtain the explicit state values for the risky policy (
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">r</span>
+  </sub>(
+  <span class="italic">p</span>) = 
+  <span class="italic">h</span>, 
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">r</span>
+  </sub>(
+  <span class="italic">d</span>) = 
+  <span class="italic">l</span>) we solve the system of equations
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${v}_{{\pi} _{r}}\left( p \right) = \delta \gamma {v}_{{\pi} _{r}}\left( d \right) + \left( {1 - \delta } \right)\left[ {\left( {1 - \gamma } \right){r}_{\mathrm{h}} + \gamma {v}_{{\pi} _{r}}\left( p \right)} \right]$$\end{document}</span>
+    <div id="M14" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">δ</span>
+     <span class="mi">γ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <span class="mi">δ</span>
+      </div>
+     </div>
+     <div close="]" open="[" separators="" class="mfenced">
+      <div class="mrow">
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">γ</span>
+        </div>
+       </div>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">h</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <span class="mi">γ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">v</span>
+        </div>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">π</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">r</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mi">p</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ7" class="disp-formula">
+   <span class="label">7</span>
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _r}\left( d \right) = \left( {1 - \rho } \right)\gamma {v}_{\pi _{r}}\left( d \right) + \rho \gamma {v}_{\pi _{r}}\left( p \right),$$\end{document}</span>
+    <div id="M16" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <span class="mi">ρ</span>
+      </div>
+     </div>
+     <span class="mi">γ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ρ</span>
+     <span class="mi">γ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>which yields
+  <div id="Equ8" class="disp-formula">
+   <span class="label">8</span>
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _r}\left( p \right) = r_{\mathrm{h}}\frac{{\left( {1 - \delta } \right)\left( {1 - \left( {1 - \rho } \right)\gamma } \right)}}{{1 - \left( {1 - \delta - \rho } \right)\gamma }}$$\end{document}</span>
+    <div id="M18" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">h</span>
+      </div>
+     </div>
+     <div class="mfrac">
+      <div class="mrow">
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">δ</span>
+        </div>
+       </div>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <span class="mn">1</span>
+           <span class="mo">-</span>
+           <span class="mi">ρ</span>
+          </div>
+         </div>
+         <span class="mi">γ</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">δ</span>
+         <span class="mo">-</span>
+         <span class="mi">ρ</span>
+        </div>
+       </div>
+       <span class="mi">γ</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ9" class="disp-formula">
+   <span class="label">9</span>
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _r}\left( d \right) = r_{\mathrm{h}}\frac{{\left( {1 - \delta } \right)\rho \gamma }}{{1 - \left( {1 - \delta - \rho } \right)\gamma }}.$$\end{document}</span>
+    <div id="M20" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">h</span>
+      </div>
+     </div>
+     <div class="mfrac">
+      <div class="mrow">
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">δ</span>
+        </div>
+       </div>
+       <span class="mi">ρ</span>
+       <span class="mi">γ</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">δ</span>
+         <span class="mo">-</span>
+         <span class="mi">ρ</span>
+        </div>
+       </div>
+       <span class="mi">γ</span>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par55" xmlns="http://www.w3.org/1999/xhtml">To obtain the explicit state values for the cautious policy (
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">c</span>
+  </sub>(
+  <span class="italic">p</span>) = 
+  <span class="italic">l</span>, 
+  <span class="italic">π</span>
+  <sub>
+   <span class="italic">c</span>
+  </sub>(
+  <span class="italic">d</span>) = 
+  <span class="italic">l</span>) we solve the system of equations
+  <div id="Equ10" class="disp-formula">
+   <span class="label">10</span>
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{{\pi} _{c}}\left( p \right) = \left( {1 - \gamma } \right){r}_{\text{l}} + \gamma {v}_{{\pi} _{c}}\left( p \right)$$\end{document}</span>
+    <div id="M22" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <span class="mi">γ</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">l</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">γ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ11" class="disp-formula">
+   <span class="label">11</span>
+   <div class="alternatives">
+    <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _c}\left( d \right) = \left( {1 - \rho } \right)\gamma v_{\pi _c}\left( d \right) + \rho \gamma v_{\pi _{c}}\left( p \right),$$\end{document}</span>
+    <div id="M24" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <span class="mi">ρ</span>
+      </div>
+     </div>
+     <span class="mi">γ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ρ</span>
+     <span class="mi">γ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ11.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>which yields
+  <div id="Equ12" class="disp-formula">
+   <span class="label">12</span>
+   <div class="alternatives">
+    <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _c}\left( p \right) = r_{\mathrm{l}}$$\end{document}</span>
+    <div id="M26" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">l</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ12.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ13" class="disp-formula">
+   <span class="label">13</span>
+   <div class="alternatives">
+    <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _c}\left( d \right) = \frac{{\rho \gamma r_{\mathrm{l}}}}{{1 - \left( {1 - \rho } \right)\gamma }}.$$\end{document}</span>
+    <div id="M28" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">π</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+       <span class="mi">γ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">l</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">-</span>
+         <span class="mi">ρ</span>
+        </div>
+       </div>
+       <span class="mi">γ</span>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ13.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par56" xmlns="http://www.w3.org/1999/xhtml">For 
+  <span class="italic">γ</span> = 1 we compute the values 
+  <span class="italic">v</span>
+  <sub>
+   <span class="italic">π</span>
+  </sub> (which are independent from the initial state for 
+  <span class="italic">γ</span> = 1) by multiplying the stationary state of the effective Markov chain with the reward vector 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathbf{r}}^\pi \, \in \,{\Bbb R}^{|S|}$$\end{document}</span>
+    <div id="M30" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <span width="0.3em" class="mspace"/>
+     <span class="mo">∈</span>
+     <span width="0.3em" class="mspace"/>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="double-struck" class="mi">R</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">∣</span>
+       <span class="mi">S</span>
+       <span class="mo">∣</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2018_4738_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> whose components read
+  <div id="Equ14" class="disp-formula">
+   <span class="label">14</span>
+   <div class="alternatives">
+    <span id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$r_s^\pi = \mathop {\sum}\limits_{s{\prime}} p\left( {s{\prime}|s,\,\pi \left( s \right)} \right)r\left( {s,\pi \left( s \right),s{\prime}} \right).$$\end{document}</span>
+    <div id="M32" display="block" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="munder">
+      <div class="mrow">
+       <span class="mo"> ∑</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mo">′</span>
+      </div>
+     </div>
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mo">′</span>
+       <span class="mo">∣</span>
+       <span class="mi">s</span>
+       <span class="mo">,</span>
+       <span width="0.3em" class="mspace"/>
+       <span class="mi">π</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mi">r</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mo">,</span>
+       <span class="mi">π</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mi">s</span>
+       <span class="mo">′</span>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ14.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par57" xmlns="http://www.w3.org/1999/xhtml">The components of the transition matrix 
+  <span class="bold">P</span>
+  <span class="sup">π</span> of the effective Markov chain read
+  <div id="Equ15" class="disp-formula">
+   <span class="label">15</span>
+   <div class="alternatives">
+    <span id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$P_{s{\prime}s}^\pi = p\left( {s{\prime}|\pi \left( s \right),s} \right).$$\end{document}</span>
+    <div id="M34" display="block" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">P</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mo">′</span>
+       <span class="mi">s</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mo">′</span>
+       <span class="mo">∣</span>
+       <span class="mi">π</span>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ15.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par58" xmlns="http://www.w3.org/1999/xhtml">The stationary state 
+  <span class="bold">
+   <span class="italic">σ</span>
+  </span>
+  <sub>
+   <span class="italic">π</span>
+  </sub> is the normalized eigenvector of the transition matrix with eigenvalue one. Hence,
+  <div id="Equ16" class="disp-formula">
+   <span class="label">16</span>
+   <div class="alternatives">
+    <span id="M35" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi} = \sigma _{\pi} \cdot {\mathbf{r}}^{\pi} .$$\end{document}</span>
+    <div id="M36" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <span class="mo">⋅</span>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ16.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par59" xmlns="http://www.w3.org/1999/xhtml">Performing this calculation for risky and cautious policy explicitly yields consistent results with the calculation for 0 ≤ γ &lt; 1 from above. For 
+  <span class="italic">γ</span> = 1 the value 
+  <span class="italic">v</span>
+  <sub>
+   <span class="italic">π</span>
+  </sub> can be obtained by simply inserting 
+  <span class="italic">γ</span> = 1 into Eqs. 
+  <a rid="Equ8" ref-type="" href="#Equ8">8</a> and 
+  <a rid="Equ9" ref-type="" href="#Equ9">9</a> for the risky policy and Eqs. 
+  <a rid="Equ12" ref-type="" href="#Equ12">12</a> and 
+  <a rid="Equ13" ref-type="" href="#Equ13">13</a> for the cautious policy.
+ </p>
+</sec>

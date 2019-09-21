@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Structural causal model framework</div>
+ <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">GC requires a time delay between cause and effect to identify causal directionality. If causation occurs almost instantaneously, or at least faster than the observable sampling interval, then causal directions cannot be identified in general. Many causal network learning algorithms, on the other hand, are also applicable to contemporaneous dependencies, but they can only identify causal graphs up to a Markov-equivalence class. For example, under the Faithfulness assumption, measuring that 
+  <span class="italic">X</span> is conditionally independent of 
+  <span class="italic">Y</span> given 
+  <span class="italic">Z</span>, while all other (conditional) relationships are dependent, gives rise to three different causal graphs that are Markov-equivalent if no additional information about time-order is available: 
+  <span class="italic">X</span>
+  <div id="IEq100" class="inline-formula">
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\leftarrow$$\end{document}</span>
+    <div id="M6" class="math">
+     <span class="mo">←</span>
+    </div>
+    <span xlink:href="41467_2019_10105_Article_IEq100.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <span class="italic">Z</span>→
+  <span class="italic">Y, X</span>→
+  <span class="italic">Z</span>→
+  <span class="italic">Y</span>, or 
+  <span class="italic">X</span>
+  <div id="IEq101" class="inline-formula">
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\leftarrow$$\end{document}</span>
+    <div id="M8" class="math">
+     <span class="mo">←</span>
+    </div>
+    <span xlink:href="41467_2019_10105_Article_IEq101.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <span class="italic">Z</span>
+  <div id="IEq102" class="inline-formula">
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\leftarrow$$\end{document}</span>
+    <div id="M10" class="math">
+     <span class="mo">←</span>
+    </div>
+    <span xlink:href="41467_2019_10105_Article_IEq102.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <span class="italic">Y</span>. As illustrated in Box 
+  <a rid="Sec8" ref-type="sec" href="#Sec8">1</a>, the simplest example of Markov equivalence are two contemporaneously dependent variables where the causal direction cannot be inferred with conditional independence-based methods. Structural causal models (SCMs) (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2d</a>) can identify causal directions in such cases because they permit assumptions about the functional class of models (e.g., linear or nonlinear, additivity, noise distributions)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>–
+   <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+  </span>. Other methods exploit heterogeneity in the data by searching for models that are invariant over space or time
+  <span class="sup">
+   <a ref-type="bibr" rid="CR57" href="#CR57">57</a>–
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span>. For an overview see references
+  <span class="sup">
+   <a ref-type="bibr" rid="CR13" href="#CR13">13</a>,
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span>. Most of these principles extend to settings with temporal dependence as further elaborated in the Way forward section. SCMs have not yet been applied in Earth system sciences except for one work in remote sensing
+  <span class="sup">
+   <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+  </span>.
+ </p>
+</sec>

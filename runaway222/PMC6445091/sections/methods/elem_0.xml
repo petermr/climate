@@ -1,0 +1,1867 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model description</div>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Our model is an extension of a simple differential equation ecosystem model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span>. It includes a N-fixer biomass C pool (
+   <span class="italic">B</span>
+   <sub>F</sub>, kg C ha
+   <span class="sup">−1</span>), a non-fixer biomass C pool (
+   <span class="italic">B</span>
+   <sub>0</sub>, kg C ha
+   <span class="sup">−1</span>), a plant-unavailable soil N pool (
+   <span class="italic">D</span>, kg N ha
+   <span class="sup">−1</span>; detritus), and a plant-available soil N pool (
+   <span class="italic">A</span>, kg N ha
+   <span class="sup">−1</span>; nitrate, ammonium, and forms of organic N that are accessible to plants). The rates of change of these pools satisfy the following ordinary differential equations (represented by the box diagram in Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>):
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{{\mathrm{d}}B_{\mathrm{F}}}}{{{\mathrm{d}}t}} = B_{\mathrm{F}}\left( {g_{\mathrm{F}}(A,B_0,B_{\mathrm{F}}) - \mu _{\mathrm{F}}} \right)$$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">B</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">F</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">g</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">B</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">B</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">-</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{{\mathrm{d}}B_0}}{{{\mathrm{d}}t}} = B_0\left( {g_0(A,B_0,B_{\mathrm{F}}) - \mu _0} \right)$$\end{document}</span>
+     <div id="M4" display="block" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">B</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">0</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">g</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">B</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">B</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">-</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ3" class="disp-formula">
+    <span class="label">3</span>
+    <div class="alternatives">
+     <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{{\mathrm{d}}D}}{{{\mathrm{d}}t}} = \frac{{\mu _{\mathrm{F}}}}{{\omega _{\mathrm{F}}}}B_{\mathrm{F}} + \frac{{\mu _0}}{{\omega _0}}B_0 - \left( {m + \varphi } \right)D$$\end{document}</span>
+     <div id="M6" display="block" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">D</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ω</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">B</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">F</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ω</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">B</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">0</span>
+       </div>
+      </div>
+      <span class="mo">-</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">m</span>
+        <span class="mo">+</span>
+        <span class="mi">φ</span>
+       </div>
+      </div>
+      <span class="mi">D</span>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ4" class="disp-formula">
+    <span class="label">4</span>
+    <div class="alternatives">
+     <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{{\mathrm{d}}A}}{{{\mathrm{d}}t}} = I - kA + mD - \frac{{B_{\mathrm{F}}\left( {g_{\mathrm{F}}(A,B_0,B_{\mathrm{F}}) - \omega _{\mathrm{F}}F} \right)}}{{\omega _{\mathrm{F}}}} - \frac{{B_0g_0(A,B_0,B_{\mathrm{F}})}}{{\omega _0}} - \eta A$$\end{document}</span>
+     <div id="M8" display="block" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">A</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">I</span>
+      <span class="mo">-</span>
+      <span class="mi">k</span>
+      <span class="mi">A</span>
+      <span class="mo">+</span>
+      <span class="mi">m</span>
+      <span class="mi">D</span>
+      <span class="mo">-</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">g</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">A</span>
+            <span class="mo">,</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+            <span class="mo">,</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">F</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">-</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">ω</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+          <span class="mi">F</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ω</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">-</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">g</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">B</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">B</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ω</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">-</span>
+      <span class="mi">η</span>
+      <span class="mi">A</span>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">The per capita growth rates of 
+   <span class="italic">B</span>
+   <sub>F</sub> and 
+   <span class="italic">B</span>
+   <sub>0</sub> are represented by the functions 
+   <span class="italic">g</span>
+   <sub>F</sub> and 
+   <span class="italic">g</span>
+   <sub>0</sub>, respectively:
+   <div id="Equ5" class="disp-formula">
+    <span class="label">5</span>
+    <div class="alternatives">
+     <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$g_{\mathrm{F}}\left( {A,B_0,B_{\mathrm{F}}} \right) = {\mathrm{MIN}}\left[ {\omega _{\mathrm{F}}\left( {\nu _{\mathrm{F}}A + F} \right),\frac{{\beta _{\mathrm{F}}}}{{1 + \gamma _{\mathrm{F}}\left( {B_{\mathrm{F}} + B_0} \right)}}} \right]$$\end{document}</span>
+     <div id="M10" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">g</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">F</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">A</span>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">MIN</span>
+      <div close="]" open="[" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ω</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">ν</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+          <span class="mi">A</span>
+          <span class="mo">+</span>
+          <span class="mi">F</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">β</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">γ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">F</span>
+             </div>
+            </div>
+            <span class="mo">+</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ6" class="disp-formula">
+    <span class="label">6</span>
+    <div class="alternatives">
+     <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$g_0(A,B_0,B_{\mathrm{F}}) = {\mathrm{MIN}}\left[ {\omega _0\nu _0A,\frac{{\beta _0}}{{1 + \gamma _0\left( {B_{\mathrm{F}} + B_0} \right)}}} \right]$$\end{document}</span>
+     <div id="M12" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">g</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">0</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">A</span>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">F</span>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">MIN</span>
+      <div close="]" open="[" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ω</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ν</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mi">A</span>
+        <span class="mo">,</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">β</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">γ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">F</span>
+             </div>
+            </div>
+            <span class="mo">+</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">The growth rate of 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> (
+   <span class="italic">i</span> = F represents N-fixers, 
+   <span class="italic">i</span> = 0 represents non-fixers) is determined by Liebig’s law of the minimum
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span>. When 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is N-limited, 
+   <span class="italic">g</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is a function of the nutrient use efficiency of N (
+   <span class="italic">ω</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub>), N uptake rate (
+   <span class="italic">ν</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub>), and, for 
+   <span class="italic">B</span>
+   <sub>F</sub>, N fixation rate per unit biomass C (
+   <span class="italic">F</span>). When 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is not N-limited, 
+   <span class="italic">g</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is limited by some unspecified resource (such as phosphorus, light, or space), represented by a density-dependent function that decreases with increasing total biomass (
+   <span class="italic">B</span>
+   <sub>F</sub> + 
+   <span class="italic">B</span>
+   <sub>0</sub>). For non-N-limited growth, 
+   <span class="italic">β</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is the maximum growth rate and 
+   <span class="italic">γ</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is the coefficient that determines the extent to which 
+   <span class="italic">g</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is decreased by total biomass. The parameter 
+   <span class="italic">µ</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> represents the turnover rate, 
+   <span class="italic">m</span> represents the mineralization rate, 
+   <span class="italic">φ</span> represents the loss rate of plant-unavailable soil N, 
+   <span class="italic">I</span> represents the abiotic N input flux, 
+   <span class="italic">k</span> represents the loss rate of plant-available soil N other than gaseous losses of N
+   <sub>2</sub>O (leaching of all forms of plant-available soil N and gaseous losses of nitric oxide (NO), ammonium (NH
+   <sub>3</sub>), and nitrogen gas (N
+   <sub>2</sub>)), and 
+   <span class="italic">η</span> represents the gaseous loss rate of plant-available soil N as N
+   <sub>2</sub>O. We assume that the N
+   <sub>2</sub>O gaseous loss rate is a linear function of 
+   <span class="italic">A</span>, following 2006 IPCC Guidelines for National Greenhouse Gas Inventories
+   <span class="sup">
+    <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+   </span>. Thus, the atmospheric N
+   <sub>2</sub>O pool (
+   <span class="italic">E</span>; in kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span>) satisfies the following equation:
+   <div id="Equ7" class="disp-formula">
+    <span class="label">7</span>
+    <div class="alternatives">
+     <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{{\mathrm{d}}E}}{{{\mathrm{d}}t}} = \eta A - \psi E$$\end{document}</span>
+     <div id="M14" display="block" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">η</span>
+      <span class="mi">A</span>
+      <span class="mo">-</span>
+      <span class="mi">ψ</span>
+      <span class="mi">E</span>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">The parameter 
+   <span class="italic">ψ</span> represents the atmospheric N
+   <sub>2</sub>O removal rate (through photolysis and oxidation reactions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+   </span>) and is the inverse of the lifetime of N
+   <sub>2</sub>O in the atmosphere.
+  </p>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Different N fixation strategies (obligate, facultative, and incomplete regulator) are represented by the following equation, which gives N fixation rate per unit biomass C:
+   <div id="Equ8" class="disp-formula">
+    <span class="label">8</span>
+    <div class="alternatives">
+     <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$F = {\mathrm{MAX}}\left[ {F_{{\mathrm{min}}},{\mathrm{MIN}}\left[ {\frac{{\beta _{\mathrm{F}}}}{{\omega _{\mathrm{F}}\left( {1 + \gamma _{\mathrm{F}}\left( {B_{\mathrm{F}} + B_0} \right)} \right)}} - \nu _{\mathrm{F}}A,F_{{\mathrm{max}}}} \right]} \right]$$\end{document}</span>
+     <div id="M16" display="block" class="math">
+      <span class="mi">F</span>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">MAX</span>
+      <div close="]" open="[" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">F</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">min</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span mathvariant="normal" class="mi">MIN</span>
+        <div close="]" open="[" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="mfrac">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">β</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">F</span>
+             </div>
+            </div>
+           </div>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">ω</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">F</span>
+             </div>
+            </div>
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <span class="mn">1</span>
+              <span class="mo">+</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">γ</span>
+               </div>
+               <div class="mrow">
+                <span mathvariant="normal" class="mi">F</span>
+               </div>
+              </div>
+              <div close=")" open="(" separators="" class="mfenced">
+               <div class="mrow">
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">B</span>
+                 </div>
+                 <div class="mrow">
+                  <span mathvariant="normal" class="mi">F</span>
+                 </div>
+                </div>
+                <span class="mo">+</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">B</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mn">0</span>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="mo">-</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">ν</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">F</span>
+           </div>
+          </div>
+          <span class="mi">A</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">F</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">max</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The parameter 
+   <span class="italic">F</span>
+   <sub>min</sub> represents the sustained minimum N fixation rate, and thus describes the gradient of N fixation strategies from obligate N-fixers (
+   <span class="italic">F</span>
+   <sub>min</sub> = 
+   <span class="italic">F</span>
+   <sub>max</sub>, i.e. 
+   <span class="italic">F</span> is constant), to incomplete regulator N-fixers (0 &lt; 
+   <span class="italic">F</span>
+   <sub>min</sub> &lt; 
+   <span class="italic">F</span>
+   <sub>max</sub>), to facultative N-fixers (
+   <span class="italic">F</span>
+   <sub>min</sub> = 0). The parameter 
+   <span class="italic">F</span>
+   <sub>max</sub> is the maximum N fixation rate per unit biomass C.
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model simulations</div>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Simulations of the model were conducted in R using the package deSolve. We parameterized our model for tropical, temperate, and boreal forests (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>), and conducted the following simulations for each parameterization. We simulated four versions of the model (ecosystems containing only non-fixers, ecosystems containing non-fixers and obligate N-fixers, ecosystems containing non-fixers and facultative N-fixers, and ecosystems containing non-fixers and incomplete regulator N-fixers) for 100 years. We simulated each of the four versions of the model under three N deposition rates: past (low; pre-Anthropocene; from Galloway et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR23" href="#CR23">23</a>
+   </span>), recent (intermediate; 2001 and 2006; from Vet et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+   </span> and Dentener et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span> respectively), and future N deposition rates (high; 2030 for the SRES A2 scenario
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span>; from Dentener et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span>) (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>). N deposition rates for tropical, temperate, and boreal forests were estimated using weighted averages with tropical, temperate, and boreal forest areas (from the 2015 Global Forest Resources Assessment
+   <span class="sup">
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>). The range of N deposition rates can also be representative of varying degrees of N enrichment from other sources (rock weathering N input, turnover, mineralization, etc.). Additionally, we simulated each of the four versions of the model under low, intermediate, and high initial soil N pool sizes (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>).
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">CO
+   <sub>2</sub> effect, N
+   <sub>2</sub>O effect, and net CO
+   <sub>2</sub>–N
+   <sub>2</sub>O effect
+  </div>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">We calculated the CO
+   <sub>2</sub> and N
+   <sub>2</sub>O effects of the ecosystem with two complementary methods. The first method quantifies total change in the sizes of the biomass C pools and the atmospheric N
+   <sub>2</sub>O pool, converting N
+   <sub>2</sub>O to CO
+   <sub>2</sub> radiative equivalents using global warming potentials. The second method quantifies net radiative forcing from continuous changes in the sizes of the biomass C pools and the atmospheric N
+   <sub>2</sub>O pool. Both methods calculate the CO
+   <sub>2</sub> and N
+   <sub>2</sub>O effects of the ecosystem over 100 years, similar to the IPCC’s SRES and Representative Concentration Pathways. The first method is easier to compare to studies of standing biomass C pools, whereas the second method gives a more accurate accounting of net radiative forcing. Results given in the main text are from the first method, but both methods give similar results.
+  </p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">For the first method, the CO
+   <sub>2</sub> and N
+   <sub>2</sub>O effects of the ecosystem were calculated as follows:
+   <div id="Equ9" class="disp-formula">
+    <span class="label">9</span>
+    <div class="alternatives">
+     <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{CO}}_2\,{\mathrm{effect}} = - \frac{{\left( {\left( {B_{\mathrm{F}}\left( {100} \right) + B_0\left( {100} \right)} \right) - \left( {B_{\mathrm{F}}\left( 0 \right) + B_0\left( 0 \right)} \right)} \right)}}{{{\mathrm{100}}\,{\mathrm{yr}}}} \times \frac{{{\mathrm{44}}\,{\mathrm{kg}}\,{\mathrm{CO}}_2}}{{{\mathrm{12}}\,{\mathrm{kg}}\,{\mathrm{C}}}}$$\end{document}</span>
+     <div id="M18" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">CO</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span width="0.3em" class="mspace"/>
+      <span mathvariant="normal" class="mi">effect</span>
+      <span class="mo">=</span>
+      <span class="mo">-</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">F</span>
+             </div>
+            </div>
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <span class="mn">100</span>
+             </div>
+            </div>
+            <span class="mo">+</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <span class="mn">100</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="mo">-</span>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">F</span>
+             </div>
+            </div>
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+            <span class="mo">+</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">B</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+            <div close=")" open="(" separators="" class="mfenced">
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">100</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">yr</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">44</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">kg</span>
+        <span width="0.3em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">12</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">kg</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">C</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ10" class="disp-formula">
+    <span class="label">10</span>
+    <div class="alternatives">
+     <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N}}_{\mathrm{2}}{\mathrm{O}}\,{\mathrm{effect}} = \frac{{\left( {E\left( 100 \right) - E\left( 0 \right)} \right)}}{{{\mathrm{100}}\,{\mathrm{yr}}}} \times \frac{{{\mathrm{44}}\,{\mathrm{kg}}\,{\mathrm{N}}_{\mathrm{2}}{\mathrm{O}}}}{{{\mathrm{28}}\,{\mathrm{kg}}\,{\mathrm{N}}}} \times \frac{{{\mathrm{298}}\,{\mathrm{kg}}\,{\mathrm{CO}}_2}}{{{\mathrm{kg}}\,{\mathrm{N}}_{\mathrm{2}}{\mathrm{O}}}}$$\end{document}</span>
+     <div id="M20" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">N</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">2</span>
+       </div>
+      </div>
+      <span mathvariant="normal" class="mi">O</span>
+      <span width="0.3em" class="mspace"/>
+      <span mathvariant="normal" class="mi">effect</span>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">E</span>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">100</span>
+           </div>
+          </div>
+          <span class="mo">-</span>
+          <span class="mi">E</span>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">100</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">yr</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">44</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">kg</span>
+        <span width="0.3em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">N</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">2</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">O</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">28</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">kg</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">N</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">298</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">kg</span>
+        <span width="0.3em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">kg</span>
+        <span width="0.3em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">N</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">2</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">O</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">The global warming potential of N
+   <sub>2</sub>O over a 100 year time horizon
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+   </span> (298 kg CO
+   <sub>2</sub> per kg N
+   <sub>2</sub>O) was used to find the CO
+   <sub>2</sub> radiative equivalent of soil N
+   <sub>2</sub>O emissions. The CO
+   <sub>2</sub> effect and N
+   <sub>2</sub>O effect are both given in units of kg CO
+   <sub>2</sub> ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>.
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">For the second method, we adapted an equation for the radiative forcing of a continuous emission pulse from Alvarez et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+   </span>:
+   <div id="Equ11" class="disp-formula">
+    <span class="label">11</span>
+    <div class="alternatives">
+     <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{CO}}_2\,{\mathrm{effect}} = - \mathop {\int}\nolimits_{t_{\mathrm{E}} = 0}^{t_{\mathrm{E}} = 100} {{\mathrm{RE}}_{{\mathrm{CO}}_2}g_{{\mathrm{CO}}_2}\left( {t_{\mathrm{E}}} \right)} \left( {\left( {100 - t_{\mathrm{E}}} \right)a_0 + \mathop {\sum }\limits_{i = 1}^3 a_i\tau _{{\mathrm{CO}}_2,i}\left( {1 - e^{ - \frac{{100 - t_{\mathrm{E}}}}{{\tau _{{\mathrm{CO}}_2,i}}}}} \right)} \right){\mathrm{d}}t_{\mathrm{E}}\end{array}$$\end{document}</span>
+     <div id="M22" display="block" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="msub">
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">CO</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span width="0.3em" class="mspace"/>
+         <span mathvariant="normal" class="mi">effect</span>
+         <span class="mo">=</span>
+         <span class="mo">-</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mo">∫</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mn">0</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mn">100</span>
+          </div>
+         </div>
+         <div class="msub">
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">RE</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">CO</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">g</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">CO</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <span class="mn">100</span>
+             <span class="mo">-</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">t</span>
+              </div>
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">E</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">a</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div accent="false" accentunder="false" class="munderover">
+            <div class="mrow">
+             <span class="mo"> ∑</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">=</span>
+             <span class="mn">1</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">a</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">τ</span>
+            </div>
+            <div class="mrow">
+             <div class="msub">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">CO</span>
+              </div>
+              <div class="mrow">
+               <span class="mn">2</span>
+              </div>
+             </div>
+             <span class="mo">,</span>
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span class="mi">e</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">-</span>
+               <div class="mfrac">
+                <div class="mrow">
+                 <span class="mn">100</span>
+                 <span class="mo">-</span>
+                 <div class="msub">
+                  <div class="mrow">
+                   <span class="mi">t</span>
+                  </div>
+                  <div class="mrow">
+                   <span mathvariant="normal" class="mi">E</span>
+                  </div>
+                 </div>
+                </div>
+                <div class="mrow">
+                 <div class="msub">
+                  <div class="mrow">
+                   <span class="mi">τ</span>
+                  </div>
+                  <div class="mrow">
+                   <div class="msub">
+                    <div class="mrow">
+                     <span mathvariant="normal" class="mi">CO</span>
+                    </div>
+                    <div class="mrow">
+                     <span class="mn">2</span>
+                    </div>
+                   </div>
+                   <span class="mo">,</span>
+                   <span class="mi">i</span>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">t</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">E</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ11.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ12" class="disp-formula">
+    <span class="label">12</span>
+    <div class="alternatives">
+     <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N}}_{\mathrm{2}}{\mathrm{O}}\,{\mathrm{effect = }}\mathop {\int}\nolimits_{t_{\mathrm{E}} = 0}^{t_{\mathrm{E}} = 100} {{\mathrm{RE}}_{{\mathrm{N}}_2{\mathrm{O}}}\frac{{\eta A\left( {t_{\mathrm{E}}} \right)}}{\psi }\left( {1 - e^{ - \psi \left( {100 - t_{\mathrm{E}}} \right)}} \right){\mathrm{d}}t_{\mathrm{E}}}$$\end{document}</span>
+     <div id="M24" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">N</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">2</span>
+       </div>
+      </div>
+      <span mathvariant="normal" class="mi">O</span>
+      <span width="0.3em" class="mspace"/>
+      <span mathvariant="normal" class="mi">effect =</span>
+      <div class="msubsup">
+       <div class="mrow">
+        <span class="mo">∫</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">E</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <span class="mn">0</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">E</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <span class="mn">100</span>
+       </div>
+      </div>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">RE</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">N</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">O</span>
+       </div>
+      </div>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">η</span>
+        <span class="mi">A</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">E</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">ψ</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mn">1</span>
+        <span class="mo">-</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">e</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">-</span>
+          <span class="mi">ψ</span>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">100</span>
+            <span class="mo">-</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">t</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">E</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span mathvariant="normal" class="mi">d</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">t</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">E</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ12.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">
+   <div id="IEq1" class="inline-formula">
+    <div class="alternatives">
+     <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$g_{{\mathrm{CO}}_2}\left( {t_{\mathrm{E}}} \right)$$\end{document}</span>
+     <div id="M26" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">g</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">E</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9424_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the sequestration of CO
+   <sub>2</sub> at time 
+   <span class="italic">t</span>
+   <sub>E</sub>. 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> and 
+   <div id="IEq2" class="inline-formula">
+    <div class="alternatives">
+     <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\tau _{{\mathrm{CO}}_2,i}$$\end{document}</span>
+     <div id="M28" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">τ</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span class="mi">i</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9424_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> are constants and lifetimes respectively that represent the timescales of different CO
+   <sub>2</sub> removal processes
+   <span class="sup">
+    <a ref-type="bibr" rid="CR55" href="#CR55">55</a>
+   </span>. Removal of CO
+   <sub>2</sub> by the terrestrial sink is already included in these CO
+   <sub>2</sub> removal processes, and, as such, Eq. (
+   <a rid="Equ11" ref-type="" href="#Equ11">11</a>) is not an ideal representation of the CO
+   <sub>2</sub> effect but is effective at demonstrating its general trend. 
+   <span class="italic">A</span>(
+   <span class="italic">t</span>
+   <sub>E</sub>) is the available soil N pool at time 
+   <span class="italic">t</span>
+   <sub>E</sub>. RE
+   <sub>GHG</sub> is the radiative efficiency of the greenhouse gas and was calculated using the following formula from Myhre et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+   </span> that converts radiative efficiency from units of W m
+   <span class="sup">−2</span> ppbv
+   <span class="sup">−1</span> (standard) to units of W m
+   <span class="sup">−2</span> kg
+   <span class="sup">−1</span>:
+   <div id="Equ13" class="disp-formula">
+    <span class="label">13</span>
+    <div class="alternatives">
+     <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{RE}}_{{\mathrm{GHG}}} = {\mathrm{RE}}_{{\mathrm{GHG}},{\mathrm{ppbv}}}\frac{{M_{\mathrm{A}}}}{{M_{{\mathrm{GHG}}}}}\frac{{10^9}}{{T_{\mathrm{M}}}}$$\end{document}</span>
+     <div id="M30" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">RE</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">GHG</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">RE</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">GHG</span>
+        <span class="mo">,</span>
+        <span mathvariant="normal" class="mi">ppbv</span>
+       </div>
+      </div>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">A</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">GHG</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">1</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">9</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">M</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9424_Article_Equ13.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">RE
+   <sub>GHG,ppbv</sub> is the radiative efficiency in units of W m
+   <span class="sup">−2</span> ppbv
+   <span class="sup">−1</span>, 
+   <span class="italic">M</span>
+   <sub>A</sub> is the mean molar mass of air, 
+   <span class="italic">M</span>
+   <sub>GHG</sub> is the molar mass of the greenhouse gas, and 
+   <span class="italic">T</span>
+   <sub>M</sub> is the total mass of the atmosphere. Parameter values and descriptions are available in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>. Results and figures corresponding to those available in the main text are displayed in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a> and Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>.
+  </p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">For both methods, the net CO
+   <sub>2</sub>–N
+   <sub>2</sub>O effect reflects the balance of CO
+   <sub>2</sub> sequestration and soil N
+   <sub>2</sub>O emissions and is thus calculated as the sum of the CO
+   <sub>2</sub> effect and N
+   <sub>2</sub>O effect. A negative net CO
+   <sub>2</sub>–N
+   <sub>2</sub>O effect indicates a cooling effect (CO
+   <sub>2</sub> sequestration exceeds soil N
+   <sub>2</sub>O emissions) and a positive net CO
+   <sub>2</sub>–N
+   <sub>2</sub>O effect indicates a warming effect (soil N
+   <sub>2</sub>O emissions exceed CO
+   <sub>2</sub> sequestration).
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model validity</div>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">The model accurately estimates CO
+   <sub>2</sub> sequestration and soil N
+   <sub>2</sub>O emissions under recent N deposition rates. For tropical forests, the total biomass C equilibrium of the model is 124 Mg C ha
+   <span class="sup">−1</span> (see Supplementary Note 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a> for equilibria analysis), which is similar to Batterman et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR3" href="#CR3">3</a>
+   </span>, which reported 128 Mg C ha
+   <span class="sup">−1</span> in old growth tropical forests. For temperate forests, the total biomass C equilibrium of the model is 145 Mg C ha
+   <span class="sup">−1</span>, which is similar to Pregitzer et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+   </span>, which reported 171 Mg C ha
+   <span class="sup">−1</span> in old growth temperate forests. For boreal forests, the total biomass C equilibrium of the model is 75 Mg C ha
+   <span class="sup">−1</span>, which is similar to Pregitzer et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+   </span>, which reported 81 Mg C ha
+   <span class="sup">−1</span> in old growth boreal forests.
+  </p>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">For tropical forests, the soil N
+   <sub>2</sub>O emission rate of the model ranges between 0 and 6.97 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>. This is less than the default value used by the IPCC for tropical forests
+   <span class="sup">
+    <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+   </span> (16 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>) but is similar to values from Stehfest and Bouwman
+   <span class="sup">
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>
+   </span> (1.37 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>). For temperate forests, the soil N
+   <sub>2</sub>O emission rate of the model ranges between 0 and 0.29 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>. This is again less than the default value used by the IPCC for temperate forests
+   <span class="sup">
+    <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+   </span> (8 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>) but is similar to values from Stehfest and Bouwman
+   <span class="sup">
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>
+   </span> (0.64 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>). For boreal forests, the soil N
+   <sub>2</sub>O emission rate of the model ranges between 0 and 0.13 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>. This is similar to values from Pihlatie et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+   </span> (−0.67 to 0.39 kg N
+   <sub>2</sub>O-N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>).
+  </p>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">For tropical forests, the N fixation rate of the model ranges between 0 and 29 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>, which is similar to values from Batterman et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR3" href="#CR3">3</a>
+   </span> (0–29 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>), Sullivan et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+   </span> (1.2–14.4 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>), and Winbourne et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+   </span> (0.3–22.75 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>). For temperate forests, the N fixation rate of the model ranges between 0 and 10 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>, which is similar to values from Menge and Hedin
+   <span class="sup">
+    <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+   </span> (0–11 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>). For boreal forests, the N fixation rate of the model ranges between 0 and 6 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>, which is similar to values from Blundon and Dale
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span> (0.3 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>). Other reported N fixation rates for temperate forests
+   <span class="sup">
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>,
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span> (33–150 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>) and boreal forests
+   <span class="sup">
+    <a ref-type="bibr" rid="CR62" href="#CR62">62</a>,
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span> (38–107 kg N ha
+   <span class="sup">−1</span> yr
+   <span class="sup">−1</span>) are substantially higher, but N-fixing trees are often rare or absent in temperate and boreal forests
+   <span class="sup">
+    <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+   </span>. As such, the average N fixation rates across temperate and boreal forests are likely within the range of the N fixation rates of our model.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Global scale estimate</div>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">We applied the net CO
+   <sub>2</sub>–N
+   <sub>2</sub>O effect calculated with tropical, temperate, and boreal forest parameterizations to tropical, temperate, and boreal forest areas (from the 2015 Global Forest Resources Assessment
+   <span class="sup">
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>) respectively. Many forests are recovering from a past disturbance, imparting a variegated age distribution on global forests
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span>. Because the net CO
+   <sub>2</sub>–N
+   <sub>2</sub>O effect (Eqs. (
+   <a rid="Equ9" ref-type="" href="#Equ9">9</a>) and (
+   <a rid="Equ10" ref-type="" href="#Equ10">10</a>)) is averaged over the first 100 years of ecosystem succession, it roughly encompasses the age distribution of global forests.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Reporting summary</div>
+  <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">Further information on experimental design is available in the 
+   <a rid="MOESM3" ref-type="media" href="#MOESM3">Nature Research Reporting Summary</a> linked to this article.
+  </p>
+ </sec>
+</sec>

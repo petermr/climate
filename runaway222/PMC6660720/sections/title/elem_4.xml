@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Numerical Solution of Minimal Model.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The ensemble simulations using the minimal model (
+   <a ref-type="disp-formula" rid="eq1" href="#eq1">Eq. 
+    <span class="bold">1</span>
+   </a>), and plotted in 
+   <a ref-type="fig" rid="fig02" href="#fig02">Fig. 2</a>, are solved numerically using the Euler–Maruyama method. All simulations begin from the same initial condition, a steady state with parameters indicated in the 
+   <a ref-type="fig" rid="fig02" href="#fig02">Fig. 2</a> legend, bed depth of 
+   <div class="inline-formula">
+    <div id="i69" class="math">
+     <span class="mi">b</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">x</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <span class="mn">0.002</span>
+     <span class="mi">x</span>
+    </div>
+   </div>, and steady-state 
+   <div class="inline-formula">
+    <div id="i70" class="math">
+     <span class="mi">L</span>
+     <span class="mo">=</span>
+     <span class="mn">250</span>
+    </div>
+   </div> km. The bed topography is then modified with a new bed slope just behind the steady-state grounding-line position. A small perturbation is added to the accumulation rate (
+   <div class="inline-formula">
+    <div id="i71" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">P</span>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <span class="mn">0.006</span>
+    </div>
+   </div> m/y) during an initial 500-y spin-up period. At the end of that period, the grounding line is very near a steady state at 
+   <div class="inline-formula">
+    <div id="i72" class="math">
+     <span class="mi">t</span>
+     <span class="mo">=</span>
+     <span class="mn">0</span>
+    </div>
+   </div>, which is when stochastic perturbations (
+   <div class="inline-formula">
+    <div id="i73" class="math">
+     <span class="mi">η</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+   </div>) begin. All code used to run these ensemble simulations and produce 
+   <a ref-type="fig" rid="fig02" href="#fig02">Fig. 2</a> is available as a public repository on GitHub: 
+   <span ext-link-type="uri" xlink:href="https://github.com/aarobel/StochasticMISI" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/aarobel/StochasticMISI</span>.
+  </p>
+ </sec>
+ <sec id="s6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">ISSM.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">ISSM is a finite-element software package which is used to solve the 2D shelfy-stream approximation for this study (
+   <a rid="r23" ref-type="bibr" href="#r23">23</a>), publicly available for download from 
+   <span ext-link-type="uri" xlink:href="https://issm.jpl.nasa.gov/" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://issm.jpl.nasa.gov/</span>. The model solves for ice velocity, surface and base elevation, and grounding-line position at 1-km resolution everywhere in the Thwaites catchment on each 2-wk time step. In our simulations, basal friction follows a linear viscous law and ice rigidity is a function of ice temperature, and both are inverted on the basis of modern velocities using data assimilation (
+   <a rid="r38" ref-type="bibr" href="#r38">38</a>). Ice temperature, basal friction, and basin boundaries (covering the Thwaites Glacier catchment) are held fixed throughout the simulation to reduce computational load and facilitate the large ensemble simulations. Subice shelf basal melt follows a simple function of depth 
+   <div class="inline-formula">
+    <div id="i74" class="math">
+     <span class="mi">M</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">M</span>
+      </div>
+      <div class="mrow">
+       <div mathvariant="italic" class="mstyle">
+        <span class="mi">m</span>
+        <span class="mi">a</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">M</span>
+      </div>
+      <div class="mrow">
+       <div mathvariant="italic" class="mstyle">
+        <span class="mi">m</span>
+        <span class="mi">a</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <div mathvariant="italic" class="mstyle">
+          <span class="mi">m</span>
+          <span class="mi">a</span>
+          <span class="mi">x</span>
+         </div>
+        </div>
+       </div>
+       <span class="mo">−</span>
+       <span class="mi">z</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+   </div>, where 
+   <div class="inline-formula">
+    <div id="i75" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">M</span>
+      </div>
+      <div class="mrow">
+       <div mathvariant="italic" class="mstyle">
+        <span class="mi">m</span>
+        <span class="mi">a</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> is the maximum melt rate that occurs at a depth 
+   <div class="inline-formula">
+    <div id="i76" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <div mathvariant="italic" class="mstyle">
+        <span class="mi">m</span>
+        <span class="mi">a</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>. Perturbations in 
+   <div class="inline-formula">
+    <div id="i77" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">M</span>
+      </div>
+      <div class="mrow">
+       <div mathvariant="italic" class="mstyle">
+        <span class="mi">m</span>
+        <span class="mi">a</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> are varied every month and renormalized to ensure that the SD of monthly 
+   <div class="inline-formula">
+    <div id="i78" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">M</span>
+      </div>
+      <div class="mrow">
+       <div mathvariant="italic" class="mstyle">
+        <span class="mi">m</span>
+        <span class="mi">a</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> is always 5 m/y, regardless of the long-term persistence. Surface mass balance and surface temperatures averaged over the 1979 to 2010 period from RACMO2 (
+   <a rid="r39" ref-type="bibr" href="#r39">39</a>) are applied at the surface of the domain and held constant in time.
+  </p>
+ </sec>
+</sec>

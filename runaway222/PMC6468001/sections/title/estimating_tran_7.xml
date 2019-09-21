@@ -1,0 +1,1352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Estimating transition probabilities</div>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">Each estimate for 
+  <span class="italic">υ</span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1,
+   <span class="italic">i</span>
+  </sub>) (or 
+  <span class="italic">υ</span>
+  <sub>1</sub> if 
+  <span class="italic">t</span> = 1) is then used to estimate the probability of change in each temperature state 
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> in the SDP temperature state space 
+  <span class="bold">S</span>
+  <span class="sup">T</span>. (Note we treat 
+  <span class="italic">υ</span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1,
+   <span class="italic">i</span>
+  </sub>) as a probability mass function discretized at the same granularity as the virtual observations):
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}(\Delta T_t|\Delta T_{t - {1}} = \Delta V_{t - {1}}) = \upsilon (\Delta V_{t - {1},i})\\ {\mathrm{P}}(\Delta T_t = a|\Delta T_{t - {1}} = \Delta V_{t - {1}}) = {\mathrm{P}}(\upsilon (\Delta V_{t - {1},i}) = a)\\ \forall i = {1}, \ldots ,N;\;t = {1}, \ldots ,{5}\end{array}$$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mi">υ</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+            <span class="mo">,</span>
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">a</span>
+          <span class="mo">∣</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">υ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">V</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">-</span>
+              <span class="mn">1</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">a</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">∀</span>
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <span class="mi">N</span>
+        <span class="mo">;</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">t</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <span class="mn">5</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">We then define the joint distribution for the relative change probabilities using the chain rule and the Markov assumption, which is consistent with our assumption in the Bayesian model that the next time period is informed only by the previous one.
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{P}}(\Delta T_{0},\Delta T_{1}, \ldots ,\Delta T_{5}) = {\mathrm{P}}(\Delta T_{0}) \ast {\mathrm{P}}(\Delta T_{1}|\Delta T_{0}) \ast \ldots \ast {\mathrm{P}}(\Delta T_{5}|\Delta T_{4})$$\end{document}</span>
+    <div id="M8" class="math">
+     <span mathvariant="normal" class="mi">P</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">0</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mo">…</span>
+       <span class="mo">,</span>
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">5</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <span mathvariant="normal" class="mi">P</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">0</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">*</span>
+     <span mathvariant="normal" class="mi">P</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">∣</span>
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">0</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">*</span>
+     <span class="mo">…</span>
+     <span class="mo">*</span>
+     <span mathvariant="normal" class="mi">P</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">5</span>
+        </div>
+       </div>
+       <span class="mo">∣</span>
+       <span class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">4</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">Combining Eqs. (
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) and (
+  <a rid="Equ4" ref-type="" href="#Equ4">4</a>), we relate the joint density of the temperature change probabilities to the Bayesian model from Eqs. (
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>) and (
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a>):
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}(\Delta T_{0} = \Delta X_{0},\Delta T_{1} = \Delta V_{{1},i}, \ldots ,\Delta T_{5} = \Delta V_{{5},m})\\ = {\mathrm{P}}(\Delta T_{0} = \Delta X_{0}) \ast {\mathrm{P}}(\Delta T_{1} = \Delta V_{{1},i}|\Delta T_{0} = \Delta X_{0}) \ast \ldots \ast {\mathrm{P}}(\Delta T_{5} = \Delta V_{{5},m}|\Delta T_{4} = \Delta V_{{4},l})\\ = {\mathrm{P}}(\mu _{0} = \Delta X_{0}) \ast {\mathrm{P}}(\upsilon _{1} = \Delta V_{{1},i}) \ast \ldots \ast {\mathrm{P}}(\upsilon (\Delta V_{{4},l}) = \Delta V_{{5},m})\\ \forall i,\;j,\;k,\;l,\;m = {1}, \ldots ,N\end{array}$$\end{document}</span>
+    <div id="M10" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">,</span>
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">5</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">5</span>
+            <span class="mo">,</span>
+            <span class="mi">m</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">*</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">,</span>
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">*</span>
+        <span class="mo">…</span>
+        <span class="mo">*</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">5</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">5</span>
+            <span class="mo">,</span>
+            <span class="mi">m</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">4</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">4</span>
+            <span class="mo">,</span>
+            <span class="mi">l</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">*</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">υ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">,</span>
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">*</span>
+        <span class="mo">…</span>
+        <span class="mo">*</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">υ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">V</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">4</span>
+              <span class="mo">,</span>
+              <span class="mi">l</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">5</span>
+            <span class="mo">,</span>
+            <span class="mi">m</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">∀</span>
+        <span class="mi">i</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">j</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">k</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">l</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">m</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <span class="mi">N</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Next, we develop a joint distribution for the absolute mean temperatures in each time period, which correspond to the SDP temperature states 
+  <span class="bold">S</span>
+  <span class="sup">T</span>. To do this, we assume 
+  <span class="italic">T</span>
+  <sub>0</sub> = 
+  <span class="italic">X</span>
+  <span class="sup">∗</span> + 
+  <span class="italic">μ</span>
+  <sub>0</sub>, where 
+  <span class="italic">X</span>
+  <span class="sup">∗</span> is a constant reflecting the historical observed temperature in time 
+  <span class="italic">t−</span>1, and recognize that the absolute temperature in 
+  <span class="italic">t</span> is the sum of all the relative changes between 0 and 
+  <span class="italic">t</span> plus 
+  <span class="italic">T</span>
+  <sub>0</sub>. The joint density of the temperature states is therefore:
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}\left( {T_{0} = a,T_{1} = b, \ldots ,T_{5} = f} \right)\\ = {\mathrm{P}}(\mu _{0} = a-X^{\ast} ) \ast {\mathrm{P}}(\upsilon _{1} = b-a) \ast \ldots \ast {\mathrm{P}}(\upsilon (\Delta V_{{4},l}) = \Delta V_{{5},m})\\ \forall i,\;j,\;k,\;l,\;m = {1}, \ldots ,N\end{array}$$\end{document}</span>
+    <div id="M12" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">a</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">b</span>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">5</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">f</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">a</span>
+          <span class="mo">-</span>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">*</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">υ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">b</span>
+          <span class="mo">-</span>
+          <span class="mi">a</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">*</span>
+        <span class="mo">…</span>
+        <span class="mo">*</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">υ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">V</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">4</span>
+              <span class="mo">,</span>
+              <span class="mi">l</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">Δ</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">V</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">5</span>
+            <span class="mo">,</span>
+            <span class="mi">m</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">∀</span>
+        <span class="mi">i</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">j</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">k</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">l</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">m</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <span class="mi">N</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where
+  <div id="Equa" class="disp-formula">
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}a = X^{\ast} + \Delta X_{0},\;b = X^{\ast} + \Delta X_{0} + \Delta V_{{1},i}, \ldots ,\\ f = X ^{\ast} + \, \Delta X_{0} + \Delta V_{{1},i} + \Delta V_{{2},j} + \Delta V_{{3},k} + \Delta V_{{4},l} + \Delta V_{{5},m}\\ {\mathrm{s}}.{\mathrm{t}}.\;a,\;b,\;c,\;d,\;e,\;f \in {\mathbf{S}}^{\mathrm{T}}\end{array}$$\end{document}</span>
+    <div id="M14" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">a</span>
+        <span class="mo">=</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">b</span>
+        <span class="mo">=</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">V</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">,</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">f</span>
+        <span class="mo">=</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span width="0.25em" class="mspace"/>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">V</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">,</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">V</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+          <span class="mo">,</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">V</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">3</span>
+          <span class="mo">,</span>
+          <span class="mi">k</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">V</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">4</span>
+          <span class="mo">,</span>
+          <span class="mi">l</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">V</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">5</span>
+          <span class="mo">,</span>
+          <span class="mi">m</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">s</span>
+        <span class="mo">.</span>
+        <span mathvariant="normal" class="mi">t</span>
+        <span class="mo">.</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">a</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">b</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">c</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">d</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">e</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">f</span>
+        <span class="mo">∈</span>
+        <div class="msup">
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">S</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">T</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">The SDP temperature transition probabilities consist of adjacent time period conditional probabilities, i.e. 
+  <span class="italic">P</span>(
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> = 
+  <span class="italic">w</span> | 
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">t−</span>
+  </sub>
+  <sub>1</sub> = 
+  <span class="italic">v</span>). We use Monte Carlo simulation to calculate them by sampling from the joint density in Eq. (
+  <a rid="Equ6" ref-type="" href="#Equ6">6</a>) as follows. First, sample from Eq. (
+  <a rid="Equ6" ref-type="" href="#Equ6">6</a>) to generate 
+  <span class="italic">M</span> equally likely realizations of the joint density. Each realization forms a set, 
+  <span class="bold">Y</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>, of the form:
+  <div id="Equb" class="disp-formula">
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bf{Y}}_{\it{i}}:\left\{ {T_{0} = y_{{0}i},T_{1} = y_{{1}i},T_{2} = y_{{2}i},T_{3} = y_{{3}i},T_{4} = y_{{4}i},T_{5} = y_{{5}i}} \right\}\forall i = {1}, \ldots ,M$$\end{document}</span>
+    <div id="M16" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">Y</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">:</span>
+     <div close="}" open="{" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">0</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">y</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">0</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">y</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">y</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">3</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">y</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">3</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">4</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">y</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">4</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">5</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">y</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">5</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">∀</span>
+     <span class="mi">i</span>
+     <span class="mo">=</span>
+     <span class="mn">1</span>
+     <span class="mo">,</span>
+     <span class="mo">…</span>
+     <span class="mo">,</span>
+     <span class="mi">M</span>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Second, let 
+  <span class="italic">R</span> equal the number of sets 
+  <span class="bold">Y</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> out of the total of 
+  <span class="italic">M</span> for which 
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> = 
+  <span class="italic">w</span> and 
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub>
+  <sub>−1</sub> = 
+  <span class="italic">v</span>. Third, let 
+  <span class="italic">Q</span> equal the number of sets 
+  <span class="bold">Y</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> out of the total of 
+  <span class="italic">M</span> for which 
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">t−</span>
+  </sub>
+  <sub>1</sub> = 
+  <span class="italic">v</span>. Then, the transition probabilities are:
+  <div id="Equ7" class="disp-formula">
+   <span class="label">7</span>
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}\left( {T_t = w|T_{t - {1}} = v} \right) = {\mathrm{P}}\left( {T_t = w,T_{t - {1}} = v} \right)/{\mathrm{P}}\left( {T_{t - {1}} = v} \right) = {\mathrm{R}}/{\mathrm{Q}}\\ \forall w,\;v \in {\mathbf{S}}^{\mathrm{T}}\end{array}$$\end{document}</span>
+    <div id="M18" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">w</span>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">v</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">w</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">v</span>
+         </div>
+        </div>
+        <span class="mo">∕</span>
+        <span mathvariant="normal" class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">v</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <span mathvariant="normal" class="mi">R</span>
+        <span class="mo">∕</span>
+        <span mathvariant="normal" class="mi">Q</span>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">∀</span>
+        <span class="mi">w</span>
+        <span class="mo">,</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">v</span>
+        <span class="mo">∈</span>
+        <div class="msup">
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">S</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">T</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+</sec>

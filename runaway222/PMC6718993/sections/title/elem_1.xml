@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2-ijerph-16-02890" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2. Materials and Methods </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">In this section, descriptions of the weather forecast model and the heat stress indicator used to develop the website platform are provided, together with the main outputs of the HEAT-SHIELD platform and a forecast verification analysis.</p>
+ <sec id="sec2dot1-ijerph-16-02890" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.1. The Weather Forecast Model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The HEAT-SHIELD platform was developed on the basis of the monthly ensemble forecasts of the European Center for Medium Range Weather Forecasts (ECMWF) [
+   <a rid="B25-ijerph-16-02890" ref-type="bibr" href="#B25-ijerph-16-02890">25</a>]. The forecast ensemble consists of 51 members, with the control being the member with initial conditions corresponding to the best estimate of the operational analysis. All members (and the control simulation) represent equally probable atmospheric situations. This operational forecast model provides monthly numerical weather forecasts twice a week, initialized on Monday and Thursday at 0 UTC, and are referred to as ECMWF extended range predictions (ENS-EXT). The current ENS-EXT system has a horizontal resolution of 0.2° × 0.2° (lat × lon, ~18 km mesh size) for the first 15 days and 0.4° × 0.4° (~36 km) from days 16 to 46. Daily forecast values of temperature, humidity, radiation, and wind speed are bilinearly interpolated onto the desired coordinates. 
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Due to the coarse spatial resolution and systematic model biases of the ensemble forecast model, it is certainly not suitable for providing detailed information related to the heat warning for workers. Location-specific forecasts rather than gridded forecast products were developed through downscaling and bias correction procedures, namely empirical quantile mapping (hereafter EQM) [
+   <a rid="B26-ijerph-16-02890" ref-type="bibr" href="#B26-ijerph-16-02890">26</a>]. This method establishes a quantile-dependent correction function between the observed and simulated distributions [
+   <a rid="B27-ijerph-16-02890" ref-type="bibr" href="#B27-ijerph-16-02890">27</a>,
+   <a rid="B28-ijerph-16-02890" ref-type="bibr" href="#B28-ijerph-16-02890">28</a>,
+   <a rid="B29-ijerph-16-02890" ref-type="bibr" href="#B29-ijerph-16-02890">29</a>]. EQM was first calibrated with paired forecasts and observations from the past 20 years in a lead-time dependent manner [
+   <a rid="B30-ijerph-16-02890" ref-type="bibr" href="#B30-ijerph-16-02890">30</a>]. Secondly, the EQM corrections were applied to the actual forecasts. The correction procedure was performed separately to each of the input variables of the heat stress index. In this way, location-specific forecasts were provided for sites where sufficiently long observation records (20 years) of the relevant meteorological variables exist. For this reason, several meteorological datasets were combined in order to get a representative and dense enough, ground-based observational dataset over the entire Europe (
+   <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>): 
+   <div list-type="order" class="list">
+    <div class="list-item">
+     <p>The European Climate Assessment and Dataset project (ECA &amp; D) [
+      <a rid="B31-ijerph-16-02890" ref-type="bibr" href="#B31-ijerph-16-02890">31</a>] was the primary source for the observational dataset. There is, however, a limited number of stations with non-standard parameters such as humidity and wind (see green points in 
+      <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>). Thus, the following datasets were used to complete the full set of stations.
+     </p>
+    </div>
+    <div class="list-item">
+     <p>Dataset of the Global Surface Summary of the Day (GSOD, see blue points in 
+      <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>) from the National Oceanic Atmospheric Administration (NOAA). Stations exceeding more than 20% of missing values in ECA &amp; D and GSOD in the period between 1996 and 2016 were removed from the dataset.
+     </p>
+    </div>
+    <div class="list-item">
+     <p>The Swiss national observing system SwissMetNet (SMN, see red points in 
+      <a ref-type="fig" rid="ijerph-16-02890-f001" href="#ijerph-16-02890-f001">Figure 1</a>) [
+      <a rid="B32-ijerph-16-02890" ref-type="bibr" href="#B32-ijerph-16-02890">32</a>].
+     </p>
+    </div>
+    <div class="list-item">
+     <p>A couple of stations from HEAT-SHIELD case studies were included in the set of stations: Data from one station in Celje (Slovenia), near the Odelo d.o.o. manufacturing plant [
+      <a rid="B33-ijerph-16-02890" ref-type="bibr" href="#B33-ijerph-16-02890">33</a>], provided by the Slovenian Environment Agency (ARSO), and from one station in Arezzo (Tuscany, Italy) provided by Regional Service of Tuscany (CFR).
+     </p>
+    </div>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The resulting observational dataset contains daily measurements of air temperature, dew point temperature, and wind speed from 1798 meteorological stations across Europe and covering a period of 20 years (from 1998 to 2017 for summer 2018 forecasts). As only few of these stations also provide radiation measurements, satellite data for the same period as the other variables were used as best estimates for radiation observations. Specifically, the surface incoming solar radiation product from EUMETSAT’s Satellite Application Facility on Climate Monitoring (CM SAF) [
+   <a rid="B34-ijerph-16-02890" ref-type="bibr" href="#B34-ijerph-16-02890">34</a>] was used. The reader is referred to Casanueva et al. [
+   <a rid="B2-ijerph-16-02890" ref-type="bibr" href="#B2-ijerph-16-02890">2</a>] for more details on the observational datasets.
+  </p>
+ </sec>
+ <sec id="sec2dot2-ijerph-16-02890" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.2. Heat Stress Indicator</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Based on the target group of the HEAT-SHIELD platform, i.e., workers engaged in outdoor activities exposed in the sun and in the shade, the Wet-Bulb Globe Temperature (WBGT) index was used as the primary heat strain indicator because it can be calculated (estimated) from standard weather and climate model data as well as measured locally at workplaces.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">WBGT was originally developed by U.S. military ergonomists in the 1950s [
+   <a rid="B35-ijerph-16-02890" ref-type="bibr" href="#B35-ijerph-16-02890">35</a>] and is currently widely used and internationally recognized [
+   <a rid="B19-ijerph-16-02890" ref-type="bibr" href="#B19-ijerph-16-02890">19</a>,
+   <a rid="B36-ijerph-16-02890" ref-type="bibr" href="#B36-ijerph-16-02890">36</a>] as a method for assessing heat stress conditions specifically in military [
+   <a rid="B37-ijerph-16-02890" ref-type="bibr" href="#B37-ijerph-16-02890">37</a>], occupational and sports fields [
+   <a rid="B38-ijerph-16-02890" ref-type="bibr" href="#B38-ijerph-16-02890">38</a>,
+   <a rid="B39-ijerph-16-02890" ref-type="bibr" href="#B39-ijerph-16-02890">39</a>,
+   <a rid="B40-ijerph-16-02890" ref-type="bibr" href="#B40-ijerph-16-02890">40</a>]. WBGT (unit = °C) considers the combination of the natural wet bulb temperature (dependent on humidity, air temperature and wind speed), the black globe temperature (dependent on radiation and wind speed) and the air temperature for estimating heat-stress in the sun (WBGT
+   <sub>sun</sub>, in conditions of direct short-wave radiation) and in the shade (WBGT
+   <sub>shade</sub>, no direct short-wave radiation). The natural wet bulb temperature simulates the cooling of the body via sweat evaporation, while the black globe temperature simulates the heat absorption from short- and long-wave radiations (from the sun, the soil or artificial heat sources in the workplace). These two variables are influenced by both the air temperature and the wind speed. For example, low wind speeds considerably affect black globe temperatures and significant higher values occur with no wind. WBGT shows a large dependence on wind speed when the wind is low and only minor WBGT increases occur above 1 m/s [
+   <a rid="B41-ijerph-16-02890" ref-type="bibr" href="#B41-ijerph-16-02890">41</a>].
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Based on reference WBGT values, recommendations in term of work–rest cycles and water intake depending on specific work activities are provided by several international organizations. In particular, the International Organization for Standardization (ISO) [
+   <a rid="B36-ijerph-16-02890" ref-type="bibr" href="#B36-ijerph-16-02890">36</a>] uses WBGT thresholds to recommend work–rest limits for workers involved in different physical activities and wearing specific clothing in hot environments, in order to avoid a core body temperature exceeding 38 °C [
+   <a rid="B41-ijerph-16-02890" ref-type="bibr" href="#B41-ijerph-16-02890">41</a>]. The core body temperature of all humans is maintained close to 37 °C. While some increase in the core temperature beyond this latter threshold may be acceptable, an increase above 39 °C creates health risks [
+   <a rid="B42-ijerph-16-02890" ref-type="bibr" href="#B42-ijerph-16-02890">42</a>] that vary from person to person. These variations depend on ethnic group, age, gender, duration of heat exposure and degree of acclimatization; in this way also generating geographical variations [
+   <a rid="B41-ijerph-16-02890" ref-type="bibr" href="#B41-ijerph-16-02890">41</a>,
+   <a rid="B43-ijerph-16-02890" ref-type="bibr" href="#B43-ijerph-16-02890">43</a>].
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">At this stage, WBGT is considered to fulfill the purpose for individualized heat warnings, with customized limits for different workers potentially useful for managing policies against the heat effects.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Following the recommendations for calculating workplace WBGT from meteorological data provided by Lemke and Kjellstrom [
+   <a rid="B41-ijerph-16-02890" ref-type="bibr" href="#B41-ijerph-16-02890">41</a>], we applied the WBGT implementations of Bernard and Pourmoghani [
+   <a rid="B44-ijerph-16-02890" ref-type="bibr" href="#B44-ijerph-16-02890">44</a>] and Liljegren et al. [
+   <a rid="B45-ijerph-16-02890" ref-type="bibr" href="#B45-ijerph-16-02890">45</a>] for computing WBGT in the shade and in the sun, respectively. These implementations allow the calculation of both the natural wet bulb temperature, that is the largest component (70%) of WBGT, and the black globe temperature (it contributes 20–30% of WBGT) as required by the WBGT
+   <sub>sun</sub> and WBGT
+   <sub>shade</sub> formulas starting from well-established meteorological variables (air temperature, humidity, wind speed, and solar radiation) provided by the weather forecast model. 
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The ECMWF model outputs used for the daily WBGT predictions are daily maximum temperature, daily average dew point temperature, and daily average near-surface wind speed. As daily maximum global radiation is not available as a forecast output, we derived this parameter from quantile mapping of daily mean radiation against the observed daily maximum radiation as part of the bias correction. Using these bias-corrected daily values of maximum temperature and radiation, and average humidity and wind, daily maximum WBGT
+   <sub>sun</sub> and WBGT
+   <sub>shade</sub> were computed by using the R package HeatStress [
+   <a rid="B46-ijerph-16-02890" ref-type="bibr" href="#B46-ijerph-16-02890">46</a>], in this way providing the forecast of the maximum heat stress for each specific day. 
+  </p>
+ </sec>
+ <sec id="sec2dot3-ijerph-16-02890" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.3. HEAT-SHIELD Platform Outputs</div>
+  <sec id="sec2dot3dot1-ijerph-16-02890" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.3.1. Non-Customized HEAT-SHIELD Platform Outputs</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The primary forecast outputs are daily ensembles of the maximum WBGT (both in the sun and in the shade) for each of the 1798 locations. From these WBGT ensembles, probabilities of exceeding any WBGT threshold of interest can be computed, thus allowing to address specific user needs on particular WBGT thresholds. As forecast uncertainty increases with lead time, it is appropriate to use aggregated quantities when attempting to do longer term predictions. Averaging in time or space is a basic way to focus on the more predictable larger-scale components of the atmosphere and allows for extending skill to longer lead times, albeit at coarser (spatial/temporal) resolution [
+    <a rid="B47-ijerph-16-02890" ref-type="bibr" href="#B47-ijerph-16-02890">47</a>]. This can be accounted for by creating forecast products displaying the predictions aggregated over several days (aggregated over seven days, from Monday to Sunday) rather than daily information. 
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">In particular, for each of the four upcoming weeks, a map showing the maximum daily probability of exceeding a specific heat stress condition (WBGT above a specific threshold) scheduled for the week is provided. With the aim to provide an overall picture over Europe, a single WBGT threshold was chosen to assess the heat stress situation potentially detrimental in several outdoor occupational sectors across the continent. The choice was made by using one of the WBGT thresholds described by the ISO standard [
+    <a rid="B36-ijerph-16-02890" ref-type="bibr" href="#B36-ijerph-16-02890">36</a>] for which it is required to increase the work breaks with the aim of avoiding that the core body temperature exceeds 38 °C. Trying not to be too alarmist, and taking into account the experience of the HEAT-SHIELD partners and user feedback, a threshold of 27 °C for WBGT
+    <sub>sun</sub> was exemplary chosen for the weekly operational forecast. For WBGT values above this threshold, the ISO 7243 [
+    <a rid="B36-ijerph-16-02890" ref-type="bibr" href="#B36-ijerph-16-02890">36</a>] recommends increasing work breaks for workers engaged in jobs that require a very high or high physical effort depending on whether the workers are acclimatized or not to heat respectively. This information is, however, very general and should be used above all to motivate the user to register on the HEAT-SHIELD platform to obtain customized information based on individual characteristics.
+   </p>
+  </sec>
+  <sec id="sec2dot3dot2-ijerph-16-02890" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.3.2. Customized HEAT-SHIELD Platform Outputs</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">User customized outputs are derived by the personalization of the metabolic rate used for the calculation of the customized recommended alert and exposure limits (RALs and RELs for unacclimatized and acclimatized workers, respectively) as well as correcting the WBGT forecast for insulating effects from clothing and personal protective equipment (PPE) worn by workers. The final output is the customized daily heat risk level forecasted for a specific day.</p>
+   <p xmlns="http://www.w3.org/1999/xhtml">In detail, the personalized metabolic rate (MR) is assessed on the basis of the body surface area (BSA) and the activity level (ISOlevel). BSA is calculated knowing both the user’s height and the weight (Equation (1)) [
+    <a rid="B48-ijerph-16-02890" ref-type="bibr" href="#B48-ijerph-16-02890">48</a>] 
+    <div id="FD1-ijerph-16-02890" class="disp-formula">
+     <span class="label">(1)</span>
+     <div id="mm1" class="math">
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mi">B</span>
+        <span class="mi">S</span>
+        <span class="mi">A</span>
+        <span class="mo"> </span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msup">
+           <span class="mi">m</span>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mi">w</span>
+        <span class="mi">e</span>
+        <span class="mi">i</span>
+        <span class="mi">g</span>
+        <span class="mi">h</span>
+        <span class="mi">t</span>
+        <span class="mo"> </span>
+        <div class="msup">
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">k</span>
+            <span class="mi">g</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mn">0.425</span>
+         </div>
+        </div>
+        <span class="mo">×</span>
+        <span class="mi">h</span>
+        <span class="mi">e</span>
+        <span class="mi">i</span>
+        <span class="mi">g</span>
+        <span class="mi">h</span>
+        <span class="mi">t</span>
+        <span class="mo"> </span>
+        <div class="msup">
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <span class="mi">m</span>
+           <span class="mo">)</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mn">0.725</span>
+         </div>
+        </div>
+        <span class="mo">×</span>
+        <span class="mn">0.20247</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Other methods for calculating BSA based on more recent formulas are also available [
+    <a rid="B49-ijerph-16-02890" ref-type="bibr" href="#B49-ijerph-16-02890">49</a>,
+    <a rid="B50-ijerph-16-02890" ref-type="bibr" href="#B50-ijerph-16-02890">50</a>]. However, the Du Bois and Du Bois formula [
+    <a rid="B48-ijerph-16-02890" ref-type="bibr" href="#B48-ijerph-16-02890">48</a>] still represents a standard method widely applied in most medical cases [
+    <a rid="B50-ijerph-16-02890" ref-type="bibr" href="#B50-ijerph-16-02890">50</a>,
+    <a rid="B51-ijerph-16-02890" ref-type="bibr" href="#B51-ijerph-16-02890">51</a>] and several studies have revealed its strikingly high accuracy [
+    <a rid="B52-ijerph-16-02890" ref-type="bibr" href="#B52-ijerph-16-02890">52</a>,
+    <a rid="B53-ijerph-16-02890" ref-type="bibr" href="#B53-ijerph-16-02890">53</a>,
+    <a rid="B54-ijerph-16-02890" ref-type="bibr" href="#B54-ijerph-16-02890">54</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The ISOlevel is a number measured on a scale from 1 to 5 indicating the user’s activity level (1 being resting, 5 very high metabolic rate) based on the classification of levels of metabolic rate according to the kind of activity from ISO 8996 [
+    <a rid="B55-ijerph-16-02890" ref-type="bibr" href="#B55-ijerph-16-02890">55</a>]. 
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The personalized MR was calculated based on the Equation (2) that represents a slight modification of the reference table of classification of metabolic rate by category as reported in the ISO 8996 [
+    <a rid="B55-ijerph-16-02890" ref-type="bibr" href="#B55-ijerph-16-02890">55</a>]. 
+    <div id="FD2-ijerph-16-02890" class="disp-formula">
+     <span class="label">(2)</span>
+     <div id="mm2" class="math">
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mi">M</span>
+        <span class="mi">R</span>
+        <span class="mo"> </span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mi">W</span>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mi">B</span>
+        <span class="mi">S</span>
+        <span class="mi">A</span>
+        <span class="mo">×</span>
+        <span class="mi">I</span>
+        <span class="mi">S</span>
+        <span class="mi">O</span>
+        <span class="mi">l</span>
+        <span class="mi">e</span>
+        <span class="mi">v</span>
+        <span class="mi">e</span>
+        <span class="mi">l</span>
+        <span class="mo">×</span>
+        <span class="mn">50</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The MR assessed is then used to calculate the customized RALs (Equation (3) for unacclimatized workers) and RELs (Equation (4) for acclimatized workers) according to the criteria for a recommended standard of the National Institute for Occupational Safety and Health (NIOSH) [
+    <a rid="B19-ijerph-16-02890" ref-type="bibr" href="#B19-ijerph-16-02890">19</a>]. 
+    <div id="FD3-ijerph-16-02890" class="disp-formula">
+     <span class="label">(3)</span>
+     <div id="mm3" class="math">
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mi">R</span>
+        <span class="mi">A</span>
+        <span class="mi">L</span>
+        <span class="mo"> </span>
+        <div class="mrow">
+         <div class="mrow">
+          <div class="msup">
+           <span class="mo">(</span>
+           <span class="mo">∘</span>
+          </div>
+          <span class="mi">C</span>
+          <span class="mo">−</span>
+          <span class="mi">W</span>
+          <span class="mi">B</span>
+          <span class="mi">G</span>
+          <span class="mi">T</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mn">59.9</span>
+        <span class="mo">−</span>
+        <span class="mn">14.1</span>
+        <span class="mo"> </span>
+        <span class="mi">l</span>
+        <span class="mi">o</span>
+        <div class="msub">
+         <span class="mi">g</span>
+         <div class="mrow">
+          <span class="mn">10</span>
+         </div>
+        </div>
+        <span class="mo"> </span>
+        <span class="mi">M</span>
+        <span class="mi">R</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div id="FD4-ijerph-16-02890" class="disp-formula">
+     <span class="label">(4)</span>
+     <div id="mm4" class="math">
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mi">R</span>
+        <span class="mi">E</span>
+        <span class="mi">L</span>
+        <span class="mo"> </span>
+        <div class="mrow">
+         <div class="mrow">
+          <div class="msup">
+           <span class="mo">(</span>
+           <span class="mo">∘</span>
+          </div>
+          <span class="mi">C</span>
+          <span class="mo">−</span>
+          <span class="mi">W</span>
+          <span class="mi">B</span>
+          <span class="mi">G</span>
+          <span class="mi">T</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <span class="mn">56.7</span>
+        <span class="mo">−</span>
+        <span class="mn">11.5</span>
+        <span class="mo"> </span>
+        <span class="mi">l</span>
+        <span class="mi">o</span>
+        <div class="msub">
+         <span class="mi">g</span>
+         <div class="mrow">
+          <span class="mn">10</span>
+         </div>
+        </div>
+        <span class="mo"> </span>
+        <span class="mi">M</span>
+        <span class="mi">R</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Both RAL and REL were developed to protect most healthy workers exposed to environmental and metabolic heat from developing adverse heat-related health effects (i.e., maintain thermal equilibrium): Workers exposed to environmental and metabolic heat below the appropriate NIOSH RALs or RELs will be protected from developing adverse health effects. Healthy workers are those physically and medically fit for the level of activity required by their jobs and wearing the conventional one-layer work clothing ensemble consisting of not more than long-sleeved work shirts and trousers (or equivalent) [
+    <a rid="B19-ijerph-16-02890" ref-type="bibr" href="#B19-ijerph-16-02890">19</a>]. When the clothing worn differs substantially from the conventional one-layer work clothing (i.e., more than one layer and/or greater air and vapor impermeability), the rate and amount of heat exchange between the skin and the ambient air will be significantly altered by convection, conduction, radiation, and sweat evaporation. Therefore, the forecasted WBGT is corrected to an effective WBGT (WBGT
+    <sub>eff</sub>) by adding the Clothing Adjustment Value (CAV) as described in ISO 7243 [
+    <a rid="B36-ijerph-16-02890" ref-type="bibr" href="#B36-ijerph-16-02890">36</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The final output is the customized heat-related occupational risk level forecasted for a specific day obtained from the percentage ratio between the WBGT
+    <sub>eff</sub> and the customized RAL or REL (Equation (5)). 
+    <div id="FD5-ijerph-16-02890" class="disp-formula">
+     <span class="label">(5)</span>
+     <div id="mm5" class="math">
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mi">R</span>
+        <span class="mi">i</span>
+        <span class="mi">s</span>
+        <span class="mi">k</span>
+        <span class="mo"> </span>
+        <span class="mi">l</span>
+        <span class="mi">e</span>
+        <span class="mi">v</span>
+        <span class="mi">e</span>
+        <span class="mi">l</span>
+        <span class="mo"> </span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <span class="mo">%</span>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">W</span>
+          <span class="mi">B</span>
+          <span class="mi">G</span>
+          <div class="msub">
+           <span class="mi">T</span>
+           <div class="mrow">
+            <span class="mi">e</span>
+            <span class="mi">f</span>
+            <span class="mi">f</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">R</span>
+          <span class="mi">A</span>
+          <span class="mi">L</span>
+          <span class="mo"> </span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">o</span>
+            <span class="mi">r</span>
+            <span class="mo"> </span>
+            <span class="mi">R</span>
+            <span class="mi">E</span>
+            <span class="mi">L</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+        </div>
+        <span class="mo">×</span>
+        <span class="mn">100</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The HEAT-SHIELD platform risk levels are described in 
+    <a rid="ijerph-16-02890-t001" ref-type="table" href="#ijerph-16-02890-t001">Table 1</a>. 
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Any user who is initially registered on the HEAT-SHIELD platform is considered an “unacclimatized worker” to heat stress conditions and, for this reason, the RAL is initially used in the calculation of the customized heat risk level. However, after 5 days with at least moderate heat stress risk level (
+    <a rid="ijerph-16-02890-t001" ref-type="table" href="#ijerph-16-02890-t001">Table 1</a>) forecasted in the short term (the first 5 days of forecasting the heat stress risk of the HEAT-SHIELD platform) during the warm season, the worker is considered “acclimatized” and the REL (higher WBGT limits than RAL) is used for the heat stress risk level calculation. Based on some stakeholder meetings organized as part of the HEAT-SHIELD project, one of the main feedback obtained was that workers are often not able to define whether they are adapted to heat. For this reason, we decided to adopt a simple empirical approach which, based on the available scientific literature, allowed us to consider when a worker can be considered acclimatized to heat. According to previous studies [
+    <a rid="B56-ijerph-16-02890" ref-type="bibr" href="#B56-ijerph-16-02890">56</a>,
+    <a rid="B57-ijerph-16-02890" ref-type="bibr" href="#B57-ijerph-16-02890">57</a>,
+    <a rid="B58-ijerph-16-02890" ref-type="bibr" href="#B58-ijerph-16-02890">58</a>], about 1 to 2 weeks of daily heat exposure are needed to gain adaptation that reduces physiological strain and helps to improve physical work capabilities under a hot environment. Other studies have shown that about 75% of the physiologic adjustments occur within the first 4–6 days of heat exposure [
+    <a rid="B59-ijerph-16-02890" ref-type="bibr" href="#B59-ijerph-16-02890">59</a>,
+    <a rid="B60-ijerph-16-02890" ref-type="bibr" href="#B60-ijerph-16-02890">60</a>] and a recent study [
+    <a rid="B61-ijerph-16-02890" ref-type="bibr" href="#B61-ijerph-16-02890">61</a>] revealed that 5 days of exposure to heat sessions were enough to acclimatize to heat workers involved in hot-climate countries. The 5-day threshold with critical heat stress conditions (in our case with at least a moderate risk level) was therefore used to define when a worker can be considered acclimatized to heat within a warm season.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Recommendations for intra-hourly work breaks and water consumption (hydration) at different metabolic rates described in 
+    <a rid="ijerph-16-02890-t001" ref-type="table" href="#ijerph-16-02890-t001">Table 1</a> were developed based on the available knowledge from the scientific literature and on the indications reported by the American Conference of Governmental Industrial Hygienists [
+    <a rid="B58-ijerph-16-02890" ref-type="bibr" href="#B58-ijerph-16-02890">58</a>], the NIOSH [
+    <a rid="B19-ijerph-16-02890" ref-type="bibr" href="#B19-ijerph-16-02890">19</a>], and the ISO 7243 [
+    <a rid="B36-ijerph-16-02890" ref-type="bibr" href="#B36-ijerph-16-02890">36</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Further details on the heat stress risk-level-based recommendations are also available: 
+    <div list-type="bullet" class="list">
+     <div class="list-item">
+      <p>Not significant: No special precautions are required and no further breaks than usual are needed.</p>
+     </div>
+     <div class="list-item">
+      <p>Low: You should be able to maintain normal activities. You may experience heat strain (generally low) and increased sweating. Consider clothing adjustment and drink more than normal.</p>
+     </div>
+     <div class="list-item">
+      <p>Moderate: Your water needs will be high. Increase the number of breaks (include small breaks with cooling) and drink frequently. Remember to rehydrate after work/exercise: Be aware that thirst is usually not a sufficient indicator when sweating is high. If this risk level is forecasted during the first summer days, pay extra attention to increase drinking and keep a good hydration status (drink/rehydrate with your meals) outside working hours. Consider adjusting the timing of activities (heavy physical tasks) to the cooler period of the day.</p>
+     </div>
+     <div class="list-item">
+      <p>High: This level is associated with severe heat stress. It is strongly suggested to adjust work—use active cooling, schedule frequent breaks in shadowed or cool areas where you can hydrate. Additional drinking is required (water needs may be more than 1 L/h). If possible, after consulting your doctor, add mineral salts to your meals. Consider adjusting the timing of activities (moderate–heavy physical tasks) to the cooler period of the day.</p>
+     </div>
+    </div>
+   </p>
+  </sec>
+  <sec id="sec2dot3dot3-ijerph-16-02890" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.3.3. Forecast Verification </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">With the aim to monitor and improve the forecast quality (the ability of a model to correctly predict an event, that is the degree of agreement between the forecasts and the corresponding observations), the forecasts during summer 2018 were verified against observations. For this purpose, a thorough comparison of the daily WBGT forecasts against the corresponding observed values at the 1798 representative meteorological stations used for downscaling and bias correction procedures was carried out. The probabilistic component of ensemble forecasts requires diverse metrics to characterize their quality in terms of accuracy, reliability association, and discrimination [
+    <a rid="B30-ijerph-16-02890" ref-type="bibr" href="#B30-ijerph-16-02890">30</a>,
+    <a rid="B62-ijerph-16-02890" ref-type="bibr" href="#B62-ijerph-16-02890">62</a>]. In this work, the continuous ranked probability score (CRPS) was used to assess the accuracy of the forecasts [
+    <a rid="B63-ijerph-16-02890" ref-type="bibr" href="#B63-ijerph-16-02890">63</a>]. This metric is widely used in forecast verification and represents the ensemble version of the mean absolute error. It is sensitive to the bias in the ensemble mean and to the over- or under-dispersion of the ensemble (i.e., it also penalizes ensembles with large spread even when having a good ensemble mean prediction). The score can be expressed as a skill score (SS) relative to a reference forecast (CRPSS). A positive CRPSS indicates a better performance of the forecast compared to the reference (perfect score of 1), CRPSS = 0 means that the forecast is as good as the reference and negative scores indicate lower skill than the reference. In this work, the CRPSS of the bias-corrected forecasts is obtained considering two possible reference datasets: (1) Raw forecasts (non-bias-corrected) and (2) observations from the past 20 years (which mimic a 20-member ensemble, hereafter climatological forecasts). The former shows potential added value of the bias-corrected forecasts with respect to the uncorrected forecasts, whereas the latter represents the skill of the forecasts with respect to a naive forecast based on climatological observations. Daily CRPS values were averaged into weekly values (week 1 spans from day 5 to day 11, week 2 from day 12 to day 18, week 3 from day 19 to day 25, week 4 from day 26 to day 32). Final CRPSSs were obtained from the weekly CRPS, for each European location. The verification was conducted considering forecasts which span from April to September 2018, i.e., 40 forecasts.
+   </p>
+  </sec>
+ </sec>
+</sec>

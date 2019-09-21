@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2b" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">(b)</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stochastic cusp modelling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We tested if a statistical approach to catastrophe theory could explain collapse and recovery patterns of Atlantic cod stocks. Catastrophe theory provides a mathematical framework to model both continuous and discontinuous changes in a system's dynamics [
+  <a rid="RSPB20182877C32" ref-type="bibr" href="#RSPB20182877C32">32</a>,
+  <a rid="RSPB20182877C47" ref-type="bibr" href="#RSPB20182877C47">47</a>,
+  <a rid="RSPB20182877C49" ref-type="bibr" href="#RSPB20182877C49">49</a>]. In particular, it is effective in describing abrupt changes in the state variable as a result of small and continuous changes in control variables [
+  <a rid="RSPB20182877C32" ref-type="bibr" href="#RSPB20182877C32">32</a>,
+  <a rid="RSPB20182877C48" ref-type="bibr" href="#RSPB20182877C48">48</a>]. The cusp catastrophe describes sudden and discontinuous transitions in the equilibrium state of a state variable 
+  <span class="italic">Z
+   <sub>t</sub>
+  </span> depending on two control parameters 
+  <span class="italic">α</span> and 
+  <span class="italic">β</span>. The canonical form of its potential function is
+  <div id="RSPB20182877M2.1" class="disp-formula">
+   <span class="label">2.1</span>
+   <div id="DM1" class="math">
+    <span class="mo">−</span>
+    <span class="mi">V</span>
+    <span stretchy="false" class="mo">(</span>
+    <div class="mrow">
+     <div class="msub">
+      <span class="mi">Z</span>
+      <span class="mi">t</span>
+     </div>
+     <span class="mo">;</span>
+     <span class="mi">α</span>
+     <span class="mo">,</span>
+     <span class="mi">β</span>
+    </div>
+    <span stretchy="false" class="mo">)</span>
+    <span class="mo">=</span>
+    <span class="mo">−</span>
+    <div class="mstyle">
+     <div class="mrow">
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <span class="mn">4</span>
+      </div>
+     </div>
+     <div class="msubsup">
+      <span class="mi">Z</span>
+      <span class="mi">t</span>
+      <span class="mn">4</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="mstyle">
+      <div class="mrow">
+       <div class="mfrac">
+        <span class="mn">1</span>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mi">β</span>
+      <div class="msubsup">
+       <span class="mi">Z</span>
+       <span class="mi">t</span>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">+</span>
+      <span class="mi">α</span>
+      <div class="msub">
+       <span class="mi">Z</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </div>In order to be applicable to empirical data, which often present stochasticity, equation (2.1) was reformulated as a stochastic differential equation by adding a (white noise) Wiener process with variance 
+  <span class="italic">σ</span>
+  <span class="sup">2</span>:
+  <div id="RSPB20182877M2.2" class="disp-formula">
+   <span class="label">2.2</span>
+   <div id="DM2" class="math">
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">d</span>
+    </div>
+    <div class="msub">
+     <span class="mi">Z</span>
+     <span class="mi">t</span>
+    </div>
+    <span class="mo">=</span>
+    <span stretchy="false" class="mo">(</span>
+    <div class="mrow">
+     <span class="mo">−</span>
+     <div class="msubsup">
+      <span class="mi">Z</span>
+      <span class="mi">t</span>
+      <span class="mn">3</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">β</span>
+     <div class="msub">
+      <span class="mi">Z</span>
+      <span class="mi">t</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">α</span>
+    </div>
+    <span stretchy="false" class="mo">)</span>
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">d</span>
+    </div>
+    <span class="mi">t</span>
+    <span class="mo">+</span>
+    <div class="msub">
+     <span class="mi">σ</span>
+     <span class="mi">z</span>
+    </div>
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">d</span>
+    </div>
+    <div class="msub">
+     <span class="mi">W</span>
+     <span class="mi">t</span>
+    </div>
+    <span class="mo">,</span>
+   </div>
+  </div>where the first part of the equation is the drift term, 
+  <span class="italic">σ</span>
+  <sub>z</sub> is the diffusion parameter and 
+  <span class="italic">W
+   <sub>t</sub>
+  </span> represents the Wiener process.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The parameters 
+  <span class="italic">α</span> and 
+  <span class="italic">β</span> were estimated as linear functions of exogenous variables, while the dependent canonical state variable (
+  <span class="italic">Z
+   <sub>t</sub>
+  </span>) is a linear function of one or more observable dependent state variables using a likelihood approach (below equations) [
+  <a rid="RSPB20182877C48" ref-type="bibr" href="#RSPB20182877C48">48</a>,
+  <a rid="RSPB20182877C49" ref-type="bibr" href="#RSPB20182877C49">49</a>]:
+  <div id="RSPB20182877M2.3a" class="disp-formula">
+   <span class="label">2.3a</span>
+   <div id="DM3" class="math">
+    <span class="mi">α</span>
+    <span class="mo">=</span>
+    <div class="msub">
+     <span class="mi">α</span>
+     <span class="mn">0</span>
+    </div>
+    <span class="mo">+</span>
+    <div class="msub">
+     <span class="mi">α</span>
+     <span class="mn">1</span>
+    </div>
+    <div class="msub">
+     <span class="mi">F</span>
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">M</span>
+     </div>
+    </div>
+    <span class="mo">,</span>
+   </div>
+  </div>
+  <div id="RSPB20182877M2.3b" class="disp-formula">
+   <span class="label">2.3b</span>
+   <div id="DM4" class="math">
+    <span class="mi">β</span>
+    <span class="mo">=</span>
+    <div class="msub">
+     <span class="mi">β</span>
+     <span class="mn">0</span>
+    </div>
+    <span class="mo">+</span>
+    <div class="msub">
+     <span class="mi">β</span>
+     <span class="mn">1</span>
+    </div>
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">SST</span>
+    </div>
+    <span class="mo">,</span>
+   </div>
+  </div>
+  <div id="RSPB20182877M2.3c" class="disp-formula">
+   <span class="label">2.3c</span>
+   <div id="DM5" class="math">
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">and</span>
+    </div>
+    <span width="1em" class="mspace"/>
+    <span class="mi">Z</span>
+    <span class="mo">=</span>
+    <div class="msub">
+     <span class="mi">w</span>
+     <span class="mn">0</span>
+    </div>
+    <span class="mo">+</span>
+    <div class="msub">
+     <span class="mi">w</span>
+     <span class="mn">1</span>
+    </div>
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">SB</span>
+    </div>
+    <span class="mo">,</span>
+   </div>
+  </div>where 
+  <div class="inline-formula">
+   <div id="IM1" class="math">
+    <div class="msub">
+     <span class="mi">α</span>
+     <span class="mn">0</span>
+    </div>
+    <span class="mo">,</span>
+    <div class="msub">
+     <span class="mi">β</span>
+     <span class="mn">0</span>
+    </div>
+    <span class="mo"> </span>
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">and</span>
+    </div>
+    <span class="mo"> </span>
+    <span class="mo"> </span>
+    <div class="msub">
+     <span class="mi">w</span>
+     <span class="mn">0</span>
+    </div>
+   </div>
+  </div> are the intercepts and 
+  <div class="inline-formula">
+   <div id="IM2" class="math">
+    <div class="msub">
+     <span class="mi">α</span>
+     <span class="mn">1</span>
+    </div>
+    <span class="mo">,</span>
+    <div class="msub">
+     <span class="mi">β</span>
+     <span class="mn">1</span>
+    </div>
+    <span class="mo"> </span>
+    <div class="mrow">
+     <span mathvariant="normal" class="mi">and</span>
+    </div>
+    <span class="mo"> </span>
+    <span class="mo"> </span>
+    <div class="msub">
+     <span class="mi">w</span>
+     <span class="mn">1</span>
+    </div>
+   </div>
+  </div> are the slopes of the models.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In our study, we fitted the state variable (
+  <span class="italic">Z</span>) as a linear function of cod SB (
+  <a ref-type="fig" rid="RSPB20182877F2" href="#RSPB20182877F2">figure 2</a>, equation (2.3
+  <span class="italic">c</span>)). The control parameters 
+  <span class="italic">α</span> and 
+  <span class="italic">β</span> are called asymmetry and bifurcation variables, respectively [
+  <a rid="RSPB20182877C48" ref-type="bibr" href="#RSPB20182877C48">48</a>,
+  <a rid="RSPB20182877C49" ref-type="bibr" href="#RSPB20182877C49">49</a>]. The asymmetry variable (
+  <span class="italic">α</span>) regulates the dimension of 
+  <span class="italic">Z
+   <sub>t</sub>
+  </span> and was fitted as a linear function of fishing mortality (
+  <span class="italic">F</span>
+  <sub>M</sub>), set by fisheries management and commonly assumed to be linearly related to population size [
+  <a rid="RSPB20182877C53" ref-type="bibr" href="#RSPB20182877C53">53</a>] (
+  <a ref-type="fig" rid="RSPB20182877F2" href="#RSPB20182877F2">figure 2</a>, equation (2.3
+  <span class="italic">a</span>)). The bifurcation variable (the splitting factor, 
+  <span class="italic">β</span>) determines whether the state variable follows a continuous or discontinuous path, and in our case, was fitted as a linear function of SST (
+  <a ref-type="fig" rid="RSPB20182877F2" href="#RSPB20182877F2">figure 2</a>, equation (2.3
+  <span class="italic">b</span>)). We used SST as an accepted proxy for environmental conditions affecting biological processes such as recruitment [
+  <a rid="RSPB20182877C54" ref-type="bibr" href="#RSPB20182877C54">54</a>,
+  <a rid="RSPB20182877C55" ref-type="bibr" href="#RSPB20182877C55">55</a>] and growth in Atlantic cod [
+  <a rid="RSPB20182877C56" ref-type="bibr" href="#RSPB20182877C56">56</a>], and as an indicator for climate change effects [
+  <a rid="RSPB20182877C51" ref-type="bibr" href="#RSPB20182877C51">51</a>,
+  <a rid="RSPB20182877C57" ref-type="bibr" href="#RSPB20182877C57">57</a>]. An exploratory analysis accounting for lagged effects of SST on SB did not result in significantly different outcomes and hence we here present the non-lagged models only (electronic supplementary material, table S6). The obtained parameters were then fitted into equation (2.1) to ultimately understand whether cod stocks follow continuous or discontinuous dynamics.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Equilibria of the system corresponding to the solution of the cubic equation are as follows:
+  <div id="RSPB20182877M2.4" class="disp-formula">
+   <span class="label">2.4</span>
+   <div id="DM6" class="math">
+    <span class="mo">−</span>
+    <div class="mstyle">
+     <div class="mrow">
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">∂</span>
+        </div>
+        <span class="mi">V</span>
+        <span stretchy="false" class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">Z</span>
+         <span class="mo">;</span>
+         <span class="mi">α</span>
+         <span class="mo">,</span>
+         <span class="mi">β</span>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <div class="mrow">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">∂</span>
+        </div>
+        <span class="mi">z</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <div class="msup">
+      <span class="mi">Z</span>
+      <span class="mn">3</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">β</span>
+     <span class="mi">Z</span>
+     <span class="mo">+</span>
+     <span class="mi">α</span>
+     <span class="mo">=</span>
+     <span class="mn">0.</span>
+    </div>
+   </div>
+  </div>From equation (2.3), a Cardan's discriminant (
+  <span class="italic">δ</span>, equation (2.5)) is derived [
+  <a rid="RSPB20182877C49" ref-type="bibr" href="#RSPB20182877C49">49</a>], that allows us to distinguish if the system is in a state with only one (
+  <span class="italic">δ</span> &gt; 0) or three equilibria (
+  <span class="italic">δ</span> &lt; 0):
+  <div id="RSPB20182877M2.5" class="disp-formula">
+   <span class="label">2.5</span>
+   <div id="DM7" class="math">
+    <span class="mi">δ</span>
+    <span class="mo">=</span>
+    <span class="mn">27</span>
+    <div class="msup">
+     <span class="mi">α</span>
+     <span class="mn">2</span>
+    </div>
+    <span class="mo">−</span>
+    <span class="mn">4</span>
+    <div class="msup">
+     <span class="mi">β</span>
+     <span class="mn">3</span>
+    </div>
+    <span class="mo">.</span>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Our cusp modelling approach can be visualized as a three-dimensional landscape where the trajectory of cod stock size in response to changing fishing mortality can be continuous (i.e. linear, with one stable equilibrium) or discontinuous (i.e. folded, with two stable equilibria and one unstable equilibrium) depending on SST (based on the results of equation (2.5)). As an example, 
+  <a ref-type="fig" rid="RSPB20182877F2" href="#RSPB20182877F2">figure 2</a> presents the collapse of North Sea cod, indicated by the drop in SB from the upper to the lower shield of the phase plane owing to high fishing pressure (
+  <a ref-type="fig" rid="RSPB20182877F2" href="#RSPB20182877F2">figure 2</a>
+  <span class="italic">a</span>). The stock was modelled to be below the folded area and thus to move between two stable states. The bifurcation set is the area under the fold where one unstable state is present, and thus where the dynamics of the stock can be unpredictable (i.e. 
+  <span class="italic">δ</span> = 0). After the collapse, and with increasing temperatures, SB values progressively move below the discontinuous fold into the bifurcation set. Thus, critical thresholds are readily breached by relatively minor changes in fishing mortality, causing stocks to potentially fluctuate between the two alternative states along the discontinuous path. Stocks following a discontinuous path, and thus staying close to the bifurcation area, are prone to tipping points.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">A projection on the two-dimensional plane allows one to follow the stock dynamics of North Sea cod and understand why its recovery may be limited (
+  <a ref-type="fig" rid="RSPB20182877F2" href="#RSPB20182877F2">figure 2</a>
+  <span class="italic">b</span>,
+  <span class="italic">c</span>). Stock size decreased in response to increasing fishing mortality, moving in and out the bifurcation set (indicated in light blue). Eventually, the stock collapsed to a very low biomass state and remained in the unpredictable area of the cusp. During the last 10 years of the time series (indicated in red in 
+  <a ref-type="fig" rid="RSPB20182877F2" href="#RSPB20182877F2">figure 2</a>), exploitation pressure of North Sea cod has been drastically reduced; however, SB levels remained significantly lower compared to the beginning of the study period, when fishing mortality was similar. This hysteresis in response to decreased exploitation pressure is related to an increase in SST that is detrimental for North Sea cod [
+  <a rid="RSPB20182877C55" ref-type="bibr" href="#RSPB20182877C55">55</a>]. Therefore, the cusp model can also explain hysteresis in the recovery of the state variable (i.e. SB of Atlantic cod stocks). Recovery of a collapsed fish population can then either occur when SST changes in a way that fishing mortality again has a linear effect on SB, or, within the bifurcation area, when chance events, e.g. high reproductive success, occur.
+ </p>
+</sec>

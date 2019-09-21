@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ensemble analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Many physical processes governing ice sheet evolution are not precisely constrained. To assess the sensitivity of volume change estimates to these uncertainties, we performed a large ensemble of simulations, with 11 key parameters drawn from a priori probability distributions of plausible values (table S2). Instead of probing such a large parameter space, for each RCP scenario, we produced 500 parameter combinations using Latin hypercube sampling (
+  <a rid="R56" ref-type="bibr" href="#R56">
+   <span class="italic">56</span>
+  </a>), which ensures that the ensemble is optimally representative of the joint distribution of parameters, while gaining efficiency relative to factorial or Monte Carlo designs by eliminating potential redundancies. We vary parameters drawn from five broadly defined groups: (i) Climate: We select the four GCM projections with equal probability and model the percentage increase in precipitation per 1 K increase in air temperature, ω, as a uniform distribution bounded by 5 and 7% K
+  <span class="sup">−1</span> (
+  <a rid="R23" ref-type="bibr" href="#R23">
+   <span class="italic">23</span>
+  </a>). (ii) Surface processes: Parameters governing the interaction between the climate and the ice sheet surface mass balance include a positive degree-day ice melt factor 
+  <span class="italic">f
+   <sub>i</sub>
+  </span>, positive degree-day snow melt factor 
+  <span class="italic">f</span>
+  <sub>s</sub>, and refreezing proportion ψ. Literature values for the ice melt factor 
+  <span class="italic">f</span>
+  <sub>i</sub> range from 8 to 40 mm K
+  <span class="sup">−1</span> day
+  <span class="sup">−1</span> (
+  <a rid="R57" ref-type="bibr" href="#R57">
+   <span class="italic">57</span>
+  </a>, 
+  <a rid="R58" ref-type="bibr" href="#R58">
+   <span class="italic">58</span>
+  </a>); however, a comparison with the mean 2000–2015 surface mass balance simulated with HIRHAM5’s energy balance model reveals that values ≫8 mm K
+  <span class="sup">−1</span> day
+  <span class="sup">−1</span> significantly overestimate melt (not shown). We thus use a truncated normal distributions with mean μ = 8 mm K
+  <span class="sup">−1</span> day
+  <span class="sup">−1</span> and SD σ = 4 mm K
+  <span class="sup">−1</span> day
+  <span class="sup">−1</span>. For the snow melt factor 
+  <span class="italic">f</span>
+  <sub>s</sub>, we also use a truncated normal distribution with a mean μ = 4.1 mm K
+  <span class="sup">−1</span> day
+  <span class="sup">−1</span> and an SD of 1.5 mm K
+  <span class="sup">−1</span> day
+  <span class="sup">−1</span> (
+  <a rid="R59" ref-type="bibr" href="#R59">
+   <span class="italic">59</span>
+  </a>). The amount of annual snow fall that is allowed to refreeze ψ is also modeled as a truncated normal, but with a mean μ = 50% and SD σ = 20% to cover reported literature values (
+  <a rid="R60" ref-type="bibr" href="#R60">
+   <span class="italic">60</span>
+  </a>). (iii) Ocean: We specify three suites of parameters corresponding to low, moderate, and high regimes for both the spatial 
+  <div class="inline-formula">
+   <div id="m31" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <div accent="true" class="mover">
+        <span class="mi">m</span>
+        <span class="mo">˙</span>
+       </div>
+       <span class="mi">x</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> and the temporal 
+  <div class="inline-formula">
+   <div id="m32" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <div accent="true" class="mover">
+        <span class="mi">m</span>
+        <span class="mo">˙</span>
+       </div>
+       <span class="mi">t</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> variability in submarine melt. These parameter suites are sampled with equal probability. We specify three suites of parameters corresponding to low, moderate, and high regimes of minimum shelf thickness 
+  <span class="italic">h</span>
+  <sub>min</sub>. These three scenarios are selected with equal probability. The maximum tensile stress of a marine terminus σ
+  <sub>max</sub> is modeled as a normal distribution symmetrically truncated above 1.4 MPa and below 0.7 MPa (
+  <a rid="R32" ref-type="bibr" href="#R32">
+   <span class="italic">32</span>
+  </a>). (iv) Ice dynamics: Aschwanden 
+  <span class="italic">et al.</span> (
+  <a rid="R12" ref-type="bibr" href="#R12">
+   <span class="italic">12</span>
+  </a>) performed a calibration of ice dynamical parameters and found values of 
+  <span class="italic">q</span> = 0.6 for the exponent of the sliding law and 
+  <span class="italic">E</span> = 1.25 for the shallow ice enhancement factor to result in good agreement with observed flow speeds. Here, we use a truncated normal distribution for 
+  <span class="italic">q</span> with μ = 0.6 and σ = 0.2, whereas 
+  <span class="italic">E</span> is modeled with a γ distribution centered around 1.25.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To attribute uncertainties in mass loss to parametric uncertainties, we compute main-effect Sobol indices for each input variable (
+  <a rid="R36" ref-type="bibr" href="#R36">
+   <span class="italic">36</span>
+  </a>). Main-effect Sobol indices can be interpreted as the fraction of output variance that is explained by the variance in a given input parameter, neglecting second-order effects due to parameter interactions. Thus, the Sobol indices produced for a given output (in our case total mass change) always sum to less than unity. Typically, a large fraction of unity signifies that interactions between parameter uncertainty are of second-order importance.
+ </p>
+</sec>
