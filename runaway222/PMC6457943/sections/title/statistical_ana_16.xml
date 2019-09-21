@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We determined relative effects of climate and total tree basal area (as a surrogate for succession status) on AM tree dominance across the ecoregions (plot level data) using mixed-effects models with a beta distribution and logit link function using R package “glmmTMB” (
+  <a rid="R55" ref-type="bibr" href="#R55">
+   <span class="italic">55</span>
+  </a>). Since AM tree dominance data in our inventory plots included many zeros (only EM trees present in the plot) and ones (only AM trees present), we transformed the data as 
+  <div class="inline-formula">
+   <div id="m1" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">y</span>
+      <span class="mo">′</span>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">y</span>
+        <span class="mo">×</span>
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="italic" class="mi">N</span>
+        <span class="mo">−</span>
+        <span class="mn">1</span>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">+</span>
+        <span class="mn">0.5</span>
+       </div>
+       <span mathvariant="italic" class="mi">N</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, where 
+  <span class="italic">y</span> is the AM tree dominance and 
+  <span class="italic">N</span> is the sample size, following Averill 
+  <span class="italic">et al</span>. (
+  <a rid="R31" ref-type="bibr" href="#R31">
+   <span class="italic">31</span>
+  </a>). We added subecoregions (nested units within ecoregion; 
+  <a ref-type="fig" rid="F1" href="#F1">Fig. 1A</a>) as a random effect in the model to account for the spatial heterogeneity between plots in different subecoregions. We excluded plots with any missing variables and ended up with 132,956 plots for analyses. All predictor variables were standardized by subtracting mean and dividing by 2 SDs to make the regression coefficients for the predictors comparable. AM tree dominance differences between two inventories (T1 and T2) (hexagon-level data) and between saplings and adult trees (plot-level data) were tested using a paired Wilcoxon signed-rank test for each ecoregion. At the ecoregion level, effects of global change drivers (i.e., MAP and MAT changes, N deposition, and fire frequency), AM tree dominance at T1, and basal area on the AM tree dominance change during the past three decades (T2-T1) were tested using mixed-effects models with a Gaussian error distribution and subecoregions as a random effect (see fig. S2 for the spatial patterns of the predictor variables). We also tested the effects of genus-level tree dominance changes in 10 most abundant tree genera (
+  <a rid="R56" ref-type="bibr" href="#R56">
+   <span class="italic">56</span>
+  </a>) in the studied plots on the AM tree dominance change using the same mixed-effects model structure described above. The AM tree genera included 
+  <span class="italic">Acer</span>, 
+  <span class="italic">Fraxinus</span>, 
+  <span class="italic">Prunus</span>, 
+  <span class="italic">Nyssa</span>, and 
+  <span class="italic">Ulmus</span>, and the EM tree genera included 
+  <span class="italic">Quercus</span>, 
+  <span class="italic">Pinus</span>, 
+  <span class="italic">Carya</span>, 
+  <span class="italic">Betula</span>, and 
+  <span class="italic">Populus</span>. Fire frequency was log-transformed to meet normality assumptions, and all predictor variables were standardized. Bivariate relationships between soil C and N stocks and C:N ratio and AM tree dominance were tested using a linear regression. We further determined relative effects of AM tree dominance and environmental factors on soil attributes using a mixed-effects modeling approach. At the ecoregion level, we modeled each soil attribute (soil C and N stocks and C:N ratio) with a Gaussian error distribution as a function of AM tree dominance, MAP, MAT, basal area, and clay proportion, nested within subecoregions. Soil attributes were log-transformed to meet normality assumptions, and all predictor variables were standardized. All statistical analyses were performed in the R statistical programming environment, version 3.3.2 (
+  <a rid="R57" ref-type="bibr" href="#R57">
+   <span class="italic">57</span>
+  </a>).
+ </p>
+</sec>

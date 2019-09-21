@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec013" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pipeline network agent</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The pipeline network agent includes different pipe classes with a defined total length (in miles) divided into 5 condition (age) group states (
+  <span class="italic">i</span> = 20,40,60,80,100). For each group, which represents a certain condition level, there is a defined material (e.g., percentage of PVC and CIP type). Deterioration of pipes is modeled based on their age. As pipes age, their condition group may change; every year, 5 percent of pipes in each condition group (except condition group 100) moves to the next condition group. Another mechanism that affects the transition of pipes into different condition group states is pipe renewal. Based on the renewal decision-making outcomes of the agency agent (which is explained later), a certain percentage of pipes is renewed and moves from condition group 100 to condition group 20, annually. 
+  <a ref-type="fig" rid="pone.0207674.g005" href="#pone.0207674.g005">Fig 5</a> depicts the modeling deterioration mechanism of pipes in the model.
+ </p>
+ <div id="pone.0207674.g005" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0207674.g005</span>
+  <span class="label">Fig 5</span>
+  <div class="caption">
+   <div class="title">Modeling physical pipeline deterioration process.</div>
+  </div>
+  <div xlink:href="pone.0207674.g005" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The aging of the pipes is also reflected in the changes in the percentage of materials for each group. At the beginning of simulation, the model starts with a defined percentage of PVC and CIP pipes for each group. As pipes age, these percentages change (because renewal is by PVC). Based on the portion of pipe length in each condition group, the model computes the network average condition (
+  <div id="pone.0207674.e001" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e001.jpg" id="pone.0207674.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M1" class="math">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">C</span>
+      </div>
+      <span class="mo">¯</span>
+     </div>
+    </div>
+   </div>
+  </div>) using 
+  <a ref-type="disp-formula" rid="pone.0207674.e002" href="#pone.0207674.e002">Eq 1</a> [
+  <a rid="pone.0207674.ref043" ref-type="bibr" href="#pone.0207674.ref043">43</a>]: 
+  <div id="pone.0207674.e002" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e002.jpg" id="pone.0207674.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M2" class="math">
+     <div class="mrow">
+      <div accent="true" class="mover">
+       <span class="mi">C</span>
+       <span class="mo">¯</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div displaystyle="false" class="mstyle">
+          <span class="mo">∑</span>
+         </div>
+         <span class="mi">i</span>
+        </div>
+        <span stretchy="false" class="mo">(</span>
+        <div class="msub">
+         <span class="mi">l</span>
+         <span class="mi">i</span>
+        </div>
+        <span class="mo">*</span>
+        <span class="mi">i</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">L</span>
+         <span class="mi">N</span>
+        </div>
+       </div>
+      </div>
+      <span width="1em" class="mspace"/>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">20</span>
+        <span class="mo">,</span>
+        <span class="mn">40</span>
+        <span class="mo">,</span>
+        <span class="mn">60</span>
+        <span class="mo">,</span>
+        <span width="0.25em" class="mspace"/>
+        <span class="mn">80</span>
+        <span class="mo">,</span>
+        <span class="mn">100</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div> where 
+  <span class="italic">l</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> and 
+  <span class="italic">L</span>
+  <sub>
+   <span class="italic">N</span>
+  </sub> are the total length of pipes (mile) in condition group 
+  <span class="italic">i</span> and in the network, respectively. The other attributes of the pipeline network agent include breakage, leakage, and service reliability. Breakage is modeled using a stochastic process that determines the frequency of pipe breaks during one year. The frequency of breaks for each mile of pipes is a function of pipe’s material and age. The model uses a Poisson Process with a mean rate of break (
+  <span class="italic">λ</span>) (shown in 
+  <a ref-type="disp-formula" rid="pone.0207674.e003" href="#pone.0207674.e003">Eq 2</a>) to calculate the annual frequency of pipe breaks per each mile of pipeline. In 
+  <a ref-type="disp-formula" rid="pone.0207674.e003" href="#pone.0207674.e003">Eq 2</a>, the Lambda (
+  <span class="italic">λ</span>) represents the mean rate of break per mile per year [
+  <a rid="pone.0207674.ref044" ref-type="bibr" href="#pone.0207674.ref044">44</a>]: 
+  <div id="pone.0207674.e003" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e003.jpg" id="pone.0207674.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M3" class="math">
+     <div class="mrow">
+      <span class="mi">λ</span>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">N</span>
+       <span class="mn">0</span>
+      </div>
+      <span class="mo">.</span>
+      <div class="msup">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <span class="mi">g</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">−</span>
+          <span class="mn">10</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(2)</span>
+  </div> where 
+  <span class="italic">N</span>
+  <sub>0</sub> is the initial number of breaks per mile per year in a new pipe, 
+  <span class="italic">g</span> is the growth rate which is 0.07 for PVC and 0.078 for CIP pipes [
+  <a rid="pone.0207674.ref045" ref-type="bibr" href="#pone.0207674.ref045">45</a>], and 
+  <span class="italic">i</span> is the pipe’s condition group. The total number of breaks in the network per year (
+  <span class="italic">N</span>
+  <sub>
+   <span class="italic">B</span>
+  </sub>) would be sum of the breaks in each mile of the entire network pipes. The annual water loss due to network breaks is calculated using 
+  <a ref-type="disp-formula" rid="pone.0207674.e004" href="#pone.0207674.e004">Eq 3</a> [
+  <a rid="pone.0207674.ref046" ref-type="bibr" href="#pone.0207674.ref046">46</a>]: 
+  <div id="pone.0207674.e004" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e004.jpg" id="pone.0207674.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M4" class="math">
+     <div class="mrow">
+      <span class="mi">W</span>
+      <div class="msub">
+       <span class="mi">L</span>
+       <span class="mi">B</span>
+      </div>
+      <span class="mo">=</span>
+      <span class="mn">1440</span>
+      <span class="mo">*</span>
+      <div class="msub">
+       <span class="mi">N</span>
+       <span class="mi">B</span>
+      </div>
+      <span class="mo">*</span>
+      <div accent="true" class="mover">
+       <span class="mi">F</span>
+       <span class="mo">¯</span>
+      </div>
+      <span class="mo">*</span>
+      <span class="mi">d</span>
+      <span class="mo">*</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">P</span>
+         <span class="mo">¯</span>
+        </div>
+        <span class="mo">/</span>
+        <span class="mn">70</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(3)</span>
+  </div> where, 
+  <span class="italic">WL</span>
+  <sub>
+   <span class="italic">B</span>
+  </sub> is the annual water loss due to network breaks (gallon), 
+  <span class="italic">N</span>
+  <sub>
+   <span class="italic">B</span>
+  </sub> is the total number of annual breaks, 
+  <div id="pone.0207674.e005" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e005.jpg" id="pone.0207674.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M5" class="math">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">F</span>
+      </div>
+      <span class="mo">¯</span>
+     </div>
+    </div>
+   </div>
+  </div> is the network average flow rate (gallon per minute), 
+  <span class="italic">d</span> is the total duration of disruption due to break (day), and 
+  <div id="pone.0207674.e006" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e006.jpg" id="pone.0207674.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M6" class="math">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">P</span>
+      </div>
+      <span class="mo">¯</span>
+     </div>
+    </div>
+   </div>
+  </div> is the network average pressure (psi). 
+  <div id="pone.0207674.e007" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e007.jpg" id="pone.0207674.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M7" class="math">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">F</span>
+      </div>
+      <span class="mo">¯</span>
+     </div>
+     <span class="mo">,</span>
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">P</span>
+      </div>
+      <span class="mo">¯</span>
+     </div>
+    </div>
+   </div>
+  </div>, and 
+  <span class="italic">d</span> are user-defined input parameters into the model.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Similarly, network leakage is determined as total water volume lost in the network, which is a fraction of annual water demand. Leakage rate (
+  <span class="italic">LR</span>), which is a unitless variable, depends on network average condition (
+  <div id="pone.0207674.e008" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e008.jpg" id="pone.0207674.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M8" class="math">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">C</span>
+      </div>
+      <span class="mo">¯</span>
+     </div>
+    </div>
+   </div>
+  </div>) and is calculated using 
+  <a ref-type="disp-formula" rid="pone.0207674.e009" href="#pone.0207674.e009">Eq 4</a> [
+  <a rid="pone.0207674.ref047" ref-type="bibr" href="#pone.0207674.ref047">47</a>]: 
+  <div id="pone.0207674.e009" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e009.jpg" id="pone.0207674.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M9" class="math">
+     <div class="mrow">
+      <span class="mi">L</span>
+      <span class="mi">R</span>
+      <span class="mo">=</span>
+      <span class="mn">0.00075</span>
+      <span class="mo">*</span>
+      <div class="msup">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">C</span>
+         <span class="mo">¯</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mn">0.07</span>
+          <span class="mi">P</span>
+          <span class="mi">V</span>
+          <span class="mi">C</span>
+          <span class="mo">+</span>
+          <span class="mn">0.078</span>
+          <span class="mi">C</span>
+          <span class="mi">I</span>
+          <span class="mi">P</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(4)</span>
+  </div> where 
+  <span class="italic">PVC</span> and 
+  <span class="italic">CIP</span> are the fractions of pipeline network with each material type. Accordingly, the annual water loss due to network leakage is determined by 
+  <a ref-type="disp-formula" rid="pone.0207674.e010" href="#pone.0207674.e010">Eq 5</a>: 
+  <div id="pone.0207674.e010" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e010.jpg" id="pone.0207674.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M10" class="math">
+     <div class="mrow">
+      <span class="mi">W</span>
+      <div class="msub">
+       <span class="mi">L</span>
+       <span class="mi">L</span>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">L</span>
+      <span class="mi">R</span>
+      <span class="mo">*</span>
+      <span class="mi">D</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(5)</span>
+  </div> where 
+  <span class="italic">WL</span>
+  <sub>
+   <span class="italic">L</span>
+  </sub> and 
+  <span class="italic">D</span> denote the annual water loss due to network leakage (gallon) and the annual water demand (gallon), respectively.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Considering the total water loss in the network due to both breakage and leakage, annual water supply (
+  <span class="italic">S</span>), which represents the delivered water to users (gallon per year), is calculated using 
+  <a ref-type="disp-formula" rid="pone.0207674.e011" href="#pone.0207674.e011">Eq 6</a>: 
+  <div id="pone.0207674.e011" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e011.jpg" id="pone.0207674.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M11" class="math">
+     <div class="mrow">
+      <span class="mi">S</span>
+      <span class="mo">=</span>
+      <span class="mi">D</span>
+      <span class="mo">−</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">W</span>
+        <div class="msub">
+         <span class="mi">L</span>
+         <span class="mi">B</span>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">W</span>
+        <div class="msub">
+         <span class="mi">L</span>
+         <span class="mi">L</span>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(6)</span>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In order to determine whether the supply of water transported by the pipes can meet the given demand, a service reliability (
+  <span class="italic">SR</span>) parameter is defined. This parameter represents the extent to which the supplied water through the network met the demand. To determine 
+  <span class="italic">SR</span>, in each year (
+  <span class="italic">t</span>) the cumulative supply is divided by the cumulative demand and this gives the service reliability until that year (
+  <span class="italic">SR</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub>) based on 
+  <a ref-type="disp-formula" rid="pone.0207674.e012" href="#pone.0207674.e012">Eq 7</a>: 
+  <div id="pone.0207674.e012" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0207674.e012.jpg" id="pone.0207674.e012g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M12" class="math">
+     <div class="mrow">
+      <span class="mi">S</span>
+      <div class="msub">
+       <span class="mi">R</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msubsup">
+         <div displaystyle="false" class="mstyle">
+          <span class="mo">∑</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">t</span>
+        </div>
+        <div class="msub">
+         <span class="mi">S</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msubsup">
+         <div displaystyle="false" class="mstyle">
+          <span class="mo">∑</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">t</span>
+        </div>
+        <div class="msub">
+         <span class="mi">D</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(7)</span>
+  </div> where 
+  <span class="italic">S</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> and 
+  <span class="italic">D</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> are delivered water and water demand (gallon) in year j, respectively.
+ </p>
+</sec>

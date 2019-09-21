@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec12" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Reconstructing past vital rates and population growth rates</div>
+ <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">Based on the above models of vital rates, for each posterior sample we estimated age-specific survival and fecundity rates for past conditions of population density, winter harshness (i.e. ROS amount), and winter length (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>, Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). Importantly, to account for sources of environmental stochasticity due to processes other than covariates included in the model, we estimated a covariance matrix Σ of the different vital rates (fecundity, survival) for all age classes based on the random year effects and the residuals 
+  <div id="IEq3" class="inline-formula">
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\varepsilon _{S_{i,t}}$$\end{document}</span>
+    <div id="M10" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">S</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_9332_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq4" class="inline-formula">
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\varepsilon _{F_{i,t}}$$\end{document}</span>
+    <div id="M12" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">F</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_9332_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> of Eqs. 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a> and 
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a>. From this covariance matrix Σ, we generated 100 new residuals from a multivariate normal distribution.
+ </p>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">These rates then allowed the population size at time 
+  <span class="italic">t</span> + 1 to be estimated from the population size of each age at time 
+  <span class="italic">t</span>. The population size just before the hunting season at time 
+  <span class="italic">t</span> + 1, 
+  <span class="italic">N</span>
+  <sub>sim,
+   <span class="italic">t</span>+1
+  </sub>, corresponds to the sum of females of different ages:
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$N_{{\mathrm{sim}},t + 1} = N_{{\mathrm{sim}}\,{\mathrm{calves}},t + 1} + N_{{\mathrm{sim}}\,{\mathrm{yearlings}},t + 1} + N_{{\mathrm{sim}}\,2,t + 1} + \cdots + N_{{\mathrm{sim}}\,13,t + 1}$$\end{document}</span>
+    <div id="M14" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span width="0.3em" class="mspace"/>
+       <span mathvariant="normal" class="mi">calves</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span width="0.3em" class="mspace"/>
+       <span mathvariant="normal" class="mi">yearlings</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span width="0.3em" class="mspace"/>
+       <span class="mn">2</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mo">⋯</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span width="0.3em" class="mspace"/>
+       <span class="mn">13</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9332_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Each of these terms can be estimated based on the vital rates. The number of calves produced, 
+  <span class="italic">N</span>
+  <sub>sim calves,
+   <span class="italic">t</span>+1
+  </sub> (first term on right side of Eq. 
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>), consists of calves produced by females of each age (except yearlings). 
+  <span class="italic">N</span>
+  <sub>sim calves,
+   <span class="italic">t</span>+1
+  </sub> was modelled using a binomial process to allow for demographic stochasticity (i.e. chance events that affect individuals independently):
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$N_{{\mathrm{sim}}\,{\mathrm{calves}},t + 1} \sim \,{\mathrm{Bin}}\left( {N_{{\mathrm{sim}}\,2,t + 1},F_{{\mathrm{sim}}\,2,t}} \right) + {\mathrm{Bin}}\left( {N_{{\mathrm{sim}}\,3,t + 1},F_{{\mathrm{sim}}\,3,t}} \right) \\ + \cdots + {\mathrm{Bin}}\left( {N_{{\mathrm{sim}}\,13,t + 1},F_{{\mathrm{sim}}\,13,t}} \right)$$\end{document}</span>
+    <div id="M16" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span width="0.3em" class="mspace"/>
+       <span mathvariant="normal" class="mi">calves</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">~</span>
+     <span width="0.3em" class="mspace"/>
+     <span mathvariant="normal" class="mi">Bin</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">N</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mn">2</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">F</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mn">2</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span mathvariant="normal" class="mi">Bin</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">N</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mn">3</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">F</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mn">3</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mo">⋯</span>
+     <span class="mo">+</span>
+     <span mathvariant="normal" class="mi">Bin</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">N</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mn">13</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">F</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mn">13</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9332_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">F</span>
+  <sub>sim 
+   <span class="italic">i</span>,
+   <span class="italic">t</span>
+  </sub> is the estimated fecundity rate for females of age 
+  <span class="italic">i</span> at time 
+  <span class="italic">t</span>, resulting in calves at time 
+  <span class="italic">t</span> + 1. For instance, 
+  <span class="italic">F</span>
+  <sub>sim 2,
+   <span class="italic">t</span>
+  </sub> is the probability of a 2-year-old female at time 
+  <span class="italic">t</span> having a calf at heel at time 
+  <span class="italic">t</span> + 1 (depending on climate and population size at time 
+  <span class="italic">t</span>, see Eq. 
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a>). The number of female calves was then drawn from a binomial distribution with a probability 0.5 (i.e. we assumed a balanced sex ratio).
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">N</span>
+  <sub>sim yearlings,
+   <span class="italic">t</span>+1
+  </sub> (second term on right side of Eq. 
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) corresponds to the number of female calves that have survived from time 
+  <span class="italic">t</span> to time 
+  <span class="italic">t</span> + 1 and was also modelled using a binomial process to include demographic stochasticity. Moreover, a few female calves are removed from the population by hunting (
+  <span class="italic">H</span>) or scientific culling (
+  <span class="italic">C</span>). Thus the number of female yearlings is modelled as follows:
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$N_{{\mathrm{sim}}\,{\mathrm{yearling}},t + 1} \sim {\mathrm{Bin}}\left( {N_{{\mathrm{sim}}\,{\mathrm{calves}},t} - H_{{\mathrm{calves}},t} - C_{{\mathrm{calves}},t},S_{{\mathrm{sim}}\,1,t}} \right)$$\end{document}</span>
+    <div id="M18" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span width="0.3em" class="mspace"/>
+       <span mathvariant="normal" class="mi">yearling</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">~</span>
+     <span mathvariant="normal" class="mi">Bin</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">N</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span mathvariant="normal" class="mi">calves</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+       <span class="mo">-</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">H</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">calves</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+       <span class="mo">-</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">C</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">calves</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">S</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mn">1</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9332_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">S</span>
+  <sub>sim 
+   <span class="italic">i</span>,
+   <span class="italic">t</span>
+  </sub> is the estimated survival probability of females of age 
+  <span class="italic">i</span> at time 
+  <span class="italic">t</span>. Similarly, 
+  <span class="italic">N</span>
+  <sub>sim 3,
+   <span class="italic">t+</span>1
+  </sub>, …, and 
+  <span class="italic">N</span>
+  <sub>sim 14,
+   <span class="italic">t+</span>1
+  </sub> (all other terms in Eq. 
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) correspond to the population size in the previous age that have survived from time 
+  <span class="italic">t</span> to time 
+  <span class="italic">t</span> + 1. Thus, for age 
+  <span class="italic">j</span> ϵ [2, 13]:
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$N_{{\mathrm{sim}}\,j + 1,\,t + 1} \sim {\mathrm{Bin}}\left( {N_{{\mathrm{sim}}\,j,t} - H_{j,t} - C_{j,t},S_{{\mathrm{sim}}\,j,t}} \right)$$\end{document}</span>
+    <div id="M20" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">sim</span>
+       <span width="0.3em" class="mspace"/>
+       <span class="mi">j</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+       <span class="mo">,</span>
+       <span width="0.3em" class="mspace"/>
+       <span class="mi">t</span>
+       <span class="mo">+</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">~</span>
+     <span mathvariant="normal" class="mi">Bin</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">N</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mi">j</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+       <span class="mo">-</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">H</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+       <span class="mo">-</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">C</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">S</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sim</span>
+         <span width="0.3em" class="mspace"/>
+         <span class="mi">j</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9332_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">Note that summer mortality in calves (as well as for other age classes) is considered to be close to zero
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>. Thus 
+  <span class="italic">N</span>
+  <sub>sim,
+   <span class="italic">t+1</span>
+  </sub> can be estimated from observed values of ROS, length of the winter, and population size, estimating 
+  <span class="italic">S</span> and 
+  <span class="italic">F</span> from the models presented above.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Using the models described above, we estimated age-specific survival rates (from 1994 to 2013), fecundity rates (from 1995 to 2014), and the population size (from 1995 to 2014) through a step-by-step approach. Each year was estimated based on observations of age-specific population sizes (provided by the IPM; Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>) and observed ROS and winter length the previous year. Thus, in Eqs. 
+  <a rid="Equ5" ref-type="" href="#Equ5">5</a> and 
+  <a rid="Equ6" ref-type="" href="#Equ6">6</a>, 
+  <span class="italic">N</span>
+  <sub>sim calves,
+   <span class="italic">t</span>
+  </sub> was replaced with 
+  <span class="italic">N</span>
+  <sub>obs calves,
+   <span class="italic">t</span>
+  </sub> and 
+  <span class="italic">N</span>
+  <sub>sim 
+   <span class="italic">j</span>,
+   <span class="italic">t</span>
+  </sub> was replaced with 
+  <span class="italic">N</span>
+  <sub>obs 
+   <span class="italic">j</span>,
+   <span class="italic">t</span>
+  </sub>. The estimated population size 
+  <span class="italic">N</span>
+  <sub>sim,
+   <span class="italic">t</span>+1
+  </sub> may then be calculated step by step (Eq. 
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) and compared with the observed population size.
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The annual age-specific survival rates (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>) and fecundity rates (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>) estimated within this framework were closely correlated to the ones observed (i.e. obtained from the IPM). Pearson’s correlations ranged from 
+  <span class="italic">r</span> = 0.72–0.89 for survival rates and 
+  <span class="italic">r</span> = 0.65–0.84 for fecundity rates. Accordingly, our model was able to reconstruct annual fluctuations in total population size well (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>), with a strong correlation (
+  <span class="italic">r</span> = 0.89) between estimated and observed population growth rates (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>).
+ </p>
+</sec>

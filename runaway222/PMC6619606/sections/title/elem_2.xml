@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Selection of major cities</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We selected these “major” cities of the world from the “LandScan (2016) High Resolution global Population Data Set” created by the Oak Ridge National Laboratory [
+   <a rid="pone.0217592.ref019" ref-type="bibr" href="#pone.0217592.ref019">19</a>]. By “major” cities, we considered cities that are an administrative capital or that account more than 1,000,000 inhabitants. In total, 520 cities were selected.
+  </p>
+ </sec>
+ <sec id="sec004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">The climate database</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To characterize the current climate conditions among these major cities of the world, we extracted 19 bioclimatic variables from the latest Worldclim global raster layers (Version 2; period 1970–2000) at 30 arc-seconds resolution [
+   <a rid="pone.0217592.ref020" ref-type="bibr" href="#pone.0217592.ref020">20</a>]. These variables captured various climatic conditions, including yearly averages, seasonality metrics, and monthly extremes for both precipitation and temperature at every location.
+  </p>
+ </sec>
+ <sec id="sec005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Future data: GCMs, downscaling and future scenarios</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">For the future projections, the same 19 bioclimatic variables were averaged from the outputs of three general circulation models (GCM) commonly used in ecology [
+   <a rid="pone.0217592.ref021" ref-type="bibr" href="#pone.0217592.ref021">21</a>,
+   <a rid="pone.0217592.ref022" ref-type="bibr" href="#pone.0217592.ref022">22</a>]. Two Community Earth System Models (CESMs) were chosen as they investigate a diverse set of earth-system interactions: the CESM1 BGC (a coupled carbon–climate model accounting for carbon feedback from the land) and the CESM1 CAM5 (a community atmosphere model) [
+   <a rid="pone.0217592.ref021" ref-type="bibr" href="#pone.0217592.ref021">21</a>]. Additionally, the Earth System component of the Met Office Hadley Centre HadGEM2 model family was used as the third and final model [
+   <a rid="pone.0217592.ref022" ref-type="bibr" href="#pone.0217592.ref022">22</a>]. To generate the data, we chose Representative Common Pathway 4.5 (RCP 4.5) scenario from the Coupled Model Intercomparison Project Phase 5 (CMIP5) as the input. It is a stabilization scenario, meaning that it accounts for a stabilization of radiative forcing before 2100, anticipating the development of new technologies and strategies for reducing greenhouse gas emissions [
+   <a rid="pone.0217592.ref023" ref-type="bibr" href="#pone.0217592.ref023">23</a>]. By using this optimistic climate change scenario, we represent conservative changes in climate conditions that are likely to occur even if substantial climate change mitigation occurs. For each output, a delta downscaling method developed by the CGIAR Research Program on Climate Change, Agriculture and Food Security (CCAFS) was applied to reach a resolution of 30 arc-seconds [
+   <a rid="pone.0217592.ref024" ref-type="bibr" href="#pone.0217592.ref024">24</a>], using current conditions Worldclim 1.4 as a reference. Downscaling approach were necessary to assess climate conditions at the cities’ scale even if it induces a risk of pixel mismatch and consequently, a lower level of confidence for local scale analyses [
+   <a rid="pone.0217592.ref025" ref-type="bibr" href="#pone.0217592.ref025">25</a>,
+   <a rid="pone.0217592.ref026" ref-type="bibr" href="#pone.0217592.ref026">26</a>].
+  </p>
+ </sec>
+ <sec id="sec006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Summarizing the current climate among the major cities through a principal component analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The 19 current and future bioclimatic variables were extracted from the coordinates of the 520 major cities (i.e., the city centroids), meaning each city had two sets of bioclimatic metrics: the current climate data for the world’s major cities (Current Cities) and the equivalent 2050 projection (Future Cities) according to the average of the three RCP 4.5 GCMs.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">A scaled principal components analysis (PCA) was performed on current bioclimatic data in order to account for correlation between climate variables and to standardize their contributions to the subsequent dissimilarity analysis [
+   <a rid="pone.0217592.ref027" ref-type="bibr" href="#pone.0217592.ref027">27</a>]. As the first four principal components accounted for more than 85% of the total variation of climate data (40.2%, 26.9%, 10.5% and 7.6%, respectively), the remaining principal components were dropped from later analyses. The main contributing variables to the four components are the temperature seasonality (axis 1), the minimum temperature of the coldest month (axis 1), the maximum temperature of the warmest month (axis 2), the precipitation seasonality (axis 2), the precipitation of the driest (axis 4) and of the wettest (axis 3) month, and the temperature diurnal range (axis 4, 
+   <a ref-type="fig" rid="pone.0217592.g001" href="#pone.0217592.g001">Fig 1</a>).
+  </p>
+  <div id="pone.0217592.g001" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0217592.g001</span>
+   <span class="label">Fig 1</span>
+   <div class="caption">
+    <div class="title">Distribution of current and future cities along the first 4 principal component axes.</div>
+    <p>The seven major climate variables contributing to the Principal Component Analysis (PCA) are superposed on each figure. The figure at the top (a) shows the distribution of current (blue) and future (red) cities on the space defined by the first two principal components. The first two axes explain, respectively, 40.2 and 26.9% of climate variations. The first axis is mainly driven by differences in temperature seasonality and in minimum temperature of the coldest month, while the second axis is mainly driven by differences in precipitation seasonality. The figure at the bottom (b) shows the same current (green) and future (orange) cities on the space defined by the third and fourth principal components. They explain respectively 10.5 and 7.6% of climate variations. The third axis is mainly driven by changes in precipitation of the wet season, while the fourth axis is mainly driven by changes in the mean diurnal temperature range. Boxplots illustrates the distribution of the points along each of the 4 axes. The continuous line in the boxes represents the median of the distribution, the extremities of the boxes the 1
+     <span class="sup">st</span> and the 3
+     <span class="sup">rd</span> quartile and the continuous lines go up to 1.5 times the difference between the 3
+     <span class="sup">st</span> and the 1
+     <span class="sup">rd</span> quartile.
+    </p>
+   </div>
+   <div xlink:href="pone.0217592.g001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec id="sec007" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Calculating the extent of the covered climate domain</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">For further interpretation of the results, a convex hull was computed from the coordinates of the Current Cities within the multivariate space defined by the first four principal components axes [
+   <a rid="pone.0217592.ref028" ref-type="bibr" href="#pone.0217592.ref028">28</a>]. For reference, a convex hull of a set of N-dimensional points forms the smallest possible hypervolume (in N-dimensions) containing all points defined in that set; in this case, it defines the bounds of climatic combinations that Earth currently experiences in these 520 cities. All Future Cities falling outside the hypervolume of this convex hull represent currently non-existent bioclimatic assemblies in these cities, i.e. cities with no current climate analog [
+   <a rid="pone.0217592.ref029" ref-type="bibr" href="#pone.0217592.ref029">29</a>].
+  </p>
+ </sec>
+ <sec id="sec008" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pairing cities based on the similarity between current and future climate conditions</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Euclidean distances (i.e., dissimilarity indices) were calculated for every combination of Current and Future City based on their coordinates within the multivariate space defined by the first four principal components axes, creating a symmetric dissimilarity matrix with pairwise comparisons for all cities (
+   <a ref-type="supplementary-material" rid="pone.0217592.s001" href="#pone.0217592.s001">S1 Table</a>). The Euclidean distance was calculated using the vegan package on R (RCran version 3.3.2) [
+   <a rid="pone.0217592.ref030" ref-type="bibr" href="#pone.0217592.ref030">30</a>]. Each Future City was then paired with its three closest Current Cities based on the dissimilarity values (
+   <a ref-type="supplementary-material" rid="pone.0217592.s001" href="#pone.0217592.s001">S1 Table</a>, 
+   <a ref-type="supplementary-material" rid="pone.0217592.s002" href="#pone.0217592.s002">S2 Table</a>). Three cities are kept for each Future city in order to facilitate comparison between Current and Future climate, as all cities are not necessarily known by the reader. To avoid un-realistic shifts or shifts due to pixel mismatch between Current and Future climate conditions, the final analysis was performed keeping shift values between the 5
+   <span class="sup">th</span> and the 95
+   <span class="sup">th</span> percentile, i.e. keeping 477 out of the original 520 cities.
+  </p>
+ </sec>
+ <sec id="sec009" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Calculating the absolute latitudinal shift</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To illustrate and summarize the shifts between Current and Future Cities, we calculated the importance of absolute latitudinal shift for each city. Shifts in latitude were standardized for both hemisphere, so that a shift south in the northern hemisphere is equal to a shift north in the southern hemisphere, i.e. referred as the absolute latitudinal shift. In other words, the absolute latitudinal shift expresses a geographic shift in relation to the equatorial line (shifting away from or towards the equator).</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Analyses and figures were performed using R, maps were built using Q-GIS 3.0.</p>
+ </sec>
+</sec>

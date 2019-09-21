@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">SOM analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">SOMs are a neural network-based cluster analysis (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>) that has been used recently in the climate sciences to describe the continuum of climate patterns within a dataset [e.g., (
+  <a rid="R50" ref-type="bibr" href="#R50">
+   <span class="italic">50</span>
+  </a>, 
+  <a rid="R51" ref-type="bibr" href="#R51">
+   <span class="italic">51</span>
+  </a>)]. An analysis of climate modes using SOMs is conceptually similar to traditional principal component analysis: The “nodes” of a SOM represent the primary modes of the underlying climate field. A critical advantage of a SOM analysis compared to a principal component analysis is that it does not impose linearity and orthogonality on states that may be related in nonlinear, nonorthogonal ways; practically, this feature makes SOMs more likely to correspond to physically plausible patterns [e.g., (
+  <a rid="R52" ref-type="bibr" href="#R52">
+   <span class="italic">52</span>
+  </a>)].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Here, we used the SOM algorithm to assign annual SST anomaly fields to spatial patterns of a preset number. The SOM algorithm creates spatial patterns that maximize their similarity to the underlying SST fields (by minimizing their Euclidian distance) and then assigns each annual SST field to the best matching pattern. The SOM patterns are approximately the mean of the assigned SST fields and are thus approximately a composite of relatively similar SST fields (
+  <a rid="R50" ref-type="bibr" href="#R50">
+   <span class="italic">50</span>
+  </a>). In addition, the SOM analysis organizes the patterns such that similar patterns are assigned to nearby locations within a regular two-dimensional grid. Thus, this full process allows one to visualize a reduced space continuum of patterns in the dataset (
+  <a rid="F3" ref-type="fig" href="#F3">Fig. 3</a> and figs. S4 and S5).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For the SOM analysis, the SST fields are preprocessed by detrending the SST fields (removing the linear trend at each grid point over the full analysis period, 800–1925; c.f. fig. S2); this detrending prevents spurious trends in the pattern occurrence (
+  <a rid="R51" ref-type="bibr" href="#R51">
+   <span class="italic">51</span>
+  </a>), although it does remove somewhat the influence of the warm AMO in the early centuries of the analysis. As in (
+  <a rid="R50" ref-type="bibr" href="#R50">
+   <span class="italic">50</span>
+  </a>), we applied an area weighting of the SST fields according to the cosine of latitude because PHYDA is on a regular latitude-longitude grid. The SOM algorithm keeps track of which year’s SST field has been assigned to which best matching pattern (or “best matching unit”), and we made composites of JJA PDSI over the years assigned to each pattern, as shown in 
+  <a rid="F3" ref-type="fig" href="#F3">Fig. 3</a> and figs. S4 and S5.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For the bootstrap resampling for 
+  <a rid="F3" ref-type="fig" href="#F3">Fig. 3B</a>, we performed a 500 iteration bootstrap resampling of the same number of years as in the megadroughts, drawn from the reference period; corresponding ranges for the nondrought years are very similar. Thus, they are not shown for clarity.
+ </p>
+</sec>

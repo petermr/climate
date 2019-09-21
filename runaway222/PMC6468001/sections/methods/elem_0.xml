@@ -1,0 +1,2582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bayesian modeling of climate change uncertainty</div>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">We extend previous Bayesian uncertainty analysis of climate change
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span> (hereafter called previous Bayesian model) to characterize the SDP transition probabilities. Previous work shows that the uncertainty in climate projections due to natural variability remains relatively constant throughout the 21st century, but that as the climate signal emerges from the noise, the uncertainty in projections is dominated by the GCMs’ climate sensitivity, and hence structure
+   <span class="sup">
+    <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+   </span>. We therefore limit our focus to uncertainty in model structure rather than emissions or stochasticity because, first, structural uncertainty dominates long-term precipitation uncertainty
+   <span class="sup">
+    <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+   </span> and, second, to utilize recent statistical methods for characterizing structural climate uncertainty
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>,
+    <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+   </span>. The previous Bayesian model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span> uses ensembles of projections from the fifth phase of the Coupled Model Intercomparison Project (CMIP5)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+   </span> to derive a single distribution describing uncertainty in climate change. Following the previous Bayesian model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span>, we use historical observations or virtual observations to estimate the reliability of each model run and therefore its weight in the resulting probability distribution. This is in contrast to the democratic approach
+   <span class="sup">
+    <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+   </span> which each model projection is assumed equally likely and the multi-model mean and standard deviation is used to derive a single probability distribution.
+  </p>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">We extend the previous Bayesian model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span> in three ways. First, we apply the model to annually averaged 
+   <span class="italic">P</span> and 
+   <span class="italic">T</span> values separately, assuming that 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span> are independent. This reflects that a model’s performance in estimating 
+   <span class="italic">T</span> may be unrelated to its ability to estimate 
+   <span class="italic">P</span>. Second, we apply the model to observed and projected change in 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span> (i.e. Δ
+   <span class="italic">T</span> and %Δ
+   <span class="italic">P</span>) rather than absolute 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span> due to greater model skill in GCM projected changes in temperature and precipitation rather than absolute values
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>,
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>
+   </span>. This is especially important in our application in Mombasa where there is less disagreement in temperature change than there is disagreement in hind-casted absolute temperature.
+  </p>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Finally, we apply the model to multiple pairs of time windows and also to many virtual observations of change in 
+   <span class="italic">T</span> and percentage change in 
+   <span class="italic">P</span>. The previous Bayesian model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span> assumed two periods: a historical climate (1961–1990) and a future climate (2071–2100). We also use a historical and future climate in each estimation of the Bayesian model; however, we define 6 time periods using pairs of adjacent 20-year windows and calculate the change in 
+   <span class="italic">T</span> and percentage change in 
+   <span class="italic">P</span> between adjacent windows. This gives a total of five pairs of historical and future adjacent windows within 1960–2099. In each pair of adjacent windows, the historical window corresponds to the current time period in the SDP and the future window corresponds to the next 20-year period; this is necessary for the 1-stage transition probabilities needed in the SDP. The 20-year time interval was chosen so that interannual variability was not driving the trend in precipitation and temperature across time periods. The previous Bayesian model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span> used historical observations of climate data (
+   <span class="italic">X</span>
+   <sub>0</sub> in (Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1)</a>); we repeat the analysis many times using unique virtual climate observations, Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t,i</span>
+   </sub>, corresponding to changes in the SDP climate states, where 
+   <span class="italic">t</span> denotes the time period and 
+   <span class="italic">i</span> denotes an index between 1 and 
+   <span class="italic">N</span>, the possible virtual observations. Virtual temperature change observations range from 0 to 1.5 °C using discrete steps of 0.05 °C (
+   <span class="italic">N</span> = 31). Virtual observations of percentage change in precipitation range from −30% to 30% using discrete steps of 2% (
+   <span class="italic">N</span> = 30). These were chosen in order to be comprehensive of all potential future climate states. Therefore, they must be, first, granular enough that adjacent observations result in similar distributions and therefore approximate a continuous set of observations and, second, span a range that exceeds the full range of change predicted by models (i.e. a range of 0–1.5 °C per 20-years is equivalent to 0–7.5 °C of change after 100 years; the CMIP5 ensemble projections a temperature change in the range of 2–4 °C by 2100, fitting well within the range resulting from the virtual observations).
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The evaluation of GCMs’ performance in reproducing climate observations will depend on time scale, region, and variable of interest
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>,
+    <a ref-type="bibr" rid="CR42" href="#CR42">42</a>
+   </span>. Because our ultimate goal is to update our learning of regional climate in the Mwache catchment with respect to multi-decadal trends in precipitation and temperature, we choose to weight GCMs based on their performance in reproducing multi-decadal trends of precipitation and temperature averaged over the catchment area. Therefore, to implement the Bayesian uncertainty analysis in Mombasa, we use a total of 21 CMIP5 members whose modeling group and model run are included in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. The 21 GCM simulations come from 10 different institutions and 15 different GCMs, with three GCMs providing more than one simulation. Models were selected based on the most readily available models at the time of the analysis, with 21 being in line with previous studies, providing a reasonable balance between computational limits and model diversity
+   <span class="sup">
+    <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+   </span>. All models are forced by the RCP 8.5 scenario, which is the high emissions scenario from the IPCC AR5. For each GCM, monthly temperature and precipitation values are averaged over 2–6°S and 38–42°E, overlaying the Mwache catchment; GCM projections are regridded from their original resolution following the approach in
+   <span class="sup">
+    <a ref-type="bibr" rid="CR43" href="#CR43">43</a>
+   </span>. These regional temperature and precipitation GCM outputs, rather than global outputs, provide the basis for model weighting in the Bayesian analysis.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Our statistical model is formulated as follows for Δ
+   <span class="italic">T</span>; an identical and independent model is used for %Δ
+   <span class="italic">P</span>. The estimate of future change in mean temperature between 
+   <span class="italic">t</span> = 0 and 
+   <span class="italic">t</span> = 1, 
+   <span class="italic">υ</span>
+   <sub>1</sub>, is based on historical observed temperature change to 
+   <span class="italic">t</span> = 0, Δ
+   <span class="italic">X</span>
+   <sub>0</sub>:
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}\Delta X_{0}\sim {\mathrm{N}}(\mu _{0},\lambda _0^{ - 1})\\ \Delta X_0^j\sim {\mathrm{N}}(\mu _0,\lambda _0^{j - 1})\\ \Delta X^j_{\it{1}}|\Delta X_0^j\sim {\mathrm{N}}(\upsilon _{1} + \beta _{0}\ast(\Delta X_0^j - \mu _{0}),(\theta _{0}\ast\lambda _0^j)^{- 1})\end{array}$$\end{document}</span>
+     <div id="M2" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+         </div>
+         <span class="mo">~</span>
+         <span mathvariant="normal" class="mi">N</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">μ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span class="mi">λ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">Δ</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">~</span>
+         <span mathvariant="normal" class="mi">N</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">μ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span class="mi">λ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">j</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">Δ</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">1</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">∣</span>
+         <span class="mi">Δ</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">~</span>
+         <span mathvariant="normal" class="mi">N</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">υ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">β</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">*</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msubsup">
+              <div class="mrow">
+               <span class="mi">X</span>
+              </div>
+              <div class="mrow">
+               <span class="mn">0</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">j</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">μ</span>
+              </div>
+              <div class="mrow">
+               <span class="mn">0</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">,</span>
+           <div class="msup">
+            <div class="mrow">
+             <div class="mrow">
+              <span class="mo">(</span>
+              <div class="mrow">
+               <div class="msub">
+                <div class="mrow">
+                 <span class="mi">θ</span>
+                </div>
+                <div class="mrow">
+                 <span class="mn">0</span>
+                </div>
+               </div>
+               <span class="mo">*</span>
+               <div class="msubsup">
+                <div class="mrow">
+                 <span class="mi">λ</span>
+                </div>
+                <div class="mrow">
+                 <span class="mn">0</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">j</span>
+                </div>
+               </div>
+              </div>
+              <span class="mo">)</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where Δ
+   <span class="italic">X</span>
+   <sub>0</sub> is the historical observed temperature change to 
+   <span class="italic">t</span> = 0. Δ
+   <span class="italic">X</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>0</sub> is model 
+   <span class="italic">j</span>’s projection of temperature change to 
+   <span class="italic">t</span> = 0, and Δ
+   <span class="italic">X</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>1</sub> is the same for 
+   <span class="italic">t</span> = 1. Δ
+   <span class="italic">X</span>
+   <sub>0</sub>, Δ
+   <span class="italic">X</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>0</sub>, and Δ
+   <span class="italic">X</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>1</sub> are treated as samples from unique normal distributions. 
+   <span class="italic">μ</span>
+   <sub>0</sub> and 
+   <span class="italic">υ</span>
+   <sub>1</sub> are random variables representing the underlying distributions of temperature change in the current (
+   <span class="italic">t</span> = 0) and future (
+   <span class="italic">t</span> = 1) time periods respectively. 
+   <span class="italic">λ</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>0</sub> is the inverse variance of Δ
+   <span class="italic">X</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>0</sub>, representing the reliability of model 
+   <span class="italic">j</span>. 
+   <span class="italic">β</span>
+   <sub>0</sub> is a regression parameter that introduces correlation between Δ
+   <span class="italic">X</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>0</sub> and Δ
+   <span class="italic">X</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>
+   <sub>1</sub>; it is estimated by the model rather than assumed. 
+   <span class="italic">θ</span>
+   <sub>0</sub> is also an estimated parameter that enables a model to have different reliability in the future compared to the present. The marginal densities for each of the parameters are estimated using MCMC methods; we use the Gibbs sampling approach, parametric assumptions including priors, and code developed in ref. 
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span>. The Gibbs sampler collected 1000 samples, discarded the first 150,000 samples as a burn-in, and saved 1 in every 1500 samples; convergence was checked using standard diagnostics including trace plots and auto-correlation plots.
+  </p>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">When 
+   <span class="italic">t</span> &gt; 1, unique estimates of future change in mean temperature from 
+   <span class="italic">t</span>−1 to 
+   <span class="italic">t</span>, 
+   <span class="italic">υ</span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1,
+    <span class="italic">i</span>
+   </sub>), are based on each virtual observation of temperature change from the previous time period, Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1
+    <span class="italic">,i</span>
+   </sub>, as follows:
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}\Delta V_{t - {1},i}\sim {\mathrm{N}}(\mu (\Delta V_{t - {1},i}),\;\lambda (\Delta V_{t - {1},i})^{ - 1})\\ \Delta X^j_{t - {1}}\sim {\mathrm{N}}(\mu (\Delta V_{t - {1},i}),\;\lambda ^j(\Delta V_{t - {1},i})^{ - 1})\\ \Delta X^j_t|\Delta X^j_{t - {1}}\sim {\mathrm{N}}(\upsilon (\Delta V_{t - {1},i}) + \beta (\Delta V_{t - {1},i}) \ast (\Delta X^j_{t - {1}} - \mu (\Delta V_{t - {1},i})),\;[\theta (\Delta V_{t - {1},i}) \ast \lambda ^j(\Delta V_{t - {1},i})]^{ - 1})\\ \forall i = {1}, \ldots ,N;\;t = {2}, \ldots ,{5}\end{array}$$\end{document}</span>
+     <div id="M4" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">V</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+           <span class="mo">-</span>
+           <span class="mn">1</span>
+           <span class="mo">,</span>
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">~</span>
+         <span mathvariant="normal" class="mi">N</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">μ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">V</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">t</span>
+               <span class="mo">-</span>
+               <span class="mn">1</span>
+               <span class="mo">,</span>
+               <span class="mi">i</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">,</span>
+           <span width="0.16em" class="mspace"/>
+           <span class="mi">λ</span>
+           <div class="msup">
+            <div class="mrow">
+             <div class="mrow">
+              <span class="mo">(</span>
+              <div class="mrow">
+               <span class="mi">Δ</span>
+               <div class="msub">
+                <div class="mrow">
+                 <span class="mi">V</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">t</span>
+                 <span class="mo">-</span>
+                 <span class="mn">1</span>
+                 <span class="mo">,</span>
+                 <span class="mi">i</span>
+                </div>
+               </div>
+              </div>
+              <span class="mo">)</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">Δ</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+           <span class="mo">-</span>
+           <span class="mn">1</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">~</span>
+         <span mathvariant="normal" class="mi">N</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">μ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">V</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">t</span>
+               <span class="mo">-</span>
+               <span class="mn">1</span>
+               <span class="mo">,</span>
+               <span class="mi">i</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">,</span>
+           <span width="0.16em" class="mspace"/>
+           <div class="msup">
+            <div class="mrow">
+             <span class="mi">λ</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">j</span>
+            </div>
+           </div>
+           <div class="msup">
+            <div class="mrow">
+             <div class="mrow">
+              <span class="mo">(</span>
+              <div class="mrow">
+               <span class="mi">Δ</span>
+               <div class="msub">
+                <div class="mrow">
+                 <span class="mi">V</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">t</span>
+                 <span class="mo">-</span>
+                 <span class="mn">1</span>
+                 <span class="mo">,</span>
+                 <span class="mi">i</span>
+                </div>
+               </div>
+              </div>
+              <span class="mo">)</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">Δ</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">∣</span>
+         <span class="mi">Δ</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+           <span class="mo">-</span>
+           <span class="mn">1</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">~</span>
+         <span mathvariant="normal" class="mi">N</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">υ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">V</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">t</span>
+               <span class="mo">-</span>
+               <span class="mn">1</span>
+               <span class="mo">,</span>
+               <span class="mi">i</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">β</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">V</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">t</span>
+               <span class="mo">-</span>
+               <span class="mn">1</span>
+               <span class="mo">,</span>
+               <span class="mi">i</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">*</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msubsup">
+              <div class="mrow">
+               <span class="mi">X</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">t</span>
+               <span class="mo">-</span>
+               <span class="mn">1</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">j</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <span class="mi">μ</span>
+             <div class="mrow">
+              <span class="mo">(</span>
+              <div class="mrow">
+               <span class="mi">Δ</span>
+               <div class="msub">
+                <div class="mrow">
+                 <span class="mi">V</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">t</span>
+                 <span class="mo">-</span>
+                 <span class="mn">1</span>
+                 <span class="mo">,</span>
+                 <span class="mi">i</span>
+                </div>
+               </div>
+              </div>
+              <span class="mo">)</span>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">,</span>
+           <span width="0.16em" class="mspace"/>
+           <div class="msup">
+            <div class="mrow">
+             <div class="mrow">
+              <span class="mo">[</span>
+              <div class="mrow">
+               <span class="mi">θ</span>
+               <div class="mrow">
+                <span class="mo">(</span>
+                <div class="mrow">
+                 <span class="mi">Δ</span>
+                 <div class="msub">
+                  <div class="mrow">
+                   <span class="mi">V</span>
+                  </div>
+                  <div class="mrow">
+                   <span class="mi">t</span>
+                   <span class="mo">-</span>
+                   <span class="mn">1</span>
+                   <span class="mo">,</span>
+                   <span class="mi">i</span>
+                  </div>
+                 </div>
+                </div>
+                <span class="mo">)</span>
+               </div>
+               <span class="mo">*</span>
+               <div class="msup">
+                <div class="mrow">
+                 <span class="mi">λ</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">j</span>
+                </div>
+               </div>
+               <div class="mrow">
+                <span class="mo">(</span>
+                <div class="mrow">
+                 <span class="mi">Δ</span>
+                 <div class="msub">
+                  <div class="mrow">
+                   <span class="mi">V</span>
+                  </div>
+                  <div class="mrow">
+                   <span class="mi">t</span>
+                   <span class="mo">-</span>
+                   <span class="mn">1</span>
+                   <span class="mo">,</span>
+                   <span class="mi">i</span>
+                  </div>
+                 </div>
+                </div>
+                <span class="mo">)</span>
+               </div>
+              </div>
+              <span class="mo">]</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">∀</span>
+         <span class="mi">i</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+         <span class="mo">,</span>
+         <span class="mo">…</span>
+         <span class="mo">,</span>
+         <span class="mi">N</span>
+         <span class="mo">;</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">t</span>
+         <span class="mo">=</span>
+         <span class="mn">2</span>
+         <span class="mo">,</span>
+         <span class="mo">…</span>
+         <span class="mo">,</span>
+         <span class="mn">5</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where the notation is analogous to that in Eq. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) except that now 
+   <span class="italic">N</span> unique distributions are estimated corresponding to each virtual observation. Virtual observation Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t</span>−1,
+    <span class="italic">i</span>
+   </sub> is treated as a sample from an underlying normal distribution; 
+   <span class="italic">μ</span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t</span>−1
+    <span class="italic">,i</span>
+   </sub>) and 
+   <span class="italic">υ</span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1,
+    <span class="italic">i</span>
+   </sub>) are the underlying change in mean temperature in the current (
+   <span class="italic">t−</span>1) and future (
+   <span class="italic">t</span>) time periods, respectively, given each virtual observation Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1,
+    <span class="italic">i</span>
+   </sub>; 
+   <span class="italic">λ</span>
+   <span class="sup">
+    <span class="italic">j</span>
+   </span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1,
+    <span class="italic">i</span>
+   </sub>) is the reliability of model 
+   <span class="italic">j</span> for virtual observation 
+   <span class="italic">i</span> in time 
+   <span class="italic">t</span>; and 
+   <span class="italic">β</span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1
+    <span class="italic">,i</span>
+   </sub>) and 
+   <span class="italic">θ</span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1
+    <span class="italic">,i</span>
+   </sub>) are estimated uniquely for each virtual observation Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1,
+    <span class="italic">i</span>
+   </sub>.
+  </p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">This approach does have limitations. First, it assumes that GCMs are independent of one another, when in fact some models borrow entire components from other models
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span>. Second, we assume that a GCM’s ability to reproduce Δ
+   <span class="italic">T</span> or %Δ
+   <span class="italic">P</span> is a better indication of model performance than another metric, such as model variability. Third, we assume that change in time 
+   <span class="italic">t</span> depends on 
+   <span class="italic">t−</span>1 and not previous time periods. Additionally, we assume climate models will not change in the future; repeating the analysis in 40 years with a broader range of models reflecting the new state of the science may produce larger shifts in CIs. However, this approach is the best available to estimate learning in the future, which impacts planning decisions today. It enables a more precise measure of uncertainty in comparison to the democratic approach used by the IPCC; it has also been statistically validated using a cross validation approach
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Estimating transition probabilities</div>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">Each estimate for 
+   <span class="italic">υ</span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1,
+    <span class="italic">i</span>
+   </sub>) (or 
+   <span class="italic">υ</span>
+   <sub>1</sub> if 
+   <span class="italic">t</span> = 1) is then used to estimate the probability of change in each temperature state 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> in the SDP temperature state space 
+   <span class="bold">S</span>
+   <span class="sup">T</span>. (Note we treat 
+   <span class="italic">υ</span>(Δ
+   <span class="italic">V</span>
+   <sub>
+    <span class="italic">t−</span>1,
+    <span class="italic">i</span>
+   </sub>) as a probability mass function discretized at the same granularity as the virtual observations):
+   <div id="Equ3" class="disp-formula">
+    <span class="label">3</span>
+    <div class="alternatives">
+     <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}(\Delta T_t|\Delta T_{t - {1}} = \Delta V_{t - {1}}) = \upsilon (\Delta V_{t - {1},i})\\ {\mathrm{P}}(\Delta T_t = a|\Delta T_{t - {1}} = \Delta V_{t - {1}}) = {\mathrm{P}}(\upsilon (\Delta V_{t - {1},i}) = a)\\ \forall i = {1}, \ldots ,N;\;t = {1}, \ldots ,{5}\end{array}$$\end{document}</span>
+     <div id="M6" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">∣</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">=</span>
+         <span class="mi">υ</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+             <span class="mo">,</span>
+             <span class="mi">i</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">a</span>
+           <span class="mo">∣</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">=</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">υ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">V</span>
+              </div>
+              <div class="mrow">
+               <span class="mi">t</span>
+               <span class="mo">-</span>
+               <span class="mn">1</span>
+               <span class="mo">,</span>
+               <span class="mi">i</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">a</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">∀</span>
+         <span class="mi">i</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+         <span class="mo">,</span>
+         <span class="mo">…</span>
+         <span class="mo">,</span>
+         <span class="mi">N</span>
+         <span class="mo">;</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">t</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+         <span class="mo">,</span>
+         <span class="mo">…</span>
+         <span class="mo">,</span>
+         <span class="mn">5</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">We then define the joint distribution for the relative change probabilities using the chain rule and the Markov assumption, which is consistent with our assumption in the Bayesian model that the next time period is informed only by the previous one.
+   <div id="Equ4" class="disp-formula">
+    <span class="label">4</span>
+    <div class="alternatives">
+     <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{P}}(\Delta T_{0},\Delta T_{1}, \ldots ,\Delta T_{5}) = {\mathrm{P}}(\Delta T_{0}) \ast {\mathrm{P}}(\Delta T_{1}|\Delta T_{0}) \ast \ldots \ast {\mathrm{P}}(\Delta T_{5}|\Delta T_{4})$$\end{document}</span>
+     <div id="M8" class="math">
+      <span mathvariant="normal" class="mi">P</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">5</span>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">P</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">*</span>
+      <span mathvariant="normal" class="mi">P</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">∣</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">*</span>
+      <span class="mo">…</span>
+      <span class="mo">*</span>
+      <span mathvariant="normal" class="mi">P</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">5</span>
+         </div>
+        </div>
+        <span class="mo">∣</span>
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">4</span>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">Combining Eqs. (
+   <a rid="Equ3" ref-type="" href="#Equ3">3</a>) and (
+   <a rid="Equ4" ref-type="" href="#Equ4">4</a>), we relate the joint density of the temperature change probabilities to the Bayesian model from Eqs. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) and (
+   <a rid="Equ2" ref-type="" href="#Equ2">2</a>):
+   <div id="Equ5" class="disp-formula">
+    <span class="label">5</span>
+    <div class="alternatives">
+     <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}(\Delta T_{0} = \Delta X_{0},\Delta T_{1} = \Delta V_{{1},i}, \ldots ,\Delta T_{5} = \Delta V_{{5},m})\\ = {\mathrm{P}}(\Delta T_{0} = \Delta X_{0}) \ast {\mathrm{P}}(\Delta T_{1} = \Delta V_{{1},i}|\Delta T_{0} = \Delta X_{0}) \ast \ldots \ast {\mathrm{P}}(\Delta T_{5} = \Delta V_{{5},m}|\Delta T_{4} = \Delta V_{{4},l})\\ = {\mathrm{P}}(\mu _{0} = \Delta X_{0}) \ast {\mathrm{P}}(\upsilon _{1} = \Delta V_{{1},i}) \ast \ldots \ast {\mathrm{P}}(\upsilon (\Delta V_{{4},l}) = \Delta V_{{5},m})\\ \forall i,\;j,\;k,\;l,\;m = {1}, \ldots ,N\end{array}$$\end{document}</span>
+     <div id="M10" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">X</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">,</span>
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span class="mo">…</span>
+           <span class="mo">,</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+             <span class="mo">,</span>
+             <span class="mi">m</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">=</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">X</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">*</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">,</span>
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">∣</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">X</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">*</span>
+         <span class="mo">…</span>
+         <span class="mo">*</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+             <span class="mo">,</span>
+             <span class="mi">m</span>
+            </div>
+           </div>
+           <span class="mo">∣</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">4</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">4</span>
+             <span class="mo">,</span>
+             <span class="mi">l</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">=</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">μ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">X</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">*</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">υ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">,</span>
+             <span class="mi">i</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">*</span>
+         <span class="mo">…</span>
+         <span class="mo">*</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">υ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">V</span>
+              </div>
+              <div class="mrow">
+               <span class="mn">4</span>
+               <span class="mo">,</span>
+               <span class="mi">l</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+             <span class="mo">,</span>
+             <span class="mi">m</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">∀</span>
+         <span class="mi">i</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">j</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">k</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">l</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">m</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+         <span class="mo">,</span>
+         <span class="mo">…</span>
+         <span class="mo">,</span>
+         <span class="mi">N</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Next, we develop a joint distribution for the absolute mean temperatures in each time period, which correspond to the SDP temperature states 
+   <span class="bold">S</span>
+   <span class="sup">T</span>. To do this, we assume 
+   <span class="italic">T</span>
+   <sub>0</sub> = 
+   <span class="italic">X</span>
+   <span class="sup">∗</span> + 
+   <span class="italic">μ</span>
+   <sub>0</sub>, where 
+   <span class="italic">X</span>
+   <span class="sup">∗</span> is a constant reflecting the historical observed temperature in time 
+   <span class="italic">t−</span>1, and recognize that the absolute temperature in 
+   <span class="italic">t</span> is the sum of all the relative changes between 0 and 
+   <span class="italic">t</span> plus 
+   <span class="italic">T</span>
+   <sub>0</sub>. The joint density of the temperature states is therefore:
+   <div id="Equ6" class="disp-formula">
+    <span class="label">6</span>
+    <div class="alternatives">
+     <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}\left( {T_{0} = a,T_{1} = b, \ldots ,T_{5} = f} \right)\\ = {\mathrm{P}}(\mu _{0} = a-X^{\ast} ) \ast {\mathrm{P}}(\upsilon _{1} = b-a) \ast \ldots \ast {\mathrm{P}}(\upsilon (\Delta V_{{4},l}) = \Delta V_{{5},m})\\ \forall i,\;j,\;k,\;l,\;m = {1}, \ldots ,N\end{array}$$\end{document}</span>
+     <div id="M12" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span mathvariant="normal" class="mi">P</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">a</span>
+           <span class="mo">,</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">b</span>
+           <span class="mo">,</span>
+           <span class="mo">…</span>
+           <span class="mo">,</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">f</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">=</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">μ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">0</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">a</span>
+           <span class="mo">-</span>
+           <div class="msup">
+            <div class="mrow">
+             <span class="mi">X</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">*</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">υ</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">b</span>
+           <span class="mo">-</span>
+           <span class="mi">a</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">*</span>
+         <span class="mo">…</span>
+         <span class="mo">*</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mrow">
+           <span class="mi">υ</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span class="mi">Δ</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">V</span>
+              </div>
+              <div class="mrow">
+               <span class="mn">4</span>
+               <span class="mo">,</span>
+               <span class="mi">l</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">Δ</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">V</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+             <span class="mo">,</span>
+             <span class="mi">m</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">∀</span>
+         <span class="mi">i</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">j</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">k</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">l</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">m</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+         <span class="mo">,</span>
+         <span class="mo">…</span>
+         <span class="mo">,</span>
+         <span class="mi">N</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where
+   <div id="Equa" class="disp-formula">
+    <div class="alternatives">
+     <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}a = X^{\ast} + \Delta X_{0},\;b = X^{\ast} + \Delta X_{0} + \Delta V_{{1},i}, \ldots ,\\ f = X ^{\ast} + \, \Delta X_{0} + \Delta V_{{1},i} + \Delta V_{{2},j} + \Delta V_{{3},k} + \Delta V_{{4},l} + \Delta V_{{5},m}\\ {\mathrm{s}}.{\mathrm{t}}.\;a,\;b,\;c,\;d,\;e,\;f \in {\mathbf{S}}^{\mathrm{T}}\end{array}$$\end{document}</span>
+     <div id="M14" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">a</span>
+         <span class="mo">=</span>
+         <div class="msup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mo">*</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">b</span>
+         <span class="mo">=</span>
+         <div class="msup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mo">*</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">V</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">1</span>
+           <span class="mo">,</span>
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <span class="mo">…</span>
+         <span class="mo">,</span>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mi">f</span>
+         <span class="mo">=</span>
+         <div class="msup">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mo">*</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span width="0.25em" class="mspace"/>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">X</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">V</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">1</span>
+           <span class="mo">,</span>
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">V</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">2</span>
+           <span class="mo">,</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">V</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">3</span>
+           <span class="mo">,</span>
+           <span class="mi">k</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">V</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">4</span>
+           <span class="mo">,</span>
+           <span class="mi">l</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">Δ</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">V</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">5</span>
+           <span class="mo">,</span>
+           <span class="mi">m</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span mathvariant="normal" class="mi">s</span>
+         <span class="mo">.</span>
+         <span mathvariant="normal" class="mi">t</span>
+         <span class="mo">.</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">a</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">b</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">c</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">d</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">e</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">f</span>
+         <span class="mo">∈</span>
+         <div class="msup">
+          <div class="mrow">
+           <span mathvariant="bold" class="mi">S</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">T</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">The SDP temperature transition probabilities consist of adjacent time period conditional probabilities, i.e. 
+   <span class="italic">P</span>(
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> = 
+   <span class="italic">w</span> | 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t−</span>
+   </sub>
+   <sub>1</sub> = 
+   <span class="italic">v</span>). We use Monte Carlo simulation to calculate them by sampling from the joint density in Eq. (
+   <a rid="Equ6" ref-type="" href="#Equ6">6</a>) as follows. First, sample from Eq. (
+   <a rid="Equ6" ref-type="" href="#Equ6">6</a>) to generate 
+   <span class="italic">M</span> equally likely realizations of the joint density. Each realization forms a set, 
+   <span class="bold">Y</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub>, of the form:
+   <div id="Equb" class="disp-formula">
+    <div class="alternatives">
+     <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bf{Y}}_{\it{i}}:\left\{ {T_{0} = y_{{0}i},T_{1} = y_{{1}i},T_{2} = y_{{2}i},T_{3} = y_{{3}i},T_{4} = y_{{4}i},T_{5} = y_{{5}i}} \right\}\forall i = {1}, \ldots ,M$$\end{document}</span>
+     <div id="M16" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">Y</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mo">:</span>
+      <div close="}" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">3</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">3</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">4</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">4</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">5</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">5</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">∀</span>
+      <span class="mi">i</span>
+      <span class="mo">=</span>
+      <span class="mn">1</span>
+      <span class="mo">,</span>
+      <span class="mo">…</span>
+      <span class="mo">,</span>
+      <span class="mi">M</span>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Second, let 
+   <span class="italic">R</span> equal the number of sets 
+   <span class="bold">Y</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> out of the total of 
+   <span class="italic">M</span> for which 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> = 
+   <span class="italic">w</span> and 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>
+   <sub>−1</sub> = 
+   <span class="italic">v</span>. Third, let 
+   <span class="italic">Q</span> equal the number of sets 
+   <span class="bold">Y</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> out of the total of 
+   <span class="italic">M</span> for which 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t−</span>
+   </sub>
+   <sub>1</sub> = 
+   <span class="italic">v</span>. Then, the transition probabilities are:
+   <div id="Equ7" class="disp-formula">
+    <span class="label">7</span>
+    <div class="alternatives">
+     <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}{\mathrm{P}}\left( {T_t = w|T_{t - {1}} = v} \right) = {\mathrm{P}}\left( {T_t = w,T_{t - {1}} = v} \right)/{\mathrm{P}}\left( {T_{t - {1}} = v} \right) = {\mathrm{R}}/{\mathrm{Q}}\\ \forall w,\;v \in {\mathbf{S}}^{\mathrm{T}}\end{array}$$\end{document}</span>
+     <div id="M18" class="math">
+      <div class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span mathvariant="normal" class="mi">P</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">w</span>
+           <span class="mo">∣</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">v</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">w</span>
+           <span class="mo">,</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">v</span>
+          </div>
+         </div>
+         <span class="mo">∕</span>
+         <span mathvariant="normal" class="mi">P</span>
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">v</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <span mathvariant="normal" class="mi">R</span>
+         <span class="mo">∕</span>
+         <span mathvariant="normal" class="mi">Q</span>
+        </div>
+       </div>
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <span class="mo">∀</span>
+         <span class="mi">w</span>
+         <span class="mo">,</span>
+         <span width="0.16em" class="mspace"/>
+         <span class="mi">v</span>
+         <span class="mo">∈</span>
+         <div class="msup">
+          <div class="mrow">
+           <span mathvariant="bold" class="mi">S</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">T</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stochastic dynamic programming (SDP)</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">Stochastic dynamic programming is an optimization approach and control method that represents decision-making under uncertainty using multiple stages or time periods. The result is optimal policies, representing the best possible action as a function of the system state and time period. In our non-stationary formulation, it can also be understood as a form of closed-loop stochastic control, in which new information about the system feeds back into updated estimates for system state transitions over time. This is analogous to existing approaches in ecology, which have defined SDP transition probabilities with probability density functions that include the current system state as an input
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>,
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>.
+  </p>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Optimal policies are derived by recursively solving the Bellman equation:
+   <div id="Equ8" class="disp-formula">
+    <span class="label">8</span>
+    <div class="alternatives">
+     <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathbf{V}}_t\left( {{\mathbf{s}}_t} \right) = {\mathrm{argmin}}_{a \in {\mathbf{A}}}C\left( {{\mathbf{s}}_t,a_t,t} \right) + \gamma \ast \Sigma _{s \in {\mathbf{S}}}{\mathrm{P}}\left( {s_{t + {1}}|s_t,a_t} \right) \ast {\mathbf{V}}_{t + {1}}\left( {{\mathbf{s}}_{t + {1}}} \right)$$\end{document}</span>
+     <div id="M20" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">V</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">s</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">argmin</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">a</span>
+        <span class="mo">∈</span>
+        <span mathvariant="bold" class="mi">A</span>
+       </div>
+      </div>
+      <span class="mi">C</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">s</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span class="mi">γ</span>
+      <span class="mo">*</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">Σ</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">s</span>
+        <span class="mo">∈</span>
+        <span mathvariant="bold" class="mi">S</span>
+       </div>
+      </div>
+      <span mathvariant="normal" class="mi">P</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">s</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+          <span class="mo">+</span>
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">∣</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">s</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">*</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">V</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">+</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">s</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+          <span class="mo">+</span>
+          <span class="mn">1</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9677_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">Where 
+   <span class="italic">t</span> ∈ {1… 5} is a 20-year time period ranging from 2001–2020 for 
+   <span class="italic">t</span> = 1 to 2081–2100 for 
+   <span class="italic">t</span> = 5. 
+   <span class="bold">S</span> is the state space, or set of possible state values, which includes: mean temperature 
+   <span class="bold">S</span>
+   <span class="sup">T</span> (which ranges from 25 to 33 °C at 0.05 °C increments) and mean precipitation 
+   <span class="bold">
+    <span class="italic">S</span>
+   </span>
+   <span class="sup">
+    <span class="bold">
+     <span class="italic">P</span>
+    </span>
+   </span> averaged over a 20-year period (which ranges from 66 to 97 mm month
+   <span class="sup">−1</span> at 1 mm month
+   <span class="sup">−1</span> increments) and available infrastructure 
+   <span class="bold">S</span>
+   <span class="sup">Z</span>. 
+   <span class="bold">S</span>
+   <span class="sup">Z</span> = {1,…,4} which correspond, respectively, to a small infrastructure alternative, large infrastructure alternative, flexible unexpanded alternative, and flexible expanded alternative. The alternatives include a set of dams (planning scenarios A and B) or a set of desalination plants (planning scenario C). 
+   <span class="bold">s</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> ∈ 
+   <span class="bold">S</span> is the system state at time 
+   <span class="italic">t</span> comprised of 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> (temperature state at time 
+   <span class="italic">t</span>), 
+   <span class="italic">P</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> (precipitation state at time 
+   <span class="italic">t</span>), and 
+   <span class="italic">Z</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> (infrastructure state at time 
+   <span class="italic">t</span>). 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>, 
+   <span class="italic">P</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> and 
+   <span class="italic">Z</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> are assumed independent. Therefore, the transition probabilities, P(
+   <span class="bold">s</span>
+   <sub>
+    <span class="italic">t</span>+1
+   </sub> | 
+   <span class="bold">s</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>, 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>) * 
+   <span class="bold">V</span>
+   <sub>
+    <span class="italic">t</span>+1
+   </sub>(
+   <span class="bold">s</span>
+   <sub>
+    <span class="italic">t</span>+1
+   </sub>), are estimated as three independent transition vectors: the transition vector for 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> is described in Eqs. (
+   <a rid="Equ4" ref-type="" href="#Equ4">4</a>) and (
+   <a rid="Equ5" ref-type="" href="#Equ5">5</a>) and independent of 
+   <span class="bold">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> and 
+   <span class="italic">P</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> is analogous to 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>. 
+   <span class="italic">Z</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> transitions are deterministic based on the current capacity and action to add capacity as described hereafter.
+  </p>
+  <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="bold">A</span> is the action space, or set of possible actions. 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> ∈ 
+   <span class="bold">A</span> is an action at time 
+   <span class="italic">t</span>, The action 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> describes whether a static or flexible dam is chosen, and whether infrastructure capacity is expanded in later time periods. 
+   <span class="bold">A</span> = {0,…,4} which correspond, respectively, to no change, adding a small static alternative, adding a large static alternative, adding a flexible alternative, and expanding the flexible alternative. The choices are constrained by time period and available infrastructure such that 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t=1</span>
+   </sub> ∈ {1,…,3} ∀ 
+   <span class="italic">Z</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>; 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> ∈ {0,4} when 
+   <span class="italic">Z</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> = 3 ∀ 
+   <span class="italic">t</span> = 2,…,5; 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> ∈ {0}∀ 
+   <span class="italic">Z</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> = {1,2,4}, 
+   <span class="italic">t</span> = 2,…,5.
+  </p>
+  <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="bold">
+    <span class="italic">V</span>
+   </span> is the optimal policy or choice of action. 
+   <span class="italic">γ</span> is the discount rate. Costs 
+   <span class="italic">C</span> include the capital costs of infrastructure and damages if the infrastructure fails to meet reliability targets such that 
+   <span class="italic">C</span> 
+   <span class="bold">
+    <span class="italic">=</span>
+   </span> 
+   <span class="italic">I</span> (
+   <span class="bold">
+    <span class="italic">s</span>
+   </span>
+   <sub>
+    <span class="bold">
+     <span class="italic">t</span>
+    </span>
+   </sub>, 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>) + 
+   <span class="italic">D</span>
+   <span class="sup">∗</span>
+   <span class="italic">U</span>(
+   <span class="bold">
+    <span class="italic">s</span>
+   </span>
+   <sub>
+    <span class="bold">
+     <span class="italic">t</span>
+    </span>
+   </sub>, 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>), where 
+   <span class="italic">I</span> is the cost of the infrastructure including capital costs (capex) and operating costs (opex). Desalination opex in planning scenario A is a function of the water produced in each time period. 
+   <span class="italic">D</span> is unit cost of damages incurred for unmet water demand, set at 15$ m
+   <span class="sup">−3</span> in our base case based on estimates of water productivity in Kenya from the World Bank
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+   </span>. 
+   <span class="italic">U</span> is the volume of unmet demand as a function of the climate states, existing infrastructure, and any new infrastructure brought online in time t. 
+   <span class="italic">U</span> = 0 in 
+   <span class="italic">t</span> = 1, reflecting that 
+   <span class="italic">t</span> = 1 is a planning and construction period and performance is not measured until the beginning of the second 20-year time period.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stochastic weather generation</div>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">Climate impacts on river runoff depend on changes in month-to-month variability in precipitation and temperature in addition to changes in the mean. We model these two changes separately. To develop monthly time-series of 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span>, we follow the 
+   <span class="italic">k</span>-nearest neighbors (kNN) approach as described in ref. 
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span> applied to GCM projections. This non-parametric statistical approach allows us to impose the mean 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span> from the SDP while also capturing the standard deviation in monthly values and month-to-month autocorrelation projected by the GCMs. This approach was chosen for its simplicity, ease of implementation, and application in long-term water supply; future studies could use other non-parametric approaches such as the local polynomial regression method developed in ref. 
+   <span class="sup">
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span>. For each 20-year time period, we employ the kNN approach to generate 100 samples of 20-year long monthly time-series of 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span>. The resulting time series are then applied to the rainfall-runoff model presented below.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Rainfall-runoff model</div>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">Next, the synthetic 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span> time series are input to a hydrological model to assess the impacts on runoff. We use CLIRUN II, the latest in a family of hydrological models developed to assess the impact of climate change on runoff 
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>–
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>. CLIRUN II is a two-layer, conceptual, lumped-watershed rainfall-runoff model. It averages soil parameters over the watershed and models runoff at one gauge station at the mouth of the basin. It can be run on a monthly or daily time step. Using the kNN generated samples of 
+   <span class="italic">T</span> and 
+   <span class="italic">P</span>, CLIRUN II generates a corresponding 100 samples of 20-year long monthly timeseries of runoff.
+  </p>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">CLIRUN II is calibrated using 14 years of monthly streamflow data. Only one streamflow gauge, RGS 3MA03, is available in the Mwache basin
+   <span class="sup">
+    <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+   </span>. However, it is directly upstream of the dam location, making it representative for this study. The same monthly temperature and precipitation data from CRU used in the Bayesian climate analysis is used to calibrate CLIRUN II for consistency. This temperature and precipitation data is different than the local data used in the previous World Bank study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+   </span>, leading to different calibration results but similar performance (historical MAR: 113 MCM year
+   <span class="sup">−1</span>; World Bank MAR: 133 MCM year
+   <span class="sup">−1</span>; our MAR: 103 MCM year
+   <span class="sup">−1</span>).
+  </p>
+  <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">Our analysis using CLIRUN II and the reservoir sizing model confirms that the 80 MCM dam meets the reliability targets in the current and expected future climate but does not meet reliability targets if the climate gets substantially warmer and drier. The 120 MCM dam meets reliability targets across all projected future climates.</p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Infrastructure costs and operations</div>
+  <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">Capex and opex estimates for the small and large dams were developed using the cost tool from the previous World Bank study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+   </span>. For the flexible dam, the cost per m
+   <span class="sup">3</span> of additional capacity added is assumed to be 50% greater than that of the original capacity. Capex and opex estimates for the RO desalination plants were developed using the Cost Estimator tool from DesalData
+   <span class="sup">
+    <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+   </span>.
+  </p>
+  <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">The infrastructure operation model includes fixed dam operations (and desalination operations when necessary) that seek to meet the specified yield target while accounting for dead storage, net evaporation, and environmental flows. Unmet demand is measured for each of the 100 streamflow time series, and the average 20-year unmet demand is used to characterize 
+   <span class="italic">U</span> in the SDP formulation in Eq. (
+   <a rid="Equ8" ref-type="" href="#Equ8">8</a>). We acknowledge that assuming reservoir operations that are fixed in time is a limitation given that adaptive reservoir operations would likely reduce the need for additional capacity; future work could optimize the reservoir operations to each climate state.
+  </p>
+ </sec>
+</sec>

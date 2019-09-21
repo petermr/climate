@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2dot2-sensors-19-02940" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.2. Methods</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">In order to conceive the conceptual design and development of the participatory citizen science-based mobile application, the following methodologies were undertaken for the application system design and the big data-oriented architecture design.</p>
+ <sec id="sec2dot2dot1-sensors-19-02940" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.2.1. Participation Criteria</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">In order to recruit participants for the system validation, municipal leaders, community leaders, non-governmental organisations (NGOs), and local businesses were mobilized, and all parties were invited to use the application. In addition, at the city level, and in order to guarantee the sample size needed for the study, primary health care centres, community health workgroups, asthma and T2D patient’s associations, the public health agency, and social media were contacted.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The method considered a heterogeneous and balanced sample including age, gender, educational level, immigration status, and neighbourhood characteristics. Specifically, participants should meet the following inclusion criteria:
+   <div list-type="bullet" class="list">
+    <div class="list-item">
+     <p>Older than 18 years.</p>
+    </div>
+    <div class="list-item">
+     <p>Living in the urban areas covered by the pilot.</p>
+    </div>
+    <div class="list-item">
+     <p>Agreeing to participate in the project by signing a consent form explaining the different aspects of the study.</p>
+    </div>
+    <div class="list-item">
+     <p>Agreeing to wear an activity tracker.</p>
+    </div>
+    <div class="list-item">
+     <p>Owning an Android or IOS smartphone.</p>
+    </div>
+   </div>
+  </p>
+ </sec>
+ <sec id="sec2dot2dot2-sensors-19-02940" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.2.2. Application System Design</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The system was designed following a user-centred approach based on the goal-oriented design (GOD) methodology [
+   <a rid="B20-sensors-19-02940" ref-type="bibr" href="#B20-sensors-19-02940">20</a>], in which end users and stakeholders guide the process, as they will ultimately validate the final product. This application was co-designed with public health organizations (PHOs), defining five different phases that are summarized as follows:
+   <div list-type="order" class="list">
+    <div class="list-item">
+     <p>First phase: definition of the user needs and focus.</p>
+     <p>In this phase, research regarding the effects of environmental pollution on the quality of life of people, as well as the effects of an unhealthy lifestyle, was carried out in order to define the metrics for a multidimensional evaluation [
+      <a rid="B21-sensors-19-02940" ref-type="bibr" href="#B21-sensors-19-02940">21</a>,
+      <a rid="B22-sensors-19-02940" ref-type="bibr" href="#B22-sensors-19-02940">22</a>]. Furthermore, a benchmark assessment was conducted to identify applications and solutions that raise awareness among users of the effects of environmental pollution on health. Gamification techniques were analysed in order to define, in the second phase, the gamification strategy, to enhance users’ motivation [
+      <a rid="B23-sensors-19-02940" ref-type="bibr" href="#B23-sensors-19-02940">23</a>]. Finally, focus groups were conducted with PHOs and users to define their needs and requirements to improve citizens’ quality of life.
+     </p>
+    </div>
+    <div class="list-item">
+     <p>Second phase: creation of a non-functional prototype and gamification strategy.</p>
+     <p>The first version of the system is a non-functional prototype that was built as a set of mock-ups that described the appearance and functionalities of the system. Mock-ups were revised and improved later considering the feedback received from end users. This approach allows to simulate/anticipate the possible user experience through two activities: (1) the definition of the most relevant screens of the application to specify the minimum viable set of functionalities; (2) the definition of the user interaction, which describes the workflow of the screens and its elements to perform a specific task. The non-functional prototype was conceived together with a gamification strategy. The gamification strategy defined is based on the application of game-design elements and game principles in non-gamified contexts [
+      <a rid="B24-sensors-19-02940" ref-type="bibr" href="#B24-sensors-19-02940">24</a>] in order to produce positive effects on individuals [
+      <a rid="B25-sensors-19-02940" ref-type="bibr" href="#B25-sensors-19-02940">25</a>]. Concretely, the main goal of the gamification process was to get a positive behaviour change regarding healthy and green habits.
+     </p>
+    </div>
+    <div class="list-item">
+     <p>Third phase: development of the prototype.</p>
+     <p>In this phase, the different elements of the application were developed, based on the feedback received of the non-functional prototype from phase two. These elements are as follows: (1) interfaces, from home screen to the different modules of the application; (2) communication and interaction with external services such as activity tracker devices and APIs; (3) application workflow, which includes trigger activities, feedback to user, educational content, monitor activities, gamification strategy, and so on. The development of the prototype followed a cross platform application approach, supporting Android and iOS devices, in order to cover all kinds of smartphone users.</p>
+    </div>
+   </div>
+  </p>
+ </sec>
+ <sec id="sec2dot2dot3-sensors-19-02940" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.2.3. Consumption and Production Data Flow Process</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A data backend ecosystem was developed to support the interoperable data flow to enable a big data oriented approach that generates valuable services. The ecosystem allows continuous interaction with the mobile application. This enables participative data gathering, interoperability among different sources, analysis and modelling over the widest array of information, interventions support, and data production to be consumed by users through the application.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In turn, the design and development of the mobile application integrates a data flow process that allows a continuous real time interaction and flow between the data production and consumption processes. To do so, four steps were followed defining four overlapping data contextual layers, as presented in 
+   <a ref-type="fig" rid="sensors-19-02940-f001" href="#sensors-19-02940-f001">Figure 1</a>. These data layers were mirrored to the backend infrastructure for data processing and visualization of processed data and consumed through the mobile application, enabling real-time information delivery.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The four steps for data production and consumption flow comprise the following:
+   <div list-type="bullet" class="list">
+    <div class="list-item">
+     <p>Citizen science data gathering: this allows data gathering from the world of IoT and wearable devices that provide health status, presence, and use of a specific service. This includes a data acquisition phase binding the data streams to a common representational scheme to prepare the data for the sensor fusion and to counter some conditions with some pre-processing and elimination procedures (avoiding overloading of data), thus harvesting the data from the sensor units, tagging them with location and time information and storing data in real time. This supports data production and leverages data science.</p>
+    </div>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The collected information enables the Users’ Context and comprises sensing and capturing of perceptual data regarding health, lifestyle, and habits behaviour (e.g., exercise, food, mobility). These data are linked with data coming from the Environmental Context.</p>
+  <div list-type="bullet" class="list" xmlns="http://www.w3.org/1999/xhtml">
+   <div class="list-item">
+    <p>Data sampling and collection: this process gathers environmental data from public data sources; mainly air quality data coming from satellites, fixed and mobile stations, as well as through the city sensors and citizen science mobile devices (smartphones and wearables). The collected information enables data production to be handled by the Environmental Context within the data ecosystem.</p>
+   </div>
+   <div class="list-item">
+    <p>Data set fusion: this process brings together data sampling and collection with high-quality pre-existing datasets (i.e., environment and health) to provide a comprehensive view of the environmental domain (e.g., risks, potential exposure) and integration with health information (e.g., asthma related symptoms). The collected information enables the Big Data Context, which is the operating environment that allows data fusion and spatio-temporal modelling in order to provide, for example, health risk estimates or pollution estimated exposure real-time information. This data layer also provides the urban data lake (including cloud-based servers), which stores the data and applies interpolation models to allow an interactive data consumption process, providing valuable insights and data to enable information-oriented services.</p>
+   </div>
+   <div class="list-item">
+    <p>Data interaction: this supports interactive data consumption through the mobile context and application. The collected information enables the Mobile Context. It provides a tool that hides the complexity of the data flows and provides the information in one coherent integrated visualization. It is a robust, user-friendly, and appealing interactive data layer that aims at providing data value and empowerment to citizens.</p>
+   </div>
+  </div>
+ </sec>
+ <sec id="sec2dot2dot4-sensors-19-02940" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.2.4. Pilots Plan</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The pilots plan comprises the following phases:
+   <div list-type="bullet" class="list">
+    <div class="list-item">
+     <p>Stage 1, training: municipal leaders, community leaders, NGOs, and local businesses received training, covering the objectives of the study and the PulsAir application functioning, in order to execute the recruitment of users.</p>
+    </div>
+    <div class="list-item">
+     <p>Stage 2, deployment: included the recruitment of users, the distribution of the wearable trackers, installation of PulsAir app in the smartphones, sign up with individual user access codes, and synchronization of the wearable trackers with PulsAir app.</p>
+    </div>
+    <div class="list-item">
+     <p>Stage 3, follow-up: during this phase, interactions with the pilot organisations are being maintained in order to perform refinements on the application according to users’ feedbacks and cultural requirements of each pilot city (e.g., language, educative systems, ethnic groups, religions, and metric systems among others).</p>
+    </div>
+    <div class="list-item">
+     <p>Stage 4, evaluation: includes the technical validation (e.g., performance evaluation, safety, and reliability assessment) and the assessment of data quality, user experience and usability, as well as social acceptance and effectiveness of the PulsAir application. The evaluation criteria includes the following measures: (a) social acceptance and effectiveness determined taking into account the working conditions (e.g., citizen science environment), attitude towards the outcome, reciprocity, and performance of the tools; (b) usability, which measures the effectiveness efficiency, learnability, robustness, and utility of the application and ecosystem; and (c) user experience taking into account embodiment, emotion, feeling of trust, and satisfaction. This phase is currently being implemented in the different cities involved in PULSE project deployment.</p>
+    </div>
+   </div>
+  </p>
+ </sec>
+</sec>

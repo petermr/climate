@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model</div>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">We simulated forest dynamics under projected climate and wildfire using the LANDIS-II forest succession and disturbance model, with the Century Succession extension
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> (v3.1.1) to simulate carbon pools and fluxes and the Dynamic Leaf Biomass Fuel extension
+  <span class="sup">
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+  </span> (v2.0) and Dynamic Fire extension
+  <span class="sup">
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+  </span> (v.2.0.5) to simulate wildfire and fuels. The model was previously parameterized and validated for our study area
+  <span class="sup">
+   <a ref-type="bibr" rid="CR16" href="#CR16">16</a>,
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>. While the model does not account for increasing atmospheric CO
+  <sub>2</sub>, empirical evidence indicates that CO
+  <sub>2</sub> fertilization effects are less likely as a result of N limitation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span>.
+ </p>
+ <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">We used 12 km downscaled climate projections from the Intergovernmental Panel on Climate Change Fourth Assessment Report
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>–
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. The models were forced with the A2 emission scenario. We used projections from CNRM CMS (Centre National de Recherches Météorologiques Coupled Global Climate Model), CCSM3 (National Center for Atmospheric Research Community Climate System Model), and GFDL CM2.1 (Geophysical Fluid Dynamics Lab coupled model). These climate models performed well in capturing both climate variability and seasonality over the historical period in California
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span>.
+ </p>
+ <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">The Dynamic Fire extension functions such that at each time-step, random ignitions occur on the landscape. When an ignition occurs in a grid cell, a draw from the fire probability distribution determines if the ignition becomes a fire. We used the same distribution as Liang 
+  <span class="italic">et al</span>.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR16" href="#CR16">16</a>,
+   <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>, which was based on contemporary fire probabilities. If the ignition becomes a fire, then a draw from the fire size distribution determines the maximum size of the individual fire. The simulated fire size is influenced by a draw from the fire weather distribution and the biomass available to burn where the fire ignites. In prior studies
+  <span class="sup">
+   <a ref-type="bibr" rid="CR16" href="#CR16">16</a>,
+   <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span> and for our static simulations in this study, we used climate model-specific fire size projections at a 12 km resolution for large wildfires (&gt;200 ha) developed by Westerling 
+  <span class="italic">et al</span>.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+  </span>. Area burned is modeled using generalized Pareto distributions of log-area burned from fires occurring from (1984–2014), conditional on cumulative monthly moisture deficit from climate projections and biomass simulated for the historic period. For our dynamic simulations, which account for area burned in the prior decade, we updated biomass every ten years with simulated biomass from the dynamic vegetation model forced with simulated climate and fire. At each decadal time-step, we used the aboveground biomass layer from the prior decade’s simulation as an input to the fire size distribution model. This iterative approach resulted in decadal fire size distributions that were either a function of projected climate (static) or projected climate and prior area burned (dynamic). Prior fire events impact both the distribution of live and dead biomass and the fuel model associated with a burned grid cell. Non-forested grid cells are assigned a fuel model that has a rate-of-spread associated with grassland vegetation.
+ </p>
+</sec>

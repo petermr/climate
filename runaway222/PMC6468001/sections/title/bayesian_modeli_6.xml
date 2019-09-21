@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bayesian modeling of climate change uncertainty</div>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">We extend previous Bayesian uncertainty analysis of climate change
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> (hereafter called previous Bayesian model) to characterize the SDP transition probabilities. Previous work shows that the uncertainty in climate projections due to natural variability remains relatively constant throughout the 21st century, but that as the climate signal emerges from the noise, the uncertainty in projections is dominated by the GCMs’ climate sensitivity, and hence structure
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span>. We therefore limit our focus to uncertainty in model structure rather than emissions or stochasticity because, first, structural uncertainty dominates long-term precipitation uncertainty
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span> and, second, to utilize recent statistical methods for characterizing structural climate uncertainty
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>,
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+  </span>. The previous Bayesian model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> uses ensembles of projections from the fifth phase of the Coupled Model Intercomparison Project (CMIP5)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+  </span> to derive a single distribution describing uncertainty in climate change. Following the previous Bayesian model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span>, we use historical observations or virtual observations to estimate the reliability of each model run and therefore its weight in the resulting probability distribution. This is in contrast to the democratic approach
+  <span class="sup">
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span> which each model projection is assumed equally likely and the multi-model mean and standard deviation is used to derive a single probability distribution.
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">We extend the previous Bayesian model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> in three ways. First, we apply the model to annually averaged 
+  <span class="italic">P</span> and 
+  <span class="italic">T</span> values separately, assuming that 
+  <span class="italic">T</span> and 
+  <span class="italic">P</span> are independent. This reflects that a model’s performance in estimating 
+  <span class="italic">T</span> may be unrelated to its ability to estimate 
+  <span class="italic">P</span>. Second, we apply the model to observed and projected change in 
+  <span class="italic">T</span> and 
+  <span class="italic">P</span> (i.e. Δ
+  <span class="italic">T</span> and %Δ
+  <span class="italic">P</span>) rather than absolute 
+  <span class="italic">T</span> and 
+  <span class="italic">P</span> due to greater model skill in GCM projected changes in temperature and precipitation rather than absolute values
+  <span class="sup">
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>,
+   <a ref-type="bibr" rid="CR40" href="#CR40">40</a>
+  </span>. This is especially important in our application in Mombasa where there is less disagreement in temperature change than there is disagreement in hind-casted absolute temperature.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Finally, we apply the model to multiple pairs of time windows and also to many virtual observations of change in 
+  <span class="italic">T</span> and percentage change in 
+  <span class="italic">P</span>. The previous Bayesian model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> assumed two periods: a historical climate (1961–1990) and a future climate (2071–2100). We also use a historical and future climate in each estimation of the Bayesian model; however, we define 6 time periods using pairs of adjacent 20-year windows and calculate the change in 
+  <span class="italic">T</span> and percentage change in 
+  <span class="italic">P</span> between adjacent windows. This gives a total of five pairs of historical and future adjacent windows within 1960–2099. In each pair of adjacent windows, the historical window corresponds to the current time period in the SDP and the future window corresponds to the next 20-year period; this is necessary for the 1-stage transition probabilities needed in the SDP. The 20-year time interval was chosen so that interannual variability was not driving the trend in precipitation and temperature across time periods. The previous Bayesian model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> used historical observations of climate data (
+  <span class="italic">X</span>
+  <sub>0</sub> in (Eq. 
+  <a rid="Equ1" ref-type="" href="#Equ1">1)</a>); we repeat the analysis many times using unique virtual climate observations, Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t,i</span>
+  </sub>, corresponding to changes in the SDP climate states, where 
+  <span class="italic">t</span> denotes the time period and 
+  <span class="italic">i</span> denotes an index between 1 and 
+  <span class="italic">N</span>, the possible virtual observations. Virtual temperature change observations range from 0 to 1.5 °C using discrete steps of 0.05 °C (
+  <span class="italic">N</span> = 31). Virtual observations of percentage change in precipitation range from −30% to 30% using discrete steps of 2% (
+  <span class="italic">N</span> = 30). These were chosen in order to be comprehensive of all potential future climate states. Therefore, they must be, first, granular enough that adjacent observations result in similar distributions and therefore approximate a continuous set of observations and, second, span a range that exceeds the full range of change predicted by models (i.e. a range of 0–1.5 °C per 20-years is equivalent to 0–7.5 °C of change after 100 years; the CMIP5 ensemble projections a temperature change in the range of 2–4 °C by 2100, fitting well within the range resulting from the virtual observations).
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The evaluation of GCMs’ performance in reproducing climate observations will depend on time scale, region, and variable of interest
+  <span class="sup">
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>,
+   <a ref-type="bibr" rid="CR42" href="#CR42">42</a>
+  </span>. Because our ultimate goal is to update our learning of regional climate in the Mwache catchment with respect to multi-decadal trends in precipitation and temperature, we choose to weight GCMs based on their performance in reproducing multi-decadal trends of precipitation and temperature averaged over the catchment area. Therefore, to implement the Bayesian uncertainty analysis in Mombasa, we use a total of 21 CMIP5 members whose modeling group and model run are included in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. The 21 GCM simulations come from 10 different institutions and 15 different GCMs, with three GCMs providing more than one simulation. Models were selected based on the most readily available models at the time of the analysis, with 21 being in line with previous studies, providing a reasonable balance between computational limits and model diversity
+  <span class="sup">
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+  </span>. All models are forced by the RCP 8.5 scenario, which is the high emissions scenario from the IPCC AR5. For each GCM, monthly temperature and precipitation values are averaged over 2–6°S and 38–42°E, overlaying the Mwache catchment; GCM projections are regridded from their original resolution following the approach in
+  <span class="sup">
+   <a ref-type="bibr" rid="CR43" href="#CR43">43</a>
+  </span>. These regional temperature and precipitation GCM outputs, rather than global outputs, provide the basis for model weighting in the Bayesian analysis.
+ </p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Our statistical model is formulated as follows for Δ
+  <span class="italic">T</span>; an identical and independent model is used for %Δ
+  <span class="italic">P</span>. The estimate of future change in mean temperature between 
+  <span class="italic">t</span> = 0 and 
+  <span class="italic">t</span> = 1, 
+  <span class="italic">υ</span>
+  <sub>1</sub>, is based on historical observed temperature change to 
+  <span class="italic">t</span> = 0, Δ
+  <span class="italic">X</span>
+  <sub>0</sub>:
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}\Delta X_{0}\sim {\mathrm{N}}(\mu _{0},\lambda _0^{ - 1})\\ \Delta X_0^j\sim {\mathrm{N}}(\mu _0,\lambda _0^{j - 1})\\ \Delta X^j_{\it{1}}|\Delta X_0^j\sim {\mathrm{N}}(\upsilon _{1} + \beta _{0}\ast(\Delta X_0^j - \mu _{0}),(\theta _{0}\ast\lambda _0^j)^{- 1})\end{array}$$\end{document}</span>
+    <div id="M2" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+        </div>
+        <span class="mo">~</span>
+        <span mathvariant="normal" class="mi">N</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mi">λ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">Δ</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">~</span>
+        <span mathvariant="normal" class="mi">N</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mi">λ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">Δ</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">∣</span>
+        <span class="mi">Δ</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">0</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">~</span>
+        <span mathvariant="normal" class="mi">N</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">υ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">β</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">*</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">X</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">j</span>
+             </div>
+            </div>
+            <span class="mo">-</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">μ</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">0</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">,</span>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">θ</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">0</span>
+               </div>
+              </div>
+              <span class="mo">*</span>
+              <div class="msubsup">
+               <div class="mrow">
+                <span class="mi">λ</span>
+               </div>
+               <div class="mrow">
+                <span class="mn">0</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">j</span>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where Δ
+  <span class="italic">X</span>
+  <sub>0</sub> is the historical observed temperature change to 
+  <span class="italic">t</span> = 0. Δ
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>0</sub> is model 
+  <span class="italic">j</span>’s projection of temperature change to 
+  <span class="italic">t</span> = 0, and Δ
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>1</sub> is the same for 
+  <span class="italic">t</span> = 1. Δ
+  <span class="italic">X</span>
+  <sub>0</sub>, Δ
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>0</sub>, and Δ
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>1</sub> are treated as samples from unique normal distributions. 
+  <span class="italic">μ</span>
+  <sub>0</sub> and 
+  <span class="italic">υ</span>
+  <sub>1</sub> are random variables representing the underlying distributions of temperature change in the current (
+  <span class="italic">t</span> = 0) and future (
+  <span class="italic">t</span> = 1) time periods respectively. 
+  <span class="italic">λ</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>0</sub> is the inverse variance of Δ
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>0</sub>, representing the reliability of model 
+  <span class="italic">j</span>. 
+  <span class="italic">β</span>
+  <sub>0</sub> is a regression parameter that introduces correlation between Δ
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>0</sub> and Δ
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>
+  <sub>1</sub>; it is estimated by the model rather than assumed. 
+  <span class="italic">θ</span>
+  <sub>0</sub> is also an estimated parameter that enables a model to have different reliability in the future compared to the present. The marginal densities for each of the parameters are estimated using MCMC methods; we use the Gibbs sampling approach, parametric assumptions including priors, and code developed in ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span>. The Gibbs sampler collected 1000 samples, discarded the first 150,000 samples as a burn-in, and saved 1 in every 1500 samples; convergence was checked using standard diagnostics including trace plots and auto-correlation plots.
+ </p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">When 
+  <span class="italic">t</span> &gt; 1, unique estimates of future change in mean temperature from 
+  <span class="italic">t</span>−1 to 
+  <span class="italic">t</span>, 
+  <span class="italic">υ</span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1,
+   <span class="italic">i</span>
+  </sub>), are based on each virtual observation of temperature change from the previous time period, Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1
+   <span class="italic">,i</span>
+  </sub>, as follows:
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}\Delta V_{t - {1},i}\sim {\mathrm{N}}(\mu (\Delta V_{t - {1},i}),\;\lambda (\Delta V_{t - {1},i})^{ - 1})\\ \Delta X^j_{t - {1}}\sim {\mathrm{N}}(\mu (\Delta V_{t - {1},i}),\;\lambda ^j(\Delta V_{t - {1},i})^{ - 1})\\ \Delta X^j_t|\Delta X^j_{t - {1}}\sim {\mathrm{N}}(\upsilon (\Delta V_{t - {1},i}) + \beta (\Delta V_{t - {1},i}) \ast (\Delta X^j_{t - {1}} - \mu (\Delta V_{t - {1},i})),\;[\theta (\Delta V_{t - {1},i}) \ast \lambda ^j(\Delta V_{t - {1},i})]^{ - 1})\\ \forall i = {1}, \ldots ,N;\;t = {2}, \ldots ,{5}\end{array}$$\end{document}</span>
+    <div id="M4" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">V</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+          <span class="mo">-</span>
+          <span class="mn">1</span>
+          <span class="mo">,</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">~</span>
+        <span mathvariant="normal" class="mi">N</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">μ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">V</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">-</span>
+              <span class="mn">1</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">,</span>
+          <span width="0.16em" class="mspace"/>
+          <span class="mi">λ</span>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <span class="mi">Δ</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">V</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">t</span>
+                <span class="mo">-</span>
+                <span class="mn">1</span>
+                <span class="mo">,</span>
+                <span class="mi">i</span>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">Δ</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+          <span class="mo">-</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">~</span>
+        <span mathvariant="normal" class="mi">N</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">μ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">V</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">-</span>
+              <span class="mn">1</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">,</span>
+          <span width="0.16em" class="mspace"/>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">λ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <span class="mi">Δ</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">V</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">t</span>
+                <span class="mo">-</span>
+                <span class="mn">1</span>
+                <span class="mo">,</span>
+                <span class="mi">i</span>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">Δ</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">∣</span>
+        <span class="mi">Δ</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+          <span class="mo">-</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">~</span>
+        <span mathvariant="normal" class="mi">N</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">υ</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">V</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">-</span>
+              <span class="mn">1</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">+</span>
+          <span class="mi">β</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">V</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">-</span>
+              <span class="mn">1</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">*</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">Δ</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">X</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">t</span>
+              <span class="mo">-</span>
+              <span class="mn">1</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">j</span>
+             </div>
+            </div>
+            <span class="mo">-</span>
+            <span class="mi">μ</span>
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <span class="mi">Δ</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">V</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">t</span>
+                <span class="mo">-</span>
+                <span class="mn">1</span>
+                <span class="mo">,</span>
+                <span class="mi">i</span>
+               </div>
+              </div>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">,</span>
+          <span width="0.16em" class="mspace"/>
+          <div class="msup">
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">[</span>
+             <div class="mrow">
+              <span class="mi">θ</span>
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">Δ</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">V</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mi">t</span>
+                  <span class="mo">-</span>
+                  <span class="mn">1</span>
+                  <span class="mo">,</span>
+                  <span class="mi">i</span>
+                 </div>
+                </div>
+               </div>
+               <span class="mo">)</span>
+              </div>
+              <span class="mo">*</span>
+              <div class="msup">
+               <div class="mrow">
+                <span class="mi">λ</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">j</span>
+               </div>
+              </div>
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">Δ</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">V</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mi">t</span>
+                  <span class="mo">-</span>
+                  <span class="mn">1</span>
+                  <span class="mo">,</span>
+                  <span class="mi">i</span>
+                 </div>
+                </div>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+             <span class="mo">]</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mo">∀</span>
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <span class="mi">N</span>
+        <span class="mo">;</span>
+        <span width="0.16em" class="mspace"/>
+        <span class="mi">t</span>
+        <span class="mo">=</span>
+        <span class="mn">2</span>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <span class="mn">5</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9677_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where the notation is analogous to that in Eq. (
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>) except that now 
+  <span class="italic">N</span> unique distributions are estimated corresponding to each virtual observation. Virtual observation Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t</span>−1,
+   <span class="italic">i</span>
+  </sub> is treated as a sample from an underlying normal distribution; 
+  <span class="italic">μ</span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t</span>−1
+   <span class="italic">,i</span>
+  </sub>) and 
+  <span class="italic">υ</span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1,
+   <span class="italic">i</span>
+  </sub>) are the underlying change in mean temperature in the current (
+  <span class="italic">t−</span>1) and future (
+  <span class="italic">t</span>) time periods, respectively, given each virtual observation Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1,
+   <span class="italic">i</span>
+  </sub>; 
+  <span class="italic">λ</span>
+  <span class="sup">
+   <span class="italic">j</span>
+  </span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1,
+   <span class="italic">i</span>
+  </sub>) is the reliability of model 
+  <span class="italic">j</span> for virtual observation 
+  <span class="italic">i</span> in time 
+  <span class="italic">t</span>; and 
+  <span class="italic">β</span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1
+   <span class="italic">,i</span>
+  </sub>) and 
+  <span class="italic">θ</span>(Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1
+   <span class="italic">,i</span>
+  </sub>) are estimated uniquely for each virtual observation Δ
+  <span class="italic">V</span>
+  <sub>
+   <span class="italic">t−</span>1,
+   <span class="italic">i</span>
+  </sub>.
+ </p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">This approach does have limitations. First, it assumes that GCMs are independent of one another, when in fact some models borrow entire components from other models
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span>. Second, we assume that a GCM’s ability to reproduce Δ
+  <span class="italic">T</span> or %Δ
+  <span class="italic">P</span> is a better indication of model performance than another metric, such as model variability. Third, we assume that change in time 
+  <span class="italic">t</span> depends on 
+  <span class="italic">t−</span>1 and not previous time periods. Additionally, we assume climate models will not change in the future; repeating the analysis in 40 years with a broader range of models reflecting the new state of the science may produce larger shifts in CIs. However, this approach is the best available to estimate learning in the future, which impacts planning decisions today. It enables a more precise measure of uncertainty in comparison to the democratic approach used by the IPCC; it has also been statistically validated using a cross validation approach
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span>.
+ </p>
+</sec>

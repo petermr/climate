@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec2" sec-type="results" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Results</div>
+ <p id="Par7" xmlns="http://www.w3.org/1999/xhtml">To test the importance of experimental versus distribution data in SDMs, we compared our hybrid model that combines experimental and distribution data to corresponding models using only either experimental data or distribution data (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). With 
+  <span class="italic">Fucus</span> we modelled separately the occurrence (survival in experiments) and biomass (growth in experiments) using salinity, temperature and depth as predictive environmental covariates. Due to the absence of abundance data at the pan-Baltic scale, we modelled only the occurrence of 
+  <span class="italic">Idotea</span> using salinity, temperature and 
+  <span class="italic">Fucus</span> biomass as predictive environmental covariates. The models included also spatial random effect that explained spatially structured variation due to, e.g., missing covariates. We evaluated and compared the models’ performance in interpolation (projection within the current covariate range) and extrapolation (projection beyond the current covariate range) by dividing the distribution data into training and test set, training the models with the former and measuring their predictive performance on the latter. In interpolation test, data were divided randomly and in extrapolation test they were divided structurally (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>, Materials and Methods).
+ </p>
+ <sec id="Sec3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="italic">Fucus</span> distribution
+  </div>
+  <p id="Par8" xmlns="http://www.w3.org/1999/xhtml">The explanatory and predictive power of SDMs depended on the type of input data. The 
+   <span class="italic">Fucus</span> SDMs that only included distribution data or combined distribution and experimental data performed equally well in explaining training data (Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>) and predicting test data in interpolation and extrapolation (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). The SDM that included only experimental data, however, yielded poorer interpolation projections but practically equally good extrapolation projections as the other SDMs. Salinity and temperature explained about 30 to 60% of the total explained variability in the (expected) occurrence of 
+   <span class="italic">Fucus</span> but only 20% of the total explained variability in its (expected) biomass (Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>). Salinity had stronger effects than temperature in these models with temperature having only marginal effects on the probability of occurrence and a small contribution to the growth rate and biomass of 
+   <span class="italic">Fucus</span> (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). Water depth had important effects in both models. The spatial random effects explained approximately 20–40% of the total variation and had long spatial correlation length indicating that there is strong regional variation in the distribution of 
+   <span class="italic">Fucus</span> not explained by salinity, temperature and depth.
+   <div id="Tab1" class="table-wrap">
+    <span class="label">Table 1</span>
+    <div class="caption">
+     <p>Models’ explanatory power and partitioning of variation in biomass, growth and probability of occurrence to different components.</p>
+    </div>
+    <table frame="hsides" rules="groups">
+     <thead>
+      <tr>
+       <th rowspan="2">Species</th>
+       <th rowspan="2">Data source (model)</th>
+       <th colspan="2">Explanatory power</th>
+       <th colspan="4">Variation partitioning (occurrence/biomass)</th>
+      </tr>
+      <tr>
+       <th>Tjur-R
+        <span class="sup">2</span> (occurrence)
+       </th>
+       <th>R
+        <span class="sup">2</span> (biomass)
+       </th>
+       <th>Joint effect of temperature and salinity</th>
+       <th>Effect of depth</th>
+       <th>Effect of 
+        <span class="italic">Fucus</span> biomass
+       </th>
+       <th>Spatial random effect</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td rowspan="3">
+        <span class="italic">Fucus</span>
+       </td>
+       <td>Experiments</td>
+       <td>0.47</td>
+       <td>0.50</td>
+       <td/>
+       <td/>
+       <td/>
+       <td/>
+      </tr>
+      <tr>
+       <td>Distribution</td>
+       <td>0.42</td>
+       <td>0.52</td>
+       <td>0.62/0.20</td>
+       <td>0.18/0.35</td>
+       <td/>
+       <td>0.20/0.45</td>
+      </tr>
+      <tr>
+       <td>Distribution + Experiments</td>
+       <td>0.39</td>
+       <td>0.52</td>
+       <td>0.30/0.19</td>
+       <td>0.34/0.39</td>
+       <td/>
+       <td>0.37/0.42</td>
+      </tr>
+      <tr>
+       <td rowspan="3">
+        <span class="italic">Idotea</span>
+       </td>
+       <td>Experiments</td>
+       <td>0.09</td>
+       <td/>
+       <td/>
+       <td/>
+       <td/>
+       <td/>
+      </tr>
+      <tr>
+       <td>Distribution</td>
+       <td>0.59</td>
+       <td/>
+       <td>0.63/</td>
+       <td/>
+       <td>0.08/</td>
+       <td>0.29/</td>
+      </tr>
+      <tr>
+       <td>Distribution + Experiments</td>
+       <td>0.66</td>
+       <td/>
+       <td>0.58/</td>
+       <td/>
+       <td>0.09/</td>
+       <td>0.33/</td>
+      </tr>
+     </tbody>
+    </table>
+    <div class="table-wrap-foot">
+     <p>Explanatory power is measured by Tjur-R
+      <span class="sup">2</span> (occurrence models) and R
+      <span class="sup">2</span> (biomass and growth models) statistics, which measure how well the models explain the training data (n = 2000). The variation partitioning summarizes what proportion of the total variation in expected biomass, growth and expected occurrence (in log odds ratio scale) over the data points is explained by different model components.
+     </p>
+    </div>
+   </div>
+   <div id="Fig2" class="fig">
+    <span class="label">Figure 2</span>
+    <div class="caption">
+     <p>The response of distribution along covariates. The left column shows the relative chance of probability of 
+      <span class="italic">Fucus</span> presence compared to 0.5 probability (an equal chance of occurring or not occurring). The middle column shows the change in 
+      <span class="italic">Fucus</span> growth (experiment) or biomass (survey) given it is present relative to the average growth rate in experimental data or the average biomass in survey data. The third column shows the relative change in probability of occurrence of 
+      <span class="italic">Idotea</span> (compared to 0.5 probability). The surface plots (first three rows) show the posterior median for the three models considered (the experimental data model, the distribution data model and the model combining the experimental and distribution data). The last row shows the posterior median and 95% credible interval along depth (
+      <span class="italic">Fucus</span> model) and 
+      <span class="italic">Fucus</span> biomass (
+      <span class="italic">Idotea</span> model).
+     </p>
+    </div>
+    <div xlink:href="41598_2018_38416_Fig2_HTML" id="d29e898" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par9" xmlns="http://www.w3.org/1999/xhtml">Both experimental and distribution data yielded similar responses along salinity gradients (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). In all SDMs, the probability of occurrence, biomass per substrate area (biomass hereafter) and biomass increment (growth hereafter) of 
+   <span class="italic">Fucus</span> started to increase at around salinity 3–5 psu (there was an earlier start in increase in the experimental and combined data SDMs compared to the distribution data SDM). The response of probability of occurrence along the salinity gradient was  the steepest at low temperatures and got  gradually less steep as temperature increases. The response along temperature was  the strongest at salinities from 20 to 30 psu. In the combined experimental and distribution data SDM the expected effects of temperature and salinity were  a compromise between the effects in the experimental and distribution data SDMs. In the combined data SDM the response along salinity was  steeper than in the distribution data model and the response along temperature was  similar in shape to the distribution data model.
+  </p>
+ </sec>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="italic">Idotea</span> distribution
+  </div>
+  <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">All 
+   <span class="italic">Idotea</span> SDMs were similar in terms of their predictive performance and they outperformed the 
+   <span class="italic">Fucus</span> SDMs (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). The joint effect of salinity and temperature explained more than half of the total variation in occurrence. However, most of the variation in this joint effect was attributable to salinity with its strongest effects in SDMs including distribution data. The response along temperature was negligible. The response along salinity was clearly positive in all 
+   <span class="italic">Idotea</span> SDMs (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). In addition to direct abiotic forcing, distribution data showed that 
+   <span class="italic">Idotea</span> was also sensitive to changes in the biomass of its host alga 
+   <span class="italic">Fucus</span>. The probability of occurrence of 
+   <span class="italic">Idotea</span> was significantly lower in the absence than in the presence of 
+   <span class="italic">Fucus</span>. Moreover, with high credibility the probability of occurrence of 
+   <span class="italic">Idotea</span> further increased with growing biomass of 
+   <span class="italic">Fucus</span>, and at maximum biomass of host alga the effect of 
+   <span class="italic">Fucus</span> on 
+   <span class="italic">Idotea</span> was about one-third of the effect of salinity. The spatial random effect explained approximately 30% of the occurrence of 
+   <span class="italic">Idotea</span> but there was no clear spatial pattern in the spatial random effect which indicates strong local variability in its occurrence beyond that explained by salinity, temperature and 
+   <span class="italic">Fucus</span> biomass.
+  </p>
+ </sec>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate change projections</div>
+  <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">The probability of occurrence and biomass of 
+   <span class="italic">Fucus</span> as well as the probability of occurrence of 
+   <span class="italic">Idotea</span> had a tipping point at salinities 3–10 psu. The tipping was more radical and happened at lower salinities in cold temperature than warm temperature regions (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). Hence, the projections indicate that both 
+   <span class="italic">Fucus</span> and 
+   <span class="italic">Idotea</span> will have a lower probability of survival and probability of occurrence under future climate conditions compared to current environmental conditions (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>). In addition, 
+   <span class="italic">Fucus</span> will have a lower growth rate (experiment) and biomass (distribution data) under these conditions. The predicted effects of climate change with experimental and distribution data SDMs had similar direction of change but were quantitatively different. In the case of 
+   <span class="italic">Fucus</span>, the predicted relative changes in biomass were larger in the distribution data SDM and in the SDM combining distribution and experimental data compared to relative changes in growth in the experimental data SDM. The former two models had also larger uncertainty related to the projections. The climate induced relative effects on 
+   <span class="italic">Idotea</span> were stronger in the distribution data SDM and in the SDM combining distribution and experimental data compared to the SDM including experimental data only. See Supplementary Figs 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a> and 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a> for changes in absolute scale. Regardless of models, large areas of 
+   <span class="italic">Fucus</span> habitats would be lost in the central and marginal regions of the Baltic Sea. The projections indicate that the entrance populations of 
+   <span class="italic">Fucus</span> and 
+   <span class="italic">Idotea</span> handle well the future conditions as we did not find differences among current and future climate conditions in any of the responses (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>). In addition, the models showed that a considerable reduction in the biomass of 
+   <span class="italic">Fucus</span> predicted under future climate conditions would result in a much severer decline of the probability of occurrence of 
+   <span class="italic">Idotea</span> in marginal and central areas than if reduction in 
+   <span class="italic">Fucus</span> biomass was not taken into account (i.e. projections including experimental data only) (Figs 
+   <a rid="Fig4" ref-type="fig" href="#Fig4">4</a> and 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>).
+   <div id="Fig3" class="fig">
+    <span class="label">Figure 3</span>
+    <div class="caption">
+     <p>The climate change induced shifts in the 
+      <span class="italic">Fucus</span> mean growth and biomass (left) and the probability of occurrence of 
+      <span class="italic">Idotea</span> (right) in three regions of the Baltic Sea. E denotes experiment, S survey and S + E combined models, respectively. The panels show the relative difference under climate change compared to current conditions (that is: (future-current)/current). In each mark, lines show the posterior expected difference and the 95% credible interval and the shape of the mark indicates the shape of the posterior distribution.
+     </p>
+    </div>
+    <div xlink:href="41598_2018_38416_Fig3_HTML" id="d29e1043" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <div id="Fig4" class="fig">
+    <span class="label">Figure 4</span>
+    <div class="caption">
+     <p>Spatial projection of 
+      <span class="italic">Fucus</span> under current and future environmental conditions. The model including distribution data predicts expected biomass (predicted biomass × probability of occurrence, g m
+      <span class="sup">−2</span>), the model including experimental data predicts relative growth (% growth of initial value) and the model combining distribution and experimental data predicts expected biomass (predicted biomass × probability of occurrence, g m
+      <span class="sup">−2</span>).
+     </p>
+    </div>
+    <div xlink:href="41598_2018_38416_Fig4_HTML" id="d29e1061" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <div id="Fig5" class="fig">
+    <span class="label">Figure 5</span>
+    <div class="caption">
+     <p>Spatial projection of 
+      <span class="italic">Idotea</span> under current and future environmental conditions. All models predict the expected probability of occurrence.
+     </p>
+    </div>
+    <div xlink:href="41598_2018_38416_Fig5_HTML" id="d29e1073" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+ </sec>
+</sec>

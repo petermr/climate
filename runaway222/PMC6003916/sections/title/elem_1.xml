@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec2" sec-type="results" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Results</div>
+ <sec id="Sec3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stylized model of a human-environment tipping element</div>
+  <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">We use the mathematical framework of Markov Decision Processes
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>,
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>, in which an agent makes decisions about how to interact with its environment (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1a</a>). Our particular environment can reside in either a prosperous state, which provides immediate rewards (also called payoffs) to the agent, or a degraded state, from which the agent receives no payoff. At each time step, the agent chooses between two actions 
+   <span class="italic">a</span>, exerting either a high or low pressure on the environment. Depending on the current state 
+   <span class="italic">s</span>, the current action 
+   <span class="italic">a</span> and the subsequent state 
+   <span class="italic">s′</span>, the agent receives an immediate reward 
+   <span class="italic">r</span> (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1b</a>). At the prosperous state, taking the low pressure action the agent is guaranteed to receive reward 
+   <span class="italic">r</span>
+   <sub>l</sub> and remain at the prosperous state. However, taking the high pressure action, the agent may receive reward 
+   <span class="italic">r</span>
+   <sub>h</sub> (which is typically larger than 
+   <span class="italic">r</span>
+   <sub>l</sub>), but risks triggering a collapse of the environment to the degraded system state with non-zero probability 
+   <span class="italic">δ</span> and no immediate reward at all. From there, only the low pressure action opens the option to recover to the prosperous state with non-zero probability 
+   <span class="italic">ρ</span>.
+   <div id="Fig1" class="fig">
+    <span class="label">Fig. 1</span>
+    <div class="caption">
+     <p>Conceptual model of a human-environment tipping element. 
+      <span class="bold">a</span> Agent-environment interface: based on the state information and received reward, the agent chooses an action 
+      <span class="italic">a</span> from its actions set to gain rewards. 
+      <span class="bold">b</span> The transition graph gives state transition probabilities and corresponding rewards for all triples of state 
+      <span class="italic">s</span>, action 
+      <span class="italic">a</span>, next state 
+      <span class="italic">s</span>′, i.e., in state 
+      <span class="italic">s</span> the agent takes action 
+      <span class="italic">a</span> and moves to state 
+      <span class="italic">s</span>′. 
+      <span class="bold">c</span> Risky and cautious policies including the resulting Markov chains as a transition graph
+     </p>
+    </div>
+    <div xlink:href="41467_2018_4738_Fig1_HTML" id="d29e563" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">For example, the high pressure action could correspond to emitting a business-as-usual amount of carbon to the atmosphere yielding a reward of high, short-term economic output as long as the system has not tipped. The low pressure action resembles emitting a reduced amount of carbon, assuming a lower short-term economic output for the guarantee to not trigger climate tipping elements into a disastrous state.</p>
+  <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">A policy 
+   <span class="italic">π</span> is a function that specifies what action 
+   <span class="italic">a</span> to apply at a system state 
+   <span class="italic">s</span>. The agent receives reward 
+   <span class="italic">r</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> at time step 
+   <span class="italic">t</span>. The value 
+   <span class="italic">v</span>
+   <sub>
+    <span class="italic">π</span>
+   </sub>(
+   <span class="italic">s</span>) of a state 
+   <span class="italic">s</span> under a given policy 
+   <span class="italic">π</span> is given by the expected value of the normalized accumulated discounted rewards 
+   <span class="italic">r</span> with discount factor 0 ≤ 
+   <span class="italic">γ</span> ≤ 1 when starting in state 
+   <span class="italic">S</span>
+   <sub>0</sub> = 
+   <span class="italic">s</span> and following policy 
+   <span class="italic">π</span>:
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_\pi \left( s \right) = {\Bbb E}_\pi \left[ {\mathop {{{\mathrm{lim}}}}\limits_{T \to \infty } \frac{{\mathop {\sum}\nolimits_{t = 0}^T {\gamma ^tr_t} }}{{\mathop {\sum}\nolimits_{t = 0}^T {\gamma ^t} }}\left| {S_0 = s} \right.} \right].$$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">v</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">π</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">s</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="double-struck" class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">π</span>
+       </div>
+      </div>
+      <div close="]" open="[" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="munder">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">lim</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">T</span>
+          <span class="mo">→</span>
+          <span class="mi">∞</span>
+         </div>
+        </div>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mo">∑</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">=</span>
+            <span class="mn">0</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+          </div>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">γ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">r</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mo">∑</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">=</span>
+            <span class="mn">0</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+          </div>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">γ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div close="" open="∣" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">S</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mi">s</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">.</span>
+     </div>
+     <div xlink:href="41467_2018_4738_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">Note that the discount factor actually denotes the farsightedness of the agent. Thus, 
+   <span class="italic">γ</span> = 1 corresponds to no discounting (weighting all rewards equally regardless of when they are expected), whereas 
+   <span class="italic">γ</span> = 0 corresponds to completely myopic, fully discounting agents.
+  </p>
+ </sec>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Paradigm definitions</div>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">We classify policies according to whether they are economic welfare optimal or not, sustainable or not, and safe or not. For the sake of simplicity we focus on two deterministic policies, distinguishing whether the agent should apply the low or the high pressure action at the prosperous state (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1c</a>): the risky policy (
+   <span class="italic">π</span>
+   <sub>
+    <span class="italic">r</span>
+   </sub>(
+   <span class="italic">p</span>) = 
+   <span class="italic">h</span>, 
+   <span class="italic">π</span>
+   <sub>
+    <span class="italic">r</span>
+   </sub>(
+   <span class="italic">d</span>) = 
+   <span class="italic">l</span>), applying the high pressure action at the prosperous state and the low pressure one at the degraded state and the cautious policy (
+   <span class="italic">π</span>
+   <sub>
+    <span class="italic">c</span>
+   </sub>(
+   <span class="italic">p</span>) = 
+   <span class="italic">l</span>, 
+   <span class="italic">π</span>
+   <sub>
+    <span class="italic">c</span>
+   </sub>(
+   <span class="italic">d</span>) = 
+   <span class="italic">l</span>), applying the low pressure action at the prosperous, as well as the degraded state.
+  </p>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">A policy 
+   <span class="italic">π</span> is defined as optimal (in the economic welfare sense) if its value 
+   <span class="italic">v</span>
+   <sub>
+    <span class="italic">π</span>
+   </sub>(
+   <span class="italic">s</span>) (Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) for every state s is larger than or equal to the value of any other policy
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>.
+  </p>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">Based on the Brundtland Commission’s report on sustainable development
+   <span class="sup">
+    <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+   </span> a sustainable policy should fulfill two requirements: First, meet the needs of the present. We translate this formally into the agent evaluating the present state 
+   <span class="italic">s</span> as acceptable (similar to viable
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>, tolerable
+   <span class="sup">
+    <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+   </span> or desirable
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+   </span>), if its value (Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) exceeds a normatively chosen minimum acceptable value 
+   <span class="italic">r</span>
+   <sub>min</sub>:
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$s\,{\mathrm{acceptable}}\,{\mathrm{under}}\,\pi \,{\mathrm{iff}}\;v_\pi \left( s \right) \ge r_{{\mathrm{min}}}$$\end{document}</span>
+     <div id="M4" display="block" class="math">
+      <span class="mi">s</span>
+      <span width="0.3em" class="mspace"/>
+      <span mathvariant="normal" class="mi">acceptable</span>
+      <span width="0.3em" class="mspace"/>
+      <span mathvariant="normal" class="mi">under</span>
+      <span width="0.3em" class="mspace"/>
+      <span class="mi">π</span>
+      <span width="0.3em" class="mspace"/>
+      <span mathvariant="normal" class="mi">iff</span>
+      <span width="2.77626pt" class="mspace"/>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">v</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">π</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">s</span>
+       </div>
+      </div>
+      <span class="mo">≥</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">r</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">min</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2018_4738_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">Note, that the division of state space into acceptable and unacceptable states is not identical for all polices, but depends on the rewards receivable through executing a policy. Second, a sustainable policy should sustain the ability to meet the needs of the future
+   <span class="sup">
+    <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+   </span>.
+  </p>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">We define a policy 
+   <span class="italic">π</span> as sustainable if every state the agent eventually visits under policy 
+   <span class="italic">π</span> is acceptable (Eq. 
+   <a rid="Equ2" ref-type="" href="#Equ2">2</a>).
+  </p>
+  <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">Note that this reduction of sustainability to the one-dimensional value 
+   <span class="italic">v</span>
+   <sub>
+    <span class="italic">π</span>
+   </sub>(
+   <span class="italic">s</span>) has much similarity with the notion of weak sustainability
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>.
+  </p>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">The Safe Operating Space (SOS)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+   </span> is typically defined as a subset of the whole state space 
+   <div id="IEq1" class="inline-formula">
+    <div class="alternatives">
+     <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\cal S}$$\end{document}</span>
+     <div id="M6" class="math">
+      <span mathvariant="script" class="mi">S</span>
+     </div>
+     <span xlink:href="41467_2018_4738_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>, containing favorable system states bounded by thresholds
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>,
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span>. In practice, the position of these potential tipping thresholds is always uncertain and the boundaries are placed at the lower end of the uncertainty zone. In that way the definition of the safe operating space states constitutes a normative judgment about the risk the decision maker is willing to tolerate. In the subsequent analyses we take the extreme position of no risk tolerance and identify the SOS with only the (more favorable) prosperous state, independent of the collapse probability 
+   <span class="italic">δ</span>.
+  </p>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">We define a policy 
+   <span class="italic">π</span> as safe if every state the agents eventually visits under policy 
+   <span class="italic">π</span> lies within the SOS.
+  </p>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">In contrast to acceptable and unacceptable states, safe states are independent of the policy used.</p>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">In summary, our stylized model of a human-environment tipping element depends on the five parameters 
+   <span class="italic">δ</span>, 
+   <span class="italic">ρ</span>, 
+   <span class="italic">γ</span>, 
+   <span class="italic">r</span>
+   <sub>l</sub>/
+   <span class="italic">r</span>
+   <sub>h</sub>, 
+   <span class="italic">r</span>
+   <sub>min</sub>/
+   <span class="italic">r</span>
+   <sub>h</sub>: the probability of a collapse from the prosperous to the degraded state under the high pressure action 
+   <span class="italic">δ</span>, the probability of recovery from the degraded to the prosperous state under the low pressure action 
+   <span class="italic">ρ</span>, the agent’s discount factor 
+   <span class="italic">γ</span>, the high reward receivable from the high pressure action when staying at the prosperous state 
+   <span class="italic">r</span>
+   <sub>h</sub>, the low reward receivable by taking the low pressure action at the prosperous state 
+   <span class="italic">r</span>
+   <sub>l</sub>, and the normatively chosen minimum acceptable reward 
+   <span class="italic">r</span>
+   <sub>min</sub> a state value must have to be perceived as acceptable under a certain policy. Since all three rewards come in arbitrary units, the policy classification only depends on their ratios.
+  </p>
+ </sec>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Classification of risky and safe policy</div>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Based on Eqs. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a> and 
+   <a rid="Equ2" ref-type="" href="#Equ2">2</a> we analytically compute whether the risky and the cautious policy are optimal or not, sustainable or not and safe or not depending on the model parameters (
+   <span class="italic">δ</span>, 
+   <span class="italic">ρ</span>, 
+   <span class="italic">γ</span>, 
+   <span class="italic">r</span>
+   <sub>l</sub>/
+   <span class="italic">r</span>
+   <sub>h</sub>, 
+   <span class="italic">r</span>
+   <sub>min</sub>/
+   <span class="italic">r</span>
+   <sub>h</sub>) (see Methods and Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>).
+   <div id="Fig2" class="fig">
+    <span class="label">Fig. 2</span>
+    <div class="caption">
+     <p>Classification of the risky and cautious policy according to the three policy paradigms: 
+      <span class="bold">a</span> optimization, 
+      <span class="bold">b</span> sustainability, and 
+      <span class="bold">c</span> safe operating space in the model parameter space (shown here as collapse probability 
+      <span class="italic">δ</span> vs. discount factor 
+      <span class="italic">γ</span>); remaining parameters were chosen as 
+      <span class="italic">ρ</span> = 0.2, 
+      <span class="italic">r</span>
+      <sub>l</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub> = 0.5, 
+      <span class="italic">r</span>
+      <sub>min</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub> = 0.3 for illustration purposes. Colored regions result from analytically derived equations (see Methods). Depending on the parameter region, both risky and cautious policy can be optimal and sustainable. Only the cautious policy is safe
+     </p>
+    </div>
+    <div xlink:href="41467_2018_4738_Fig2_HTML" id="d29e1109" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">We observe that above a certain critical value of the collapse probability δ the cautious policy becomes optimal (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2a</a>, pink), despite the smaller immediate reward 
+   <span class="italic">r</span>
+   <sub>l</sub> = 0.5
+   <span class="italic">r</span>
+   <sub>h</sub>. This result confirms previous findings on optimal management with regime shifts
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span>.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Further, we find a decreasing critical collapse probability with increasing farsightedness 
+   <span class="italic">γ</span>. Hence, for more farsighted societies the risky policy is optimal only for small collapse probabilities δ (orange).
+  </p>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Provided the low pressure reward exceeds the normative minimum acceptable value threshold, 
+   <span class="italic">r</span>
+   <sub>l</sub> ≥ 
+   <span class="italic">r</span>
+   <sub>min</sub>, then the cautious policy is sustainable for all parameter combinations 
+   <span class="italic">δ</span>, 
+   <span class="italic">ρ</span>, 
+   <span class="italic">γ</span>, 
+   <span class="italic">r</span>
+   <sub>l</sub>/
+   <span class="italic">r</span>
+   <sub>h</sub> (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2b</a>, blue and purple). Only for small collapse probabilities 
+   <span class="italic">δ</span> and simultaneously high farsightedness 
+   <span class="italic">γ</span> the risky policy becomes sustainable as well (purple). This is because in this parameter region the risky policy is acceptable also at the degraded state (Methods).
+  </p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">The cautious policy is a safe policy independently from the parameter combinations 
+   <span class="italic">δ</span>, 
+   <span class="italic">ρ</span>, 
+   <span class="italic">γ</span>, 
+   <span class="italic">r</span>
+   <sub>l</sub>/
+   <span class="italic">r</span>
+   <sub>h</sub>, 
+   <span class="italic">r</span>
+   <sub>min</sub>/
+   <span class="italic">r</span>
+   <sub>h</sub> (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2c</a>, green). It is important to emphasize that there is no combination of parameters at which the risky policy is safe.
+  </p>
+ </sec>
+ <sec id="Sec6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Relationships between paradigms</div>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">We find that policies can be classified along all logical combinations of the three examined paradigms (optimization, sustainability, safe operating space). This yields a classification of policies into eight different categories (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>).
+   <div id="Fig3" class="fig">
+    <span class="label">Fig. 3</span>
+    <div class="caption">
+     <p>Paradigms classification for risky and cautious policy. There exist policies in parameter space of our model for all logical combinations of paradigm classifications. 
+      <span class="bold">a</span> i.e. a policy can be any combination of (not) optimal, (not) sustainable and (not) safe. Remaining parameters where chosen as 
+      <span class="italic">ρ</span> = 0.2, 
+      <span class="italic">r</span>
+      <sub>l</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub> = 0.5 for illustration purposes (c.f. Methods). For a sufficiently low normative threshold value 
+      <span class="italic">r</span>
+      <sub>min</sub> ≤ 
+      <span class="italic">r</span>
+      <sub>l</sub> (here 
+      <span class="italic">r</span>
+      <sub>min</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub> = 0.3) a Safe And Just Operating Space (SAJOS) exists, which we identified as the overlap of safe and sustainable policies 
+      <span class="bold">b</span>, 
+      <span class="bold">d</span> (gray and cyan area). For a sufficiently large 
+      <span class="italic">r</span>
+      <sub>min</sub> &gt; 
+      <span class="italic">r</span>
+      <sub>l</sub> (here 
+      <span class="italic">r</span>
+      <sub>min</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub> = 0.7) a SAJOS does not exist 
+      <span class="bold">c</span>, 
+      <span class="bold">e</span>
+     </p>
+    </div>
+    <div xlink:href="41467_2018_4738_Fig3_HTML" id="d29e1297" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">In particular, optimal policies are not necessarily sustainable (opt and not sus: Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>, red and yellow). This is the case if the normative value threshold 
+   <span class="italic">r</span>
+   <sub>min</sub> is too large. The cautious policy does not return enough value to be sustainable (
+   <span class="italic">r</span>
+   <sub>l</sub> &lt; 
+   <span class="italic">r</span>
+   <sub>min</sub>, yellow) and the risky policy at the degraded state produces too little future reward to be sustainable, due to the low chance of recovery and lack of farsightedness.
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">Nor are optimal policies necessarily safe (opt and not safe: Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>, red and purple). This occurs in parameter regions where the risky policy is optimal. The risky policy cannot be safe because of the risk of collapse to the degraded state.
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">A safe policy does not necessarily imply a sustainable policy either (safe and not sus: Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>, green and yellow). When the normative threshold value for sustainability 
+   <span class="italic">r</span>
+   <sub>min</sub> exceeds the reward from a low pressure action 
+   <span class="italic">r</span>
+   <sub>l</sub>: 
+   <span class="italic">r</span>
+   <sub>min</sub> &gt; 
+   <span class="italic">r</span>
+   <sub>l</sub>, then the cautious policy is safe but not sustainable. Following a similar line of argument, the SOS concept
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+   </span> has been extended to a Safe And Just Operating Space (SAJOS) which additionally accounts for social indicators
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span>, such as the number of people living in extreme poverty. Thus, SAJOS policies can be interpreted as the overlap of safe with sustainable policies. Within our model, we can give a definite criterion for when this form of SAJOS exists: as long as the reward from a low pressure action 
+   <span class="italic">r</span>
+   <sub>l</sub> exceeds the normative threshold value 
+   <span class="italic">r</span>
+   <sub>min</sub> (
+   <span class="italic">r</span>
+   <sub>l</sub> &gt; 
+   <span class="italic">r</span>
+   <sub>min</sub>), the cautious policy is both safe and sustainable (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>, cyan and gray).
+  </p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">However, there exist also sustainable policies outside the SOS (sus and not safe: Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>, blue and purple.) These are risky policies (hence, not safe) with simultaneously high farsightedness 
+   <span class="italic">γ</span> and low collapse probability 
+   <span class="italic">δ</span>. At those parameter regions the degraded state is still evaluated as acceptable due to sufficient anticipated future rewards and therefore the risky policy is sustainable. The circumstance that parameter regimes exist that are sustainable but not safe and vice versa clearly stems from our definition of sustainability which resembles a form of weak sustainability
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>. By doing so we can conceptually separate issues of environmentally safe and socially just without compromising the target of a safe and just parameter space regime.
+  </p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Note that this classification into the eight different policy paradigm combinations also applies to the case of absolute farsightedness (
+   <span class="italic">γ</span> = 1; see the tops of Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3b–e</a>). Thus, the trade-offs between the examined paradigms do not vanish, as one might presume considering the debate about appropriate discount rates
+   <span class="sup">
+    <a ref-type="bibr" rid="CR14" href="#CR14">14</a>,
+    <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Volume of paradigm combinations</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">So far, we have visualized the parameter space of our stylized tipping element model in two dimensional sections and fixed the remaining parameters for illustrative purposes. By doing so, we showed the mutual dependence between parameters, foremost the discount factor γ and the collapse probability 
+   <span class="italic">δ</span>. However, in the light of considerable parameter uncertainty we ask how large the eight regimes of paradigm combinations are, given the whole parameter space (Fig. 
+   <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>).
+   <div id="Fig4" class="fig">
+    <span class="label">Fig. 4</span>
+    <div class="caption">
+     <p>Ratios of parameter space volumes for all eight paradigms combination. All parameters (
+      <span class="italic">δ</span>, 
+      <span class="italic">ρ</span>, 
+      <span class="italic">γ</span>, 
+      <span class="italic">r</span>
+      <sub>l</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub>, 
+      <span class="italic">r</span>
+      <sub>min</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub>) were chosen linearly between 0 and 1 for both the risky and the cautious policy. As a direct consequence of our definitions of the safe operating space paradigm and the cautious and risky policy, all paradigm combinations which are safe correspond to the use of the cautious policy, in all others the risky policy was applied. A random decision making agent within a random tipping element will most likely end up with a policy that is neither optimal, neither sustainable nor safe, followed by the parameter sweet spot regime where the policy is simultaneously optimal, sustainable and safe. Interestingly, the third likeliest option is a parameter regime which is optimal, but neither sustainable nor safe
+     </p>
+    </div>
+    <div xlink:href="41467_2018_4738_Fig4_HTML" id="d29e1460" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">We observe the most likely option to be the regime that is neither optimal, neither sustainable nor safe followed by the parameter sweet spot regime in which all paradigms yield the cautious policy as optimal, sustainable and safe. Together they constitute a parameter space volume of approx. 45% in which the three paradigms of economic optimization, sustainability and safe operating space align with each other in yielding the same policy. Interestingly, the third likeliest option is the paradigm combination in which the risky policy is optimal but neither sustainable nor safe. This is the most likeliest parameter regime among those where the paradigms yield different policies. Thus, blindly applying economic optimization in a our stylized tipping element has a significant chance of leading to policies that are neither sustainable nor safe.</p>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">On the other hand, the volume of the safe and just operating space (gray and cyan bars in Fig. 
+   <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>) is comparable to the most likeliest (black) regime. Thus, about one out of four random decision making agents interacting with a random tipping element will end up in the safe and just operating space.
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Application to real-world human-environment tipping elements</div>
+  <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">The above policy classification offers valuable insights for the governance of real-world human-environment systems. We discuss how our analysis relates to the cases of the climate system, fisheries and farming. Our purpose is to gain a qualitative understanding how our model relates to important real-world challenges of environmental governance, not a detailed assessment of the latter. Therefore, we roughly estimate the respective collapse and recovery probabilities per time step 
+   <span class="italic">δ</span> and 
+   <span class="italic">ρ</span> of our model via the typical timescales on which these systems remain in one state or the other (see Methods). Additionally, we added a parameter sensitivity analysis by visualizing the likelihood of ending up in a certain parameter regime by color gradients between regimes (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>).
+   <div id="Fig5" class="fig">
+    <span class="label">Fig. 5</span>
+    <div class="caption">
+     <p>Human-environment systems in paradigms classification. For risky (
+      <span class="bold">a</span>) and (
+      <span class="bold">b</span>) cautious policy here shown in model parameter space of collapse probability 
+      <span class="italic">δ</span> versus recovery probability 
+      <span class="italic">ρ</span>. Color indicates the paradigms combination similarly as in Fig. 
+      <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>. Here, additional gradual changes between the color regimes indicate the probability of being in a certain paradigms combinations regime under parameter uncertainty ranges. Remaining parameters where chosen linearly within the range of 0.95 ≤ 
+      <span class="italic">γ</span> ≤ 0.99, 0.3 ≤ 
+      <span class="italic">r</span>
+      <sub>l</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub> ≤ 0.7, 0.1 ≤ 
+      <span class="italic">r</span>
+      <sub>min</sub>/
+      <span class="italic">r</span>
+      <sub>h</sub> ≤ 0.5. The approx. transition probabilities 
+      <span class="italic">δ</span> and 
+      <span class="italic">ρ</span> were assigned to the human-environment systems climate, fisheries and farming agriculture according to the timescale of the average time spent in one state (see Methods). For farming, a risky policy is likely to be optimal but neither sustainable nor safe. The parameter uncertainty of the other parameters does not allow a clear statement in which parameter regime fisheries are likely to fall. The climate system may lie at the edge of the sweet spot, where all paradigms yield the cautious policy. However, for smaller collapse probability 
+      <span class="italic">δ</span> optimization is more likely to yield the risky policy, which becomes also neither sustainable nor safe at this point. This suggests the use of other paradigms for climate policy making
+     </p>
+    </div>
+    <div xlink:href="41467_2018_4738_Fig5_HTML" id="d29e1539" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Regarding the climate system, we acknowledge that several interacting tipping elements contribute to the system’s behavior
+   <span class="sup">
+    <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+   </span> and its representation as a single tipping element is a huge simplification on its own. Nevertheless, we assume that the current state of the climate system is still comparable to the prosperous one of our model and relevant timescales for triggering a collapse of 30 to 50 years under business-as-usual socio-economic development scenarios
+   <span class="sup">
+    <a ref-type="bibr" rid="CR2" href="#CR2">2</a>,
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>,
+    <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+   </span>. Regarding the recovery timescale it has been shown that human perturbations of the climate system already changed its trajectory on a multi-millennial timescale
+   <span class="sup">
+    <a ref-type="bibr" rid="CR55" href="#CR55">55</a>,
+    <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+   </span>. Therefore we assume a recovery probability per time step 
+   <span class="italic">ρ</span> close to zero (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>).
+  </p>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">For sufficiently large collapse probabilities (collapse time scale near 20 years and smaller), the climate system is likely to reside in a parameter sweet spot (gray area), where applying an optimization, sustainability or SOS paradigm results in the cautious policy as the advisable way of governing the climate system. However, if the collapse probability per time step is smaller (collapse time scale near 50 years and larger) the situation is different. Here, an SOS and a sustainable paradigm would still yield the cautious policy (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>, cyan), but an optimization paradigm is likely to give the risky policy (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>, red), which at this point is neither sustainable nor safe. We conclude that in climate policy, economic welfare optimization alone may neither be sustainable nor safe.
+  </p>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">For fishery systems, both transition probabilities certainly depend on a variety of factors, e.g., fisher’s technical and cultural traits or the dominant fish species in the system, as well as external factors such as climate change influencing habitat condition
+   <span class="sup">
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>,
+    <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+   </span>. The timescale of a fisheries collapse has been shown to lie within decades
+   <span class="sup">
+    <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+   </span>. Roughly consistent with observational and modeled data from the Baltic sea, where the stable regime of high cod biomass lasted approximately from 1970 to 1990
+   <span class="sup">
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>,
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span>, we assume a typical collapse timescale of around 20 years. Concerning the typical recovery time scale, successful attempts of fish stocks recovery lasted for decades
+   <span class="sup">
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span>, but is estimated to generally exceed this duration
+   <span class="sup">
+    <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+   </span>. We therefore assume a larger typical recovery timescale of around 50 years. The color gradient in Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a> at the fisheries point does not clearly single out a paradigms regime, indicating the dependence on the other parameters at this point. A risky policy might be economically optimal (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>, red), but leads eventually to the collapse of fish stock (c.f
+   <span class="sup">
+    <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+   </span>.). At the collapsed and degraded state the conditions for the fishers are not acceptable. Therefore they have to leave the system and cannot wait for the fish’s recovery. But further investigation is needed to reduce the uncertainty with respect to the other parameters.
+  </p>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">Last, we look at the case of land degradation by farming in our stylized model. Land degradation and restoration is a complex topic with many influencing factors
+   <span class="sup">
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span>. Nevertheless, land degradation by farming has been identified as a tipping element by Kinzig and others
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span>, where the authors discuss the case of the western Australian wheatbelt with a typical collapse timescale of about 100 years. Soil recovery is estimated to take place within 20 to 1000 years
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span>, which is roughly consistent to Kitzing et al., where the duration to reach equilibrium again is estimated with up to 300 years. We therefore assume a typical recovery timescale of about 300 years. In contrast to climate and fisheries, the transition probabilities we associated with the process of land degradation by farming suggest, that here an optimality paradigm is very likely to yield the risky policy which is neither sustainable nor safe despite considerate parameter uncertainty (red area in Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>).
+  </p>
+  <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">Taken together, it is interesting to see that in particular the climate system may reside at the edge of the parameter regime where economic welfare optimization becomes neither sustainable nor safe (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>). For land degradation by farming, our assessment suggests that an optimal policy is likely to yield a non-sustainable and non-safe policy whereas for fisheries the situation is less clear.
+  </p>
+ </sec>
+</sec>

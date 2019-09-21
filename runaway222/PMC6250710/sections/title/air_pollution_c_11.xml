@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec12" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Air pollution concentrations and mixing ratios</div>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">To compute pollutant concentrations from pollutant emission scenarios, we use the TM5-FASST model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+  </span>, a reduced-form air quality assessment tool, built on pairwise emission–concentration sensitivities (so-called source–receptor coefficients (SRCs)) between 56 source regions and individual 1°×1° receptor grid cells for each relevant emitted pollutant or precursor.
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">The embedded sensitivities have been derived with the global two-way nested chemistry-transport model TM5
+  <span class="sup">
+   <a ref-type="bibr" rid="CR78" href="#CR78">78</a>
+  </span> with year 2001 meteorology, from a large set of emission perturbation experiments, using Representative Concentration Pathway (RCP) year 2000 emissions as a reference
+  <span class="sup">
+   <a ref-type="bibr" rid="CR79" href="#CR79">79</a>
+  </span>, applying a −20% emission perturbation on each precursor and for each single source region. The TM5-FASST model delivers relevant exposure metrics (annual mean PM
+  <sub>2.5</sub>, highest occurring 6-monthly mean of daily maximum hourly ozone, crop-growing season mean daytime ozone). For the evaluation of arbitrary emission scenarios, the stored sensitivities are linearly extrapolated using an appropriate scaling factor, thus by-passing computationally expensive simulations and allowing for a fast screening of large sets of scenarios or scenario ensembles.
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">TM5-FASST takes as input annual anthropogenic emission strengths of individual pollutants and pollutant precursors (SO
+  <sub>2</sub>, NO
+  <sub>
+   <span class="italic">x</span>
+  </sub>, NH
+  <sub>3</sub>, primary PM
+  <sub>2.5</sub> including BC and organic carbon, volatile organic components) aggregated at the level of 56 pre-defined source regions (as identified in Supplementary Figure 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>) and produces approximate resulting pollutant grid maps of PM
+  <sub>2.5</sub> and ozone, based on an implicit underlying spatial distribution of the emissions, originating in the gridded reference RCP emissions on which the SRCs are based. Examples of emission–pollutant source–receptor matrices include SO
+  <sub>2</sub> to sulphate, NO
+  <sub>
+   <span class="italic">x</span>
+  </sub> to nitrate and to ozone, NH
+  <sub>3</sub> to ammonia, and BC to BC (as primary pollutant). The current study does not consider changes in natural PM
+  <sub>2.5</sub> components (mineral dust, sea salt) to uniquely attribute changes in air quality to the climate policies. Ambient PM
+  <sub>2.5</sub> is obtained as the sum of ammonium nitrate, ammonium sulphate, and primary emitted PM
+  <sub>2.5</sub>. Ozone is evaluated from NO
+  <sub>
+   <span class="italic">x</span>
+  </sub> and volatile organic compounds, including the long-term feedback of methane on background ozone. In general, chemical processes leading to secondary pollutants involving multiple precursors are non-linear and the embedded linearisation in TM5-FASST may lead to biased estimates of PM
+  <sub>2.5</sub> concentrations and ozone mixing ratios. However, validation studies
+  <span class="sup">
+   <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+  </span> have shown that the linearity assumption in TM5-FASST holds sufficiently well for regionally averaged (population-weighted) PM
+  <sub>2.5</sub> and ozone responses to precursor emission changes that deviate from −80% to +100% from the reference emissions.
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">As described in earlier work
+  <span class="sup">
+   <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+  </span>, TM5-FASST includes an optional urban increment adjustment for sub-grid PM
+  <sub>2.5</sub> gradients. This adjustment was, however, not applied in the current analysis as it requires gridded sector-wise emission fields of the evaluated scenarios, which are not available in this study. Therefore, resulting PM
+  <sub>2.5</sub> should be considered as lower bound values. For the health analysis, PM
+  <sub>2.5</sub> concentrations from TM5-FASST have been adjusted to match the World Bank data (2010) on PM
+  <sub>2.5</sub> exposure consistent with the Global Burden of Disease (GBD) 2015
+  <span class="sup">
+   <a ref-type="bibr" rid="CR80" href="#CR80">80</a>
+  </span> and taking into consideration improved exposure estimation methods complemented by satellite and ground-level measurements
+  <span class="sup">
+   <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+  </span>.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">As described above, TM5-FASST takes as input emissions aggregated at the level of the 56 pre-defined regions. For this study, native emission data were available at the aggregation level as listed in additional results, except for the European Union (28 countries) where data for individual countries were provided. The available aggregation was remapped to the 56 TM5-FASST regions by first downscaling POLES-JRC native regions to individual countries and subsequently re-aggregating countries to the 56 TM5-FASST source regions. The downscaling was done by individual IPCC sector, using RCP sector-segregated gridded emissions as a proxy to establish the weight coefficient of each country within a larger region. Hence, for native region 
+  <span class="italic">R</span> composed of countries 
+  <span class="italic">c</span>
+  <sub>1</sub>–
+  <span class="italic">c</span>
+  <sub>
+   <span class="italic">n</span>
+  </sub>, the emission 
+  <span class="italic">E</span>
+  <sub>ps</sub>
+  <span class="italic">(c</span>
+  <sub>i</sub>
+  <span class="italic">)</span> from country 
+  <span class="italic">c</span>
+  <sub>i</sub> of precursor p in sector s is obtained as
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{ps}}}(c_{\mathrm{i}}) = f_{{\mathrm{ps}},{\mathrm{i}}} \cdot E_{{\mathrm{ps}}}(R)$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">E</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ps</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ps</span>
+       <span class="mo">,</span>
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">⋅</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">E</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ps</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">R</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_6885_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$f_{{\mathrm{ps}},{\mathrm{i}}} = \frac{{E_{{\mathrm{ps}}}^{{\mathrm{RCP}}}\left( {c_{\mathrm{i}}} \right)}}{{\mathop {\sum }\nolimits_{j = 1}^n E_{{\mathrm{ps}}}^{{\mathrm{RCP}}}\left( {c_{\mathrm{j}}} \right)}}$$\end{document}</span>
+    <div id="M4" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ps</span>
+       <span class="mo">,</span>
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">E</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">ps</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">RCP</span>
+        </div>
+       </div>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">c</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">i</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mo">∑</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+         <span class="mo">=</span>
+         <span class="mn">1</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">n</span>
+        </div>
+       </div>
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">E</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">ps</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">RCP</span>
+        </div>
+       </div>
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">c</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">j</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_6885_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>and 
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{ps}}}^{{\mathrm{RCP}}}\left( {c_{\mathrm{i}}} \right)$$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">E</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ps</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">RCP</span>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2018_6885_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> equals the RCP sector-specific emission summed over all grid cells of country 
+  <span class="italic">c</span>
+  <sub>i</sub> and 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\mathop {\sum }\limits_{\mathrm{i}} f_{{\mathrm{ps}},{\mathrm{i}}} = 1$$\end{document}</span>
+    <div id="M8" class="math">
+     <div class="munder">
+      <div class="mrow">
+       <span class="mo"> ∑</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ps</span>
+       <span class="mo">,</span>
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">1</span>
+    </div>
+    <span xlink:href="41467_2018_6885_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>.
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">For each climate policy scenario in the current study, the closest matching RCP scenario was selected to guide the mapping of the regional emissions to TM5-FASST source regions. For the REF, NDC, and 2°scenario, we used RCP6.0, RCP4.5, and RCP2.6, respectively.</p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">POLES-JRC sectors are mapped to the IPCC sectors as shown in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">45</a>. In order to reduce artefacts associated with the downscaling and remapping of emissions between POLES-JRC and FASST regions, impacts are aggregated to the regional scale. Population-weighted regional pollutant exposure is obtained by interpolating TM5-FASST 1°×1° pollution grid maps to 0.5°×0.5° and overlaying them with SSP gridded population maps at the same resolution for the corresponding scenario year
+  <span class="sup">
+   <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+  </span>. The regional population-weighted exposure to pollutant 
+  <span class="italic">P</span> is then obtained as
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\overline {P_{{\mathrm{pop}}}} = \frac{{\mathop {\sum }\nolimits_{\mathrm{i}} {\mathrm{pop}}_{\mathrm{i}} \cdot P_{\mathrm{i}}}}{{\mathop {\sum }\nolimits_{\mathrm{i}} {\mathrm{pop}}_{\mathrm{i}}}}$$\end{document}</span>
+    <div id="M10" display="block" class="math">
+     <div accent="false" class="mover">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">P</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">pop</span>
+        </div>
+       </div>
+      </div>
+      <span accent="true" class="mo">¯</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mo">∑</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">pop</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">⋅</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">P</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mo">∑</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">pop</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_6885_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where index i runs over all grid cells of the considered region and pop
+  <sub>i</sub> and 
+  <span class="italic">P</span>
+  <sub>i</sub> are the population per grid cell and the grid cell pollutant concentration, respectively.
+ </p>
+</sec>

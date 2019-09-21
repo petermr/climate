@@ -1,0 +1,2418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data pre-processing</div>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">A 3-month running mean is taken of all monthly (but not daily) datasets for the period 1970–2016 (1970–2010 for ocean data). N3.4 is the running 3-month mean Niño-3.4 SST anomalies (5°N−5°S, 120°W−170°W). El Niño and La Niña events are selected by a standard used by NOAA (
+   <span ext-link-type="uri" xlink:href="http://ggweather.com/enso/oni.htm" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://ggweather.com/enso/oni.htm</span>). Generally, El Niño (La Niña) events are defined as when N3.4 in five consecutive overlapping 3-month periods is at or above (below) the +0.5 °C (–0.5 °C) anomaly. The El Niño (La Niña) developing year is defined as the year (January−December) that El Niño (La Niña) develops from weak to strong, and the El Niño (La Niña) decaying year is defined when El Niño (La Niña) decays from strong to weak. Above-moderate El Niño (La Niña) events (including moderate events) are defined as when five consecutive overlapping 3-month periods are at or above (below) the 1 °C (–1 °C) SST anomaly and the largest N3.4 index value occurs from October to January. Since 1970, 9 El Niño events (1972−1973, 1982−1983, 1986−1987, 1991−1992, 1994−1995, 1997−1998, 2002−2003, 2009−2010 and 2015−2016) and 10 La Niña events (1970−1971, 1973−1974, 1975−1976, 1988−1989, 1995−1996, 1998−1999, 1999−2000, 2007−2008, 2010−2011 and 2011−2012) meet the above criteria, and in this work, unless otherwise specified, El Niño developing years are the developing years of these nine El Niño events. To increase the reliability of our results, monthly composite and regression analyses are employed in this study. The Walker index = 
+   <span class="italic">U</span>
+   <sub>200</sub> − 
+   <span class="italic">U</span>
+   <sub>850</sub>, where 
+   <span class="italic">U</span>
+   <sub>200</sub> and 
+   <span class="italic">U</span>
+   <sub>850</sub> are the mean (5°S−5°N, 120°W−120°E) zonal wind anomalies at the 200- and 850-hPa levels, respectively.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Accumulated cyclone information calculation</div>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">The accumulated cyclone energy (ACE)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+   </span> in each 2° latitude × 2° longitude grid cell is defined as the sum of the squares of the estimated 6-hourly maximum sustained surface wind speed (in m s
+   <span class="sup">−1</span>) for all TCs occurring in each grid cell over all 6-h periods; i.e. the grid cell 
+   <div id="IEq4" class="inline-formula">
+    <div class="alternatives">
+     <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{ACE}} = \mathop {\sum }\limits_i V_i^2$$\end{document}</span>
+     <div id="M8" class="math">
+      <span mathvariant="normal" class="mi">ACE</span>
+      <span class="mo">=</span>
+      <div class="munder">
+       <div class="mrow">
+        <span class="mo"> ∑</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <div class="msubsup">
+       <div class="mrow">
+        <span class="mi">V</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>, where 
+   <span class="italic">i</span> is the 
+   <span class="italic">i</span>
+   <span class="sup">th</span> TC in one grid cell and 
+   <span class="italic">V</span> is its maximum sustained surface wind speed. Then, the ACE index is the anomaly of the sum of the ACE for all grid cells in the selected region. Strong (weak) ACE events are defined as having ACE index values of ≥0.5 (≤–0.5) standard deviation. A threshold value of daily ACE index in the selected region equal to 1 m
+   <span class="sup">2</span> s
+   <span class="sup">–2</span> is used to define the genesis or disappearance of TCs. A single ACE event is associated with the whole process from ACE generation to disappearance.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model verification</div>
+  <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">An intermediate-complexity coupled ocean–atmosphere model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>,
+    <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+   </span> is employed to verify the role of each factor (e.g. the preceding, 3-months earlier, N3.4 and the WNP ACE) in Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1b</a> (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4f−j</a>). First, the horizontal wind at 925 hPa, as an initial forcing, is added to simulate the Niño-3.4 SST. The horizontal wind is obtained by simultaneous regression with respect to the corresponding factor. Then, the discrepancy between the observed and simulated SST anomalies is corrected. Finally, the simulated SST anomalies after correction are employed to predict SST anomalies 3-months later in the model. Using TCs as an example, we first obtain the 925-hPa horizontal wind related to TCs by simultaneously regressing ACE on wind. We obtain the simulated SST anomalies by taking the 925-hPa horizontal wind related to TCs as an initial forcing. Then, the discrepancy between the observed and simulated SST anomalies is corrected. Finally, the simulated SST anomalies after correcting for errors are employed to predict SST anomalies 3 months later in the model.
+  </p>
+ </sec>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Explained percentage and linearly independent component</div>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Given two variables 
+   <span class="italic">x</span> and z, a linear regression is calculated as follows:
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\tilde z_x = {\it{ax}} + {\it{b}}$$\end{document}</span>
+     <div id="M10" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">~</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">a</span>
+      <span class="mi">x</span>
+      <span class="mo">+</span>
+      <span class="mi">b</span>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <span class="italic">a</span> and 
+   <span class="italic">b</span> are the regression coefficient and a constant, respectively, and 
+   <div id="IEq5" class="inline-formula">
+    <div class="alternatives">
+     <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\tilde z_x$$\end{document}</span>
+     <div id="M12" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">~</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the part of 
+   <span class="italic">z</span> associated with 
+   <span class="italic">x</span>. The explained percentage (
+   <span class="italic">p</span>
+   <sub>
+    <span class="italic">x</span>
+   </sub>) of 
+   <span class="italic">x</span> for 
+   <span class="italic">z</span> is
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p_x = \frac{{\tilde z_x}}{z} \times {\mathrm{100\% }}$$\end{document}</span>
+     <div id="M14" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">p</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <span class="mo">~</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">x</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">z</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <span mathvariant="normal" class="mi">100%</span>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>Let 
+   <div id="IEq6" class="inline-formula">
+    <div class="alternatives">
+     <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$z_x^ \ast$$\end{document}</span>
+     <div id="M16" class="math">
+      <div class="msubsup">
+       <div class="mrow">
+        <span class="mi">z</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> be the component of 
+   <span class="italic">z</span> linearly independent of 
+   <span class="italic">x</span> (also referred to as 
+   <span class="italic">x</span>-independent 
+   <span class="italic">z</span>), which can be obtained as follows:
+   <div id="Equ3" class="disp-formula">
+    <span class="label">3</span>
+    <div class="alternatives">
+     <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$z_x^ \ast = {\it{z}} - \tilde z_x$$\end{document}</span>
+     <div id="M18" class="math">
+      <div class="msubsup">
+       <div class="mrow">
+        <span class="mi">z</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">z</span>
+      <span class="mo">-</span>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">~</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>Here, 
+   <div id="IEq7" class="inline-formula">
+    <div class="alternatives">
+     <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$z_x^ \ast$$\end{document}</span>
+     <div id="M20" class="math">
+      <div class="msubsup">
+       <div class="mrow">
+        <span class="mi">z</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the remainder of 
+   <span class="italic">z</span> after removal of the signal 
+   <span class="italic">x</span>. Similarly, the explained percentage of 
+   <span class="italic">x</span> and 
+   <span class="italic">y</span>-independent 
+   <span class="italic">z</span> can be calculated. By the binary regression of 
+   <span class="italic">x</span> and 
+   <span class="italic">y</span> on 
+   <span class="italic">z</span>, 
+   <span class="italic">z</span> associated with 
+   <span class="italic">x</span> and 
+   <span class="italic">y</span> (
+   <div id="IEq8" class="inline-formula">
+    <div class="alternatives">
+     <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\tilde z_{x,y}$$\end{document}</span>
+     <div id="M22" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">~</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+        <span class="mo">,</span>
+        <span class="mi">y</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) is obtained as follows:
+   <div id="Equ4" class="disp-formula">
+    <span class="label">4</span>
+    <div class="alternatives">
+     <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\tilde z_{{\mathrm{x,y}}} = a_1{\it{x}} + a_2{\it{y}} + {\mathrm{b}}$$\end{document}</span>
+     <div id="M24" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">~</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">x,y</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">a</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">1</span>
+       </div>
+      </div>
+      <span class="mi">x</span>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">a</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mi">y</span>
+      <span class="mo">+</span>
+      <span mathvariant="normal" class="mi">b</span>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <span class="italic">a</span>
+   <sub>1</sub> and 
+   <span class="italic">a</span>
+   <sub>2</sub> are the regression coefficients. Then, substituting 
+   <div id="IEq9" class="inline-formula">
+    <div class="alternatives">
+     <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\tilde z_{{\mathrm{x,y}}}$$\end{document}</span>
+     <div id="M26" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <span class="mo">~</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">x,y</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq9.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> into Eq. 
+   <a rid="Equ2" ref-type="" href="#Equ2">2</a>, the joint explained percentage of 
+   <span class="italic">x</span> and 
+   <span class="italic">y</span> for 
+   <span class="italic">z</span> is obtained.
+  </p>
+ </sec>
+ <sec id="Sec14" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Lead–lag correlation</div>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">The statistical significance of the correlation between two auto-correlated time series is assessed via a two-tailed Student’s 
+   <span class="italic">t</span>-test using the effective number of degrees of freedom (
+   <span class="italic">N</span>
+   <span class="sup">eff</span>). 
+   <span class="italic">N</span>
+   <span class="sup">eff</span> is given by the following approximation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>–
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span>:
+   <div id="Equ5" class="disp-formula">
+    <span class="label">5</span>
+    <div class="alternatives">
+     <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{1}{{N^{{\it{eff}}}}} \approx \frac{1}{N} + \frac{2}{N}\mathop {\sum }\limits_{{\mathrm{j = 1}}}^N \frac{{{\it{N}} - {\it{j}}}}{N}\rho _{{\it{XX}}}\left( j \right)\rho _{{\it{YY}}}\left( j \right)$$\end{document}</span>
+     <div id="M28" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">1</span>
+       </div>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">N</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">e</span>
+          <span class="mi">f</span>
+          <span class="mi">f</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">≈</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">1</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">N</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">N</span>
+       </div>
+      </div>
+      <div accent="false" accentunder="false" class="munderover">
+       <div class="mrow">
+        <span class="mo">∑</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">j=1</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">N</span>
+       </div>
+      </div>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">N</span>
+        <span class="mo">-</span>
+        <span class="mi">j</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">N</span>
+       </div>
+      </div>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">ρ</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">X</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">ρ</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">Y</span>
+        <span class="mi">Y</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">j</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>Where 
+   <span class="italic">N</span> is the sample size and 
+   <div id="IEq10" class="inline-formula">
+    <div class="alternatives">
+     <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\rho _{{\it{XX}}}\left( j \right)$$\end{document}</span>
+     <div id="M30" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">ρ</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">X</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">j</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq10.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq11" class="inline-formula">
+    <div class="alternatives">
+     <span id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\rho _{{\it{YY}}}\left( j \right)$$\end{document}</span>
+     <div id="M32" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">ρ</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">Y</span>
+        <span class="mi">Y</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">j</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq11.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> are the autocorrelations of the sampled time series 
+   <span class="italic">X</span> and 
+   <span class="italic">Y</span> at time lag 
+   <span class="italic">j</span>, respectively.
+  </p>
+ </sec>
+ <sec id="Sec15" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Composite of a single TC in the period 1970–2016</div>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">Figure 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3c</a> shows the composite time series of zonal wind anomalies (m s
+   <span class="sup">–1</span>) on the southern flank (within 5° of lon
+   <sub>0</sub>, and within 10° south of lat
+   <sub>0</sub>) of single TC genesis in the period 1970–2016, where lon
+   <sub>0</sub> and lat
+   <sub>0</sub> indicate the longitude and latitude of the TC genesis position, respectively.
+  </p>
+ </sec>
+ <sec id="Sec16" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Madden–Julian Oscillation (MJO)</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">A seasonally independent multivariate MJO index developed by Wheeler and Hendon (WH04)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+   </span> is employed. This index is based on a pair of empirical orthogonal functions (EOFs) of OLR. The two leading principal components (PCs) are used to determine the daily MJO index and phase. Time series of 91-day running mean PC1
+   <span class="sup">2</span> + PC2
+   <span class="sup">2</span> defines the MJO index. In this work, a 
+   <div id="IEq12" class="inline-formula">
+    <div class="alternatives">
+     <span id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\sqrt {{\mathrm{PC1}}^2 + {\mathrm{PC2}}^2} \ge$$\end{document}</span>
+     <div id="M34" class="math">
+      <div class="msqrt">
+       <div class="msup">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">PC1</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msup">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">PC2</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">≥</span>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq12.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>1 defines MJO events, with others considered to be non-MJO events. A MJO is divided into eight phases. Generally, TCs in the WNP are readily generated in phases 4−7, as the convective centre propagates into the Pacific. In contrast, TC genesis is suppressed in phases 8 and 1−3 when the convective centre is located in the Indian Ocean
+   <span class="sup">
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>. As a result, MJO events are divided into active (phases 4−7) and inactive (phases 8 and 1−3) MJO events. The hit rate is the ratio of days in which the anomalous ACE corresponds to the MJO event type (i.e. positive ACE during active MJO events and negative ACE during inactive MJO events).
+  </p>
+ </sec>
+ <sec id="Sec17" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pre-processing of model data</div>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">The period from 1970.01 to 1999.12 is defined as the base period. The anomalies of N3.4 and ACE in the model are calculated relative to the base period. Standardized anomalies are then calculated on the basis of the length of the chosen period. All ENSO events (no restrictions on intensity) during the hindcasting period are selected for analysis.</p>
+ </sec>
+ <sec id="Sec18" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modelling methods</div>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">Cross validation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+   </span> is employed in the modelling process.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Holdout Method: Holdout (simple) validation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR55" href="#CR55">55</a>
+   </span> relies on a single partitioning of the data. The whole time series is divided into two parts: the period from January 1970 to December 1999 is the training period and the period from January 2000 to December 2016 is the hindcasting period.
+  </p>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">With a single predictor variable, the linear regression of the predictor variable 
+   <span class="italic">x</span> three months earlier on the dependent variable 
+   <span class="italic">z</span> during the training period is used to construct the model. We obtain the regression coefficient 
+   <span class="italic">c</span> and constant 
+   <span class="italic">g</span>. Thus, the forecast model can be written as
+   <div id="Equ6" class="disp-formula">
+    <span class="label">6</span>
+    <div class="alternatives">
+     <span id="M35" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$z_i = f_i\left( x \right) = {\it{c}}x_{i-3} + {\it{g}}$$\end{document}</span>
+     <div id="M36" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">z</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">f</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">c</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span class="mi">g</span>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where is 
+   <div id="IEq13" class="inline-formula">
+    <div class="alternatives">
+     <span id="M37" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$f_i\left( x \right)$$\end{document}</span>
+     <div id="M38" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">f</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq13.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> a function fitted to the predictor variable 
+   <span class="italic">x</span>. This gives us the relation between the dependent variable 
+   <span class="italic">z</span> at the 
+   <span class="italic">i</span>
+   <span class="sup">th</span> month and the predictor variable 
+   <span class="italic">x</span> at (
+   <span class="italic">i−3</span>)
+   <span class="sup">th</span> month (
+   <div id="IEq14" class="inline-formula">
+    <div class="alternatives">
+     <span id="M39" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$x_{i-3}$$\end{document}</span>
+     <div id="M40" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq14.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) during the hindcasting period.
+  </p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">With two predictor variables, binary regression of the predictor variables 
+   <span class="italic">x</span> and 
+   <span class="italic">y</span> 3 months earlier on the dependent variable 
+   <span class="italic">z</span> during the training period is used to construct the model. We obtain the regression coefficients 
+   <span class="italic">c</span> and 
+   <span class="italic">d</span>, and the constant 
+   <span class="italic">g</span>. Thus, the forecast model can be represented as
+   <div id="Equ7" class="disp-formula">
+    <span class="label">7</span>
+    <div class="alternatives">
+     <span id="M41" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$z_i = f_i\left( {{\it{x,y}}} \right) = {\it{c}}x_{i-3} + {\it{d}}y_{i-3} + {\it{g}}$$\end{document}</span>
+     <div id="M42" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">z</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">f</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">x</span>
+        <span class="mo">,</span>
+        <span class="mi">y</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">c</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span class="mi">d</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">y</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span class="mi">g</span>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <div id="IEq15" class="inline-formula">
+    <div class="alternatives">
+     <span id="M43" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$f_i\left( {{\it{x,y}}} \right)$$\end{document}</span>
+     <div id="M44" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">f</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">x</span>
+        <span class="mo">,</span>
+        <span class="mi">y</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq15.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is a function fitted to the predictor variables 
+   <span class="italic">x</span> and 
+   <span class="italic">y</span>. This gives us the dependent variable 
+   <span class="italic">z</span> at the 
+   <span class="italic">i</span>
+   <span class="sup">th</span> month related to predictor variables 
+   <span class="italic">x</span> and 
+   <span class="italic">y</span> at the (
+   <span class="italic">i−3</span>)
+   <span class="sup">th</span> month (
+   <div id="IEq16" class="inline-formula">
+    <div class="alternatives">
+     <span id="M45" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$x_{i-3}$$\end{document}</span>
+     <div id="M46" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq16.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq17" class="inline-formula">
+    <div class="alternatives">
+     <span id="M47" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$y_{i-3}$$\end{document}</span>
+     <div id="M48" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">y</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq17.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) during the hindcasting period.
+  </p>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">The real predictor variables used here are the standardized ACE anomalies (
+   <div id="IEq18" class="inline-formula">
+    <div class="alternatives">
+     <span id="M49" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{ACE}}^ \ast$$\end{document}</span>
+     <div id="M50" class="math">
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">ACE</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq18.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) and standardized N3.4 (
+   <div id="IEq19" class="inline-formula">
+    <div class="alternatives">
+     <span id="M51" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}^ \ast$$\end{document}</span>
+     <div id="M52" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq19.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) three months earlier, and the dependent variable is N3.4. Because the key domain of the ACE three months before for N3.4 varies with the type of ENSO event (key domain is 10°−20°N, 135°−170°E during an El Niño event, 10°−25°N, 130°−155°E during a La Niña event, and a common domain of 10°−20°N, 135°−155°E during other periods), three models are constructed, one for each of the three areas, according to the 0.5°C anomaly of the preceding N3.4:
+   <div id="Equ8" class="disp-formula">
+    <span class="label">8</span>
+    <div class="alternatives">
+     <span id="M53" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left\{ {\begin{array}{*{20}{c}} {{\mathrm{N3}}{\mathrm{.4}}_i = c_1{\mathrm{ACE}}^ \ast _{i-3} + g_1,{\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}\left( {{{10^\circ - 20^\circ {\rm{N}},135^\circ - 170^\circ {\rm{E}}}}} \right)} \\ {{\mathrm{N3}}{\mathrm{.4}}_i = c_2{\mathrm{ACE}}^ \ast _{i-3} + g_2,|{\mathrm{N3}}{\mathrm{.4}}_{i-3}| &lt; {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{20}}^\circ {\mathrm{N}},{\mathrm{135}}^\circ - {\mathrm{155}}^\circ {\mathrm{E}})} \\ {{\mathrm{N3}}{\mathrm{.4}}_i = c_3{\mathrm{ACE}}^ \ast _{i-3} + g_3,{\mathrm{N3}}{\mathrm{.4}}_{i-3} \le - {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{25}}^\circ {\mathrm{N}},{\mathrm{130}}^\circ - {\mathrm{155}}^\circ {\mathrm{E}})} \end{array}} \right.,$$\end{document}</span>
+     <div id="M54" class="math">
+      <div close="" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mtable">
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">≥</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <span class="mn">1</span>
+             <div class="msup">
+              <div class="mrow">
+               <span class="mn">0</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <span class="mn">2</span>
+             <div class="msup">
+              <div class="mrow">
+               <span class="mn">0</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <span class="mn">13</span>
+             <div class="msup">
+              <div class="mrow">
+               <span class="mn">5</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <span class="mn">17</span>
+             <div class="msup">
+              <div class="mrow">
+               <span class="mn">0</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span class="mo">∣</span>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">∣</span>
+           <span class="mo">&lt;</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">20</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">135</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">155</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">≤</span>
+           <span class="mo">-</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">25</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">130</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">155</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where N3.4
+   <sub>
+    <span class="italic">i</span>
+   </sub> is N3.4 at the 
+   <span class="italic">i</span>
+   <span class="sup">th</span> month, 
+   <div id="IEq20" class="inline-formula">
+    <div class="alternatives">
+     <span id="M55" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{ACE}}^ \ast _{i-3}$$\end{document}</span>
+     <div id="M56" class="math">
+      <div class="msubsup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">ACE</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq20.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> the standardized ACE anomalies at the (
+   <span class="italic">i−3</span>)
+   <span class="sup">th</span> month, and 
+   <span class="italic">c</span>
+   <sub>1</sub>, 
+   <span class="italic">c</span>
+   <sub>2</sub>, 
+   <span class="italic">c</span>
+   <sub>3</sub> and 
+   <span class="italic">g</span>
+   <sub>1</sub>, 
+   <span class="italic">g</span>
+   <sub>2</sub>, 
+   <span class="italic">g</span>
+   <sub>3</sub> are the regression coefficients and constants. Similarly, three ACE + N3.4 models are built, as follows:
+   <div id="Equ9" class="disp-formula">
+    <span class="label">9</span>
+    <div class="alternatives">
+     <span id="M57" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left\{ {\begin{array}{*{20}{c}} {{\mathrm{N3}}{\mathrm{.4}}_i = c_4{\mathrm{ACE}}^ \ast _{i-3} + d_1{\mathrm{N3}}{\mathrm{.4}}^ \ast _{i-3} + g_4,{\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{20}}^\circ {\mathrm{N}},{\mathrm{135}}^\circ - {\mathrm{170}}^\circ {\mathrm{E}})} \\ {{\mathrm{N3}}{\mathrm{.4}}_i = c_5{\mathrm{ACE}}^ \ast _{i-3} + d_2{\mathrm{N3}}{\mathrm{.4}}^ \ast _{i-3} + g_5,{\mathrm{|N3}}{\mathrm{.4}}_{i-3}| &lt; {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{20}}^\circ {\mathrm{N}},{\mathrm{135}}^\circ - {\mathrm{155}}^\circ {\mathrm{E}})} \\ {{\mathrm{N3}}{\mathrm{.4}}_i = c_6{\mathrm{ACE}}^ \ast _{i-3} + d_3{\mathrm{N3}}{\mathrm{.4}}^ \ast _{i-3} + g_6,{\mathrm{N3}}{\mathrm{.4}}_{i-3} \le - {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{25}}^\circ {\mathrm{N}},{\mathrm{130}}^\circ - {\mathrm{155}}^\circ {\mathrm{E}})} \end{array}} \right.$$\end{document}</span>
+     <div id="M58" class="math">
+      <div close="" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mtable">
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">4</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">d</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">4</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">≥</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">20</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">135</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">170</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">d</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">∣N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">∣</span>
+           <span class="mo">&lt;</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">20</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">135</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">155</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">6</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">d</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">6</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">≤</span>
+           <span class="mo">-</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">25</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">130</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">155</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>Where 
+   <div id="IEq21" class="inline-formula">
+    <div class="alternatives">
+     <span id="M59" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}^ \ast _{i-3}$$\end{document}</span>
+     <div id="M60" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msubsup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq21.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the standardized N3.4 at the (
+   <span class="italic">i−3</span>)
+   <span class="sup">th</span> month, and 
+   <span class="italic">c</span>
+   <sub>4</sub>, 
+   <span class="italic">c</span>
+   <sub>5</sub>, 
+   <span class="italic">c</span>
+   <sub>6,</sub>
+   <span class="italic">d</span>
+   <sub>1</sub>, 
+   <span class="italic">d</span>
+   <sub>2</sub>, 
+   <span class="italic">d</span>
+   <sub>3</sub> and 
+   <span class="italic">g</span>
+   <sub>4</sub>, 
+   <span class="italic">g</span>
+   <sub>5</sub>, 
+   <span class="italic">g</span>
+   <sub>6</sub> are the regression coefficients and constants.
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">Correction to the ACE 
+   <span class="italic"> +</span>  N3.4 model: Analysis shows that the role of ACE is reduced in the ACE + N3.4 model owing to the persistence of SST, especially in the development stage of ENSO. To reduce this error, the ACE + N3.4 model is corrected using generalized cross-validation (GCV)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+   </span>. In this case, leave-one-out cross-validation (LOO-CV)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>,
+    <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+   </span> is employed. A brief description of the methodology is as follows.
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">Step 1. For a given time series with length 
+   <span class="italic">L</span>, one time point is chosen to be a hindcasting point, and the rest of the time series (length: 
+   <span class="italic">L−1</span>) is used to construct the forecast model with regression analysis.
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Step 2. Repeat step 1; i.e. choose another time point to be a new hindcasting point, resample the residuals, and obtain a new forecast model. Repeat this process for each time point of the given time series. This will result in the ensemble hindcast.</p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">This method will provide a new ensemble hindcast of N3.4 using the predictor variables 
+   <div id="IEq22" class="inline-formula">
+    <div class="alternatives">
+     <span id="M61" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$A{\mathrm{CE}}^ \ast$$\end{document}</span>
+     <div id="M62" class="math">
+      <span class="mi">A</span>
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">CE</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq22.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq23" class="inline-formula">
+    <div class="alternatives">
+     <span id="M63" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}^ \ast$$\end{document}</span>
+     <div id="M64" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">*</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq23.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> The new ensemble hindcast of N3.4 produced by LOO-CV is mainly affected by the persistence of SST. Hence, by comparing this ensemble hindcast with the observations during the training period, we can obtain the correction 
+   <span class="italic">ε</span>
+   <sub>1</sub> that will be used to correct the ACE + N3.4 models. And in this study, 
+   <span class="italic">ε</span>
+   <sub>1</sub> depends on the base period. Because the effect of TCs on N3.4 varies with ENSO development, the whole N3.4 series is divided into four cases to obtain a more exact forecast: Case A, 
+   <div id="IEq24" class="inline-formula">
+    <div class="alternatives">
+     <span id="M65" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge {\mathrm{N3}}{\mathrm{.4}}_{i-4}$$\end{document}</span>
+     <div id="M66" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">≥</span>
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">4</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq24.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq25" class="inline-formula">
+    <div class="alternatives">
+     <span id="M67" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge 0$$\end{document}</span>
+     <div id="M68" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">≥</span>
+      <span class="mn">0</span>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq25.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>; Case B, 
+   <div id="IEq26" class="inline-formula">
+    <div class="alternatives">
+     <span id="M69" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge {\mathrm{N3}}{\mathrm{.4}}_{i-4}$$\end{document}</span>
+     <div id="M70" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">≥</span>
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">4</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq26.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq27" class="inline-formula">
+    <div class="alternatives">
+     <span id="M71" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \, &lt; \, 0$$\end{document}</span>
+     <div id="M72" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span width="0.25em" class="mspace"/>
+      <span class="mo">&lt;</span>
+      <span width="0.25em" class="mspace"/>
+      <span class="mn">0</span>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq27.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>; Case C, 
+   <div id="IEq28" class="inline-formula">
+    <div class="alternatives">
+     <span id="M73" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \, &lt; \, {\mathrm{N3}}{\mathrm{.4}}_{i-4}$$\end{document}</span>
+     <div id="M74" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span width="0.25em" class="mspace"/>
+      <span class="mo">&lt;</span>
+      <span width="0.25em" class="mspace"/>
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">4</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq28.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq29" class="inline-formula">
+    <div class="alternatives">
+     <span id="M75" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge 0$$\end{document}</span>
+     <div id="M76" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">≥</span>
+      <span class="mn">0</span>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq29.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>; Case D, 
+   <div id="IEq30" class="inline-formula">
+    <div class="alternatives">
+     <span id="M77" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \, &lt; \, {\mathrm{N3}}{\mathrm{.4}}_{i-4}$$\end{document}</span>
+     <div id="M78" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span width="0.25em" class="mspace"/>
+      <span class="mo">&lt;</span>
+      <span width="0.25em" class="mspace"/>
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">4</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq30.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq31" class="inline-formula">
+    <div class="alternatives">
+     <span id="M79" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge 0$$\end{document}</span>
+     <div id="M80" class="math">
+      <span mathvariant="normal" class="mi">N3</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">.4</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">-</span>
+        <span class="mn">3</span>
+       </div>
+      </div>
+      <span class="mo">≥</span>
+      <span class="mn">0</span>
+     </div>
+     <span xlink:href="41467_2019_11720_Article_IEq31.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>. Then, four different corrected values (
+   <span class="italic">ε</span>
+   <sub>2</sub>) are obtained for the four cases during the training period. Thus, the ACE+N3.4 model is built as follows:
+   <div id="Equ10" class="disp-formula">
+    <span class="label">10</span>
+    <div class="alternatives">
+     <span id="M81" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left\{ {\begin{array}{*{20}{c}} {{\mathrm{N3}}{\mathrm{.4}}_i = c_4{\mathrm{ACE}}^ \ast _{i-3} + d_1{\mathrm{N3}}{\mathrm{.4}}^ \ast _{i-3} + g_4 + \varepsilon ,{\mathrm{N3}}{\mathrm{.4}}_{i-3} \ge {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{20}}^\circ {\mathrm{N}},{\mathrm{135}}^\circ - {\mathrm{170}}^\circ {\mathrm{E}})} \\ {{\mathrm{N3}}{\mathrm{.4}}_i = c_5{\mathrm{ACE}}^ \ast _{i-3} + d_2{\mathrm{N3}}{\mathrm{.4}}^ \ast _{i-3} + g_5 + \varepsilon ,{\mathrm{|N3}}{\mathrm{.4}}_{i-3}| &lt; {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{20}}^\circ {\mathrm{N}},{\mathrm{135}}^\circ - {\mathrm{155}}^\circ {\mathrm{E}})} \\ {{\mathrm{N3}}{\mathrm{.4}}_i = c_6{\mathrm{ACE}}^ \ast _{i-3} + d_3{\mathrm{N3}}{\mathrm{.4}}^ \ast _{i-3} + g_6 + \varepsilon ,{\mathrm{N3}}{\mathrm{.4}}_{i-3} \le - {\mathrm{0}}{\mathrm{.5}},{\mathrm{ACE}}({\mathrm{10}}^\circ - {\mathrm{25}}^\circ {\mathrm{N}},{\mathrm{130}}^\circ - {\mathrm{155}}^\circ {\mathrm{E}})} \end{array}} \right.$$\end{document}</span>
+     <div id="M82" class="math">
+      <div close="" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mtable">
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">4</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">d</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">4</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">ε</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">≥</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">20</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">135</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">170</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">d</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">5</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">ε</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">∣N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">∣</span>
+           <span class="mo">&lt;</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">20</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">135</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">155</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+         <div class="mtr">
+          <div columnalign="center" class="mtd">
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">6</span>
+            </div>
+           </div>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">ACE</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">d</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">*</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">g</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">6</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <span class="mi">ε</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">N3</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">.4</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">3</span>
+            </div>
+           </div>
+           <span class="mo">≤</span>
+           <span class="mo">-</span>
+           <span mathvariant="normal" class="mi">0</span>
+           <span mathvariant="normal" class="mi">.5</span>
+           <span class="mo">,</span>
+           <span mathvariant="normal" class="mi">ACE</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">10</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">25</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">N</span>
+             <span class="mo">,</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">130</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span class="mo">-</span>
+             <div class="msup">
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">155</span>
+              </div>
+              <div class="mrow">
+               <span class="mo">∘</span>
+              </div>
+             </div>
+             <span mathvariant="normal" class="mi">E</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <span class="italic">ε</span> depends on the case, 
+   <span class="italic">ε</span> = 
+   <span class="italic">ε</span>
+   <sub>1</sub> + 
+   <span class="italic">ε</span>
+   <sub>2</sub>.
+  </p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Running holdout method: This method only differs from the holdout method in its use of a variable-length training period that changes with the hindcasting time point. That is, the required set of regression coefficients and constants is based on the time series before each hindcasting target point. The base period is the shortest training period. Other processes are as described for the holdout method.</p>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">Leave-p-out Cross-Validation (LPO-CV): Leave-p-out is similar to LOO-CV, but the single time point is replaced by a time interval. A brief description of the methodology is as follows.</p>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Step 1. A given time series with length 
+   <span class="italic">L</span> is divided into time intervals of length 
+   <span class="italic">m</span>. If 
+   <span class="italic">L</span> is not exactly divisible by 
+   <span class="italic">m</span>, we suppose that the whole time series can be divided into 
+   <span class="italic">n</span> parts and some (&lt;
+   <span class="italic">m</span>) remainder time points that cannot be used as the hindcasting object.
+  </p>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">Step 2. One part is chosen to be a hindcasting object, and the rest of the time series (length: 
+   <span class="italic">L</span>−
+   <span class="italic">m</span>) is used to construct a forecast model according to regression analysis.
+  </p>
+  <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">Step 3. Repeat step 2, using another part as a new hindcasting object, resample the residuals, and obtain a new forecast model. Repeat this process 
+   <span class="italic">n</span> times. This will result in the ensemble hindcast without remainders.
+  </p>
+  <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Step 4. Compare the ensemble hindcast with the corresponding observations, and obtain correlation coefficients and root mean square errors. Then, change the value of 
+   <span class="italic">m</span>, repeat the above steps, and obtain a new ensemble hindcast.
+  </p>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">To facilitate modelling, the start of the first time interval is 1970.04.</p>
+ </sec>
+ <sec id="Sec19" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Lead time</div>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">In the model comparison, the lead time is defined by the number of months difference between the latest available observed data and the middle of the running 3-month hindcasting target period. For example, if the latest available observed data are through January, a prediction for the January–March season has a lead time of 1 month, and for February–April a lead of 2 months. Hence, in our research we mainly compare model hindcasting results at a lead of 2 months. Typically, new predictions become available one to two weeks following the last available month of observed data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec20" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Other concepts</div>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">Sign consistency: ratio of the number of months in which the anomaly sign is predicted correctly to the total number of months.</p>
+  <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">Model’s relative advantage:
+   <div id="Equa" class="disp-formula">
+    <div class="alternatives">
+     <span id="M83" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{relative}}\;{\mathrm{advantage}}_{{\mathrm{model}}\;{\mathrm{A}} \to {\mathrm{model}}\;{\mathrm{B}}} = {\mathrm{|Model}}\;{\mathrm{A}} - {\mathrm{Observation|}} - {\mathrm{|Model}}\;{\mathrm{B}} - {\mathrm{Observation|}}$$\end{document}</span>
+     <div id="M84" class="math">
+      <span mathvariant="normal" class="mi">relative</span>
+      <span width="0.16em" class="mspace"/>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">advantage</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">model</span>
+        <span width="0.16em" class="mspace"/>
+        <span mathvariant="normal" class="mi">A</span>
+        <span class="mo">→</span>
+        <span mathvariant="normal" class="mi">model</span>
+        <span width="0.16em" class="mspace"/>
+        <span mathvariant="normal" class="mi">B</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">∣Model</span>
+      <span width="0.16em" class="mspace"/>
+      <span mathvariant="normal" class="mi">A</span>
+      <span class="mo">-</span>
+      <span mathvariant="normal" class="mi">Observation∣</span>
+      <span class="mo">-</span>
+      <span mathvariant="normal" class="mi">∣Model</span>
+      <span width="0.16em" class="mspace"/>
+      <span mathvariant="normal" class="mi">B</span>
+      <span class="mo">-</span>
+      <span mathvariant="normal" class="mi">Observation∣</span>
+     </div>
+     <div xlink:href="41467_2019_11720_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+ </sec>
+</sec>

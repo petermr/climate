@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec14" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Implementation of SSP drivers in the models</div>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">The implementation of the SSP storylines into the models AIM
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span>, GCAM
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span>, GLOBIOM
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>, IMAGE-MAGNET
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>,
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span>, and MAgPIE
+  <span class="sup">
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>,
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span> has been described in detail in Popp et al.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+  </span>. Here we present an overview of this implementation across models including IMPACT
+  <span class="sup">
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+  </span> and also address specific issues of implementation in the various models (Supplementary Data 1). The quantification of drivers is described further below.
+ </p>
+ <p id="Par038" xmlns="http://www.w3.org/1999/xhtml">GDP per capita (GDPpc) is implemented in strongly different ways across the models. Partial equilibrium models (GCAM, GLOBIOM, IMPACT and MAgPIE) have GDPpc only influencing the consumer income and therefore the demand part of the model. Contrary, the general equilibrium models (AIM and MAGNET) have GDP influence not only income but also technological change and thus also the overall structure of the economy and the supply side. Therefore, these models estimated shifters of technology change (capital and labor productivity) according to the exogenous GDP (i.e., GDPpc × population) and compute technological change endogenously. This procedure is applied in the scenario of GDPpc (_GDPpc) and POP (_POP), as both types of scenarios change total GDP and technological change.</p>
+ <p id="Par039" xmlns="http://www.w3.org/1999/xhtml">Population (POP) according to the SSP-specific projections
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> is implemented straightforward in the partial equilibrium models GCAM, GLOBIOM, and IMPACT, and affects the entire demand system and interaction with price effects and production and trade. In MAgPIE, demand per capita is not effected by population changes due to absent price feedbacks in the demand system
+  <span class="sup">
+   <a ref-type="bibr" rid="CR57" href="#CR57">57</a>
+  </span>. In the CGE models AIM and MAGNET, population size also changes the total GDP, via scenario-specific GDPpc, and thus the technological change calibrated to meet this total GDP; in these models, population affects the agricultural system both via the demand side and also the technology side.
+ </p>
+ <p id="Par040" xmlns="http://www.w3.org/1999/xhtml">Consumption preferences (CON) are described in the SSP storylines as differences in consumer behavior toward environmental impact of food consumption via food waste and share of animal products in the diet. The implementation of food waste is straightforward in all models, although with varying fractions of waste reduction. In addition, the consumption of animal products was reduced in all models in SSP1 and increased for SSP3 in some models, mostly via preference factors. Some models also included health guidelines in defining their diets for SSP1. In addition to different food-demand assumptions, the MAgPIE implementation of CON includes assumptions on soil nitrogen uptake efficiency and environmental flow protection. In CON for SSP1, the latter limits the available water for irrigation and leads to a substantial decrease in crop yields and larger crop area. For this reason, MAgPIE results were excluded from Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>.
+ </p>
+ <p id="Par041" xmlns="http://www.w3.org/1999/xhtml">Agricultural productivity (PRD) is characterized by fast technological change and respect for environmental boundaries for SSP1 and slower technological change in agricultural systems in SSP3. For crop systems, models mostly adjusted the progress in (potential) crop yields to reflect the storylines or linked this progress to scenario-specific GDP growth. For livestock systems, whose efficiencies are much more difficult to compare, they followed a similar approach or adjusted the speed in which systems can catch up to the most efficient ones.</p>
+ <p id="Par042" xmlns="http://www.w3.org/1999/xhtml">Land-use regulation (LUR) was varied across SSPs in some of the models, either by changing the areas for nature conservation or areas otherwise protected from conversion to agriculture, or by modifying the ease by which non-agricultural land can be converted to agriculture. The diversity in model approaches makes it difficult to compare level of LUR across models.</p>
+ <p id="Par043" xmlns="http://www.w3.org/1999/xhtml">Trade development (TRD) in agricultural commodities is affected in several models by (current) trade barriers such as import taxes or export subsidies and their modification toward the future. Some other models have so-called self-sufficiency ratios, which they change to reflect the storylines.</p>
+</sec>

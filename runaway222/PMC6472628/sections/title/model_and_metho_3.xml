@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="jame20804-sec-0002" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model and Methods</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We use the LMDZ5A GCM (Hourdin et al., 
+  <a rid="jame20804-bib-0023" ref-type="ref" href="#jame20804-bib-0023">2006</a>), the atmospheric component of the IPSL‐CM5A‐LR coupled ocean‐atmosphere model, in the same non‐rotating RCE configuration as in Coppin and Bony (
+  <a rid="jame20804-bib-0010" ref-type="ref" href="#jame20804-bib-0010">2015</a>, 
+  <a rid="jame20804-bib-0011" ref-type="ref" href="#jame20804-bib-0011">2017</a>). The RCE framework, which is widely used to understand the basic properties of the tropical atmosphere, corresponds to the statistical equilibrium state that the atmosphere and surface would reach in the absence of lateral energy transport (Emanuel et al., 
+  <a rid="jame20804-bib-0016" ref-type="ref" href="#jame20804-bib-0016">2014</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The model has a horizontal resolution of 3.75° × 1.875° in longitude‐latitude and 39 levels in the vertical (15 in the stratosphere). Its physical package (Hourdin et al., 
+  <a rid="jame20804-bib-0022" ref-type="ref" href="#jame20804-bib-0022">2013</a>) includes the Emanuel convection scheme (Emanuel, 
+  <a rid="jame20804-bib-0015" ref-type="ref" href="#jame20804-bib-0015">1993</a>), a statistical cloud scheme coupled to the convection scheme (Bony &amp; Emanuel, 
+  <a rid="jame20804-bib-0005" ref-type="ref" href="#jame20804-bib-0005">2001</a>), a radiative transfer code (Morcrette, 
+  <a rid="jame20804-bib-0027" ref-type="ref" href="#jame20804-bib-0027">1991</a>), and a parameterization of the boundary layer as a diffusion with an eddy diffusivity, which depends on the local Richardson number and handles dry convection in the case of unstable profiles (Deardorff, 
+  <a rid="jame20804-bib-0013" ref-type="ref" href="#jame20804-bib-0013">1972</a>). For a detailed review of the LMDZ5A‐LR GCM, see Hourdin et al. (
+  <a rid="jame20804-bib-0023" ref-type="ref" href="#jame20804-bib-0023">2006</a>) and Dufresne et al. (
+  <a rid="jame20804-bib-0014" ref-type="ref" href="#jame20804-bib-0014">2013</a>), and references therein.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The aquaplanet configuration of the model is used without rotation and employs a latitudinal discretization on a sinusoidal grid to ensure that the grid mesh area is uniform over the globe. It is forced by a constant and uniform insolation (1,066.78 W/m
+  <span class="sup">2</span> with a zenith angle corresponding to 0° latitude and a diurnal cycle). The stratospheric ozone distribution is invariant and globally uniform (set to its mean equatorial profile). The ocean albedo is set to 0.07. Aerosol effects are not considered.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">When coupled to a slab ocean mixed layer of 10‐m depth, the model simulates a non‐stationary RCE equilibrium (Coppin &amp; Bony, 
+  <a rid="jame20804-bib-0011" ref-type="ref" href="#jame20804-bib-0011">2017</a>). This equilibrium remains roughly similar for a wide range of slab depths. Therefore, we choose a mixed layer depth of 10 m, as it allows us to simulate a global mean state representative of a large range of depths (up to 100 m) but reaches the equilibrium faster.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To initialize slab simulations, we run a reference simulation forced by a CO
+  <sub>2</sub> concentration of 285 ppm, initialized from a previous simulation run with a 20‐m slab. The global mean surface equilibrium temperature of this reference simulation (called 
+  <span class="italic">ref</span>) is 301.2 K, and it exhibits significant SST gradients across the domain (SST ranging from 298 to 304 K) as well as an internal variability that significantly modulates the global mean temperature (Coppin &amp; Bony, 
+  <a rid="jame20804-bib-0011" ref-type="ref" href="#jame20804-bib-0011">2017</a>). Note that in this paper, we will use the term gradient to refer to any spatial variability in SST, not in the sense of the spatial derivative of SST.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To assess the influence of SST gradients on convective aggregation and climate sensitivity under different forcings, we perform ensembles of four simulations, forced either by a 285 ppm or a 570 ppm concentration. The ensemble of 285 ppm experiments, called 1xCO
+  <sub>2</sub>, is initialized in each grid point by the globally averaged SST, temperature, humidity, and wind profiles from the reference simulation at equilibrium (end of year 50). Different members of a given ensemble differ only by the white noise applied on the wind at the beginning. The choice to start with uniform SST is motivated by two reasons. The first one is the wish to study self‐aggregation in a coupled framework and to draw a parallel with prescribed and uniform SST experiments (Coppin &amp; Bony, 
+  <a rid="jame20804-bib-0010" ref-type="ref" href="#jame20804-bib-0010">2015</a>). The second is that it allows us to study how the development of SST gradients interacts with convective aggregation. The ensemble of 2xCO
+  <sub>2</sub> experiment is similar except that the CO
+  <sub>2</sub> concentration is abruptly doubled at 
+  <span class="italic">t</span> = 0 (and then held constant) and it starts from the equilibrium state of the 1xCO
+  <sub>2</sub> simulation. Different snapshots (same global mean temperature and aggregation index as in 1xCO
+  <sub>2</sub> around equilibrium) are used to create the ensemble of four simulations. In these simulations with gradients, convection is very mobile and moves toward the maximum SST (Figure 
+  <a rid="jame20804-fig-0001" ref-type="fig" href="#jame20804-fig-0001">1</a>a, cloud cover and surface wind in Figure 
+  <a rid="jame20804-supitem-0001" ref-type="supplementary-material" href="#jame20804-supitem-0001">S1</a>a in the 
+  <a rid="jame20804-supinf-0001" ref-type="supplementary-material" href="#jame20804-supinf-0001">supporting information</a>). At equilibrium, convective aggregation, SST gradients, and mean surface temperature are coupled via a feedback loop explained in details in Coppin and Bony (
+  <a rid="jame20804-bib-0011" ref-type="ref" href="#jame20804-bib-0011">2017</a>).
+ </p>
+ <div fig-type="Figure" xml:lang="en" id="jame20804-fig-0001" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="label">Figure 1</span>
+  <div class="caption">
+   <p>(a) Snapshots of surface temperature (color) and precipitation (contours from 5 to 30 mm/day) for different time steps separated by 1 month for simulation 2xCO
+    <sub>2</sub>. (b) Same as (a) but for simulation 1xCO
+    <sub>2</sub>uni. SST = sea surface temperature.
+   </p>
+  </div>
+  <div id="nlm-graphic-1" xlink:href="JAME-10-3123-g001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <span class="alt-text">jame20804-fig-0001</span>
+  </div>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The impact of SST‐atmosphere interactions is tested with ensembles of simulations 1xCO
+  <sub>2</sub>uni and 2xCO
+  <sub>2</sub>uni where the slab ocean temperature is spatially averaged at each time step (Figure 
+  <a rid="jame20804-fig-0001" ref-type="fig" href="#jame20804-fig-0001">1</a>b). In these simulations, convection organizes itself into three to five big clusters of convection, similar to what happens at high SST in prescribed, fixed and uniform SST simulations (Coppin &amp; Bony, 
+  <a rid="jame20804-bib-0010" ref-type="ref" href="#jame20804-bib-0010">2015</a>). The realism of these two types of slab experiments is discussed in the 
+  <a rid="jame20804-supinf-0001" ref-type="supplementary-material" href="#jame20804-supinf-0001">supporting information</a> (first section 
+  <a rid="jame20804-supitem-0001" ref-type="supplementary-material" href="#jame20804-supitem-0001">S1</a> and Figure 
+  <a rid="jame20804-supitem-0001" ref-type="supplementary-material" href="#jame20804-supitem-0001">S2</a>) using less idealized configurations (Gates, 
+  <a rid="jame20804-bib-0017" ref-type="ref" href="#jame20804-bib-0017">1992</a>; Medeiros, et al., 
+  <a rid="jame20804-bib-0026" ref-type="ref" href="#jame20804-bib-0026">2008</a>). To discuss the similarities with the prescribed and uniform SST setup, we use the simulations from Coppin and Bony (
+  <a rid="jame20804-bib-0010" ref-type="ref" href="#jame20804-bib-0010">2015</a>) with SST ranging from 301 to 305 K and additional prescribed and uniform SST simulations over the same range of temperature with a doubled CO
+  <sub>2</sub> concentration. All these experiments are listed in Table 
+  <a rid="jame20804-tbl-0001" ref-type="table" href="#jame20804-tbl-0001">1</a>.
+ </p>
+ <div id="jame20804-tbl-0001" xml:lang="en" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="label">Table 1</span>
+  <div class="caption">
+   <p>Details of the Experiments Used in the Study</p>
+  </div>
+  <table frame="hsides" rules="groups">
+   <col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/>
+   <col style="border-right:solid 1px #000000; border-bottom:solid 1px #000000" span="1"/>
+   <thead valign="bottom">
+    <tr style="border-bottom:solid 1px #000000">
+     <th align="left" valign="bottom" rowspan="1" colspan="1">Simulation</th>
+     <th align="center" valign="bottom" rowspan="1" colspan="1">Description</th>
+    </tr>
+   </thead>
+   <tbody valign="top">
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">reference</td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Slab ocean simulation (10 m) forced by a CO
+      <sub>2</sub> concentration of 285 ppm
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">and initialized itself from a previous simulation run with a 20‐m slab.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">1xCO
+      <sub>2</sub>
+     </td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Slab ocean simulation (10 m) starting from reference simulation whose</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">humidity, temperature, SST, zonal, and meridional winds are globally</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">averaged at the beginning. A white noise is added to the wind at the</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">first atmospheric level to break symmetry. SST evolves freely.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">Different white noises on the wind field allow us to generate an</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">ensemble of four simulations.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">1xCO
+      <sub>2</sub>uni
+     </td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Same as 1xCO
+      <sub>2</sub> but with the slab ocean temperature 
+      <span class="italic">T</span>
+      <sub>S</sub> spatially
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">averaged at each time step to maintain the SST uniform. An ensemble</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">of four simulations is formed with different white noise on the wind field.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">2xCO
+      <sub>2</sub>
+     </td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Slab ocean simulation (10 m) starting from the end of 1xCO
+      <sub>2</sub>. Doubled
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">CO
+      <sub>2</sub> concentration. Different snapshots (same mean temperature and
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">aggregation index as the mean in 1xCO
+      <sub>2</sub>) are used to create an
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">ensemble of four simulations.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">2xCO
+      <sub>2</sub>uni
+     </td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Slab ocean simulation (10 m) starting from the end of</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">1xCO
+      <sub>2</sub>uni. Doubled CO
+      <sub>2</sub> concentration. Slab ocean temperature
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">spatially averaged at each time step. As for 2xCO
+      <sub>2</sub>, different snapshots
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">of 1xCO
+      <sub>2</sub>uni (same mean temperature and aggregation index as the
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">mean in 1xCO
+      <sub>2</sub>uni) are used to create an ensemble of four simulations.
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">301 K</td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Prescribed and uniform SST simulations with a SST of 301 K and</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">either a CO
+      <sub>2</sub> concentration of 285 ppm
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1"/>
+     <td align="left" valign="top" rowspan="1" colspan="1">(as in ; Coppin &amp; Bony, 
+      <a rid="jame20804-bib-0010" ref-type="ref" href="#jame20804-bib-0010">2015</a>) or 570 ppm.
+     </td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">302 K</td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Same as 301 K with a SST of 302 K.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">303 K</td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Same as 301 K with a SST of 303 K.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">304 K</td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Same as 301 K with a SST of 304 K.</td>
+    </tr>
+    <tr>
+     <td align="left" valign="top" rowspan="1" colspan="1">305 K</td>
+     <td align="left" valign="top" rowspan="1" colspan="1">Same as 301 K with a SST of 305 K.</td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="table-wrap-foot">
+   <fn id="jame20804-note-0001" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">
+     <span class="italic">Note</span>. SST = sea surface temperature.
+    </p>
+   </fn>
+  </div>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">For clarity, only one simulation representative of each ensemble is presented in the paper. The main figures for each ensemble member are presented in the 
+  <a rid="jame20804-supinf-0001" ref-type="supplementary-material" href="#jame20804-supinf-0001">supporting information</a> (section 
+  <a rid="jame20804-supitem-0001" ref-type="supplementary-material" href="#jame20804-supitem-0001">S2</a>). Whenever a regression coefficient is mentioned in the paper, its value corresponds to the mean (and standard deviation) of this coefficient across the different members of each ensemble.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In this paper, self‐aggregation solely refers to the transition from a non‐aggregated state to an aggregated state, not to the convective aggregation changes between two aggregated states. The aggregation index used to quantify the degree of convective aggregation is the subsiding fraction (SF; Coppin &amp; Bony, 
+  <a rid="jame20804-bib-0010" ref-type="ref" href="#jame20804-bib-0010">2015</a>). It corresponds to the fractional area of the domain covered by large‐scale subsidence at 500 hPa, using daily outputs. This index characterizes the large‐scale organization of convection, which is the only scale of organization represented in GCMs.
+ </p>
+</sec>

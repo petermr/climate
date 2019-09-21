@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec18" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Way forward</div>
+ <sec id="Sec19" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Avenues of further methodological research</div>
+  <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">The preceding Earth system sciences challenges (Fig. 
+   <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>) are rather generic for complex dynamical systems and apply to many other fields. The challenges point to a way forward to advance causal inference methods for such systems. In the short term, our example applications demonstrate that the existing methods already address some of the mentioned challenges. For example, PCMCI was developed to address high-dimensional time-lagged linear and nonlinear causal discovery and takes into account autocorrelation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+    <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+   </span> and CCM
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+   </span> was specifically built to account for nonlinear state-dependent relationships. The largest potential for short-term methodological advancements lies in combining different conceptual approaches in order to address multiple challenges.
+  </p>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">First, to give some examples, such as those listed in Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>, causal network learning algorithms that deal well with high-dimensional data are limited by their inability to identify causal directionality among Markov equivalence classes
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span>. This shortcoming can be alleviated by combining causal network learning algorithms with the SCM framework and making additional assumptions on (independence of) mechanisms
+   <span class="sup">
+    <a ref-type="bibr" rid="CR4" href="#CR4">4</a>,
+    <a ref-type="bibr" rid="CR13" href="#CR13">13</a>,
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>,
+    <a ref-type="bibr" rid="CR83" href="#CR83">83</a>
+   </span> that permits to identify causal directions in these cases. Secondly, novel methods can incorporate ideas from theory on causal discovery in the presence of unobserved variables and selection bias
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>,
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+   </span>, time-sub-sampling
+   <span class="sup">
+    <a ref-type="bibr" rid="CR84" href="#CR84">84</a>,
+    <a ref-type="bibr" rid="CR85" href="#CR85">85</a>
+   </span>, time-aggregation and cyclic feedbacks
+   <span class="sup">
+    <a ref-type="bibr" rid="CR86" href="#CR86">86</a>
+   </span>, and measurement error
+   <span class="sup">
+    <a ref-type="bibr" rid="CR87" href="#CR87">87</a>
+   </span>. Thirdly, filtering methods as preprocessing steps, e.g., based on wavelets
+   <span class="sup">
+    <a ref-type="bibr" rid="CR88" href="#CR88">88</a>
+   </span>, can help to disentangle causal relations on different time scales, in the simplest example by filtering out a confounder like the seasonal cycle.
+  </p>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">In the mid-term, it is worth exploring methods that have not been applied to Earth system data, but whose theoretical properties may render them suitable for the challenges at hand. For example, further methods that are based on the principle of independent mechanisms
+   <span class="sup">
+    <a ref-type="bibr" rid="CR4" href="#CR4">4</a>,
+    <a ref-type="bibr" rid="CR13" href="#CR13">13</a>,
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>,
+    <a ref-type="bibr" rid="CR83" href="#CR83">83</a>
+   </span> such as prediction invariance
+   <span class="sup">
+    <a ref-type="bibr" rid="CR13" href="#CR13">13</a>,
+    <a ref-type="bibr" rid="CR58" href="#CR58">58</a>,
+    <a ref-type="bibr" rid="CR59" href="#CR59">59</a>,
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span> or causal discovery from non-stationary data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span> can potentially make use of the ubiquitously present nonstationarity and external perturbations in Earth system data to infer causal structure. While the black-box character of most machine learning algorithms and deep learning in particular does not lend itself directly to causal discovery, such tools can nevertheless be useful in many aspects of causal discovery. For example, Chalupka et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR89" href="#CR89">89</a>
+   </span> use neural networks to reconstruct causal features from gridded time series datasets. Also conditional independence tests can be based on deep learning
+   <span class="sup">
+    <a ref-type="bibr" rid="CR90" href="#CR90">90</a>
+   </span> and causal inference can be phrased as a classification problem
+   <span class="sup">
+    <a ref-type="bibr" rid="CR91" href="#CR91">91</a>
+   </span>. And the other way around: causal knowledge, as argued by Pearl, should be incorporated into machine learning to yield more robust predictions and classifications, for example, in such unresolved problems as extrapolation and domain adaptation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec20" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Validation and a benchmark platform</div>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">Method development and comparison require benchmark datasets with known causal ground truth for validation. Ideally, such ground truth comes from expert knowledge on real data or real experiments that can also be used for falsification of causal relationships predicted from observational causal inference methods. Unfortunately, in Earth system sciences such datasets currently exist only for expert-labeled causal relations among few variables (e.g., some bivariate examples in ref. 
+   <span class="sup">
+    <a ref-type="bibr" rid="CR92" href="#CR92">92</a>
+   </span>). To some extent, out-of-sample predictions can provide partial validation, but the main alternative in Earth system sciences is experiments from physical simulation models. Such experiments, however, are computationally expensive and carry the challenge how these have to be designed. A more tractable approach is to generate synthetic data with simple model systems that mimic properties and challenges of geoscientific data, but where the underlying ground truth is known. These can then be used to study the performance of causal inference methods for different challenges in realistic finite sample situations. From a practitioner’s perspective, it is important to find out which method is best suited for a particular task with particular challenges and for a particular set of assumptions. Synthetic data, adapted to the problem at hand, can be used to choose the right method including method parameters. As a first step to close the gap between method users and developers, we accompany this Perspective by a causality benchmark platform (
+   <span ext-link-type="uri" xlink:href="http://www.causeme.net" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">causeme.net</span>) with synthetic models mimicking real data challenges on which causal inference methods can be compared. Next to method comparison, the platform also calls for submissions of real and modeled data sets where the causal structure is known with high confidence. Insights from such benchmark studies are relevant also for many other fields.
+  </p>
+ </sec>
+ <sec id="Sec21" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Combining observational causal inference and physical modeling</div>
+  <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">In the long term, we envision that the two main approaches to understand the Earth system (observational data analysis and Earth system modeling) should become more and more integrated. On the one hand, the generic problem of model evaluation has outlined ways on how causal inference methods can be used to identify weaknesses of physical models and guide model improvement. Furthermore, the currently often heuristic parametrization schemes in physical models can be guided by causal analyses of the respective variables, similar to the proposal to utilize machine learning to systematically replace parametrization schemes
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>,
+    <a ref-type="bibr" rid="CR93" href="#CR93">93</a>
+   </span>. Causal discovery can also help to design computationally expensive physical model experiments more efficiently: causal relationships estimated from climate model control runs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR79" href="#CR79">79</a>
+   </span> (long model runs with fixed pre-industrial conditions) can provide guidance on where numerical experiments are useful and where causal effects are not to be expected.
+  </p>
+  <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">On the other hand, physical constraints, either from theoretical knowledge or from experimental (modeling) results, can be used to regularize causal inference methods, for example, by defining variables, restricting functional classes, identifying expected noise distributions, time lags and time aggregation, or general data preprocessing. Even more integrated, novel causal inference methods can make combined use of observational as well as experimental data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR94" href="#CR94">94</a>,
+    <a ref-type="bibr" rid="CR95" href="#CR95">95</a>
+   </span> which has already led to fruitful insights in genetics. In Earth system sciences, also information from real experiments on subsystems can be incorporated, not on a large climatic scale
+   <span class="sup">
+    <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+   </span>, but for example from ecosystem
+   <span class="sup">
+    <a ref-type="bibr" rid="CR96" href="#CR96">96</a>
+   </span> and mesocosm experiments
+   <span class="sup">
+    <a ref-type="bibr" rid="CR97" href="#CR97">97</a>
+   </span> in ecological labs.
+  </p>
+ </sec>
+ <sec id="Sec22" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Detecting and attributing climate change</div>
+  <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">Detection and attribution approaches quantify the evidence for a causal link between external drivers of climate change and long-term changes in climatic variables
+   <span class="sup">
+    <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+   </span>. The goal is to first detect a change and then attribute this change to the contributions of multiple anthropogenic and natural forcings, and from internal variability
+   <span class="sup">
+    <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+   </span>. Importantly, the focus lies on the effects of long-term forcings on long-term climatic trends or also changes in, e.g., the frequency of extreme weather events. Such research questions require counterfactual worlds, which can only be constructed with climate models, that are then statistically analyzed. For example, the optimal fingerprinting method
+   <span class="sup">
+    <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+   </span> is based on attributing detected long-term responses to fingerprint patterns using multiple linear regression. Hannart et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR98" href="#CR98">98</a>
+   </span> discuss the inclusion of Pearl’s
+   <span class="sup">
+    <a ref-type="bibr" rid="CR4" href="#CR4">4</a>
+   </span> causal counterfactual theory for a more rigorous foundation of detection and attribution studies.
+  </p>
+  <p id="Par46" xmlns="http://www.w3.org/1999/xhtml">Nevertheless, observational causal inference methods can help to improve climate models as discussed above and can also directly be used to analyze climate feedbacks in paleo-climate data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span>, which is still challenging due to scarce available data and dating uncertainties (Fig. 
+   <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>). Furthermore, the recent concept of emergent constraints attempts to identify an observable statistical relationship between a feature of interest and a future climate change signal. For example, climate sensitivity, i.e., the response of global mean temperature to greenhouse gas emissions, can be constrained this way
+   <span class="sup">
+    <a ref-type="bibr" rid="CR82" href="#CR82">82</a>
+   </span>. The underlying premise is, however, that today’s dependencies between the predictors and climate sensitivity represent actual physical processes that also hold under future climate change. Here causal discovery can give more robust insights by identifying causal predictors that are more likely to hold under future climate change scenarios.
+  </p>
+ </sec>
+</sec>

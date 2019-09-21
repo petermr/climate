@@ -1,0 +1,1233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s3" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">3.</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Subcritical bifurcation</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">This section presents two main results. In the first part, the results of the experimental mapping of the combustor dynamics as a function of the equivalence ratio are shown. In the second part, a low-order model of the system is derived.</p>
+ <sec id="s3a" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">3.1.</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stationary experiment</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The combustor was operated selecting one equivalence ratio 
+   <span class="italic">ϕ</span> at a time. The stationary operation was reached and a long acoustic pressure signal 
+   <span class="italic">p</span>(
+   <span class="italic">t</span>) was recorded using a microphone placed inside the chamber. The oscillation amplitude 
+   <span class="italic">A</span>(
+   <span class="italic">t</span>) was then extracted by applying the Hilbert transform to 
+   <span class="italic">p</span>(
+   <span class="italic">t</span>). The procedure was repeated for different equivalence ratios 
+   <span class="italic">ϕ</span> in the range [0.580; 0.635]. The results for five selected 
+   <span class="italic">ϕ</span> are presented in 
+   <a ref-type="fig" rid="RSOS172078F3" href="#RSOS172078F3">figure 3</a>
+   <span class="italic">a</span>. On the left, the measured acoustic pressure and amplitude signals are plotted, together with their probability density functions (PDFs) 
+   <span class="italic">P</span>(
+   <span class="italic">p</span>) and 
+   <span class="italic">P</span>(
+   <span class="italic">A</span>). On the right, the joint PDFs 
+   <div class="inline-formula">
+    <div id="IM4" class="math">
+     <span class="mi">P</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">p</span>
+     <span class="mo">,</span>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span class="mo">˙</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <span class="mi">ω</span>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+   </div> for three of the presented operative points show the statistic of the phase portraits. 
+   <div id="RSOS172078F3" orientation="portrait" position="float" class="fig">
+    <span class="label">Figure 3.</span>
+    <div class="caption">
+     <p>(
+      <span class="italic">a</span>) Experimental records of the thermoacoustic subcritical Hopf bifurcation investigated in this work. According to the methane/air mixture equivalence ratio 
+      <div class="inline-formula">
+       <div id="IM5" class="math">
+        <span class="mi">ϕ</span>
+        <span class="mo">=</span>
+        <span stretchy="false" class="mo">(</span>
+        <div class="msub">
+         <div class="mrow">
+          <div class="mover">
+           <span class="mi">m</span>
+           <span class="mo">˙</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CH</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">4</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">/</span>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <div class="mover">
+           <span class="mi">m</span>
+           <span class="mo">˙</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">air</span>
+          </div>
+         </div>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+        <div class="mrow">
+         <span class="mo">/</span>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span stretchy="false" class="mo">(</span>
+          <div class="msub">
+           <div class="mrow">
+            <div class="mover">
+             <span class="mi">m</span>
+             <span class="mo">˙</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">CH</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">4</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mo">/</span>
+          </div>
+          <div class="msub">
+           <div class="mrow">
+            <div class="mover">
+             <span class="mi">m</span>
+             <span class="mo">˙</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">air</span>
+           </div>
+          </div>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">stoich</span>
+          <span class="mo">.</span>
+         </div>
+        </div>
+       </div>
+      </div>, the acoustic pressure recorded in the combustor has three different signatures, reflected in the different shapes of the PDFs 
+      <span class="italic">P</span>(
+      <span class="italic">p</span>) and 
+      <span class="italic">P</span>(
+      <span class="italic">A</span>). From top to bottom (increasing 
+      <span class="italic">ϕ</span>): small amplitude acoustic pressure resulting from the forcing of the linearly stable thermoacoustic mode by turbulence-induced noise; bistable thermoacoustic dynamics with two intermittently visited attractors; high amplitude limit cycle. These three possible regimes are also presented by the joint PDFs of the oscillation phase portrait 
+      <div class="inline-formula">
+       <div id="IM6" class="math">
+        <span class="mi">P</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">p</span>
+        <span class="mo">,</span>
+        <div class="mrow">
+         <div class="mover">
+          <span class="mi">p</span>
+          <span class="mo">˙</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">/</span>
+        </div>
+        <span class="mi">ω</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div> at three exemplary 
+      <span class="italic">ϕ</span>. (
+      <span class="italic">b</span>) Surrogate oscillator model (
+      <a ref-type="disp-formula" rid="RSOS172078M3x7" href="#RSOS172078M3x7">3.7</a>) that mimics the subcritical Hopf bifurcation when the parameter 
+      <span class="italic">ν</span> is increased. In the three-dimensional plot, 
+      <div class="inline-formula">
+       <div id="IM7" class="math">
+        <div class="msub">
+         <span class="mi">P</span>
+         <span mathvariant="normal" class="mi">∞</span>
+        </div>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">p</span>
+        <span class="mo">,</span>
+        <div class="mrow">
+         <div class="mover">
+          <span class="mi">p</span>
+          <span class="mo">˙</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">/</span>
+        </div>
+        <span class="mi">ω</span>
+        <span class="mo">;</span>
+        <span class="mi">ν</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div> and three cuts, resembling the experimental 
+      <div class="inline-formula">
+       <div id="IM8" class="math">
+        <span class="mi">P</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">p</span>
+        <span class="mo">,</span>
+        <div class="mrow">
+         <div class="mover">
+          <span class="mi">p</span>
+          <span class="mo">˙</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">/</span>
+        </div>
+        <span class="mi">ω</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>. (
+      <span class="italic">c</span>) The stationary PDF 
+      <div class="inline-formula">
+       <div id="IM9" class="math">
+        <div class="msub">
+         <span class="mi">P</span>
+         <span mathvariant="normal" class="mi">∞</span>
+        </div>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">A</span>
+        <span class="mo">;</span>
+        <span class="mi">ν</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div> for the slow-varying oscillation amplitude 
+      <span class="italic">A</span>, obtained with the transformation of variables 
+      <div class="inline-formula">
+       <div id="IM10" class="math">
+        <div class="msup">
+         <span class="mi">A</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="msup">
+         <span class="mi">p</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msup">
+         <div class="mrow">
+          <span stretchy="false" class="mo">(</span>
+          <div class="mrow">
+           <div class="mover">
+            <span class="mi">p</span>
+            <span class="mo">˙</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mo">/</span>
+          </div>
+          <span class="mi">ω</span>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>. On top of it, the deterministic pitchfork and saddle-node bifurcation diagram (in blue), and the stationary PDF 
+      <div class="inline-formula">
+       <div id="IM11" class="math">
+        <div class="msub">
+         <span class="mi">P</span>
+         <span mathvariant="normal" class="mi">∞</span>
+        </div>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">A</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div> with the corresponding potential 
+      <span class="italic">V</span> (
+      <span class="italic">A</span>) for an overdamped particle at the three selected 
+      <span class="italic">ν</span>.
+     </p>
+    </div>
+    <div xlink:href="rsos172078-g3" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">These results demonstrate how the system undergoes a subcritical Hopf bifurcation when the control parameter is varied. For low equivalence ratio 
+   <span class="italic">ϕ</span>, the system state is attracted towards zero. The small fluctuations of the acoustic signal envelope are due to the stochastic forcing exerted by the intense turbulence in the combustor. For intermediate values of 
+   <span class="italic">ϕ</span>, two states are possible: small amplitude acoustic pressure and high amplitude limit cycle. The intermittency between the two states is triggered by the turbulence-induced stochastic forcing (N-tipping, as in 
+   <a ref-type="fig" rid="RSOS172078F1" href="#RSOS172078F1">figure 1</a>
+   <span class="italic">c</span>). For higher equivalence ratio 
+   <span class="italic">ϕ</span>, the stochastically forced limit cycle is the only stable state. The reader can refer to the electronic supplementary material for the movies of the three regimes.
+  </p>
+ </sec>
+ <sec id="s3b" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">3.2.</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Nonlinear oscillator model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The thermoacoustic behaviour described in the previous section can be reproduced by a low-order model derived from first principles. The Helmholtz equation (
+   <a ref-type="disp-formula" rid="RSOS172078M2x1" href="#RSOS172078M2x1">2.1</a>) (hereafter rewritten in Laplace space) defines the acoustic pressure field in the combustor, given an unsteady source of heat in the volume and impedance conditions at the boundaries: 
+   <div id="RSOS172078M3x1" class="disp-formula">
+    <span class="label">3.1</span>
+    <div id="DM2" class="math">
+     <div class="msup">
+      <span mathvariant="normal" class="mi">∇</span>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">s</span>
+     <span class="mo">,</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">−</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mfrac">
+        <span class="mi">s</span>
+        <span class="mi">c</span>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mn">2</span>
+     </div>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">s</span>
+     <span class="mo">,</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <span class="mi">s</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span stretchy="false" class="mo">(</span>
+       <span class="mi">γ</span>
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+       <span stretchy="false" class="mo">)</span>
+      </div>
+      <div class="msup">
+       <span class="mi">c</span>
+       <div class="mrow">
+        <span class="mn">2</span>
+       </div>
+      </div>
+     </div>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">Q</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">s</span>
+     <span class="mo">,</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+     <span width="1em" class="mspace"/>
+     <span class="mtext">in the domain</span>
+    </div>
+   </div>and 
+   <div id="RSOS172078M3x2" class="disp-formula">
+    <span class="label">3.2</span>
+    <div id="DM3" class="math">
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="mrow">
+        <div class="mover">
+         <span class="mi">p</span>
+         <span stretchy="false" class="mo">^</span>
+        </div>
+       </div>
+       <span stretchy="false" class="mo">(</span>
+       <span class="mi">s</span>
+       <span class="mo">,</span>
+       <span class="mi">x</span>
+       <span stretchy="false" class="mo">)</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <div class="mrow">
+         <div class="mover">
+          <div class="mrow">
+           <div class="mrow">
+            <span mathvariant="bold" class="mtext">u</span>
+           </div>
+          </div>
+          <span stretchy="false" class="mo">^</span>
+         </div>
+        </div>
+       </div>
+       <span stretchy="false" class="mo">(</span>
+       <span class="mi">s</span>
+       <span class="mo">,</span>
+       <span class="mi">x</span>
+       <span stretchy="false" class="mo">)</span>
+       <span class="mo">⋅</span>
+       <div class="mrow">
+        <div class="mrow">
+         <span mathvariant="bold" class="mtext">n</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">Z</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">s</span>
+     <span class="mo">,</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+     <span width="1em" class="mspace"/>
+     <span class="mtext">on the boundaries</span>
+     <span class="mo">,</span>
+    </div>
+   </div>where 
+   <span class="italic">s</span> is the Laplace variable, 
+   <div class="inline-formula">
+    <div id="IM12" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+    </div>
+   </div> and 
+   <div class="inline-formula">
+    <div id="IM13" class="math">
+     <div class="mrow">
+      <div class="mrow">
+       <div class="mover">
+        <div class="mrow">
+         <div class="mrow">
+          <span mathvariant="bold" class="mtext">u</span>
+         </div>
+        </div>
+        <span stretchy="false" class="mo">^</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> are the transforms of acoustic pressure and velocity fluctuations, respectively, 
+   <span class="italic">x</span> the position, 
+   <span class="italic">c</span> the local speed of sound, 
+   <span class="italic">γ</span> the specific heat ratio, 
+   <div class="inline-formula">
+    <div id="IM14" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">Q</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+    </div>
+   </div> the heat release rate source term, 
+   <span class="bold">n</span> the outward normal to the boundary and 
+   <span class="italic">Z</span> the acoustic impedance. This equation is valid under low Mach number conditions.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Although nonlinear coupling among different thermoacoustic modes can occur in some practical configurations, we focus on situations where, like in the present case, one mode is dominant in the thermoacoustic dynamics. Therefore, it is possible to project the acoustic field on an orthogonal basis 
+   <span class="italic">Ψ</span> and approximate the system’s dynamics with the one of the dominant mode only, which will be denoted by 
+   <span class="italic">ψ</span> [
+   <a rid="RSOS172078C52" ref-type="bibr" href="#RSOS172078C52">52</a>,
+   <a rid="RSOS172078C53" ref-type="bibr" href="#RSOS172078C53">53</a>]. This yields the approximation 
+   <div class="inline-formula">
+    <div id="IM15" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">s</span>
+     <span class="mo">,</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">≈</span>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">η</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">s</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mi">ψ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+   </div>, 
+   <div class="inline-formula">
+    <div id="IM16" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">η</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+    </div>
+   </div> being the mode amplitude: 
+   <div id="RSOS172078M3x3" class="disp-formula">
+    <span class="label">3.3</span>
+    <div id="DM4" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">η</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mstyle">
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">s</span>
+        <span class="mi">ρ</span>
+        <div class="msup">
+         <span class="mi">c</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msup">
+         <span class="mi">s</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msup">
+         <span class="mi">ω</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="mstyle">
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <div class="mrow">
+        <span class="mi">V</span>
+        <span mathvariant="italic" class="mi">Λ</span>
+       </div>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mstyle">
+       <div class="mfrac">
+        <div class="mrow">
+         <span class="mi">γ</span>
+         <span class="mo">−</span>
+         <span class="mn">1</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">ρ</span>
+         <div class="msup">
+          <span class="mi">c</span>
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mo">∫</span>
+       <span class="mi">V</span>
+      </div>
+      <div class="mrow">
+       <div class="mover">
+        <span class="mi">Q</span>
+        <span stretchy="false" class="mo">^</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mi">s</span>
+      <span class="mo">,</span>
+      <span class="mi">x</span>
+      <span stretchy="false" class="mo">)</span>
+      <div class="msup">
+       <span class="mi">ψ</span>
+       <span class="mo">∗</span>
+      </div>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mi">x</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo"> </span>
+      <span class="mtext">d</span>
+      <span class="mi">V</span>
+      <span class="mo">−</span>
+      <div class="mrow">
+       <div class="mover">
+        <span class="mi">η</span>
+        <span stretchy="false" class="mo">^</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mo">∫</span>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">∂</span>
+        <span class="mi">V</span>
+       </div>
+      </div>
+      <div class="mstyle">
+       <div class="mfrac">
+        <div class="mrow">
+         <div class="mrow">
+          <span stretchy="false" class="mo">|</span>
+         </div>
+         <span class="mi">ψ</span>
+         <span stretchy="false" class="mo">(</span>
+         <span class="mi">x</span>
+         <span stretchy="false" class="mo">)</span>
+         <div class="msup">
+          <div class="mrow">
+           <span stretchy="false" class="mo">|</span>
+          </div>
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">Z</span>
+         <span stretchy="false" class="mo">(</span>
+         <span class="mi">s</span>
+         <span class="mo">,</span>
+         <span class="mi">x</span>
+         <span stretchy="false" class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo"> </span>
+      <span class="mtext">d</span>
+      <span class="mi">σ</span>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">,</span>
+    </div>
+   </div>where 
+   <span class="italic">ρ</span> is the gas density and 
+   <span class="italic">Λ</span> the mode normalization coefficient. This equation can be rewritten as 
+   <div id="RSOS172078M3x4" class="disp-formula">
+    <span class="label">3.4</span>
+    <div id="DM5" class="math">
+     <span stretchy="false" class="mo">(</span>
+     <div class="msup">
+      <span class="mi">s</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">α</span>
+     <span class="mi">s</span>
+     <span class="mo">+</span>
+     <div class="msubsup">
+      <span class="mi">ω</span>
+      <span class="mn">0</span>
+      <span class="mn">2</span>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">η</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">s</span>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">q</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+   </div>with 
+   <div id="RSOS172078M3x5" class="disp-formula">
+    <span class="label">3.5</span>
+    <div id="DM6" class="math">
+     <span class="mi">α</span>
+     <span class="mo">=</span>
+     <div class="mstyle">
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">ρ</span>
+        <div class="msup">
+         <span class="mi">c</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">V</span>
+        <span mathvariant="italic" class="mi">Λ</span>
+       </div>
+      </div>
+     </div>
+     <div class="msub">
+      <span class="mo">∫</span>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">∂</span>
+       <span class="mi">V</span>
+      </div>
+     </div>
+     <div class="mstyle">
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="mrow">
+         <span stretchy="false" class="mo">|</span>
+        </div>
+        <span class="mi">ψ</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">x</span>
+        <span stretchy="false" class="mo">)</span>
+        <div class="msup">
+         <div class="mrow">
+          <span stretchy="false" class="mo">|</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">Z</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">s</span>
+        <span class="mo">,</span>
+        <span class="mi">x</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo"> </span>
+     <span class="mtext">d</span>
+     <span class="mi">σ</span>
+    </div>
+   </div>and 
+   <div id="RSOS172078M3x6" class="disp-formula">
+    <span class="label">3.6</span>
+    <div id="DM7" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">q</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mstyle">
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">γ</span>
+        <span class="mo">−</span>
+        <span class="mn">1</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">V</span>
+        <span mathvariant="italic" class="mi">Λ</span>
+       </div>
+      </div>
+     </div>
+     <div class="msub">
+      <span class="mo">∫</span>
+      <span class="mi">V</span>
+     </div>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">Q</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">s</span>
+     <span class="mo">,</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+     <div class="msup">
+      <span class="mi">ψ</span>
+      <span class="mo">∗</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">x</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo"> </span>
+     <span class="mtext">d</span>
+     <span class="mi">V</span>
+     <span class="mo">.</span>
+    </div>
+   </div>Therefore, the system dynamics can be approximated by a forced damped harmonic oscillator (
+   <a ref-type="disp-formula" rid="RSOS172078M3x4" href="#RSOS172078M3x4">3.4</a>) of resonance frequency 
+   <span class="italic">ω</span>
+   <sub>0</sub>. The term 
+   <span class="italic">α</span>&gt;0 represents the damping mechanisms, and it is assumed to be constant, since the impedance at the boundaries is generally a smooth function of 
+   <span class="italic">s</span> and therefore is not expected to vary significantly around 
+   <span class="italic">ω</span>
+   <sub>0</sub>. The term 
+   <div class="inline-formula">
+    <div id="IM17" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">q</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+    </div>
+   </div> is the result of the weighting on the mode shape of the volumetric heat release rate and can be decomposed into two contributions: 
+   <div class="inline-formula">
+    <div id="IM18" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">q</span>
+       <span stretchy="false" class="mo">^</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <div class="mover">
+        <span class="mi">q</span>
+        <span stretchy="false" class="mo">^</span>
+       </div>
+      </div>
+      <span class="mi">n</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <div class="mover">
+        <span class="mi">q</span>
+        <span stretchy="false" class="mo">^</span>
+       </div>
+      </div>
+      <span class="mi">c</span>
+     </div>
+    </div>
+   </div>. The first component 
+   <div class="inline-formula">
+    <div id="IM19" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div class="mover">
+        <span class="mi">q</span>
+        <span stretchy="false" class="mo">^</span>
+       </div>
+      </div>
+      <span class="mi">n</span>
+     </div>
+    </div>
+   </div> represents the non-coherent part of the heat release rate oscillations, induced by the intense turbulence present in practical combustors. The term 
+   <div class="inline-formula">
+    <div id="IM20" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div class="mover">
+        <span class="mi">q</span>
+        <span stretchy="false" class="mo">^</span>
+       </div>
+      </div>
+      <span class="mi">c</span>
+     </div>
+    </div>
+   </div> refers to the coherent heat release rate fluctuations, which result from a feedback interaction with the acoustic field established in the combustor. Hence, this term can be expressed as a nonlinear function of the modal amplitude 
+   <span class="italic">η</span>. It is customary to simplify this function by replacing it with its truncated Taylor expansion [
+   <a rid="RSOS172078C52" ref-type="bibr" href="#RSOS172078C52">52</a>,
+   <a rid="RSOS172078C53" ref-type="bibr" href="#RSOS172078C53">53</a>]. The linear term coefficient 
+   <span class="italic">β</span> of this expansion defines, together with the linear damping 
+   <span class="italic">α</span>, the linear stability of the system. Absorbing in the constants the mode shape 
+   <span class="italic">ψ</span>(
+   <span class="italic">x</span>
+   <sub>
+    <span class="italic">p</span>
+   </sub>) at the pressure probe location 
+   <span class="italic">x</span>
+   <sub>
+    <span class="italic">p</span>
+   </sub> and considering only the odd terms of the series expansion up to the fifth order leads to the following oscillator model for the thermoacoustic system: 
+   <div id="RSOS172078M3x7" class="disp-formula">
+    <span class="label">3.7</span>
+    <div id="DM8" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span class="mo">¨</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msubsup">
+      <span class="mi">ω</span>
+      <span class="mn">0</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mi">p</span>
+     <span class="mo">=</span>
+     <span stretchy="false" class="mo">[</span>
+     <span class="mn">2</span>
+     <span class="mi">ν</span>
+     <span class="mo">+</span>
+     <span class="mi">κ</span>
+     <div class="msup">
+      <span class="mi">p</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">−</span>
+     <span class="mi">μ</span>
+     <div class="msup">
+      <span class="mi">p</span>
+      <span class="mn">4</span>
+     </div>
+     <span stretchy="false" class="mo">]</span>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span class="mo">˙</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ξ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">t</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">,</span>
+    </div>
+   </div>where 
+   <span class="italic">ν</span>=(
+   <span class="italic">β</span>−
+   <span class="italic">α</span>)/2 is the oscillation linear growth rate in rad s
+   <span class="sup">−1</span> and 
+   <span class="italic">κ</span> and 
+   <span class="italic">μ</span> the two positive constants that define the nonlinear component of the oscillator response. The term 
+   <span class="italic">ξ</span>(
+   <span class="italic">t</span>) is a white noise forcing of intensity 
+   <span class="italic">Γ</span> that models the non-coherent turbulence-induced heat release rate fluctuations. In 
+   <a ref-type="fig" rid="RSOS172078F3" href="#RSOS172078F3">figure 3</a>
+   <span class="italic">b</span>, the plot shows the stochastic Hopf bifurcation featured by this oscillator, as a function of the bifurcation parameter 
+   <span class="italic">ν</span>. This three-dimensional representation of the stationary joint-probability density 
+   <div class="inline-formula">
+    <div id="IM21" class="math">
+     <div class="msub">
+      <span class="mi">P</span>
+      <span mathvariant="normal" class="mi">∞</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">p</span>
+     <span class="mo">,</span>
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">p</span>
+       <span class="mo">˙</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <span class="mi">ω</span>
+     <span class="mo">;</span>
+     <span class="mi">ν</span>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+   </div> is depicted together with three orthogonal cuts resembling the ones obtained from the experiments and showing that the bifurcation parameter 
+   <span class="italic">ν</span> of the surrogate model (
+   <a ref-type="disp-formula" rid="RSOS172078M3x7" href="#RSOS172078M3x7">3.7</a>) corresponds to the equivalence ratio 
+   <span class="italic">ϕ</span> in the experiments.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">It is convenient to describe the system evolution in terms of the slowly varying amplitude 
+   <span class="italic">A</span> and phase 
+   <span class="italic">φ</span>, with 
+   <div class="inline-formula">
+    <div id="IM22" class="math">
+     <span class="mi">p</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">t</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <span class="mi">A</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">t</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mi">cos</span>
+     <span class="mo">⁡</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <span class="mi">ω</span>
+      <span class="mn">0</span>
+     </div>
+     <span class="mi">t</span>
+     <span class="mo">+</span>
+     <span class="mi">φ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">t</span>
+     <span stretchy="false" class="mo">)</span>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+   </div>. By inserting this ansatz for 
+   <span class="italic">p</span> into the second-order stochastic differential equation (
+   <a ref-type="disp-formula" rid="RSOS172078M3x7" href="#RSOS172078M3x7">3.7</a>) and by performing deterministic and stochastic averaging (e.g. [
+   <a rid="RSOS172078C54" ref-type="bibr" href="#RSOS172078C54">54</a>]), one gets first-order Langevin equations for 
+   <span class="italic">A</span> and 
+   <span class="italic">φ</span>. The equation for 
+   <span class="italic">A</span> is 
+   <div class="inline-formula">
+    <div id="IM23" class="math">
+     <div class="mrow">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">d</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mi">A</span>
+     </div>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">dt</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="mrow">
+      <span mathvariant="script" class="mi">F</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">A</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">+</span>
+     <span class="mi">ζ</span>
+    </div>
+   </div>, where 
+   <div class="inline-formula">
+    <div id="IM24" class="math">
+     <div class="mrow">
+      <span mathvariant="script" class="mi">F</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">A</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <span class="mi">A</span>
+     <span stretchy="false" class="mo">[</span>
+     <span class="mi">ν</span>
+     <span class="mo">+</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">κ</span>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <span class="mn">8</span>
+     <span stretchy="false" class="mo">)</span>
+     <div class="msup">
+      <span class="mi">A</span>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">μ</span>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <span class="mn">16</span>
+     <span stretchy="false" class="mo">)</span>
+     <div class="msup">
+      <span class="mi">A</span>
+      <span class="mn">4</span>
+     </div>
+     <span stretchy="false" class="mo">]</span>
+     <span class="mo">+</span>
+     <span mathvariant="italic" class="mi">Γ</span>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mn">4</span>
+     <div class="msubsup">
+      <span class="mi">ω</span>
+      <div class="mrow">
+       <span class="mn">0</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span class="mi">A</span>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+   </div> and 
+   <span class="italic">ζ</span> is a white noise forcing of intensity 
+   <div class="inline-formula">
+    <div id="IM25" class="math">
+     <span mathvariant="italic" class="mi">Γ</span>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <span class="mn">2</span>
+     <div class="msubsup">
+      <span class="mi">ω</span>
+      <span class="mn">0</span>
+      <span class="mn">2</span>
+     </div>
+    </div>
+   </div>. The deterministic dynamics derives from a potential with 
+   <div class="inline-formula">
+    <div id="IM26" class="math">
+     <div class="mrow">
+      <span mathvariant="script" class="mi">F</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">A</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <div class="mrow">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">d</span>
+      </div>
+     </div>
+     <span class="mi">V</span>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">d</span>
+     </div>
+     <span class="mi">A</span>
+    </div>
+   </div>, and the equation does not depend on 
+   <span class="italic">φ</span>, which leads to the corresponding Fokker–Planck equation (FPE) for the variation in time of the amplitude PDF 
+   <span class="italic">P</span>(
+   <span class="italic">A</span>;
+   <span class="italic">t</span>): 
+   <div id="RSOS172078M3x8" class="disp-formula">
+    <span class="label">3.8</span>
+    <div id="DM9" class="math">
+     <div class="mstyle">
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">∂</span>
+        <span class="mi">P</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">∂</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <div class="mstyle">
+      <div class="mfrac">
+       <span mathvariant="normal" class="mi">∂</span>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">∂</span>
+        <span class="mi">A</span>
+       </div>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">[</span>
+     <div class="mrow">
+      <span mathvariant="script" class="mi">F</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">A</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mi">P</span>
+     <span stretchy="false" class="mo">]</span>
+     <span class="mo">+</span>
+     <div class="mstyle">
+      <div class="mfrac">
+       <span mathvariant="italic" class="mi">Γ</span>
+       <div class="mrow">
+        <span class="mn">4</span>
+        <div class="msubsup">
+         <span class="mi">ω</span>
+         <span class="mn">0</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo"> </span>
+     <div class="mstyle">
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msup">
+         <span mathvariant="normal" class="mi">∂</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mi">P</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">∂</span>
+        <div class="msup">
+         <span class="mi">A</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+   </div>Setting ∂
+   <span class="italic">P</span>/∂
+   <span class="italic">t</span>=0, one obtains the stationary PDF 
+   <div class="inline-formula">
+    <div id="IM27" class="math">
+     <div class="msub">
+      <span class="mi">P</span>
+      <span mathvariant="normal" class="mi">∞</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">A</span>
+     <span class="mo">;</span>
+     <span class="mi">ν</span>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+   </div>, plotted in 
+   <a ref-type="fig" rid="RSOS172078F3" href="#RSOS172078F3">figure 3</a>
+   <span class="italic">c</span> as a function of the linear growth rate 
+   <span class="italic">ν</span>, in a pitchfork bifurcation diagram fashion. To provide a visual reference, the bifurcation diagram of the deterministic case (i.e. in the absence of noise, 
+   <span class="italic">Γ</span>=0) is superimposed in blue. This diagram shows the subcritical pitchfork and the saddle-node bifurcations governing the system. In the bottom insets, the PDFs 
+   <div class="inline-formula">
+    <div id="IM28" class="math">
+     <div class="msub">
+      <span class="mi">P</span>
+      <span mathvariant="normal" class="mi">∞</span>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">A</span>
+     <span class="mo">;</span>
+     <div class="msub">
+      <span class="mi">ν</span>
+      <span class="mi">i</span>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+   </div> for three selected values of the bifurcation parameter 
+   <span class="italic">ν</span> are presented. In the upper insets, the corresponding potentials are plotted. The linearly stable and stable limit cycle conditions feature a single potential well at low or high amplitude, while the bistable case has two potential wells. The stochastic forcing causes the jumps from one basin of attraction to the other, and hence the intermittency between low-amplitude noisy fluctuations and high-amplitude limit cycle oscillations.
+  </p>
+ </sec>
+</sec>

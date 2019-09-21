@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stylized model of a human-environment tipping element</div>
+ <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">We use the mathematical framework of Markov Decision Processes
+  <span class="sup">
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>,
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>, in which an agent makes decisions about how to interact with its environment (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1a</a>). Our particular environment can reside in either a prosperous state, which provides immediate rewards (also called payoffs) to the agent, or a degraded state, from which the agent receives no payoff. At each time step, the agent chooses between two actions 
+  <span class="italic">a</span>, exerting either a high or low pressure on the environment. Depending on the current state 
+  <span class="italic">s</span>, the current action 
+  <span class="italic">a</span> and the subsequent state 
+  <span class="italic">s′</span>, the agent receives an immediate reward 
+  <span class="italic">r</span> (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1b</a>). At the prosperous state, taking the low pressure action the agent is guaranteed to receive reward 
+  <span class="italic">r</span>
+  <sub>l</sub> and remain at the prosperous state. However, taking the high pressure action, the agent may receive reward 
+  <span class="italic">r</span>
+  <sub>h</sub> (which is typically larger than 
+  <span class="italic">r</span>
+  <sub>l</sub>), but risks triggering a collapse of the environment to the degraded system state with non-zero probability 
+  <span class="italic">δ</span> and no immediate reward at all. From there, only the low pressure action opens the option to recover to the prosperous state with non-zero probability 
+  <span class="italic">ρ</span>.
+  <div id="Fig1" class="fig">
+   <span class="label">Fig. 1</span>
+   <div class="caption">
+    <p>Conceptual model of a human-environment tipping element. 
+     <span class="bold">a</span> Agent-environment interface: based on the state information and received reward, the agent chooses an action 
+     <span class="italic">a</span> from its actions set to gain rewards. 
+     <span class="bold">b</span> The transition graph gives state transition probabilities and corresponding rewards for all triples of state 
+     <span class="italic">s</span>, action 
+     <span class="italic">a</span>, next state 
+     <span class="italic">s</span>′, i.e., in state 
+     <span class="italic">s</span> the agent takes action 
+     <span class="italic">a</span> and moves to state 
+     <span class="italic">s</span>′. 
+     <span class="bold">c</span> Risky and cautious policies including the resulting Markov chains as a transition graph
+    </p>
+   </div>
+   <div xlink:href="41467_2018_4738_Fig1_HTML" id="d29e563" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">For example, the high pressure action could correspond to emitting a business-as-usual amount of carbon to the atmosphere yielding a reward of high, short-term economic output as long as the system has not tipped. The low pressure action resembles emitting a reduced amount of carbon, assuming a lower short-term economic output for the guarantee to not trigger climate tipping elements into a disastrous state.</p>
+ <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">A policy 
+  <span class="italic">π</span> is a function that specifies what action 
+  <span class="italic">a</span> to apply at a system state 
+  <span class="italic">s</span>. The agent receives reward 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> at time step 
+  <span class="italic">t</span>. The value 
+  <span class="italic">v</span>
+  <sub>
+   <span class="italic">π</span>
+  </sub>(
+  <span class="italic">s</span>) of a state 
+  <span class="italic">s</span> under a given policy 
+  <span class="italic">π</span> is given by the expected value of the normalized accumulated discounted rewards 
+  <span class="italic">r</span> with discount factor 0 ≤ 
+  <span class="italic">γ</span> ≤ 1 when starting in state 
+  <span class="italic">S</span>
+  <sub>0</sub> = 
+  <span class="italic">s</span> and following policy 
+  <span class="italic">π</span>:
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_\pi \left( s \right) = {\Bbb E}_\pi \left[ {\mathop {{{\mathrm{lim}}}}\limits_{T \to \infty } \frac{{\mathop {\sum}\nolimits_{t = 0}^T {\gamma ^tr_t} }}{{\mathop {\sum}\nolimits_{t = 0}^T {\gamma ^t} }}\left| {S_0 = s} \right.} \right].$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">v</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="double-struck" class="mi">E</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+     </div>
+     <div close="]" open="[" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="munder">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">lim</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">T</span>
+         <span class="mo">→</span>
+         <span class="mi">∞</span>
+        </div>
+       </div>
+       <div class="mfrac">
+        <div class="mrow">
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mo">∑</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+           <span class="mo">=</span>
+           <span class="mn">0</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+         </div>
+         <div class="msup">
+          <div class="mrow">
+           <span class="mi">γ</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+          </div>
+         </div>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">r</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mo">∑</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+           <span class="mo">=</span>
+           <span class="mn">0</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+         </div>
+         <div class="msup">
+          <div class="mrow">
+           <span class="mi">γ</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">t</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div close="" open="∣" separators="" class="mfenced">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">S</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <span class="mi">s</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_4738_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">Note that the discount factor actually denotes the farsightedness of the agent. Thus, 
+  <span class="italic">γ</span> = 1 corresponds to no discounting (weighting all rewards equally regardless of when they are expected), whereas 
+  <span class="italic">γ</span> = 0 corresponds to completely myopic, fully discounting agents.
+ </p>
+</sec>

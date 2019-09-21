@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">As part of several ongoing studies of shorebirds in North America, red knots, sanderlings, semipalmated sandpipers and ruddy turnstones were captured between 2014 and 2016 and measured using standard protocols at 13 locations distributed widely across the Atlantic flyway from Texas, United States, to Nunavut, Canada (see Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a> and Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a> for details). All birds were banded with numbered metal bands, and standard biometric measurements were taken. Age was determined from species-specific plumage features and classified as hatch-year (first post-breeding migration) or after-hatch-year (experienced at least one previous southward migration), while sex could not be determined at capture based on morphology
+  <span class="sup">
+   <a ref-type="bibr" rid="CR69" href="#CR69">69</a>
+  </span>. Immediately after these measurements were taken, a sample of birds were fitted with digitally coded radio-transmitters (Avian Nanotags, Lotek Wireless Inc., Newmarket, ON, Canada), which have an estimated life span of 33–150 days, depending on type and burst rate (see below). The radio tags were glued to the skin and clipped feather stubble of the synsacral region with a cyanoacrylate gel adhesive. Tag transmissions were tracked using a network of automated radio telemetry receiving stations, the Motus Wildlife Tracking System
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>, with towers distributed across North America and to a lesser extent in South America.
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">Receiver stations were equipped with a digital telemetry receiver (Lotek SRX600, Lotek SRX800, or a SensorGnome receiver; 
+  <span ext-link-type="uri" xlink:href="http://www.sensorgnome.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.sensorgnome.org</span>), and most receiver stations had multiple directional antennas oriented at fixed angles (typically three to six 9-element Yagi antennas distributed evenly around 360°) that scanned continuously for tags. All tags operated on a single frequency (166.380 MHz) and were distinguished by a unique series of pulses contained within each burst of radio transmission (burst rate: 5.3–14.9 s), allowing for definitive identification of individuals. Tagged birds can be detected at distances up to 20 km away from a receiver station, although topography, weather, and vegetation can all decrease detection range
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>,
+   <a ref-type="bibr" rid="CR70" href="#CR70">70</a>
+  </span>. Tag detections were recorded by the automated receivers and time stamped by an internal GPS clock, allowing us to track individual movements at a continental scale with a temporal resolution of ±15 s.
+ </p>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Analysis of automated telemetry data</div>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">We processed the data as previously described
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>,
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>. In summary, all tag, station, project, and user metadata are submitted by users, archived in the database, and linked and managed through the Motus research platform
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>. The tag detection data collected at receiving stations are joined with the master tag and station metadata to produce a complete database of unique detections from each station. The radio signals captured by the receivers are cross-referenced against the tag recordings submitted to Motus during tag registration. Due to local interference and the high gain on the receivers, spurious signals (i.e., false positives) were recorded. From the raw detection data, detections that are outside of the deployment period for a specific tag were removed. We removed detection data where the standard deviation in signal strength was &gt; 0.1 and the run length &lt; 2 (number of continuous detections of a unique code by a receiver). Detections in this filtered database (containing tag-id, tower location, GPS time stamp, antenna number, and signal strength), were considered valid if there were three detections from a tag at multiples of the tag’s burst rate (±4 ms, with the allowed error in the burst rate increasing by 1.5 ms for each missed burst and allowing for up to 20 consecutive missed bursts). Although this filtering procedure might remove some valid detections, it ensured that the resulting data set contained only valid detections of the tagged birds.
+  </p>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Departure time (UTC) from each site was determined as the last of at least three consecutive detections prior to no further detections at a site. Arrival times (UTC) were determined as the first detection in a series of at least three consecutive detections at a receiver station within a different site.</p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Ground speed (m s
+   <span class="sup">−1</span>) was calculated as the orthodrome distance (m) between two different receiver stations, divided by the total time (s) between departure and arrival. As the objective was to determine migration speed, we excluded local movements (&lt; 50 km). The mean distance between all detections was 550 km and therefore the bias from the uncertainty of an individuals’ actual position (e.g., a 20 km detection distance), is likely not a large factor influencing the speed calculations.
+  </p>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">We calculated the minimum stopover duration for each individual as the sum of all time differences (s) between the last and first detection per receiver station, including the time an individual remained at the capture site after capture. A stopover event was defined as a minimum duration of 30 min, and shorter durations were considered migratory movements
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>.
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">Migration speed (km day
+   <span class="sup">−1</span>) was calculated as the sum of the orthodrome distance (km) between all receiver stations per season at which an individual was detected, divided by the total time an individual was detected, including the minimal stopover time.
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">When an individual had been detected between two receiving stations, we calculated the bearing in degrees using the package fossil
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+   </span> in the program R
+   <span class="sup">
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>. We only used the bearings describing departures from one key site per season; Delaware Bay for pre-breeding migration (39°4′N and 74°6′W) and the southern James Bay region for the post-breeding migration (51°4′N, 80°4′W). A majority of birds were detected at these sites, and they are of known importance for these species
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>. Analysing bearings in this way minimizes the potential bias arising from site-dependent departure directions, and the fact that northbound migrants in spring are heading towards higher latitudes where there are fewer towers (see Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). Based on these bearings, we calculated the mean vector length 
+   <span class="italic">r</span> (which can vary from 0 to 1) as a measure of directional concentration, and the Watson 
+   <span class="italic">U</span>
+   <span class="sup">2</span>-test was used to test whether the age classes differed from each other.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Wind data</div>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">We used the wind data of the National Centers for Environmental Prediction (NCEP). The flow-assistance experienced by each individual was calculated using the R-Package RNCEP
+   <span class="sup">
+    <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+   </span>. Since we recorded when and where an individual is present and the destination (i.e., different receiver station) is known, we used the latitudes and longitudes of the receiver stations as the start- and end-point for each trajectory, with the corresponding departure times. Using this information, we downloaded the –u (west-east) and –v (south-north) wind components, which were combined in a single wind vector incorporating the strength and the direction of the wind, from which we obtained a tailwind component. The calculations were based on wind components for the following pressure levels: ‘surface level’, 925, 850 and 700 hPa, corresponding to between 0 and 3000 m altitude. The RNCEP tailwind model was set to calculate the heading and tailwind component at the most optimal pressure level upon departure, and this pressure level was reassessed every 3 hr, and the heading and tailwind component recalculated by the model. In this way, we obtained an estimate of the wind assistance experienced by birds every 3 hr, assuming that they travelled at the most profitable pressure level.
+  </p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Airspeed (m s
+   <span class="sup">−1</span>) was calculated by subtraction of the wind vector (wind assistance) from the track vector (ground speed, see above) to estimate individual airspeed
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span>. Some track segments (&lt; 3% of total sample) had airspeeds &gt; 25 m s
+   <span class="sup">−1</span>, which were the result of occasional false detections of tags (e.g., near simultaneous apparent detections of a bird at towers hundreds of kilometers apart). These false detection patterns were identified by examining plots of detections for each bird by latitude and time and longitude and time, and values associated with unrealistic movement patterns were removed
+   <span class="sup">
+    <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+   </span>. Airspeeds below a threshold of &lt; 5 m s
+   <span class="sup">−1</span> were considered as possible undetected stopovers or detours through areas with no tower coverage
+   <span class="sup">
+    <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+   </span>, and were excluded from airspeed analyses. Our power curve calculations (see below) indicate that the power required to fly below these speeds increases exponentially making these speeds unlikely. In order to identify the costs associated with airspeeds, we calculated the power curves for the four species using the program Flight 1.24, which is available (free) from 
+   <span ext-link-type="uri" xlink:href="http://books.elsevier.com/companions/9780123742995" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://books.elsevier.com/companions/9780123742995</span> (see Tables 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a> and 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S3</a> for details).
+  </p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">In order to evaluate the hypothesis that long-distance migratory shorebirds would be more wind selective in the post-breeding season, we calculated wind support for each individual at the actual departure time and location, and calculated the wind support for the same departure time for the period up to 10 days earlier.</p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Predator density data</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">We accessed the citizen science data of the Hawk Migration Association of North America
+   <span class="sup">
+    <a ref-type="bibr" rid="CR78" href="#CR78">78</a>
+   </span>, and selected three important raptor post-breeding migration count sites in North America; Hawk Cliff Hawkwatch site in Ontario, Canada (42°39′N, 81°10′W), Hawk Mountain Sanctuary in Pennsylvania, USA (40°38′N, 75°59′W) and Cape May Point, New Jersey, USA (38°55′N, 74°57′W; see Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). Experienced volunteers enter counts of migrating raptors on a daily basis. We obtained daily observations from 2014–2016, for the period between early July and late December. Peregrine falcon, merlin and Cooper’s hawk were selected as relevant predators for the four shorebird species considered here. We corrected the counts for the daily observation duration, generating a daily mean predator rate (number hr
+   <span class="sup">−1</span>). Next, we used mean values of the three years and calculated the relative frequency per day.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analysis</div>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Differences in migration speed (km day
+   <span class="sup">−1</span>) between seasons were examined using a generalized linear mixed model (GLMM)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR79" href="#CR79">79</a>
+   </span>. The model included migration speed (km day
+   <span class="sup">−1</span>) as the predicted variable with year and capture site as random factors. We started with a full model including season, average tailwind along all segments, age, species and all possible interactions, and then simplified the model using a backwards elimination process based on a log-likelihood ratio test (LRT) with 
+   <span class="italic">P</span> &lt; 0.05 as the selection criterion (“drop1” in R) until reaching the minimal adequate model. Unexpectedly, age and tailwind were not included in the final model.
+  </p>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">To determine differences in airspeed between seasons, airspeed was calculated only for the period when individuals were flying (i.e., stopover time was not included). Because some individuals were detected along several segments of the journey, they reoccur in the analysis. Therefore, we used a GLMM with airspeed as the predicted variable, and year, capture site and bird-id as random factors. The predictor variables were season, species, age, days after capture and all possible interactions and we simplified the model based on a log-likelihood ratio test (LRT). The final model included season and species. In order to identify whether airspeeds differed prior to and after the predator front, we selected two periods in the post-breeding season based on a visual inspection of the predator front (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3a</a>); early (&gt; 29 July &amp; &lt; 1 Sept) and late (&gt; 31 Aug). We used a GLMM with airspeed as the predicted variable, and year, capture site and bird-id as random factors. The predictor variables were season, species, age and all possible interactions and simplified the model based on a LRT. The final model included season, species and the interaction term. In order to visualize these patterns, we used generalized additive models (GAM) to describe patterns of predator abundance and airspeed during the post-breeding season and used separate models for each species. The response variable for these models was either relative predator frequency or airspeed. For both models we used day of year as an explanatory variable. The models were fitted using the ‘mgcv’ package
+   <span class="sup">
+    <a ref-type="bibr" rid="CR80" href="#CR80">80</a>
+   </span> in R ver. 3.4.1, and compared with linear models (LM) based on the Akaike information criterion, and the final model was considered to be substantially better when its value was at least two AIC units lower than the next best model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+   </span>.
+  </p>
+  <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">Minimum stopover duration was analysed in the following way: the full model included minimum stopover duration (d) as the response variable with year and capture site as random factors, and season, average tailwind, age, species and all possible interactions as covariates. We then simplified the model based on a LRT until we reached a minimal adequate model.</p>
+  <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">We calculated the relative proportion of birds departing daily from Delaware Bay during the pre-breeding season and from the southern James Bay region in the post-breeding season to assess the total time of the migration as a measure of time constraints. We used adults only, as age classes are known to differ in timing at our study sites
+   <span class="sup">
+    <a ref-type="bibr" rid="CR82" href="#CR82">82</a>
+   </span>, and these sites were chosen because most birds were detected at these sites.
+  </p>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">In order to investigate whether wind selectivity differed between the seasons, wind support for each segment was analysed using LRT of GLMM’s with year and bird-id as random factors and species and season as fixed factors. We used the flow-assistance from NCEP, (see above) to calculate wind support for each migratory trajectory up to 10 days before actual departure.</p>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">Prior to all analyses, explanatory variables were assessed for collinearity using the variance inflation factor (VIF) function. All variables had a VIF &lt; 2 and coefficients did not switch between positive and negative values, indicating low multicollinearity
+   <span class="sup">
+    <a ref-type="bibr" rid="CR83" href="#CR83">83</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Animal handling and ethics</div>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">The research was conducted in accordance with the Animal Welfare Act of 1970 and the most recent revision of the Ornithological Council’s guidelines in the use of wild birds in research, and by the Institutional Animal Care and Use Committee (IACUC). Birds captured in Delaware Bay fell under the federal banding permit issued to the Endangered and Nongame Species Program, Division of Fish and Wildlife, NJ DEP (22803). Captures in New Jersey were done under federal banding permit (21241US), issued to New Jersey Audubon by the United States Geological Service/Bird Banding Laboratory. Individuals captured in Quebec fell under the protocol approved by the “Comité institutionnel de protection des animaux” under permit 2011-M29-2 and 2015-M29-1, and the capture of individuals in the Mingan Archipelago was approved by the Animal Care Committee of Environment and Climate Change Canada (SCF2018-01-YA, SCFQ2017-06, SCFQ2016-07). For Sanderling and Red knots captured in Chaplin, Canada, all animal handling and research protocols were approved by the University of Saskatchewan Animal Care Committee (AUP 20120021) and conducted under Canadian Wildlife Service Scientific Permit (12SKS009). Birds trapped in Texas, fell under the Texas Parks &amp; Wildlife Department Permit (SPR-0911-341), and trapping on the Padre Island National Seashore was approved by the National Park Service under permits 2015-SCI-0006, 2015-SCI-0007, and 2016-SCI-0005. All activities related to bird capture and tagging in Maine were reviewed and approved by University of Maine IACUC (A2013-01-02) and were performed under federal and state permits to the U.S. Fish &amp; Wildlife Service and the Maine Department of Inland Fisheries and Wildlife. At James Bay, birds were banded under a permit from Environment and Climate Change Canada (Permit 10884), and banding and tagging was approved by Environment and Climate Change Canada’s Wildlife Eastern Animal Care Committee (protocol 14CF01, 15CF01, 16CF01 and 17CF01), as well as by Trent University’s Animal Care Committee (23904). Birds captured in Nunavut were approved under the Canadian Wildlife Service Scientific Permit to Capture and Band Migratory Birds (10565M), the Canadian Wildlife Service National Wildlife Area Permit (NUN-NWA-14-03), the Canadian Wildlife Service Scientific Research Permit (NWT-SCI-13-01), the Government of Nunavut Wildlife Research Permit (WL2015-032), and by Environment and Climate Change Canada Western and Northern Animal Care Committee Approval (15JR01). Birds captured and tagged at the Bay of Fundy were approved under Mount Allison University Animal Care protocol (12–10).</p>
+ </sec>
+</sec>

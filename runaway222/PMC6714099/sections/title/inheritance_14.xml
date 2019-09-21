@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Inheritance</div>
+ <p id="Par56" xmlns="http://www.w3.org/1999/xhtml">Two scenarios of recombination were considered: unlinked and complete linkage (Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>). During the process of inheritance, allele values for each locus (adaptation locus and mutator locus) of the inherited haplotype were picked randomly from the corresponding parental locus (unlinked scenario). In complete linkage scenario, alleles at the mutator locus were linked and migrated together with the corresponding alleles at the adaptation locus. For comparison, we also implemented an intermediate linkage (probability of recombination 
+  <span class="italic">pR = 0.5</span>). Then, mutations took place with probability 
+  <span class="italic">μ</span> determined by the alleles at the mutator locus as explained above. In case that a mutation occurred, its effect for the adaptation locus was randomly drawn from a normal distribution with zero mean and variance equals to the variance of the distribution of fitness effect size of mutations, which was an input parameter [
+  <a ref-type="bibr" rid="CR18" href="#CR18">18</a>]. The assumption of a Gaussian distribution is consistent with analysis of mutation effects [
+  <a ref-type="bibr" rid="CR28" href="#CR28">28</a>, 
+  <a ref-type="bibr" rid="CR29" href="#CR29">29</a>]. In the model, the mean 
+  <span class="italic">x</span> of the distribution of mutation effect size could change according to the scenario of percentage of beneficial mutations (input parameter, Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>). This applied for the adaptation locus only. This approach granted that beneficial mutations – mutations that pushed the trait in the direction of 
+  <span class="italic">θ</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> – actually occurred at different probabilities as shown in the distribution of mutations fitness effect size (Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>). This can be important since under scenarios of directional selection the common assumption in individual-based models of explicit genetics of symmetric distribution of beneficial and deleterious mutations can overestimate the amount of arising beneficial mutations (e.g., [
+  <a ref-type="bibr" rid="CR12" href="#CR12">12</a>, 
+  <a ref-type="bibr" rid="CR17" href="#CR17">17</a>]). In fact, the shifted distributions approximates the mutational effects according to the model of slightly deleterious mutations [
+  <a ref-type="bibr" rid="CR16" href="#CR16">16</a>, 
+  <a ref-type="bibr" rid="CR17" href="#CR17">17</a>], albeit mutational effects under this model often exhibit skewed distributions. When a mutation occurred at the mutator locus, its effect consisted in adding a value randomly drawn from [− 1, 0, 1] to the mutated allele. 
+  <div id="Tab1" class="table-wrap">
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <p>Parameters values and description (values in parentheses were implemented to evaluate the robustness of outcomes)</p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <thead>
+     <tr>
+      <th>Parameter</th>
+      <th>Value</th>
+      <th>Description</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>
+       <span class="italic">K</span>
+      </td>
+      <td>1000</td>
+      <td>Carrying capacity</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">γ</span>
+      </td>
+      <td>2.2 (3.2)</td>
+      <td>Strength of selection</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">σ</span>
+       <span class="sup">
+        <span class="italic">2</span>
+       </span>
+      </td>
+      <td>1</td>
+      <td>Variance of the stochastic environment</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">θ</span>
+       <sub>
+        <span class="italic">0</span>
+       </sub>
+      </td>
+      <td>0</td>
+      <td>Initial environmental optimum</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">η</span>
+      </td>
+      <td>0, 0.01, 0.02, 0.03, 0.04</td>
+      <td>Rate of environmental change</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">z</span>
+      </td>
+      <td>Evolving trait</td>
+      <td>Ecological phenotype</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">VG</span>
+      </td>
+      <td>0.2</td>
+      <td>Initial genetic variance present in the population</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">L</span>
+      </td>
+      <td>Number of loci per evolving trait</td>
+      <td>1</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">μ</span>
+      </td>
+      <td>Evolving trait, range [0; 1]</td>
+      <td>Mutation rate</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">MV</span>
+      </td>
+      <td>0.2</td>
+      <td>Variance of the distribution of mutations fitness effect size</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">bm</span>
+      </td>
+      <td>10, 25, 40, 50</td>
+      <td>Percentage (%) of beneficial mutations</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">pR</span>
+      </td>
+      <td>0 (unlinked), (0.5), 1 (complete linkage),</td>
+      <td>Probability of recombination</td>
+     </tr>
+     <tr>
+      <td>
+       <span class="italic">t</span>
+      </td>
+      <td>300</td>
+      <td>Time limit per simulation, in generations. The last 200 generations were exposed to the treatment of directional climate change</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div id="Fig3" class="fig">
+   <span class="label">Fig. 3</span>
+   <div class="caption">
+    <p>Distribution of fitness effects of mutations according to different scenarios of percentage of beneficial mutations 
+     <span class="italic">bm</span>. Beneficial mutations are shown in light grey color. Variance of the distribution 
+     <span class="italic">MV = 0.1</span>
+    </p>
+   </div>
+   <div xlink:href="12862_2019_1494_Fig3_HTML" id="MO3" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par57" xmlns="http://www.w3.org/1999/xhtml">After the process of inheritance, all adults died, and newborns took over the population (non-overlapping generations).</p>
+</sec>

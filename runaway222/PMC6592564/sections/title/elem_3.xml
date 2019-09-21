@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec003" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Clustering of appliances</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The problem we are studying, even excluding the response variable that can be handled as a smooth function (and so as a single data point in the 
+  <span class="italic">L</span>
+  <span class="sup">2</span> space of doubly continuous functions), is nevertheless inherently high dimensional, since we still have covariates that indicate the presence or absence of a specific appliance in the household (as well as socio-demographics). The complete list of appliances, together with ownership percentages, can be found in Table B in 
+  <a ref-type="supplementary-material" rid="pone.0218702.s001" href="#pone.0218702.s001">S1 File</a>. Moreover, appliances tend to appear together in households, thus rendering impossible to identify the specific signature of single appliances due to collinearity. To tackle this problem we create groups of appliances that tend to co-occur together, and then test for the signature of those clusters in the electricity consumption data. As an initial step, we carry out a hierarchical clustering procedure [
+  <a rid="pone.0218702.ref035" ref-type="bibr" href="#pone.0218702.ref035">35</a>] on the columns of the dataset, by using a distance appropriate to the problem and the data at hand (see Section 6 
+  <a ref-type="supplementary-material" rid="pone.0218702.s001" href="#pone.0218702.s001">S1 File</a> for an extended description and additional details). The procedure has been implemented in the R programming language, using standard functions and the “e1071” package. Observing the dendrogram of the hierarchical clustering procedure performed using Ward Linkage and Hamming distance in Fig C in 
+  <a ref-type="supplementary-material" rid="pone.0218702.s001" href="#pone.0218702.s001">S1 File</a>, 3 clusters can be clearly identified. These can be interpreted as a group of basic and common appliances (in blue), a group of “high-tech” appliances (in red), and a third one of advanced appliances, that are comparably less technological than the high tech ones, but that are very power intensive (in yellow). In the Section 6 
+  <a ref-type="supplementary-material" rid="pone.0218702.s001" href="#pone.0218702.s001">S1 File</a> we also provide a robustness analysis of this clustering procedure.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Based on the hierarchical clustering we now define a set of ownership indexes 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">f</span>,
+   <span class="italic">k</span>
+  </sub>, ∀
+  <span class="italic">k</span>
+  <span class="italic">in</span> {
+  <span class="italic">B</span>, 
+  <span class="italic">H</span>, 
+  <span class="italic">L</span>}, for each group of appliances identified in the clustering procedure. Let 
+  <span class="italic">S</span>
+  <sub>
+   <span class="italic">B</span>
+  </sub>, 
+  <span class="italic">S</span>
+  <sub>
+   <span class="italic">H</span>
+  </sub>, 
+  <span class="italic">S</span>
+  <sub>
+   <span class="italic">L</span>
+  </sub> the three groups of appliances, respectively the Basic ones, the advanced Hi-Tech ones, and the advanced Lo-Tech ones, and 
+  <span class="italic">N</span>
+  <sub>
+   <span class="italic">B</span>
+  </sub>, 
+  <span class="italic">N</span>
+  <sub>
+   <span class="italic">H</span>
+  </sub>, 
+  <span class="italic">N</span>
+  <sub>
+   <span class="italic">L</span>
+  </sub> their respective cluster size. For each household 
+  <span class="italic">f</span>, we define the ownership index of the 
+  <span class="italic">k</span>-th group as: 
+  <div id="pone.0218702.e001" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0218702.e001.jpg" id="pone.0218702.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M1" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">I</span>
+       <div class="mrow">
+        <span class="mi">f</span>
+        <span class="mi">k</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <div class="msub">
+        <span class="mi">N</span>
+        <span class="mi">k</span>
+       </div>
+      </div>
+      <div class="munderover">
+       <span class="mo">∑</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+       </div>
+       <div class="msub">
+        <span class="mi">N</span>
+        <span class="mi">K</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">a</span>
+       <div class="mrow">
+        <span class="mi">f</span>
+        <span class="mi">k</span>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mo">∀</span>
+      <span class="mi">k</span>
+      <span width="4pt" class="mspace"/>
+      <span class="mi">i</span>
+      <span class="mi">n</span>
+      <span width="4pt" class="mspace"/>
+      <div class="mrow">
+       <span class="mo">{</span>
+       <span class="mi">B</span>
+       <span class="mo">,</span>
+       <span width="4pt" class="mspace"/>
+       <span class="mi">H</span>
+       <span class="mo">,</span>
+       <span width="4pt" class="mspace"/>
+       <span class="mi">L</span>
+       <span class="mo">}</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div> Where 
+  <span class="italic">a</span>
+  <sub>
+   <span class="italic">k</span>,
+   <span class="italic">i</span>
+  </sub> is a binary value that indicates the presence or absence of the 
+  <span class="italic">i</span>-th appliance of the 
+  <span class="italic">k</span>-th cluster in the household. In this way we obtain for every household three values, one for each cluster, ranging from 0, meaning that the household does not own any appliance in the given cluster, to 1, which means that the household owns every appliance in the given group. Histograms representing the ownership share of each of the three clusters across households can be seen in 
+  <a ref-type="fig" rid="pone.0218702.g001" href="#pone.0218702.g001">Fig 1</a>. The histograms show that while the ownership index of high tech appliances has a somewhat flat distribution, meaning that ownership patterns are widespread among our sample, we observe that both low tech/high power appliances and basic ones have a very specific ownership pattern. People tend to own few lo tech/high power appliances, and many more basic appliances.
+ </p>
+ <div id="pone.0218702.g001" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0218702.g001</span>
+  <span class="label">Fig 1</span>
+  <div class="caption">
+   <div class="title">Histograms of the ownership indices of clusters of appliances, generated using the Ward linkage.</div>
+  </div>
+  <div xlink:href="pone.0218702.g001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+ </div>
+</sec>

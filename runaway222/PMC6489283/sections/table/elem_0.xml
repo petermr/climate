@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div id="Tab1" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+ <span class="label">Table 1</span>
+ <div class="caption">
+  <p>Design decisions made during human-centered design</p>
+ </div>
+ <table frame="hsides" rules="groups">
+  <thead>
+   <tr>
+    <th>Interview observations</th>
+    <th>Design solution - initial design</th>
+    <th>Rationale</th>
+    <th>Iterative improvement based on follow-up interviews</th>
+   </tr>
+  </thead>
+  <tbody>
+   <tr>
+    <td colspan="4">Metrics</td>
+   </tr>
+   <tr>
+    <td> a) Summary measures</td>
+    <td>n patients, n patients by area, n patients by shift, n patients by discharge disposition</td>
+    <td>To give physicians an overview of the patients they saw in a month. Show the area of care and shifts as it might affect case mix</td>
+    <td/>
+   </tr>
+   <tr>
+    <td> b) Length of stay metrics</td>
+    <td>Provider to decision time, overall LOS
+     <span class="sup">a</span> (median)
+    </td>
+    <td>Overall LOS is most important for ED, but provider-decision time is easier to influence by provider</td>
+    <td>‘Provider to decision time’ changed to ‘Room to decision time’ as patients might see another provider in the waiting area (iteration 1)</td>
+   </tr>
+   <tr>
+    <td> c) Utilization of tests</td>
+    <td>CT, MR, US, lab utilization (%)</td>
+    <td>Can be affected by physician and is known to affect LOS</td>
+    <td/>
+   </tr>
+   <tr>
+    <td> d) Outcomes</td>
+    <td>72-h return rates, deaths (%), LOS after admission (median)</td>
+    <td>To address concerns about negative outcomes, return-rates and deaths were included. LOS after admission was included as a proxy measure of appropriateness of admissions</td>
+    <td>Removed deaths as an outcome as it is not feasible to reliably obtain data from EMR (iteration 1)</td>
+   </tr>
+   <tr>
+    <td colspan="4">Comparisons</td>
+   </tr>
+   <tr>
+    <td> a) Over time</td>
+    <td>Monthly intervals</td>
+    <td>Balance between too frequent reports with random variation and too infrequent where physicians don’t remember what happened</td>
+    <td/>
+   </tr>
+   <tr>
+    <td> b) To peers</td>
+    <td>Blinded ranking (e.g. ‘your ranking 46/60’, with outcomes of peers with better or worse numbers shown).
+     <span class="break"/>Overall ED medians are shown on separate page
+    </td>
+    <td>Blinded since all interviewed physicians agreed un-blinded was not desired/needed. A ranking showing neighboring peers was included to give physicians an attainable goal</td>
+    <td>Changed the ranking to interquartile range of peers instead, since the optimum rate is likely someplace in the middle, outliers in either direction can be a problem (iteration 1)</td>
+   </tr>
+   <tr>
+    <td colspan="4">Functionality</td>
+   </tr>
+   <tr>
+    <td> a) Ease of access</td>
+    <td>Monthly email summary with 3 measures that can be selected by ED leadership based on priorities</td>
+    <td>Easy to access</td>
+    <td/>
+   </tr>
+   <tr>
+    <td> b) Drilldown functionality</td>
+    <td>Option to access full dashboard through a link in monthly email</td>
+    <td>Drilldown functionality</td>
+    <td>Added tabs to drill down based on the type of shift (e.g. night) and assigned area. (iteration 1)</td>
+   </tr>
+   <tr>
+    <td> c) Customization</td>
+    <td>Physicians can select measures to show up on their own favorites page
+     <span class="break"/>Leadership can select measures in monthly email
+    </td>
+    <td>Customization options for individual physicians and leadership based on ED priorities</td>
+    <td/>
+   </tr>
+   <tr>
+    <td colspan="4">Barriers</td>
+   </tr>
+   <tr>
+    <td> a) Adverse consequences on quality of care</td>
+    <td>Inclusion of outcomes on dashboard</td>
+    <td>To avoid focus only on throughput and utilization measures, which might result in adverse consequences</td>
+    <td/>
+   </tr>
+   <tr>
+    <td> b) Conflicting teaching responsibilities</td>
+    <td>–</td>
+    <td>As this was not the goal of the dashboard, no measures related to teaching were included</td>
+    <td/>
+   </tr>
+   <tr>
+    <td> c) Data accuracy</td>
+    <td>–</td>
+    <td>Extensive validation of data is required</td>
+    <td>Included definition of the measures on the dashboard.
+     <span class="break"/>Made section headers very clear (iteration 2)
+    </td>
+   </tr>
+   <tr>
+    <td> d) Case-mix adjustment</td>
+    <td>Show total number of patients during different shifts and in different areas of care.</td>
+    <td>By showing these measures, physicians can put other measures in context.</td>
+    <td>Added tabs to drilldown by area of care and type of shift (iteration 1)</td>
+   </tr>
+  </tbody>
+ </table>
+ <div class="table-wrap-foot">
+  <p>
+   <span class="italic">Abbreviations</span>: 
+   <span class="italic">CT</span> computed tomography scan, 
+   <span class="italic">ED</span> emergency department, 
+   <span class="italic">EMR</span> electronic medical record, 
+   <span class="italic">n</span> number, 
+   <span class="italic">MR</span> magnetic resonance imaging, 
+   <span class="italic">US</span> ultrasound
+  </p>
+  <p>
+   <span class="sup">a</span>Overall LOS is only shown on the overall ED page, not on individual physician dashboards
+  </p>
+ </div>
+</div>

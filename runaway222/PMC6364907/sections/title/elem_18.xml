@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="conclusions" id="sec008" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Discussion</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">In this study we were able to show that many different systems are prone to false positives in EWS analysis, when investigating raw data. Large classes of systems, among them exponentially growing systems, systems featuring logistic growth and systems experiencing logarithmic decay, can inherently show an increase in standard deviation as well as autocorrelation at lag 1, which is usually interpreted as an EWS [
+  <a rid="pone.0211072.ref011" ref-type="bibr" href="#pone.0211072.ref011">11</a>]. This means, that especially in systems that resemble such behavior, a traditional EWS analysis is not viable, since it is susceptible to false positives.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We also investigated strategies to circumvent such false positives. While scaling of the analyzed data was not able to remove the false positives, detrending of the data was successful. When looking at the residuals, all false positives disappeared in the investigated systems. All investigated methods of detrending (local first-order polynomial fit, global higher-order polynomial fit and moving averages) lead to the same result. However, using moving averages has some advantages, since it is numerically more efficient and its effect is independent on the chosen window size. Application to real world data of the global surface temperature change substantiated that these findings can be translated from generic to real-world systems. However, there are also some limitations to our study. In order to investigate many different systems within the same framework we rely on data from a model. Although this study suggests that this computer-generated data can be used to gain insight to the properties of data measured in the real world, as substantiated by the analysis of the global temperature change data, this is of course no proof that all the understanding we gain from simulated data can be directly translated to real-life data. Also not all real-life systems can be approximated by the 12 abstract systems we investigated. Systems with more complicated behavior or fluctuations that are neither absolute nor relative are not within the scope of this investigation. Nevertheless, the studied systems can always serve as a starting point for a more thorough analysis of an arbitrary system.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">This study also raises an interesting question: How does detrending affect true positives? Is it possible to have systems with critical transitions that show EWS only in undetrended data? A lot of recent studies use detrending for EWS analysis and to our knowledge none of them report on such a phenomenon, where detrending removes the EWS [
+  <a rid="pone.0211072.ref038" ref-type="bibr" href="#pone.0211072.ref038">38</a>–
+  <a rid="pone.0211072.ref043" ref-type="bibr" href="#pone.0211072.ref043">43</a>]. However, to further substantiate this, one would need to rigorously investigate time series from systems with guaranteed critical transitions that show no EWS after detrending and see if they show EWS if no form of detrending is used. Since studies that fail to find EWS in systems are rarely published because of publication bias, it might be necessary to collect or simulate such data in order to perform such a study, which would be an interesting direction for further investigations.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In conclusion, we showed that systematic false positives in EWS analysis are quite common in many systems which makes it difficult to make accurate predictions about critical transitions in such cases. In order to remove those false positives, data must always be detrended and the EWS analysis performed on the resulting residuals. That way, also systems prone to systematic false positives can be investigated with the usual EWS analysis techniques.</p>
+ <sec id="sec009" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Appendix A—Numerical details of the investigated systems</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The time series 
+   <span class="italic">x</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> of length 
+   <span class="italic">N</span> that were analyzed for EWS were calculated from the following equations: 
+   <div id="pone.0211072.e006" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e006.jpg" id="pone.0211072.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M6" class="math">
+      <div class="mrow">
+       <div class="msub">
+        <span class="mi">x</span>
+        <span class="mi">i</span>
+       </div>
+       <span class="mo">=</span>
+       <div class="mfrac">
+        <span class="mi">i</span>
+        <span class="mi">N</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(LG)</span>
+   </div>
+   <div id="pone.0211072.e007" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e007.jpg" id="pone.0211072.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M7" class="math">
+      <div class="mrow">
+       <div class="msub">
+        <span class="mi">x</span>
+        <span class="mi">i</span>
+       </div>
+       <span class="mo">=</span>
+       <div class="msup">
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mfrac">
+          <span class="mi">i</span>
+          <span class="mi">N</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mn">2</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(QG)</span>
+   </div>
+   <div id="pone.0211072.e008" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e008.jpg" id="pone.0211072.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M8" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span form="prefix" class="mo">exp</span>
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="mfrac">
+            <span class="mi">i</span>
+            <span class="mi">N</span>
+           </div>
+           <span class="mo">-</span>
+           <span class="mn">1</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(EG)</span>
+   </div>
+   <div id="pone.0211072.e009" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e009.jpg" id="pone.0211072.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M9" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span form="prefix" class="mo">ln</span>
+          <span class="mo">(</span>
+          <span class="mn">1</span>
+          <span class="mo">+</span>
+          <div class="mfrac">
+           <span class="mi">i</span>
+           <span class="mi">N</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(LNG)</span>
+   </div>
+   <div id="pone.0211072.e010" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e010.jpg" id="pone.0211072.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M10" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span form="prefix" class="mo">sin</span>
+          <span class="mo">(</span>
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span width="4pt" class="mspace"/>
+            <span class="mi">π</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+            <span width="4pt" class="mspace"/>
+            <span class="mi">N</span>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(TG)</span>
+   </div>
+   <div id="pone.0211072.e011" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e011.jpg" id="pone.0211072.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M11" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <div class="msub">
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <span class="mi">α</span>
+          <span width="4pt" class="mspace"/>
+          <div class="msub">
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span width="4pt" class="mspace"/>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <span class="mn">1</span>
+           <span class="mo">-</span>
+           <div class="msub">
+            <span class="mi">x</span>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">,</span>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mn">1</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mn">0</span>
+          <span class="mo">.</span>
+          <span class="mn">01</span>
+          <span class="mo">,</span>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <span class="mi">α</span>
+          <span class="mo">=</span>
+          <span class="mn">5</span>
+          <span class="mo">/</span>
+          <span class="mi">N</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(LOG)</span>
+   </div>
+   <div id="pone.0211072.e012" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e012.jpg" id="pone.0211072.e012g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M12" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+          <span class="mo">-</span>
+          <div class="mfrac">
+           <span class="mi">i</span>
+           <span class="mi">N</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(LD)</span>
+   </div>
+   <div id="pone.0211072.e013" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e013.jpg" id="pone.0211072.e013g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M13" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+          <span class="mo">-</span>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mfrac">
+             <span class="mi">i</span>
+             <span class="mi">N</span>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(QD)</span>
+   </div>
+   <div id="pone.0211072.e014" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e014.jpg" id="pone.0211072.e014g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M14" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span form="prefix" class="mo">exp</span>
+          <span class="mo">(</span>
+          <div class="mrow">
+           <div class="mfrac">
+            <div class="mrow">
+             <span class="mo">-</span>
+             <span class="mi">i</span>
+            </div>
+            <span class="mi">N</span>
+           </div>
+           <span class="mo">-</span>
+           <span class="mn">1</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(ED)</span>
+   </div>
+   <div id="pone.0211072.e015" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e015.jpg" id="pone.0211072.e015g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M15" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span form="prefix" class="mo">ln</span>
+          <span class="mo">(</span>
+          <span class="mn">2</span>
+          <span class="mo">-</span>
+          <div class="mfrac">
+           <span class="mi">i</span>
+           <span class="mi">N</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(LND)</span>
+   </div>
+   <div id="pone.0211072.e016" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e016.jpg" id="pone.0211072.e016g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M16" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <span form="prefix" class="mo">cos</span>
+          <span class="mo">(</span>
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span width="4pt" class="mspace"/>
+            <span class="mi">π</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+            <span width="4pt" class="mspace"/>
+            <span class="mi">N</span>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(TD)</span>
+   </div>
+   <div id="pone.0211072.e017" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0211072.e017.jpg" id="pone.0211072.e017g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M17" class="math">
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div columnalign="left" class="mtd">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">=</span>
+          <div class="msub">
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">-</span>
+          <span class="mi">α</span>
+          <span width="4pt" class="mspace"/>
+          <div class="msub">
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span width="4pt" class="mspace"/>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <span class="mn">1</span>
+           <span class="mo">-</span>
+           <div class="msub">
+            <span class="mi">x</span>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">,</span>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <div class="msub">
+           <span class="mi">x</span>
+           <span class="mn">1</span>
+          </div>
+          <span class="mo">=</span>
+          <span class="mn">0</span>
+          <span class="mo">.</span>
+          <span class="mn">99</span>
+          <span class="mo">,</span>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <span width="4pt" class="mspace"/>
+          <span class="mi">α</span>
+          <span class="mo">=</span>
+          <span class="mn">5</span>
+          <span class="mo">/</span>
+          <span class="mi">N</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="label">(LOD)</span>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For absolute noise Gaussian-distributed random numbers with mean 0 and standard deviation 0.01 were added to each data point. For relative noise each data point was multiplied by a Gaussian-distributed random number with mean 1 and standard deviation 0.01.</p>
+ </sec>
+</sec>

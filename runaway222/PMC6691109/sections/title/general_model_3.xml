@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">General model</div>
+ <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">We calculated stressor and cumulative impact 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">c</span>
+  </sub> at a ~1 km resolution, based on previously developed methods
+  <span class="sup">
+   <a ref-type="bibr" rid="CR12" href="#CR12">12</a>,
+   <a ref-type="bibr" rid="CR13" href="#CR13">13</a>
+  </span>, using the following information:
+  <div list-type="order" class="list">
+   <div class="list-item">
+    <p id="Par18">Stressor intensity rasters describing the magnitude of 14 stressors on a scale of 0–1 (1 is highest relative stress).</p>
+   </div>
+   <div class="list-item">
+    <p id="Par19">Ecosystem rasters describing the location (1 if present, otherwise NA) of 21 global marine ecosystem types.</p>
+   </div>
+   <div class="list-item">
+    <p id="Par20">Vulnerability matrix describing the vulnerability of each ecosystem to each stressor. Vulnerability is a value from 0–4.</p>
+   </div>
+  </div>
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Stressor impacts, 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">s</span>
+  </sub>, were calculated for each of the 14 stressors by first multiplying the stressor intensity raster, 
+  <span class="italic">D</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub>, by each ecosystem raster, 
+  <span class="italic">E</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>, and the corresponding vulnerability value, 
+  <span class="italic">μ</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub>. The stressor × ecosystem × vulnerability rasters are summed for each stressor and then divided by the number of habitats (
+  <span class="italic">m</span>) in each raster cell:
+  <div id="Equa" class="disp-formula">
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${I}_{s}=\frac{1}{m}\mathop{\sum }\limits_{i=1}^{m}{D}_{j}\times {E}_{i}\times {\mu }_{ij}$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">I</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <span class="mn">1</span>
+      <span class="mi">m</span>
+     </div>
+     <div class="munderover">
+      <span class="mo">∑</span>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mo">=</span>
+       <span class="mn">1</span>
+      </div>
+      <span class="mi">m</span>
+     </div>
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">D</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">μ</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">j</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_47201_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">Cumulative impact, 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">c</span>
+  </sub>, is calculated by summing the 14 stressor impact rasters:
+  <div id="Equb" class="disp-formula">
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${I}_{c}=\mathop{\sum }\limits_{i=1}^{m}{I}_{s}$$\end{document}</span>
+    <div id="M4" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">I</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">c</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="munderover">
+      <span class="mo">∑</span>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mo">=</span>
+       <span class="mn">1</span>
+      </div>
+      <span class="mi">m</span>
+     </div>
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">s</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_47201_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+</sec>

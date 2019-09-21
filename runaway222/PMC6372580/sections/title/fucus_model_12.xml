@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec13" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Fucus model</div>
+ <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">We denote the 
+  <span class="italic">Fucus</span> observations by 
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${y}_{i}$$\end{document}</span>
+    <div id="M2" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">y</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, where 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${y}_{i}=\varnothing $$\end{document}</span>
+    <div id="M4" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">y</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">∅</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> corresponds to the absence of 
+  <span class="italic">Fucus</span> in the survey data and the death of 
+  <span class="italic">Fucus</span> within the study period in the experimental data, and where 
+  <div id="IEq3" class="inline-formula">
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${y}_{i}\in {\mathbb{R}}$$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">y</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">∈</span>
+     <span class="mi">ℝ</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> corresponds to a logarithmic estimate of the biomass (survey data) or growth of 
+  <span class="italic">Fucus</span> (experimental data), given it is present, in the 
+  <div id="IEq4" class="inline-formula">
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$i\,$$\end{document}</span>
+    <div id="M8" class="math">
+     <span class="mi">i</span>
+     <span width=".25em" class="mspace"/>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>th observation. In order to cover both presence/absence and biomass or growth observations, we built a hurdle model so that
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p({y}_{i}|{\pi }_{i},{\mu }_{i},{\tau }_{i}^{2})=\{\begin{array}{c}(1-{\pi }_{i})\\ {\pi }_{i}\times N({y}_{i}|{\mu }_{i},{\tau }_{i}^{2})\end{array}\begin{array}{c}\,\mathrm{if}\,{y}_{i}=\varnothing \\ \,\mathrm{if}\,{y}_{i}\in {\mathbb{R}},\end{array}$$\end{document}</span>
+    <div id="M10" display="block" class="math">
+     <span class="mi">p</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">y</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">|</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">τ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <div class="mrow">
+      <span stretchy="true" class="mo">{</span>
+      <div class="mrow">
+       <div class="mtable">
+        <div class="mtr">
+         <div class="mtd">
+          <div class="mrow">
+           <span stretchy="true" class="mo">(</span>
+           <div class="mrow">
+            <span class="mn">1</span>
+            <span class="mo">−</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">π</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span stretchy="true" class="mo">)</span>
+          </div>
+         </div>
+        </div>
+        <div class="mtr">
+         <div class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">π</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">×</span>
+           <span class="mi">N</span>
+           <span stretchy="false" class="mo">(</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">y</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span stretchy="false" class="mo">|</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">μ</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <div class="msubsup">
+            <div class="mrow">
+             <span class="mi">τ</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <span stretchy="false" class="mo">)</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mtable">
+        <div class="mtr">
+         <div class="mtd">
+          <div class="mrow">
+           <span width=".25em" class="mspace"/>
+           <span class="mi">if</span>
+           <span width=".25em" class="mspace"/>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">y</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <span class="mi">∅</span>
+          </div>
+         </div>
+        </div>
+        <div class="mtr">
+         <div class="mtd">
+          <div class="mrow">
+           <span width=".25em" class="mspace"/>
+           <span class="mi">if</span>
+           <span width=".25em" class="mspace"/>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">y</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">∈</span>
+           <span class="mi">ℝ</span>
+           <span class="mo">,</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2018_38416_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <div id="IEq5" class="inline-formula">
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\pi }_{i}$$\end{document}</span>
+    <div id="M12" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the probability of occurrence of 
+  <span class="italic">Fucus</span> and 
+  <div id="IEq6" class="inline-formula">
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$N({y}_{i}|{\mu }_{i},{\tau }_{i}^{2})$$\end{document}</span>
+    <div id="M14" class="math">
+     <span class="mi">N</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">y</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">|</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">τ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the Gaussian probability density function with mean 
+  <div id="IEq7" class="inline-formula">
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mu }_{i}$$\end{document}</span>
+    <div id="M16" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and variance 
+  <div id="IEq8" class="inline-formula">
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\tau }_{i}^{2}$$\end{document}</span>
+    <div id="M18" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">τ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. We used one variance parameter, 
+  <div id="IEq9" class="inline-formula">
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\tau }_{{\rm{exper}}}^{2}$$\end{document}</span>
+    <div id="M20" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">τ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">exper</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq9.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, for all experimental observations and another variance parameter, 
+  <div id="IEq10" class="inline-formula">
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\tau }_{{\rm{dist}}}^{2}$$\end{document}</span>
+    <div id="M22" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">τ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">dist</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq10.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, for all distribution observations. For ease of implementation we standardized both data to have zero mean and standard deviation of one before estimating the model parameters. Since we follow the Bayesian approach we gave the variance parameters a prior distribution. We used a half Student-
+  <span class="italic">t</span> distribution with mean zero and scale 1 which gives weak prior preference for small variances but allows also the data to be explained as pure noise.
+ </p>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">In the case of distribution data, we modelled the mean of the Gaussian distribution, 
+  <div id="IEq11" class="inline-formula">
+   <div class="alternatives">
+    <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mu }_{i},$$\end{document}</span>
+    <div id="M24" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq11.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and the logarithm of the odds ratio of the occurrence probability, 
+  <div id="IEq12" class="inline-formula">
+   <div class="alternatives">
+    <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${{\rm{logit}}}^{-1}({\pi }_{i})=\,\mathrm{log}(\frac{{\pi }_{i}}{1-{\pi }_{i}})$$\end{document}</span>
+    <div id="M26" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">logit</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <span width=".25em" class="mspace"/>
+     <span class="mi">log</span>
+     <div class="mrow">
+      <span stretchy="true" class="mo">(</span>
+      <div class="mrow">
+       <div class="mfrac">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">π</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">−</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">π</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq12.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, as functions of salinity, temperature, depth and spatial location so that, e.g., 
+  <div id="IEq13" class="inline-formula">
+   <div class="alternatives">
+    <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mu }_{i}=\alpha +{f}_{{\rm{ST}}}({x}_{{\rm{S}},i},{x}_{{\rm{T}},i})+{f}_{{\rm{D}}}({x}_{{\rm{D}},i})+{\rm{\varphi }}({s}_{i})$$\end{document}</span>
+    <div id="M28" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">α</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span stretchy="true" class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">x</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">S</span>
+         <span class="mo">,</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">x</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">T</span>
+         <span class="mo">,</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">)</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">D</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span stretchy="true" class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">x</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">D</span>
+         <span class="mo">,</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">)</span>
+     </div>
+     <span class="mo">+</span>
+     <span mathvariant="normal" class="mi">φ</span>
+     <div class="mrow">
+      <span stretchy="true" class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq13.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. We will denote these additive models for 
+  <div id="IEq14" class="inline-formula">
+   <div class="alternatives">
+    <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${{\rm{logit}}}^{-1}({\pi }_{i})$$\end{document}</span>
+    <div id="M30" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">logit</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">π</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq14.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq15" class="inline-formula">
+   <div class="alternatives">
+    <span id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mu }_{i}$$\end{document}</span>
+    <div id="M32" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq15.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> respectively as 
+  <span class="italic">occurrence and biomass models</span>. Here,
+  <div id="IEq16" class="inline-formula">
+   <div class="alternatives">
+    <span id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\,\alpha $$\end{document}</span>
+    <div id="M34" class="math">
+     <span width=".25em" class="mspace"/>
+     <span class="mi">α</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq16.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the intercept, which was given a vague 
+  <div id="IEq17" class="inline-formula">
+   <div class="alternatives">
+    <span id="M35" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$N(0,10)$$\end{document}</span>
+    <div id="M36" class="math">
+     <span class="mi">N</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mn">0</span>
+     <span class="mo">,</span>
+     <span class="mn">10</span>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq17.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> prior, ϕ is the spatial random effect, 
+  <div id="IEq18" class="inline-formula">
+   <div class="alternatives">
+    <span id="M37" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${f}_{{\rm{ST}}}$$\end{document}</span>
+    <div id="M38" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq18.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the response function along temperature, 
+  <div id="IEq19" class="inline-formula">
+   <div class="alternatives">
+    <span id="M39" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${x}_{{\rm{T}}}$$\end{document}</span>
+    <div id="M40" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">x</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">T</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq19.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, and salinity, 
+  <div id="IEq20" class="inline-formula">
+   <div class="alternatives">
+    <span id="M41" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${x}_{{\rm{S}}}$$\end{document}</span>
+    <div id="M42" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">x</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">S</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq20.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, and 
+  <div id="IEq21" class="inline-formula">
+   <div class="alternatives">
+    <span id="M43" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${f}_{{\rm{D}}}$$\end{document}</span>
+    <div id="M44" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">D</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq21.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the response function along depth, 
+  <div id="IEq22" class="inline-formula">
+   <div class="alternatives">
+    <span id="M45" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${x}_{{\rm{D}}}$$\end{document}</span>
+    <div id="M46" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">x</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">D</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq22.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. The depth function accounts for different light, nutrient and wave force conditions in sampling sites and the spatial random effect accounts for spatially correlated overdispersion in the data, which causes nearby areas to have similar biomasses because of, for example, associations unexplained by the available covariates
+  <span class="sup">
+   <a ref-type="bibr" rid="CR5" href="#CR5">5</a>,
+   <a ref-type="bibr" rid="CR6" href="#CR6">6</a>,
+   <a ref-type="bibr" rid="CR15" href="#CR15">15</a>
+  </span>. The depth function and spatial random effect were set to zero for all experimental observations.
+ </p>
+ <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">Fucus</span> and 
+  <span class="italic">Idotea</span> have a lower physical tolerance limit to salinity at around 4 and 3, respectively
+  <span class="sup">
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>,
+   <a ref-type="bibr" rid="CR95" href="#CR95">95</a>
+  </span>; above these thresholds survival and growth rise and level-off at a saturation point
+  <span class="sup">
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>,
+   <a ref-type="bibr" rid="CR50" href="#CR50">50</a>,
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span>. Since 
+  <span class="italic">Fucus</span> and 
+  <span class="italic">Idotea</span> are boreal species and they do not like either too cold or warm environments
+  <span class="sup">
+   <a ref-type="bibr" rid="CR96" href="#CR96">96</a>
+  </span> the response along temperature is positive at low temperatures and negative at large temperatures with optimal summer temperature at around 14–20 degrees
+  <span class="sup">
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>,
+   <a ref-type="bibr" rid="CR95" href="#CR95">95</a>
+  </span>. However, the exact functional form of the responses is unknown and it is likely that temperature and salinity have also joint effects
+  <span class="sup">
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>. Hence, constructing a parametric model for the effects of salinity and temperature would be challenging. For this reason we modeled them using semi-parametric GP models. A GP is a stochastic process that defines probability distribution for functions. It is defined by a mean function and a covariance function, which determine the 
+  <span class="italic">a priori</span> assumptions on properties of the process
+  <span class="sup">
+   <a ref-type="bibr" rid="CR97" href="#CR97">97</a>
+  </span>; such as how large and how fast (smoothness) the responses along temperature and salinity are. The exact form of the response function is then estimated from the data by solving the posterior of the functions using the Bayes theorem
+  <span class="sup">
+   <a ref-type="bibr" rid="CR9" href="#CR9">9</a>,
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>,
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+  </span>.
+ </p>
+ <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">We gave the GP prior of 
+  <div id="IEq23" class="inline-formula">
+   <div class="alternatives">
+    <span id="M47" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${f}_{{\rm{ST}}}$$\end{document}</span>
+    <div id="M48" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq23.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> zero mean and Gaussian covariance function
+  <div id="Equa" class="disp-formula">
+   <div class="alternatives">
+    <span id="M49" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{\rm{Cov}}({f}_{{\rm{ST}}}({x}_{{\rm{S}},i},{x}_{{\rm{T}},i}),\,{f}_{{\rm{ST}}}({x}_{{\rm{S}},j},\,{x}_{{\rm{T}},j}))={\sigma }_{{\rm{ST}}}^{2}{{\rm{e}}}^{-{r}_{ij}^{2}}\,{\rm{where}}\\ {r}_{ij}=\sqrt{{({x}_{{\rm{T}},i}-{x}_{{\rm{T}},j})}^{2}/{\lambda }_{{\rm{T}}}^{2}-{({x}_{{\rm{S}},i}-{x}_{{\rm{S}},j})}^{2}/{\lambda }_{{\rm{S}}}^{2}}\end{array}$$\end{document}</span>
+    <div id="M50" display="block" class="math">
+     <div columnalign="left" class="mtable">
+      <div class="mtr">
+       <div class="mtd">
+        <span mathvariant="normal" class="mi">Cov</span>
+        <div class="mrow">
+         <span stretchy="true" class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">f</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">ST</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span stretchy="true" class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">x</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">S</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+            <span class="mo">,</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">x</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">T</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span stretchy="true" class="mo">)</span>
+          </div>
+          <span class="mo">,</span>
+          <span width=".25em" class="mspace"/>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">f</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">ST</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span stretchy="true" class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">x</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">S</span>
+              <span class="mo">,</span>
+              <span class="mi">j</span>
+             </div>
+            </div>
+            <span class="mo">,</span>
+            <span width=".25em" class="mspace"/>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">x</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">T</span>
+              <span class="mo">,</span>
+              <span class="mi">j</span>
+             </div>
+            </div>
+           </div>
+           <span stretchy="true" class="mo">)</span>
+          </div>
+         </div>
+         <span stretchy="true" class="mo">)</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span class="mi">σ</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">ST</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <div class="msup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">e</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">−</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mi">r</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mi">j</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span width=".25em" class="mspace"/>
+        <span mathvariant="normal" class="mi">where</span>
+       </div>
+      </div>
+      <div class="mtr">
+       <div class="mtd">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">r</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">=</span>
+        <div class="msqrt">
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span stretchy="true" class="mo">(</span>
+            <div class="mrow">
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">x</span>
+              </div>
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">T</span>
+               <span class="mo">,</span>
+               <span class="mi">i</span>
+              </div>
+             </div>
+             <span class="mo">−</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">x</span>
+              </div>
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">T</span>
+               <span class="mo">,</span>
+               <span class="mi">j</span>
+              </div>
+             </div>
+            </div>
+            <span stretchy="true" class="mo">)</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">/</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mi">λ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mo">−</span>
+          <div class="msup">
+           <div class="mrow">
+            <span stretchy="true" class="mo">(</span>
+            <div class="mrow">
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">x</span>
+              </div>
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">S</span>
+               <span class="mo">,</span>
+               <span class="mi">i</span>
+              </div>
+             </div>
+             <span class="mo">−</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">x</span>
+              </div>
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">S</span>
+               <span class="mo">,</span>
+               <span class="mi">j</span>
+              </div>
+             </div>
+            </div>
+            <span stretchy="true" class="mo">)</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">/</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mi">λ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">S</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2018_38416_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>is the scaled Euclidean distance between salinity-temperature locations, 
+  <div id="IEq24" class="inline-formula">
+   <div class="alternatives">
+    <span id="M51" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\sigma }_{{\rm{ST}}}^{2}$$\end{document}</span>
+    <div id="M52" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq24.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the variance parameter governing the magnitude of the effect and 
+  <div id="IEq25" class="inline-formula">
+   <div class="alternatives">
+    <span id="M53" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\lambda $$\end{document}</span>
+    <div id="M54" class="math">
+     <span class="mi">λ</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq25.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are the length-scale parameters that govern the smoothness of responses along temperature and salinity. The variance and length-scale parameters were estimated so we gave priors for them. We used a half Studen
+  <span class="italic">t</span>-
+  <span class="italic">t</span> distribution with mean zero and scale one for 
+  <div id="IEq26" class="inline-formula">
+   <div class="alternatives">
+    <span id="M55" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\sigma }_{{\rm{ST}}}$$\end{document}</span>
+    <div id="M56" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq26.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> which gives equal prior weight to temperature-salinity effect as to the random variation in (1). In order to avoid too flexible response functions the length-scales should be of the same order of magnitude as the range of covariates
+  <span class="sup">
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+  </span>. The modeled salinity range is from 0 to 30 and the modeled temperature range is from 12 to 20 degrees. Hence, we gave the length-scales log-Gaussian prior distributions with location and scale parameters such that 90% of the prior probabilities were included within the salinity range 11–28 with median of 18 and the temperature range 5.5–13.5 degrees with median of 8.5 degrees. This ensures that the 
+  <span class="italic">a priori</span> plausible functions can change rapidly but do not have many modes within the study limits (See Supplement). Moreover, in order to include the 
+  <span class="italic">a priori</span> qualitative information that 
+  <div id="IEq27" class="inline-formula">
+   <div class="alternatives">
+    <span id="M57" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${f}_{{\rm{ST}}}$$\end{document}</span>
+    <div id="M58" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq27.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> should be increasing with increasing salinities greater than 5, and that it should be decreasing with increasing temperatures above 20 degrees, we set constraints to the derivatives of 
+  <div id="IEq28" class="inline-formula">
+   <div class="alternatives">
+    <span id="M59" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${f}_{{\rm{ST}}}$$\end{document}</span>
+    <div id="M60" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq28.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. These biologically realistic constraints were encoded into the model by virtual derivative observations
+  <span class="sup">
+   <a ref-type="bibr" rid="CR98" href="#CR98">98</a>
+  </span>. We constructed two lattice grids, one that covered the modeled temperature range and salinities from 5 to 25 and another that covered the modeled salinity range at 24 degrees temperature. At the nodes of the former lattice we imposed positive derivative constraint along salinity by defining a probit likelihood function for the derivative of the latent function 
+  <div id="IEq29" class="inline-formula">
+   <div class="alternatives">
+    <span id="M61" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Phi }}(\partial {f}_{{\rm{ST}}}/\partial {x}_{S})$$\end{document}</span>
+    <div id="M62" class="math">
+     <span mathvariant="normal" class="mi">Φ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">∂</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+     <span class="mo">/</span>
+     <span class="mi">∂</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">x</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq29.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, where 
+  <div id="IEq30" class="inline-formula">
+   <div class="alternatives">
+    <span id="M63" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Phi }}(\,\cdot \,)$$\end{document}</span>
+    <div id="M64" class="math">
+     <span mathvariant="normal" class="mi">Φ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span width="-.25em" class="mspace"/>
+     <span class="mo">⋅</span>
+     <span width="-.25em" class="mspace"/>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq30.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the standard Gaussian cumulative distribution function
+  <span class="sup">
+   <a ref-type="bibr" rid="CR98" href="#CR98">98</a>
+  </span>. At the nodes of the latter lattice we imposed negative derivative constraint along temperature with likelihood 
+  <div id="IEq31" class="inline-formula">
+   <div class="alternatives">
+    <span id="M65" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Phi }}(\,-\,\partial {f}_{{\rm{ST}}}/\partial {x}_{{\rm{T}}})$$\end{document}</span>
+    <div id="M66" class="math">
+     <span mathvariant="normal" class="mi">Φ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span width="-.25em" class="mspace"/>
+     <span class="mo">−</span>
+     <span width="-.25em" class="mspace"/>
+     <span class="mi">∂</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ST</span>
+      </div>
+     </div>
+     <span class="mo">/</span>
+     <span class="mi">∂</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">x</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">T</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2018_38416_Article_IEq31.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. The resolution of the lattices was set so that they impose the monotonicity constraint with length-scales above their 
+  <span class="italic">a priori</span> plausible values. See Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> for illustration.
+ </p>
+ <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">We modeled also the effect of depth on 
+  <span class="italic">Fucus</span> occurrence probability and biomass using a GP with zero mean and Gaussian covariance function. The spatial random effect was modeled with a spatial GP with zero mean and an exponential covariance function,
+  <div id="Equb" class="disp-formula">
+   <div class="alternatives">
+    <span id="M67" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{Cov}}({{\rm{\varphi }}}_{{\rm{\varphi }}}({s}_{i}),{{\rm{\varphi }}}_{{\rm{\varphi }}}({s}_{j}))={\sigma }_{{\rm{\varphi }}}^{2}{{\rm{e}}}^{-\sqrt{{\Sigma }_{d=1}^{2}{({s}_{d,i}-{s}_{d,j})}^{2}/{\lambda }_{{\rm{\varphi }}}^{2}}}.$$\end{document}</span>
+    <div id="M68" display="block" class="math">
+     <span mathvariant="normal" class="mi">Cov</span>
+     <div class="mrow">
+      <span stretchy="true" class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">φ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">φ</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span stretchy="true" class="mo">(</span>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">s</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+        </div>
+        <span stretchy="true" class="mo">)</span>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">φ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">φ</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span stretchy="true" class="mo">(</span>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">s</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+        </div>
+        <span stretchy="true" class="mo">)</span>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">φ</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">e</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">−</span>
+       <div class="msqrt">
+        <div class="mrow">
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">Σ</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">d</span>
+           <span class="mo">=</span>
+           <span class="mi">1</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <div class="msup">
+          <div class="mrow">
+           <span stretchy="true" class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">s</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">d</span>
+              <span class="mo">,</span>
+              <span class="mi">i</span>
+             </div>
+            </div>
+            <span class="mo">−</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">s</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">d</span>
+              <span class="mo">,</span>
+              <span class="mi">j</span>
+             </div>
+            </div>
+           </div>
+           <span stretchy="true" class="mo">)</span>
+          </div>
+          <span class="mn">2</span>
+         </div>
+         <span class="mo">/</span>
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">λ</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">φ</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">2</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41598_2018_38416_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">We used again a half Student-
+  <span class="italic">t</span> distribution with mean zero and scale one for the standard deviation parameters. In order to give more weight to smooth unimodal functions, the length-scale parameter of the depth effect was given a Gaussian prior with mean five meters and standard deviation 1. The inverse of the spatial length-scale was given a half Student-
+  <span class="italic">t</span> prior which gives more weight to smooth spatial random effects and in the absence of spatial autocorrelation shrinks the spatial random effect to constant.
+ </p>
+</sec>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec005" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Species distribution modelling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The SDMs were estimated by running two different algorithms within the biomod2 package on R [
+  <a rid="pone.0215229.ref044" ref-type="bibr" href="#pone.0215229.ref044">44</a>]: generalised linear models (GLM [
+  <a rid="pone.0215229.ref045" ref-type="bibr" href="#pone.0215229.ref045">45</a>]) and maximum entropy (Maxent [
+  <a rid="pone.0215229.ref046" ref-type="bibr" href="#pone.0215229.ref046">46</a>]). We generated three sets of pseudo-absence data containing ten times the number of presence data points randomly distributed for each species [
+  <a rid="pone.0215229.ref047" ref-type="bibr" href="#pone.0215229.ref047">47</a>]. The data sets were then partitioned so that 80% were used to calibrate the models, while the remaining 20% were used for the evaluation. Model performance was assessed with the True Skill Statistics (TSS; threshold-dependent [
+  <a rid="pone.0215229.ref048" ref-type="bibr" href="#pone.0215229.ref048">48</a>]) and the receiver operating characteristic curve analysis (ROC; threshold-independent [
+  <a rid="pone.0215229.ref046" ref-type="bibr" href="#pone.0215229.ref046">46</a>]), this procedure was repeated ten times for cross-validation, and the models with poor performance (TSS&lt;0.5) were eliminated from the ensemble process. We also report sensitivity (percentage of true positives), specificity (percentage of true negatives) and assessed the predictor variable importance using the tables of permutation importance.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Finally, we summarized the ensemble of predicted species distributions (two algorithms x three pseudo-absences x models with TSS&gt;0.5) using the committee average method, where probabilities from different models were first transformed into binary according to a threshold (here, the TSS cut-off threshold) and then averaged [
+  <a rid="pone.0215229.ref044" ref-type="bibr" href="#pone.0215229.ref044">44</a>]. In the end, seven consensual maps were generated per species (one for each scenario: current, and RCPs 2.6, 6.0, 8.5 for 2050 and 2070).
+ </p>
+</sec>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Method</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used a process-based mathematical model with three compartments based on the lifecycle of 
+  <span class="italic">A. aegypti</span>: Larvae, Pupae, and Adults (see 
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Supplementary Material, S1</a>) (
+  <a rid="B20" ref-type="bibr" href="#B20">20</a>). Two models are used in this study: Model A uses only climate as the driving force (
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Figure S1A</a>) to estimate the vector potential abundance; Model B uses climate, gross domestic product per capita (GDPpc), and human population as the driving forces (
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Figure S1B</a>) to estimate vector density. The modeling framework, differential equations and model parameters used are described in the 
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Supplementary Material</a>. Potential vector abundance is defined as the average number of female vectors during a given time period that can be generated from each larval site, and is fully dependent on climatic conditions. The number of larval sites per square kilometer is estimated through human population density and GDPpc. From this, potential vector abundance is transformed to estimate the actual vector density.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">All the mosquitoes' vital rates (birth, death, and transition) depend on temperature and/or precipitation (
+  <a rid="B26" ref-type="bibr" href="#B26">26</a>). In addition, the egg-to-larva hatching fraction depends on the larval population and environmental carrying capacity, due to competition for survival (
+  <a rid="B27" ref-type="bibr" href="#B27">27</a>). The whole lifecycle from egg to adult takes one to a few weeks on average, depending on temperature and precipitation (
+  <a rid="B20" ref-type="bibr" href="#B20">20</a>). Those temperature dependent parameters are obtained from laboratory studies (
+  <a rid="B28" ref-type="bibr" href="#B28">28</a>) and precipitation dependent parameters were modeled (
+  <a rid="B20" ref-type="bibr" href="#B20">20</a>) and validated against local dengue outbreaks (
+  <a rid="B25" ref-type="bibr" href="#B25">25</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In Model A, the external variables include only climate forcing, temperature and rainfall, as the influencing factors to the vector's development, vital rates and environmental carrying capacity for larvae, assuming ideal situation for fecundity rate. Model B expands Model A through two terms: the fecundity rate and the environmental carrying capacity for larvae. A human blood meal factor is included in the fecundity rate to account for the blood meals needed for the mosquito's reproduction. A larval site density is included in the environmental carrying capacity for larvae to account for human contributions to the larval (breeding) sites. The larval site density involves two factors: human population density and GDPpc (see 
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Figure S1B</a> and Equation 1B), to simulate the human creation of extra larval breeding sites.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Climate data on monthly mean temperature and rainfall were obtained from CRU TS3.25 (1901–2016) (
+  <a rid="B29" ref-type="bibr" href="#B29">29</a>) and ISIMIP (GCM, CMIP5 2006–2099) (
+  <a rid="B30" ref-type="bibr" href="#B30">30</a>) for two future scenarios, RCP2.6 and RCP8.5. Socio-economic data on yearly global GDP and human population density were obtained from ISIMIP (1950–2099) (
+  <a rid="B30" ref-type="bibr" href="#B30">30</a>) based on scenarios SSP2 (Shared Socioeconomic Pathways) (
+  <a rid="B31" ref-type="bibr" href="#B31">31</a>). All data are gridded (0.5 ×0.5 degrees). Spline interpolation function was used to obtain continuous data before solving the equations. The parameters used in the model were documented and are described in 
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Tables S1A,B</a>. Programs 
+  <span class="italic">Wolfram Mathematica</span> 11 and 
+  <span class="italic">R</span> (package deSolve 1.20) (
+  <a rid="B32" ref-type="bibr" href="#B32">32</a>) are used to obtain time series vector population and abundance values, and to generate global maps.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Humans contribute to the larval sites directly or indirectly through agriculture, polyculture, and urbanization (
+  <a rid="B10" ref-type="bibr" href="#B10">10</a>, 
+  <a rid="B11" ref-type="bibr" href="#B11">11</a>, 
+  <a rid="B33" ref-type="bibr" href="#B33">33</a>), therefore increasing the environmental carrying capacity for larval development which is captured in Model B. In general, the higher the human population in a given area (ρ), the more the larval sites (
+  <span class="italic">d</span>). The lower the socio-economic level, the more the water storage and waste containers that allow 
+  <span class="italic">Aedes</span> mosquito to develop. We assume that the number of larval sites 
+  <span class="italic">d</span> is proportional to the human population and inversely proportional to the economic level, which we approximate by the square root of the ratio of GDP/capita (
+  <span class="italic">g</span>) to the world average value (
+  <span class="italic">g</span>
+  <sub>
+   <span class="italic">a</span>
+  </sub>)—see Equation (5) in 
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Supplementary Material</a> (
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Table S1B</a>) for details. Human contribution to blood meals is accounted as an extra factor 
+  <span class="italic">h</span> (human blood-meal factor), which describes the possible reduction in oviposition rate outside laboratory (ideal) conditions.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The details are described in the 
+  <a ref-type="supplementary-material" rid="SM1" href="#SM1">Supplementary Material</a>—how the variables or model parameters relate to weather, human population, and GDPpc (see S2). We also show the parameters' optimization by calibrating the model output of female 
+  <span class="italic">A. aegypti</span> adult population of Model B to the field study in Brazil [S3, (
+  <a rid="B34" ref-type="bibr" href="#B34">34</a>)]. In addition, we have performed sensitivity analysis to test how the nine model parameters used affect the model output for six cities in the world using Model B (S4). Finally, we have validated our models through comparison of the global maps generated with the existing global occurrence data.
+ </p>
+</sec>

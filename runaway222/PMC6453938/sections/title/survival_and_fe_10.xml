@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec11" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Survival and fecundity as functions of density and climate</div>
+ <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">We obtained 9090 posterior samples from the IPM
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>,
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>, each of them consisting of annual age-class-specific demographic rates (i.e. survival and fecundity) and population sizes from 1994 to 2014. For each of these posterior samples, we investigated the effects of weather and population density on survival and fecundity, generating in total 9090 population models. First, the effects of weather and population density on survival 
+  <span class="italic">S</span> of each age class 
+  <span class="italic">i</span> at year 
+  <span class="italic">t</span> were estimated separately for each posterior sample (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>, Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>), using linear mixed-effects models (function 
+  <span class="italic">lme</span> in 
+  <span class="italic">R</span> package 
+  <span class="italic">nlme</span>). As survival might be negatively affected by an increase in population size 
+  <span class="italic">N</span>
+  <sub>posthunt</sub> (i.e. number of calves + adult females at the end of the hunting season), we tested for an effect of (scaled) population size in year 
+  <span class="italic">t</span> on survival. We fitted a density-dependent ROS effect
+  <span class="sup">
+   <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+  </span> (cf. Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1c</a>) using the form 
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{ROS}}_t^\prime = {\mathrm{ROS}}_t \times {\mathrm{e}}^{k \times N_{{\mathrm{posthunt}},t}}$$\end{document}</span>
+    <div id="M2" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ROS</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">′</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ROS</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">×</span>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">e</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">k</span>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">N</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">posthunt</span>
+         <span class="mo">,</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_9332_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> (see ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span> for a similar approach). This form of the interaction effect ensures that the effect of ROS is strictly negative or positive (depending on the fitted coefficient of ROS’) for all values of 
+  <span class="italic">N</span>
+  <sub>posthunt</sub> (Supplementary Figs. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">8</a> and 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">9</a>). In contrast, the simpler and more common specification of an interaction effect, such as 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$k \times {\mathrm{ROS}}_t \times N_{{\mathrm{posthunt}},t}$$\end{document}</span>
+    <div id="M4" class="math">
+     <span class="mi">k</span>
+     <span class="mo">×</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">ROS</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">×</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">posthunt</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_9332_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, would implicitly lead to a switch in sign of the effect of ROS at some level of 
+  <span class="italic">N</span>, and the stronger the interaction effect, the more likely it is that the change of sign is well within data range. Note that 
+  <span class="italic">k</span> was estimated using an optimization function aiming at minimizing Akaike’s Information Criteria. Moreover, mean survival is likely to differ among age classes, and the effect of climate may also differ among age classes (e.g. ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+  </span>), thus we included an interaction between age and the density-dependent ROS effect. Finally, year was added as a fixed (numeric) effect to account for trends. Year was also added as a random (intercept) effect to account for non-independence among age classes, leading to a survival model with the following form:
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{l}} {{\mathrm{logit}}(S_{i,t})} \hfill &amp; = \hfill &amp; {a_i + N_{{\mathrm{posthunt}},t} + {\mathrm{year}} + {\mathrm{ROS}}_t^\prime + {\mathrm{ROS}}_t^\prime \times a_i} \hfill \\ {} \hfill &amp; {} \hfill &amp; { +\, {\mathrm{length}}\_{\mathrm{winter}}_t + {\mathrm{random}}({\mathrm{year}}) + \varepsilon _{S_{i,t}}} \hfill \end{array}$$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">logit</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">S</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">N</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">posthunt</span>
+          <span class="mo">,</span>
+          <span class="mi">t</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span mathvariant="normal" class="mi">year</span>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">ROS</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">′</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">ROS</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">′</span>
+         </div>
+        </div>
+        <span class="mo">×</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">+</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">length</span>
+        <div class="mstyle">
+         <span class="mtext">_</span>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">winter</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span mathvariant="normal" class="mi">random</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">year</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ε</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">S</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9332_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">a</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the age class 
+  <span class="italic">i</span>, 
+  <span class="italic">N</span>
+  <sub>posthunt,
+   <span class="italic">t</span>
+  </sub> is population size just at the end of the hunting season, and 
+  <span class="italic">ε</span>
+  <sub>
+   <span class="italic">S</span>
+  </sub> is the residuals of the regression. The posterior distributions of the parameters of Eq. (
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>) shown in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> represent a combination of uncertainty due to finite time series, uncertainty stemming from stochasticity, and uncertainty in the IPM. Likewise, we ran a model of similar structure for fecundity 
+  <span class="italic">F</span> of each age class 
+  <span class="italic">i</span> at year 
+  <span class="italic">t</span>, as females produce at most one calf per year (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). Note that there is one age class less than in the survival analysis, as calves do not get pregnant:
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{l}} {{\mathrm{logit}}(F_{i,t})} \hfill &amp; = \hfill &amp; {a_i + N_{{\mathrm{posthunt}},t} + {\mathrm{year}} + {\mathrm{ROS}}_t^\prime + {\mathrm{ROS}}_t^\prime \times a_i} \hfill \\ {} \hfill &amp; {} \hfill &amp; { +\, {\mathrm{length}}\_{\mathrm{winter}}_t + {\mathrm{random}}({\mathrm{year}}) + \varepsilon _{F_{i,t}}} \hfill \end{array}$$\end{document}</span>
+    <div id="M8" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span mathvariant="normal" class="mi">logit</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">F</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">N</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">posthunt</span>
+          <span class="mo">,</span>
+          <span class="mi">t</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span mathvariant="normal" class="mi">year</span>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">ROS</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">′</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">ROS</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">′</span>
+         </div>
+        </div>
+        <span class="mo">×</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">+</span>
+        <span width="0.3em" class="mspace"/>
+        <span mathvariant="normal" class="mi">length</span>
+        <div class="mstyle">
+         <span class="mtext">_</span>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">winter</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">t</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span mathvariant="normal" class="mi">random</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">year</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ε</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">F</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_9332_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Again, the posterior distributions of the parameters of Eq. 
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a> shown in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> represent a combination of uncertainties (see above for survival). Six and five age classes were considered for survival and fecundity, respectively
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>,
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. We assumed equal survival and fecundity among ages 3–8 years, among ages 9–11 years, and among ages &gt;11 years.
+ </p>
+</sec>
