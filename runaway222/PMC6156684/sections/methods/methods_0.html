@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="methods" title="methods">
+      <div xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+      <p xmlns="http://www.w3.org/1999/xhtml">Our implementation of CQG uses a CRM, here the System for Atmospheric Modeling (
+         <a>33</a>), to explicitly resolve small-scale convection in a limited domain. As in our previous
+         studies (
+         <a>21</a>, 
+         <a>22</a>), we parameterize the large-scale vertical motion using the single-wavenumber (
+         
+         <div>
+            <div><span>k</span></div>
+         </div>) QG 
+         
+         <div>
+            <div><span>ω</span></div>
+         </div> equation:
+         
+         <div>
+            <div>
+               <div>
+                  <div><span>∂</span></div>
+                  <div><span>p</span><span>p</span></div>
+               </div><span>ω</span><span>−</span><span>σ</span><div>
+                  <div>
+                     <div><span>(</span><div>
+                           <div>
+                              <div><span>k</span></div>
+                              <div>
+                                 <div>
+                                    <div><span>f</span></div>
+                                    <div><span>0</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div><span>)</span></div>
+                  </div>
+                  <div><span>2</span></div>
+               </div><span>ω</span><span>=</span><span>−</span><div>
+                  <div><span>1</span></div>
+                  <div>
+                     <div>
+                        <div><span>f</span></div>
+                        <div><span>0</span></div>
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div><span>∂</span></div>
+                  <div><span>p</span></div>
+               </div><span>A</span><span>d</span><div>
+                  <div><span>v</span></div>
+                  <div><span>ζ</span></div>
+               </div><span>+</span><div>
+                  <div><span>R</span></div>
+                  <div><span>p</span></div>
+               </div>
+               <div>
+                  <div>
+                     <div><span>(</span><div>
+                           <div>
+                              <div><span>k</span></div>
+                              <div>
+                                 <div>
+                                    <div><span>f</span></div>
+                                    <div><span>0</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div><span>)</span></div>
+                  </div>
+                  <div><span>2</span></div>
+               </div><span>A</span><span>d</span><div>
+                  <div><span>v</span></div>
+                  <div><span>T</span></div>
+               </div><span>+</span><div>
+                  <div><span>R</span></div>
+                  <div><span>p</span></div>
+               </div>
+               <div>
+                  <div>
+                     <div><span>(</span><div>
+                           <div>
+                              <div><span>k</span></div>
+                              <div>
+                                 <div>
+                                    <div><span>f</span></div>
+                                    <div><span>0</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div><span>)</span></div>
+                  </div>
+                  <div><span>2</span></div>
+               </div><span>Q</span><span>.</span></div><span>[1]</span></div>
+         <div>
+            <div><span>ω</span></div>
+         </div> is pressure-coordinate vertical velocity, 
+         
+         <div>
+            <div><span>σ</span></div>
+         </div> is dry static stability, 
+         
+         <div>
+            <div>
+               <div>
+                  <div><span>f</span></div>
+                  <div><span>0</span></div>
+               </div>
+            </div>
+         </div> is the Coriolis parameter, and 
+         
+         <div>
+            <div><span>Q</span></div>
+         </div> is diabatic heating (here computed explicitly by the CRM). 
+         
+         <div>
+            <div><span>A</span><span>d</span><div>
+                  <div><span>v</span></div>
+                  <div><span>ζ</span></div>
+               </div>
+            </div>
+         </div> and 
+         
+         <div>
+            <div><span>A</span><span>d</span><div>
+                  <div><span>v</span></div>
+                  <div><span>T</span></div>
+               </div>
+            </div>
+         </div> are the large-scale horizontal advections of absolute vorticity and temperature,
+         respectively. The first two right-hand side (RHS) terms represent the adiabatic QG
+         forcing (
+         
+         <div>
+            <div><span>F</span></div>
+         </div>) (
+         <a>34</a>), while the last RHS term represents the effects of the diabatic heating on 
+         
+         <div>
+            <div><span>ω</span></div>
+         </div>. After each CRM time step, the large-scale 
+         
+         <div>
+            <div><span>ω</span></div>
+         </div> is diagnosed with 
+         <a>Eq. 
+            <span>1</span></a>; then, the vertical advection of 
+         
+         <div>
+            <div><span>T</span></div>
+         </div> and 
+         
+         <div>
+            <div><span>q</span></div>
+         </div> associated with 
+         
+         <div>
+            <div><span>ω</span></div>
+         </div> are applied on the CRM domain, thus coupling convection and large-scale dynamics.
+         Comparing with conventional CRM simulations in which 
+         
+         <div>
+            <div><span>ω</span></div>
+         </div> is prescribed, in CQG, we only need to prescribe 
+         
+         <div>
+            <div><span>F</span></div>
+         </div>, while convection, precipitation, and 
+         
+         <div>
+            <div><span>ω</span></div>
+         </div> are simulated interactively. Additional details of the model and experiments are
+         in 
+         <span><span>SI Appendix</span></span>.
+         
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">Numerical simulations are based on the extreme precipitation event occurring in Texas
+         and Oklahoma during May 22–26, 2015. Meteorological variables from the European Center
+         for Medium-Range Weather Forecasting’s interim reanalysis (
+         <a>35</a>) are used in this study both to force the CRM and as a reference against which to
+         compare the simulations. Based on the rainfall distribution associated with the event,
+         we define a latitude–longitude box (
+         <a>Fig. 1</a>) as the target region from which data are extracted for deriving 
+         
+         <div>
+            <div><span>F</span></div>
+         </div> and where modeled precipitation is compared with observations.
+         
+      </p>
+      <div xmlns="http://www.w3.org/1999/xhtml"><span>Fig. 1.</span><div>
+            <p>(
+               <span>A</span>) Ertel PV (in PV units; color) on the 330 K isentropic surface on May 24 and areas
+               (blue contours) where the cumulative precipitation [Climate Prediction Center precipitation
+               data (
+               <a>36</a>)] between May 22 and May 26 was greater than 50 mm. (
+               <span>B</span>) Precipitable water (PW; color) and the 850-hPa horizontal winds (black arrows) on
+               May 24. The black rectangles indicate the regional box (
+               
+               <div>
+                  <div><span>10</span><div>
+                        <div><span>1</span></div>
+                        <div><span>○</span></div>
+                     </div><span>W</span><span>∼</span><span>9</span><div>
+                        <div><span>2</span></div>
+                        <div><span>○</span></div>
+                     </div><span>W</span></div>
+               </div> and 
+               
+               <div>
+                  <div><span>3</span><div>
+                        <div><span>1</span></div>
+                        <div><span>○</span></div>
+                     </div><span>N</span><span>∼</span><span>4</span><div>
+                        <div><span>0</span></div>
+                        <div><span>○</span></div>
+                     </div><span>N</span></div>
+               </div>) within which most of the rain during the 2015 event fell.
+               
+            </p>
+         </div>
+         <div></div>
+      </div>
+      <p xmlns="http://www.w3.org/1999/xhtml">The experiments consist of a control case and a series of perturbed cases. The objective
+         in the control case is to reproduce the extreme precipitation that was observed under
+         the current climate in the actual event, while the perturbed cases aim to simulate
+         precipitation from events with the same synoptic forcing in climates with varying
+         background 
+         
+         <div>
+            <div><span>T</span></div>
+         </div> and 
+         
+         <div>
+            <div><span>q</span></div>
+         </div> profiles that depend on 
+         
+         <div>
+            <div>
+               <div>
+                  <div><span>T</span></div>
+                  <div><span>s</span></div>
+               </div>
+            </div>
+         </div> in a systematic way. The perturbed cases are constructed with the help of the Coupled
+         Model Intercomparison Project (CMIP5) simulations (
+         <span><span>SI Appendix</span></span>). In each case, the model is forced with the same large-scale adiabatic QG forcings
+         and the large-scale horizontal moisture advection (
+         
+         <div>
+            <div><span>A</span><span>d</span><div>
+                  <div><span>v</span></div>
+                  <div><span>q</span></div>
+               </div>
+            </div>
+         </div>) (
+         <span><span>SI Appendix</span>, Fig. S2
+            </span>) taken from the reanalysis to isolate the dependence of extreme precipitation on
+         background conditions. This implies an underlying hypothesis that changes in thermodynamic
+         environment will dominate changes in synoptic-scale PV dynamics in determining changes
+         in precipitation extremes with warming. We view this as a plausible starting hypothesis
+         given the much larger uncertainties in circulation changes compared with thermodynamic
+         changes (
+         <a>37</a>).
+         
+      </p>
+   </div>
+</html>
