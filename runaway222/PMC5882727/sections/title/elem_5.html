@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="sec" title="sec"><span xmlns="http://www.w3.org/1999/xhtml">4.</span><div xmlns="http://www.w3.org/1999/xhtml">Ramping</div>
+      <p xmlns="http://www.w3.org/1999/xhtml">In this section, the dynamics of the system under transient operation is analysed.
+         In the first part, experimental results obtained by ramping the bifurcation parameter
+         are provided. They highlight the presence in the system dynamics of B- and N-tipping
+         mechanisms combined with inertial and hysteresis effects. In the second part, the
+         model introduced in §3.2 is used to study the influence of the ramp rate on the system
+         dynamics.
+      </p>
+      <div class="sec" title="sec"><span xmlns="http://www.w3.org/1999/xhtml">4.1.</span><div xmlns="http://www.w3.org/1999/xhtml">Ramp experiment</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">The following test was performed on the test rig to highlight the peculiar dynamics
+            of this combustor. The methane and air mass flows were controlled such that the equivalence
+            ratio 
+            <span>ϕ</span> repeated 100 times the following four-step cycle: (1) linear increase for 4 s from
+            
+            <span>ϕ</span><sub>0</sub>=0.580 to 
+            <span>ϕ</span><sub>E</sub>=0.635; (2) idle for 10s at 
+            <span>ϕ</span><sub>E</sub>; (3) linear decrease for 4 s back to 
+            <span>ϕ</span><sub>0</sub>; (4) idle for 10 s at the lowest equivalence ratio. 
+            <a>Figure 4</a> presents the results of this experiment. The panels are grouped in two rows: the
+            upper row corresponds to the statistic of the 100 ramps up, the lower row to the one
+            of the 100 ramps down. Each column corresponds to an equivalence ratio. The PDFs of
+            this ramp experiment were obtained via a kernel density estimation (KDE) applied over
+            the 100 realizations, and they are plotted in colour (blue for the ramp up, red for
+            the ramp down). In all the panels, the stationary PDF for the corresponding 
+            <span>ϕ</span> (no ramping, already presented in 
+            <a>figure 3</a><span>a</span>) is given in grey as a reference. 
+            
+            <div><span>Figure 4.</span><div>
+                  <p>Experimental evidence of the bifurcation delay and of the dynamic hysteresis in the
+                     ramped 
+                     <span>ϕ</span> experiment. The panels are divided in ramp up (top row) and ramp down (bottom row).
+                     The stationary probability density function 
+                     
+                     <div>
+                        <div>
+                           <div><span>P</span><span>∞</span></div><span>(</span><span>A</span><span>;</span><div><span>ϕ</span><span>i</span></div><span>)</span></div>
+                     </div> at seven equivalence ratios 
+                     <span>ϕ</span> (grey) is given as a reference and compared to the evolution in time of the ensemble
+                     PDF 
+                     <span>P</span>(
+                     <span>A</span>;
+                     <span>t</span><sub><span>i</span></sub>), where 
+                     <span>t</span><sub><span>i</span></sub> is the time at which 
+                     <span>ϕ</span>(
+                     <span>t</span><sub><span>i</span></sub>)=
+                     <span>ϕ</span><sub><span>i</span></sub> with 
+                     <span>ϕ</span>(
+                     <span>t</span>)=
+                     <span>ϕ</span><sub>0</sub>+
+                     <span>Rt</span> for the ramp up and 
+                     <span>ϕ</span>(
+                     <span>t</span>)=
+                     <span>ϕ</span><sub>E</sub>−
+                     <span>Rt</span> for the ramp down.
+                     
+                  </p>
+               </div>
+               <div></div>
+            </div>
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">The system experiences dynamic hysteresis: in the bistable region, even though the
+            stationary PDF features two maxima, the system stays in the low-amplitude (respectively,
+            high-amplitude) range when 
+            <span>ϕ</span> is ramped up (respectively, down). Another feature is the delay in transition, easily
+            observable in the bottom row: the dynamic PDF peak is at an amplitude that is higher
+            than the one of the stationary PDF at the same 
+            <span>ϕ</span>. This means that the system experiences inertial effects, remaining close to the
+            initial state longer: a bifurcation delay is observed. This observation corresponds
+            to the case depicted in 
+            <a>figure 1</a><span>d</span>.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec"><span xmlns="http://www.w3.org/1999/xhtml">4.2.</span><div xmlns="http://www.w3.org/1999/xhtml">Rate-dependent bifurcation delay</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">The ramp rate, together with the ramp profile, is expected to influence the bifurcation
+            delay, as shown in [
+            <a>31</a>] for a deterministic system. We therefore used the surrogate oscillator model to
+            investigate this aspect in more detail. The parameter 
+            <span>ν</span> was varied linearly in time between two values 
+            <span>ν</span><sub>0</sub> and 
+            <span>ν</span><sub>E</sub> at different rates 
+            <span>R</span>. Two approaches were used. The first is to simulate (
+            <a>3.7</a>) in Simulink, varying the initial condition and running different realizations of
+            the process. Extracting the envelope for each realization and considering the ensemble
+            statistic, it is possible to draw maps of the evolution in time of the amplitude PDF
+            
+            <span>P</span>(
+            <span>A</span>;
+            <span>t</span>). The other approach is to integrate numerically the FPE (
+            <a>3.8</a>) and obtain directly 
+            <span>P</span>(
+            <span>A</span>;
+            <span>t</span>). The two methods closely agree, as shown in appendix A.2. In 
+            <a>figure 5</a>, the results of the FPE integration are presented. A ramp up/idle/ramp down/idle
+            cycle is solved, for two different ramp rates 
+            <span>R</span>=50 rad s
+            <span>−2</span> and 
+            <span>R</span>=10 rad s
+            <span>−2</span>. The dynamic stochastic bifurcation delay is captured and it is observed that a faster
+            ramp leads to a more pronounced delayed transition from one stable point to the other.
+            
+            
+            <div><span>Figure 5.</span><div>
+                  <p>Ramping cycle of 
+                     <span>ν</span> between the values 
+                     <span>ν</span><sub>0</sub>=−4.5 and 
+                     <span>ν</span><sub>E</sub>=5.5 for the oscillator model (
+                     <a>3.7</a>) for two different ramp rates 
+                     <span>R</span>. The contour plot represents the PDF 
+                     <span>P</span>(
+                     <span>A</span>;
+                     <span>t</span>) computed by time-marching the FPE (
+                     <a>3.8</a>). The time is normalized with the ramp time 
+                     <span>t</span><sub>ramp</sub>=(
+                     <span>ν</span><sub>E</sub>−
+                     <span>ν</span><sub>0</sub>)/
+                     <span>R</span>. In the insets, the ramp cycle in dimensional time. The other parameters of the model
+                     are: 
+                     <span>ω</span><sub>0</sub>/2
+                     <span>π</span>= 120 s
+                     <span>−1</span>, 
+                     <span>κ</span>=8 s
+                     <span>−1</span>, 
+                     <span>μ</span>=2 s
+                     <span>−1</span>, 
+                     
+                     <div>
+                        <div><span>Γ</span><div><span>/</span></div><span>4</span><div><span>ω</span><span>0</span><span>2</span></div><span>=</span><span>0.44</span></div>
+                     </div>.
+                     
+                  </p>
+               </div>
+               <div></div>
+            </div>
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">An important aspect of the phenomenon depicted in this figure is that the state transitions
+            are delayed with respect to the bifurcation point, but not time delayed (the horizontal
+            axis in these figures is normalized by the physical duration of the cycle). In other
+            words, a higher rate of change of the time-varying potential induces a faster transition
+            into the neighbouring basin of attraction, but the transition occurs for a delayed
+            value of the bifurcation parameter compared to the quasi-steady picture of the system.
+         </p>
+      </div>
+   </div>
+</html>

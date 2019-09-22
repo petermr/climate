@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="sec" title="sec">
+      <div xmlns="http://www.w3.org/1999/xhtml">Derivation of value functions</div>
+      <p xmlns="http://www.w3.org/1999/xhtml">There are four deterministic policies in our Markov decision process model: (1) 
+         <span>π</span><sub><span>r</span></sub>(
+         <span>p</span>) = 
+         <span>h</span>, 
+         <span>π</span><sub><span>r</span></sub>(
+         <span>d</span>) = 
+         <span>l</span>, (2) 
+         <span>π</span><sub><span>c</span></sub>(
+         <span>p</span>) = 
+         <span>l</span>, 
+         <span>π</span><sub><span>c</span></sub>(
+         <span>d</span>) = 
+         <span>l</span>, (3) 
+         <span>π</span><sub>3</sub>(
+         <span>p</span>) = 
+         <span>h</span>, 
+         <span>π</span><sub>3</sub>(
+         <span>d</span>) = 
+         <span>h</span>, (4) 
+         <span>π</span><sub>4</sub>(
+         <span>p</span>) = 
+         <span>l</span>, 
+         <span>π</span><sub>4</sub>(
+         <span>d</span>) = 
+         <span>h</span>. We concentrate on deterministic policies only to simplify the calculation without
+         loss of generality, because if an optimal policy exits there exits also a deterministic
+         optimal policy
+         <span><a>46</a></span>. We further focus here only on the first two policies, named the risky and the cautious
+         policy, since the remaining two apply a high pressure action at the degraded state.
+         This will trap the agent at this position for eternity without receiving any reward.
+         The math on these policies is left to the interested reader.
+         
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">In the following we derive the analytical expressions of the state values of these
+         policies as functions of the parameters (
+         <span>δ</span>, 
+         <span>ρ</span>, 
+         <span>γ</span>, 
+         <span>r</span><sub>l</sub>, 
+         <span>r</span><sub>h</sub>). From Eq. 
+         <a>1</a> and for 
+         <span>γ</span> &lt; 1 one can derive the recursive relationship between state values, known as the
+         Bellman Equation
+         <span><a>69</a></span>:
+         
+         <div><span>3</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi} \left( s \right) = \mathop
+                  {\sum}\limits_{s{\prime}} p\left( {s{\prime}|s,\pi \left( s \right)} \right)\left[
+                  {\left( {1 - {\gamma} } \right){r}\left( {s,\,{\pi} \left( s \right),{s}{\prime}}
+                  \right) + {\gamma} {v}_{\pi} \left( {s{\prime}} \right)} \right]$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div><span>π</span></div>
+                  </div>
+                  <div>
+                     <div><span>s</span></div>
+                  </div><span>=</span><div>
+                     <div><span> ∑</span></div>
+                     <div><span>s</span><span>′</span></div>
+                  </div><span>p</span><div>
+                     <div><span>s</span><span>′</span><span>∣</span><span>s</span><span>,</span><span>π</span><div>
+                           <div><span>s</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div>
+                        <div>
+                           <div><span>1</span><span>-</span><span>γ</span></div>
+                        </div><span>r</span><div>
+                           <div><span>s</span><span>,</span><span></span><span>π</span><div>
+                                 <div><span>s</span></div>
+                              </div><span>,</span><span>s</span><span>′</span></div>
+                        </div><span>+</span><span>γ</span><div>
+                           <div><span>v</span></div>
+                           <div><span>π</span></div>
+                        </div>
+                        <div>
+                           <div><span>s</span><span>′</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+         </div>with 
+         <span>p</span>(
+         <span>s</span>′|
+         <span>s</span>, 
+         <span>π</span>(
+         <span>s</span>)) being the probability to enter state 
+         <span>s</span>′ given the agent has started in state s and applied action 
+         <span>π</span>(
+         <span>s</span>).
+         
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">Applied to our model the value for the prosperous state reads
+         
+         <div><span>4</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${v}_{\pi} \left( p \right) = \left\{
+                  {\begin{array}{*{20}{l}} {\delta \gamma {v}_{\pi} \left( d \right) + \left( {1 - {\delta}
+                  } \right)\left[ {\left( {1 - \gamma } \right){r}_{\mathrm{h}} + \gamma {v}_{\pi} \left(
+                  p \right)} \right]} \hfill &amp; {{\mathrm{for}}\;a = h} \hfill \\ {\left( {1 - \gamma
+                  } \right){r}_{\mathrm{l}} + \gamma {v}_{\pi} \left( p \right)} \hfill &amp; {{\mathrm{for}}\;a
+                  = l} \hfill \end{array}} \right..$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div><span>π</span></div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div><span>=</span><div>
+                     <div>
+                        <div>
+                           <div>
+                              <div><span>δ</span><span>γ</span><div>
+                                    <div><span>v</span></div>
+                                    <div><span>π</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>d</span></div>
+                                 </div><span>+</span><div>
+                                    <div><span>1</span><span>-</span><span>δ</span></div>
+                                 </div>
+                                 <div>
+                                    <div>
+                                       <div>
+                                          <div><span>1</span><span>-</span><span>γ</span></div>
+                                       </div>
+                                       <div>
+                                          <div><span>r</span></div>
+                                          <div><span>h</span></div>
+                                       </div><span>+</span><span>γ</span><div>
+                                          <div><span>v</span></div>
+                                          <div><span>π</span></div>
+                                       </div>
+                                       <div>
+                                          <div><span>p</span></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div><span>for</span><span></span><span>a</span><span>=</span><span>h</span></div>
+                           </div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>1</span><span>-</span><span>γ</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>r</span></div>
+                                    <div><span>l</span></div>
+                                 </div><span>+</span><span>γ</span><div>
+                                    <div><span>v</span></div>
+                                    <div><span>π</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>p</span></div>
+                                 </div>
+                              </div>
+                              <div><span>for</span><span></span><span>a</span><span>=</span><span>l</span></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The value for the degraded state is given by
+         
+         <div><span>5</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_\pi \left( d \right) = \left\{
+                  {\begin{array}{*{20}{l}} {\gamma v_\pi \left( d \right)} \hfill &amp; {{\mathrm{for}}\;a
+                  = h} \hfill \\ {\left( {1 - \rho } \right)\gamma v_\pi \left( d \right) + \rho \gamma
+                  v_\pi \left( p \right)} \hfill &amp; {{\mathrm{for}}\;a = l} \hfill \end{array}} \right..$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div><span>π</span></div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>=</span><div>
+                     <div>
+                        <div>
+                           <div>
+                              <div><span>γ</span><div>
+                                    <div><span>v</span></div>
+                                    <div><span>π</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>d</span></div>
+                                 </div>
+                              </div>
+                              <div><span>for</span><span></span><span>a</span><span>=</span><span>h</span></div>
+                           </div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>1</span><span>-</span><span>ρ</span></div>
+                                 </div><span>γ</span><div>
+                                    <div><span>v</span></div>
+                                    <div><span>π</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>d</span></div>
+                                 </div><span>+</span><span>ρ</span><span>γ</span><div>
+                                    <div><span>v</span></div>
+                                    <div><span>π</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>p</span></div>
+                                 </div>
+                              </div>
+                              <div><span>for</span><span></span><span>a</span><span>=</span><span>l</span></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">To obtain the explicit state values for the risky policy (
+         <span>π</span><sub><span>r</span></sub>(
+         <span>p</span>) = 
+         <span>h</span>, 
+         <span>π</span><sub><span>r</span></sub>(
+         <span>d</span>) = 
+         <span>l</span>) we solve the system of equations
+         
+         <div><span>6</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${v}_{{\pi} _{r}}\left( p \right)
+                  = \delta \gamma {v}_{{\pi} _{r}}\left( d \right) + \left( {1 - \delta } \right)\left[
+                  {\left( {1 - \gamma } \right){r}_{\mathrm{h}} + \gamma {v}_{{\pi} _{r}}\left( p \right)}
+                  \right]$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>r</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div><span>=</span><span>δ</span><span>γ</span><div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>r</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>+</span><div>
+                     <div><span>1</span><span>-</span><span>δ</span></div>
+                  </div>
+                  <div>
+                     <div>
+                        <div>
+                           <div><span>1</span><span>-</span><span>γ</span></div>
+                        </div>
+                        <div>
+                           <div><span>r</span></div>
+                           <div><span>h</span></div>
+                        </div><span>+</span><span>γ</span><div>
+                           <div><span>v</span></div>
+                           <div>
+                              <div>
+                                 <div><span>π</span></div>
+                                 <div><span>r</span></div>
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <div><span>p</span></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+         </div>
+         <div><span>7</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _r}\left( d \right) = \left(
+                  {1 - \rho } \right)\gamma {v}_{\pi _{r}}\left( d \right) + \rho \gamma {v}_{\pi _{r}}\left(
+                  p \right),$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>r</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>=</span><div>
+                     <div><span>1</span><span>-</span><span>ρ</span></div>
+                  </div><span>γ</span><div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>r</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>+</span><span>ρ</span><span>γ</span><div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>r</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div><span>,</span></div>
+               <div></div>
+            </div>
+         </div>which yields
+         
+         <div><span>8</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _r}\left( p \right) = r_{\mathrm{h}}\frac{{\left(
+                  {1 - \delta } \right)\left( {1 - \left( {1 - \rho } \right)\gamma } \right)}}{{1 -
+                  \left( {1 - \delta - \rho } \right)\gamma }}$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>r</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div><span>=</span><div>
+                     <div><span>r</span></div>
+                     <div><span>h</span></div>
+                  </div>
+                  <div>
+                     <div>
+                        <div>
+                           <div><span>1</span><span>-</span><span>δ</span></div>
+                        </div>
+                        <div>
+                           <div><span>1</span><span>-</span><div>
+                                 <div><span>1</span><span>-</span><span>ρ</span></div>
+                              </div><span>γ</span></div>
+                        </div>
+                     </div>
+                     <div><span>1</span><span>-</span><div>
+                           <div><span>1</span><span>-</span><span>δ</span><span>-</span><span>ρ</span></div>
+                        </div><span>γ</span></div>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+         </div>
+         <div><span>9</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _r}\left( d \right) = r_{\mathrm{h}}\frac{{\left(
+                  {1 - \delta } \right)\rho \gamma }}{{1 - \left( {1 - \delta - \rho } \right)\gamma
+                  }}.$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>r</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>=</span><div>
+                     <div><span>r</span></div>
+                     <div><span>h</span></div>
+                  </div>
+                  <div>
+                     <div>
+                        <div>
+                           <div><span>1</span><span>-</span><span>δ</span></div>
+                        </div><span>ρ</span><span>γ</span></div>
+                     <div><span>1</span><span>-</span><div>
+                           <div><span>1</span><span>-</span><span>δ</span><span>-</span><span>ρ</span></div>
+                        </div><span>γ</span></div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">To obtain the explicit state values for the cautious policy (
+         <span>π</span><sub><span>c</span></sub>(
+         <span>p</span>) = 
+         <span>l</span>, 
+         <span>π</span><sub><span>c</span></sub>(
+         <span>d</span>) = 
+         <span>l</span>) we solve the system of equations
+         
+         <div><span>10</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{{\pi} _{c}}\left( p \right)
+                  = \left( {1 - \gamma } \right){r}_{\text{l}} + \gamma {v}_{{\pi} _{c}}\left( p \right)$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>c</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div><span>=</span><div>
+                     <div><span>1</span><span>-</span><span>γ</span></div>
+                  </div>
+                  <div>
+                     <div><span>r</span></div>
+                     <div><span>l</span></div>
+                  </div><span>+</span><span>γ</span><div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>c</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+         </div>
+         <div><span>11</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _c}\left( d \right) = \left(
+                  {1 - \rho } \right)\gamma v_{\pi _c}\left( d \right) + \rho \gamma v_{\pi _{c}}\left(
+                  p \right),$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>c</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>=</span><div>
+                     <div><span>1</span><span>-</span><span>ρ</span></div>
+                  </div><span>γ</span><div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>c</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>+</span><span>ρ</span><span>γ</span><div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>c</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div><span>,</span></div>
+               <div></div>
+            </div>
+         </div>which yields
+         
+         <div><span>12</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _c}\left( p \right) = r_{\mathrm{l}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>c</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>p</span></div>
+                  </div><span>=</span><div>
+                     <div><span>r</span></div>
+                     <div><span>l</span></div>
+                  </div>
+               </div>
+               <div></div>
+            </div>
+         </div>
+         <div><span>13</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi _c}\left( d \right) = \frac{{\rho
+                  \gamma r_{\mathrm{l}}}}{{1 - \left( {1 - \rho } \right)\gamma }}.$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div>
+                        <div>
+                           <div><span>π</span></div>
+                           <div><span>c</span></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div>
+                     <div><span>d</span></div>
+                  </div><span>=</span><div>
+                     <div><span>ρ</span><span>γ</span><div>
+                           <div><span>r</span></div>
+                           <div><span>l</span></div>
+                        </div>
+                     </div>
+                     <div><span>1</span><span>-</span><div>
+                           <div><span>1</span><span>-</span><span>ρ</span></div>
+                        </div><span>γ</span></div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">For 
+         <span>γ</span> = 1 we compute the values 
+         <span>v</span><sub><span>π</span></sub> (which are independent from the initial state for 
+         <span>γ</span> = 1) by multiplying the stationary state of the effective Markov chain with the reward
+         vector 
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathbf{r}}^\pi \, \in \,{\Bbb
+                  R}^{|S|}$$\end{document}</span><div>
+                  <div>
+                     <div><span>r</span></div>
+                     <div><span>π</span></div>
+                  </div><span></span><span>∈</span><span></span><div>
+                     <div><span>R</span></div>
+                     <div><span>∣</span><span>S</span><span>∣</span></div>
+                  </div>
+               </div><span></span></div>
+         </div> whose components read
+         
+         <div><span>14</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$r_s^\pi = \mathop {\sum}\limits_{s{\prime}}
+                  p\left( {s{\prime}|s,\,\pi \left( s \right)} \right)r\left( {s,\pi \left( s \right),s{\prime}}
+                  \right).$$\end{document}</span><div>
+                  <div>
+                     <div><span>r</span></div>
+                     <div><span>s</span></div>
+                     <div><span>π</span></div>
+                  </div><span>=</span><div>
+                     <div><span> ∑</span></div>
+                     <div><span>s</span><span>′</span></div>
+                  </div><span>p</span><div>
+                     <div><span>s</span><span>′</span><span>∣</span><span>s</span><span>,</span><span></span><span>π</span><div>
+                           <div><span>s</span></div>
+                        </div>
+                     </div>
+                  </div><span>r</span><div>
+                     <div><span>s</span><span>,</span><span>π</span><div>
+                           <div><span>s</span></div>
+                        </div><span>,</span><span>s</span><span>′</span></div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The components of the transition matrix 
+         <span>P</span><span>π</span> of the effective Markov chain read
+         
+         <div><span>15</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$P_{s{\prime}s}^\pi = p\left( {s{\prime}|\pi
+                  \left( s \right),s} \right).$$\end{document}</span><div>
+                  <div>
+                     <div><span>P</span></div>
+                     <div><span>s</span><span>′</span><span>s</span></div>
+                     <div><span>π</span></div>
+                  </div><span>=</span><span>p</span><div>
+                     <div><span>s</span><span>′</span><span>∣</span><span>π</span><div>
+                           <div><span>s</span></div>
+                        </div><span>,</span><span>s</span></div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The stationary state 
+         <span><span>σ</span></span><sub><span>π</span></sub> is the normalized eigenvector of the transition matrix with eigenvalue one. Hence,
+         
+         <div><span>16</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$v_{\pi} = \sigma _{\pi} \cdot
+                  {\mathbf{r}}^{\pi} .$$\end{document}</span><div>
+                  <div>
+                     <div><span>v</span></div>
+                     <div><span>π</span></div>
+                  </div><span>=</span><div>
+                     <div><span>σ</span></div>
+                     <div><span>π</span></div>
+                  </div><span>⋅</span><div>
+                     <div><span>r</span></div>
+                     <div><span>π</span></div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">Performing this calculation for risky and cautious policy explicitly yields consistent
+         results with the calculation for 0 ≤ γ &lt; 1 from above. For 
+         <span>γ</span> = 1 the value 
+         <span>v</span><sub><span>π</span></sub> can be obtained by simply inserting 
+         <span>γ</span> = 1 into Eqs. 
+         <a>8</a> and 
+         <a>9</a> for the risky policy and Eqs. 
+         <a>12</a> and 
+         <a>13</a> for the cautious policy.
+         
+      </p>
+   </div>
+</html>

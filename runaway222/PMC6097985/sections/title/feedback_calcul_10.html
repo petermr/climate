@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="sec" title="sec">
+      <div xmlns="http://www.w3.org/1999/xhtml">Feedback calculations</div>
+      <p xmlns="http://www.w3.org/1999/xhtml">Top-of-atmosphere radiative feedbacks are calculated via standard radiative kernel
+         methods
+         <span><a>64</a>–
+            <a>66</a></span>, using radiative kernels generated in the NCAR CESM-CAM5 model
+         <span><a>67</a></span> and associated kernel calculation code provided by Pendergrass (
+         <span>https://github.com/apendergrass/cam5-kernels</span>). Use of radiative kernels generated within the same climate model as the simulations
+         to which they are applied, as is the case here, is generally considered to be best
+         practice for reducing errors associated with differences in radiative transfer codes
+         between climate models
+         <span><a>64</a>,
+            <a>68</a></span>.
+         
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The radiative kernel for a given feedback process consists of gridded monthly values
+         of the radiative perturbation induced by a prescribed change in a given feedback process,
+         such as surface albedo or atmospheric water vapor. These gridded kernels are then
+         multiplied by the monthly change in the relevant feedback process for each of the
+         regional emissions signals (see Simulations and analysis), normalized by the prescribed
+         change used to derive the kernel. This process is used to calculate the feedbacks
+         due to all process other than the cloud radiative feedback. The cloud radiative feedback
+         is calculated using the adjusted cloud radiative effect method
+         <span><a>64</a></span>. In this method, a cloud radiative effect is calculated as the difference between
+         the all-sky and clear-sky (i.e., non-cloud-permitting) top-of-atmosphere radiative
+         imbalance. This cloud radiative effect is then adjusted for potential contamination
+         by non-cloud factors through subtraction of the kernel-calculated cloudy-sky (i.e.,
+         all-sky kernel minus clear-sky kernel) values of the other feedbacks. This method
+         has been shown to provide a reliable estimate for cloud feedbacks relative to other,
+         more computationally prohibitive, methods
+         <span><a>47</a></span>.
+         
+      </p>
+   </div>
+</html>
