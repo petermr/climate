@@ -16,6 +16,8 @@ Carbon Dioxide in the atmosphere. To avoid contamination from cities he set up h
 
 (3000m). Every month the data were recorded very accurately (in 1958 (I was 17) the first reading was 315.71 parts per million). The graph of monthly 
 variation is called the Keeling Curve.
+![Keeling Curve](https://en.wikipedia.org/wiki/Keeling_Curve#/media/File:Mauna_Loa_CO2_monthly_mean_concentration.svg "Keeling Curve")
+
 In 1968 I was teaching chemistry to non-scientists and first saw the Keeling Curve; it was one of the "WOW!" 
 moments of my life. As you can see the CO2 levels vary consistently throughout the year in a very systematic manner. 
 Because the data were carefully collected Keeling 
