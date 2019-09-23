@@ -12,22 +12,24 @@ My short presentation on climate change ("The Keeling Curve") is given in his me
 # The Keeling Curve.
 In 1958 [Charles David Keeling](https://en.wikipedia.org/wiki/Charles_David_KeelingCharles) started very careful measurements of the 
 Carbon Dioxide in the atmosphere. To avoid contamination from cities he set up his equipment at the top of an extinct Hawaian volcano 
-(3000m). Every month the data were recorded very accurately(in 1958 the first reading was 315.71 parts per million). The graph of monthly 
+(3000m). Every month the data were recorded very accurately (in 1958 (I was 17) the first reading was 315.71 parts per million). The graph of monthly 
 variation is called the Keeling Curve.
-I was 17 in 1958. In 1968 I was teaching chemistry to non-scientists and first saw the Keeling Curve; it was one of the "WOW!" 
+In 1968 I was teaching chemistry to non-scientists and first saw the Keeling Curve; it was one of the "WOW!" 
 moments of my life. As you can see the CO2 levels vary consistently throughout the year in a very systematic manner. 
 Because the data were carefully collected Keeling 
-could average this seasonal variation in a separate graphand be confident it was a real effect.
+could average this seasonal variation in a separate graph and be confident it was a real effect.
 
 ## what does it mean?
+
 I hope by now you are asking questions like:
 * why is the CO2 increasing every year?
 * why is it getting even steeper?
 * what causes the seasonal variation?
  
- if so you are thinking as a scientist and DMMR would be proud of you.
+ if so you are thinking as a scientist and my father would be proud of you.
  
  ## what is going to happen?
+ 
 This is a hard question. We need
 * answers to the **previous questions**.
 * **even more data**, because many of the caues and effects are related
@@ -38,4 +40,13 @@ and
 
 * how are humans going to react? 
 
+This is the hardest question of all.
+
+### your answer
+I am a strong believer in Wikipedia and help to create bits of it. But before you rush off to "look up the correct answers" try to work out your own ideas of what is happening to CO2. And don't accept "facts" without understanding where they have come from. 
+
+## what is this site doing?
+
+To convince global politicians to act we need scientific data and scientific arguments to support political and economic action. But it's spread over many places and often not published properly (e.g. in PDF rather than data formats). With 
+collaborators such as Simon Worthington (in TiB, Hannover) we are building software to read all the scientific journals and extract data relating to climate change which we will republish to the whole world.
 
