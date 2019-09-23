@@ -13,7 +13,7 @@ My short presentation on climate change ("The Keeling Curve") is given in his me
 In 1958 [Charles David Keeling](https://en.wikipedia.org/wiki/Charles_David_KeelingCharles) started very careful measurements of the 
 Carbon Dioxide in the atmosphere. To avoid contamination from cities he set up his equipment at the top of an extinct Hawaian volcano 
 ![Mauna Loa](https://upload.wikimedia.org/wikipedia/commons/c/c7/Mauna_Loa_Observatory_from_air.jpg "Mauna Loa Observatory")
-![Mauna Loa](https://upload.wikimedia.org/wikipedia/commons/c/c7/Mauna_Loa_Observatory_from_air.jpg "Keeling Curve")
+![Keeling Curve](assets/1920px-Mauna_Loa_CO2_monthly_mean_concentration.svg.png "Keeling Curve")
 
 (3000m). Every month the data were recorded very accurately (in 1958 (I was 17) the first reading was 315.71 parts per million). The graph of monthly 
 variation is called the Keeling Curve.
