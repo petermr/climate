@@ -21,7 +21,7 @@ variation is called the Keeling Curve.
 In 1968 I was teaching chemistry to non-scientists and first saw the Keeling Curve; it was one of the "WOW!" 
 moments of my life. As you can see the CO2 levels vary consistently throughout the year in a very systematic manner. 
 Because the data were carefully collected Keeling 
-could average this seasonal variation in a separate graph and be confident it was a real effect.
+could average this seasonal variation (in a the separate box) and be confident it was a real effect.
 
 ## what does it mean?
 
