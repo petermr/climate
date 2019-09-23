@@ -36,7 +36,7 @@ I hope by now you are asking questions like:
  
 This is a hard question. We need
 * answers to the **previous questions**.
-* **even more data**, because many of the caues and effects are related
+* **even more data**, because many of the causes and effects are related
 * **models** so we can compute the future. (Computational weather forecasting was first proposed by 
 [Lewis Fry Richardson](https://en.wikipedia.org/wiki/Lewis_Fry_Richardson) - a Bootham Scholar).
 
