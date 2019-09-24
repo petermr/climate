@@ -11,6 +11,8 @@ with Simon Worthington / [GenR](https://genr.eu/wp/open-science-and-climate-chan
 
 A [Narrative](Narrative.md) for this project.
 
+A short [presentation to Sidcot School](SidcotSchool201909.md) on the Keeling Curve.
+
 
 ## dictionaries
 Dictionaries specific for climate and other
