@@ -1,0 +1,1681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Application to projections of Arctic sea ice</div>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">We make CMIP5 multi-model projections of GMST change to melt, using present-day September Arctic sea ice extent (SIE), as well as the recent trend in SIE with respect to GMST (SIE sensitivity), as constraints. For the ice-free Arctic, we use the SIE cut-off of 1 million km
+  <span class="sup">2</span> to be consistent with previous work
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>–
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. Several studies address future sea ice projections
+  <span class="sup">
+   <a ref-type="bibr" rid="CR10" href="#CR10">10</a>,
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>–
+   <a ref-type="bibr" rid="CR29" href="#CR29">29</a>,
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>,
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+  </span>, but few in a probabilistic way
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>,
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>–
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+  </span>. Our work can be seen as a first attempt to provide probabilistic projections of GMST change to melt, while explicitly accounting for all model dependencies. Our data consist of autocorrelated annual time-series of present-day (1979–2017) September SIE from 31 CMIP5
+  <span class="sup">
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+  </span> climate models 
+  <span class="bold">y</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> with unknown means 
+  <span class="italic">μ</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> (
+  <span class="italic">i</span> = 1, 2, …, 
+  <span class="italic">n</span> is model index), corresponding observations 
+  <span class="bold">y</span>
+  <sub>o</sub> with an unknown random mean 
+  <span class="italic">μ</span>
+  <sub>o</sub>, and the deterministic future GMST change to melt for the representative concentrations pathway (RCP8.5) scenario from each model 
+  <div id="IEq4" class="inline-formula">
+   <div class="alternatives">
+    <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$z_i^ \ast$$\end{document}</span>
+    <div id="M24" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. In addition, we use the sensitivity of SIE to GMST (e.g., trend from linear regression) from each model 
+  <span class="italic">u</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> and corresponding observations 
+  <span class="italic">u</span>
+  <sub>o</sub>. The list of models and their institutions is shown in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. Let 
+  <span class="bold">y</span> = (
+  <span class="bold">y</span>
+  <sub>o</sub>, 
+  <span class="bold">y</span>
+  <sub>1</sub>, 
+  <span class="bold">y</span>
+  <sub>2</sub>, …, 
+  <span class="bold">y</span>
+  <sub>
+   <span class="italic">n</span>
+  </sub>) be the collection of observed and model SIE means, 
+  <span class="bold">Y</span> be the event that the underlying random variable 
+  <span class="bold">Y</span> takes the value of 
+  <span class="bold">y</span>, and 
+  <span class="bold">μ</span> = (
+  <span class="italic">μ</span>
+  <sub>o</sub>, 
+  <span class="italic">μ</span>
+  <sub>1</sub>, …, 
+  <span class="italic">μ</span>
+  <sub>
+   <span class="italic">n</span>
+  </sub>) be the collection of true observed and model present-day means. We assume that each model and observed SIE time series is modeled by a sum of a linear term and an autoregressive model of order 1 [AR(1)], with the only uncertain parameters being the means of the linear terms (see Methods). Thus, we assume that the slopes and the AR(1) parameters are fixed at estimated values, in the interest of reducing computational cost and complexity. Our projection random variable of interest 
+  <span class="italic">z</span>* is the future GMST change to melt.
+ </p>
+ <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">The event for each model adequacy hypothesis can be defined in terms of the random parameters belonging to a region in 
+  <div id="IEq5" class="inline-formula">
+   <div class="alternatives">
+    <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\Bbb R}^m$$\end{document}</span>
+    <div id="M26" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="double-struck" class="mi">R</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> where 
+  <span class="italic">m</span> is the number of parameters
+  <div id="Equ9" class="disp-formula">
+   <span class="label">9</span>
+   <div class="alternatives">
+    <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$H_i \equiv {{\mu}} _i \in \big[ {{{\mu}} _{\mathrm{o}} \pm {\mathrm{\Delta }}_{\mu} } \big] \cap z_i^ \ast \in \left[ {z^ \ast \pm {\mathrm{\Delta }}_z^ \ast } \right] \cap u_i \in \left[ {u_{\mathrm{o}} \pm {\mathrm{\Delta }}_u} \right],$$\end{document}</span>
+    <div id="M28" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">H</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">≡</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">∈</span>
+     <div mathsize="1.19em" class="mstyle">
+      <div close="" open="[" separators="" class="mfenced">
+       <div class="mrow"/>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+     <span class="mo">±</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+     </div>
+     <div mathsize="1.19em" class="mstyle">
+      <div close="" open="]" separators="" class="mfenced">
+       <div class="mrow"/>
+      </div>
+     </div>
+     <span class="mo">∩</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+      </div>
+     </div>
+     <span class="mo">∈</span>
+     <div close="]" open="[" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msup">
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+       <span class="mo">±</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">∩</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">u</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">∈</span>
+     <div close="]" open="[" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">u</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">o</span>
+        </div>
+       </div>
+       <span class="mo">±</span>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">u</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where Δ
+  <sub>
+   <span class="italic">μ</span>
+  </sub>, 
+  <div id="IEq6" class="inline-formula">
+   <div class="alternatives">
+    <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{\Delta }}_z^ \ast$$\end{document}</span>
+    <div id="M30" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, and Δ
+  <sub>
+   <span class="italic">u</span>
+  </sub> are uncertain random tolerance ranges for the hypotheses. In other words, hypothesis 
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> states that the present-day SIE mean for model 
+  <span class="italic">i</span> is within some distance from the observed mean, its temperature sensitivity is within some distance from the observed sensitivity, and future GMST change to melt is, too, within some distance of the actual unknown GMST change to melt. Originally, we were going to use fixed tolerances in our analysis, which seemed as a more natural choice in the beginning. However, during validation of the method, this resulted in flat posterior pdfs with sharp cutoffs for a projection variable of interest. This lead us to make the tolerances uncertain parameters. Specifically, we assume that the tolerances follow half-normal (or truncated normal) distributions
+  <div id="Equ10" class="disp-formula">
+   <span class="label">10</span>
+   <div class="alternatives">
+    <span id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{\Delta }}_{\mu} \sim N^ + \left( {0,\left[ {f\sigma _{\mu} } \right]^2} \right),$$\end{document}</span>
+    <div id="M32" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+     </div>
+     <span class="mo">~</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">N</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">+</span>
+      </div>
+     </div>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mn">0</span>
+       <span class="mo">,</span>
+       <div class="msup">
+        <div class="mrow">
+         <div close="]" open="[" separators="" class="mfenced">
+          <div class="mrow">
+           <span class="mi">f</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">σ</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">μ</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">f</span> is deterministic scalar error expansion factor, which can be calibrated using cross-validation, and 
+  <span class="italic">σ</span>
+  <sub>
+   <span class="italic">μ</span>
+  </sub> is deterministic sample standard deviation of differences between each model’s present-day mean and next-closest model’s mean. This standard deviation is the same for all models. We use this quantity in the tolerance parametrization since it can be thought of as a measure of model error. Thus, broadly speaking a model is correct if it is within some model-error-informed tolerance away from the observations. We use the half-normal distribution because the tolerances cannot be negative, and because it results in reasonably looking posterior pdfs. Testing other prior distributions for the tolerances is left to future work. The 
+  <span class="italic">f</span> factor is introduced in order to correct for potential overconfidence. Here, 
+  <span class="italic">fσ</span>
+  <sub>
+   <span class="italic">μ</span>
+  </sub> = 0.50. The distributions for 
+  <div id="IEq7" class="inline-formula">
+   <div class="alternatives">
+    <span id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{\Delta }}_z^ \ast$$\end{document}</span>
+    <div id="M34" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and Δ
+  <sub>
+   <span class="italic">u</span>
+  </sub> are defined similarly in terms of 
+  <div id="IEq8" class="inline-formula">
+   <div class="alternatives">
+    <span id="M35" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\sigma _z^ \ast$$\end{document}</span>
+    <div id="M36" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <span class="italic">σ</span>
+  <sub>
+   <span class="italic">u</span>
+  </sub>, which are defined analogously to 
+  <span class="italic">σ</span>
+  <sub>
+   <span class="italic">μ</span>
+  </sub> but for the future GMST change to melt and the sea ice sensitivity, respectively. Here, 
+  <div id="IEq9" class="inline-formula">
+   <div class="alternatives">
+    <span id="M37" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$f\sigma _z^ \ast = 0.41$$\end{document}</span>
+    <div id="M38" class="math">
+     <span class="mi">f</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">0.41</span>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq9.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <span class="italic">fσ</span>
+  <sub>
+   <span class="italic">μ</span>
+  </sub> = 0.47. The events for hypothesis combinations are simply defined by intersections of the regions for constituent hypotheses. We use the mean SIE and its sensitivity to constrain the models because we find considerable relationships between these variables and the GMST change to melt (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). Moreover, previous research
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span> shows that in climate models the present-day mean SIE is more strongly correlated to the Arctic ice-free year under the RCP8.5 scenario than other variables, such as mean annual sea ice volume, September sea ice trend, mean seasonal cycle of SIE, or the thin ice SIE. As previously, we define our sample space as the union of all hypotheses: 
+  <div id="IEq10" class="inline-formula">
+   <div class="alternatives">
+    <span id="M39" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$S = \cup H_i$$\end{document}</span>
+    <div id="M40" class="math">
+     <span class="mi">S</span>
+     <span class="mo">=</span>
+     <span class="mo">∪</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">H</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq10.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. The sample space can also be thought of as a region in the 
+  <span class="italic">m</span>-dimensional space.
+ </p>
+ <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">The probabilities can be calculated using Eq. (
+  <a rid="Equ8" ref-type="" href="#Equ8">8</a>) (reformulated in different variables) and Bayes’ theorem:
+  <div id="Equ11" class="disp-formula">
+   <span class="label">11</span>
+   <div class="alternatives">
+    <span id="M41" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{l}} {p\left( {z^ \ast |{\bf{Y}}} \right)} \hfill &amp; = \hfill &amp; {{\large \int} {p( {z^ {\ast} , {\mathbf{\mu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u|{\bf{Y}}} ){\mathrm{d}}{\mathbf{\mu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu} {\mathrm{d}}{\mathrm{\Delta }}_z^ \ast {\mathrm{d}}{\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; \hskip -8pt \propto \hfill &amp; \hskip -7pt {{\large \int} {p( {{\bf{Y}}|z^ \ast ,{\mathbf{\mu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u} )p( {z^ \ast ,{\mathbf{\mu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u} ){\mathrm{d}}{\mathbf{\mu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu}{\mathrm{d}}{\mathrm{\Delta }}_z^ \ast{\mathrm{d}}{\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; = \hfill &amp; {{\large \int} {p({\bf{Y}}|{\mathbf{\mu}} )p( {z^ {\ast}, {\mathbf{\mu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u} ){\mathrm{d}}{\mathbf{\mu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu}{\mathrm{d}}{\mathrm{\Delta }}_z^ \ast{\mathrm{d}} {\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; = \hfill &amp; {{\large \int} {p({\bf{Y}}|{\mathbf{\mu}} )p( {{\mathrm{\Delta }}_z^ \ast } )p({\mathrm{\Delta }}_{\mu} )p({\mathrm{\Delta }}_u)p(z^ \ast , {\mathbf{\mu}} ){\mathrm{d}}{\mathbf{\mu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu} {\mathrm{d}}{\mathrm{\Delta }}_z^ \ast {\mathrm{d}} {\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; \hskip -8pt \propto \hfill &amp; \hskip -7pt {{\large \int} {p({\bf{Y}}|{\mathbf{\mu}} )p( {{\mathrm{\Delta }}_z^ \ast })p({\mathrm{\Delta }}_{\mu} )p({\mathrm{\Delta }}_u)1_S{\mathrm{d}}{\mathbf{\mu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu} {\mathrm{d}}{\mathrm{\Delta }}_z^ \ast {\mathrm{d}}{\mathrm{\Delta }}_u.} } \hfill \end{array}$$\end{document}</span>
+    <div id="M42" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">∫</span>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span mathvariant="bold" class="mi">μ</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">u</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <span mathvariant="bold" class="mi">μ</span>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">u</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">∝</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">∫</span>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">Y </span>
+          <span class="mo">∣</span>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span mathvariant="bold" class="mi">μ</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">u</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span mathvariant="bold" class="mi">μ</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">u</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <span mathvariant="bold" class="mi">μ</span>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">u</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">∫</span>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">Y </span>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">μ</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span mathvariant="bold" class="mi">μ</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">u</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <span mathvariant="bold" class="mi">μ</span>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">u</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">∫</span>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">Y </span>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">μ</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">u</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span mathvariant="bold" class="mi">μ</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <span mathvariant="bold" class="mi">μ</span>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">u</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">∝</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">∫</span>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">Y </span>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">μ</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">Δ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">u</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">S</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <span mathvariant="bold" class="mi">μ</span>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msubsup">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">*</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">d</span>
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">Δ</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">u</span>
+         </div>
+        </div>
+        <span class="mo">.</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ11.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">According to Bayes’ theorem
+  <span class="sup">
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span>, the posterior density of parameters given the observations is proportional to the product of the likelihood of the observations given the parameters 
+  <div id="IEq11" class="inline-formula">
+   <div class="alternatives">
+    <span id="M43" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p\left( {{\bf{Y}}|z^ \ast , {\mathbf{\mu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u} \right) = p({\bf{Y}}|{\mathbf{\mu}} ) = p({\bf{Y}} = {\bf{y}}|{\mathbf{\mu}} )$$\end{document}</span>
+    <div id="M44" class="math">
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">Y </span>
+       <span class="mo">∣</span>
+       <div class="msup">
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span mathvariant="bold" class="mi">μ</span>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">μ</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">u</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">Y </span>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">μ</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">Y </span>
+       <span class="mo">=</span>
+       <span mathvariant="bold" class="mi">y</span>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">μ</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq11.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> (this likelihood, which depends only on 
+  <span class="bold">μ</span>, is defined in the Methods section), and the prior belief in the model parameters 
+  <div id="IEq12" class="inline-formula">
+   <div class="alternatives">
+    <span id="M45" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p( {z^ \ast , {\mathbf{\mu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u})$$\end{document}</span>
+    <div id="M46" class="math">
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msup">
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span mathvariant="bold" class="mi">μ</span>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">μ</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">u</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq12.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. Here we decompose the prior into priors for individual components assuming independence. Furthermore, 
+  <span class="italic">p</span>(Δ
+  <sub>
+   <span class="italic">μ</span>
+  </sub>) follows Eq. (
+  <a rid="Equ10" ref-type="" href="#Equ10">10</a>), 
+  <div id="IEq13" class="inline-formula">
+   <div class="alternatives">
+    <span id="M47" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p\left( {{\mathrm{\Delta }}_z^ \ast } \right)$$\end{document}</span>
+    <div id="M48" class="math">
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msubsup">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Δ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq13.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <span class="italic">p</span>(Δ
+  <sub>
+   <span class="italic">u</span>
+  </sub>) are defined similarly, and the prior for other parameters 
+  <div id="IEq013" class="inline-formula">
+   <div class="alternatives">
+    <span id="M49" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p(z^{\ast}, {\mathbf{\mu}}) \propto 1_{S}$$\end{document}</span>
+    <div id="M50" class="math">
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msup">
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span mathvariant="bold" class="mi">μ</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">∝</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mn">1</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq013.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is an indicator function for membership in the set 
+  <span class="italic">S</span>. (The prior is uniform over set 
+  <span class="italic">S</span>, and 0 outside of the set.) We explore the joint pdf presented in the second term of Eq. (
+  <a rid="Equ11" ref-type="" href="#Equ11">11</a>) using MCMC. For each posterior MCMC chain draw 
+  <span class="italic">l</span> of parameters 
+  <div id="IEq14" class="inline-formula">
+   <div class="alternatives">
+    <span id="M51" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$z^{ \ast (l)},{\mathbf{\mu}} ^{(l)},{\mathrm{\Delta }}_{\mu} ^{(l)},{\mathrm{\Delta }}_z^{ \ast (l)}$$\end{document}</span>
+    <div id="M52" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq14.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, and 
+  <div id="IEq15" class="inline-formula">
+   <div class="alternatives">
+    <span id="M53" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{\Delta }}_u^{(l)}$$\end{document}</span>
+    <div id="M54" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">u</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq15.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> we compute a value of binary variable 
+  <div id="IEq16" class="inline-formula">
+   <div class="alternatives">
+    <span id="M55" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$h_i^{(l)}:$$\end{document}</span>
+    <div id="M56" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">h</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">:</span>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq16.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ12" class="disp-formula">
+   <span class="label">12</span>
+   <div class="alternatives">
+    <span id="M57" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left\{ {\begin{array}{*{20}{l}} {\mathit h_i^{(l)} = 1\quad {\mathrm{if}}\quad {{\mu}} _i^{(l)} \in \left[ {{{\mu}} _{\mathrm{o}}^{(l)} \pm \Delta _{\mu} ^{(l)}} \right] \cap \mathit z_i^ \ast \in \left[ {\mathit z^{ \ast (l)} \pm \Delta _z^{\ast (l)}} \right] \cap \mathit u_i \in \left[ {\mathit u_{\mathrm{o}} \pm \Delta _u^{(l)}} \right]} \hfill \\ {\mathit h_i^{(l)} = 0\quad \mathrm{otherwise},} \hfill \end{array}} \right.$$\end{document}</span>
+    <div id="M58" class="math">
+     <div close="" open="{" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="mtable">
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">h</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <span class="mi">l</span>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+          <span width="1.0em" class="mspace"/>
+          <span mathvariant="normal" class="mi">if</span>
+          <span width="1.0em" class="mspace"/>
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <span class="mi">l</span>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">∈</span>
+          <div close="]" open="[" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">μ</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">o</span>
+             </div>
+             <div class="mrow">
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">l</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">±</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">Δ</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">μ</span>
+             </div>
+             <div class="mrow">
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">l</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">z</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">*</span>
+           </div>
+          </div>
+          <span class="mo">∈</span>
+          <div close="]" open="[" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="msup">
+             <div class="mrow">
+              <span mathvariant="italic" class="mi">z</span>
+             </div>
+             <div class="mrow">
+              <span class="mo">*</span>
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">l</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">±</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">Δ</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">z</span>
+             </div>
+             <div class="mrow">
+              <span class="mo">*</span>
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">l</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">u</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∈</span>
+          <div close="]" open="[" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span mathvariant="italic" class="mi">u</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">o</span>
+             </div>
+            </div>
+            <span class="mo">±</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">Δ</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">u</span>
+             </div>
+             <div class="mrow">
+              <div class="mrow">
+               <span class="mo">(</span>
+               <div class="mrow">
+                <span class="mi">l</span>
+               </div>
+               <span class="mo">)</span>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div class="msubsup">
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">h</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+           <div class="mrow">
+            <div class="mrow">
+             <span class="mo">(</span>
+             <div class="mrow">
+              <span class="mi">l</span>
+             </div>
+             <span class="mo">)</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <span class="mn">0</span>
+          <span width="1.0em" class="mspace"/>
+          <span mathvariant="normal" class="mi">otherwise</span>
+          <span class="mo">,</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ12.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">which is an indicator of whether the 
+  <span class="italic">i</span>th hypothesis is true or not. The joint hypotheses are correct if all constituent hypotheses are correct, e.g.,
+  <div id="Equ13" class="disp-formula">
+   <span class="label">13</span>
+   <div class="alternatives">
+    <span id="M59" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$h_{ijk}^{(l)} = h_i^{(l)} \wedge h_j^{(l)} \wedge h_k^{(l)}.$$\end{document}</span>
+    <div id="M60" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">h</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mi">j</span>
+       <span class="mi">k</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">h</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">∧</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">h</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">j</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">∧</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">h</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">k</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span class="mi">l</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ13.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Model probabilities for any combination (e.g., 
+  <span class="italic">p</span>(
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) or 
+  <span class="italic">p</span>(
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">ijk</span>
+  </sub>)) are obtained from the MCMC chain using relative frequency of samples falling into each hypothesis region (or hypothesis combination region).
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">We first test the method using one-at-a-time observation system simulation experiments (Methods section). Here, we pretend each of the models is correct and use its output as observations one-at-a-time. We then exclude the true model from the model set and calculate the pdf for 
+  <span class="italic">z</span>* (GMST change to melt), which we compare to actual projections from the true model (Supplementary Figs. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> and 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>). In these experiments we choose the deterministic error expansion factor 
+  <span class="italic">f</span> = 3 such that the method gives correct coverage of the 90% posterior credible intervals for 
+  <span class="italic">z</span>*. We then constrain all available models with real observations to make actual projections of GMST change to melt. We compare the method to the standard BMA, which does not account for the non-exclusive terms. To do that, we simply perform weighted sampling from conditional GMST change pdfs given each model being correct 
+  <span class="italic">p</span>(
+  <span class="italic">z</span>*|
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) using our MCMC chain. We perform five projection experiments. These experiments explore the sensitivity of the results to observational datasets, and to the natural fraction of the recent SIE decline. The range of natural fractions considered here is roughly consistent with prior model-based studies which place it between 5 and 50%
+  <span class="sup">
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>–
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+  </span>. HadISST_r51_40p.nat uses 1979–2017 HadISST data for the SIE, the 51st realization of the HadCRUT4 temperature for the calculation of sea ice sensitivity over years 1979–2017, and assumes that 40% of the 1979–2017 SIE decline was natural. HadISST_r51_anthro experiment is exactly the same except is assumes that all of the recent decline was anthropogenic. NSIDC_r47_20p.nat uses NSIDC SIE observations, 47th realization of temperature observations, and assumes a natural contribution to the ice decline of 20%. NSIDC_r91_40p.nat uses NSIDC observations, the 91st realization of temperature observations, and assumes the natural contribution to the decline of 40%. There are large uncertainties regarding the magnitude of the true ice sensitivity given the short length of the observational records, and regarding the cause of the recent SIE decline
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>,
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>,
+   <a ref-type="bibr" rid="CR42" href="#CR42">42</a>
+  </span>. One way to sidestep the problem is to just use the mean SIE constraint for the shorter 1979–2004 period which is not as severely affected by the recent melt. This motivates the NSIDC_mean_only experiment. This experiment uses NSIDC observations for SIE for years 1979–2004, and no SIE sensitivity constraint (see Eq. (
+  <a rid="Equ18" ref-type="" href="#Equ18">18</a>) for the formula for the pdf of GMST change for this experiment). To make sure the expansion factor 
+  <span class="italic">f</span> = 3 is reasonable for this experiment, we perform observational system simulation experiments using the 1979–2004 calibration period, and no SIE sensitivity constraint. Supplementary Figures 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a> and 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a> provide validation results for these experiments, and confirm that in this case 
+  <span class="italic">f</span> = 3 provides reasonable coverage of the 90% posterior credible interval.
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">In what follows we focus on the HadISST_r51_anthro experiment to illustrate the capabilities of the new method. However, pdf properties of GMST change to melt are provided for all experiments, and averaged across the experiments.</p>
+</sec>

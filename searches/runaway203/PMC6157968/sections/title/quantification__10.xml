@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Quantification of spectroscopic uncertainty in direct CH
+  <sub>4</sub> forcing
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The methods used in this study are based on three components: experimental protocols, tabulation of methane absorption spectra, and models that are all used in combination to calculate the shortwave direct radiative forcing by CH
+  <sub>4</sub>. The calculations were designed to compute the direct and unadjusted shortwave forcing due to an increase in CH
+  <sub>4</sub> concentrations from 806 to 1760 ppbv under idealized cloud- and aerosol-free clear-sky conditions.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The protocols we adopted are identical to those for experiments 3b and 3d from the RTMIP (
+  <a rid="R2" ref-type="bibr" href="#R2">
+   <span class="italic">2</span>
+  </a>). Experiment 3b corresponds to present-day greenhouse gas (GHG) concentrations in 2000 CE, while experiment 3d corresponds to a counterfactual atmosphere with CH
+  <sub>4</sub>, CFC-11, and CFC-12 set to their concentrations in 1860 CE while other atmospheric properties are held at present-day climatological values. Since the methane concentrations in these two experiments are 1760 and 806 ppbv, respectively, differencing the radiative fluxes calculated for these experiments provides an estimate of the direct shortwave forcing by CH
+  <sub>4</sub> between 2000 and 1860 CE. Following RTMIP, the upper boundary conditions are a TOA solar insolation (
+  <a rid="R28" ref-type="bibr" href="#R28">
+   <span class="italic">28</span>
+  </a>) of 1360 W/m
+  <span class="sup">2</span> and a solar zenith angle of 53°. The lower boundary condition is a Lambertian surface with a spectrally flat albedo of 0.1. The atmospheric thermodynamic conditions and water vapor and ozone mixing ratios correspond to the Air Force Geophysics Laboratory (AFGL) mid-latitude summer atmospheric profile (
+  <a rid="R29" ref-type="bibr" href="#R29">
+   <span class="italic">29</span>
+  </a>) interpolated onto 458 vertical levels extending from the surface at 1011.4 hPa to the effective top of the atmosphere at 0.0 hPa. This is the same atmospheric profile used for the LBL calculations in RTMIP.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The first set of LBL calculations is based on HITRAN editions 2000 (
+  <a rid="R21" ref-type="bibr" href="#R21">
+   <span class="italic">21</span>
+  </a>), 2004 (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>), 2008 (
+  <a rid="R22" ref-type="bibr" href="#R22">
+   <span class="italic">22</span>
+  </a>), and 2012 (
+  <a rid="R10" ref-type="bibr" href="#R10">
+   <span class="italic">10</span>
+  </a>). The HITRAN 2000 data set included methane lines up through the fourth polyad, or tetradecad (
+  <a rid="R6" ref-type="bibr" href="#R6">
+   <span class="italic">6</span>
+  </a>), at approximately 6000 cm
+  <span class="sup">−1</span>; HITRAN 2004 included new lines between 6180 and 9200 cm
+  <span class="sup">−1</span>; whereas HITRAN 2008 added the fifth (icosad) and sixth (triacontad) polyads at ~7500 and 9000 cm
+  <span class="sup">−1</span>. The HITRAN 2012 data set added the eighth (pentacontakaipentad) polyad between 11,000 and 12,000 cm
+  <span class="sup">−1</span> while skipping the seventh (tetracontad) polyad spanning 10,000 cm
+  <span class="sup">−1</span>, although this missing polyad has subsequently been measured in the laboratory (
+  <a rid="R31" ref-type="bibr" href="#R31">
+   <span class="italic">31</span>
+  </a>) and has been included in the 2016 HITRAN edition. As of this writing, the most recent HITRAN 2016 update (
+  <a rid="R11" ref-type="bibr" href="#R11">
+   <span class="italic">11</span>
+  </a>) to CH
+  <sub>4</sub> spectroscopy is still not fully implemented in the LBL code described below, and therefore, we have not included it in our calculations.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The second set of LBL calculations is based on CH
+  <sub>4</sub> spectral optical properties from compilations of measurements of the Jovian planetary atmospheres (
+  <a rid="R9" ref-type="bibr" href="#R9">
+   <span class="italic">9</span>
+  </a>). The optical depths τ(ν) as functions of wave number 
+  <span class="italic">v</span> were computed using the Voigt-Goody model following
+  <div id="E1" class="disp-formula">
+   <div id="m1" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">τ</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="normal" class="mi">ν</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">=</span>
+      <span class="mn">2</span>
+      <span mathvariant="normal" class="mi">κ</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="normal" class="mi">ν</span>
+      <span class="mo">,</span>
+      <span mathvariant="italic" class="mi">T</span>
+      <span stretchy="false" class="mo">)</span>
+      <span mathvariant="italic" class="mi">w</span>
+      <div displaystyle="true" class="mstyle">
+       <div class="msubsup">
+        <span stretchy="true" class="mo">∫</span>
+        <span class="mn">0</span>
+        <span class="mo">∞</span>
+       </div>
+      </div>
+      <span mathvariant="italic" class="mi">V</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="italic" class="mi">x</span>
+      <span class="mo">,</span>
+      <span mathvariant="italic" class="mi">y</span>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="true" class="mo">/</span>
+      <span stretchy="true" class="mo">[</span>
+      <span class="mn">1</span>
+      <span class="mo">+</span>
+      <span mathvariant="normal" class="mi">κ</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="normal" class="mi">ν</span>
+      <span class="mo">,</span>
+      <span mathvariant="italic" class="mi">T</span>
+      <span stretchy="false" class="mo">)</span>
+      <span mathvariant="italic" class="mi">w</span>
+      <div class="msub">
+       <div class="mrow">
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="normal" class="mi">δ</span>
+        <span class="mo">/</span>
+        <div class="msubsup">
+         <span mathvariant="normal" class="mi">α</span>
+         <span mathvariant="normal" class="mi">D</span>
+         <span class="mn">0</span>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <span mathvariant="normal" class="mi">ν</span>
+      </div>
+      <span mathvariant="italic" class="mi">V</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="italic" class="mi">x</span>
+      <span class="mo">,</span>
+      <span mathvariant="italic" class="mi">y</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">/</span>
+      <div class="msqrt">
+       <span mathvariant="italic" class="mi">T</span>
+      </div>
+      <span stretchy="true" class="mo">]</span>
+      <span mathvariant="italic" class="mi">d</span>
+      <span mathvariant="italic" class="mi">x</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div>
+  <div id="E2" class="disp-formula">
+   <div id="m2" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">V</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="italic" class="mi">x</span>
+      <span class="mo">,</span>
+      <span mathvariant="italic" class="mi">y</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">=</span>
+      <span mathvariant="italic" class="mi">y</span>
+      <div class="msup">
+       <span mathvariant="normal" class="mi">π</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mn">3</span>
+        <span class="mo">/</span>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <div displaystyle="true" class="mstyle">
+       <div class="msubsup">
+        <span stretchy="true" class="mo">∫</span>
+        <div class="mrow">
+         <span class="mo">−</span>
+         <span class="mo">∞</span>
+        </div>
+        <span class="mo">∞</span>
+       </div>
+      </div>
+      <span class="mtext">exp</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mo">−</span>
+      <div class="msup">
+       <span mathvariant="italic" class="mi">t</span>
+       <span class="mn">2</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">/</span>
+      <span stretchy="true" class="mo">[</span>
+      <div class="msup">
+       <span mathvariant="italic" class="mi">y</span>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msup">
+       <div class="mrow">
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="italic" class="mi">x</span>
+        <span class="mo">−</span>
+        <span mathvariant="italic" class="mi">t</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <span class="mn">2</span>
+      </div>
+      <span stretchy="true" class="mo">]</span>
+      <span mathvariant="italic" class="mi">d</span>
+      <span mathvariant="italic" class="mi">t</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(2)</span>
+  </div>
+  <div id="E3" class="disp-formula">
+   <div id="m3" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">y</span>
+      <span class="mo">=</span>
+      <span stretchy="false" class="mo">(</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">L</span>
+       <span class="mn">0</span>
+      </div>
+      <span class="mo">/</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">D</span>
+       <span class="mn">0</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="italic" class="mi">P</span>
+      <span class="mo">/</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">P</span>
+       <span class="mn">0</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="true" class="mo">(</span>
+      <div class="msqrt">
+       <div class="mrow">
+        <div class="msub">
+         <span mathvariant="italic" class="mi">T</span>
+         <span class="mn">0</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">/</span>
+      <span mathvariant="italic" class="mi">T</span>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="false" class="mo">[</span>
+      <span mathvariant="italic" class="mi">q</span>
+      <span class="mo">+</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mn">1</span>
+      <span class="mo">−</span>
+      <span mathvariant="italic" class="mi">q</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">/</span>
+      <span class="mtext">SFB</span>
+      <span stretchy="true" class="mo">]</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(3)</span>
+  </div>where 
+  <span class="italic">κ</span>(ν, 
+  <span class="italic">T</span>) is the spectrally varying absorption coefficient at temperature 
+  <span class="italic">T</span>, 
+  <span class="italic">w</span> is the integrated methane amount per unit area (in kilometer-amagats equal to 4.4615 mol/cm
+  <span class="sup">2</span>), 
+  <div class="inline-formula">
+   <div id="m4" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="normal" class="mi">δ</span>
+        <span class="mo">/</span>
+        <div class="msubsup">
+         <span mathvariant="normal" class="mi">α</span>
+         <span mathvariant="normal" class="mi">D</span>
+         <span class="mn">0</span>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <span mathvariant="normal" class="mi">ν</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the wave number–dependent ratio of the mean line spacing to Doppler line width, 
+  <span class="italic">V</span>(
+  <span class="italic">x</span>, 
+  <span class="italic">y</span>) is the Voigt function, 
+  <div class="inline-formula">
+   <div id="m5" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">L</span>
+       <span class="mn">0</span>
+      </div>
+      <span class="mo">/</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">D</span>
+       <span class="mn">0</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>
+  </div> is the ratio of Lorentz and Doppler line widths, 
+  <span class="italic">P</span> is the pressure, 
+  <span class="italic">q</span> is the methane mole fraction, SFB is the dimensionless self-to-foreign broadening coefficient, and reference conditions are 
+  <span class="italic">T</span>
+  <sub>0</sub> = 296 K and 
+  <span class="italic">P</span>
+  <sub>0</sub> = 1.01325 bars. The temperature dependence of κ(ν, 
+  <span class="italic">T</span>) is parameterized using (
+  <a rid="R9" ref-type="bibr" href="#R9">
+   <span class="italic">9</span>
+  </a>)
+  <div id="E4" class="disp-formula">
+   <div id="m6" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mtext">log</span>
+       <span mathvariant="italic" class="mi">e</span>
+      </div>
+      <span stretchy="false" class="mo">[</span>
+      <span mathvariant="normal" class="mi">κ</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="normal" class="mi">ν</span>
+      <span class="mo">,</span>
+      <span mathvariant="italic" class="mi">T</span>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="false" class="mo">]</span>
+      <span class="mo">=</span>
+      <span class="mn">0.5</span>
+      <span mathvariant="italic" class="mi">z</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="italic" class="mi">z</span>
+      <span class="mo">−</span>
+      <span class="mn">1</span>
+      <span stretchy="false" class="mo">)</span>
+      <div class="msub">
+       <span class="mtext">log</span>
+       <span mathvariant="italic" class="mi">e</span>
+      </div>
+      <span stretchy="false" class="mo">[</span>
+      <span mathvariant="normal" class="mi">κ</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="normal" class="mi">ν</span>
+      <span class="mo">,</span>
+      <span class="mn">100</span>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="false" class="mo">]</span>
+      <span class="mo">+</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mn">1</span>
+      <span class="mo">−</span>
+      <div class="msup">
+       <span mathvariant="italic" class="mi">z</span>
+       <span class="mn">2</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+      <div class="msub">
+       <span class="mtext">log</span>
+       <span mathvariant="italic" class="mi">e</span>
+      </div>
+      <span stretchy="false" class="mo">[</span>
+      <span mathvariant="normal" class="mi">κ</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="normal" class="mi">ν</span>
+      <span class="mo">,</span>
+      <span class="mn">198</span>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="true" class="mo">]</span>
+      <span class="mo">+</span>
+      <span class="mn">0.5</span>
+      <span mathvariant="italic" class="mi">z</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="italic" class="mi">z</span>
+      <span class="mo">+</span>
+      <span class="mn">1</span>
+      <span stretchy="false" class="mo">)</span>
+      <div class="msub">
+       <span class="mtext">log</span>
+       <span mathvariant="italic" class="mi">e</span>
+      </div>
+      <span stretchy="false" class="mo">[</span>
+      <span mathvariant="normal" class="mi">κ</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="normal" class="mi">ν</span>
+      <span class="mo">,</span>
+      <span class="mn">296</span>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="false" class="mo">]</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(4)</span>
+  </div>
+  <div id="E5" class="disp-formula">
+   <div id="m7" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">z</span>
+      <span class="mo">=</span>
+      <span stretchy="false" class="mo">(</span>
+      <span mathvariant="italic" class="mi">T</span>
+      <span class="mo">−</span>
+      <span class="mn">198</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">/</span>
+      <span class="mn">98</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(5)</span>
+  </div>Computing τ(ν) requires (i) vertical profiles of 
+  <span class="italic">P</span>, 
+  <span class="italic">T</span>, 
+  <span class="italic">q</span>, and 
+  <span class="italic">w</span>; (ii) tables of κ(ν, 100), κ(ν, 198), and κ(ν, 296) as functions of ν to compute κ(ν, 
+  <span class="italic">T</span>) from 
+  <a ref-type="disp-formula" rid="E4" href="#E4">Eq. 4</a>; (iii) a tabulation of 
+  <div class="inline-formula">
+   <div id="m8" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="normal" class="mi">δ</span>
+        <span class="mo">/</span>
+        <div class="msubsup">
+         <span mathvariant="normal" class="mi">α</span>
+         <span mathvariant="normal" class="mi">D</span>
+         <span class="mn">0</span>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <span mathvariant="normal" class="mi">ν</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> versus ν; and (iv) values for the free parameters 
+  <div class="inline-formula">
+   <div id="m9" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">L</span>
+       <span class="mn">0</span>
+      </div>
+      <span class="mo">/</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">D</span>
+       <span class="mn">0</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>
+  </div> and SFB. Inputs (ii) and (iii) are available from optical measurements of Jovian planetary atmospheres (
+  <a rid="R9" ref-type="bibr" href="#R9">
+   <span class="italic">9</span>
+  </a>). The line width ratio (
+  <a rid="R32" ref-type="bibr" href="#R32">
+   <span class="italic">32</span>
+  </a>) 
+  <div class="inline-formula">
+   <div id="m10" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span stretchy="false" class="mo">(</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">L</span>
+       <span class="mn">0</span>
+      </div>
+      <span class="mo">/</span>
+      <div class="msubsup">
+       <span mathvariant="normal" class="mi">α</span>
+       <span mathvariant="normal" class="mi">D</span>
+       <span class="mn">0</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>
+  </div> varies between 120 and 200 K
+  <span class="sup">1/2</span>, and we performed the calculations at these bounding values and the best fit value (
+  <a rid="R9" ref-type="bibr" href="#R9">
+   <span class="italic">9</span>
+  </a>) of 150 K
+  <span class="sup">1/2</span>. The self-broadening parameter SFB varies (
+  <a rid="R33" ref-type="bibr" href="#R33">
+   <span class="italic">33</span>
+  </a>) between 1.2 and 1.5, and we again performed the calculations at these bounding values and the best fit value (
+  <a rid="R9" ref-type="bibr" href="#R9">
+   <span class="italic">9</span>
+  </a>) of 1.4. We integrated these equations using the DQAGI numerical quadrature routines from the SLATEC (Sandia, Los Alamos, Air Force Weapons Laboratory Technical Exchange Committee) Fortran library (
+  <a rid="R34" ref-type="bibr" href="#R34">
+   <span class="italic">34</span>
+  </a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We input the atmospheric profiles and HITRAN line databases into an LBL radiative transfer code to calculate the vertically and spectrally resolved profiles of absorption optical depths summed over H
+  <sub>2</sub>O, CO
+  <sub>2</sub>, CH
+  <sub>4</sub>, and O
+  <sub>3</sub>. We used the Line-By-Line Radiative Transfer Model (LBLRTM) (
+  <a rid="R13" ref-type="bibr" href="#R13">
+   <span class="italic">13</span>
+  </a>) version 12.2 to perform these calculations for HITRAN 2000, 2004, and 2008 and version 12.4 for HITRAN 2012. The switch to the newer version was necessitated by the new line mixing specification parameters starting in HITRAN 2012 (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>). The treatments of the water vapor continuum in LBLRTM versions 12.2 and 12.4 are the Mlawer-Tobin-Clough-Kneizys-Davies (MT_CKD) parameterizations (
+  <a rid="R36" ref-type="bibr" href="#R36">
+   <span class="italic">36</span>
+  </a>) versions 2.5.2 and 2.7, respectively.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used a spectral resolution of δν = 0.0001 cm
+  <span class="sup">−1</span>, sufficient to resolve 99% of the very narrow H
+  <sub>2</sub>O absorption lines in the stratosphere at pressures above 0.01 atmosphere (
+  <a rid="R37" ref-type="bibr" href="#R37">
+   <span class="italic">37</span>
+  </a>), and a spectral range of 2000 to 34,000 cm
+  <span class="sup">−1</span> covering 98.6% of TOA insolation. The resulting tables of absorption optical depth contain 3.2 × 10
+  <span class="sup">8</span> spectral intervals times 458 vertical levels and are therefore much too large for practical calculations of radiative flux profiles. For this reason, we constructed transmission weighted average optical depths for subsequent radiative calculations at a much lower spectral resolution of 
+  <div class="inline-formula">
+   <div id="m11" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">δ</span>
+      <div accent="true" class="mover">
+       <span mathvariant="normal" class="mi">ν</span>
+       <span stretchy="true" class="mo">¯</span>
+      </div>
+      <span class="mo">=</span>
+      <span class="mn">5</span>
+      <div class="msup">
+       <span class="mtext">cm</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>. Let 
+  <span class="italic">i</span> denote the 
+  <span class="italic">i</span>th averaged and 
+  <span class="italic">j</span> denote the 
+  <span class="italic">j</span>th original high-resolution optical depth summed over H
+  <sub>2</sub>O, CO
+  <sub>2</sub>, CH
+  <sub>4</sub>, and O
+  <sub>3</sub>, respectively. Then, the averaged optical depth was computed by
+  <div id="E6" class="disp-formula">
+   <div id="m12" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div accent="true" class="mover">
+       <span mathvariant="normal" class="mi">τ</span>
+       <span stretchy="true" class="mo">¯</span>
+      </div>
+      <span stretchy="false" class="mo">(</span>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span mathvariant="normal" class="mi">ν</span>
+         <span stretchy="true" class="mo">¯</span>
+        </div>
+       </div>
+       <span mathvariant="italic" class="mi">i</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">=</span>
+      <span class="mo">−</span>
+      <span class="mtext">ln</span>
+      <span stretchy="true" class="mo">{</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <span mathvariant="italic" class="mi">N</span>
+      </div>
+      <div displaystyle="true" class="mstyle">
+       <div class="munderover">
+        <span stretchy="true" class="mo">∑</span>
+        <div class="mrow">
+         <span mathvariant="italic" class="mi">j</span>
+         <span class="mo">=</span>
+         <span mathvariant="italic" class="mi">i</span>
+         <span mathvariant="italic" class="mi">N</span>
+        </div>
+        <div class="mrow">
+         <span stretchy="false" class="mo">(</span>
+         <span mathvariant="italic" class="mi">i</span>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+         <span stretchy="false" class="mo">)</span>
+         <span mathvariant="italic" class="mi">N</span>
+         <span class="mo">−</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+      <span class="mtext">exp</span>
+      <span stretchy="false" class="mo">[</span>
+      <span class="mo">−</span>
+      <span mathvariant="normal" class="mi">τ</span>
+      <span stretchy="false" class="mo">(</span>
+      <div class="msub">
+       <span mathvariant="normal" class="mi">ν</span>
+       <span mathvariant="italic" class="mi">j</span>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="false" class="mo">]</span>
+      <span stretchy="true" class="mo">}</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(6)</span>
+  </div>
+  <div id="E7" class="disp-formula">
+   <div id="m13" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">N</span>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">δ</span>
+        <div accent="true" class="mover">
+         <span mathvariant="normal" class="mi">ν</span>
+         <span stretchy="true" class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">δ</span>
+        <div accent="true" class="mover">
+         <span mathvariant="normal" class="mi">ν</span>
+         <span stretchy="true" class="mo">¯</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(7)</span>
+  </div>
+  <div id="E8" class="disp-formula">
+   <div id="m14" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span mathvariant="normal" class="mi">ν</span>
+         <span stretchy="true" class="mo">¯</span>
+        </div>
+       </div>
+       <span mathvariant="italic" class="mi">i</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span mathvariant="normal" class="mi">ν</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span mathvariant="italic" class="mi">N</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <span mathvariant="italic" class="mi">N</span>
+       <span class="mn">2</span>
+      </div>
+      <span mathvariant="normal" class="mi">δ</span>
+      <span mathvariant="normal" class="mi">ν</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(8)</span>
+  </div>By construction, each averaged optical depth yields the same transmission through a given layer as the mean of the transmissions for the 
+  <span class="italic">N</span> high-resolution spectral intervals used in its calculation. Because of the very large optical depths that can exceed 10
+  <span class="sup">4</span> in the primary absorption band of H
+  <sub>2</sub>O at ν = 3730 cm
+  <span class="sup">−1</span> and its overtone bands in the near-infrared (
+  <a rid="R37" ref-type="bibr" href="#R37">
+   <span class="italic">37</span>
+  </a>), the calculations in 
+  <a ref-type="disp-formula" rid="E6" href="#E6">Eq. 6</a> require nonstandard numerical precision. In standard single or double precision computer arithmetic, the transmissions corresponding to these very large optical depths will underflow and be set to zero. However, in quadruple precision computer arithmetic, the smallest number that can be represented is roughly
+  <div id="E9" class="disp-formula">
+   <div id="m15" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msup">
+       <span class="mn">2</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <div class="msup">
+         <span class="mn">2</span>
+         <span class="mn">14</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msup">
+       <span class="mn">2</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mn">16384</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msup">
+       <span mathvariant="italic" class="mi">e</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mn">16384</span>
+        <span class="mo">*</span>
+        <span class="mtext">ln</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mn">2</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+      <span class="mo">≃</span>
+      <div class="msup">
+       <span mathvariant="italic" class="mi">e</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mn">11356</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(9)</span>
+  </div>so optical depths up to τ(ν
+  <sub>
+   <span class="italic">j</span>
+  </sub>) ≲ 11356 can be accommodated. Therefore, we adopted quadruple (or “quad”) precision arithmetic to compute averaged optical depths from the high-spectral-resolution optical depths without underflowing.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used the Discrete Ordinates Radiative Transfer (DISORT) code (
+  <a rid="R38" ref-type="bibr" href="#R38">
+   <span class="italic">38</span>
+  </a>) version 2 in a massively parallel implementation (
+  <a rid="R37" ref-type="bibr" href="#R37">
+   <span class="italic">37</span>
+  </a>) to compute the fluxes corresponding to RTMIP experiments 3b and 3d. Our algorithm combines the average optical depths from 
+  <a ref-type="disp-formula" rid="E6" href="#E6">Eq. 6</a> with scattering optical depths for Rayleigh scattering (
+  <a rid="R15" ref-type="bibr" href="#R15">
+   <span class="italic">15</span>
+  </a>) and inputs the resulting extinction optical depths into a reentrant, thread-safe implementation of DISORT2. For these calculations, we used eight streams and set the TOA solar flux to standard spectra (
+  <a rid="R14" ref-type="bibr" href="#R14">
+   <span class="italic">14</span>
+  </a>).
+ </p>
+</sec>

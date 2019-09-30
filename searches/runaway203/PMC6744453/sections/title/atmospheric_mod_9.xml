@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Atmospheric models and global reanalysis products</div>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">We analyse a suite of global reanalyses, i.e., two configurations of the ECMWF model system (ERA-Interim
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> and ERA5), the Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2
+  <span class="sup">
+   <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+  </span>), the Japanese 55-year Reanalysis (JRA-55
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span>), and the National Centers for Environmental Prediction Reanalysis 2 (NCEP-2
+  <span class="sup">
+   <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+  </span>).
+ </p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">We also include the operational ECMWF global deterministic weather forecasting system (IFS-HRES
+  <span class="sup">
+   <a ref-type="bibr" rid="CR16" href="#CR16">16</a>
+  </span>), as well as, two experimental configurations of the regional convective scale model HARMONIE-AROME
+  <span class="sup">
+   <a ref-type="bibr" rid="CR15" href="#CR15">15</a>
+  </span>. The first of these configurations (AA) covers the same domain as the operational numerical weather prediction system AROME Arctic
+  <span class="sup">
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+  </span> and has the same representation of the sea-ice cover. The second experimental configuration of HARMONIE-AROME (AA-snow) is similar to AA, but incorporates the parameterisations for the sea-ice mass-balance and snow layer on top of the sea-ice. The model domain for AA-snow is smaller than that one in the AA experiment (see the Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1)</a> to reduce the computational costs and to focus on the areas with extensive sea-ice cover. The AA experiment covers the time period from 10 January to 20 March 2015. The AA-snow experiment has been performed from 1 September 2014 to 20 March 2015. To allow realistic evolution of the snow cover in AA-snow, this experiment was started without snow layer on top of sea ice and snow was accumulated from the modelled precipitation. In both AA and AA-snow the initial ice thickness is 0.75 m but in AA it remains constant during the experiment and in AA-snow it evolves according to the ice mass-balance parameterisation.
+ </p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Relevant features of the models, which were used to produce forecast and reanalysis products, are given in Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a> and with a focus on the representation of the sea-ice surface in the Arctic. In short, none of the global model systems has a prognostic parameterisation of the sea-ice mass-balance nor a parameterisation of a snow layer on top of the sea-ice, which impacts the surface energy budget. NCEP-2 simulates snow on sea-ice, however, without any influence on the heat conductivity and surface albedo. In all models sea-ice concentration is updated daily by utilising satellite products. Operational configurations of HARMONIE-AROME do not simulate the sea-ice concentration and sea-ice thickness, but simulate sea-ice surface temperature
+  <span class="sup">
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>,
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span>.
+ </p>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">To extend the existing sea-ice parameterisation of HARMONIE-AROME with ice mass-balance calculations, we added the representation of the following processes: ice growth and melting from the bottom, and surface melting. The more complex processes of internal melting and snow-ice formation were not considered.</p>
+ <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">The interface between the sea-ice bottom and the underlying water body is governed by the balance between the sea-ice and ocean heat fluxes. When these fluxes are not in equilibrium state, the residual heat flux leads to growth or melting of the ice layer
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span>:
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M127" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rho }_{{\rm{i}}}{L}_{{\rm{f}}}\frac{{\mathrm{d}}{h}_{{\rm{i}}}}{{\mathrm{d}}t}={k}_{{\rm{i}}}\left.{\frac{\partial {T}_{{\rm{i}}}}{\partial z}}\right\vert_{z={h}_{{\rm{i}}}}-{F}_{{\rm{w}}}$$\end{document}</span>
+    <div id="M128" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">L</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">f</span>
+      </div>
+     </div>
+     <div class="mfrac">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">d</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">h</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">d</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">k</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <div close="∣" open="" separators="" class="mfenced">
+        <div class="mrow">
+         <div class="mfrac">
+          <div class="mrow">
+           <span class="mi">∂</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">i</span>
+            </div>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mi">∂</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">h</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">F</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">w</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_11975_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <div id="IEq63" class="inline-formula">
+   <div class="alternatives">
+    <span id="M129" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rho }_{{\rm{i}}}$$\end{document}</span>
+    <div id="M130" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq63.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the density of sea-ice, 
+  <div id="IEq64" class="inline-formula">
+   <div class="alternatives">
+    <span id="M131" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${L}_{{\rm{f}}}$$\end{document}</span>
+    <div id="M132" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">L</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">f</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq64.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the latent heat of fusion, 
+  <div id="IEq65" class="inline-formula">
+   <div class="alternatives">
+    <span id="M133" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${h}_{{\rm{i}}}$$\end{document}</span>
+    <div id="M134" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">h</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq65.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the total ice thickness, 
+  <div id="IEq66" class="inline-formula">
+   <div class="alternatives">
+    <span id="M135" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${k}_{{\rm{i}}}$$\end{document}</span>
+    <div id="M136" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">k</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq66.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the thermal conductivity of sea-ice, and 
+  <div id="IEq67" class="inline-formula">
+   <div class="alternatives">
+    <span id="M137" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${F}_{{\rm{w}}}$$\end{document}</span>
+    <div id="M138" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">F</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">w</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq67.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the ocean heat flux. For the AA-snow experiment, the ocean heat flux was assumed to be constant with the value of 
+  <div id="IEq68" class="inline-formula">
+   <div class="alternatives">
+    <span id="M139" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$2\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</span>
+    <div id="M140" class="math">
+     <span class="mn">2</span>
+     <span width="0.33em" class="mspace"/>
+     <span mathvariant="normal" class="mi">W</span>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">−</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq68.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>.
+ </p>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">The processes of surface melting is parameterised in the following way. At the first step, the ice surface temperature is calculated from the thermal balance of the surface layer of sea-ice. Then, if the obtained temperature is higher than the melting temperature of sea-ice, it is set to be equal this melting temperature and the residual heat flux 
+  <div id="IEq69" class="inline-formula">
+   <div class="alternatives">
+    <span id="M141" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${F}_{{\rm{melt}}}$$\end{document}</span>
+    <div id="M142" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">F</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">melt</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq69.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> induces the melting of the ice surface
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span>:
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M143" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${F}_{{\rm{melt}}}=-{\rho }_{{\rm{i}}}{L}_{{\rm{f}}}\frac{{\mathrm{d}}{h}_{{\rm{i}}}}{{\mathrm{d}}t}$$\end{document}</span>
+    <div id="M144" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">F</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">melt</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">L</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">f</span>
+      </div>
+     </div>
+     <div class="mfrac">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">d</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">h</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">d</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_11975_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">The AA-snow experiment, which uses the updated sea-ice parameterisation scheme, shows simulated snow depths between 0.45 and 0.7 m and sea-ice thickness between 1.4 and 1.7 m. This is consistent with the observed snow and sea-ice thickness of 
+  <div id="IEq70" class="inline-formula">
+   <div class="alternatives">
+    <span id="M145" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$0.5\pm 0.2\ {\mathrm{m}}$$\end{document}</span>
+    <div id="M146" class="math">
+     <span class="mn">0.5</span>
+     <span class="mo">±</span>
+     <span class="mn">0.2</span>
+     <span width="0.33em" class="mspace"/>
+     <span mathvariant="normal" class="mi">m</span>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq70.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq71" class="inline-formula">
+   <div class="alternatives">
+    <span id="M147" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$1.4\pm 0.3\ {\mathrm{m}}$$\end{document}</span>
+    <div id="M148" class="math">
+     <span class="mn">1.4</span>
+     <span class="mo">±</span>
+     <span class="mn">0.3</span>
+     <span width="0.33em" class="mspace"/>
+     <span mathvariant="normal" class="mi">m</span>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq71.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, respectively
+  <span class="sup">
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>.
+ </p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">We compare the model’s 
+  <div id="IEq72" class="inline-formula">
+   <div class="alternatives">
+    <span id="M149" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${T}_{{\rm{skin}}}$$\end{document}</span>
+    <div id="M150" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">skin</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq72.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> with the satellite and in-situ observations described in the previous sections. For the satellite observations 
+  <div id="IEq73" class="inline-formula">
+   <div class="alternatives">
+    <span id="M151" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${T}_{{\rm{skin}}}$$\end{document}</span>
+    <div id="M152" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">skin</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq73.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> corresponds to the model’s grid-cell mean temperature, and in case of the in-situ observations it corresponds to the 
+  <div id="IEq74" class="inline-formula">
+   <div class="alternatives">
+    <span id="M153" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${T}_{{\rm{skin}}}$$\end{document}</span>
+    <div id="M154" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">skin</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq74.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> of the sea-ice covered part only. Thus, for the satellite observation comparison we can use the Eq. (
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>). For the comparison with the in-situ observations we partition the longwave upwelling radiation LW
+  <div id="IEq75" class="inline-formula">
+   <div class="alternatives">
+    <span id="M155" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\uparrow$$\end{document}</span>
+    <div id="M156" class="math">
+     <span class="mi">↑</span>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq75.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> into an ocean and sea-ice covered part according to the sea-ice concentration 
+  <div id="IEq76" class="inline-formula">
+   <div class="alternatives">
+    <span id="M157" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{SIC}}$$\end{document}</span>
+    <div id="M158" class="math">
+     <span mathvariant="normal" class="mi">SIC</span>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq76.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> at the respective grid-cell.
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M159" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{LW}}{\uparrow} =({\mathrm{1}}-{\mathrm{SIC}})\cdot {\mathrm{LW}}{\uparrow }^{({\rm{ocean}})}+{\mathrm{SIC}}\cdot {\mathrm{LW}}{\uparrow }^{({\rm{sea-ice}})}$$\end{document}</span>
+    <div id="M160" class="math">
+     <span mathvariant="normal" class="mi">LW</span>
+     <span class="mi">↑</span>
+     <span class="mo">=</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">1</span>
+       <span class="mo">−</span>
+       <span mathvariant="normal" class="mi">SIC</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">⋅</span>
+     <span mathvariant="normal" class="mi">LW</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">↑</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">ocean</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span mathvariant="normal" class="mi">SIC</span>
+     <span class="mo">⋅</span>
+     <span mathvariant="normal" class="mi">LW</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">↑</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sea-ice</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_11975_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>If we assume the ocean surface with temperature of 
+  <div id="IEq77" class="inline-formula">
+   <div class="alternatives">
+    <span id="M161" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$-{2}^{\circ }\ {\rm{C}}$$\end{document}</span>
+    <div id="M162" class="math">
+     <span class="mo">−</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">∘</span>
+      </div>
+     </div>
+     <span width="0.33em" class="mspace"/>
+     <span mathvariant="normal" class="mi">C</span>
+    </div>
+    <span xlink:href="41467_2019_11975_Article_IEq77.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and emissivity of 0.98, then by following the Stefan-Boltzman law we obtain
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M163" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{LW}}{\uparrow }^{({\rm{ocean}})}=0.98\cdot \sigma \cdot 271.1{5}^{4}\cdot$$\end{document}</span>
+    <div id="M164" class="math">
+     <span mathvariant="normal" class="mi">LW</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">↑</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">ocean</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">0.98</span>
+     <span class="mo">⋅</span>
+     <span class="mi">σ</span>
+     <span class="mo">⋅</span>
+     <span class="mn">271.1</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mn">5</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">4</span>
+      </div>
+     </div>
+     <span class="mo">⋅</span>
+    </div>
+    <div xlink:href="41467_2019_11975_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>Thus, combining the Eqs. (
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>), (
+  <a rid="Equ4" ref-type="" href="#Equ4">4</a>), and (
+  <a rid="Equ5" ref-type="" href="#Equ5">5</a>), the skin temperature of the ice covered part of the grid-cell is derived as follows:
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M165" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${T}_{{\rm{skin}}}^{({\rm{sea-ice}})}={\left[\frac{{{\mathrm{SIC}}}^{-1}\left({\mathrm{LW}}{\uparrow} -({\mathrm{1}}-{\mathrm{SIC}}){\mathrm{LW}}{\uparrow }^{({\rm{ocean}})}\right)-({\mathrm{1}}-{\varepsilon }_{{\rm{s}}}){\mathrm{LW}}{\downarrow}}{{\varepsilon }_{{\rm{s}}}\sigma }\right]}^{\frac{1}{4}}$$\end{document}</span>
+    <div id="M166" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">skin</span>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">sea-ice</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msup">
+      <div class="mrow">
+       <div close="]" open="[" separators="" class="mfenced">
+        <div class="mrow">
+         <div class="mfrac">
+          <div class="mrow">
+           <div class="msup">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">SIC</span>
+            </div>
+            <div class="mrow">
+             <span class="mo">−</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">LW</span>
+             <span class="mi">↑</span>
+             <span class="mo">−</span>
+             <div class="mrow">
+              <span class="mo">(</span>
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">1</span>
+               <span class="mo">−</span>
+               <span mathvariant="normal" class="mi">SIC</span>
+              </div>
+              <span class="mo">)</span>
+             </div>
+             <span mathvariant="normal" class="mi">LW</span>
+             <div class="msup">
+              <div class="mrow">
+               <span class="mi">↑</span>
+              </div>
+              <div class="mrow">
+               <div class="mrow">
+                <span class="mo">(</span>
+                <div class="mrow">
+                 <span mathvariant="normal" class="mi">ocean</span>
+                </div>
+                <span class="mo">)</span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mo">−</span>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">1</span>
+             <span class="mo">−</span>
+             <div class="msub">
+              <div class="mrow">
+               <span class="mi">ε</span>
+              </div>
+              <div class="mrow">
+               <span mathvariant="normal" class="mi">s</span>
+              </div>
+             </div>
+            </div>
+            <span class="mo">)</span>
+           </div>
+           <span mathvariant="normal" class="mi">LW</span>
+           <span class="mi">↓</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">ε</span>
+            </div>
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">s</span>
+            </div>
+           </div>
+           <span class="mi">σ</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="mfrac">
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">4</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_11975_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+</sec>

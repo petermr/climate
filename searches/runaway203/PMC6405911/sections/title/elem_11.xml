@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec12" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">All neural networks have been developed in Matlab R2017b using the Neural Network toolbox and code written by the authors (CEB &amp; RMB).</p>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">ANN1</div>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">ANN1 is an artificial neural network used to identify the relationship between climatic and anthropogenic disturbances and the likelihood of a luminescence age, indicating sediment deposition, to be found in the sedimentary record. ANN1 was trained with input-target data from 1590–1997 AD and used to stimulate the likelihood of identifying future deposition events in the sediment in the following 100 years under a series of alternative climatic and grazing pressure scenarios (see Future scenario forecasting).</p>
+  <sec id="Sec14" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pre-processing input datasets</div>
+   <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Three primary contributors to vegetation cover, and thus surface stability, were selected for inclusion in the model: grazing pressure, wildfire occurrence, and climatic conditions. Instrumental measurements (capturing the last 100 years of climatic data) were not used due to the relatively short time series measured. A longer dendrochronological record of tree ring growth from the Niobrara Valley Preserve (NVP)
+    <span class="sup">
+     <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+    </span> provided an integrated record of precipitation and temperature change over the past 400 years. Annual tree ring growth data was extracted and smoothed by a factor of 0.2 RLOESS function, to allow a signal to be identified by the model amongst the environmental noise. Grazing pressure for the six dune sites was based on the levels identified in the index defined in Buckland 
+    <span class="italic">et al</span>. (submitted – 16/08/2018) and smoothed by a moving average factor of 0.1 to represent progressive changes in management strategy. Wildfire occurrence was included as a binary input (i.e. ‘1’ – fire, ‘0’ – no fire) based on the fire scar records from NVP
+    <span class="sup">
+     <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+    </span>.
+   </p>
+  </sec>
+  <sec id="Sec15" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pre-processing target dataset</div>
+   <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">The target dataset for each of the six dune sites was represented by a probability density function (PDF) of stacked luminescence (optically stimulated luminescence – OSL) ages that depict episodes of sediment deposition in the dune profile. The target dataset represents a likelihood of identifying an OSL age, it does not necessarily capture every sediment reactivation event that has occurred for two reasons. First, historical events may have been eroded from the sedimentary record, and whilst a multicore strategy has been used to increase the overall representation of reactivation events, due to the fragmented nature of aeolian sedimentary profiles some events may be eroded from the record. Second, the event may not have been captured in the OSL dating due to sampling strategy. Considering these caveats, whilst a peak in the PDF dataset represents a depositional event, a trough does not equally represent a period of stability. A positive peak is a true result, but a negative absence only suggests that we did not find evidence of an event. As such, it is essential to pre-process the target dataset to avoid falsely training the ANN to interpret certain conditions as conducive to stability. Where long gaps between peaks (regions of contiguous values at zero) were found in the luminescence record, target values were removed, preventing the model from associating periods which might be due to erosional loss of sediment to specific environmental conditions, thereby learning a false relationship (for the present purposes).</p>
+  </sec>
+  <sec id="Sec16" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model structure and architecture</div>
+   <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">Final model structure used ‘timedelaynet’ function to allow for an adjustable lag to be incorporated into the network architecture. A lag of up to 8 years for the input variables was selected following a series of trials of different time lags. Given the complex nature of the relationship between the input variables and the resultant likelihood of sediment movement, four hidden layers were used with a structure of [3 30 30 3] neurons in the layers (Fig. 
+    <a rid="Fig7" ref-type="fig" href="#Fig7">7</a>). The Levenberg-Marquadt algorithm was used to train the network (minimizing distance between model outputs and target data) and the mean square error (MSE) of each model run was used as the performance indicator for each iteration. Training datasets were randomly partitioned for training (90%), validation (5%) and testing (5%) purposes during cross-validation experiments, but to reduce over-fitting in the future scenario simulations this split was altered to increase the test portion of the datasets (50% training, 5% validation, 45% testing) and improve the robustness of the model outputs.
+    <div id="Fig7" class="fig">
+     <span class="label">Figure 7</span>
+     <div class="caption">
+      <p>Schematic diagram demonstrating the model architecture of the final models used in ANN1. Training model was based on input-target dataset from 1590–1997 AD, with scenario datasets based on measured climatic data from 1998–2014 and simulated tree ring growth indices from 2015–2098.</p>
+     </div>
+     <div xlink:href="41598_2019_40429_Fig7_HTML" id="d29e839" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </p>
+  </sec>
+ </sec>
+ <sec id="Sec17" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">ANN2</div>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">ANN2 is an artificial neural network used to identify the relationship between individual climatic parameters (growing season precipitation, average max and min daily temperatures) and tree ring growth index
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span> from 1908–1997 AD. ANN2 was used to produce simulated tree ring growth indices under a range of hypothetical new climatic scenarios.
+  </p>
+  <sec id="Sec18" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pre-processing datasets</div>
+   <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Precipitation and temperatures measurements (sourced from Ainsworth Met Station (42.58°N, −100.05°W)) were used as input datasets and smoothed by a factor of 0.2. A tree ring growth index produced using ponderosa pine tree rings within the NVP was used as the target dataset
+    <span class="sup">
+     <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+    </span>.
+   </p>
+  </sec>
+  <sec id="Sec19" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model structure and architecture</div>
+   <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Final model structure used ‘fitnet’ function, a single hidden layer with 9 neurons (Fig. 
+    <a rid="Fig8" ref-type="fig" href="#Fig8">8</a>) and the Levenberg-Marquadt algorithm. Known time series data was randomly partitioned for training (70%), validation (10%) and testing (20%) purposes.
+    <div id="Fig8" class="fig">
+     <span class="label">Figure 8</span>
+     <div class="caption">
+      <p>Schematic diagram demonstrating the model architecture of the final models used in ANN2. Training model was based on input-target dataset from 1908–1997 AD, with scenario datasets based on measured data from 1998–2014 and simulated data from 2015–2098.</p>
+     </div>
+     <div xlink:href="41598_2019_40429_Fig8_HTML" id="d29e874" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </p>
+  </sec>
+ </sec>
+ <sec id="Sec20" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Future scenario forecasting</div>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Future scenario data refers to the 100 years post-1998 with the period from 1998–2014 using measured instrumental data, followed by 84 years of future ‘scenario’ data based on a range of climatic conditions, grazing pressure and wildfire frequency.</p>
+  <sec id="Sec21" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Scenario Forecasting (part 1): Tree Ring Growth Index</div>
+   <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">Trained ANN2 was used to model the predicted tree ring growth indices associated with two hypothetical climate scenarios and used as the new inputs alongside combinations of grazing pressure and wildfire occurrence in ANN1. Future climate data (2015–2100 AD) was produced using an autoregressive model to identify the normal levels of ‘noise’ identified in the measured historical precipitation and temperature datasets, before being added to two different future trends (Table 
+    <a rid="Tab1" ref-type="table" href="#Tab1">1</a>) (see Supplementary Note 
+    <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>).
+    <div id="Tab1" class="table-wrap">
+     <span class="label">Table 1</span>
+     <div class="caption">
+      <p>Description of two different climate scenarios used to generate forecasted tree ring growth indices.</p>
+     </div>
+     <table frame="hsides" rules="groups">
+      <thead>
+       <tr>
+        <th/>
+        <th>Growing season precipitation total (inches)</th>
+        <th>Growing season average maximum &amp; minimum observed temperatures (°F)</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>1</td>
+        <td>Growing season precipitation based on long-term average (last 100 years) ± noise generated from auto-regressive model of long-term precipitation trends.</td>
+        <td>Growing season average maximum and minimum temperatures based on long-term average (last 100 years) ± noise generated from auto-regressive model of long-term temperature trends.</td>
+       </tr>
+       <tr>
+        <td>2</td>
+        <td>Growing season precipitation based on long-term average (last 100 years) ± noise generated from auto-regressive model of long-term precipitation trends.</td>
+        <td>Growing season average maximum and minimum temperatures based on long-term average (last 100 years) plus low emission projections of a 4.5 °F increase in temperatures by the end of the century ± noise generated from auto-regressive model of long-term temperature trends.</td>
+       </tr>
+      </tbody>
+     </table>
+     <div class="table-wrap-foot">
+      <p>Two combinations of future growing season precipitation, average maximum temperatures and average minimum temperatures have been used to produce different climatic conditions. Scenarios used do not demonstrate predicted future conditions but are used as proof on concept to demonstrate the capacity of the model under a range of forcing combinations. Climate 2 temperature settings are based on projections of the Central Great Plains region under a low emissions scenario
+       <span class="sup">
+        <a ref-type="bibr" rid="CR68" href="#CR68">68</a>
+       </span>. Regional climate summaries were based on IPCC models and the findings of the NCA Report (2014).
+      </p>
+     </div>
+    </div>
+   </p>
+   <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Using the training dataset (1908–1997 AD) to define ANN2, the model was ran for 8,000 repeats with the simulated outputs associated with each network repeat stored by the model. Multiple cycles of the network ensured that the simulated target dataset was not driven by random extreme values. Repeats that produced more than seven tree ring indices &gt;5,000 (i.e. extreme values) were excluded from the final dataset. The mean and standard error for each year was calculated for the two climatic scenarios and used as the new tree ring growth index for simulating future sediment deposition events in ANN1.</p>
+  </sec>
+  <sec id="Sec22" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Scenario Forecasting (part 2): Future likelihood of sediment deposition events</div>
+   <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">Simulated tree ring indices were modelled against three levels of grazing pressure: low, moderate and heavy. Further analysis to sensitivity test the role of wildfires and additional periods of grazing pressure when applied against a background level were completed to produce six different combinations of future disturbance conditions (Table 
+    <a rid="Tab2" ref-type="table" href="#Tab2">2</a>).
+    <div id="Tab2" class="table-wrap">
+     <span class="label">Table 2</span>
+     <div class="caption">
+      <p>Description of six combinations of future climatic, land use and wildfire conditions that have been used in this study to simulate alternate sediment movement likelihood predictions across the six sites studied.</p>
+     </div>
+     <table frame="hsides" rules="groups">
+      <thead>
+       <tr>
+        <th/>
+        <th>Tree ring (climate) scenario</th>
+        <th>Land use pressure</th>
+        <th>Wildfire frequency</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>1</td>
+        <td>Climate 1 (Long-term averages)</td>
+        <td>Current land pressure index values used for all sites.</td>
+        <td>No wildfires.</td>
+       </tr>
+       <tr>
+        <td>2</td>
+        <td>Climate 1 (Long-term averages)</td>
+        <td>Current land pressure used, except increase by factor of 1 for 10-year period from year 2059</td>
+        <td>No wildfires.</td>
+       </tr>
+       <tr>
+        <td>3</td>
+        <td>Climate 1 (Long-term averages)</td>
+        <td>Current land pressure index values used for all sites.</td>
+        <td>Wildfire in years with average maximum temperature &gt;80 °F.</td>
+       </tr>
+       <tr>
+        <td>4</td>
+        <td>Climate 2 (Low emission)</td>
+        <td>Current land pressure index values used for all sites.</td>
+        <td>No wildfires.</td>
+       </tr>
+       <tr>
+        <td>5</td>
+        <td>Climate 2 (Low emission)</td>
+        <td>Current land pressure used, except increase by factor of 1 for 10-year period from year 2059</td>
+        <td>No wildfires.</td>
+       </tr>
+       <tr>
+        <td>6</td>
+        <td>Climate 2 (Low emission)</td>
+        <td>Current land pressure index values used for all sites.</td>
+        <td>Wildfire in years with average maximum temperature &gt;80 °F.</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </p>
+   <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">Using the known datasets (1590–1997 AD) to define ANN1, 5,000 repeats were completed using the six training sites. The training dataset was partitioned with a relatively low training portion (50%) and high validation and testing partition (5% + 45%) (based on a short time series) to prevent over-fitting and improve the robustness of the future scenario outputs. With each repeat, the model simulated the predicted future likelihood of identifying depositional episodes in the sediment, classified as a deposition event score, according to the six future disturbance scenarios.</p>
+  </sec>
+  <sec id="Sec23" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model validation and selection</div>
+   <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Repeats were assessed according to the model’s ability to correctly reproduce the peaks found in the known historical deposition dataset (ANN1 training target). ANN1 training target is characterised by a continuous curve with peaks of varying magnitude, but the nature of the response is binary (i.e. sediment moves, or it does not). The size and magnitude of the model-derived peaks are therefore not significant, with the location of the peaks relative to the known dataset (Fig. 
+    <a rid="Fig9" ref-type="fig" href="#Fig9">9</a>) a good indication of overall model performance and ‘fit’. Given this, the mean squared error (MSE) of the model is not an appropriate method for determining overall model performance. In this study, we assessed the performance of the model based on the variation in location between the known and modelled peaks, with the best model identified as having the closest alignment of peaks across the six study sites. To identify the optimum models, we sum the differences between training and predicted peak positions for each model repeat across the six sites and select the models of best fit. The model identified a predicted peak which fell within a defined time window of the target peak and calculated the difference in location between the two peaks. If a target peak was not reproduced in the predicted dataset (i.e. a predicted peak does not occur within the peak window), a model penalty value (e.g. 1e6 used in this study) was assigned. Total peak location differences and penalties were summed across the identified peaks in each site, and across the six sites for each neural network repeat run. A moderate number of iterations (300) per repeat was used to prevent the model from attempting to improve the network to the optimum MSE, which is not necessarily the best peak-location-performing model. Maximum peak window size was defined as half the distance between the two closest known peaks in the target dataset (i.e. 13 in this study).
+    <div id="Fig9" class="fig">
+     <span class="label">Figure 9</span>
+     <div class="caption">
+      <p>Schematic diagram demonstrating that MSE caused by variation in magnitude of peaks between training and predicted datasets (left) is not useful because the event occurred at the same point in time. The difference in the location of the peak (right) in time is a more appropriate measure of model performance.</p>
+     </div>
+     <div xlink:href="41598_2019_40429_Fig9_HTML" id="d29e1070" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </p>
+   <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">Following 5,000 repeats, the mean and standard error associated with the repeats from the top 10% of models was calculated (model repeats for each timepoint were normally distributed). Increasing the percentage of models used to calculate the mean and standard error confidence intervals would reduce the overall uncertainty on the profile, but potentially includes the output from models that are poorly trained against the known datasets and are therefore more precise but less accurate (see Supplementary Note 
+    <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>).
+   </p>
+  </sec>
+ </sec>
+ <sec id="Sec24" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Code Availability</div>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">The model is implemented in MatLab
+   <span class="sup">®</span> (version R2017b) using code written by the authors. A full version of the neural network code is freely available on GitHub (
+   <span ext-link-type="uri" xlink:href="https://github.com/CatherineBuckland/ANN" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/CatherineBuckland/ANN</span>).
+  </p>
+ </sec>
+</sec>

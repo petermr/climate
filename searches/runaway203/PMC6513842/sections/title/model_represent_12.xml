@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec12" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model representation</div>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">For the parameterization of 
+  <span class="italic">a priori</span> unknown functions 
+  <span class="italic">f</span>
+  <sub>1</sub>, 
+  <span class="italic">f</span>
+  <sub>2</sub> and 
+  <span class="italic">g</span> in Eqs 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a> and 
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a> we use a simple artificial neural network (ANN) in the form of perceptron with one hidden layer and hyperbolic tangent activation function, which is known to be a universal approximator
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span>:
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\phi (z)=\sum _{i\mathrm{=1}}^{m}\,{\alpha }_{i}\cdot \,\tanh ({\omega }_{i}^{T}z+{\gamma }_{i}\mathrm{).}$$\end{document}</span>
+    <div id="M6" display="block" class="math">
+     <span class="mi">ϕ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">z</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <div class="munderover">
+      <span class="mo">∑</span>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mn">=1</span>
+      </div>
+      <span class="mi">m</span>
+     </div>
+     <span width=".25em" class="mspace"/>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">α</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">⋅</span>
+     <span width=".25em" class="mspace"/>
+     <span class="mi">tanh</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">ω</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+     </div>
+     <span class="mi">z</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">γ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mn">).</span>
+    </div>
+    <div xlink:href="41598_2019_43867_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>Here 
+  <span class="italic">m</span> is a number of neurons, (
+  <span class="italic">α</span>, 
+  <span class="italic">ω</span>, 
+  <span class="italic">γ</span>) are the fitted coefficients (model’s parameters), and 
+  <span class="italic">z</span> is an input of some dimension 
+  <span class="italic">d</span>. Since we analyze the single LR04 time series, hereinafter we use the scalar variant of the function 
+  <span class="italic">φ</span>: 
+  <span class="bold">R</span>
+  <span class="sup">
+   <span class="italic">d</span>
+  </span> → 
+  <span class="bold">R</span>, so that 
+  <span class="italic">α</span> ∈ 
+  <span class="bold">
+   <span class="italic">R</span>
+  </span>, 
+  <span class="italic">ω</span> ∈ 
+  <span class="bold">R</span>
+  <span class="sup">
+   <span class="italic">d</span>
+  </span>, 
+  <span class="italic">γ</span> ∈ 
+  <span class="bold">R</span>. While the functions 
+  <span class="italic">f</span>
+  <sub>1</sub> and 
+  <span class="italic">g</span> take the vector of Takens variables
+  <span class="sup">
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+  </span>
+  <span class="italic">z</span> = (
+  <span class="italic">X</span>
+  <sub>
+   <span class="italic">n</span>−1
+  </sub>, … 
+  <span class="italic">X</span>
+  <sub>
+   <span class="italic">n</span>−
+   <span class="italic">L</span>
+  </sub>) as an input (i.e. 
+  <span class="italic">d</span> = 
+  <span class="italic">L</span>), the combined vector 
+  <span class="italic">z</span> = (
+  <span class="italic">X</span>
+  <sub>
+   <span class="italic">n</span>−1
+  </sub>, … 
+  <span class="italic">X</span>
+  <sub>
+   <span class="italic">n</span>−
+   <span class="italic">L</span>
+  </sub>, 
+  <span class="bold">q</span>
+  <sub>
+   <span class="italic">n</span>
+  </sub>) is passed to the input of the function 
+  <span class="italic">f</span>
+  <sub>2</sub>, so 
+  <span class="italic">d</span> = 
+  <span class="italic">L</span> + 2 for 
+  <span class="italic">f</span>
+  <sub>2</sub> due to two-dimensional forcing 
+  <span class="bold">q</span> (see the main text).
+ </p>
+ <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">The explicit dependence on time 
+  <span class="italic">t</span> of the deterministic model (Eq. 
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a>) is put in 
+  <span class="italic">f</span>
+  <sub>1</sub> by means of a modified ANN structure (Eq. 
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) as follows:
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\phi (z,t)=\sum _{i\mathrm{=1}}^{m}\,({\alpha }_{i}^{1}+{\alpha }_{i}^{2}\cdot t)\cdot \,\tanh ({\omega }_{i}^{T}z+{\gamma }_{i}\mathrm{).}$$\end{document}</span>
+    <div id="M8" display="block" class="math">
+     <span class="mi">ϕ</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">z</span>
+     <span class="mo">,</span>
+     <span class="mi">t</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <div class="munderover">
+      <span class="mo">∑</span>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mn">=1</span>
+      </div>
+      <span class="mi">m</span>
+     </div>
+     <span width=".25em" class="mspace"/>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">α</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">α</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span class="mo">⋅</span>
+     <span class="mi">t</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">⋅</span>
+     <span width=".25em" class="mspace"/>
+     <span class="mi">tanh</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">ω</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+     </div>
+     <span class="mi">z</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">γ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mn">).</span>
+    </div>
+    <div xlink:href="41598_2019_43867_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">In fact, this is the first-order (linear) expansion of a weak time-dependence of the model caused by slow trends in the system. It was shown in refs
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>,
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span> that such an approximation is efficient for modeling and prediction of low-dimensional nonlinear dynamical system of general type with slowly changing parameters.
+ </p>
+</sec>

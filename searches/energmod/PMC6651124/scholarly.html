@@ -1,0 +1,823 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head> <style type="text/css">
+         	     		 
+         	    a                          {background : #ffffff; }
+         	    article                    {border-style : dotted; border-width : 2px; }
+         		 	
+         		 	div                        {background : #ffffcc;}
+         		 	div.abstract-title         {font-weight : bold ; font-size : 16pt;}
+         		 	div.ack                    {border-style : solid ; border-color : red; margin
+         : 2em; }
+         		 	div.article-meta           {border-style : solid; border-width : 1 pt; margin
+         1em;}
+         		 	div.boxed-text             {margin : 5em; border-style : solid;}
+         		 	div.contrib-group          {margin : 1em; }
+         		 	div.fig                    {border-style : solid; border-width : 2px; margin :
+         2em; }
+         		 	div.funding                {font-weight : bold ; font-size : 16pt;}
+         		 	div.given-names            {font-style : italic;}
+         		 	div.intro                  {border-style : inset; margin : 5px;}
+         		 	div.introduction           {border-style : inset; margin : 5px;}
+         		 	div.journal-meta           {border-style : solid; border-width : 1 pt; margin
+         1em;}
+         		 	div.journal-title-group    {background : #ffeeee;}
+         		 	div.article-title          {font-weight : bold ; font-size : 18pt;}
+         		 	div.kwd                    {font-style : italic}
+         		 	div.meta-name              {font-weight : bold ; font-size : 16pt;}
+         		 	div.name                   {font-weight : bold;}
+         		 	div.alt-title              {font-style : italic; font-size : 12px;}
+         		 	
+         		 	div.sec                    {border : 2px; margin 5px; padding 2px;}
+         		 	div.title                  {font-family : courier; font-weight : bold;
+         		 	                            font-size : 16pt; margin : 5px;}
+         		 	
+         		 	div.materials_methods      {border-style : double; margin : 5px; }
+         		 	div.methods                {border-style : double; margin : 5px; }
+         		 	
+         		 	div.results                {border-style : solid; margin : 5px;}
+         		 	div.background             {border-style : dotted; margin : 5px;}
+         		 	
+         		 	div.discussion             {border-style : groove; margin : 5px;}
+         		 	div.conclusion             {border-style : ridge; margin : 5px;}
+         		 	div.conclusions             {border-style : ridge; margin : 5px;}
+         		 	div.supplementary-material {border-style : inset; margin : 5px;}
+         		 	div.abbreviations          {border-style : double; border-color : red; margin
+         : 5px;}
+         		 	div.competinginterests     {border-style : double; border-color : blue; margin
+         : 5px;}
+         		 	div.acknowledgements       {border-style : double; border-color : green; margin
+         : 5px;}
+         		 	div.authors_contributions   {border-style : double; border-color : purple; margin
+         : 5px;}
+         		 	
+         		 	div.publisher              {border-style : outset; margin : 5px;}
+         		 	div.fn-type-conflict       {background : #f88; }
+         		 	div.fn-type-con            {background : #ddf; }
+         		 	div.fn-type-other          {background : #ddd; }
+         		 	
+         		 	div.unknown                {background : #ffd;
+         									 	  border-style : solid;
+         									 	  border-width : 1px;
+         									 	  padding : 2 px;}
+         		 	  
+         	    table                      {background : #ffffdd;}
+         		 	tr                         {background : #ddddff; padding : 1px;}
+         		 	
+         		 	span                       {background : #ffcccc;}
+         		 	
+         		 	span.citation-author       {font-family : helvetica; background : #ffeeee;}
+         		 	span.collab                {background : #ddffff; }
+         		 	span.comment               {font-family : courier; font-size : 6px; background
+         : #ffaaff;}
+         		 	span.contrib               {background : #ffffff;}
+         		 	span.corresp               {background : #ddffdd; }
+         		 	span.doi                   {background : #ffffff;}
+         		 	span.email                 {font-family : courier; }
+         		 	span.etal                  {font-style : italic;}
+         		 	span.fpage                 {font-family : courier;}
+         		 	span.given-names           {background : #ffffff;}
+         		 	span.iso-abbrev            {background : #ffffff;}
+         		 	span.issn-epub             {background : #ffffff;}
+         		 	span.issn-ppub             {background : #ffffff;}
+         		 	span.journal-title         {background : #ffffff;}
+         		 	span.lpage                 {font-family : courier;}
+         		 	span.mixed-article-title   {font-style : italic ;}
+         		 	span.nlm-ta                {background : #ffffff;}
+         		 	span.pmc                   {background : #ffffff;}
+         		 	span.pmcid                 {background : #ffffff;}
+         		 	span.pmid                  {background : #ffffff;}
+         		 	span.publisher             {background : #ffffff;}
+         		 	span.publisher-id          {background : #ffffff;}
+         		 	span.publisher-name        {background : #ffffff;}
+         		 	span.source                {background : #ffffff;}
+         		 	span.subject               {background : #ffffff;}
+         		 	span.surname               {background : #ffffff;}
+         		 	span.volume                {font-family : courier; font-weight : bold;}
+         		 	span.year                  {font-family : courier ; font-style : italic;}
+         			
+      </style> </head> <body> <div class="front" title="front"> <div class="journal-meta" tagx="journal-meta" title="journal-meta"> <span class="nlm-ta" title="nlm-ta">Sensors (Basel)</span> <span class="iso-abbrev" title="iso-abbrev">Sensors (Basel)</span> <span class="publisher-id" title="publisher-id">sensors</span> <div class="journal-title-group" tagx="journal-title-group" title="journal-title-group"> <span class="journal-title" tagx="journal-title" title="journal-title">Sensors (Basel, Switzerland)</span> </div> <span class="issn-epub" tagx="issn" title="issn-epub">1424-8220</span> <div class="publisher" tagx="publisher" title="publisher"> <span class="publisher-name" tagx="publisher-name" title="publisher-name">MDPI</span> </div> </div> <div class="article-meta" tagx="article-meta" title="article-meta"> <span class="pmcid" title="pmcid"> pmcid: <a href="http://www.ncbi.nlm.nih.gov/pubmed/6651124">6651124</a> </span> <span class="doi" title="doi"> doi: <a href="https://dx.doi.org/10.3390/s19133024">10.3390/s19133024</a> </span> <span class="publisher-id" title="publisher-id">sensors-19-03024</span> <div class="article-categories" title="article-categories">
+: <span class="subject" title="subject">Article</span> </div> <div class="title-group"> <div class="article-title" title="article-title">
+Accuracy Analysis in Sensor Networks for Asynchronous Positioning Methods</div> </div> <div class="contrib-group" title="contrib-group"> <span class="contrib" title="contrib"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">https://orcid.org/0000-0001-7734-4539</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Álvarez</span> <span class="given-names" tagx="given-names" title="given-names">Rubén</span> </span> <a href="#af1-sensors-19-03024">1</a> </span> <span class="contrib" title="contrib"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">https://orcid.org/0000-0002-6566-1630</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Díez-González</span> <span class="given-names" tagx="given-names" title="given-names">Javier</span> </span> <a href="#af2-sensors-19-03024">2</a> </span> <span class="contrib" title="contrib"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Alonso</span> <span class="given-names" tagx="given-names" title="given-names">Efrén</span> </span> <a href="#af1-sensors-19-03024">1</a> </span> <span class="contrib" title="contrib"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">https://orcid.org/0000-0001-6573-8477</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Fernández-Robles</span> <span class="given-names" tagx="given-names" title="given-names">Laura</span> </span> <a href="#af2-sensors-19-03024">2</a> </span> <span class="contrib" title="contrib"> <span class="contrib-id" tagx="contrib-id" title="contrib-id">https://orcid.org/0000-0002-5152-4555</span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Castejón-Limas</span> <span class="given-names" tagx="given-names" title="given-names">Manuel</span> </span> <a href="#af2-sensors-19-03024">2</a> <a href="#c1-sensors-19-03024">*</a> </span> <span class="contrib" title="contrib"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Perez</span> <span class="given-names" tagx="given-names" title="given-names">Hilde</span> </span> <a href="#af2-sensors-19-03024">2</a> </span> </div> <span class="citation_author_institution" id="af1-sensors-19-03024">[1], </span> <span class="citation_author_institution" id="af2-sensors-19-03024">[2], </span> <div class="author-notes" title="author-notes"> <div class="corresp" title="corresp"> <span class="label" tagx="label" title="label">*</span>Correspondence: <span class="email" tagx="email" title="email">manuel.castejon@unileon.es</span> </div> </div> <span class="pub-date-epub" title="pub-date-epub">epub: <span>2019-7-7</span> </span> <span class="pub-date-collection" title="pub-date-collection">collection: <span>2019-7</span> </span> <span class="volume" tagx="volume" title="volume">19</span> <span class="issue" tagx="issue" title="issue">13</span> <span class="elocation-id" tagx="elocation-id" title="elocation-id">3024</span> <span class="history" title="history"> <span class="received" title="received">received: 2019-6-06</span> <span class="accepted" title="accepted">accepted: 2019-7-08</span> </span> <div class="permissions"> <span class="copyright" title="copyright">(C) , <span class="copyright-year" tagx="copyright-year" title="copyright-year">2019</span> </span> <span class="license" title="license"> <span class="license-p" title="license-p">Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license ( <a href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</a>). </span> </span> </div> <div class="abstract" title="abstract"> <div class="abstract-title" title="abstract-title">
+Abstract</div> <p>The accuracy requirements for sensor network positioning have grown over the last few years due to the high precision demanded in activities related with vehicles and robots. Such systems involve a wide range of specifications which must be met through positioning devices based on time measurement. These systems have been traditionally designed with the synchronization of their sensors in order to compute the position estimation. However, this synchronization introduces an error in the time determination which can be avoided through the centralization of the measurements in a single clock in a coordinate sensor. This can be found in typical architectures such as Asynchronous Time Difference of Arrival (A-TDOA) and Difference-Time Difference of Arrival (D-TDOA) systems. In this paper, a study of the suitability of these new systems based on a Cramér-Rao Lower Bound (CRLB) evaluation was performed for the first time under different 3D real environments for multiple sensor locations. The analysis was carried out through a new heteroscedastic noise variance modelling with a distance-dependent Log-normal path loss propagation model. Results showed that A-TDOA provided less uncertainty in the root mean square error (RMSE) in the positioning, while D-TDOA reduced the standard deviation and increased stability all over the domain. </p> </div> <div class="kwd-group"> <div class="kwd" title="kwd">
+sensor networks</div> <div class="kwd" title="kwd">
+TDOA</div> <div class="kwd" title="kwd">
+asynchronous</div> <div class="kwd" title="kwd">
+Cramér–Rao lower bound</div> <div class="kwd" title="kwd">
+heteroscedasticity</div> </div> </div> </div> <div class="body" title="body"> <div class="intro" title="intro"> <div class="title" tagx="title" title="title">
+1. Introduction</div> <p>Over the past few years, positioning systems have experienced a growing importance due to the wide range of applications they present in numerous civil and military fields. Positioning methods based on satellite systems, e.g., global navigation satellite systems (GNSS), offer accurate precision with global coverage but still present accuracy issues for specific crucial tasks such as high-precision trajectories or indoor navigation. These issues have recently attracted much attention with the advent of unmanned transportation. </p> <p>Positioning systems have traditionally been classified into four main groups: Time of Arrival systems (TOA) [ <a href="#B1-sensors-19-03024">1</a>, <a href="#B2-sensors-19-03024">2</a>], Time Difference of Arrival systems (TDOA) [ <a href="#B3-sensors-19-03024">3</a>, <a href="#B4-sensors-19-03024">4</a>], Angle of Arrival systems (AOA) [ <a href="#B5-sensors-19-03024">5</a>, <a href="#B6-sensors-19-03024">6</a>], Received Signal Strength Indication systems (RSSI) [ <a href="#B7-sensors-19-03024">7</a>, <a href="#B8-sensors-19-03024">8</a>], or a combination of them [ <a href="#B9-sensors-19-03024">9</a>, <a href="#B10-sensors-19-03024">10</a>]. Methods based on time measurement (i.e., TOA and TDOA) have been the main exponents of recent developments, on account of their robustness, universality, and reliability, in addition to their great accuracy and relative simplicity. </p> <p>Time measurements have usually been obtained in two different ways. The most common one measures time intervals by synchronizing emitter and receiver clocks, which is mandatory in the case of TOA systems. The other option comes from the synchronization of receivers, and is optional in TDOA systems. This fact significantly affects the accuracy of the positioning determination process due to the appearance of clock instabilities and the introduction of small time-offsets during the process of synchronization among elements. </p> <p>Owing to the challenging accuracy requirements to be met in sensor networks, the minimization of key factors that increase the uncertainty associated with the calculation of the position is an imperative task. Location systems based on TOA processes present disadvantages in this matter. Their accuracy may be in the order of 10 cm [ <a href="#B11-sensors-19-03024">11</a>, <a href="#B12-sensors-19-03024">12</a>, <a href="#B13-sensors-19-03024">13</a>], but time errors which can occur during the synchronization process significantly increase the uncertainties associated with the position calculation [ <a href="#B14-sensors-19-03024">14</a>, <a href="#B15-sensors-19-03024">15</a>, <a href="#B16-sensors-19-03024">16</a>]. </p> <p>Conventional TDOA methods have been traditionally dependent on global synchronization amongst the receivers, reaching higher accuracy levels requiring less energy than TOA systems. Nevertheless, synchronization instabilities are still present and the system complexity is higher than TOA architectures. </p> <p>Notwithstanding these previous tendencies, a new pattern has been developed over the last few years, which advocates for the implementation of asynchronous architectures wherein a single clock is used to measure the time differences of arrival characteristic of TDOA systems. These new systems could overcome synchronization disadvantages in TDOA systems with less architecture complexity and higher sensor ubication flexibility, and they are key to this work. The main advantages of these new methods would include the elimination of the synchronization among receivers and the resulting error introduced in the measurement process [ <a href="#B17-sensors-19-03024">17</a>, <a href="#B18-sensors-19-03024">18</a>]. </p> <p>In recent years, two different asynchronous systems have been proposed. Asynchronous TDOA [ <a href="#B17-sensors-19-03024">17</a>] and difference-time TDOA [ <a href="#B18-sensors-19-03024">18</a>]. These systems display an architecture based on a coordinator sensor and a collection of worker sensors. The coordinator sensor is in charge of processing the time measurements. The worker sensors collaborate in the determination of time differences. These new architectures avoid the necessity of a clock built into every sensor of the system. This fact reduces the overall costs and the complexity of the system and boosts accuracy by eliminating the interaction among sensor clocks. All these factors enhance indoor and low-level flight sensor positioning accuracy, a key factor that is driving the increasing popularity of these methods. </p> <p>The aim of this article was to develop for the first time, to the extent of our knowledge, a methodology to select the suitability of these two asynchronous TDOA systems under different sensor placements in a 3D, real environment. This methodology must consider that vehicle navigation in local positioning systems (LPS) is highly affected by noisy environments, thus system evaluations must be performed at a high accuracy level even where time measurements are corrupted by noise. </p> <p>Cramér–Rao Lower Bound (CRLB) is a commonly used estimator to determine the lowest possible uncertainty associated with a positioning process in line-of-sight (LOS) [ <a href="#B19-sensors-19-03024">19</a>, <a href="#B20-sensors-19-03024">20</a>] and non-line-of-sight (NLOS) [ <a href="#B21-sensors-19-03024">21</a>] conditions. This method models measurement uncertainties through the variance associated to every sensor range estimation. </p> <p>Conventional models consider the presence of a constant variance associated to each time measurement [ <a href="#B22-sensors-19-03024">22</a>]. However, to attain a higher level of accuracy in the results, it is imperative to introduce the distance between emitter and receiver in the model allowing for heteroscedasticity in time measurements [ <a href="#B23-sensors-19-03024">23</a>, <a href="#B24-sensors-19-03024">24</a>]. This phenomenon is especially important in cases with medium and high signal-to-noise ratios (SNRs) in the receivers. If the SNR is reduced, the positioning pulse detection becomes significantly hampered, leading to drastic time measurement errors which reduce the accuracy of the positioning system [ <a href="#B25-sensors-19-03024">25</a>]. </p> <p>Therefore, the hypothesis of heteroscedastic variances needs to be implemented on the basis of a propagation loss model over the signal path between the emitter and the receivers [ <a href="#B26-sensors-19-03024">26</a>, <a href="#B27-sensors-19-03024">27</a>], depending on the positioning methodology and the characteristics of communication amongst every single sensor of the system. </p> <p>The remainder of this paper is organized as follows. In <a href="#sec2-sensors-19-03024">Section 2</a>, a comparison of the main characteristics of asynchronous TDOA architectures studied is developed. <a href="#sec3-sensors-19-03024">Section 3</a> covers the main path-loss models used to calculate the SNR. <a href="#sec4-sensors-19-03024">Section 4</a> includes a study of the Cramér–Rao Lower Bound, based on a matrix model implemented for each system architecture. <a href="#sec5-sensors-19-03024">Section 5</a> gathers the conclusions obtained from all the studies, along with the election of the best system. Lastly, <a href="#sec6-sensors-19-03024">Section 6</a> presents the conclusions and completes the article. </p> </div> <div class="2.asynchronoustdoamethods" title="sec"> <div class="title" tagx="title" title="title">
+2. Asynchronous TDOA Methods</div> <p>In this section, the asynchronous TDOA methods will be introduced. Neither of these methods need to synchronize any element of the system, using only one clock to measure the differences in times of the TDOA system. The notation used throughout the study is the one described hereafter: TS defines the location of the Target Sensor, Coordinate Sensor (CS) represents the position of the receiver in charge of the time measurements, Worker Sensors (WS) are the rest of emitters/receivers, <i>N</i> is the total number of WS, and additionally, a CS must be considered, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+T</div> </div> </div> </div> </div> </div> </span> and <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+E</div> <div class="mi_UNKNOWN">
+N</div> <div class="mi_UNKNOWN">
+D</div> </div> </div> </div> </div> </div> </span> represent the start and the end of the time measurement process in the CS. </p> <div class="2.1.a-tdoa" title="sec"> <div class="title" tagx="title" title="title">
+2.1. A-TDOA</div> <p>In <a href="#sensors-19-03024-f001">Figure 1</a>, an A-TDOA architecture is presented [ <a href="#B17-sensors-19-03024">17</a>]. It proposes a passive positioning system based on one single clock in the CS node, using the positioned sensor as signal repeater. </p> <p>Positioning pulses are emitted by WS nodes, reaching the CS node with successive time differences which lead to the beginning of the time measurement associated with each WS–CS ( <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+R</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </div> </div> </span>). Conversely, the signal emitted by each WS node is received by the TS node in charge of sending again these signals to the Cs node ( <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+E</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </div> </div> </span>). When the signal is received, the time measurement process comes to an end, completing the time measurement process of each WS–CS pair. The TDOA measurement in terms of distance is represented by the following relation. </p> <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(1)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+c</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+E</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN"> </div> </div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mo_UNKNOWN"> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+R</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> <div class="mspace_UNKNOWN" /> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+∈</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+N</div> </div> </div> </div> </div> </div> </div> </div> </div> <div class="2.2.d-tdoa" title="sec"> <div class="title" tagx="title" title="title">
+2.2. D-TDOA</div> <p>The D-TDOA method is based on the combination of a traditional TDOA system and a round trip time (RTT) method, accomplishing the goal of obtaining the time difference measurements with only one clock [ <a href="#B18-sensors-19-03024">18</a>], as shown in <a href="#sensors-19-03024-f002">Figure 2</a>. </p> <p>Positioning pulses are broadcast by the TS node, reaching the CS node at <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+T</div> </div> </div> <div class="mo_UNKNOWN">
+.</div> </div> </div> </div> </span> This temporal reference is common to all the time measurements realized by the method. Meanwhile, the TS node emission is received at the WS nodes, which resend it to the CS node ( <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+E</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </div> </div> </span>), completing the time difference measurement of each WS–CS pair of nodes. Lastly, the pulse is emitted from the CS node to WS nodes with the aim of calculating the processing time on each WS node. The TDOA measurement in terms of distance is represented by the following relation: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(2)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mi_UNKNOWN">
+c</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+E</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+T</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+∈</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+N</div> </div> </div> </div> </div> </div> </div> </div> <p /> <p>While <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </span> and <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </span> hold similar equations, the time measurement recordings and positioning pulse travels differ significantly from one method to the other. These characteristics are analyzed in the following sections. </p> </div> </div> <div class="3.heteroscedasticnoisemodel" title="sec"> <div class="title" tagx="title" title="title">
+3. Heteroscedastic Noise Model</div> <p>In this section, a noise variance distance-dependent model is implemented associated to the process of location in asynchronous TDOAs system, allowing for a better reproducibility of real conditions. </p> <p>The process starts with the TOA variance range estimate due to the noisy environments. Next, the TDOA variance range estimate is defined based on time measurement correlation assumptions. The heteroscedastic noise variance model is completed with the path-loss propagation model implementation that best fit with the multiple sensor network’s characteristics. </p> <p>Amongst the main sources of ranging errors of positioning systems based on time measurements, the most important for TDOA asynchronous techniques is the uncertainty induced by white Gaussian noise (WGN) in the propagation channel. This problem has been deeply studied for TOA architectures, quantifying it with the CRLB [ <a href="#B25-sensors-19-03024">25</a>]: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(3)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+≥</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+c</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+2</div> <div class="mi_UNKNOWN">
+π</div> <div class="mi_UNKNOWN">
+B</div> </div> </div> </div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mi_UNKNOWN">
+·</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mi_UNKNOWN">
+s</div> </div> <div class="mi_UNKNOWN">
+B</div> <div class="mi_UNKNOWN">
+·</div> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> <div class="mo_UNKNOWN"> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> </div> </div> where <b> <i>M</i> </b> is the total number of sensors, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> </div> </span> is the receptor range estimate variance, <i>c</i> is the pulse propagation velocity, B is the bandwidth, <i>t <sub>S</sub> </i> is the length of time during which the bandwidth is occupied, and <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </span> is the signal-to-noise ratio for each receiver. <p /> <p>The majority of range estimation architectures consider the product <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+t</div> <div class="mi_UNKNOWN">
+s</div> </div> <div class="mi_UNKNOWN">
+B</div> </div> </div> </div> </span> approximately unitary. This, together with the hypothesis of high levels of SNR at the receivers and efficient estimator, enables the derivation of the following relation for a TOA variance estimation [ <a href="#B23-sensors-19-03024">23</a>, <a href="#B24-sensors-19-03024">24</a>]. </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(4)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+c</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+B</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mi_UNKNOWN">
+·</div> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> <div class="mo_UNKNOWN"> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> </div> </div> <p /> <p>Based on the TOA variance estimation, the implementation for TDOA systems is made under some assumptions. He and Dong [ <a href="#B17-sensors-19-03024">17</a>] proposed that the time measurements in asynchronous TDOA architectures are considered independent. Consequently, the off-diagonal elements of the covariance matrix associated with the Gaussian noise modelling are null. According to Kaune et al. [ <a href="#B19-sensors-19-03024">19</a>], the variance associated with a difference distance between two nodes is the sum of the variances for each node, under the assumption of uncorrelated time measurements. </p> <p>Hence: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(5)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mi_UNKNOWN">
+j</div> </div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
++</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mi_UNKNOWN">
+j</div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+j</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> </div> </div> </div> </div> <p /> <p>Consequently, </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(6)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mi_UNKNOWN">
+j</div> </div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+c</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+B</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+j</div> </div> </div> </div> </div> </div> </div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+j</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> </div> </div> </div> </div> <p /> <p>In Equation (6), the <i>SNR</i> associated with each receiver mainly depends on the power emission, the transmission frequency, and environment. This last aspect is characterized by means of path-loss propagation models for indoor and outdoor environments. Large-scale models predict the mean signal strength in LOS environments based on the distance between emitter/receiver and the characteristics of the signal. Small-scale or fading models characterize the rapid fluctuations of the signal when the distance of the emitter/receiver is short, in both conditions (LOS and NLOS) [ <a href="#B27-sensors-19-03024">27</a>]. </p> <p>Multiple sensor networks with high location accuracy are used in many applications. However, in the majority of systems, path loss during operation presents a higher level of dependency on large distances of the emitter/receiver and LOS propagation. </p> <p>Consequently, large-scale models seem more appropriate for this analysis. Assuming invariant power transmission and homogeneity in the operation of receivers, the following relations are established: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(7)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+N</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN"> </div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+T</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+L</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+T</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> <div class="mi_UNKNOWN">
+·</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+L</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> <div class="mspace_UNKNOWN" /> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+N</div> </div> </div> </div> </div> </div> where <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+T</div> </div> </div> </div> </div> </span> is transmission power, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> </div> </div> </span> is the received power in each receiver, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+L</div> </div> </div> </div> </span> is the path loss, and <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> </div> </span> is the mean noise power, obtained from the Johnson–Nyquist equation: <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(8)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+n</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN"> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+k</div> <div class="mi_UNKNOWN">
+B</div> </div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mn_UNKNOWN">
+0</div> </div> <div class="mi_UNKNOWN">
+B</div> </div> </div> </div> </div> where <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+k</div> <div class="mi_UNKNOWN">
+B</div> </div> </div> </div> </div> </span> is the Boltzmann’s constant, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> </div> </span> is the absolute temperature of the receiver input, and <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+B</div> </div> </div> </span> is the receiver bandwidth. <p /> <p>Large-scale path loss models have been deeply studied in the last decades for modelling mobile communications. The vast majority of these methods were built under some of these restrictions: emitter and receiver heights, transmission frequency, and emitter–receiver distance, among others. Under these limitations, the modelling of asynchronous TDOA architecture is not possible due to the emitter/receiver’s characteristics in multiple sensor networks. </p> <p>Based on the preceding assumptions, the path loss propagation model selected for the simulation is the Log-normal, which eliminates the restrictions on emitter–receiver geometry. </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(9)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+L</div> <div class="mi_UNKNOWN">
+o</div> <div class="mi_UNKNOWN">
+g</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+n</div> <div class="mi_UNKNOWN">
+o</div> <div class="mi_UNKNOWN">
+r</div> <div class="mi_UNKNOWN">
+m</div> <div class="mi_UNKNOWN">
+a</div> <div class="mi_UNKNOWN">
+l</div> <div class="mo_UNKNOWN">
+:</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+P</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+L</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+L</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> <div class="mo_UNKNOWN"> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> </div> </div> </div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> </div> </div> <p /> <p>The noise model final implementation in the CRLB variance definition is presented below: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(10)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mi_UNKNOWN">
+j</div> </div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+c</div> <div class="mn_UNKNOWN">
+2</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+B</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+T</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> </div> </div> </div> </div> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+L</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mi_UNKNOWN">
+i</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> </div> </div> </div> <div class="mi_UNKNOWN">
+n</div> </div> <div class="mo_UNKNOWN">
++</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mi_UNKNOWN">
+j</div> </div> </div> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> </div> </div> </div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+j</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+M</div> </div> </div> </div> </div> </div> </div> </div> where <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> </div> </span> is the reference distance to the emitter, the basis from which the Log-normal model hypothesis is valid, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+L</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> </div> </div> </div> </span> is the path loss for this distance, and <i>n</i> is the path loss exponent. <p /> </div> <div class="4.crlbderivationfora-tdoaandd-tdoasystems" title="sec"> <div class="title" tagx="title" title="title">
+4. CRLB Derivation for A-TDOA and D-TDOA Systems</div> <p>The prediction of the uncertainty associated with the position calculation process is one of the most significant accomplishments in the design and development of positioning systems. </p> <p>From a statistical point of view, CRLB expresses the minimum variance value of any unbiased estimator of a deterministic parameter. In other words, the CRLB defines the minimum possible uncertainty associated with an estimation process. </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(11)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+v</div> <div class="mi_UNKNOWN">
+a</div> <div class="mi_UNKNOWN">
+r</div> <div class="mfenced_UNKNOWN"> <div class="mover_UNKNOWN"> <div class="mi_UNKNOWN">
+θ</div> <div class="mo_UNKNOWN">
+^</div> </div> </div> <div class="mo_UNKNOWN">
+≥</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+F</div> <div class="mi_UNKNOWN">
+I</div> <div class="mi_UNKNOWN">
+M</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+E</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+x</div> </div> </div> <div class="mi_UNKNOWN">
+ln</div> <div class="mi_UNKNOWN">
+f</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+X</div> <div class="mo_UNKNOWN">
+;</div> <div class="mi_UNKNOWN">
+θ</div> </div> </div> </div> </div> </div> <div class="mn_UNKNOWN">
+2</div> </div> </div> </div> </div> </div> </div> </div> </div> </div> <p /> <p>In this equation, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mover_UNKNOWN"> <div class="mi_UNKNOWN">
+θ</div> <div class="mo_UNKNOWN">
+^</div> </div> </div> </div> </span> is the unbiased estimator for the parameter of study, <i>FIM</i> is the Fisher Information Matrix, <i>E</i> the expectation value of the denominator function, <i>X</i> the parameter measurement vector, <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+θ</div> </div> </div> </span> is the parameter vector to be estimated, and <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+f</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+X</div> <div class="mo_UNKNOWN">
+;</div> <div class="mi_UNKNOWN">
+θ</div> </div> </div> </div> </div> </div> </span> is the probability density function of <i>X</i> for the parameter <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+θ</div> </div> </div> </span>. </p> <p>Cramér-Rao Lower Bound has proved to be especially suitable in positioning. This is due to its definition based on a prior knowledge possibility of maximum reachable exactitude in terms of the architecture geometry, the environment modelling, and the intrinsic characteristics of measurement instruments. This maximum value reached by the position estimator would be valid as long as it is unbiased and efficient. </p> <p>In this section, the CRLB is adapted to A-TDOA and D-TDOA architectures. Additionally, the noise variance model introduced in <a href="#sec3-sensors-19-03024">Section 3</a> is implemented in order to estimate the RMSE in the TS location estimation. </p> <p>For a TDOA system, time measurements associated with the receivers are modelled by the addition of WGN. In a real environment, the variance associated with this phenomenon depends on the distance between emitter and receiver, inducing heteroscedasticity in data management. In this context, Kaune et al. [ <a href="#B19-sensors-19-03024">19</a>] includes a model of the dependent parameter’s variance in the calculation of the inverse of the Fisher Information Matrix <i>(J</i>). </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(12)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+J</div> <div class="mo_UNKNOWN">
+=</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+h</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> </div> </div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+h</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+σ</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> </div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+σ</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> </div> </div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+σ</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> </div> </div> </div> </div> </div> <p /> <p>That can be expressed in matrix form as: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(13)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+J</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+m</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="msup_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+h</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+x</div> <div class="mi_UNKNOWN">
+m</div> </div> </div> </div> </div> </div> </div> <div class="mi_UNKNOWN">
+T</div> </div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+−</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+h</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+x</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="mfrac_UNKNOWN"> <div class="mn_UNKNOWN">
+1</div> <div class="mn_UNKNOWN">
+2</div> </div> <div class="mi_UNKNOWN">
+t</div> <div class="mi_UNKNOWN">
+r</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+−</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+R</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+x</div> <div class="mi_UNKNOWN">
+m</div> </div> </div> </div> </div> </div> <div class="msup_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+−</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mfrac_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="mi_UNKNOWN">
+R</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> </div> </div> </div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN">
+∂</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+x</div> <div class="mi_UNKNOWN">
+n</div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> </div> where sub-indexes <b> <i>m</i> </b> and <b> <i>n</i> </b> refer to the respective row and column of <i>J</i>. The column matrix <i>h(X)</i> expresses the differences in the Euclidean distances among the TDOA measurements of each pair of receivers: <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(14)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+h</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="mi_UNKNOWN">
+A</div> </div> </div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+‖</div> <div class="mo_UNKNOWN">
++</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mo_UNKNOWN">
+−</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> <div class="mspace_UNKNOWN" /> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+N</div> </div> </div> </div> </div> </div> <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(15)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+h</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="mi_UNKNOWN">
+A</div> </div> </div> <div class="msub_UNKNOWN"> <div class="mrow_UNKNOWN" /> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+‖</div> <div class="mo_UNKNOWN">
++</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mo_UNKNOWN">
+−</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> <div class="mspace_UNKNOWN" /> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+N</div> </div> </div> </div> </div> </div> <p /> <p>Finally, <i>R(x)</i> is the covariance matrix of the system, which is characterized by null off-diagonal elements for both systems, due to the non-correlation among time measurements. The variance modelling was implemented according to the model explained in <a href="#sec3-sensors-19-03024">Section 3</a>, with the following definition for the distances between each asynchronous TDOA system. </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(16)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+‖</div> <div class="mo_UNKNOWN">
++</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+j</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+N</div> </div> </div> </div> </div> </div> </div> </div> <div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(17)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mtable_UNKNOWN"> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+i</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+‖</div> <div class="mo_UNKNOWN">
++</div> <div class="mn_UNKNOWN">
+2</div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+W</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+i</div> </div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+D</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+D</div> <div class="mi_UNKNOWN">
+O</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+A</div> <div class="mrow_UNKNOWN"> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+j</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> </div> </div> </div> </div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+‖</div> <div class="mi_UNKNOWN">
+T</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+−</div> <div class="mi_UNKNOWN">
+C</div> <div class="mi_UNKNOWN">
+S</div> <div class="mo_UNKNOWN">
+‖</div> </div> </div> </div> <div class="mtr_UNKNOWN"> <div class="mtd_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+i</div> <div class="mo_UNKNOWN">
+=</div> <div class="mn_UNKNOWN">
+1</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mo_UNKNOWN">
+…</div> <div class="mo_UNKNOWN">
+,</div> <div class="mo_UNKNOWN"> </div> <div class="mi_UNKNOWN">
+N</div> </div> </div> </div> </div> </div> </div> </div> <p /> <p>The uncertainty is evaluated in terms of RMSE, as shown in the following equation (three-dimensional location), where the sub-indexes refer to the diagonal elements of matrix <i>J</i>: </p><div class="disp-formula" title="disp-formula"> <span class="label" tagx="label" title="label">(18)</span> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+R</div> <div class="mi_UNKNOWN">
+M</div> <div class="mi_UNKNOWN">
+S</div> <div class="mi_UNKNOWN">
+E</div> <div class="mo_UNKNOWN">
+=</div> <div class="mo_UNKNOWN"> </div> <div class="msqrt_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+J</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+11</div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+J</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+22</div> </div> </div> <div class="mo_UNKNOWN">
++</div> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+J</div> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+33</div> </div> </div> </div> </div> </div> </div> </div> </div> <p /> </div> <div class="5.simulationresults" title="sec"> <div class="title" tagx="title" title="title">
+5. Simulation Results</div> <p>In this section, asynchronous TDOA systems A-TDOA and D-TDOA are compared for sensor network positioning. Firstly, a set of global communication parameters are defined in <a href="#sensors-19-03024-t001">Table 1</a>. </p> <p>In addition to these parameters, the comparison among architectures was carried out based on unity gain antennas in all system transceivers and on the assumption of full-duplex communication capacity among elements. Furthermore, an assumption of the receive-and-retransmit technique in transceivers operations and a unity frequency–time product in all the architectures’ communications was considered. </p> <p>The results were obtained based on simulations carried out on an irregular surface of 1 km <sup>2</sup> (1000 × 1000 m) with an elevation modelled by a normal distribution <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+N</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mn_UNKNOWN">
+15</div> <div class="mo_UNKNOWN">
+,</div> <div class="mn_UNKNOWN">
+9</div> </div> </div> </div> </div> </div> </span> cm. The space analysis was limited to a height above ground level from 1 to 100 m. Under this assumption, the spatial discretization was 100 m for surface coordinates (Cartesian <i>x</i> and <i>y</i>) and 10 m for coordinate <i>z</i>. </p> <p>Additionally, the minimum height of sensor nodes (WS and CS) was restricted to 3 m with the objective of not inducing effects that were not considered by the Log-normal model (specially ground reflections and multipath). The maximum height was also limited to 13 m, but this restriction was related to the size of the supports (less than 10 m). </p> <p>Lastly, a path loss exponent value of 2.1 was selected as highly recommended in sub-urban environments with medium frequencies [ <a href="#B27-sensors-19-03024">27</a>]. Due to the theoretical approach of the problem, the Free Space Propagation Model (FSPM) was used to obtain <span class="inline-formula" title="inline-formula"> <div class="math_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="mi_UNKNOWN">
+P</div> <div class="mi_UNKNOWN">
+L</div> <div class="mfenced_UNKNOWN"> <div class="mrow_UNKNOWN"> <div class="msub_UNKNOWN"> <div class="mi_UNKNOWN">
+d</div> <div class="mn_UNKNOWN">
+0</div> </div> </div> </div> </div> </div> </div> </span>. </p> <p>The comparison among systems (in <a href="#sensors-19-03024-t002">Table 2</a>) was carried out with five random distributions of receivers, each one with a number of five sensors. This was the minimum number of nodes for a unique three-dimensional location in TDOA architectures. </p> <p>The best distributions for each system are illustrated in the following images, together with the CRLB evaluation in terms of RMSE at every point of the discretization. </p> <p>As it can be seen in <a href="#sensors-19-03024-f003">Figure 3</a> and <a href="#sensors-19-03024-f004">Figure 4</a>, points that are close to the surface or nodes present a higher RMSE. This phenomenon is due to the relative location between nodes and these discretization points, that causes an increase of the influence of time measurements uncertainties in total positioning accuracy. </p> <p>The final simulation results are presented in <a href="#sensors-19-03024-t003">Table 3</a>. </p> <p>Based on the results of the simulations, it was shown that the A-TDOA system presented a lower mean RMSE value in every distribution. The minimum RMSE values in each distribution were obtained by the A-TDOA method. In the case of maximum RMSE values, the tendency was not obvious. Finally, it can be observed that the standard deviation in every distribution was lower for the D-TDOA system, which implies a higher stability. </p> <p>In terms of architecture complexity, A-TDOA systems require an initial step in the emission of the positioning pulses of the WS nodes in order to simultaneously start the process. In contrast, in D-TDOA systems, the first communication link exclusively depends on the target node emission. Energy consumption is another factor to be evaluated. Due to the lower energy requirements for amplifying the signal power at the retransmission stage in each node, A-TDOA architectures lead to better results than D-TDOA. </p> <p>In summary, the A-TDOA system provides a higher accuracy than the D-TDOA method, but the latter presents a lower level of variation in the evaluation for sensor location. Although, A-TDOA architectures present more hardware complexity, they sport less energy consumption due to the reduction of the signal travel. On the basis of the information gathered, it can be concluded that the best method for multiple sensor locations is the A-TDOA system. </p> </div> <div class="discussion" title="discussion"> <div class="title" tagx="title" title="title">
+6. Discussion</div> <p>The new asynchronous TDOA architectures have led to a major improvement as a consequence of the reduction of the complexity in sensor networks and the increasing accuracy of time measurements over the last few years. These methodologies have been experiencing a growing importance in LPS with particular application in robot indoor navigation and unmanned aerial vehicles (UAVs). </p> <p>Amongst the asynchronous architectures, A-TDOA and D-TDOA have taken special relevance, but their novelty assumed that no previous research on the suitability of these systems had been accomplished before. This means that these architectures have not been studied in an actual common environment in order to determine a comparison among their system errors that would allow us to select the best architecture under different conditions. The error bounds must be calculated through the Cramér–Rao Lower Bound estimator all over the domain. In this context, CRLB allows to determine the minimum achievable error of a locating system with independence from the positioning algorithm used. With this parameter, the determination of the best asynchronous architecture could be done in a particular context. The extension of the usage of the LPS forces the design of an environment where CRLB must be derived in a 3D context for the first time. </p> <p>This derivation includes a path-loss model propagation which depends on the distances between emitter and receiver of the positioning signal. This leads to heteroscedastic noise variances consideration that particularly fits with LPS. </p> <p>The goal of this article has allowed for the development of a new methodology in order to select the best system in different contexts. </p> </div> <div class="conclusions" title="conclusions"> <div class="title" tagx="title" title="title">
+7. Conclusions</div> <p>High accuracy requirements in modern applications lead to positioning systems where noise uncertainties must be minimized. New asynchronous positioning architectures have supposed a revolution where positioning errors have been considerably reduced. In this paper, a methodology to select the suitability of two asynchronous TDOA systems based on a CRLB evaluation under a 3D, real environment was accomplished for the first time to the best of our knowledge. </p> <p>This analysis was performed based on a CRLB comparison where the uncertainties of time measurements originated by noise were distance dependent. This resulted in heteroscedasticity in the variance associated with sensor range estimation. This real model allowed us to determine the best TDOA asynchronous architecture with positioning algorithm independence. </p> <p>The results showed that the A-TDOA system provided generally less uncertainty in the positioning, regardless of the node distributions. Nevertheless, the D-TDOA system achieved a better level of homogenization by reducing the RMSE standard deviation in the domain. On the basis of the information gathered, and taking into account the CRLB, it can be concluded that the best method for sensor location is the A-TDOA system. </p> <p>These aspects are being treated in the current investigation, where the node distribution would be optimized for CRLB via genetic algorithms, attaining a RMSE minimization at all discretization points in future works. </p> </div> </div> <div class="back" title="back"> <div class="title" tagx="title" title="title">
+Author Contributions</div> <p>Conceptualization, R.Á., H.P., and J.D.-G.; Formal analysis, M.C.-L.; Investigation, R.Á. and J.D.-G.; Methodology, R.Á. and M.C.-L.; Resources, J.D.-G. and E.A.; Software, R.Á.; Supervision, J.D.-G. and M.C.-L.; Validation, M.C.-L.; Visualization, E.A. and L.F.-R.; Writing—original draft, R.Á. and J.D.-G.; Writing—review and editing, H.P., M.C.-L. and L.F.-R. </p> <div class="title" tagx="title" title="title">
+Funding</div> <p>This research was funded by the Spanish Ministry of Economy, Industry and Competitiveness, grant number DPI2016-79960-C3-2-P. </p> <div class="title" tagx="title" title="title">
+Conflicts of Interest</div> <p>The authors declare no conflict of interest.</p> <div class="references">
+References</div> <div tag="ref-list"> <ul> <div class="title" tagx="title" title="title">
+References</div> <li tag="ref"> <a name="B1-sensors-19-03024" /> <span class="label" tagx="label" title="label">1.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">D’Amico</span> <span class="given-names" tagx="given-names" title="given-names">A.A.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Mengali</span> <span class="given-names" tagx="given-names" title="given-names">U.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Taponecco</span> <span class="given-names" tagx="given-names" title="given-names">L.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">TOA Estimation with the IEEE 802.15.4a Standard</span> <span class="source" tagx="source" title="source">IEEE Trans. Wirel. Commun.</span> <span class="year" tagx="year" title="year">2010</span> <span class="volume" tagx="volume" title="volume">9</span> <span class="fpage" tagx="fpage" title="fpage">2238</span> <span class="lpage" tagx="lpage" title="lpage">2247</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TWC.2010.07.090465">10.1109/TWC.2010.07.090465</a> </span> </span> </li> <li tag="ref"> <a name="B2-sensors-19-03024" /> <span class="label" tagx="label" title="label">2.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Shen</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Molisch</span> <span class="given-names" tagx="given-names" title="given-names">A.F.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Salmi</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Accurate Passive Location Estimation Using TOA Measurements</span> <span class="source" tagx="source" title="source">IEEE Trans. Wirel. Commun.</span> <span class="year" tagx="year" title="year">2012</span> <span class="volume" tagx="volume" title="volume">11</span> <span class="fpage" tagx="fpage" title="fpage">2182</span> <span class="lpage" tagx="lpage" title="lpage">2192</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TWC.2012.040412.110697">10.1109/TWC.2012.040412.110697</a> </span> </span> </li> <li tag="ref"> <a name="B3-sensors-19-03024" /> <span class="label" tagx="label" title="label">3.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ho</span> <span class="given-names" tagx="given-names" title="given-names">K.C.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lu</span> <span class="given-names" tagx="given-names" title="given-names">X.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Kovavisaruch</span> <span class="given-names" tagx="given-names" title="given-names">L.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Source Localization Using TDOA and FDOA Measurements in the Presence of Receiver Location Errors: Analysis and Solution </span> <span class="source" tagx="source" title="source">IEEE Trans. Signal Process.</span> <span class="year" tagx="year" title="year">2007</span> <span class="volume" tagx="volume" title="volume">55</span> <span class="fpage" tagx="fpage" title="fpage">684</span> <span class="lpage" tagx="lpage" title="lpage">696</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TSP.2006.885744">10.1109/TSP.2006.885744</a> </span> </span> </li> <li tag="ref"> <a name="B4-sensors-19-03024" /> <span class="label" tagx="label" title="label">4.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Xu</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ma</span> <span class="given-names" tagx="given-names" title="given-names">M.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Law</span> <span class="given-names" tagx="given-names" title="given-names">C.L.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Position Estimation Using UWB TDOA Measurements</span> <span class="source" tagx="source" title="source">Proceedings of the 2006 IEEE International Conference on Ultra-Wideband</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Waltham, MA, USA</span> <span class="conf-date" tagx="conf-date" title="conf-date">24–27 September 2006</span> </span> </li> <li tag="ref"> <a name="B5-sensors-19-03024" /> <span class="label" tagx="label" title="label">5.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Xu</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ma</span> <span class="given-names" tagx="given-names" title="given-names">M.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Law</span> <span class="given-names" tagx="given-names" title="given-names">C.L.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">AOA Cooperative Position Localization</span> <span class="source" tagx="source" title="source">Proceedings of the IEEE Globecom 2008-2008 IEEE Global Telecommunications Conference</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">New Orleans, LA, USA</span> <span class="conf-date" tagx="conf-date" title="conf-date">30 November 2008</span> </span> </li> <li tag="ref"> <a name="B6-sensors-19-03024" /> <span class="label" tagx="label" title="label">6.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zhang</span> <span class="given-names" tagx="given-names" title="given-names">W.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Yin</span> <span class="given-names" tagx="given-names" title="given-names">Q.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Chen</span> <span class="given-names" tagx="given-names" title="given-names">H.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Gao</span> <span class="given-names" tagx="given-names" title="given-names">F.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Distributed Angle Estimation for Localization in Wireless Sensor Networks</span> <span class="source" tagx="source" title="source">IEEE Trans. Wirel. Commun.</span> <span class="year" tagx="year" title="year">2013</span> <span class="volume" tagx="volume" title="volume">12</span> <span class="fpage" tagx="fpage" title="fpage">527</span> <span class="lpage" tagx="lpage" title="lpage">537</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TWC.2012.121412.111346">10.1109/TWC.2012.121412.111346</a> </span> </span> </li> <li tag="ref"> <a name="B7-sensors-19-03024" /> <span class="label" tagx="label" title="label">7.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Wang</span> <span class="given-names" tagx="given-names" title="given-names">G.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Yang</span> <span class="given-names" tagx="given-names" title="given-names">K.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">A New Approach to Sensor Node Localization Using RSS Measurements in Wireless Sensor Networks </span> <span class="source" tagx="source" title="source">IEEE Trans. Wirel. Commun.</span> <span class="year" tagx="year" title="year">2011</span> <span class="volume" tagx="volume" title="volume">10</span> <span class="fpage" tagx="fpage" title="fpage">1389</span> <span class="lpage" tagx="lpage" title="lpage">1395</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TWC.2011.031611.101585">10.1109/TWC.2011.031611.101585</a> </span> </span> </li> <li tag="ref"> <a name="B8-sensors-19-03024" /> <span class="label" tagx="label" title="label">8.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Weiss</span> <span class="given-names" tagx="given-names" title="given-names">A.J.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">On the Accuracy of a Cellular Location System Based on RSS Measurements</span> <span class="source" tagx="source" title="source">IEEE Trans. Vehicular Technol.</span> <span class="year" tagx="year" title="year">2003</span> <span class="volume" tagx="volume" title="volume">52</span> <span class="fpage" tagx="fpage" title="fpage">1508</span> <span class="lpage" tagx="lpage" title="lpage">1518</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TVT.2003.819613">10.1109/TVT.2003.819613</a> </span> </span> </li> <li tag="ref"> <a name="B9-sensors-19-03024" /> <span class="label" tagx="label" title="label">9.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Patwari</span> <span class="given-names" tagx="given-names" title="given-names">N.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ash</span> <span class="given-names" tagx="given-names" title="given-names">J.N.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Kyperountas</span> <span class="given-names" tagx="given-names" title="given-names">S.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Hero</span> <span class="given-names" tagx="given-names" title="given-names">A.O.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Moses</span> <span class="given-names" tagx="given-names" title="given-names">R.L.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Correal</span> <span class="given-names" tagx="given-names" title="given-names">N.S.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Locating the Nodes</span> <span class="source" tagx="source" title="source">IEEE Signal Process. Mag.</span> <span class="year" tagx="year" title="year">2005</span> <span class="volume" tagx="volume" title="volume">22</span> <span class="fpage" tagx="fpage" title="fpage">54</span> <span class="lpage" tagx="lpage" title="lpage">69</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/MSP.2005.1458287">10.1109/MSP.2005.1458287</a> </span> </span> </li> <li tag="ref"> <a name="B10-sensors-19-03024" /> <span class="label" tagx="label" title="label">10.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">D’Amico</span> <span class="given-names" tagx="given-names" title="given-names">A.A.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Mengali</span> <span class="given-names" tagx="given-names" title="given-names">U.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Taponecco</span> <span class="given-names" tagx="given-names" title="given-names">L.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Joint TOA and AOA Estimation for UWB Localization Applications</span> <span class="source" tagx="source" title="source">IEEE Trans. Wirel. Commun.</span> <span class="year" tagx="year" title="year">2011</span> <span class="volume" tagx="volume" title="volume">10</span> <span class="fpage" tagx="fpage" title="fpage">2207</span> <span class="lpage" tagx="lpage" title="lpage">2217</span> </span> </li> <li tag="ref"> <a name="B11-sensors-19-03024" /> <span class="label" tagx="label" title="label">11.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zou</span> <span class="given-names" tagx="given-names" title="given-names">Z.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Deng</span> <span class="given-names" tagx="given-names" title="given-names">T.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zou</span> <span class="given-names" tagx="given-names" title="given-names">Q.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sarmiento</span> <span class="given-names" tagx="given-names" title="given-names">D.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Jonsson</span> <span class="given-names" tagx="given-names" title="given-names">F.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zheng</span> <span class="given-names" tagx="given-names" title="given-names">L.-R.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Energy detection receiver with TOA estimation enabling positioning in passive UWB-RFID system </span> <span class="source" tagx="source" title="source">Proceedings of the 2010 IEEE International Conference on Ultra-Wideband</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Nanjing, China</span> <span class="conf-date" tagx="conf-date" title="conf-date">20–23 September 2010</span> </span> </li> <li tag="ref"> <a name="B12-sensors-19-03024" /> <span class="label" tagx="label" title="label">12.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Badorrey</span> <span class="given-names" tagx="given-names" title="given-names">R.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Hernandez</span> <span class="given-names" tagx="given-names" title="given-names">A.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Choliz</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Valdovinos</span> <span class="given-names" tagx="given-names" title="given-names">A.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Alastruey</span> <span class="given-names" tagx="given-names" title="given-names">I.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Evaluation of TOA estimation algorithms in UWB receivers</span> <span class="source" tagx="source" title="source">Proceedings of the 14th European Wireless Conference</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Prague, Czech Republic</span> <span class="conf-date" tagx="conf-date" title="conf-date">22–25 June 2008</span> </span> </li> <li tag="ref"> <a name="B13-sensors-19-03024" /> <span class="label" tagx="label" title="label">13.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Ye</span> <span class="given-names" tagx="given-names" title="given-names">R.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Redfield</span> <span class="given-names" tagx="given-names" title="given-names">S.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Liu</span> <span class="given-names" tagx="given-names" title="given-names">H.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">High-precision indoor UWB localization: Technical challenges and method</span> <span class="source" tagx="source" title="source">Proceedings of the 2010 IEEE International Conference on Ultra-Wideband</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Nanjing, China</span> <span class="conf-date" tagx="conf-date" title="conf-date">20–23 September 2010</span> </span> </li> <li tag="ref"> <a name="B14-sensors-19-03024" /> <span class="label" tagx="label" title="label">14.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sundararaman</span> <span class="given-names" tagx="given-names" title="given-names">B.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Buy</span> <span class="given-names" tagx="given-names" title="given-names">U.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Kshemkalyani</span> <span class="given-names" tagx="given-names" title="given-names">A.D.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Clock synchronization for wireless sensor networks: A survey</span> <span class="source" tagx="source" title="source">Ad Hoc Netw.</span> <span class="year" tagx="year" title="year">2005</span> <span class="volume" tagx="volume" title="volume">3</span> <span class="fpage" tagx="fpage" title="fpage">281</span> <span class="lpage" tagx="lpage" title="lpage">323</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1016/j.adhoc.2005.01.002">10.1016/j.adhoc.2005.01.002</a> </span> </span> </li> <li tag="ref"> <a name="B15-sensors-19-03024" /> <span class="label" tagx="label" title="label">15.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sivrikaya</span> <span class="given-names" tagx="given-names" title="given-names">F.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Yener</span> <span class="given-names" tagx="given-names" title="given-names">B.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Time synchronization in sensor networks: A survey</span> <span class="source" tagx="source" title="source">IEEE Netw.</span> <span class="year" tagx="year" title="year">2004</span> <span class="volume" tagx="volume" title="volume">18</span> <span class="fpage" tagx="fpage" title="fpage">45</span> <span class="lpage" tagx="lpage" title="lpage">50</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/MNET.2004.1316761">10.1109/MNET.2004.1316761</a> </span> </span> </li> <li tag="ref"> <a name="B16-sensors-19-03024" /> <span class="label" tagx="label" title="label">16.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Elson</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Estrin</span> <span class="given-names" tagx="given-names" title="given-names">D.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Time Synchronization for Wireless Sensor Networks</span> <span class="source" tagx="source" title="source">Proceedings of the 15th International Parallel and Distributed Processing Symposium</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">San Francisco, CA, USA</span> <span class="conf-date" tagx="conf-date" title="conf-date">1–5 May 2000</span> </span> </li> <li tag="ref"> <a name="B17-sensors-19-03024" /> <span class="label" tagx="label" title="label">17.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">He</span> <span class="given-names" tagx="given-names" title="given-names">S.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Dong</span> <span class="given-names" tagx="given-names" title="given-names">X.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">High-Accuracy Localization Platform Using Asynchronous Time Difference of Arrival Technology </span> <span class="source" tagx="source" title="source">IEEE Trans. Instrum. Meas.</span> <span class="year" tagx="year" title="year">2017</span> <span class="volume" tagx="volume" title="volume">66</span> <span class="fpage" tagx="fpage" title="fpage">1728</span> <span class="lpage" tagx="lpage" title="lpage">1742</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TIM.2017.2666278">10.1109/TIM.2017.2666278</a> </span> </span> </li> <li tag="ref"> <a name="B18-sensors-19-03024" /> <span class="label" tagx="label" title="label">18.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zhou</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Shen</span> <span class="given-names" tagx="given-names" title="given-names">L.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sun</span> <span class="given-names" tagx="given-names" title="given-names">Z.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">A New Method of D-TDOA Time Measurement Based on RTT</span> <span class="source" tagx="source" title="source">MATEC Web Conf.</span> <span class="year" tagx="year" title="year">2018</span> <span class="volume" tagx="volume" title="volume">207</span> <span class="fpage" tagx="fpage" title="fpage">03018</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1051/matecconf/201820703018">10.1051/matecconf/201820703018</a> </span> </span> </li> <li tag="ref"> <a name="B19-sensors-19-03024" /> <span class="label" tagx="label" title="label">19.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Kaune</span> <span class="given-names" tagx="given-names" title="given-names">R.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Hörst</span> <span class="given-names" tagx="given-names" title="given-names">J.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Koch</span> <span class="given-names" tagx="given-names" title="given-names">W.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Accuracy Analysis for TDOA Localization in Sensor Networks</span> <span class="source" tagx="source" title="source">Proceedings of the 14th International Conference on Information Fusion</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Chicago, IL, USA</span> <span class="conf-date" tagx="conf-date" title="conf-date">5 July 2011</span> </span> </li> <li tag="ref"> <a name="B20-sensors-19-03024" /> <span class="label" tagx="label" title="label">20.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Jia</span> <span class="given-names" tagx="given-names" title="given-names">T.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Buehrer</span> <span class="given-names" tagx="given-names" title="given-names">R.M.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">A New Cramer-Rao Lower Bound for TOA-based Localization</span> <span class="source" tagx="source" title="source">Proceedings of the MILCOM 2008-2008 IEEE Military Communications Conference</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">San Diego, CA, USA</span> <span class="conf-date" tagx="conf-date" title="conf-date">16–19 November 2008</span> </span> </li> <li tag="ref"> <a name="B21-sensors-19-03024" /> <span class="label" tagx="label" title="label">21.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Qi</span> <span class="given-names" tagx="given-names" title="given-names">Y.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Kobayashi</span> <span class="given-names" tagx="given-names" title="given-names">H.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Cramér-Rao Lower bound for geolocation in non-line-of-sight environment</span> <span class="source" tagx="source" title="source">Proceedings of the 2002 IEEE International Conference on Acoustics, Speech, and Signal Processing </span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Orlando, FL, USA</span> <span class="conf-date" tagx="conf-date" title="conf-date">13–17 May 2002</span> </span> </li> <li tag="ref"> <a name="B22-sensors-19-03024" /> <span class="label" tagx="label" title="label">22.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Chang</span> <span class="given-names" tagx="given-names" title="given-names">C.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Shai</span> <span class="given-names" tagx="given-names" title="given-names">A.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Estimation Bounds for Localization</span> <span class="source" tagx="source" title="source">Proceedings of the 2004 First Annual IEEE Communications Society Conference on Sensor and Ad Hoc Communications and Networks </span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Santa Clara, CA, USA</span> <span class="conf-date" tagx="conf-date" title="conf-date">4–7 October 2004</span> </span> </li> <li tag="ref"> <a name="B23-sensors-19-03024" /> <span class="label" tagx="label" title="label">23.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Huang</span> <span class="given-names" tagx="given-names" title="given-names">B.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Xie</span> <span class="given-names" tagx="given-names" title="given-names">L.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Yang</span> <span class="given-names" tagx="given-names" title="given-names">Z.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Analysis of TOA Localization with Heteroscedastic Noises</span> <span class="source" tagx="source" title="source">Proceedings of the 33rd Chinese Control Conference</span> <span class="conf-loc" tagx="conf-loc" title="conf-loc">Nanjing, China</span> <span class="conf-date" tagx="conf-date" title="conf-date">28–30 July 2014</span> </span> </li> <li tag="ref"> <a name="B24-sensors-19-03024" /> <span class="label" tagx="label" title="label">24.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Huang</span> <span class="given-names" tagx="given-names" title="given-names">B.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Xie</span> <span class="given-names" tagx="given-names" title="given-names">L.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Yang</span> <span class="given-names" tagx="given-names" title="given-names">Z.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">TDOA-Based Source Localization with Distance-Dependent Noises</span> <span class="source" tagx="source" title="source">IEEE Trans. Wirel. Commun.</span> <span class="year" tagx="year" title="year">2015</span> <span class="volume" tagx="volume" title="volume">14</span> <span class="fpage" tagx="fpage" title="fpage">468</span> <span class="lpage" tagx="lpage" title="lpage">480</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/TWC.2014.2351798">10.1109/TWC.2014.2351798</a> </span> </span> </li> <li tag="ref"> <a name="B25-sensors-19-03024" /> <span class="label" tagx="label" title="label">25.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Lanzisera</span> <span class="given-names" tagx="given-names" title="given-names">S.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Zats</span> <span class="given-names" tagx="given-names" title="given-names">D.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Pister</span> <span class="given-names" tagx="given-names" title="given-names">K.S.J.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Radio Frequency Time-of-Flight Distance Measurement for Low-Cost Wireless Sensor Localization</span> <span class="source" tagx="source" title="source">IEEE Sens. J.</span> <span class="year" tagx="year" title="year">2011</span> <span class="volume" tagx="volume" title="volume">11</span> <span class="fpage" tagx="fpage" title="fpage">837</span> <span class="lpage" tagx="lpage" title="lpage">845</span> <span class="pub-id"> <a href="https://dx.doi.org/10.1109/JSEN.2010.2072496">10.1109/JSEN.2010.2072496</a> </span> </span> </li> <li tag="ref"> <a name="B26-sensors-19-03024" /> <span class="label" tagx="label" title="label">26.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Yaro</span> <span class="given-names" tagx="given-names" title="given-names">A.S.</span> </span> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Sha’ameri</span> <span class="given-names" tagx="given-names" title="given-names">A.Z.</span> </span> </span> <span class="mixed-article-title" title="mixed-article-title">Effect of Path Loss Propagation Model on the Position Estimation Accuracy of a 3-Dimensional Minimum Configuration Multilateration System </span> <span class="source" tagx="source" title="source">Int. J. Integr. Eng.</span> <span class="year" tagx="year" title="year">2018</span> <span class="volume" tagx="volume" title="volume">10</span> <span class="fpage" tagx="fpage" title="fpage">35</span> <span class="lpage" tagx="lpage" title="lpage">42</span> </span> </li> <li tag="ref"> <a name="B27-sensors-19-03024" /> <span class="label" tagx="label" title="label">27.</span> <span class="element-citation'"> <span class="person-group'"> <span class="name" tagx="name" title="name"> <span class="surname" tagx="surname" title="surname">Rappaport</span> <span class="given-names" tagx="given-names" title="given-names">T.S.</span> </span> </span> <span class="source" tagx="source" title="source">Wireless Communications-Principles and Practice</span> <span class="publisher-name" tagx="publisher-name" title="publisher-name">Prentice Hall</span> <span class="publisher-loc" tagx="publisher-loc" title="publisher-loc">Upper Saddle River, NJ, USA</span> <span class="year" tagx="year" title="year">2002</span> </span> </li> </ul> </div> </div> <div class="floats-group" title="floats-group"> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 1</span> </a> </div>   <p>Asynchronous Time Difference of Arrival (A-TDOA) system timing diagram. Example of architecture operation with <i>n</i> Worker sensors (WS) nodes ( <i>n</i> must be at least equal to 4). Rectangular positioning pulses are emitted from the WS nodes, and when the arrival of the signal to the Target Sensor (TS) node is produced, signals are instantaneously retransmitted to the Coordinate Sensor (CS) node. When the process is completed, A-TDOA time measurements are accomplished. </p>   </div> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 2</span> </a> </div>   <p>Difference-Time Difference of Arrival (D-TDOA) timing diagram. Example of architecture operation with <i>n</i> WS nodes (with a minimum number of 4). The positioning target pulse is received at every WS node of the system that retransmits it towards the CS node. D-TDOA time measurements are completed by a round-trip transmission (RTT) process between each pair of WS–CS nodes. </p>   </div> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 3</span> </a> </div>   <p>Best distribution of Worker Sensor (WS) and Coordinator Sensor (CS) nodes for the A-TDOA system. The base surface is presented as the grey hyperplane located at the bottom of the picture. The nodes are represented by black spheres with their correspondent holder that links them to the base surface. The CRLB evaluation of the discretization points is displayed according to the right-hand side legend. </p>   </div> <div class="fig" title="fig"> <div class="figure" title="figure"> <a href="http://doi.org/"> <span class="label" tagx="label" title="label">Figure 4</span> </a> </div>   <p>Best distribution of Worker Sensor (WS) and Coordinate Sensor (CS) nodes for the D-TDOA system. The base surface is presented as the grey hyperplane located at the bottom of the picture. The nodes are represented by black spheres with their correspondent holder that links them to the base surface. The CRLB evaluation of discretization points is displayed according to the right-hand side legend. </p>   </div> <div class="table-wrap_UNKNOWN">
+sensors-19-03024-t001_Table 1 <span class="label" tagx="label" title="label">Table 1</span>  <p>Architecture parameters for Cramér-Rao Lower Bound (CRLB) study. Communication links amongst elements of Asynchronous Time Difference of Arrival (A-TDOA) and Difference-Time Difference of Arrival (D-TDOA) systems are restricted to these principal parameters. They were selected due to their utilization in similar tracking applications in the aerospace industry [ <a href="#B26-sensors-19-03024">26</a>, <a href="#B27-sensors-19-03024">27</a>]. </p>  <table> <thead> <tr> <th> Parameter </th> <th> Magnitude </th> </tr> </thead> <tbody> <tr> <td>Frequency of emission</td> <td>1090 MHz</td> </tr> <tr> <td>Bandwidth</td> <td>100 MHz</td> </tr> <tr> <td>Transmission power </td> <td>400 W</td> </tr> <tr> <td>Mean noise power</td> <td>−94 dBm</td> </tr> </tbody> </table> </div> <div class="table-wrap_UNKNOWN">
+sensors-19-03024-t002_Table 2 <span class="label" tagx="label" title="label">Table 2</span>  <p>Node distributions in meters. Five random node distributions were defined in order to analyze the accuracy level of A-TDOA and D-TDOA architectures based on their CRLB system definition. CRLB evaluation does not require a classification of WS and CS nodes. </p>  <table> <thead> <tr> <th>Distributions</th> <th> <i>x</i> </th> <th> <i>y</i> </th> <th> <i>z</i> </th> </tr> </thead> <tbody> <tr> <td>D.1</td> <td>Sensor 1</td> <td>249</td> <td>242</td> <td>3</td> </tr> <tr> <td>Sensor 2</td> <td>254</td> <td>759</td> <td>4</td> </tr> <tr> <td>Sensor 3</td> <td>576</td> <td>500</td> <td>3</td> </tr> <tr> <td>Sensor 4</td> <td>811</td> <td>124</td> <td>13</td> </tr> <tr> <td>Sensor 5</td> <td>879</td> <td>819</td> <td>13</td> </tr> <tr> <td>D.2</td> <td>Sensor 1</td> <td>72</td> <td>156</td> <td>3</td> </tr> <tr> <td>Sensor 2</td> <td>141</td> <td>854</td> <td>13</td> </tr> <tr> <td>Sensor 3</td> <td>496</td> <td>484</td> <td>3</td> </tr> <tr> <td>Sensor 4</td> <td>810</td> <td>891</td> <td>3</td> </tr> <tr> <td>Sensor 5</td> <td>876</td> <td>133</td> <td>13</td> </tr> <tr> <td>D.3</td> <td>Sensor 1</td> <td>78</td> <td>911</td> <td>13</td> </tr> <tr> <td>Sensor 2</td> <td>244</td> <td>241</td> <td>13</td> </tr> <tr> <td>Sensor 3</td> <td>516</td> <td>539</td> <td>3</td> </tr> <tr> <td>Sensor 4</td> <td>624</td> <td>655</td> <td>13</td> </tr> <tr> <td>Sensor 5</td> <td>810</td> <td>891</td> <td>3</td> </tr> <tr> <td>D.4</td> <td>Sensor 1</td> <td>191</td> <td>880</td> <td>10</td> </tr> <tr> <td>Sensor 2</td> <td>435</td> <td>527</td> <td>3</td> </tr> <tr> <td>Sensor 3</td> <td>482</td> <td>198</td> <td>9</td> </tr> <tr> <td>Sensor 4</td> <td>758</td> <td>254</td> <td>3</td> </tr> <tr> <td>Sensor 5</td> <td>782</td> <td>788</td> <td>7</td> </tr> <tr> <td>D.5</td> <td>Sensor 1</td> <td>148</td> <td>313</td> <td>3</td> </tr> <tr> <td>Sensor 2</td> <td>469</td> <td>621</td> <td>13</td> </tr> <tr> <td>Sensor 3</td> <td>550</td> <td>500</td> <td>3</td> </tr> <tr> <td>Sensor 4</td> <td>750</td> <td>218</td> <td>13</td> </tr> <tr> <td>Sensor 5</td> <td>783</td> <td>944</td> <td>3</td> </tr> </tbody> </table> </div> <div class="table-wrap_UNKNOWN">
+sensors-19-03024-t003_Table 3 <span class="label" tagx="label" title="label">Table 3</span>  <p>RMSE distribution parameters for the five sensor distribution schemes in <a href="#sensors-19-03024-t002">Table 2</a> are presented. These data were obtained based on the spatial discretization technique shown in <a href="#sensors-19-03024-f003">Figure 3</a> and <a href="#sensors-19-03024-f004">Figure 4</a>. </p>  <table> <thead> <tr> <th>RMSE (dB)</th> <th>A-TDOA</th> <th>D-TDOA</th> </tr> </thead> <tbody> <tr> <td>D.1</td> <td>Mean</td> <td>−0.5791</td> <td>2.1446</td> </tr> <tr> <td>Min</td> <td>−9.3067</td> <td>−8.2291</td> </tr> <tr> <td>Max</td> <td>21.4022</td> <td>19.1978</td> </tr> <tr> <td>SD</td> <td>5.5552</td> <td>4.6881</td> </tr> <tr> <td>D.2</td> <td>Mean</td> <td>−0.9528</td> <td>2.3131</td> </tr> <tr> <td>Min</td> <td>−8.6153</td> <td>−7.4459</td> </tr> <tr> <td>Max</td> <td>13.4399</td> <td>19.3637</td> </tr> <tr> <td>SD</td> <td>4.6718</td> <td>4.1344</td> </tr> <tr> <td>D.3</td> <td>Mean</td> <td>0.0682</td> <td>2.2769</td> </tr> <tr> <td>Min</td> <td>−8.9972</td> <td>−8.0968</td> </tr> <tr> <td>Max</td> <td>13.2448</td> <td>11.9421</td> </tr> <tr> <td>SD</td> <td>4.9828</td> <td>3.6965</td> </tr> <tr> <td>D.4</td> <td>Mean</td> <td>0.2111</td> <td>2.6452</td> </tr> <tr> <td>Min</td> <td>−9.1009</td> <td>−7.4856</td> </tr> <tr> <td>Max</td> <td>17.3846</td> <td>18.3655</td> </tr> <tr> <td>SD</td> <td>5.7176</td> <td>4.5620</td> </tr> <tr> <td>D.5</td> <td>Mean</td> <td>0.2524</td> <td>2.2070</td> </tr> <tr> <td>Min</td> <td>−9.8805</td> <td>−8.1964</td> </tr> <tr> <td>Max</td> <td>13.3707</td> <td>11.8791</td> </tr> <tr> <td>SD</td> <td>5.0180</td> <td>3.8402</td> </tr> <tr> <td>Mean of Means RMSE</td> <td>−0.2000</td> <td>2.3174</td> </tr> <tr> <td>Mean Standard Deviations RMSE</td> <td>5.1891</td> <td>4.1842</td> </tr> </tbody> </table> </div> </div>  </body></html>

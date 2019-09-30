@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec13" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">ANN1</div>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">ANN1 is an artificial neural network used to identify the relationship between climatic and anthropogenic disturbances and the likelihood of a luminescence age, indicating sediment deposition, to be found in the sedimentary record. ANN1 was trained with input-target data from 1590–1997 AD and used to stimulate the likelihood of identifying future deposition events in the sediment in the following 100 years under a series of alternative climatic and grazing pressure scenarios (see Future scenario forecasting).</p>
+ <sec id="Sec14" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pre-processing input datasets</div>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Three primary contributors to vegetation cover, and thus surface stability, were selected for inclusion in the model: grazing pressure, wildfire occurrence, and climatic conditions. Instrumental measurements (capturing the last 100 years of climatic data) were not used due to the relatively short time series measured. A longer dendrochronological record of tree ring growth from the Niobrara Valley Preserve (NVP)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span> provided an integrated record of precipitation and temperature change over the past 400 years. Annual tree ring growth data was extracted and smoothed by a factor of 0.2 RLOESS function, to allow a signal to be identified by the model amongst the environmental noise. Grazing pressure for the six dune sites was based on the levels identified in the index defined in Buckland 
+   <span class="italic">et al</span>. (submitted – 16/08/2018) and smoothed by a moving average factor of 0.1 to represent progressive changes in management strategy. Wildfire occurrence was included as a binary input (i.e. ‘1’ – fire, ‘0’ – no fire) based on the fire scar records from NVP
+   <span class="sup">
+    <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec15" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pre-processing target dataset</div>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">The target dataset for each of the six dune sites was represented by a probability density function (PDF) of stacked luminescence (optically stimulated luminescence – OSL) ages that depict episodes of sediment deposition in the dune profile. The target dataset represents a likelihood of identifying an OSL age, it does not necessarily capture every sediment reactivation event that has occurred for two reasons. First, historical events may have been eroded from the sedimentary record, and whilst a multicore strategy has been used to increase the overall representation of reactivation events, due to the fragmented nature of aeolian sedimentary profiles some events may be eroded from the record. Second, the event may not have been captured in the OSL dating due to sampling strategy. Considering these caveats, whilst a peak in the PDF dataset represents a depositional event, a trough does not equally represent a period of stability. A positive peak is a true result, but a negative absence only suggests that we did not find evidence of an event. As such, it is essential to pre-process the target dataset to avoid falsely training the ANN to interpret certain conditions as conducive to stability. Where long gaps between peaks (regions of contiguous values at zero) were found in the luminescence record, target values were removed, preventing the model from associating periods which might be due to erosional loss of sediment to specific environmental conditions, thereby learning a false relationship (for the present purposes).</p>
+ </sec>
+ <sec id="Sec16" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model structure and architecture</div>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">Final model structure used ‘timedelaynet’ function to allow for an adjustable lag to be incorporated into the network architecture. A lag of up to 8 years for the input variables was selected following a series of trials of different time lags. Given the complex nature of the relationship between the input variables and the resultant likelihood of sediment movement, four hidden layers were used with a structure of [3 30 30 3] neurons in the layers (Fig. 
+   <a rid="Fig7" ref-type="fig" href="#Fig7">7</a>). The Levenberg-Marquadt algorithm was used to train the network (minimizing distance between model outputs and target data) and the mean square error (MSE) of each model run was used as the performance indicator for each iteration. Training datasets were randomly partitioned for training (90%), validation (5%) and testing (5%) purposes during cross-validation experiments, but to reduce over-fitting in the future scenario simulations this split was altered to increase the test portion of the datasets (50% training, 5% validation, 45% testing) and improve the robustness of the model outputs.
+   <div id="Fig7" class="fig">
+    <span class="label">Figure 7</span>
+    <div class="caption">
+     <p>Schematic diagram demonstrating the model architecture of the final models used in ANN1. Training model was based on input-target dataset from 1590–1997 AD, with scenario datasets based on measured climatic data from 1998–2014 and simulated tree ring growth indices from 2015–2098.</p>
+    </div>
+    <div xlink:href="41598_2019_40429_Fig7_HTML" id="d29e839" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+ </sec>
+</sec>

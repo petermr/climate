@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model description</div>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">Geophysical Fluid Dynamics Laboratory (GFDL) Land Model LM3-Terrestrial and Aquatic Nitrogen (TAN) was developed by incorporating a global river routing and lake model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+  </span>, river N cycling processes, and new terrestrial N cycling processes and inputs, such as soil denitrification and point N sources to rivers (i.e., urban wastewater discharges)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span>, into the coupled C and N (C-N) Terrestrial Ecosystem Model (TEM) LM3V-N
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>,
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. TEMs
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>,
+   <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+  </span> capture coupled terrestrial C-N dynamics that critically affect the state of N storage in vegetation and soils, such as deforestation for agriculture, wood harvesting, and reforestation after harvesting. TEMs extended to include global river routing models
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>,
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span> are thus well suited to simulate hydrological N leaching from soils to rivers, and track the ultimate fate of land N to the ocean and atmosphere. While measurement-based N constraints on TEMs rely on global terrestrial N budgets that are known to include substantial uncertainty
+  <span class="sup">
+   <a ref-type="bibr" rid="CR1" href="#CR1">1</a>,
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>,
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>
+  </span>, LM3-TAN can be also constrained with relatively abundant measurements of regional N loads and concentrations from globally-distributed rivers, spanning various climates, biomes, and human activities (Supplementary Figures 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a> and 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>, Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>).
+ </p>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Within LM3-TAN, water and energy storage in land and exchanges with the atmosphere are computed at a 30-min timestep. Five vegetation functional types (C3 and C4 grasses, temperate deciduous, tropical, and cold evergreen trees) are simulated based on total biomass and prevailing climate conditions
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. The vegetation pools include leaves, fine roots, sapwood, heartwood, and labile storage, which are updated daily to account for vegetation growth and allocation, leaf fall and display, natural and fire-induced mortality. Four land-use types (primary land—land undisturbed by human activities during land-use reconstruction, secondary land—abandoned agricultural land or regrowing forest after logging, cropland, and pasture) and land-use changes are simulated by using a historically reconstructed scenario of land-use transitions including the effects of wood harvesting and shifting cultivation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR15" href="#CR15">15</a>
+  </span>. The model is spatially gridded, and each grid cell consists of up to 15 tiles: 1 primary land, 1 cropland, 1 pasture, 1 lake, 1 glacier, and up to 10 secondary land tiles, reflecting unique perturbation histories, such as de/reforestation and agricultural activities.
+ </p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">When wood is harvested, the vegetation biomass in primary or secondary land is removed, and the land is replaced with (1) cropland or pasture for agriculture or (2) secondary forests after logging
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. When crops are harvested, all leaf and the aboveground fraction of labile stores in croplands are cut. When grass is harvested, a fraction of leaf in pasture is removed. Crop and grass harvesting are done annually. See Shevliakova and colleagues
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span> for a detailed harvesting description. As described in the main text, net harvest is defined as harvest minus manure applications
+  <span class="sup">
+   <a ref-type="bibr" rid="CR8" href="#CR8">8</a>
+  </span> and urban wastewaters
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span>, and the majority of the net harvest is assumed to be released to the atmosphere
+  <span class="sup">
+   <a ref-type="bibr" rid="CR1" href="#CR1">1</a>,
+   <a ref-type="bibr" rid="CR6" href="#CR6">6</a>,
+   <a ref-type="bibr" rid="CR8" href="#CR8">8</a>
+  </span> (Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>, Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). The net harvest can be further partitioned into that associated with agricultural lands (agricultural net harvest) and that associated with non-agricultural lands (non-agricultural net harvest). Agricultural net harvest is estimated as the sum of harvest in cropland and pasture tiles minus manure applied to croplands
+  <span class="sup">
+   <a ref-type="bibr" rid="CR8" href="#CR8">8</a>
+  </span>. Non-agricultural net harvest is the sum of harvest in all the other tiles minus urban wastewater discharges
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span>.
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">LM3-TAN has 4 organic soil pools (fast/slow litter and slow/passive soil) and 2 inorganic soil pools (ammonium and nitrate plus nitrite)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span>. Each C pool in vegetation and organic soils is paired with a respective N pool using pool-specific C:N ratios. Decomposition of soil organic matter (SOM) releases inorganic ammonium N, which is further transformed into nitrite or nitrate N by nitrification. Soil denitrification emissions are simulated by using a first-order loss function with respect to soil nitrate N content, with adjustments for the influence of soil water content and temperature
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span>. Simulations of biologically available inorganic N species allow accounting for N limitation on vegetation growth and BNF as well as N feedbacks on SOM decomposition and immobilization. BNF is considered as a high light-requiring costly process, and is thus only simulated if plant uptake cannot meet N demands, as a prognostic function of local N availability and of sunlight access in temperate and boreal biomes
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span>. Simulated BNF can be further partitioned into that associated with agricultural lands (agricultural BNF) and that associated with non-agricultural lands (non-agricultural BNF). Agricultural BNF is estimated as the sum of BNF in cropland and pasture tiles and non-agricultural BNF is the sum of BNF in all the other tiles.
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">Rivers receive dissolved organic, ammonium, and nitrate plus nitrite N via hydrological soil leaching
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span> and urban wastewater discharges
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span>. River N is routed downstream with river flows. Microbial processes of mineralization, nitrification, and denitrification in rivers are simulated by using first-order loss function with respect to N content and with an adjustment for the influence of water temperature. See Lee and colleagues
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span> for a detailed model description and structure. Lentic systems (e.g., lakes and reservoirs) have long residence times relative to rivers, providing an extended opportunity for N processing
+  <span class="sup">
+   <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+  </span>. Despite this, previous TEMs including global river routing models
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>,
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span> did not account for lentic N dynamics. We thus extended LM3-TAN by incorporating a simple model of dynamic lake N cycling processes (Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>). The resultant model couples hydrological, ecological, and biogeochemical cycles, and captures key N dynamics within a vegetation-soil-river-lake system in response to LULCC, anthropogenic Nr inputs, atmospheric CO
+  <sub>2</sub>, climate change and variability. Newly introduced or adjusted parameters from the earlier developments are summarized in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>.
+ </p>
+</sec>

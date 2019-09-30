@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec19" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Aerosol radiative forcing calculation</div>
+ <p id="Par54" xmlns="http://www.w3.org/1999/xhtml">We calculate the aerosol direct radiative forcing and cloud albedo forcing, also known as the first indirect forcing, between the PI and PD using the Suite Of Community RAdiative Transfer codes based on Edwards and Slingo (SOCRATES)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR95" href="#CR95">95</a>
+  </span>, with nine bands in the longwave (LW) and six bands in the shortwave (SW). We use an offline configuration driven by year 2000 monthly mean temperature and water vapour concentrations from ECMWF reanalysis data. We use a monthly mean cloud climatology (1983–2008) from the ISCCP-D2 archive
+  <span class="sup">
+   <a ref-type="bibr" rid="CR96" href="#CR96">96</a>
+  </span>. The same PD simulation (with CMIP6 fire emissions) was paired with the three PI simulations using CMIP6, SIMFIRE-BLAZE and LMfire fire emissions. Both PI and PD fire emissions are used to calculate the AeroCom radiative forcing values in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> in order to provide a reference to compare the radiative forcing values calculated by using the CMIP6 PI and PD fire emissions. Each paired PI–PD simulation accounts for changes in anthropogenic aerosol emissions from 1750 to 2000 (due to industrial, transport and domestic fossil fuel combustion sources)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+  </span>.
+ </p>
+ <p id="Par55" xmlns="http://www.w3.org/1999/xhtml">The direct radiative forcing is calculated as the difference in the net (SW + LW) top-of-atmosphere all-sky radiative flux between the PI and PD, based on the aerosol optical properties (scattering and absorption coefficients and the asymmetry parameter) for each size mode and spectral band
+  <span class="sup">
+   <a ref-type="bibr" rid="CR97" href="#CR97">97</a>
+  </span>. The cloud albedo forcing is determined from the radiative perturbation induced by the change to cloud droplet number concentration (CDNC) between the PI and PD
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>,
+   <a ref-type="bibr" rid="CR98" href="#CR98">98</a>
+  </span>.
+ </p>
+ <p id="Par56" xmlns="http://www.w3.org/1999/xhtml">Cloud droplet number concentrations are calculated
+  <span class="sup">
+   <a ref-type="bibr" rid="CR99" href="#CR99">99</a>–
+   <a ref-type="bibr" rid="CR101" href="#CR101">101</a>
+  </span> from the monthly mean aerosol size distribution, assuming a uniform updraught velocity of 0.15 m s
+  <span class="sup">−1</span> over ocean and 0.3 m s
+  <span class="sup">−1</span> over land. The critical supersaturation is calculated using the hygroscopicity parameter (
+  <span class="italic">κ</span>) approach
+  <span class="sup">
+   <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+  </span>. A multi-component 
+  <span class="italic">κ</span> is obtained by weighting individual 
+  <span class="italic">κ</span> values by the volume fraction of each component. We assign 
+  <span class="italic">κ</span> values as follows: sulphate (0.61, assuming ammonium sulphate), sea-salt (1.28), black carbon (0.0), and particulate organic matter (0.1).
+ </p>
+ <p id="Par57" xmlns="http://www.w3.org/1999/xhtml">To calculate the cloud albedo forcing, a uniform control cloud droplet effective radius (
+  <span class="italic">r</span>
+  <sub>e1</sub>) of 10 µm is assumed to maintain consistency with the ISCCP derivation of the liquid water path. For each paired PI−PD experiment the effective radius (
+  <span class="italic">r</span>
+  <sub>e2</sub>) for low- and mid-level clouds (up to 600 hPa) is calculated as in Eqn. 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>, from the monthly mean cloud droplet number fields CDNC
+  <sub>1</sub> and CDNC
+  <sub>2</sub>, respectively (where CDNC
+  <sub>1</sub> represents the PD simulation, and CDNC
+  <sub>2</sub> represents the PI simulation).
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${r}_{{\mathrm{e}}2} = {r}_{{\mathrm{e}}1} \times \left[ {\frac{{{\mathrm{CDNC}}_1}}{{{\mathrm{CDNC}}_2}}} \right]^{\frac{1}{3}}$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">e</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">e</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">×</span>
+     <div class="msup">
+      <div class="mrow">
+       <div close="]" open="[" separators="" class="mfenced">
+        <div class="mrow">
+         <div class="mfrac">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">CDNC</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">CDNC</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="mfrac">
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">3</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2018_5592_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par58" xmlns="http://www.w3.org/1999/xhtml">In these offline experiments, we do not calculate the second aerosol indirect (cloud lifetime) effect.</p>
+</sec>

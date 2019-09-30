@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">FLEXPART-ECLIPSE-GFED model</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">For the bottom-up estimates of the BC concentrations, the FLEXPART-ECLIPSE-GFED (FEG) model was used, consisting of the atmospheric dispersion model FLEXPART (
+  <a rid="R28" ref-type="bibr" href="#R28">
+   <span class="italic">28</span>
+  </a>, 
+  <a rid="R45" ref-type="bibr" href="#R45">
+   <span class="italic">45</span>
+  </a>), coupled to the ECLIPSE (
+  <a rid="R12" ref-type="bibr" href="#R12">
+   <span class="italic">12</span>
+  </a>) emission inventory and satellite-based open fire emissions by GFED (
+  <a rid="R29" ref-type="bibr" href="#R29">
+   <span class="italic">29</span>
+  </a>). FLEXPART version 9.2 was run in backward mode for the same location and time periods over which the measurements were taken. A logarithmic size distribution with mean particulate diameters of 250 nm was used, with a logarithmic SD of 1.25. Simulations extended over 20 days back in time, which is sufficient to include most emissions injected into an air mass arriving at the station, given a typical BC lifetime of roughly 1 week. The simulations used meteorological analysis data from the ECMWF at a resolution of 1° × 1° latitude/longitude. Data in the summer and fall of 2013 were missing due to ECMWF’s increase of vertical model resolution on 25 June 2013. FLEXPART accounts for dry deposition and wet scavenging, differentiating between below-cloud and in-cloud scavenging. Anthropogenic BC emissions were received from the ECLIPSE version 5 emission inventory (
+  <a rid="R12" ref-type="bibr" href="#R12">
+   <span class="italic">12</span>
+  </a>), which is based on the GAINS (greenhouse gas–air pollution interactions and synergies) model (
+  <a rid="R46" ref-type="bibr" href="#R46">
+   <span class="italic">46</span>
+  </a>). The emissions were available at yearly resolution for the various source types and, in addition, contained an explicit split between biofuel (modern) and fossil fuel emissions.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To estimate the biomass burning contribution from open fires (including wildfires and AWB), the most recent version (4.1s) of GFED was applied (
+  <a rid="R29" ref-type="bibr" href="#R29">
+   <span class="italic">29</span>
+  </a>). This satellite-based emission inventory was used with monthly resolution, and the spatial resolution was changed from 0.25° to 0.5° to match ECLIPSE’s resolution. Emissions from wildfires were not accounted for by the ECLIPSE model. However, AWB is included in ECLIPSE as biofuel. Hence, the AWB fraction of ECLIPSE was removed to avoid double counting.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The yearly mean 
+  <span class="italic">f</span>
+  <sub>bb</sub> for the available FEG data was calculated as
+  <div id="E4" class="disp-formula">
+   <div id="m4" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div accent="true" class="mover">
+       <div class="mrow">
+        <div class="msub">
+         <span mathvariant="italic" class="mi">f</span>
+         <span class="mtext">bb</span>
+        </div>
+       </div>
+       <span stretchy="true" class="mo">¯</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div displaystyle="true" class="mstyle">
+         <div class="msubsup">
+          <span stretchy="true" class="mo">∑</span>
+          <span class="mn">1</span>
+          <span mathvariant="italic" class="mi">n</span>
+         </div>
+        </div>
+        <div class="msub">
+         <span mathvariant="italic" class="mi">f</span>
+         <span class="mtext">bb</span>
+        </div>
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="italic" class="mi">i</span>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">⋅</span>
+        <span mathvariant="italic" class="mi">t</span>
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="italic" class="mi">i</span>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">⋅</span>
+        <span class="mtext">BC</span>
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="italic" class="mi">i</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+       <div class="mrow">
+        <div displaystyle="true" class="mstyle">
+         <div class="msubsup">
+          <span stretchy="true" class="mo">∑</span>
+          <span class="mn">1</span>
+          <span mathvariant="italic" class="mi">n</span>
+         </div>
+        </div>
+        <span mathvariant="italic" class="mi">t</span>
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="italic" class="mi">i</span>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">⋅</span>
+        <span class="mtext">BC</span>
+        <span stretchy="false" class="mo">(</span>
+        <span mathvariant="italic" class="mi">i</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(4)</span>
+  </div>where 
+  <span class="italic">f</span>
+  <sub>bb</sub> is the model-based fraction of biomass burning BC, BC is the BC concentration, 
+  <span class="italic">t</span> is the sampling time for the respective sample, and 
+  <span class="italic">i</span> is the sample index. The model-derived 
+  <span class="italic">f</span>
+  <sub>bb</sub> contains all contemporary fuels (i.e., biofuels, wildfires, and AWB).
+ </p>
+</sec>

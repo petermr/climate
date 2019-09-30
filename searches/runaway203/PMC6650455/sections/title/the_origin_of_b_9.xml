@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">The origin of BC over the HTP</div>
+ <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">The GEOS-Chem model and its adjoint (version 34 with updates to v8-02-01) are used in this study to analyse the origin of BC transported to the HTP. The GEOS-Chem model is a global 3-D chemical transport model (CTM) driven by assimilated meteorological observations from the Goddard Earth Observing System (GEOS) of the NASA Global Modeling Assimilation Office (GMAO)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+  </span>. The simulation of BC in GEOS-Chem was described in detail by Park et al.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>,
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span>, and its performance has been evaluated extensively in subsequent studies
+  <span class="sup">
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>,
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+  </span>. Here, we use the GEOS-5 meteorological data set to drive the model simulation at a horizontal resolution of 2° latitude × 2.5° longitude and a vertical resolution of 47 layers from the surface to 0.01 hPa. In this study, we first conduct five experiments using different emission inventories
+  <span class="sup">
+   <a ref-type="bibr" rid="CR40" href="#CR40">40</a>–
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span> and BC ageing schemes
+  <span class="sup">
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>,
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+  </span> to obtain the optical model configuration for the adjoint simulation (see Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). The experiments are conducted for 2006, during which substantial observations over the HTP are available. These experiments are evaluated with in situ observations of BC in the surface air and snow over the HTP and adjacent regions (Supplementary Tables 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> and 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>). The GEOS-Chem model exhibits a good performance in simulating the atmospheric transport and deposition of BC over the HTP (see Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a> and Supplementary Tables 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>–
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>). The experiment configured with BC ageing scheme from He et al.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+  </span> and anthropogenic BC emission inventory from PKU-BC-Inventory
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span> generally exhibits a better performance comparing to other model configurations and hence is further implemented in our adjoint simulations. Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a> shows the corresponding spatial distributions of the simulated BC surface concentrations during the different seasons of 2011 in our adjoint simulations. The detailed discussion of model evaluation is provided in the Supplementary Information.
+ </p>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">The adjoint model derived from the GEOS-Chem model is an efficient tool for the computation of model sensitivities and inverse problems
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>. This model has been applied to identify the sources
+  <span class="sup">
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>,
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span> and to constrain the emissions
+  <span class="sup">
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>–
+   <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+  </span> of various chemical species (e.g., CO, BC, and O
+  <sub>3</sub>). Compared with an analysis of the forward model sensitivity, the adjoint approach is far more computationally efficient for source-receptor attribution when the number of sources exceeds the number of receptors
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>, which is the case here. The adjoint model calculates the sensitivity (
+  <span class="bold">k</span>) of the BC mass-burden (
+  <span class="bold">Y</span>) throughout the whole atmospheric column in the receptor box to the global emissions (
+  <span class="bold">e</span>). The equation is expressed as follows, where 
+  <span class="italic">k</span> and 
+  <span class="italic">e</span> can be resolved at a 2° latitude × 2.5° longitude horizontal resolution:
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bf{Y = ke}}$$\end{document}</span>
+    <div id="M2" class="math">
+     <span mathvariant="bold" class="mi">Y = ke</span>
+    </div>
+    <div xlink:href="41467_2019_10876_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>By multiplying the sensitivity (
+  <span class="bold">k</span>) with the global emissions (
+  <span class="bold">e</span>), we can estimate the extent to which the BC emissions from each grid cell contribute to the BC mass-burden in a receptor box (
+  <span class="bold">Y</span>) following a linear relationship in the BC model simulation. This approach was previously validated by comparing the adjoint gradients with the forward model sensitivities, which showed good agreement
+  <span class="sup">
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>,
+   <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+  </span>.
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">As shown in Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>, we define a large receptor box including 24 model grids, and the glacier area in each grid exceeds 2% based on the World Glacier Inventory (WGI)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span>. The 2° × 2.5° source-receptor sensitivity map of BC in the HTP derived from the adjoint analysis is disaggregated to 0.1° × 0.1° using high-resolution emission inventory as a proxy. The emission intensity at a 0.1° × 0.1° resolution is obtained from the PKU-BC-Inventory
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span> (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">7</a>). This approach is based on a basic principle that regions emitted more BC may have more contributions to the HTP and should share more responsibilities. It considers the sub-grid distribution of BC emissions and hence covers the shortage of the model resolution more or less. The adjoint simulations are conducted for all months from 2007 to 2011 with BC emissions fixed in 2011. Each case spans three weeks of the corresponding month and the model response (
+  <span class="bold">Y</span>) is defined for the last week. Our analysis focuses on the results of 2011 to ensure consistency with the multi-region input–output (MRIO) analysis. Meanwhile, we use the multiyear result to estimate the uncertainty range associated with the inter-annual variabilities in the climate and the corresponding changes in atmospheric transport pathways. To evaluate the performance of adjoint simulations, we further conduct two sensitivity simulations using the GEOS-Chem forward model in which the consumption-based BC emissions from China and India are removed, respectively (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">8</a>).
+ </p>
+</sec>

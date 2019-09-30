@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec12" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sub-model A for predicting the potential habitat of 
+  <span class="italic">L. muta japonica</span>
+ </div>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">A generalized additive model (GAM) [
+  <a ref-type="bibr" rid="CR43" href="#CR43">43</a>] was used to predict the potential habitat for 
+  <span class="italic">L. muta japonica</span>. We used the package “mgcv” to construct a GAM in R. Data on the presence and absence of territories for 
+  <span class="italic">L. muta japonica</span> were used as a response variable. The area fractions of three alpine vegetation communities in the territories and 300-m grid cells of absent areas were used as explanatory variables, together with distance from the ridge. The three communities used were the 
+  <span class="italic">P. pumila</span>, snowbed grassland, and alpine fellfield communities. The number of surveys was included as an offset term, to incorporate the effect of survey effort. The area fraction of the 
+  <span class="italic">P. pumila</span> community was used as a combination term with distance from the ridge, based on the thin plate smoothing spline algorithm (see Additional file 
+  <a rid="MOESM4" ref-type="media" href="#MOESM4">4</a>: Appendix S2). The relative importance of the variables (IOV) was calculated based on the Akaike weight for all of the models, which was developed by all combinations of explanatory variables [
+  <a ref-type="bibr" rid="CR44" href="#CR44">44</a>].
+ </p>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">We validated the accuracy of the model by calculating the area under the curve (AUC) of the receiver operating characteristic (ROC) analysis [
+  <a ref-type="bibr" rid="CR45" href="#CR45">45</a>] based on predicted presence/absence data and the validation data, which was bootstrapped from all of the training data with 100 repetitions. We chose using whole data for modeling and bootstrapped data for validation because we considered development of good model more important than the robustness of validation (although validation results could be slightly overestimated). The AUC ranges from 0.5 for models with no discrimination ability to 1.0 for models with perfect discrimination [
+  <a ref-type="bibr" rid="CR45" href="#CR45">45</a>]. In addition, we calculated model sensitivity and specificity (the proportions of presence and absence data correctly predicted) based on the predicted and actual presence/absence data of 
+  <span class="italic">L. muta japonica</span> territories. We defined a threshold value by assigning a cutoff sensitivity (95%), as recommended by Pearson et al. [
+  <a ref-type="bibr" rid="CR46" href="#CR46">46</a>]. The threshold was defined based on model predictions for the entire training data set. We defined areas with probabilities greater than, or equal to, the threshold probability as potential habitat, and areas with probabilities lower than the threshold value as non-habitat.
+ </p>
+</sec>

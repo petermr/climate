@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec5" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">I used compiled benthic foraminifera δ
+  <span class="sup">13</span>C and δ
+  <span class="sup">18</span>O data from more than 40 deep-sea cores of the Deep Sea Drilling Project and Ocean Drilling Program
+  <span class="sup">
+   <a ref-type="bibr" rid="CR4" href="#CR4">4</a>,
+   <a ref-type="bibr" rid="CR7" href="#CR7">7</a>,
+   <a ref-type="bibr" rid="CR8" href="#CR8">8</a>
+  </span>. These data spanning the Cenozoic to the middle-Late Cretaceous, i.e. the past ~115 Ma (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1a</a>), indicate global variations in climate and carbon cycle, including the well known climatic events
+  <span class="sup">
+   <a ref-type="bibr" rid="CR4" href="#CR4">4</a>
+  </span>. The Cenozoic compilation is from Cramer 
+  <span class="italic">et al</span>.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR7" href="#CR7">7</a>
+  </span>, and the Cretaceous compilation is from Friedrich 
+  <span class="italic">et al</span>.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR8" href="#CR8">8</a>
+  </span>. Although the resolution of the stacked data would distort the record of high-frequency cyclicities, the low-frequency, multi-Myr, if present would emerge in the compiled records
+  <span class="sup">
+   <a ref-type="bibr" rid="CR6" href="#CR6">6</a>
+  </span>. Here I performed time-series analysis on the compiled δ
+  <span class="sup">18</span>O record to seek for multi-Myr cycling in climate; comparision with long-term carbon cycling
+  <span class="sup">
+   <a ref-type="bibr" rid="CR6" href="#CR6">6</a>
+  </span> was also carried out (Supplementary Figure 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>).
+ </p>
+ <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">I applied spectral analysis to the δ
+  <span class="sup">18</span>O data (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2a) and</a> to long-period (&gt;1 Myr) astronomical variations (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2b</a>). I generated long-term astronomical variations by extracting amplitude maxima in short eccentricity and amplitude maxima in high-frequency obliquity time series
+  <span class="sup">
+   <a ref-type="bibr" rid="CR52" href="#CR52">52</a>,
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span>, then summing them after standardization, finally I lowpass filtered periods longer than 1 Myr. The astronomical variations from amplitude maxima of the signals are susceptible to detect lower frequencies, as the conventional amplitude modulation technique. I applied this procedure to the interval from 0 to 115 Ma (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2b</a>, upper spectrum), and to the interval from 0 to 146 Ma (Cenozoic and Cretaceous time, Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2b</a>, lower spectrum). For spectral analysis, I used the multi-taper method (MTM) and the robust red noise as implemented in the ‘astrochron’ R packages
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span>. MTM spectral analysis was conducted, with three 2π tapers (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>), on the linearly resampled (5 kyr) δ
+  <span class="sup">18</span>O data. To precisely determine the long periods of 9 and 36 Myr I additionally applied 1x zero padding to the δ
+  <span class="sup">18</span>O time series prior spectral analysis (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2a</a>). I carried out smoothing and fitting long-term δ
+  <span class="sup">18</span>O variations using both polynomial method and the Lowess weighted average method (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). For the detailed study of δ
+  <span class="sup">18</span>O record (expanded views in Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>), I have rather performed only the weighted average method on the uneven spaced raw data.
+ </p>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">Bandpass filtering was conducted using conjointly the Taner filter, which is characterized by a steep stopband, and the Gaussian filter which has a gentle stopband. Lowpass filtering was conducted using the Taner filter. Filtering δ
+  <span class="sup">18</span>O signal was applied to the 5 kyr linearly resampled (5 kyr) data, while Lowess weighted average smoothing was applied to the raw data. Finally, in order to highlight the amplitude modulation of the 2.4 Myr cycle band by the ~9 Myr cycles in the astronomical variations, I used evolutive harmonic analysis (EHA) with a function computing a running periodogram of a uniformly sampled time series using FFTs of zero-padded segments, and normalized to the highest amplitudes (Supplementary Figure 3).
+ </p>
+</sec>

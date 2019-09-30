@@ -1,0 +1,841 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Ecol Evol</journal-id><journal-id journal-id-type="iso-abbrev">Ecol Evol</journal-id><journal-id journal-id-type="doi">10.1002/(ISSN)2045-7758</journal-id><journal-id journal-id-type="publisher-id">ECE3</journal-id><journal-title-group><journal-title>Ecology and Evolution</journal-title></journal-title-group><issn pub-type="epub">2045-7758</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6405495</article-id><article-id pub-id-type="doi">10.1002/ece3.4919</article-id><article-id pub-id-type="publisher-id">ECE34919</article-id><article-categories><subj-group subj-group-type="overline"><subject>Original Research</subject></subj-group><subj-group subj-group-type="heading"><subject>Original Research</subject></subj-group></article-categories><title-group><article-title>Performances of machine learning algorithms for mapping fractional cover of an invasive plant species in a dryland ecosystem</article-title><alt-title alt-title-type="left-running-head">SHIFERAW et al.</alt-title></title-group><contrib-group><contrib id="ece34919-cr-0001" contrib-type="author" corresp="yes"><name><surname>Shiferaw</surname><given-names>Hailu</given-names></name><contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-3697-083X</contrib-id><address><email>hailu2nd@gmail.com</email><email>hailushi31@yahoo.com</email></address><xref ref-type="aff" rid="ece34919-aff-0001">
+<sup>1</sup>
+</xref><xref ref-type="aff" rid="ece34919-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="ece34919-cr-0002" contrib-type="author"><name><surname>Bewket</surname><given-names>Woldeamlak</given-names></name><xref ref-type="aff" rid="ece34919-aff-0002">
+<sup>2</sup>
+</xref></contrib><contrib id="ece34919-cr-0003" contrib-type="author"><name><surname>Eckert</surname><given-names>Sandra</given-names></name><contrib-id contrib-id-type="orcid">https://orcid.org/0000-0002-9579-5680</contrib-id><xref ref-type="aff" rid="ece34919-aff-0003">
+<sup>3</sup>
+</xref></contrib></contrib-group><aff id="ece34919-aff-0001">
+<label><sup>1</sup></label>
+<named-content content-type="organisation-division">Water and Land Resource Centre</named-content>
+<institution>Addis Ababa University</institution>
+<named-content content-type="city">Addis Ababa</named-content>
+<country country="ET">Ethiopia</country>
+</aff><aff id="ece34919-aff-0002">
+<label><sup>2</sup></label>
+<named-content content-type="organisation-division">Department of Geography and Environmental Studies</named-content>
+<institution>Addis Ababa University</institution>
+<named-content content-type="city">Addis Ababa</named-content>
+<country country="ET">Ethiopia</country>
+</aff><aff id="ece34919-aff-0003">
+<label><sup>3</sup></label>
+<named-content content-type="organisation-division">Centre for Development and Environment</named-content>
+<institution>University of Bern</institution>
+<named-content content-type="city">Bern</named-content>
+<country country="CH">Switzerland</country>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label><bold>Correspondence</bold><break/>
+Hailu Shiferaw, Water and Land Resource Centre, Addis Ababa University, Addis Ababa, Ethiopia.<break/>
+Emails: <email>hailu2nd@gmail.com</email>; <email>hailushi31@yahoo.com</email><break/></corresp></author-notes><pub-date pub-type="epub"><day>12</day><month>2</month><year>2019</year></pub-date><pub-date pub-type="collection"><month>3</month><year>2019</year></pub-date><volume>9</volume><issue>5</issue><issue-id pub-id-type="doi">10.1002/ece3.2019.9.issue-5</issue-id><fpage>2562</fpage><lpage>2574</lpage><history><date date-type="received"><day>27</day><month>6</month><year>2018</year></date><date date-type="rev-recd"><day>10</day><month>12</month><year>2018</year></date><date date-type="accepted"><day>28</day><month>12</month><year>2018</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> &#x000a9; 2019 Published by John Wiley & Sons Ltd. <copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9; 2019 The Authors. <italic>Ecology and Evolution</italic> published by John Wiley &#x00026; Sons Ltd.</copyright-statement><license license-type="creativeCommonsBy"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link> License, which permits use, distribution and reproduction in any medium, provided the original work is properly cited.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:ECE3-9-2562.pdf"/><abstract id="ece34919-abs-0001"><title>Abstract</title><p>In recent years, an increasing number of distribution maps of invasive alien plant species (IAPS) have been published using different machine learning algorithms (MLAs). However, for designing spatially explicit management strategies, distribution maps should include information on the local cover/abundance of the IAPS. This study compares the performances of five MLAs: gradient boosting machine in two different implementations, random forest, support vector machine and deep learning neural network, one ensemble model and a generalized linear model; thereby identifying the best&#x02010;performing ones in mapping the fractional cover/abundance and distribution of IPAS, in this case called <italic>Prosopis juliflora (SW. DC.)</italic>. Field level <italic>Prosopis</italic> cover and spatial datasets of seventeen biophysical and anthropogenic variables were collected, processed, and used to train and validate the algorithms so as to generate fractional cover maps of <italic>Prosopis</italic> in the dryland ecosystem of the Afar Region, Ethiopia. Out of the seven tested algorithms, random forest performed the best with an accuracy of 92% and sensitivity and specificity &#x0003e;0.89. The next best&#x02010;performing algorithms were the ensemble model and gradient boosting machine with an accuracy of 89% and 88%, respectively. The other tested algorithms achieved comparably low performances. The strong explanatory variables for <italic>Prosopis</italic> distributions in all models were NDVI, elevation, distance to villages and distance to rivers; rainfall, temperature, near&#x02010;infrared and red reflectance, whereas topographic variables, except for elevation, did not contribute much to the current distribution of <italic>Prosopis</italic>. According to the random forest model, a total of 1.173&#x000a0;million ha (12.33% of the study region) was found to be invaded by <italic>Prosopis</italic> to varying degrees of cover. Our findings demonstrate that MLAs can be successfully used to develop fractional cover maps of plant species, particularly IAPS so as to design targeted and spatially explicit management strategies.</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="ece34919-kwd-0001">Afar Region</kwd><kwd id="ece34919-kwd-0002">dryland ecosystems</kwd><kwd id="ece34919-kwd-0003">Ethiopia</kwd><kwd id="ece34919-kwd-0004">fractional cover mapping</kwd><kwd id="ece34919-kwd-0005">invasive alien plant species</kwd><kwd id="ece34919-kwd-0006">machine learning algorithms</kwd><kwd id="ece34919-kwd-0007"><italic>Prosopis juliflora</italic></kwd></kwd-group><funding-group><award-group><funding-source>Swiss National Science Foundation (SNSF)</funding-source></award-group><award-group><funding-source>Swiss Agency for Development and Cooperation</funding-source></award-group><award-group><funding-source>Swiss Programme for Research on Global Issues for Development (r4d)</funding-source></award-group></funding-group><counts><fig-count count="4"/><table-count count="3"/><page-count count="13"/><word-count count="10257"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>ece34919</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>March 2019</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:5.6.1 mode:remove_FC converted:07.03.2019</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="ece34919-cit-1001">
+<string-name>
+<surname>Shiferaw</surname>
+<given-names>H</given-names>
+</string-name>, <string-name>
+<surname>Bewket</surname>
+<given-names>W</given-names>
+</string-name>, <string-name>
+<surname>Eckert</surname>
+<given-names>S</given-names>
+</string-name>. <article-title>Performances of machine learning algorithms for mapping fractional cover of an invasive plant species in a dryland ecosystem</article-title>. <source xml:lang="en">Ecol Evol</source>. <year>2019</year>;<volume>9</volume>:<fpage>2562</fpage>&#x02013;<lpage>2574</lpage>. <pub-id pub-id-type="doi">10.1002/ece3.4919</pub-id>
+</mixed-citation>
+</p></notes></front><body><sec id="ece34919-sec-0001"><label>1</label><title>INTRODUCTION</title><p>In the last 20&#x000a0;years, many studies have attempted to accurately detect the spatial extent of invasive alien plant species (IAPS) to map their spread over time or model their potential invasion area. They have used a variety of environmental, bioclimatic, and/or earth observation data, and applying classification or regression methods. More recently, machine learning algorithms (MLAs) have gained high popularity in ecology and earth science because of their ability to model highly dimensional and non&#x02010;linear data with complex interactions and deal with data gaps (Thessen, <xref rid="ece34919-bib-0091" ref-type="ref">2016</xref>). Good performances of MLAs have been obtained in several fields, including remote sensing classifications (Mountrakis, Im, &#x00026; Ogole, <xref rid="ece34919-bib-0068" ref-type="ref">2011</xref>) and species distribution modeling (Cutler et al., <xref rid="ece34919-bib-0021" ref-type="ref">2007</xref>; Elith &#x00026; Leathwick, <xref rid="ece34919-bib-0025" ref-type="ref">2009</xref>). However, for quantifying the impact of IAPS and developing spatially explicit management strategies, accurate information is crucial not only on the current or projected distribution of IAPS but also on their cover across the invaded range (Le Maitre, Gush, &#x00026; Dzikiti, <xref rid="ece34919-bib-0055" ref-type="ref">2015</xref>; Shackleton, Le Maitre, van Wilgen, &#x00026; Richardson, <xref rid="ece34919-bib-0084" ref-type="ref">2015a</xref>; Shackleton, Le Maitre, van Wilgen, &#x00026; Richardson, <xref rid="ece34919-bib-0085" ref-type="ref">2015b</xref>). A few studies attempted to estimate fractional IAPS cover using remotely sensed data either applying spectral unmixing techniques (Frazier &#x00026; Wang, <xref rid="ece34919-bib-0031" ref-type="ref">2011</xref>; Vil&#x000e0; et al., <xref rid="ece34919-bib-0093" ref-type="ref">2011</xref>) or using very high&#x02010;resolution remotely sensed data, mostly in combination with machine learning classifiers (Cho, Malahlela, &#x00026; Ramoelo, <xref rid="ece34919-bib-0017" ref-type="ref">2015</xref>; Masocha &#x00026; Skidmore, <xref rid="ece34919-bib-0058" ref-type="ref">2011</xref>). The use of coarser resolution remote sensing resulted in accurate binary maps of presence and absence of IAPS (Chen, Yi, Qin, &#x00026; Wang, <xref rid="ece34919-bib-0015" ref-type="ref">2017</xref>; Wakie, Evangelista, Jarnevich, &#x00026; Laituri, <xref rid="ece34919-bib-0094" ref-type="ref">2014</xref>). Only recently, more promising mapping of IAPS at finer fractions of cover was obtained using a combination of medium or high&#x02010;resolution satellite data and powerful machine learning classification algorithms (Ng et al., <xref rid="ece34919-bib-0072" ref-type="ref">2016</xref>; Rembold, Leonardi, Ng, Gadain, &#x00026; Meroni, <xref rid="ece34919-bib-0081" ref-type="ref">2015</xref>). Such fine&#x02010;scaled and accurate quantification of the local fractional cover of IAPS allows understanding their impacts through cover&#x02010;impact curve analysis. Furthermore, it allows to identify areas with early stages of invasion where the control of satellite populations maybe halted or at least slow down further spread of IAPS (Vil&#x000e0; et al., <xref rid="ece34919-bib-0093" ref-type="ref">2011</xref>).</p><p>
+<italic>Prosopis juliflora</italic> (Swartz DC.), hereafter referred to as <italic>Prosopis,</italic> has been introduced to different parts of the world with the aim of providing benefits to rural people, such as the production of fuelwood, charcoal, or construction material (Engda, <xref rid="ece34919-bib-0029" ref-type="ref">2009</xref>; Haji &#x00026; Mohammed, <xref rid="ece34919-bib-0038" ref-type="ref">2013</xref>; Mureriwa, Adam, Sahu, &#x00026; Tesfamichael, <xref rid="ece34919-bib-0069" ref-type="ref">2016</xref>; Pasiecznik &#x00026; Henry Doubleday Research Association, <xref rid="ece34919-bib-0078" ref-type="ref">2001</xref>). Like numerous other introduced plants, <italic>Prosopis</italic> has become invasive in many places and is increasingly known for its negative ecological and socio&#x02010;economic impacts (Shackleton, Le Maitre, van Wilgen et al., <xref rid="ece34919-bib-0084" ref-type="ref">2015a</xref>; Shackleton, Le Maitre, van Wilgen et al., <xref rid="ece34919-bib-0085" ref-type="ref">2015b</xref>; van Wilgen &#x00026; Wannenburgh, <xref rid="ece34919-bib-0092" ref-type="ref">2016</xref>). In Ethiopia, several studies have attempted to assess <italic>Prosopis</italic> distribution particularly in the Afar Region (Ayanu et al., <xref rid="ece34919-bib-0005" ref-type="ref">2014</xref>; Engda, <xref rid="ece34919-bib-0029" ref-type="ref">2009</xref>; Wakie et al., <xref rid="ece34919-bib-0094" ref-type="ref">2014</xref>), but they either focused on relatively small study areas or provided only coarse&#x02010;resolution maps of either presence or absence of the species. Yet, at the early stage of its invasion, or at the invasion front, <italic>Prosopis</italic> often occurs in a patchy mixture with natural vegetation or as single trees, which is challenging to capture by remotely sensed data of moderate spatial resolution. Hence, the development of effective management strategies to mitigate the negative impacts of <italic>Prosopis</italic> requires accurate and detailed information on both invaded areas and on the level of invasion across the invaded area.</p><p>We set out to compare the performances of five MLAs (gradient boosting machine implemented in two different ways, random forest, support vector machine, and deep learning neural network), an ensemble model and a generalized linear model. This analysis helps identifying the best&#x02010;performing algorithm in mapping detailed fractional cover of <italic>Prosopis</italic> in the dryland ecosystem of the Afar Region, Ethiopia. All model outputs were validated using a number of performance measures. The best&#x02010;performing model was then used to create a <italic>Prosopis</italic> distribution and fractional cover map.</p></sec><sec id="ece34919-sec-0002"><label>2</label><title>METHODS</title><sec id="ece34919-sec-0003"><label>2.1</label><title>Study area and study species</title><p>The study was conducted in the Afar National Regional State of Ethiopia (hereafter referred to as the Afar Region). The study area extends from 39.7&#x000b0;E to 42.4&#x000b0;E and 8.8&#x000b0;N to 14.5&#x000b0;N, and is located in the Great Rift Valley of Eastern Africa and covers an area of 9.51&#x000a0;million ha (Figure <xref rid="ece34919-fig-0001" ref-type="fig">1</xref>a). Mean annual rainfall is about 560&#x000a0;mm; and the mean annual temperature is about 31&#x000b0;C (MOA, <xref rid="ece34919-bib-0065" ref-type="ref">1997</xref>). The biome can be described as semi&#x02010;arid to arid. Its vegetation cover consists of patches of scattered dry shrubs, acacia woodland (comprising different <italic>Vachellia</italic> species), bushland, grassland, and wooded grassland. People's main sources of livelihood are pastoralism and some agro&#x02010;pastoralism around small rural towns (Yirgalem, <xref rid="ece34919-bib-0099" ref-type="ref">2001</xref>).</p><fig fig-type="Figure" xml:lang="en" id="ece34919-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Location of the study area, Afar National Regional State, in Ethiopia (a). The detailed map shows the main towns, roads, and rivers, as well as the locations where <italic>Prosopis</italic> was first introduced. The shading indicates elevation, ranging from 175&#x000a0;m below sea level (dark gray) to 2,992&#x000a0;m above sea level (white), and photos of <italic>Prosopis</italic> plant (b)</p></caption><graphic id="nlm-graphic-3" xlink:href="ECE3-9-2562-g001"/></fig><p>The study focuses on <italic>Prosopis</italic> species. <italic>Prosopis</italic> shows a wide range of ecological adaptations (from arid to tropical climate conditions) and occur along a large variety of environmental gradients (Asfaw &#x00026; Thulin, <xref rid="ece34919-bib-0002" ref-type="ref">1989</xref>; Mohamed, <xref rid="ece34919-bib-0066" ref-type="ref">1997</xref>), including different soil types (from sand to heavy clays and stony soils) and a wide range of altitudes (from sea level up to 1,600&#x000a0;m. a.s.l: Shiferaw et al., <xref rid="ece34919-bib-0086" ref-type="ref">2019</xref>). Furthermore, <italic>Prosopis</italic> trees are able to fix nitrogen and have deep root systems, rendering them resistant to droughts (Keller, Lodge, Lewis, &#x00026; Shogren, <xref rid="ece34919-bib-0051" ref-type="ref">2009</xref>; Mohamed, <xref rid="ece34919-bib-0066" ref-type="ref">1997</xref>). This has enabled <italic>Prosopis</italic> to become one of the most successful invasive woody plant species in arid and semi&#x02010;arid areas. <italic>Prosopis</italic> has been planted to reclaim degraded land, combat desertification, reduce soil erosion (Mishra, Crews, &#x00026; Okin, <xref rid="ece34919-bib-0064" ref-type="ref">2014</xref>; Pasiecznik &#x00026; Henry Doubleday Research Association, <xref rid="ece34919-bib-0078" ref-type="ref">2001</xref>; Tessema, <xref rid="ece34919-bib-0090" ref-type="ref">2012</xref>; Wakie, Evangelista, &#x00026; Laituri, <xref rid="ece34919-bib-0095" ref-type="ref">2012</xref>), and manage soil salinity (El&#x02010;Keblawy &#x00026; Al&#x02010;Rawai, <xref rid="ece34919-bib-0028" ref-type="ref">2007</xref>). <italic>Prosopis</italic> trees originally planted in Ethiopia (Figure <xref rid="ece34919-fig-0001" ref-type="fig">1</xref>a) belong to the species <italic>P.&#x000a0;juliflora</italic> (Figure <xref rid="ece34919-fig-0001" ref-type="fig">1</xref>b) in the late 1970s and early 1980s with the main aim of soil and water conservation (Pasiecznik &#x00026; Henry Doubleday Research Association, <xref rid="ece34919-bib-0078" ref-type="ref">2001</xref>). However, since the early 1990s, its invasive nature has caused major problems in rangelands, agricultural fields, and riverbanks, and aggravating conflicts on grazing land among pastoralists (Argaw, <xref rid="ece34919-bib-0003" ref-type="ref">2015</xref>; Kebede &#x00026; Coppock, <xref rid="ece34919-bib-0050" ref-type="ref">2015</xref>; Tegegn, <xref rid="ece34919-bib-0089" ref-type="ref">2008</xref>). Such conflicts have been common in the Awash Basin, where <italic>Prosopis</italic> has invaded vast areas of precious rangeland and cropland (Wakie et al., <xref rid="ece34919-bib-0095" ref-type="ref">2012</xref>).</p></sec><sec id="ece34919-sec-0004"><label>2.2</label><title>Sampling design and datasets</title><p>Georeferenced field samples were collected throughout the entire study area using a stratified random sampling approach. Presence and absence plots were selected from invaded and uninvaded areas, respectively. Invaded areas were additionally stratified into heavily invaded and less invaded areas. Within those strata, careful attention was paid to collect representative samples of the entire cover gradient (0%&#x02013;100%) of <italic>Prosopis</italic> coverage. In order to reduce spatial autocorrelation, each sampling plot had a minimum distance of 500&#x000a0;m to the next one. A total of 2,722 samples (presence and absence plots of 20&#x000a0;m&#x000a0;&#x000d7;&#x000a0;20&#x000a0;m) were collected between September 2016 and March 2017. A plot was considered a presence plot if it contained at least one <italic>Prosopis</italic> plant; otherwise, it was considered an absence plot. About 70% of the samples were absence plots while 30% were presence plots. These shares were chosen based on a preliminary rough estimation of the shares of uninvaded and invaded land in the study area, which would avoid any bias of results toward either presence or absence of <italic>Prosopis</italic> (Jim&#x000e9;nez&#x02010;Valverde &#x00026; Lobo, <xref rid="ece34919-bib-0049" ref-type="ref">2007</xref>). Finally, 80% of all sampling plots were randomly selected to be used for model calibration, whereas the other 20% were used for validation (Elith et al., <xref rid="ece34919-bib-0027" ref-type="ref">2011</xref>).</p><p>The spatial datasets were gathered from various sources and used as explanatory variables to run the models (Table <xref rid="ece34919-tbl-0001" ref-type="table">1</xref>). Explanatory variables differed in terms of spatial resolution, projection, and time of acquisition; thus, reprojection to UTM projection and nearest neighbor spatial resampling to a pixel resolution of 15&#x000a0;m was applied using panchromatic band of Landsat 8. The Landsat 8 (operational land imager&#x02010;OLI) satellite data were acquired on 26 and 28 January as well as 11 and 20 February 2017 (paths: 167 and 168; rows: 50&#x02013;54). In total, nine scenes were required to cover the entire study area and then mosaicked. These acquisition dates match the period of field data collection and fall into the study area's dry season, when herbs and grasses are dry and most trees and bushes except <italic>Prosopis</italic> have shed their leaves.</p><table-wrap id="ece34919-tbl-0001" xml:lang="en" orientation="portrait" position="float"><label>Table 1</label><caption><p>List of spatial data and explanatory variables used for the modeling of <italic>Prosopis</italic> fractional cover</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">Variable abbreviations</th><th align="left" valign="top" rowspan="1" colspan="1">Description</th><th align="left" valign="top" rowspan="1" colspan="1">Source</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Rain</td><td align="left" rowspan="1" colspan="1">Mean annual rainfall</td><td align="left" rowspan="1" colspan="1">Ethiopian National Meteorol. Agency</td></tr><tr><td align="left" rowspan="1" colspan="1">Temp</td><td align="left" rowspan="1" colspan="1">Mean monthly temperature</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">LSTd</td><td align="left" rowspan="1" colspan="1">Monthly land surface temperature during daytime and nighttime; for the modeling 5&#x02010;year averages were calculated</td><td align="left" rowspan="1" colspan="1">MODIS, NASA</td></tr><tr><td align="left" rowspan="1" colspan="1">LSTn</td><td align="left" rowspan="1" colspan="1">Monthly land surface temperature during nighttime; for the modeling 5&#x02010;year averages were calculated</td><td align="left" rowspan="1" colspan="1">MODIS, NASA</td></tr><tr><td align="left" rowspan="1" colspan="1">PAN</td><td align="left" rowspan="1" colspan="1">Panchromatic reflectance</td><td align="left" rowspan="1" colspan="1">Landsat 8 OLI, USGS</td></tr><tr><td align="left" rowspan="1" colspan="1">Red</td><td align="left" rowspan="1" colspan="1">Red reflectance</td><td align="left" rowspan="1" colspan="1">Landsat 8 OLI, USGS</td></tr><tr><td align="left" rowspan="1" colspan="1">NIR</td><td align="left" rowspan="1" colspan="1">Near&#x02010;infrared reflectance</td><td align="left" rowspan="1" colspan="1">Landsat 8 OLI, USGS</td></tr><tr><td align="left" rowspan="1" colspan="1">SWIR1</td><td align="left" rowspan="1" colspan="1">Shortwave&#x02010;infrared band 6 reflectance</td><td align="left" rowspan="1" colspan="1">Landsat 8 OLI, USGS</td></tr><tr><td align="left" rowspan="1" colspan="1">NDVI</td><td align="left" rowspan="1" colspan="1">Normalized difference vegetation index</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">Elevation</td><td align="left" rowspan="1" colspan="1">Shuttle Radar Topography Mission digital elevation model (30&#x000a0;m spatial resolution)</td><td align="left" rowspan="1" colspan="1">USGS</td></tr><tr><td align="left" rowspan="1" colspan="1">Slope</td><td align="left" rowspan="1" colspan="1">Derived from elevation</td><td align="left" rowspan="1" colspan="1"/></tr><tr><td align="left" rowspan="1" colspan="1">Relief</td><td align="left" rowspan="1" colspan="1">Derived from elevation (contour) differences</td><td align="left" rowspan="1" colspan="1">Adediran, Parcharidis, Poscolieric, and Pavlopoulos (<xref rid="ece34919-bib-0001" ref-type="ref">2004</xref>)</td></tr><tr><td align="left" rowspan="1" colspan="1">Landform</td><td align="left" rowspan="1" colspan="1">Topographic position index derived from elevation, aspect and slope</td><td align="left" rowspan="1" colspan="1">Dikau (<xref rid="ece34919-bib-0022" ref-type="ref">1989</xref>); Dikau, Brabb, &#x00026; Mark (<xref rid="ece34919-bib-0023" ref-type="ref">1991</xref>); Weiss (<xref rid="ece34919-bib-0097" ref-type="ref">2001</xref>); Ilia, Rozos, &#x00026; Koumantakis (<xref rid="ece34919-bib-0047" ref-type="ref">2013</xref>)</td></tr><tr><td align="left" rowspan="1" colspan="1">Rugged</td><td align="left" rowspan="1" colspan="1">An index derived from elevation</td><td align="left" rowspan="1" colspan="1">Riley, DeGloria, &#x00026; Elliot (<xref rid="ece34919-bib-0082" ref-type="ref">1999</xref>)</td></tr><tr><td align="left" rowspan="1" colspan="1">DistRoad</td><td align="left" rowspan="1" colspan="1">Distances derived from road network data</td><td align="left" rowspan="1" colspan="1">Ethiopian Road Authority</td></tr><tr><td align="left" rowspan="1" colspan="1">DistVillage</td><td align="left" rowspan="1" colspan="1">Distances derived from settlement data</td><td align="left" rowspan="1" colspan="1">EthioGIS and Central Statistical Agency</td></tr><tr><td align="left" rowspan="1" colspan="1">DistRiver</td><td align="left" rowspan="1" colspan="1">Distances derived from data on watercourses</td><td align="left" rowspan="1" colspan="1">EthioGIS</td></tr></tbody></table><permissions><copyright-holder>John Wiley &#x00026; Sons, Ltd</copyright-holder></permissions></table-wrap><p>The remotely sensed datasets were checked for geometric correspondence to all other datasets. Further, these datasets were atmospherically corrected using the Landsat Ecosystem Disturbance Adaptive Processing System (LEDAPS) algorithm (Chavez, <xref rid="ece34919-bib-0014" ref-type="ref">1996</xref>; Lu, Mausel, Brondizio, &#x00026; Moran, <xref rid="ece34919-bib-0057" ref-type="ref">2002</xref>). The Red, the near&#x02010;infrared (NIR) and the first shortwave&#x02010;infrared (SWIR1) bands of Landsat 8 were selected as explanatory variables. Furthermore, the normalized difference vegetation index (NDVI) was calculated from Red and NIR bands and used as another input. All selected bands, as well as the NDVI, have proven to be particularly suitable to capture photosynthetic active vegetation, and soil and vegetation moisture content (Barsi, Lee, Kvaran, Markham, &#x00026; Pedelty, <xref rid="ece34919-bib-0006" ref-type="ref">2014</xref>). Additionally, daytime (LSTd) and nighttime (LSTn) land surface temperatures from MODIS sensor were included. In order to have longer&#x02010;term LSTd and LSTn average data, a 5&#x02010;year average of these products was generated between 2012 and 2017. The spatial resolution of these datasets is 1&#x000a0;km. Although this seems rather low compared to the other datasets, these day&#x02010; and nighttime temperature datasets have shown to be useful in species distribution modeling and, particularly in Africa where weather stations are scarce. These datasets have shown to be more accurate than other global climate datasets (Ashby, Moreno&#x02010;Madri&#x000f1;&#x000e1;n, Yiannoutsos, &#x00026; Stanforth, <xref rid="ece34919-bib-0004" ref-type="ref">2017</xref>; He et al., <xref rid="ece34919-bib-0041" ref-type="ref">2015</xref>). Moreover, we used variables representing topography, infrastructure as well as watercourses as these variables have shown to have an influence on <italic>Prosopis</italic> distribution (Shiferaw et al., <xref rid="ece34919-bib-0086" ref-type="ref">2019</xref>).</p></sec><sec id="ece34919-sec-0005"><label>2.3</label><title>Models</title><p>Our study evaluates the performances of seven algorithms in mapping <italic>Prosopis</italic> distribution and fractional cover abundance. We chose five MLAs: two different implementations of gradient boosting machine (GBM and GBM&#x02010;BRT), random forest (RF), support vector machine (SVM), and deep (learning) neural network (DNN), an ensemble model composed of the four best&#x02010;performing tested algorithms, and a generalized linear model (GLM) for comparison reasons. All model calculations and model performance assessments were implemented in R programming (R Core Team, <xref rid="ece34919-bib-0080" ref-type="ref">2017</xref>). A comprehensive overview of the R packages and the different parameter settings are provided in the Supporting information (Table <xref rid="ece34919-sup-0001" ref-type="supplementary-material">S1</xref>). We checked collinearity of explanatory variables before applying to any model and those having high variable inflated factors (VIF) were removed. In this study, we used a threshold level of VIF&#x000a0;&#x0003e;&#x000a0;10 to exclude variable(s) from any model (Bruce &#x00026; Bruce, <xref rid="ece34919-bib-0011" ref-type="ref">2017</xref>; Gareth, Witten, Hastie, &#x00026; Tibshirani, <xref rid="ece34919-bib-0034" ref-type="ref">2014</xref>). Accordingly, three variables, the blue, green and second shortwave&#x02010;infrared (SWIR 2) bands were removed from all models as they had high VIF (Dormann et al., <xref rid="ece34919-bib-0024" ref-type="ref">2012</xref>). We then assessed the influence (importance) of variables in each model by using the method described by Natekin and Knoll (<xref rid="ece34919-bib-0070" ref-type="ref">2013</xref>). Furthermore, 10&#x02010;fold cross&#x02010;validation was applied to assess model performance (Fushiki, <xref rid="ece34919-bib-0033" ref-type="ref">2009</xref>). Finally, the predictive power of all tested MLAs was evaluated using several performance parameters (Table <xref rid="ece34919-tbl-0002" ref-type="table">2</xref>). The general functionality of each tested model is described below.</p><table-wrap id="ece34919-tbl-0002" xml:lang="en" orientation="portrait" position="float"><label>Table 2</label><caption><p>Parameters used to assess model performance</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">Perf ormance parameter</th><th align="left" valign="top" rowspan="1" colspan="1">Description</th><th align="left" valign="top" rowspan="1" colspan="1">Sources</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">Confidence interval (CI)</td><td align="left" rowspan="1" colspan="1">It provides a range of values within which the population parameter is likely to lie. In a normal distribution, the general expression of the confidence interval is: Estimate &#x000b1; <mml:math id="nlm-math-1"><mml:mfrac><mml:mrow><mml:mi>Z</mml:mi><mml:mi>&#x003b1;</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:mfrac></mml:math>(<italic>SE</italic>), where <italic>SE</italic> is the standard error of the estimate and, if &#x003b1;&#x000a0;=&#x000a0;0.05, <italic>z</italic>&#x000a0;=&#x000a0;1.96. The provision of confidence limits in addition to accuracy is particularly useful in comparative analyses</td><td align="left" rowspan="1" colspan="1">Newcombe (<xref rid="ece34919-bib-0071" ref-type="ref">1998</xref>)</td></tr><tr><td align="left" rowspan="1" colspan="1">Correlation</td><td align="left" rowspan="1" colspan="1">Agreement between fractional cover measured in the field samples and the predicted fractional cover for the same samples</td><td align="left" rowspan="1" colspan="1">
+Harrington (<xref rid="ece34919-bib-0039" ref-type="ref">2006</xref>);<break/>
+Meynard &#x00026; Quinn, (<xref rid="ece34919-bib-0061" ref-type="ref">2007</xref>)
+</td></tr><tr><td align="left" rowspan="1" colspan="1">Sensitivity</td><td align="left" rowspan="1" colspan="1">Known as true&#x02010;positive rate (TPR); measures the proportion of positives that were correctly identified as locations where <italic>Prosopis</italic> was present. Calculated as: <mml:math id="nlm-math-2"><mml:mfrac><mml:mtext>TP</mml:mtext><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mtext>TP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>FN</mml:mtext><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac></mml:math>; where TP stands for true positives, and FN for false negatives</td><td align="left" rowspan="1" colspan="1">
+Metz (<xref rid="ece34919-bib-0060" ref-type="ref">1978</xref>);<break/>
+Fuchs, DeMeester and Albertucci (<xref rid="ece34919-bib-0030" ref-type="ref">1987</xref>)
+</td></tr><tr><td align="left" rowspan="1" colspan="1">Specificity</td><td align="left" rowspan="1" colspan="1">Known as true&#x02010;negative rate (TNR); measures the proportion of negatives that were correctly identified as locations where <italic>Prosopis</italic> was absent. Calculated as:<mml:math id="nlm-math-3"><mml:mfrac><mml:mtext>TN</mml:mtext><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mtext>TN</mml:mtext><mml:mo>+</mml:mo><mml:mtext>FP</mml:mtext><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac></mml:math>;where TN stands for true negative, and FP for false positives</td><td align="left" rowspan="1" colspan="1">
+Fuchs et al. (<xref rid="ece34919-bib-0030" ref-type="ref">1987</xref>)
+</td></tr><tr><td align="left" rowspan="1" colspan="1">Accuracy</td><td align="left" rowspan="1" colspan="1">Class accuracy is calculated by dividing the number of correct pixels in that category by the total number of pixels in either the corresponding row or the corresponding column; it indicates the probability of a reference pixel being correctly classified and is really a measure of omission error. Calculated as: <mml:math id="nlm-math-4"><mml:mfrac><mml:mrow><mml:mtext>TP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>TN</mml:mtext></mml:mrow><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mtext>TP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>FP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>TN</mml:mtext><mml:mo>+</mml:mo><mml:mtext>FP</mml:mtext><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac></mml:math>; where TP stands for true positives, TN for true negatives, FP for false positives, and FN for false negatives</td><td align="left" rowspan="1" colspan="1">
+Congalton (<xref rid="ece34919-bib-0019" ref-type="ref">1991</xref>)<break/>
+Fuchs et al.(<xref rid="ece34919-bib-0030" ref-type="ref">1987</xref>)
+</td></tr><tr><td align="left" rowspan="1" colspan="1">AUC</td><td align="left" rowspan="1" colspan="1">Area under the receiver operating characteristics (ROC) curve; indicates the model's accuracy in handling true values (presence of <italic>Prosopis</italic>) as true and false values (absence of <italic>Prosopis</italic>) as false. The higher the AUC, the better the model fit, and vice versa</td><td align="left" rowspan="1" colspan="1">Landis &#x00026; Koch (<xref rid="ece34919-bib-0054" ref-type="ref">1977</xref>); Metz (<xref rid="ece34919-bib-0060" ref-type="ref">1978</xref>)</td></tr><tr><td align="left" rowspan="1" colspan="1">Kappa coefficient</td><td align="left" rowspan="1" colspan="1">Statistical measure of inter&#x02010;rater agreement, excluding agreements occurring by chance. It is calculated in a confusion matrix as <mml:math id="nlm-math-5"><mml:mrow><mml:mfrac><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mn>0.5</mml:mn><mml:mo>&#x000d7;</mml:mo><mml:mtext>TP</mml:mtext><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mtext>TP</mml:mtext><mml:mo>+</mml:mo><mml:mtext>FN</mml:mtext><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac><mml:mo>+</mml:mo><mml:mfrac><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mn>0.5</mml:mn><mml:mo>&#x000d7;</mml:mo><mml:mtext>TN</mml:mtext><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mtext>TN</mml:mtext><mml:mo>+</mml:mo><mml:mtext>FP</mml:mtext><mml:mo stretchy="false">)</mml:mo></mml:mrow></mml:mfrac></mml:mrow></mml:math>
+</td><td align="left" rowspan="1" colspan="1">Metz (<xref rid="ece34919-bib-0060" ref-type="ref">1978</xref>)</td></tr><tr><td align="left" rowspan="1" colspan="1">Balanced accuracy</td><td align="left" rowspan="1" colspan="1">Average of all class accuracies; takes into account unbalanced class sizes. In our case, with two classes (presence and absence of <italic>Prosopis</italic>) it is calculated as: <mml:math id="nlm-math-6"><mml:mrow><mml:mfrac><mml:mn>1</mml:mn><mml:mn>2</mml:mn></mml:mfrac><mml:mfenced close=")" open="(" separators=""><mml:mrow><mml:mfrac><mml:mtext>TP</mml:mtext><mml:mi>P</mml:mi></mml:mfrac><mml:mo>+</mml:mo><mml:mfrac><mml:mtext>TN</mml:mtext><mml:mi>N</mml:mi></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow></mml:math>
+</td><td align="left" rowspan="1" colspan="1">Brodersen, Ong, Stephan, and Buhmann (<xref rid="ece34919-bib-0009" ref-type="ref">2010</xref>)</td></tr><tr><td align="left" rowspan="1" colspan="1">Threshold (max @ TPR&#x000a0;+&#x000a0;TNR)</td><td align="left" rowspan="1" colspan="1">Maximum value at which the true&#x02010;positive rate (TPR, or sensitivity) and the true&#x02010;negative rate (TNR, or specificity) intersect. It is often used as a threshold level in dichotomies. In our case, values above the threshold indicate that <italic>Prosopis</italic> is present; values below the threshold indicate that <italic>Prosopis</italic> is absent</td><td align="left" rowspan="1" colspan="1">Metz (<xref rid="ece34919-bib-0060" ref-type="ref">1978</xref>); Getis &#x00026; Ord (<xref rid="ece34919-bib-0035" ref-type="ref">1992</xref>); Hijmans and Elith (<xref rid="ece34919-bib-0045" ref-type="ref">2015</xref>)</td></tr></tbody></table><permissions><copyright-holder>John Wiley &#x00026; Sons, Ltd</copyright-holder></permissions></table-wrap><p>Until few years ago, multivariate linear regression was the most commonly used approach in species distribution modeling (Collingham, Wadsworth, Huntley, &#x00026; Hulme, <xref rid="ece34919-bib-0018" ref-type="ref">2000</xref>; Higgins et al., <xref rid="ece34919-bib-0043" ref-type="ref">2003</xref>; Stohlgren et al., <xref rid="ece34919-bib-0088" ref-type="ref">2010</xref>). In this study, the GLM was included to compare the performance with the MLAs (Nicholls, <xref rid="ece34919-bib-0073" ref-type="ref">1989</xref>; Getis &#x00026; Ord, <xref rid="ece34919-bib-0035" ref-type="ref">1992</xref>). We used backward and forward stepwise variable selection to find a parsimonious model (Pearce and Ferrier, <xref rid="ece34919-bib-0079" ref-type="ref">2000</xref>). Akaike Information Criterion was used as the model performance metric (step&#x02010;AIC; Higgins et al., <xref rid="ece34919-bib-0043" ref-type="ref">2003</xref>).</p><p>Gradient boosting machine as well as GBM&#x02010;BRT use a boosting approach where datasets are resampled several times to generate results that form a weighted average of the resampled dataset. This is done by creating a gradient (or step&#x02010;by&#x02010;step) boosting by minimizing errors among series of decision trees that together form a single predictive model (Natekin &#x00026; Knoll, <xref rid="ece34919-bib-0070" ref-type="ref">2013</xref>; Olinsky, Kennedy, &#x00026; Kennedy, <xref rid="ece34919-bib-0075" ref-type="ref">2012</xref>; Wana &#x00026; Beierkuhnlein, <xref rid="ece34919-bib-0096" ref-type="ref">2010</xref>; Boser,Guyon, &#x00026; Vapnik, 1992). In our study, we tested two implementations of GBM and GBM&#x02010;BRT. They are both based on the same packages: &#x0201c;gbm,&#x0201d; &#x0201c;caret,&#x0201d; &#x0201c;dismo,&#x0201d; and &#x0201c;raster,&#x0201d; with &#x0201c;dismo&#x0201d; and &#x0201c;caret&#x0201d; using the &#x0201c;gbm&#x0201d; package to fit the models. The main differences of the two implementations are the use of different hyper&#x02010;parameters. We varied the interaction depth (i.e., tree complexity in GBM&#x02010;BRT) which we set to 3 for GBM and was set to 5 for GBM&#x02010;BRT, as well as the loss function. While GBM used the &#x0201c;Gaussian&#x0201d; family (Friedman, 2001), GBM&#x02010;BRT used the "Bernoulli" (Elith, Leathwick, &#x00026; Hastie, <xref rid="ece34919-bib-0026" ref-type="ref">2008</xref>). Furthermore, the final selection of number of trees and the learning rate was different. We tuned the models by only varying the number of trees and the number of repeats while other parameters were kept stable using their respective R package default settings (for details see also Supporting information Table <xref rid="ece34919-sup-0001" ref-type="supplementary-material">S1</xref>). Fine&#x02010;tuning the number of iterations is done to improve the performance of a model by fitting either many sub&#x02010;models or gradient fitting and combining them for final prediction. All models were tuned using the same performance metrics. For the fine&#x02010;tuning, we calculated mean change in predictive deviance &#x000b1;one standard error (Elith et al., <xref rid="ece34919-bib-0027" ref-type="ref">2011</xref>). The optimization of the number of trees improved the performance substantially (Supporting information Figure <xref rid="ece34919-sup-0001" ref-type="supplementary-material">S1</xref>).</p><p>The RF builds the trees in parallel processes (Breiman, <xref rid="ece34919-bib-0008" ref-type="ref">2001</xref>). The trees are fully grown and each is used to predict the out&#x02010;of&#x02010;bag observations that do not occur in a bootstrap sample (Breiman, <xref rid="ece34919-bib-0008" ref-type="ref">2001</xref>). The predicted class of an out&#x02010;of&#x02010;bag observation is calculated average of the results of all predictions (Breiman, <xref rid="ece34919-bib-0008" ref-type="ref">2001</xref>; Youssef, Pourghasemi, Pourtaghi, &#x00026; Al&#x02010;Katheeri, <xref rid="ece34919-bib-0100" ref-type="ref">2016</xref>). The RF has some limitations like incapable of predicting beyond the range of response values in the training data (Hengl et al., <xref rid="ece34919-bib-0042" ref-type="ref">2015</xref>), and overestimate low values and underestimate high values (Horning, <xref rid="ece34919-bib-0046" ref-type="ref">2010</xref>). In this study, we only varied the number of trees, testing two different settings: 1,000 and 5,000 trees while all other parameters were set to default.</p><p>The SVM can be used for classification or regression. It constructs a hyperplane or set of hyperplanes in an infinite&#x02010;dimensional space and tries to find the optimal separating hyperplanes, that is, the planes where the separability between classes is at its maximum (Noble, <xref rid="ece34919-bib-0074" ref-type="ref">2006</xref>; Rodrigues &#x00026; De la Riva, <xref rid="ece34919-bib-0083" ref-type="ref">2014</xref>). The SVMs have many mathematical features that make them attractive for prediction, handle extremely high&#x02010;dimensional feature spaces, and identify outliers (Brown et al., <xref rid="ece34919-bib-0010" ref-type="ref">2000</xref>; Kimothi &#x00026; Dasari, <xref rid="ece34919-bib-0053" ref-type="ref">2010</xref>). We varied settings for the kernel, the cost function and gamma (Supporting information Table <xref rid="ece34919-sup-0001" ref-type="supplementary-material">S1</xref>).</p><p>The DNN has become very popular recently but is still sparsely used by the geoscience community (Zhang, Zhang, &#x00026; Du, <xref rid="ece34919-bib-0101" ref-type="ref">2016</xref>). The DNN is fully connected neural networks composed of multiple hidden layers together with non&#x02010;linear transformations and a variety of tailored architectures (Guo et al., <xref rid="ece34919-bib-0037" ref-type="ref">2016</xref>). The DNN has a capacity to analyze big data. In this study, we used a feed&#x02010;forward neural network.</p><p>The purpose of ensemble models is that it should combine the benefits of each included optimized model and penalize the overestimate or underestimate of each individual model. Thus, in order to be able to do so they should be diverse and complement each other on the one hand, but also each one of them independently achieving a high performance (Chitra &#x00026; Uma, <xref rid="ece34919-bib-0016" ref-type="ref">2010</xref>). Our ensemble model consisted of the four best&#x02010;performing models (RF, GBM, SVM, and GLM). They were weighted using the function &#x0201c;glmnet&#x0201d; where the predictions from each model are used as a predictor in a GLM and the resulting GLM coefficients determine how much each model should be weighted (Hastie &#x00026; Qian, <xref rid="ece34919-bib-0040" ref-type="ref">2016</xref>; R Core Team, <xref rid="ece34919-bib-0080" ref-type="ref">2017</xref>). The coefficients of contribution of each model in our ensemble were 0.2 for RF, 0.1 for GBM, 0.05 for SVM, and 0.01 for GLM as indicated in Figure <xref rid="ece34919-fig-0002" ref-type="fig">2</xref>.</p><fig fig-type="Figure" xml:lang="en" id="ece34919-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>Relative influence of explanatory variables in the different algorithms after removal of the least&#x02010;contributing ones: (a) generalized linear model (GLM), (b) gradient boosting machine (GBM), (c) gradient boosting machine using boosted regression trees package (GBM&#x02010;BRT), (d) random forest (RF), (e) support vector machine (SVM), (f) deep learning neural network (DNN), (g) ensemble model (ENS)</p></caption><graphic id="nlm-graphic-5" xlink:href="ECE3-9-2562-g002"/></fig></sec></sec><sec id="ece34919-sec-0006"><label>3</label><title>RESULTS</title><sec id="ece34919-sec-0007"><label>3.1</label><title>Model parameter settings and weighting of variables</title><p>Optimum performance of the GBM&#x02010;BRT was found when using ~6,050 trees than 3,100 trees; while the GBM performed better with 500 trees than 100 trees. The RF model performed better for 5,000 trees than with 1,000 trees. The tested algorithms weighted the explanatory variables differently, depending on each model's sensitivity to small variations in the data and to the variable types (Figure <xref rid="ece34919-fig-0002" ref-type="fig">2</xref>a&#x02013;g). In all models, Relief, Landform, Rugged, and Slope were removed again from the model except from the DNN. In the DNN, the least important variables were NIR, PAN, Red, NDVI, and Slope. Interestingly, DistRoad, Rugged, Relief, and Slope proved to be among the least&#x02010;contributing variables in the GLM model and were removed from the final iteration (Figure <xref rid="ece34919-fig-0002" ref-type="fig">2</xref>a) though DistRoad was one of the important contributors in other models. In the MLAs, 13 out of the 17 variables were kept. The most important explanatory variables, having &#x0003e;5% relative influence, were selected by more than one MLAs. These are NDVI, Elevation, DistVillage, DistRiver, Rain, NIR, Red, LSTd, and LSTn in decreasing order. The first four variables had the highest influence in four of the seven models to explain <italic>Prosopis</italic> distribution (Figure <xref rid="ece34919-fig-0002" ref-type="fig">2</xref>).</p></sec><sec id="ece34919-sec-0008"><label>3.2</label><title>Evaluation of the models</title><p>Among the tested models, the RF performed the best, followed by the ensemble model, GBM and SVM (Table <xref rid="ece34919-tbl-0003" ref-type="table">3</xref>). The last two performed comparably. While the GBM achieved slightly higher accuracies and kappa statistics than the SVM, but the SVM obtained better sensitivity and specificity scores. While the GBM&#x02010;BRT achieved high accuracy compared to the GLM but its kappa, sensitivity, and specificity scores are low. However, the GLM's specificity score was higher than the ones obtained by the GBM&#x02010;BRT model. DNN did not perform well. Its sensitivity and specificity scores were very unbalanced and its sensitivity score was very low. All models performed better in terms of specificity than sensitivity. This indicates that uninvaded areas (true absence rate) were better identified and classified than invaded areas (true presence rate).</p><table-wrap id="ece34919-tbl-0003" xml:lang="en" orientation="portrait" position="float"><label>Table 3</label><caption><p>Summarized performance parameters of the evaluation of current fractional cover maps of <italic>Prosopis</italic> in the Afar Region produced by means of different models. Additionally, AUC plots for each model are provided in the Supporting information Figure <xref rid="ece34919-sup-0001" ref-type="supplementary-material">S2</xref>
+</p></caption><table frame="hsides" rules="groups"><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><col style="border-right:solid 1px #000000" span="1"/><thead valign="top"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="top" rowspan="1" colspan="1">Model type</th><th align="left" valign="top" rowspan="1" colspan="1">95% CI</th><th align="left" valign="top" rowspan="1" colspan="1">Accuracy</th><th align="left" valign="top" rowspan="1" colspan="1">Kappa</th><th align="left" valign="top" rowspan="1" colspan="1">Balanced accuracy</th><th align="left" valign="top" rowspan="1" colspan="1">Sensitivity</th><th align="left" valign="top" rowspan="1" colspan="1">Specificity</th><th align="left" valign="top" rowspan="1" colspan="1">Pos. pred. value</th><th align="left" valign="top" rowspan="1" colspan="1">Neg. pred. value</th><th align="left" valign="top" rowspan="1" colspan="1">AUC</th><th align="left" valign="top" rowspan="1" colspan="1">Correlation</th><th align="left" valign="top" rowspan="1" colspan="1">Threshold</th></tr></thead><tbody><tr><td align="left" rowspan="1" colspan="1">GLM</td><td align="left" rowspan="1" colspan="1">0.763, 0.834</td><td align="left" rowspan="1" colspan="1">0.801</td><td align="left" rowspan="1" colspan="1">0.498</td><td align="left" rowspan="1" colspan="1">0.744</td><td align="left" rowspan="1" colspan="1">0.612</td><td align="left" rowspan="1" colspan="1">0.882</td><td align="left" rowspan="1" colspan="1">0.651</td><td align="left" rowspan="1" colspan="1">0.858</td><td align="left" rowspan="1" colspan="1">0.852</td><td align="left" rowspan="1" colspan="1">0.564</td><td align="left" rowspan="1" colspan="1">0.285</td></tr><tr><td align="left" rowspan="1" colspan="1">GBM</td><td align="left" rowspan="1" colspan="1">0.837, 0.897</td><td align="left" rowspan="1" colspan="1">0.877</td><td align="left" rowspan="1" colspan="1">0.678</td><td align="left" rowspan="1" colspan="1">0.848</td><td align="left" rowspan="1" colspan="1">0.802</td><td align="left" rowspan="1" colspan="1">0.895</td><td align="left" rowspan="1" colspan="1">0.738</td><td align="left" rowspan="1" colspan="1">0.924</td><td align="left" rowspan="1" colspan="1">0.944</td><td align="left" rowspan="1" colspan="1">0.756</td><td align="left" rowspan="1" colspan="1">0.397</td></tr><tr><td align="left" rowspan="1" colspan="1">GBM&#x02010;BRT</td><td align="left" rowspan="1" colspan="1">0.761, 0.841</td><td align="left" rowspan="1" colspan="1">0.789</td><td align="left" rowspan="1" colspan="1">0.316</td><td align="left" rowspan="1" colspan="1">0.727</td><td align="left" rowspan="1" colspan="1">0.632</td><td align="left" rowspan="1" colspan="1">0.712</td><td align="left" rowspan="1" colspan="1">0.728</td><td align="left" rowspan="1" colspan="1">0.868</td><td align="left" rowspan="1" colspan="1">0.945</td><td align="left" rowspan="1" colspan="1">0.794</td><td align="left" rowspan="1" colspan="1">0.258</td></tr><tr><td align="left" rowspan="1" colspan="1">RF</td><td align="left" rowspan="1" colspan="1">0.897, 0.945</td><td align="left" rowspan="1" colspan="1">0.918</td><td align="left" rowspan="1" colspan="1">0.797</td><td align="left" rowspan="1" colspan="1">0.911</td><td align="left" rowspan="1" colspan="1">0.894</td><td align="left" rowspan="1" colspan="1">0.926</td><td align="left" rowspan="1" colspan="1">0.818</td><td align="left" rowspan="1" colspan="1">0.959</td><td align="left" rowspan="1" colspan="1">0.971</td><td align="left" rowspan="1" colspan="1">0.829</td><td align="left" rowspan="1" colspan="1">0.326</td></tr><tr><td align="left" rowspan="1" colspan="1">SVM</td><td align="left" rowspan="1" colspan="1">0.856, 0.907</td><td align="left" rowspan="1" colspan="1">0.872</td><td align="left" rowspan="1" colspan="1">0.677</td><td align="left" rowspan="1" colspan="1">0.827</td><td align="left" rowspan="1" colspan="1">0.817</td><td align="left" rowspan="1" colspan="1">0.918</td><td align="left" rowspan="1" colspan="1">0.864</td><td align="left" rowspan="1" colspan="1">0.891</td><td align="left" rowspan="1" colspan="1">0.876</td><td align="left" rowspan="1" colspan="1">0.741</td><td align="left" rowspan="1" colspan="1">0.151</td></tr><tr><td align="left" rowspan="1" colspan="1">DNN</td><td align="left" rowspan="1" colspan="1">0.689, 0.767</td><td align="left" rowspan="1" colspan="1">0.729</td><td align="left" rowspan="1" colspan="1">0.434</td><td align="left" rowspan="1" colspan="1">0.574</td><td align="left" rowspan="1" colspan="1">0.014</td><td align="left" rowspan="1" colspan="1">0.995</td><td align="left" rowspan="1" colspan="1">0.568</td><td align="left" rowspan="1" colspan="1">0.724</td><td align="left" rowspan="1" colspan="1">0.595</td><td align="left" rowspan="1" colspan="1">0.206</td><td align="left" rowspan="1" colspan="1">0.392</td></tr><tr><td align="left" rowspan="1" colspan="1">Ensemble</td><td align="left" rowspan="1" colspan="1">0.871, 0.925</td><td align="left" rowspan="1" colspan="1">0.891</td><td align="left" rowspan="1" colspan="1">0.771</td><td align="left" rowspan="1" colspan="1">0.873</td><td align="left" rowspan="1" colspan="1">0.846</td><td align="left" rowspan="1" colspan="1">0.919</td><td align="left" rowspan="1" colspan="1">0.808</td><td align="left" rowspan="1" colspan="1">0.939</td><td align="left" rowspan="1" colspan="1">0.962</td><td align="left" rowspan="1" colspan="1">0.841</td><td align="left" rowspan="1" colspan="1">0.349</td></tr></tbody></table><table-wrap-foot><title>Note</title><fn id="ece34919-note-0001"><p>DNN: deep learning neural network; ENS or ensemble: ensemble model; GBM: gradient boosting machine; GBM&#x02010;BRT: gradient boosting machine using boosted regression trees package; GLM: Generalized linear model; RF: random forest; SVM: support vector machine.</p></fn></table-wrap-foot><permissions><copyright-holder>John Wiley &#x00026; Sons, Ltd</copyright-holder></permissions></table-wrap></sec><sec id="ece34919-sec-0009"><label>3.3</label><title>
+<italic>Prosopis</italic> fractional cover</title><p>Comparing the results of different models, we found considerable variation in the extent of invaded areas, even though we used the same input datasets for all algorithms. The most extreme estimates of the total area invaded by <italic>Prosopis</italic> were generated; the highest was from the DNN model (34.8% invaded) and the lowest was from the SVM model (11.2% invaded). The best&#x02010;performing RF model, calculated the total invaded area to be 12.33% of the Afar Region. The other four models&#x02014;the GBM&#x02010;BRT, the ensemble model, the GBM, and the GLM estimated the total invaded area by <italic>Prosopis</italic> at 16.1%, 14.9%, 14.7%, and 20.1%, respectively (Figure <xref rid="ece34919-fig-0003" ref-type="fig">3</xref> and Table <xref rid="ece34919-tbl-0003" ref-type="table">3</xref>). Hence, the results produced by the ensemble model, the SVM, and the GBM were fairly close to that produced by the RF model (Table <xref rid="ece34919-tbl-0003" ref-type="table">3</xref>).</p><fig fig-type="Figure" xml:lang="en" id="ece34919-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>The current fractional cover maps of <italic>Prosopis</italic> distribution were produced by using different machine learning algorithms. (a) generalized linear model (GLM), (b) gradient boosting machine (GBM), (c) gradient boosting machine using boosted regression trees package (GBM&#x02010;BRT), (d) random forest (RF), (e) support vector machine (SVM), (f) deep learning neural network (DNN), (g) ensemble model (ENS)</p></caption><graphic id="nlm-graphic-7" xlink:href="ECE3-9-2562-g003"/></fig><p>Following the evaluation of the different models, the best&#x02010;performing RF model was used to map the current fractional cover of <italic>Prosopis</italic> in the Afar Region. The RF model's sensitivity and specificity values suggest that the model is robust, and its AUC value indicates that the presence of <italic>Prosopis</italic> was correctly mapped with a probability of 97%. A threshold value of 0.326 was calculated from the model for the minimum cover level of <italic>Prosopis</italic> presence, which corresponds to 0.4% <italic>Prosopis</italic> fractional cover found on the ground (Figure <xref rid="ece34919-fig-0004" ref-type="fig">4</xref>). According to the RF prediction, about 1.173 million ha of land is invaded by <italic>Prosopis</italic> at different stages of cover abundances in the Afar Region.</p><fig fig-type="Figure" xml:lang="en" id="ece34919-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>Current fractional cover of <italic>Prosopis</italic> (after matching to the ground cover level) in the Afar Region according to the RF model. For better readability, fractional cover was grouped in six fractional cover classes</p></caption><graphic id="nlm-graphic-9" xlink:href="ECE3-9-2562-g004"/></fig></sec></sec><sec id="ece34919-sec-0010"><label>4</label><title>DISCUSSION</title><sec id="ece34919-sec-0011"><label>4.1</label><title>Model optimization</title><p>During model optimization, the number of trees (for the GBM&#x02010;BRT, GBM, and RF), the learning rate (sets the weight applied to individual trees), and the bag fraction (which sets the proportion of observations) had the greatest influence on model performance (Elith &#x00026; Leathwick, <xref rid="ece34919-bib-0025" ref-type="ref">2009</xref>). For example, the lower of two learning rates tested in the GBM&#x02010;BRT required more trees, which improved the result without causing overfitting (Mining, <xref rid="ece34919-bib-0063" ref-type="ref">2009</xref>; Hijmans &#x00026; Elith, <xref rid="ece34919-bib-0044" ref-type="ref">2013</xref>, <xref rid="ece34919-bib-0045" ref-type="ref">2015</xref>). Consequently, the lower learning rate of 0.005 with 6,050 trees performed better than that of 0.01 with 3,100 trees. However, a learning rate of 0.0025 with 10,000 trees did not perform better than that of 0.005 in the GBM&#x02010;BRT even though the increase in the number of trees reduced deviance, eventually stabilizing the model. This indicates that lowering the learning rate without comparing model performance would have resulted in two disadvantages: a poorer model fit and longer computational time without improving the model's accuracy.</p><p>Variable reduction contributed to model stability, which is evident in the GBM&#x02010;BRT and GLM models. Similar studies in the GBM showed model stability after variable reduction (Getis &#x00026; Ord <xref rid="ece34919-bib-0035" ref-type="ref">1992</xref>; Burnham &#x00026; Anderson, <xref rid="ece34919-bib-0012" ref-type="ref">2002</xref>). Removal of the topographic variables such as Rugged, Landform, Relief, and Slope from most of the tested models indicates that these variables contributed little to the models&#x02019; performances. Also, except through Elevation, topography does not seem to add significant information regarding the current distribution and cover of <italic>Prosopis</italic> in the study area. This is probably because the study area is largely flat. The DNN model produced one of the least accurate results. The ROCs of GLM and DNN showed different from other MLAs (Supporting information Figure <xref rid="ece34919-sup-0001" ref-type="supplementary-material">S2</xref>). The ROC curve in the GLM nears quickly the 100% true positives rate but the ROC curve in the DNN remains flat achieving a comparably high amount of false&#x02010;positive rate compared to its true&#x02010;positive rate. Different reasons could have led to a poor performance, for example, batch size may be small to the DNN. But then there are things like to check for hidden dimension layers, analyze the gradient checks. Further tuning might have been necessary to improve the DNN (change a different optimizer, change regularization, check and adjust weights at initialization, etc). However, this requires further investigation.</p></sec><sec id="ece34919-sec-0012"><label>4.2</label><title>Important variables</title><p>Among the infrastructure variables, DistVillage was found to be important in all models except in the GLM. Among the environmental variables, Elevation was the most important explanatory variable for the distribution and fractional cover of <italic>Prosopis</italic> in all models except the DNN. While NDVI and DistRiver had a high relative importance in the MLAs, they were removed from the GLM during variable reduction. From a methodological perspective, this suggests that the GLM is not able to relate variables having a linear or radial spatial pattern to the samples used in the models, and therefore, is less suited to explain <italic>Prosopis</italic> distribution and fractional cover. It is well known that <italic>Prosopis</italic> is primarily spread by livestock (Shiferaw, Teketay, Nemomissa, &#x00026; Assefa, <xref rid="ece34919-bib-0087" ref-type="ref">2004</xref>), human transport and along watercourses, thereby promoting discontinuity or jump dispersal (Wilson, Dormontt, Prentis, Lowe, &#x00026; Richardson, <xref rid="ece34919-bib-0098" ref-type="ref">2009</xref>). However, the GLM was not able to fully capture these phenomena. In the DNN model, Landform exceptionally ranked second in importance, following DistRiver.</p><p>The influences of the tested explanatory variables varied in terms of magnitude and direction depending on each model's sensitivity. In the case of NDVI, this is in line with the general observation of greenness, and therefore, also NDVI, increases with increasing <italic>Prosopis</italic> cover. It suggests that particularly NDVI captured during dry season is a good variable for explaining the current distribution of <italic>Prosopis</italic> due to the plant's evergreen behavior in the study area unlike other plant species shed their leaves during the dry season. The explanatory power of NDVI is further supported by the fact that greenness or NDVI is a consequence of <italic>Prosopis</italic> presence and cover level but not a cause of its distribution. Our results also show that <italic>Prosopis</italic> cover increases with increasing temperature. <italic>Prosopis</italic> grows best in arid and semi&#x02010;arid environments and can stand air temperatures of up to 50&#x000b0;C (Mohamed, <xref rid="ece34919-bib-0066" ref-type="ref">1997</xref>). Besides temperature, elevation had a strong influence on <italic>Prosopis</italic> distribution in the study area as <italic>Prosopis</italic> cover increases with decreasing elevation.</p><p>As mentioned above the main causes of dispersal are by livestock, human transport and by water which explains well the strong influence of these factors in most models. In contrast to Menuz &#x00026; Kettenring (<xref rid="ece34919-bib-0059" ref-type="ref">2013</xref>), our data suggest that landscape structure variables are more relevant for species distribution/invasion at the current stage of invasion than climatic factors (precipitation and temperature), which describe the environmental niche of plant species (Guisan &#x00026; Thuiller, <xref rid="ece34919-bib-0036" ref-type="ref">2005</xref>). However, at larger spatial scales climatic factors might additionally capture well the distribution pattern of the species (Coutts, Klinkenvan, Yokomizo, &#x00026; Buckley, <xref rid="ece34919-bib-0020" ref-type="ref">2011</xref>; Cabra&#x02010;Rivas, Saldana, Castro&#x02010;D&#x00131;ez, &#x00026; Gallien, <xref rid="ece34919-bib-0013" ref-type="ref">2016</xref>).</p></sec><sec id="ece34919-sec-0013"><label>4.3</label><title>Fractional cover of <italic>Prosopis</italic>
+</title><p>Different algorithms produced different results with varying accuracies. Thus, these algorithms differ in their sensitivity (power to distinguish <italic>Prosopis</italic> distribution from other vegetation) across spatial variabilities. In this study, we found the RF to be the best&#x02010;performing algorithm (AUC&#x000a0;=&#x000a0;0.971, <italic>&#x003ba;</italic>&#x000a0;=&#x000a0;0.797). Surprisingly, the ensemble model (AUC&#x000a0;=&#x000a0;0.962, and &#x003ba;&#x000a0;=&#x000a0;0.771) performed slightly less than the RF, although other studies had suggested that an ensemble model would be able to overcome some of the individual models&#x02019; limitations (Kim, <xref rid="ece34919-bib-0052" ref-type="ref">2017</xref>) and expected to obtain better performance. Our finding indicates that some of the models included in the ensemble model might have introduced errors, thereby impairing or penalizing its performance. Also, the DNN did not perform well which we cannot fully explain. Reasons could be the DNN may not be appropriate for species distribution mapping and requires further investigations.</p><p>Application of a threshold level to produce binary maps of presence and absence has been tested (Zhou, Chen, Cao, &#x00026; Chen, <xref rid="ece34919-bib-0102" ref-type="ref">2015</xref>). In this study, we also applied threshold levels to distinguish invaded from uninvaded areas with a threshold level of the RF model at 0.326. Based on this threshold, we found a very large area (~1.173 million ha) to be invaded. Our result is in line with the amount of invaded areas estimated by MoLF (<xref rid="ece34919-bib-0067" ref-type="ref">2017</xref>) to be about 1.2 million ha.</p><p>Detection of the spread and establishment of an invasive plant species is highly important for an effective management at an early stage of invasion (i.e., low to medium cover levels). Soft classification, as performed in this study, based on satellite data, climatic, topographic, and other relevant data enables not only identification of a particular species but also retrieval of that species&#x02019; fractional cover even at low cover fractions. Another interesting finding is that all models performed better in terms of specificity than sensitivity (Table 3). This indicates that uninvaded areas (true absence rate) were better identified and classified than invaded areas (true presence rate). A reason for this may be that the model sometimes misinterpreted acacia shrubs present in invaded areas as <italic>Prosopis</italic>; otherwise the unbalanced of sample size between presence and absence doesn't affect the quality the output (Jim&#x000e9;nez&#x02010;Valverde &#x00026; Lobo, <xref rid="ece34919-bib-0048" ref-type="ref">2006</xref>) as long as enough sample size were used from each group.</p><p>Machine learning algorithms have attracted significant attention in the modeling community. First, shallow Neural Networks (NN) attracted a lot of attention and were widely applied to many different research problems (Zhou et al., <xref rid="ece34919-bib-0102" ref-type="ref">2015</xref>). In the remote sensing community, the DNN was soon followed by other MLAs: the GBM&#x02010;BRT, the SVM, and the RF, which provided better results both in regression and classification (Ashby et al., <xref rid="ece34919-bib-0004" ref-type="ref">2017</xref>; Pal &#x00026; Mather, <xref rid="ece34919-bib-0076" ref-type="ref">2005</xref>, <xref rid="ece34919-bib-0077" ref-type="ref">2017</xref>). Our regression analyses in the present study indicated that the RF, the ensemble model, and the GBM outperformed the SVM. A similar finding was reported by Lorena et al. (<xref rid="ece34919-bib-0056" ref-type="ref">2011</xref>), who compared the performances of the RF and the SVM in modeling the potential distribution of 35 species in Brazil. The study by Mi, Huettmann, Guo, Han, and Wen (<xref rid="ece34919-bib-0062" ref-type="ref">2017</xref>) also indicated that the RF performed better than other algorithms tested to model crane species.</p><p>Our finding confirms that the RF is a suitable algorithm for fractional cover mapping of plant species. However, based on our experiences gained during this study five important points should be considered in order to achieve good results while applying the RF regression: (a) sufficient and well&#x02010;distributed field data samples should be collected in the study area; (b) the number of presence and absence field samples should be proportional to the shares of the study area where the species is present and absent, respectively; (c) the field data values for the dependent variable should be within the range of the expected prediction values, (d) as shown by previous study, the values of explanatory variables used for training need to represent the entire range of values present in the study area (Hengl et al., <xref rid="ece34919-bib-0042" ref-type="ref">2015</xref>), and (e) fine&#x02010;tuning of algorithm parameters and variable reduction are recommended for improved model fitness and better regression outputs.</p></sec></sec><sec id="ece34919-sec-0014"><label>5</label><title>CONCLUSIONS</title><p>Fine&#x02010;scaled fractional cover maps of IAPS are a key requisite for estimating the environmental and socio&#x02010;economic impacts of IAPS and for designing spatially explicit management strategies. Our findings show that the RF regression is outperformed other algorithms and is a suitable for mapping the fractional cover of species distribution in agro&#x02010;climatic contexts similar to those of the Afar Region. While the GBM and the SVM achieved only slightly less accurate results, the GLM, the GBM&#x02010;BRT, and the DNN did not perform well when looking at sensitivity, specificity, kappa, and the AUC. Nevertheless, performances of MLAs might be different if a much larger amount of data (i.e., predictor variables) is used, or if less training data is available or if the study is done in a different agro&#x02010;ecological context. For this reason, we recommend evaluating the performances of two or more algorithms regarding the specific tasks required and the specific environmental settings prevailing in the context of plant species distributions.</p></sec><sec sec-type="COI-statement" id="ece34919-sec-0016"><title>CONFLICTS OF INTEREST</title><p>The authors declare no conflict of interest.</p></sec><sec id="ece34919-sec-0017"><title>AUTHOR CONTRIBUTION</title><p>HS designed the sampling procedure, carried out the survey, and performed the modeling and the calculations; WB and SE provided technical advice; and all authors contributed to the writing of the manuscript.</p></sec><sec sec-type="data-availability" id="ece34919-sec-0018"><title>DATA AVAILABILITY</title><p>The dataset will be archived in an appropriate public archive.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data" id="ece34919-sup-0001"><caption><p>&#x000a0;</p></caption><media xlink:href="ECE3-9-2562-s001.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="ece34919-sec-0015"><title>ACKNOWLEDGMENTS</title><p>We are grateful for financial support from the Swiss Programme for Research on Global Issues for Development (r4d), funded by the Swiss National Science Foundation (SNSF) and the Swiss Agency for Development and Cooperation (SDC), for the project &#x0201c;Woody invasive alien species in East Africa: Assessing and mitigating their negative impact on ecosystem services and rural livelihood&#x0201d; (Grant Number: 400440_152085). We thank the staff of Addis Ababa University's Water and Land Resource Center for their support and facilitation services, Marl&#x000e8;ne Thibault from University of Bern Centre for Development and Environment (CDE) for critically editing the English language, and Urs Schaffner of CABI&#x02010;Switzerland for the critical comments of the manuscript.</p></ack><ref-list content-type="cited-references" id="ece34919-bibl-0001"><title>REFERENCES</title><ref id="ece34919-bib-0001"><mixed-citation publication-type="journal" id="ece34919-cit-0001">
+<string-name>
+<surname>Adediran</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Parcharidis</surname>, <given-names>I.</given-names>
+</string-name>, <string-name>
+<surname>Poscolieric</surname>, <given-names>M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Pavlopoulos</surname>, <given-names>K.</given-names>
+</string-name> (<year>2004</year>). <article-title>Computer&#x02010;assisted discrimination of morphological units on north&#x02010;central Crete (Greece) by applying multivariate statistics to local relief gradients</article-title>. <source xml:lang="en">Geomorphology</source>, <volume>58</volume>, <fpage>357</fpage>&#x02013;<lpage>370</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0002"><mixed-citation publication-type="book" id="ece34919-cit-0002">
+<string-name>
+<surname>Asfaw</surname>, <given-names>H.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Thulin</surname>, <given-names>M.</given-names>
+</string-name> (<year>1989</year>). <chapter-title>Mimosoideae</chapter-title> In: <person-group person-group-type="editor"><name><surname>Hedberg</surname><given-names>I.</given-names></name></person-group> &#x00026; <person-group person-group-type="editor"><name><surname>Edwards</surname><given-names>S.</given-names></name></person-group> (Eds.), <source xml:lang="en">Flora of Ethiopia</source> (pp. <fpage>71</fpage>&#x02013;<lpage>73</lpage>). <publisher-loc>Uppsala</publisher-loc>: <publisher-name>National Herbarium, Addis Ababa University Addis Ababa, Uppsala University</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0003"><mixed-citation publication-type="journal" id="ece34919-cit-0003">
+<string-name>
+<surname>Argaw</surname>, <given-names>T.</given-names>
+</string-name> (<year>2015</year>). <article-title>Impacts of utilizing invasive <italic>Prosopis juliflora</italic> (Swart) DC on rural household economy at Gewane District, Afar Regional</article-title>
+<source xml:lang="en">. Journal of Economics and Sustainable Development</source>, <volume>6</volume>(<issue>5</issue>), <fpage>81</fpage>&#x02013;<lpage>98</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0004"><mixed-citation publication-type="journal" id="ece34919-cit-0004">
+<string-name>
+<surname>Ashby</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Moreno&#x02010;Madri&#x000f1;&#x000e1;n</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Yiannoutsos</surname>, <given-names>C.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Stanforth</surname>, <given-names>A.</given-names>
+</string-name> (<year>2017</year>). <article-title>Niche modeling of dengue fever using remotely sensed environmental factors and boosted regression trees</article-title>. <source xml:lang="en">Remote Sensing</source>, <volume>9</volume>(<issue>4</issue>), <fpage>328</fpage>
+<pub-id pub-id-type="doi">10.3390/rs9040328</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0005"><mixed-citation publication-type="journal" id="ece34919-cit-0005">
+<string-name>
+<surname>Ayanu</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Jentsch</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>M&#x000fc;ller&#x02010;Mahn</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Rettberg</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Romankiewicz</surname>, <given-names>C.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Koellner</surname>, <given-names>T.</given-names>
+</string-name> (<year>2014</year>). <article-title>Ecosystem engineer unleashed: <italic>Prosopis juliflora</italic> threatening ecosystem services?</article-title>
+<source xml:lang="en">Regional Environmental Change</source>, <volume>15</volume>(<issue>1</issue>), <fpage>155</fpage>&#x02013;<lpage>167</lpage>. <pub-id pub-id-type="doi">10.1007/s10113-014-0616-x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0006"><mixed-citation publication-type="journal" id="ece34919-cit-0006">
+<string-name>
+<surname>Barsi</surname>, <given-names>J. A.</given-names>
+</string-name>, <string-name>
+<surname>Lee</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Kvaran</surname>, <given-names>G.</given-names>
+</string-name>, <string-name>
+<surname>Markham</surname>, <given-names>B. L.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Pedelty</surname>, <given-names>J. A.</given-names>
+</string-name> (<year>2014</year>). <article-title>The spectral response of the Landsat&#x02010;8 operational land imager</article-title>. <source xml:lang="en">Remote Sensing</source>, <volume>6</volume>(<issue>10</issue>), <fpage>10232</fpage>&#x02013;<lpage>10251</lpage>. <pub-id pub-id-type="doi">10.3390/rs61010232</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0007"><mixed-citation publication-type="book" id="ece34919-cit-0007">
+<string-name>
+<surname>Boser</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Guyon</surname>, <given-names>I.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Vapnik</surname>, <given-names>V.</given-names>
+</string-name> (<year>1992</year>). <chapter-title>A training algorithm for optimal margin classifiers</chapter-title> In <person-group person-group-type="editor"><name><surname>Haussler</surname><given-names>D.</given-names></name></person-group> (Ed.), <source xml:lang="en">In 5th Annual ACM Workshop on COLT</source> (pp. <fpage>144</fpage>&#x02013;<lpage>152</lpage>). <publisher-loc>Pittsburgh, PA</publisher-loc>: <publisher-name>ACM Press</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0008"><mixed-citation publication-type="journal" id="ece34919-cit-0008">
+<string-name>
+<surname>Breiman</surname>, <given-names>L.</given-names>
+</string-name> (<year>2001</year>). <article-title>Random forests</article-title>. <source xml:lang="en">Machine Learning</source>, <volume>45</volume>(<issue>1</issue>), <fpage>5</fpage>&#x02013;<lpage>32</lpage>. <pub-id pub-id-type="doi">10.1023/A:1010933404324</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0009"><mixed-citation publication-type="journal" id="ece34919-cit-0009">
+<string-name>
+<surname>Brodersen</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>Ong</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Stephan</surname>, <given-names>K.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Buhmann</surname>, <given-names>J.</given-names>
+</string-name> (<year>2010</year>). <article-title>The balanced accuracy and its posterior distribution</article-title>. <source xml:lang="en">International Conference on Pattern Recognition</source>, <fpage>3122</fpage>&#x02013;<lpage>3124</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0010"><mixed-citation publication-type="journal" id="ece34919-cit-0010">
+<string-name>
+<surname>Brown</surname>, <given-names>M. P. S.</given-names>
+</string-name>, <string-name>
+<surname>Grundy</surname>, <given-names>W. N.</given-names>
+</string-name>, <string-name>
+<surname>Lin</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Cristianini</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Sugnet</surname>, <given-names>C. W.</given-names>
+</string-name>, <string-name>
+<surname>Furey</surname>, <given-names>T. S.</given-names>
+</string-name>, &#x02026; <string-name>
+<surname>Haussler</surname>, <given-names>D.</given-names>
+</string-name> (<year>2000</year>). <article-title>Knowledge&#x02010;based analysis of microarray gene expression data by using support vector machines</article-title>. <source xml:lang="en">Proceedings of the National Academy of Sciences of the United States of America</source>, <volume>97</volume>(<issue>1</issue>), <fpage>262</fpage>&#x02013;<lpage>267</lpage>. <pub-id pub-id-type="doi">10.1073/pnas.97.1.262</pub-id>
+<pub-id pub-id-type="pmid">10618406</pub-id></mixed-citation></ref><ref id="ece34919-bib-0011"><mixed-citation publication-type="book" id="ece34919-cit-0011">
+<string-name>
+<surname>Bruce</surname>, <given-names>P.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Bruce</surname>, <given-names>A.</given-names>
+</string-name> (<year>2017</year>). <source xml:lang="en">Practical statistics for data scientists</source>. <publisher-loc>Sebastopol, CA</publisher-loc>: <publisher-name>O&#x02019;Reilly Media</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0012"><mixed-citation publication-type="book" id="ece34919-cit-0012">
+<string-name>
+<surname>Burnham</surname>, <given-names>K. P.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Anderson</surname>, <given-names>D. R.</given-names>
+</string-name>. (<year>2002</year>). <source xml:lang="en">Model selection and multimodel inference: A practical information&#x02010;theoretic approach</source> (Vol. <volume>172</volume>, <edition>2nd ed.</edition>). <publisher-loc>New York, NY</publisher-loc>: <publisher-name>Springer</publisher-name> Ecological Modelling. <pub-id pub-id-type="doi">10.1016/j.ecolmodel.2003.11.004</pub-id>.</mixed-citation></ref><ref id="ece34919-bib-0013"><mixed-citation publication-type="journal" id="ece34919-cit-0013">
+<string-name>
+<surname>Cabra&#x02010;Rivas</surname>, <given-names>I.</given-names>
+</string-name>, <string-name>
+<surname>Saldana</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Castro&#x02010;D&#x00131;ez</surname>, <given-names>P.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Gallien</surname>, <given-names>L.</given-names>
+</string-name> (<year>2016</year>). <article-title>A multi&#x02010;scale approach to identify invasion drivers and invaders&#x02019; future dynamics</article-title>. <source xml:lang="en">Biological Invasions</source>, <volume>18</volume>, <fpage>411</fpage>&#x02013;<lpage>426</lpage>. <pub-id pub-id-type="doi">10.1007/s10530-015-1015-z</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0014"><mixed-citation publication-type="journal" id="ece34919-cit-0014">
+<string-name>
+<surname>Chavez</surname>, <given-names>P. S.</given-names>
+</string-name> (<year>1996</year>). <article-title>Image&#x02010;based atmospheric corrections &#x02013; Revisited and improved</article-title>. <source xml:lang="en">Photogrammetric Engineering and Remote Sensing</source>, <volume>62</volume>(<issue>9</issue>), <fpage>1025</fpage>&#x02013;<lpage>1036</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0015"><mixed-citation publication-type="journal" id="ece34919-cit-0015">
+<string-name>
+<surname>Chen</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Yi</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Qin</surname>, <given-names>Y.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Wang</surname>, <given-names>X.</given-names>
+</string-name> (<year>2017</year>). <article-title>Improving estimates of fractional vegetation cover based on UAV in alpine grassland on the Qinghai &#x02013; Tibetan Plateau Improving estimates of fractional vegetation cover based on</article-title>. <source xml:lang="en">International Journal of Remote Sensing</source>, <volume>37</volume>(<issue>8</issue>), <fpage>1922</fpage>&#x02013;<lpage>1936</lpage>. <pub-id pub-id-type="doi">10.1080/01431161.2016.1165884</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0016"><mixed-citation publication-type="journal" id="ece34919-cit-0016">
+<string-name>
+<surname>Chitra</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Uma</surname>, <given-names>S.</given-names>
+</string-name> (<year>2010</year>). <article-title>An ensemble model of multiple classifiers for time series prediction</article-title>. <source xml:lang="en">International Journal of Computer Theory and Engineering</source>, <volume>2</volume>(<issue>3</issue>), <fpage>454</fpage>&#x02013;<lpage>458</lpage>. <pub-id pub-id-type="doi">10.7763/IJCTE.2010.V2.184</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0017"><mixed-citation publication-type="journal" id="ece34919-cit-0017">
+<string-name>
+<surname>Cho</surname>, <given-names>M. A.</given-names>
+</string-name>, <string-name>
+<surname>Malahlela</surname>, <given-names>O.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Ramoelo</surname>, <given-names>A.</given-names>
+</string-name> (<year>2015</year>). <article-title>Assessing the utility WorldView&#x02010;2 imagery for tree species mapping in South African subtropical humid forest and the conservation implications: Dukuduku forest patch as case study</article-title>. <source xml:lang="en">International Journal of Applied Earth Observation and Geoinformation</source>, <volume>38</volume>, <fpage>349</fpage>&#x02013;<lpage>357</lpage>. <pub-id pub-id-type="doi">10.1016/j.jag.2015.01.015</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0018"><mixed-citation publication-type="journal" id="ece34919-cit-0018">
+<string-name>
+<surname>Collingham</surname>, <given-names>Y. C.</given-names>
+</string-name>, <string-name>
+<surname>Wadsworth</surname>, <given-names>R. A.</given-names>
+</string-name>, <string-name>
+<surname>Huntley</surname>, <given-names>B.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Hulme</surname>, <given-names>P. E.</given-names>
+</string-name> (<year>2000</year>). <article-title>Predicting the spatial distribution of non&#x02010;indigenous riparian weeds: Issues of spatial scale and extent</article-title>. <source xml:lang="en">Journal of Applied Ecology</source>, <volume>37</volume>(<issue>Suppl 1</issue>), <fpage>13</fpage>&#x02013;<lpage>27</lpage>. <pub-id pub-id-type="doi">10.1046/j.1365-2664.2000.00556.x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0019"><mixed-citation publication-type="journal" id="ece34919-cit-0019">
+<string-name>
+<surname>Congalton</surname>, <given-names>R. G.</given-names>
+</string-name> (<year>1991</year>). <article-title>A review of assessing the accuracy of classifications of remotely sensed data</article-title>. <source xml:lang="en">Remote Sensing Environment</source>, <volume>37</volume>, <fpage>35</fpage>&#x02013;<lpage>46</lpage>. <pub-id pub-id-type="doi">10.1016/0034-4257(91)90048-B</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0020"><mixed-citation publication-type="journal" id="ece34919-cit-0020">
+<string-name>
+<surname>Coutts</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Klinkenvan</surname>, <given-names>V.</given-names>
+</string-name>, <string-name>
+<surname>Yokomizo</surname>, <given-names>H.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Buckley</surname>, <given-names>Y.</given-names>
+</string-name> (<year>2011</year>). <article-title>What are the key drivers of spread in invasive plants: Dispersal, demography or landscape: And how can we use this knowledge to aid management?</article-title>
+<source xml:lang="en">Biological Invasions</source>, <volume>13</volume>, <fpage>1649</fpage>&#x02013;<lpage>1661</lpage>. <pub-id pub-id-type="doi">10.1007/s10530-010-9922-5</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0021"><mixed-citation publication-type="journal" id="ece34919-cit-0021">
+<string-name>
+<surname>Cutler</surname>, <given-names>D. R.</given-names>
+</string-name>, <string-name>
+<surname>Edwards</surname>, <given-names>T. C.</given-names>
+</string-name>, <string-name>
+<surname>Beard</surname>, <given-names>K. H.</given-names>
+</string-name>, <string-name>
+<surname>Cutler</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Hess</surname>, <given-names>K. T.</given-names>
+</string-name>, <string-name>
+<surname>Gibson</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Lawler</surname>, <given-names>J. J.</given-names>
+</string-name> (<year>2007</year>). <article-title>Random forests for classification in ecology</article-title>. <source xml:lang="en">Ecology</source>, <volume>88</volume>(<issue>11</issue>), <fpage>2783</fpage>&#x02013;<lpage>2792</lpage>. <pub-id pub-id-type="doi">10.1890/07-0539.1</pub-id>
+<pub-id pub-id-type="pmid">18051647</pub-id></mixed-citation></ref><ref id="ece34919-bib-0022"><mixed-citation publication-type="book" id="ece34919-cit-0022">
+<string-name>
+<surname>Dikau</surname>, <given-names>R.</given-names>
+</string-name> (<year>1989</year>). <chapter-title>The application of a digital relief model to landform analysis</chapter-title> In <person-group person-group-type="editor"><name><surname>Raper</surname><given-names>J. F.</given-names></name></person-group> (Ed.), <source xml:lang="en">Three dimensional applications in geographical information systems</source> (pp. <fpage>51</fpage>&#x02013;<lpage>77</lpage>). <publisher-loc>London, UK</publisher-loc>: <publisher-name>Taylor and Francis</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0023"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0023">
+<string-name>
+<surname>Dikau</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<surname>Brabb</surname>, <given-names>E.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Mark</surname>, <given-names>R.</given-names>
+</string-name> (<year>1991</year>). <article-title>Landform classification of New Mexico by Computer. U.S. Geological Survey Open File Report</article-title>, <fpage>91</fpage>&#x02013;<lpage>634</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0024"><mixed-citation publication-type="journal" id="ece34919-cit-0024">
+<string-name>
+<surname>Dormann</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Elith</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Bacher</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Buchmann</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Carl</surname>, <given-names>G.</given-names>
+</string-name>, <string-name>
+<surname>Carr&#x000e9;</surname>, <given-names>G.</given-names>
+</string-name>, &#x02026; <string-name>
+<surname>Lautenbach</surname>, <given-names>S.</given-names>
+</string-name> (<year>2012</year>). <article-title>Collinearity: A review of methods to deal with it and a simulation study evaluating their performance</article-title>. <source xml:lang="en">Ecography</source>, <volume>35</volume>, <fpage>001</fpage>&#x02013;<lpage>020</lpage>. <pub-id pub-id-type="doi">10.1111/j.1600-0587.2012.07348.x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0025"><mixed-citation publication-type="journal" id="ece34919-cit-0025">
+<string-name>
+<surname>Elith</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Leathwick</surname>, <given-names>J. R.</given-names>
+</string-name> (<year>2009</year>). <article-title>Species distribution models: Ecological explanation and prediction across space and time</article-title>. <source xml:lang="en">Annual Review of Ecology Evolution and Systematics</source>, <volume>40</volume>, <fpage>677</fpage>&#x02013;<lpage>697</lpage>. <pub-id pub-id-type="doi">10.1146/annurev.ecolsys.110308.120159</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0026"><mixed-citation publication-type="journal" id="ece34919-cit-0026">
+<string-name>
+<surname>Elith</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Leathwick</surname>, <given-names>R.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Hastie</surname>, <given-names>T.</given-names>
+</string-name> (<year>2008</year>). <article-title>A working guide to boosted regression trees</article-title>. <source xml:lang="en">Journal of Animal Ecology</source>, <volume>2008</volume>(<issue>77</issue>), <fpage>802</fpage>&#x02013;<lpage>813</lpage>. <pub-id pub-id-type="doi">10.1111/j.1365-2656.2008.01390.x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0027"><mixed-citation publication-type="journal" id="ece34919-cit-0027">
+<string-name>
+<surname>Elith</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Phillips</surname>, <given-names>S. J.</given-names>
+</string-name>, <string-name>
+<surname>Hastie</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Dud&#x000ed;k</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Chee</surname>, <given-names>Y. E.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Yates</surname>, <given-names>C. J.</given-names>
+</string-name> (<year>2011</year>). <article-title>A statistical explanation of MaxEnt for ecologists: Statistical explanation of MaxEnt</article-title>. <source xml:lang="en">Diversity and Distributions</source>, <volume>17</volume>(<issue>1</issue>), <fpage>43</fpage>&#x02013;<lpage>57</lpage>. <pub-id pub-id-type="doi">10.1111/j.1472-4642.2010.00725.x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0028"><mixed-citation publication-type="journal" id="ece34919-cit-0028">
+<string-name>
+<surname>El&#x02010;Keblawy</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Al&#x02010;Rawai</surname>, <given-names>A.</given-names>
+</string-name> (<year>2007</year>). <article-title>Impacts of the invasive exotic <italic>Prosopis juliflora</italic> (Sw.) D.C. on the native flora and soils of the UAE</article-title>. <source xml:lang="en">Plant Ecology</source>, <volume>190</volume>(<issue>1</issue>), <fpage>23</fpage>&#x02013;<lpage>35</lpage>. <pub-id pub-id-type="doi">10.1007/s11258-006-9188-2</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0029"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0029">
+<string-name>
+<surname>Engda</surname>, <given-names>G.</given-names>
+</string-name> (<year>2009</year>). <article-title>Spatial and Temporal Analysis of Prosopis juliflora (Swarz) DC Invasion in Amibara Woreda of the Afar NRS</article-title>. MSc Thesis, AAU. Retrieved from <ext-link ext-link-type="uri" xlink:href="http://etd.aau.edu.et/handle/123456789/786">http://etd.aau.edu.et/handle/123456789/786</ext-link>
+</mixed-citation></ref><ref id="ece34919-bib-0030"><mixed-citation publication-type="journal" id="ece34919-cit-0030">
+<string-name>
+<surname>Fuchs</surname>, <given-names>K.</given-names>
+</string-name>, <string-name>
+<surname>DeMeester</surname>, <given-names>T.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Albertucci</surname>, <given-names>M.</given-names>
+</string-name> (<year>1987</year>). <article-title>Specificity and sensitivity of objective diagnosis of gastroesophageal reflux diseases</article-title>. <source xml:lang="en">Surgery</source>, <volume>102</volume>(<issue>4</issue>), <fpage>575</fpage>&#x02013;<lpage>580</lpage>.<pub-id pub-id-type="pmid">3660234</pub-id></mixed-citation></ref><ref id="ece34919-bib-0031"><mixed-citation publication-type="journal" id="ece34919-cit-0031">
+<string-name>
+<surname>Frazier</surname>, <given-names>A. E.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Wang</surname>, <given-names>L.</given-names>
+</string-name> (<year>2011</year>). <article-title>Characterizing spatial patterns of invasive species using sub&#x02010;pixel classifications</article-title>. <source xml:lang="en">Remote Sensing of Environment</source>, <volume>115</volume>(<issue>8</issue>), <fpage>1997</fpage>&#x02013;<lpage>2007</lpage>. <pub-id pub-id-type="doi">10.1016/j.rse.2011.04.002</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0032"><mixed-citation publication-type="journal" id="ece34919-cit-0032">
+<string-name>
+<surname>Friedman</surname>, <given-names>J.</given-names>
+</string-name> (<year>2001</year>). <article-title>Greedy function approximation: A gradient boosting machine</article-title>. <source xml:lang="en">The Annals of Statistics</source>, <volume>29</volume>(<issue>5</issue>), <fpage>1189</fpage>&#x02013;<lpage>1232</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0033"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0033">
+<string-name>
+<surname>Fushiki</surname>, <given-names>T.</given-names>
+</string-name> (<year>2009</year>). <article-title>Estimation of Prediction Error by Using K&#x02010;fold cross&#x02010;validation</article-title>, <pub-id pub-id-type="doi">10.1007/s11222-009-9153-8)</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0034"><mixed-citation publication-type="book" id="ece34919-cit-0034">
+<string-name>
+<surname>Gareth</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Witten</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Hastie</surname>, <given-names>T.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Tibshirani</surname>, <given-names>R.</given-names>
+</string-name> (<year>2014</year>). <source xml:lang="en">An introduction to statistical learning: With applications in R</source>. <publisher-loc>New York, NY</publisher-loc>: <publisher-name>Springer Publishing Company Incorporated</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0035"><mixed-citation publication-type="journal" id="ece34919-cit-0035">
+<string-name>
+<surname>Getis</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Ord</surname>, <given-names>J.</given-names>
+</string-name> (<year>1992</year>). <article-title>The analysis of spatial association by use of distance statistics in geographical analysis</article-title>. <source xml:lang="en">Geographical Analysis</source>, <volume>24</volume>(<issue>3</issue>), <fpage>189</fpage>&#x02013;<lpage>206</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0036"><mixed-citation publication-type="journal" id="ece34919-cit-0036">
+<string-name>
+<surname>Guisan</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Thuiller</surname>, <given-names>W.</given-names>
+</string-name> (<year>2005</year>). <article-title>Predicting species distribution: Offering more than simple habitat models</article-title>. <source xml:lang="en">Ecology Letters</source>, <volume>8</volume>(<issue>9</issue>), <fpage>993</fpage>&#x02013;<lpage>1009</lpage>. <pub-id pub-id-type="doi">10.1111/j.1461-0248.2005.00792.x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0037"><mixed-citation publication-type="journal" id="ece34919-cit-0037">
+<string-name>
+<surname>Guo</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Liu</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Oerlemans</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Lao</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Wu</surname>, <given-names>S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Lew</surname>, <given-names>M. S.</given-names>
+</string-name> (<year>2016</year>). <article-title>Deep learning for visual understanding: A review</article-title>. <source xml:lang="en">Neurocomputing</source>, <volume>187</volume>, <fpage>27</fpage>&#x02013;<lpage>48</lpage>. <pub-id pub-id-type="doi">10.1016/j.neucom.2015.09.116</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0038"><mixed-citation publication-type="journal" id="ece34919-cit-0038">
+<string-name>
+<surname>Haji</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Mohammed</surname>, <given-names>A.</given-names>
+</string-name> (<year>2013</year>). <article-title>Economic impact of <italic>Prosopis juliflora</italic> on agropastoral households of Dire Dawa administration, Ethiopia</article-title>
+<source xml:lang="en">. African Journal of Agricultural</source>, <volume>8</volume>(<issue>9</issue>), <fpage>768</fpage>&#x02013;<lpage>779</lpage>. <pub-id pub-id-type="doi">10.5897/AJAR12.014</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0039"><mixed-citation publication-type="journal" id="ece34919-cit-0039">
+<string-name>
+<surname>Harrington</surname>, <given-names>P.</given-names>
+</string-name> (<year>2006</year>). <article-title>Statistical validation of classification and calibration models using bootstrapped Latin partitions</article-title>. <source xml:lang="en">TrAC Trends in Analytical Chemistry</source>, <volume>25</volume>(<issue>11</issue>), <fpage>1112</fpage>&#x02013;<lpage>1124</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0040"><mixed-citation publication-type="book" id="ece34919-cit-0040">
+<string-name>
+<surname>Hastie</surname>, <given-names>T.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Qian</surname>, <given-names>J</given-names>
+</string-name>. (<year>2016</year>). <article-title>Glmnet Vignette</article-title>, <publisher-loc>Stanford</publisher-loc>.</mixed-citation></ref><ref id="ece34919-bib-0041"><mixed-citation publication-type="journal" id="ece34919-cit-0041">
+<string-name>
+<surname>He</surname>, <given-names>K. S.</given-names>
+</string-name>, <string-name>
+<surname>Bradley</surname>, <given-names>B. A.</given-names>
+</string-name>, <string-name>
+<surname>Cord</surname>, <given-names>A. F.</given-names>
+</string-name>, <string-name>
+<surname>Rocchini</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Tuanmu</surname>, <given-names>M. N.</given-names>
+</string-name>, <string-name>
+<surname>Schmidtlein</surname>, <given-names>S.</given-names>
+</string-name>, &#x02026; <string-name>
+<surname>Pettorelli</surname>, <given-names>N.</given-names>
+</string-name> (<year>2015</year>). <article-title>Will remote sensing shape the next generation of species distribution models?</article-title>
+<source xml:lang="en">Remote Sensing in Ecology and Conservation</source>, <volume>1</volume>(<issue>1</issue>), <fpage>4</fpage>&#x02013;<lpage>18</lpage>. <pub-id pub-id-type="doi">10.1002/rse2.7</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0042"><mixed-citation publication-type="journal" id="ece34919-cit-0042">
+<string-name>
+<surname>Hengl</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Heuvelink</surname>, <given-names>G. B. M.</given-names>
+</string-name>, <string-name>
+<surname>Kempen</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Leenaars</surname>, <given-names>J. G. B.</given-names>
+</string-name>, <string-name>
+<surname>Walsh</surname>, <given-names>M. G.</given-names>
+</string-name>, <string-name>
+<surname>Shepherd</surname>, <given-names>K. D.</given-names>
+</string-name>, &#x02026; <string-name>
+<surname>Tondoh</surname>, <given-names>J. E.</given-names>
+</string-name> (<year>2015</year>). <article-title>Mapping soil properties of Africa at 250 m resolution: Random forests significantly improve current predictions</article-title>. <source xml:lang="en">PLoS ONE</source>, <volume>10</volume>(<issue>6</issue>), <fpage>1</fpage>&#x02013;<lpage>17</lpage>. <pub-id pub-id-type="doi">10.1371/journal.pone.0125814</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0043"><mixed-citation publication-type="journal" id="ece34919-cit-0043">
+<string-name>
+<surname>Higgins</surname>, <given-names>S. I.</given-names>
+</string-name>, <string-name>
+<surname>Clark</surname>, <given-names>J. S.</given-names>
+</string-name>, <string-name>
+<surname>Nathan</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<surname>Hovestadt</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Schurr</surname>, <given-names>F.</given-names>
+</string-name>, <string-name>
+<surname>Fragoso</surname>, <given-names>J. M. V.</given-names>
+</string-name>, &#x02026; <string-name>
+<surname>Lavorel</surname>, <given-names>S.</given-names>
+</string-name> (<year>2003</year>). <article-title>Forecasting plant migration rates: Managing uncertainty for risk assessment</article-title>. <source xml:lang="en">Journal of Ecology</source>, <volume>91</volume>(<issue>3</issue>), <fpage>341</fpage>&#x02013;<lpage>347</lpage>. <pub-id pub-id-type="doi">10.1046/j.1365-2745.2003.00781.x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0044"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0044">
+<string-name>
+<surname>Hijmans</surname>, <given-names>R. J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Elith</surname>, <given-names>J</given-names>
+</string-name>. (<year>2013</year>). <article-title>Species distribution modeling with R Introduction</article-title>. October, 71. <pub-id pub-id-type="doi">10.1016/S0550-3213(02)00216-X</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0045"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0045">
+<string-name>
+<surname>Hijmans</surname>, <given-names>R. J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Elith</surname>, <given-names>J.</given-names>
+</string-name> (<year>2015</year>). <article-title>Species distribution modeling with R Introduction</article-title>.</mixed-citation></ref><ref id="ece34919-bib-0046"><mixed-citation publication-type="journal" id="ece34919-cit-0046">
+<string-name>
+<surname>Horning</surname>, <given-names>N.</given-names>
+</string-name> (<year>2010</year>). <article-title>Random Forests: An algorithm for image classification and generation of continuous fields data sets</article-title>. <italic>International Conference on Geoinformatics for Spatial Infrastructure Development in Earth and Allied Sciences</italic>, <volume>2010</volume>, <fpage>1</fpage>&#x02013;<lpage>6</lpage>. <pub-id pub-id-type="doi">10.5244/C.22.54</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0047"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0047">
+<string-name>
+<surname>Ilia</surname>, <given-names>I.</given-names>
+</string-name>, <string-name>
+<surname>Rozos</surname>, <given-names>D.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Koumantakis</surname>, <given-names>I.</given-names>
+</string-name> (<year>2013</year>). <article-title>Landform classification using GIS techniques. The case of Kimi municipality area, Euboea Island, Greece</article-title>. <italic>Bulletin of the Geological Society of Greece, vol. XLVII 2013 Proceedings of the 13th International Congress, Chania</italic>.</mixed-citation></ref><ref id="ece34919-bib-0048"><mixed-citation publication-type="journal" id="ece34919-cit-0048">
+<string-name>
+<surname>Jim&#x000e9;nez&#x02010;Valverde</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Lobo</surname>, <given-names>J. M.</given-names>
+</string-name> (<year>2006</year>). <article-title>The ghost of unbalanced species distribution data in geographical model predictions</article-title>. <source xml:lang="en">Diversity and Distributions</source>, <volume>12</volume>, <fpage>521</fpage>&#x02013;<lpage>524</lpage>. <pub-id pub-id-type="doi">10.1111/j.1366-9516.2006.00267.x</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0049"><mixed-citation publication-type="journal" id="ece34919-cit-0049">
+<string-name>
+<surname>Jim&#x000e9;nez&#x02010;Valverde</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Lobo</surname>, <given-names>J. M.</given-names>
+</string-name> (<year>2007</year>). <article-title>Threshold criteria for conversion of probability of species presence to either&#x02010;or presence&#x02010;absence</article-title>. <source xml:lang="en">Acta Oecologica</source>, <volume>31</volume>(<issue>3</issue>), <fpage>361</fpage>&#x02013;<lpage>369</lpage>. <pub-id pub-id-type="doi">10.1016/j.actao.2007.02.001</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0050"><mixed-citation publication-type="journal" id="ece34919-cit-0050">
+<string-name>
+<surname>Kebede</surname>, <given-names>A. T.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Coppock</surname>, <given-names>D. L.</given-names>
+</string-name> (<year>2015</year>). <article-title>Livestock&#x02010;mediated dispersal of <italic>Prosopis juliflora</italic> imperils Grasslands and the endangered Grevy&#x02019;s Zebra in Northeastern Ethiopia</article-title>. <source xml:lang="en">Rangeland Ecology and Management</source>, <volume>68</volume>(<issue>5</issue>), <fpage>402</fpage>&#x02013;<lpage>407</lpage>. <pub-id pub-id-type="doi">10.1016/j.rama.2015.07.002</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0051"><mixed-citation publication-type="book" id="ece34919-cit-0051">
+<string-name>
+<surname>Keller</surname>, <given-names>R. P.</given-names>
+</string-name>, <string-name>
+<surname>Lodge</surname>, <given-names>D. M.</given-names>
+</string-name>, <string-name>
+<surname>Lewis</surname>, <given-names>M. A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Shogren</surname>, <given-names>J. F.</given-names>
+</string-name> (Eds.) (<year>2009</year>). <source xml:lang="en">Bioeconomics of invasive species: Integrating ecology, economics, policy, and management</source>. <publisher-loc>Oxford, UK</publisher-loc>: <publisher-name>Oxford University Press</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0052"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0052">
+<string-name>
+<surname>Kim</surname>, <given-names>S.</given-names>
+</string-name> (<year>2017</year>). <article-title>Better motivation, different thinking</article-title>. <ext-link ext-link-type="uri" xlink:href="https://deeplearning4j.org/neuralnet-overview">https://deeplearning4j.org/neuralnet-overview</ext-link>.</mixed-citation></ref><ref id="ece34919-bib-0053"><mixed-citation publication-type="journal" id="ece34919-cit-0053">
+<string-name>
+<surname>Kimothi</surname>, <given-names>M. M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Dasari</surname>, <given-names>A.</given-names>
+</string-name> (<year>2010</year>). <article-title>Methodology to map the spread of an invasive plant (<italic>Lantana camara</italic> l.) in forest ecosystems using Indian remote sensing satellite data</article-title>. <source xml:lang="en">International Journal of Remote Sensing</source>, <volume>31</volume>(<issue>12</issue>), <fpage>3273</fpage>&#x02013;<lpage>3289</lpage>. <pub-id pub-id-type="doi">10.1080/01431160903121126</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0054"><mixed-citation publication-type="journal" id="ece34919-cit-0054">
+<string-name>
+<surname>Landis</surname>, <given-names>R.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Koch</surname>, <given-names>G.</given-names>
+</string-name> (<year>1977</year>). <article-title>The measurement of observer agreement for categorical data</article-title>. <source xml:lang="en">Biometrics</source>, <volume>33</volume>, <fpage>159</fpage>&#x02013;<lpage>174</lpage>.<pub-id pub-id-type="pmid">843571</pub-id></mixed-citation></ref><ref id="ece34919-bib-0055"><mixed-citation publication-type="journal" id="ece34919-cit-0055">
+<string-name>
+<surname>Le Maitre</surname>, <given-names>D. C.</given-names>
+</string-name>, <string-name>
+<surname>Gush</surname>, <given-names>M. B.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Dzikiti</surname>, <given-names>S.</given-names>
+</string-name> (<year>2015</year>). <article-title>Impacts of invading alien plant species on water flows at stand and catchment scales</article-title>. <source xml:lang="en">AoB Plants</source>, <volume>7</volume>(<issue>1</issue>), <fpage>1</fpage>&#x02013;<lpage>21</lpage>. <pub-id pub-id-type="doi">10.1093/aobpla/plv043</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0056"><mixed-citation publication-type="journal" id="ece34919-cit-0056">
+<string-name>
+<surname>Lorena</surname>, <given-names>A. C.</given-names>
+</string-name>, <string-name>
+<surname>Jacintho</surname>, <given-names>L. F. O.</given-names>
+</string-name>, <string-name>
+<surname>Siqueira</surname>, <given-names>M. F.</given-names>
+</string-name>, <string-name>
+<surname>Giovanni</surname>, <given-names>R. D.</given-names>
+</string-name>, <string-name>
+<surname>Lohmann</surname>, <given-names>L. G.</given-names>
+</string-name>, <string-name>
+<surname>De Carvalho</surname>, <given-names>A. C. P. L. F.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Yamamoto</surname>, <given-names>M.</given-names>
+</string-name> (<year>2011</year>). <article-title>Comparing machine learning classifiers in potential distribution modelling</article-title>. <source xml:lang="en">Expert Systems with Applications</source>, <volume>38</volume>(<issue>5</issue>), <fpage>5268</fpage>&#x02013;<lpage>5275</lpage>. <pub-id pub-id-type="doi">10.1016/j.eswa.2010.10.031</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0057"><mixed-citation publication-type="journal" id="ece34919-cit-0057">
+<string-name>
+<surname>Lu</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Mausel</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Brondizio</surname>, <given-names>E.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Moran</surname>, <given-names>E.</given-names>
+</string-name> (<year>2002</year>). <article-title>International Journal of Assessment of atmospheric correction methods for Landsat TM data applicable to Amazon basin LBA</article-title>. <source xml:lang="en">International Journal of Remote Sensing</source>, <volume>23</volume>(<issue>13</issue>), <fpage>2651</fpage>&#x02013;<lpage>2671</lpage>. <pub-id pub-id-type="doi">10.1080/01431160110109642</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0058"><mixed-citation publication-type="journal" id="ece34919-cit-0058">
+<string-name>
+<surname>Masocha</surname>, <given-names>M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Skidmore</surname>, <given-names>A. K.</given-names>
+</string-name> (<year>2011</year>). <article-title>Integrating conventional classifiers with a GIS expert system to increase the accuracy of invasive species mapping</article-title>. <source xml:lang="en">International Journal of Applied Earth Observation and Geoinformation</source>, <volume>13</volume>(<issue>3</issue>), <fpage>487</fpage>&#x02013;<lpage>494</lpage>. <pub-id pub-id-type="doi">10.1016/j.jag.2010.10.004</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0059"><mixed-citation publication-type="journal" id="ece34919-cit-0059">
+<string-name>
+<surname>Menuz</surname>, <given-names>D.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Kettenring</surname>, <given-names>K.</given-names>
+</string-name> (<year>2013</year>). <article-title>The importance of roads, nutrients, and climate for invasive plant establishment in riparian areas in the northwestern United States</article-title>. <source xml:lang="en">Biological Invasions</source>, <volume>15</volume>, <fpage>1601</fpage>&#x02013;<lpage>1612</lpage>. <pub-id pub-id-type="doi">10.1007/s10530-012-0395-6</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0060"><mixed-citation publication-type="journal" id="ece34919-cit-0060">
+<string-name>
+<surname>Metz</surname>, <given-names>C.</given-names>
+</string-name> (<year>1978</year>). <article-title>Basic principles of ROC analysis</article-title>. <source xml:lang="en">Seminars in Nuclear Medicine</source>, <volume>8</volume>, <fpage>283</fpage>&#x02013;<lpage>298</lpage>.<pub-id pub-id-type="pmid">112681</pub-id></mixed-citation></ref><ref id="ece34919-bib-0061"><mixed-citation publication-type="journal" id="ece34919-cit-0061">
+<string-name>
+<surname>Meynard</surname>, <given-names>C.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Quinn</surname>, <given-names>J.</given-names>
+</string-name> (<year>2007</year>). <article-title>Predicting species distributions: A critical comparison of most common statistical models using artificial species</article-title>. <source xml:lang="en">Journal of Biogeography</source>, <volume>34</volume>, <fpage>1455</fpage>&#x02013;<lpage>1469</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0062"><mixed-citation publication-type="journal" id="ece34919-cit-0062">
+<string-name>
+<surname>Mi</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Huettmann</surname>, <given-names>F.</given-names>
+</string-name>, <string-name>
+<surname>Guo</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Han</surname>, <given-names>X.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Wen</surname>, <given-names>L.</given-names>
+</string-name> (<year>2017</year>). <article-title>Why choose random forest to predict rare species distribution with few samples in large undersampled areas? Three Asian Crane Species Models Provide Supporting Evidence</article-title>. <source xml:lang="en">PeerJ</source>, <volume>5</volume>, <fpage>e2849</fpage><pub-id pub-id-type="doi">10.7717/peerj.2849</pub-id>
+<pub-id pub-id-type="pmid">28097060</pub-id></mixed-citation></ref><ref id="ece34919-bib-0063"><mixed-citation publication-type="journal" id="ece34919-cit-0063">
+<string-name>
+<surname>Mining</surname>, <given-names>D.</given-names>
+</string-name> (<year>2009</year>). <article-title>Springer series in statistics the elements of statistical learning</article-title>. <source xml:lang="en">The Mathematical Intelligencer</source>, <volume>27</volume>(<issue>2</issue>), <fpage>83</fpage>&#x02013;<lpage>85</lpage>. <pub-id pub-id-type="doi">10.1007/b94608</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0064"><mixed-citation publication-type="journal" id="ece34919-cit-0064">
+<string-name>
+<surname>Mishra</surname>, <given-names>N. B.</given-names>
+</string-name>, <string-name>
+<surname>Crews</surname>, <given-names>K. A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Okin</surname>, <given-names>G. S.</given-names>
+</string-name> (<year>2014</year>). <article-title>Relating spatial patterns of fractional land cover to savanna vegetation morphology using multi&#x02010;scale remote sensing in the Central Kalahari</article-title>. <source xml:lang="en">International Journal of Remote Sensing</source>, <volume>35</volume>(<issue>6</issue>), <fpage>2082</fpage>&#x02013;<lpage>2104</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0065"><mixed-citation publication-type="book" id="ece34919-cit-0065">
+<collab collab-type="authors">MOA</collab>
+(<year>1997</year>). <source xml:lang="en">Land resource inventory for the Afar National Regional State: Natural resource management and regulatory department</source>. <publisher-loc>Addis Ababa, Ethiopia</publisher-loc>: <publisher-name>Ministry of Agriculture</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0066"><mixed-citation publication-type="book" id="ece34919-cit-0066">
+<string-name>
+<surname>Mohamed</surname>, <given-names>F.</given-names>
+</string-name> (<year>1997</year>). <article-title>Tropical Forestry Report: Management of Prosopis juliflora for Use in Agroforestry Systems in the Sudan</article-title> (<person-group person-group-type="editor"><name><surname>Luukkanen</surname><given-names>O.</given-names></name></person-group> Ed.). Ph.D. Thesis, <publisher-name>University of Helsinki</publisher-name>, <publisher-loc>Helsinki, Finland</publisher-loc>.</mixed-citation></ref><ref id="ece34919-bib-0067"><mixed-citation publication-type="book" id="ece34919-cit-0067">
+<collab collab-type="authors">MoLF</collab>
+(<year>2017</year>). <source xml:lang="en">National strategy for prosopis juliflora management</source>. <publisher-loc>Addis Ababa, Ethiopia</publisher-loc>: <publisher-name>Ministry of Livestock and Fisheries of Ethiopia</publisher-name>
+</mixed-citation></ref><ref id="ece34919-bib-0068"><mixed-citation publication-type="journal" id="ece34919-cit-0068">
+<string-name>
+<surname>Mountrakis</surname>, <given-names>G.</given-names>
+</string-name>, <string-name>
+<surname>Im</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Ogole</surname>, <given-names>C.</given-names>
+</string-name> (<year>2011</year>). <article-title>Support vector machines in remote sensing: A review</article-title>. <source xml:lang="en">ISPRS Journal of Photogrammetry and Remote Sensing</source>, <volume>66</volume>(<issue>3</issue>), <fpage>247</fpage>&#x02013;<lpage>259</lpage>. <pub-id pub-id-type="doi">10.1016/j.isprsjprs.2010.11.001</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0069"><mixed-citation publication-type="journal" id="ece34919-cit-0069">
+<string-name>
+<surname>Mureriwa</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Adam</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Sahu</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Tesfamichael</surname>, <given-names>S.</given-names>
+</string-name> (<year>2016</year>). <article-title>Examining the spectral separability of <italic>Prosopis glandulosa</italic> from co&#x02010;existent species using field spectral measurement and guided regularized random forest</article-title>. <source xml:lang="en">Remote Sensing</source>, <volume>8</volume>(<issue>2</issue>), <pub-id pub-id-type="doi">10.3390/rs8020144</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0070"><mixed-citation publication-type="journal" id="ece34919-cit-0070">
+<string-name>
+<surname>Natekin</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Knoll</surname>, <given-names>A.</given-names>
+</string-name> (<year>2013</year>). <article-title>Gradient boosting machines, a tutorial</article-title>. <source xml:lang="en">Frontiers in Neurorobotics</source>, <volume>7</volume>, <fpage>1</fpage>&#x02013;<lpage>21</lpage>. <pub-id pub-id-type="doi">10.3389/fnbot.2013.00021</pub-id>
+<pub-id pub-id-type="pmid">23386829</pub-id></mixed-citation></ref><ref id="ece34919-bib-0071"><mixed-citation publication-type="journal" id="ece34919-cit-0071">
+<string-name>
+<surname>Newcombe</surname>, <given-names>R.</given-names>
+</string-name> (<year>1998</year>). <article-title>Two&#x02010;sided confidence intervals for the single proportion: Comparison of seven methods</article-title>. <source xml:lang="en">Stat Med.</source>, <volume>17</volume>, <fpage>857</fpage>&#x02013;<lpage>872</lpage>.<pub-id pub-id-type="pmid">9595616</pub-id></mixed-citation></ref><ref id="ece34919-bib-0072"><mixed-citation publication-type="journal" id="ece34919-cit-0072">
+<string-name>
+<surname>Ng</surname>, <given-names>W.</given-names>
+</string-name>, <string-name>
+<surname>Meroni</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Immitzer</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>B&#x000f6;ck</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Leonardi</surname>, <given-names>U.</given-names>
+</string-name>, <string-name>
+<surname>Rembold</surname>, <given-names>F.</given-names>
+</string-name>, &#x02026; <string-name>
+<surname>Atzberger</surname>, <given-names>C.</given-names>
+</string-name> (<year>2016</year>). <article-title>Mapping Prosopis spp. with Landsat 8 data in arid environments: Evaluating effectiveness of different methods and temporal imagery selection for Hargeisa, Somaliland</article-title>. <source xml:lang="en">International Journal of Applied Earth Observations and Geoinformation</source>, <volume>53</volume>, <fpage>76</fpage>&#x02013;<lpage>89</lpage>. <pub-id pub-id-type="doi">10.1016/j.jag.2016.07.019</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0073"><mixed-citation publication-type="journal" id="ece34919-cit-0073">
+<string-name>
+<surname>Nicholls</surname>, <given-names>A. O.</given-names>
+</string-name> (<year>1989</year>). <article-title>How to make biological surveys go further with generalised linear models</article-title>. <source xml:lang="en">Biological Conservation</source>, <volume>50</volume>(<issue>1</issue>), <fpage>51</fpage>&#x02013;<lpage>75</lpage>. <pub-id pub-id-type="doi">10.1016/0006-3207(89)90005-0</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0074"><mixed-citation publication-type="journal" id="ece34919-cit-0074">
+<string-name>
+<surname>Noble</surname>, <given-names>W. S.</given-names>
+</string-name> (<year>2006</year>). <article-title>What is a support vector machine?</article-title>
+<source xml:lang="en">Nature Biotechnology</source>, <volume>24</volume>(<issue>12</issue>), <fpage>1565</fpage>&#x02013;<lpage>1567</lpage>. <pub-id pub-id-type="doi">10.1038/nbt1206-1565</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0075"><mixed-citation publication-type="journal" id="ece34919-cit-0075">
+<string-name>
+<surname>Olinsky</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Kennedy</surname>, <given-names>K.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Kennedy</surname>, <given-names>B.</given-names>
+</string-name> (<year>2012</year>). <article-title>Assessing gradient boosting in the reduction of misclassification error in the prediction of success for actuarial majors</article-title>. <source xml:lang="en">CS&#x02010;BIGS</source>, <volume>5</volume>(<issue>1</issue>), <fpage>12</fpage>&#x02013;<lpage>16</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0076"><mixed-citation publication-type="journal" id="ece34919-cit-0076">
+<string-name>
+<surname>Pal</surname>, <given-names>M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Mather</surname>, <given-names>P. M.</given-names>
+</string-name> (<year>2005</year>). <article-title>Support vector machines for classification in remote sensing</article-title>. <source xml:lang="en">International Journal of Remote Sensing</source>, <volume>26</volume>(<issue>5</issue>), <fpage>1007</fpage>&#x02013;<lpage>1011</lpage>. <pub-id pub-id-type="doi">10.1080/01431160512331314083</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0077"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0077">
+<string-name>
+<surname>Pal</surname>, <given-names>M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Mather</surname>, <given-names>P. M</given-names>
+</string-name>. (<year>2017</year>). <article-title>Support vector machines for classification in remote sensing</article-title>, 1161(April). <pub-id pub-id-type="doi">10.1080/01431160512331314083</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0078"><mixed-citation publication-type="book" id="ece34919-cit-0078">
+<string-name>
+<surname>Pasiecznik</surname>, <given-names>N. M.</given-names>
+</string-name>, &#x00026; <collab collab-type="authors">Henry Doubleday Research Association</collab>
+(<year>2001</year>). <source xml:lang="en">The Prosopis julifora&#x02010;Prosopis pallida complex: A monograph</source>. <publisher-loc>Coventry, UK</publisher-loc>: <publisher-name>HDRA</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0079"><mixed-citation publication-type="journal" id="ece34919-cit-0079">
+<string-name>
+<surname>Pearce</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Ferrier</surname>, <given-names>S.</given-names>
+</string-name> (<year>2000</year>). <article-title>Evaluating the predictive performance of habitat models developed using logistic regression</article-title>. <source xml:lang="en">Ecological Modelling</source>, <volume>133</volume>, <fpage>225</fpage>&#x02013;<lpage>245</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0080"><mixed-citation publication-type="book" id="ece34919-cit-0080">
+<collab collab-type="authors">R Core Team</collab>
+(<year>2017</year>). <source xml:lang="en">R: A language and environment for statistical computing</source>. <publisher-loc>Vienna, Austria</publisher-loc>: <publisher-name>R Foundation for Statistical Computing</publisher-name> Retrieved from <ext-link ext-link-type="uri" xlink:href="http://www.R-project.org">http://www.R-project.org</ext-link>
+</mixed-citation></ref><ref id="ece34919-bib-0081"><mixed-citation publication-type="journal" id="ece34919-cit-0081">
+<string-name>
+<surname>Rembold</surname>, <given-names>F.</given-names>
+</string-name>, <string-name>
+<surname>Leonardi</surname>, <given-names>U.</given-names>
+</string-name>, <string-name>
+<surname>Ng</surname>, <given-names>W.</given-names>
+</string-name>, <string-name>
+<surname>Gadain</surname>, <given-names>H.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Meroni</surname>, <given-names>M.</given-names>
+</string-name> (<year>2015</year>). <article-title>Mapping areas invaded by Prosopis juliflora in Somaliland with Landsat 8 imagery</article-title>. <source xml:lang="en">Proceedings of SPIE</source>, <volume>9637</volume>, <fpage>1</fpage>&#x02013;<lpage>12</lpage>. <pub-id pub-id-type="doi">10.1117/12.2193133</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0082"><mixed-citation publication-type="journal" id="ece34919-cit-0082">
+<string-name>
+<surname>Riley</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>DeGloria</surname>, <given-names>S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Elliot</surname>, <given-names>R.</given-names>
+</string-name> (<year>1999</year>). <article-title>A terrain ruggedness index that quantifies topographic heterogeneity</article-title>. <source xml:lang="en">Intermountain Journal of Sciences</source>, <volume>5</volume>, <fpage>1</fpage>&#x02013;<lpage>4</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0083"><mixed-citation publication-type="journal" id="ece34919-cit-0083">
+<string-name>
+<surname>Rodrigues</surname>, <given-names>M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>De la Riva</surname>, <given-names>J.</given-names>
+</string-name> (<year>2014</year>). <article-title>An insight into machine&#x02010;learning algorithms to model human&#x02010;caused wildfire occurrence</article-title>. <source xml:lang="en">Environmental Modelling and Software</source>, <volume>57</volume>, <fpage>192</fpage>&#x02013;<lpage>201</lpage>. <pub-id pub-id-type="doi">10.1016/j.envsoft.2014.03.003</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0084"><mixed-citation publication-type="journal" id="ece34919-cit-0084">
+<string-name>
+<surname>Shackleton</surname>, <given-names>R. T.</given-names>
+</string-name>, <string-name>
+<surname>Le Maitre</surname>, <given-names>D. C.</given-names>
+</string-name>, <string-name>
+<surname>van Wilgen</surname>, <given-names>B. W.</given-names>
+</string-name> &#x00026; <string-name>
+<surname>Richardson</surname>, <given-names>D. M.</given-names>
+</string-name> (<year>2015a</year>). <article-title>The impact of invasive alien <italic>Prosopis</italic> species (mesquite) on native plants in different environments in South Africa</article-title>. <source xml:lang="en">South African Journal of Botany</source>, <volume>97</volume>, <fpage>25</fpage>&#x02013;<lpage>31</lpage>. <pub-id pub-id-type="doi">10.1016/j.sajb.2014.12.008</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0085"><mixed-citation publication-type="journal" id="ece34919-cit-0085">
+<string-name>
+<surname>Shackleton</surname>, <given-names>R. T.</given-names>
+</string-name>, <string-name>
+<surname>Le Maitre</surname>, <given-names>D. C.</given-names>
+</string-name>, <string-name>
+<surname>van Wilgen</surname>, <given-names>B. W.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Richardson</surname>, <given-names>D. M.</given-names>
+</string-name> (<year>2015b</year>). <article-title>Use of non&#x02010;timber forest products from invasive alien <italic>Prosopis</italic> species (mesquite) and native trees in South Africa: Implications for management</article-title>. <source xml:lang="en">Forest Ecosystems</source>, <volume>2</volume>(<issue>1</issue>), <fpage>16</fpage>
+<pub-id pub-id-type="doi">10.1186/s40663-015-0040-9</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0086"><mixed-citation publication-type="journal" id="ece34919-cit-0086">
+<string-name>
+<surname>Shiferaw</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Schaffner</surname>, <given-names>U.</given-names>
+</string-name>, <string-name>
+<surname>Bewket</surname>, <given-names>W.</given-names>
+</string-name>, <string-name>
+<surname>Alamirew</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Zeleke</surname>, <given-names>G.</given-names>
+</string-name>, <string-name>
+<surname>Teketay</surname>, <given-names>D.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Eckert</surname>, <given-names>S.</given-names>
+</string-name> (<year>2019</year>). <article-title>Modelling the current fractional cover of an invasive alien plant and drivers of its invasion in a dryland ecosystem</article-title>. <source xml:lang="en">Scientific Reports</source>, <pub-id pub-id-type="doi">10.1038/s41598-018-36587-7</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0087"><mixed-citation publication-type="journal" id="ece34919-cit-0087">
+<string-name>
+<surname>Shiferaw</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Teketay</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Nemomissa</surname>, <given-names>S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Assefa</surname>, <given-names>F.</given-names>
+</string-name> (<year>2004</year>). <article-title>Some biological characteristics that foster the invasion of <italic>Prosopis juliflora</italic> (Sw.) DC. at Middle Awash Rift Valley Area, north&#x02010;eastern, Ethiopia</article-title>. <source xml:lang="en">Journal of Arid Environments</source>, <volume>58</volume>(<issue>2</issue>), <fpage>135</fpage>&#x02013;<lpage>154</lpage>. <pub-id pub-id-type="doi">10.1016/j.jaridenv.2003.08.011</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0088"><mixed-citation publication-type="journal" id="ece34919-cit-0088">
+<string-name>
+<surname>Stohlgren</surname>, <given-names>T. J.</given-names>
+</string-name>, <string-name>
+<surname>Ma</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Kumar</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Rocca</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Morisette</surname>, <given-names>J. T.</given-names>
+</string-name>, <string-name>
+<surname>Jarnevich</surname>, <given-names>C. S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Benson</surname>, <given-names>N.</given-names>
+</string-name> (<year>2010</year>). <article-title>Ensemble habitat mapping of invasive plant species</article-title>. <source xml:lang="en">Risk Analysis</source>, <volume>30</volume>(<issue>2</issue>), <fpage>224</fpage>&#x02013;<lpage>235</lpage>. <pub-id pub-id-type="doi">10.1111/j.1539-6924.2009.01343.x</pub-id>
+<pub-id pub-id-type="pmid">20136746</pub-id></mixed-citation></ref><ref id="ece34919-bib-0089"><mixed-citation publication-type="book" id="ece34919-cit-0089">
+<string-name>
+<surname>Tegegn</surname>, <given-names>G.</given-names>
+</string-name> (<year>2008</year>). <source xml:lang="en">Experiences on Prosopis management case of Afar region</source> (pp. <fpage>1</fpage>&#x02013;<lpage>35</lpage>). <publisher-loc>London, UK</publisher-loc>: <publisher-name>FARM&#x02010;Africa</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0090"><mixed-citation publication-type="journal" id="ece34919-cit-0090">
+<string-name>
+<surname>Tessema</surname>, <given-names>Y. A.</given-names>
+</string-name> (<year>2012</year>). <article-title>Ecological and economic dimensions of the paradoxical invasive species&#x02010;Prosopis juliflora and policy challenges in Ethiopia</article-title>. <source xml:lang="en">Journal of Economics and Sustainable Development</source> (Www. Iiste. Org), <volume>3</volume>(<issue>8</issue>), <fpage>62</fpage>&#x02013;<lpage>70</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0091"><mixed-citation publication-type="journal" id="ece34919-cit-0091">
+<string-name>
+<surname>Thessen</surname>, <given-names>A.</given-names>
+</string-name> (<year>2016</year>). <article-title>Adoption of machine learning techniques in ecology and earth science</article-title>. <source xml:lang="en">One Ecosystem</source>, <volume>1</volume>, <fpage>e8621</fpage>
+<pub-id pub-id-type="doi">10.3897/oneeco.1.e8621</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0092"><mixed-citation publication-type="journal" id="ece34919-cit-0092">
+<string-name>
+<surname>van Wilgen</surname>, <given-names>B. W.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Wannenburgh</surname>, <given-names>A.</given-names>
+</string-name> (<year>2016</year>). <article-title>Co&#x02010;facilitating invasive species control, water conservation and poverty relief: Achievements and challenges in South Africa&#x02019;s Working for Water programme</article-title>. <source xml:lang="en">Current Opinion in Environmental Sustainability</source>, <volume>19</volume>, <fpage>7</fpage>&#x02013;<lpage>17</lpage>. <pub-id pub-id-type="doi">10.1016/j.cosust.2015.08.012</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0093"><mixed-citation publication-type="journal" id="ece34919-cit-0093">
+<string-name>
+<surname>Vil&#x000e0;</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Espinar</surname>, <given-names>J. L.</given-names>
+</string-name>, <string-name>
+<surname>Hejda</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Hulme</surname>, <given-names>P. E.</given-names>
+</string-name>, <string-name>
+<surname>Jaro&#x00161;&#x000ed;k</surname>, <given-names>V.</given-names>
+</string-name>, <string-name>
+<surname>Maron</surname>, <given-names>J. L.</given-names>
+</string-name>, &#x02026; <string-name>
+<surname>Py&#x00161;ek</surname>, <given-names>P.</given-names>
+</string-name> (<year>2011</year>). <article-title>Ecological impacts of invasive alien plants: A meta&#x02010;analysis of their effects on species, communities and ecosystems</article-title>. <source xml:lang="en">Ecology Letters</source>, <volume>14</volume>(<issue>7</issue>), <fpage>702</fpage>&#x02013;<lpage>708</lpage>. <pub-id pub-id-type="doi">10.1111/j.1461-0248.2011.01628.x</pub-id>
+<pub-id pub-id-type="pmid">21592274</pub-id></mixed-citation></ref><ref id="ece34919-bib-0094"><mixed-citation publication-type="journal" id="ece34919-cit-0094">
+<string-name>
+<surname>Wakie</surname>, <given-names>T. T.</given-names>
+</string-name>, <string-name>
+<surname>Evangelista</surname>, <given-names>P. H.</given-names>
+</string-name>, <string-name>
+<surname>Jarnevich</surname>, <given-names>C. S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Laituri</surname>, <given-names>M.</given-names>
+</string-name> (<year>2014</year>). <article-title>Mapping current and potential distribution of non&#x02010;native <italic>Prosopis juliflorain</italic> the Afar region of Ethiopia</article-title>. <source xml:lang="en">PLoS ONE</source>, <volume>9</volume>(<issue>11</issue>), <fpage>3</fpage>&#x02013;<lpage>11</lpage>. <pub-id pub-id-type="doi">10.1371/journal.pone.0112854</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0095"><mixed-citation publication-type="miscellaneous" id="ece34919-cit-0095">
+<string-name>
+<surname>Wakie</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Evangelista</surname>, <given-names>P.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Laituri</surname>, <given-names>M.</given-names>
+</string-name> (<year>2012</year>). <article-title>Utilization Assessment of Prosopis juliflora in Afar Region</article-title>, Ethiopia, (July), <fpage>1</fpage>&#x02013;<lpage>15</lpage>.</mixed-citation></ref><ref id="ece34919-bib-0096"><mixed-citation publication-type="journal" id="ece34919-cit-0096">
+<string-name>
+<surname>Wana</surname>, <given-names>D.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Beierkuhnlein</surname>, <given-names>C.</given-names>
+</string-name> (<year>2010</year>). <article-title>Plant species and growth form richness along altitudinal gradients in the southwest Ethiopian highlands</article-title>. <source xml:lang="en">Journal of Vegetation Science</source>, <volume>21</volume>, <fpage>617</fpage>&#x02013;<lpage>626</lpage>. <pub-id pub-id-type="doi">10.1111/j.1654-1103.2010.01177.x</pub-id>.</mixed-citation></ref><ref id="ece34919-bib-0097"><mixed-citation publication-type="book" id="ece34919-cit-0097">
+<string-name>
+<surname>Weiss</surname>, <given-names>A.</given-names>
+</string-name> (<year>2001</year>). <article-title>Topographic position and landforms analysis. Poster presentation, ESRI User Conference</article-title>. <publisher-loc>San Diego, CA</publisher-loc>.</mixed-citation></ref><ref id="ece34919-bib-0098"><mixed-citation publication-type="journal" id="ece34919-cit-0098">
+<string-name>
+<surname>Wilson</surname>, <given-names>J. R. U.</given-names>
+</string-name>, <string-name>
+<surname>Dormontt</surname>, <given-names>E. E.</given-names>
+</string-name>, <string-name>
+<surname>Prentis</surname>, <given-names>P. J.</given-names>
+</string-name>, <string-name>
+<surname>Lowe</surname>, <given-names>A. J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Richardson</surname>, <given-names>D. M.</given-names>
+</string-name> (<year>2009</year>). <article-title>Something in the way you move: Dispersal pathways affect invasion success</article-title>. <source xml:lang="en">Trends in Ecology and Evolution</source>, <volume>24</volume>(<issue>3</issue>), <fpage>136</fpage>&#x02013;<lpage>144</lpage>. <pub-id pub-id-type="doi">10.1016/j.tree.2008.10.007</pub-id>
+<pub-id pub-id-type="pmid">19178981</pub-id></mixed-citation></ref><ref id="ece34919-bib-0099"><mixed-citation publication-type="book" id="ece34919-cit-0099">
+<string-name>
+<surname>Yirgalem</surname>, <given-names>A.</given-names>
+</string-name> (<year>2001</year>). <article-title>Challenges, opportunities and prospects of common property resources management in the Afar Regional Areas</article-title>. <publisher-loc>Addis Abeba, Ethiopia</publisher-loc>: <publisher-name>FARM&#x02010;Africa, Mimeo</publisher-name>.</mixed-citation></ref><ref id="ece34919-bib-0100"><mixed-citation publication-type="journal" id="ece34919-cit-0100">
+<string-name>
+<surname>Youssef</surname>, <given-names>A. M.</given-names>
+</string-name>, <string-name>
+<surname>Pourghasemi</surname>, <given-names>H. R.</given-names>
+</string-name>, <string-name>
+<surname>Pourtaghi</surname>, <given-names>Z. S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Al&#x02010;Katheeri</surname>, <given-names>M. M.</given-names>
+</string-name> (<year>2016</year>). <article-title>Landslide susceptibility mapping using random forest, boosted regression tree, classification and regression tree, and general linear models and comparison of their performance at Wadi Tayyah Basin, Asir Region. Saudi Arabia</article-title>. <source xml:lang="en">Landslides</source>, <volume>13</volume>(<issue>5</issue>), <fpage>839</fpage>&#x02013;<lpage>856</lpage>. <pub-id pub-id-type="doi">10.1007/s10346-015-0614-1</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0101"><mixed-citation publication-type="journal" id="ece34919-cit-0101">
+<string-name>
+<surname>Zhang</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Zhang</surname>, <given-names>L.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Du</surname>, <given-names>B.</given-names>
+</string-name> (<year>2016</year>). <article-title>Deep learning for remote sensing data: A technical tutorial on the state of the art</article-title>. <source xml:lang="en">IEEE Geoscience and Remote Sensing Magazine</source>, <volume>4</volume>(<issue>2</issue>), <fpage>22</fpage>&#x02013;<lpage>40</lpage>. <pub-id pub-id-type="doi">10.1109/MGRS.2016.2540798</pub-id>
+</mixed-citation></ref><ref id="ece34919-bib-0102"><mixed-citation publication-type="journal" id="ece34919-cit-0102">
+<string-name>
+<surname>Zhou</surname>, <given-names>Y.</given-names>
+</string-name>, <string-name>
+<surname>Chen</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Cao</surname>, <given-names>X.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Chen</surname>, <given-names>X.</given-names>
+</string-name> (<year>2015</year>). <article-title>Estimation of fractional vegetation cover in semiarid areas by integrating endmember reflectance purification into nonlinear spectral mixture</article-title>. <source xml:lang="en">Analysis</source>, <volume>12</volume>(<issue>6</issue>), <fpage>1175</fpage>&#x02013;<lpage>1179</lpage>.</mixed-citation></ref></ref-list></back></article>

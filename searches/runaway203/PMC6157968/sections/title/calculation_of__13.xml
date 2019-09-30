@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Calculation of spatially resolved CH
+  <sub>4</sub> forcing
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The spatial maps of CH
+  <sub>4</sub> forcing in 
+  <a ref-type="fig" rid="F3" href="#F3">Figs. 3</a> and 
+  <a ref-type="fig" rid="F4" href="#F4">4</a> were computed from climate model output from the CMIP5 (
+  <a rid="R26" ref-type="bibr" href="#R26">
+   <span class="italic">26</span>
+  </a>) using the Observing System Simulation Experiment (OSSE) framework developed by the authors (
+  <a rid="R40" ref-type="bibr" href="#R40">
+   <span class="italic">40</span>
+  </a>–
+  <a rid="R42" ref-type="bibr" href="#R42">
+   <span class="italic">42</span>
+  </a>) for NASA’s CLimate Absolute Radiance and Refractivity Observatory (CLARREO) (
+  <a rid="R43" ref-type="bibr" href="#R43">
+   <span class="italic">43</span>
+  </a>) and validated against SCanning Imaging Absorption SpectroMeter for Atmospheric CHartographY (SCIAMACHY) satellite observations (
+  <a rid="R44" ref-type="bibr" href="#R44">
+   <span class="italic">44</span>
+  </a>, 
+  <a rid="R45" ref-type="bibr" href="#R45">
+   <span class="italic">45</span>
+  </a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The OSSE framework ingests time-dependent two- and three-dimensional climate model outputs that, when combined with auxiliary initial and boundary conditions and other data sets, provide a complete prescription of the climate system state required to compute the vertically resolved radiation fields throughout the atmosphere at each model grid point and time interval. The computations were performed using the MODTRAN code version 5.3.0.0. The MODTRAN calculations were performed using the DISORT code (
+  <a rid="R38" ref-type="bibr" href="#R38">
+   <span class="italic">38</span>
+  </a>) with eight streams at 15-cm
+  <span class="sup">−1</span> resolution over a spectral range of 2000 to 11,900 cm
+  <span class="sup">−1</span>. The spectral properties of radiative active gases in MODTRAN version 5.3.0.0 were obtained from HITRAN 2008 (
+  <a rid="R22" ref-type="bibr" href="#R22">
+   <span class="italic">22</span>
+  </a>). HITRAN’s description of CH
+  <sub>4</sub> line absorption parameters has been updated substantially in recent versions (
+  <a rid="R6" ref-type="bibr" href="#R6">
+   <span class="italic">6</span>
+  </a>) (
+  <a rid="R46" ref-type="bibr" href="#R46">
+   <span class="italic">46</span>
+  </a>). Recent laboratory and theoretical work led to updates to over 70% of the lines in the HITRAN 2012 database. However, calculations based on the HITRAN 2012 database exhibited larger discrepancies with respect to high-altitude balloon (
+  <a rid="R47" ref-type="bibr" href="#R47">
+   <span class="italic">47</span>
+  </a>) and satellite validation measurements (
+  <a rid="R48" ref-type="bibr" href="#R48">
+   <span class="italic">48</span>
+  </a>). We therefore chose to use the HITRAN 2008 spectroscopy because the 2012 update agrees less favorably with observations and because the 2016 update has yet to be implemented fully into the OSSE framework at the time of this writing.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The radiative quantities computed by MODTRAN include the spectral and spectrally integrated fluxes under clear-sky and all-sky conditions at all levels in the input model fields. The fluxes are further separated into the downwelling direct, downward diffuse, and upwelling diffuse terms. The MODTRAN calculations for RTMIP differ with the LBL calculations using the HITRAN 2012 line database by −0.016 W/m
+  <span class="sup">2</span> at the surface, +0.017 W/m
+  <span class="sup">2</span> at the tropopause, and +0.003 W/m
+  <span class="sup">2</span> at the top of model (TOM). For comparison, the SDs of the forcing among the LBL codes that participated in RTMIP are, to two decimal places, 0.02 W/m
+  <span class="sup">2</span> at the surface, 0.00 W/m
+  <span class="sup">2</span> at the tropopause, and 0.00 W/m
+  <span class="sup">2</span> at the TOM. This demonstrated that the MODTRAN code is performing comparably to the much more computationally expensive LBL codes.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">When clouds are present in a model column, grid-point-mean fluxes are computed assuming maximum-random cloud overlap in the vertical direction by adopting the independent column approximation and generating a set of binary cloud configurations that aggregate to the original model profile of cloud amount (
+  <a rid="R49" ref-type="bibr" href="#R49">
+   <span class="italic">49</span>
+  </a>). Radiative transfer calculations were performed for each binary cloud configuration and combined in a sum weighted by the fractional areas occupied by each configuration within the grid cell (
+  <a rid="R49" ref-type="bibr" href="#R49">
+   <span class="italic">49</span>
+  </a>). When sea ice was present, the full set of clear-sky and all-sky calculations was repeated for 100% open-ocean and 100% sea ice–covered conditions and then combined in a sum weighted by the fractional sea ice coverage. This approach accurately accounts for nonlinear effects of multiple scattering of sunlight between ice and overlying clouds.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The upper boundary condition on the calculations was the incident solar insolation on the TOA and was obtained from the Kurucz solar spectrum (
+  <a rid="R14" ref-type="bibr" href="#R14">
+   <span class="italic">14</span>
+  </a>) where all values were uniformly scaled such that the TOA irradiance (
+  <a rid="R28" ref-type="bibr" href="#R28">
+   <span class="italic">28</span>
+  </a>) is 1360 W/m
+  <span class="sup">2</span>. The lower boundary conditions were surface albedos derived from observations rather than obtained from the climate models to maximize the physical fidelity of the surface spectral properties (fig. S5A) (
+  <a rid="R40" ref-type="bibr" href="#R40">
+   <span class="italic">40</span>
+  </a>, 
+  <a rid="R41" ref-type="bibr" href="#R41">
+   <span class="italic">41</span>
+  </a>). The land surface and snow albedos were obtained from climate model grid spectral seven-band Moderate Resolution Imaging Spectroradiometer (MODIS) bidirectional reflectance distribution functions (BRDFs) (
+  <a rid="R50" ref-type="bibr" href="#R50">
+   <span class="italic">50</span>
+  </a>), ocean albedos were derived from the Cox-Munk ocean BRDF (
+  <a rid="R51" ref-type="bibr" href="#R51">
+   <span class="italic">51</span>
+  </a>), and sea ice albedos were obtained from the Ross-Li BRDF model (
+  <a rid="R52" ref-type="bibr" href="#R52">
+   <span class="italic">52</span>
+  </a>) calibrated against bare sea ice optical data (
+  <a rid="R53" ref-type="bibr" href="#R53">
+   <span class="italic">53</span>
+  </a>). Separate snow-free and completely snow-covered BRDFs were constructed at each grid point, were combined to account for time-varying snow coverage, and were the source of most of the interannual variability in the near-infrared surface albedo (fig. S5B).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The climate model simulations used were for present-day segments of the Representative Concentration Pathway 8.5 CMIP5 scenario (
+  <a rid="R54" ref-type="bibr" href="#R54">
+   <span class="italic">54</span>
+  </a>) runs from the CMIP5 (
+  <a rid="R26" ref-type="bibr" href="#R26">
+   <span class="italic">26</span>
+  </a>) produced by the INMCM4 (
+  <a rid="R55" ref-type="bibr" href="#R55">
+   <span class="italic">55</span>
+  </a>) and CSIRO Mk3-6-0 (
+  <a rid="R56" ref-type="bibr" href="#R56">
+   <span class="italic">56</span>
+  </a>) ESMs for the r1i1p1 (
+  <a rid="R57" ref-type="bibr" href="#R57">
+   <span class="italic">57</span>
+  </a>) and r4i1p1 (
+  <a rid="R57" ref-type="bibr" href="#R57">
+   <span class="italic">57</span>
+  </a>) ensemble members, respectively. These models were chosen because their climate sensitivities roughly span the range diagnosed across the CMIP5 ensemble and also have highly contrasting shortwave cloud radiative effects (
+  <a rid="R58" ref-type="bibr" href="#R58">
+   <span class="italic">58</span>
+  </a>). The time resolution of the climate model output is monthly, and the time period selected for analysis here spans five full years from January 2006 through December 2010. The input fields are detailed in table S1. The calculations were performed at two globally uniform tropospheric CH
+  <sub>4</sub> concentrations of 806 and 1760 ppbv with vertical meridionally dependent gradients in the stratosphere (
+  <a rid="R59" ref-type="bibr" href="#R59">
+   <span class="italic">59</span>
+  </a>). For each of these concentrations, for each month, the fluxes were computed for globally uniform solar zenith angles specified by a standard seven-point Gauss-Legendre quadrature over 0° to 90° zenith angle. The weights in the quadrature formulae required to compute diurnally averaged fluxes at each model grid point are functions of month and latitude. These weights were computed from cumulative probability distributions of solar zenith angles constructed using calculations of the Sun-Earth viewing geometry at a 1-min frequency using the same solar ephemeris used in the Community Atmospheric Model version 3 (
+  <a rid="R60" ref-type="bibr" href="#R60">
+   <span class="italic">60</span>
+  </a>).
+ </p>
+</sec>

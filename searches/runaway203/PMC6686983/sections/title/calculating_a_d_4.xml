@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="jame20869-sec-0003" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">3</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Calculating a Dynamically Consistent Ozone Field while Using Prescribed Values</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The purpose of CALC‐AZ is to generate interactively a 3‐D ozone field which follows the spatial patterns of potential vorticity (PV), but which also maintains exactly the prescribed zonal‐mean climatology of both SPEC‐ZM and SPEC‐AZ. To do this, PV is first calculated at each radiation time step. This is then normalized, as in Allen and Nakamura (
+  <a rid="jame20869-bib-0002" ref-type="ref" href="#jame20869-bib-0002">2003</a>), so that it can function as an equivalent latitude coordinate. We define our equivalent latitude coordinate 
+  <div class="inline-formula">
+   <span class="italic">φ</span>
+   <sub>
+    <span class="italic">q</span>
+   </sub>
+  </div> as follows: 
+  <div id="jame20869-disp-0001" class="disp-formula">
+   <span class="label">(1)</span>
+   <div id="nlm-math-8" class="math">
+    <div class="msub">
+     <span class="mi">φ</span>
+     <span class="mi">q</span>
+    </div>
+    <span class="mo">=</span>
+    <span class="mtext">asin</span>
+    <div open="(" close=")" class="mfenced">
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mn">2</span>
+       <span class="mi">q</span>
+       <span class="mo">−</span>
+       <div class="msub">
+        <span class="mi">q</span>
+        <span class="mi">max</span>
+       </div>
+       <span class="mo">−</span>
+       <div class="msub">
+        <span class="mi">q</span>
+        <span class="mi">min</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <span class="mi">q</span>
+        <span class="mi">max</span>
+       </div>
+       <span class="mo">−</span>
+       <div class="msub">
+        <span class="mi">q</span>
+        <span class="mi">min</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="mo">∈</span>
+    <div open="[" close="]" separators="," class="mfenced">
+     <div class="mrow">
+      <span class="mo">−</span>
+      <div class="mfrac">
+       <span class="mi">π</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <div class="mfrac">
+      <span class="mi">π</span>
+      <span class="mn">2</span>
+     </div>
+    </div>
+   </div>
+  </div>where 
+  <div class="inline-formula">
+   <span class="italic">q</span>
+  </div> is PV and max/min refer to the global extrema of this field, on each model level. Here, this coordinate is used to generate a dynamically evolving 3‐D field from a 2‐D reference state (using the specified 2‐D zonal‐mean ozone climatology from UKCA, SPEC‐ZM). If zonal‐mean ozone is specified in terms of height and latitude, then the equivalent latitude specification can act as an effective extension to a 3‐D field: 
+  <div id="jame20869-disp-0002" class="disp-formula">
+   <span class="label">(2)</span>
+   <div id="nlm-math-9" class="math">
+    <span class="mi">Z</span>
+    <div open="(" close=")" separators=",," class="mfenced">
+     <span class="mi">λ</span>
+     <span class="mi">φ</span>
+     <span class="mi">z</span>
+    </div>
+    <span class="mo">=</span>
+    <div accent="true" class="mover">
+     <div class="msub">
+      <span mathvariant="normal" class="mi">O</span>
+      <span class="mn">3</span>
+     </div>
+     <span stretchy="true" class="mo">¯</span>
+    </div>
+    <div open="(" close=")" separators="," class="mfenced">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">φ</span>
+       <span class="mi">q</span>
+      </div>
+      <div open="(" close=")" separators=",," class="mfenced">
+       <span class="mi">λ</span>
+       <span class="mi">φ</span>
+       <span class="mi">z</span>
+      </div>
+     </div>
+     <span class="mi">z</span>
+    </div>
+   </div>
+  </div>where 
+  <div class="inline-formula">
+   <span class="italic">λ</span>
+  </div> is longitude, 
+  <div class="inline-formula">
+   <span class="italic">φ</span>
+  </div> is latitude, 
+  <div class="inline-formula">
+   <span class="italic">z</span>
+  </div> is model level, the overbar denotes the specified zonal‐mean ozone distribution, and 
+  <div class="inline-formula">
+   <span class="italic">φ</span>
+   <sub>
+    <span class="italic">q</span>
+   </sub>
+  </div> is the equivalent latitude coordinate. The expression on the LHS, 
+  <div class="inline-formula">
+   <span class="italic">Z</span>(
+   <span class="italic">λ</span>, 
+   <span class="italic">φ</span>, 
+   <span class="italic">z</span>)
+  </div>, is explicitly 3‐D while the expression on the RHS is explicitly 2‐D, but within the 
+  <div class="inline-formula">
+   <span class="italic">φ</span>
+   <sub>
+    <span class="italic">q</span>
+   </sub>
+  </div> coordinate has implicit 3‐D structure. This zonal‐mean value of the 3‐D field is not constrained at every time step, so it must be rescaled to match the specifying reference state in the zonal mean, thereby ensuring that the specified zonal‐mean climatology is reproduced exactly in the resulting zonally asymmetric field that is seen by the radiation scheme: 
+  <div id="jame20869-disp-0003" class="disp-formula">
+   <span class="label">(3)</span>
+   <div id="nlm-math-10" class="math">
+    <div class="msub">
+     <span mathvariant="normal" class="mi">O</span>
+     <span class="mn">3</span>
+    </div>
+    <div open="(" close=")" separators=",," class="mfenced">
+     <span class="mi">λ</span>
+     <span class="mi">φ</span>
+     <span class="mi">z</span>
+    </div>
+    <span class="mo">=</span>
+    <div accent="true" class="mover">
+     <div class="msub">
+      <span mathvariant="normal" class="mi">O</span>
+      <span class="mn">3</span>
+     </div>
+     <span stretchy="true" class="mo">¯</span>
+    </div>
+    <div open="(" close=")" separators="," class="mfenced">
+     <span class="mi">φ</span>
+     <span class="mi">z</span>
+    </div>
+    <span class="mo">+</span>
+    <span class="mi">α</span>
+    <div class="msup">
+     <span class="mi">Z</span>
+     <span class="mo">′</span>
+    </div>
+    <div open="(" close=")" separators=",," class="mfenced">
+     <span class="mi">λ</span>
+     <span class="mi">φ</span>
+     <span class="mi">z</span>
+    </div>
+   </div>
+  </div>where 
+  <div class="inline-formula">
+   <span class="sup">′</span>
+  </div> indicates that the zonal mean has been removed and 
+  <div class="inline-formula">
+   <span class="italic">α</span>
+  </div> is an asymmetry‐scaling coefficient (could be any function of height, latitude, and/or time) by which to scale the asymmetry. In this study, the scaling factor is computed by regressing 
+  <div id="nlm-math-11" class="math">
+   <div class="msubsup">
+    <span mathvariant="normal" class="mi">O</span>
+    <span class="mn">3</span>
+    <span class="mo">′</span>
+   </div>
+  </div> against 
+  <div class="inline-formula">
+   <span class="italic">Z</span>
+   <span class="sup">′</span>
+  </div> in UKCA, such that 
+  <div id="jame20869-disp-0004" class="disp-formula">
+   <span class="label">(4)</span>
+   <div id="nlm-math-12" class="math">
+    <span class="mi">α</span>
+    <span class="mo">=</span>
+    <div class="mfrac">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">Z</span>
+       <span class="mo">′</span>
+       <div class="msubsup">
+        <span mathvariant="normal" class="mi">O</span>
+        <span class="mn">3</span>
+        <span class="mo">′</span>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">¯</span>
+     </div>
+     <div class="mrow">
+      <span width="0.25em" class="mspace"/>
+      <div accent="true" class="mover">
+       <div class="mrow">
+        <span class="mi">Z</span>
+        <span class="mo">′</span>
+        <span class="mi">Z</span>
+        <span class="mo">′</span>
+       </div>
+       <span stretchy="true" class="mo">¯</span>
+      </div>
+      <span width="0.25em" class="mspace"/>
+     </div>
+    </div>
+   </div>
+  </div>is a climatological function of month, height, and latitude. Defined this way, the scaling factor contains information of the underlying model's behavior of dynamical asymmetry and how ZAO varies with those asymmetries, which is most likely to produce an accurate realization of the UKCA stratosphere in general.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The scaling coefficient 
+  <div class="inline-formula">
+   <span class="italic">α</span>
+  </div> (vertical profile shown in Figure 
+  <a rid="jame20869-fig-0002" ref-type="fig" href="#jame20869-fig-0002">2</a>a as an annual average) is designed to suppress the formation of PV‐based ZAO in regions where these would not normally arise, such as the troposphere (where ZAO might be dominated, for example, by surface emissions of precursors, deposition, and stratosphere‐troposphere exchange) and uppermost stratosphere (where ZAO is dominated by diurnal cycles of available shortwave radiation). In these regions, a PV‐based ozone scheme is not appropriate and so our ability to accurately capture the dynamics of UKCA is limited. To adjust for this, we set 
+  <div class="inline-formula">
+   <span class="italic">α</span> = 0
+  </div> below ~8 km, above which it increases linearly to the expression defined in equation 
+  <a rid="jame20869-disp-0004" ref-type="disp-formula" href="#jame20869-disp-0004">(4)</a> around ~11.5 km and remains as such until the model top at ~84 km.
+ </p>
+ <div fig-type="Figure" xml:lang="en" id="jame20869-fig-0002" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="label">Figure 2</span>
+  <div class="caption">
+   <p>The scaling factor 
+    <div class="inline-formula">
+     <span style="italic-in-any-context" class="styled-content">α</span>
+    </div> from equation 
+    <a rid="jame20869-disp-0004" ref-type="disp-formula" href="#jame20869-disp-0004">(4)</a> shown as (a) an annual‐mean vertical profile, and (b) as a climatology at the 17.5‐km level. The solid contours in (a)/(b) denote regions which are shaded in Figures 
+    <a rid="jame20869-fig-0001" ref-type="fig" href="#jame20869-fig-0001">1</a>a and 
+    <a rid="jame20869-fig-0001" ref-type="fig" href="#jame20869-fig-0001">1</a>b/
+    <a rid="jame20869-fig-0001" ref-type="fig" href="#jame20869-fig-0001">1</a>d and 
+    <a rid="jame20869-fig-0001" ref-type="fig" href="#jame20869-fig-0001">1</a>e, where the magnitude of ZAO is large and provides us with an estimate of where we expect the ZAO feedback to be most active. The value of 
+    <div class="inline-formula">
+     <span style="italic-in-any-context" class="styled-content">α</span>
+    </div> is almost exclusively positive in the solid contoured region. However, regions where 
+    <div class="inline-formula">
+     <span style="italic-in-any-context" class="styled-content">α</span>
+    </div> is negative (dashed contours) are strongly associated with regions of high interannual variability in 
+    <div id="nlm-math-13" class="math">
+     <div accent="true" class="mover">
+      <div class="msub">
+       <span mathvariant="normal" class="mi">O</span>
+       <span class="mn">3</span>
+      </div>
+      <span stretchy="true" class="mo">¯</span>
+     </div>
+    </div> in Figures 
+    <a rid="jame20869-fig-0001" ref-type="fig" href="#jame20869-fig-0001">1</a>c and 
+    <a rid="jame20869-fig-0001" ref-type="fig" href="#jame20869-fig-0001">1</a>f. This dashed contoured region indicates where ZAO is dominated by chemistry and eddy transport of ozone in UKCA, and where prescribed ZAO may not be representative of a CCM. CCM = chemistry‐climate model; UKCA = United Kingdom Chemistry and Aerosol scheme; ZAO = zonally asymmetric ozone.
+   </p>
+  </div>
+  <div id="nlm-graphic-3" xlink:href="JAME-11-918-g002" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Figure 
+  <a rid="jame20869-fig-0002" ref-type="fig" href="#jame20869-fig-0002">2</a>b shows the latitude‐time climatological evolution of our regression‐calculated fitting coefficient 
+  <div class="inline-formula">
+   <span class="italic">α</span>
+  </div> at around 17.5 km, where, as indicated by the solid contours, the P1 and P2 pathways are expected to be important. Positive values of 
+  <div class="inline-formula">
+   <span class="italic">α</span>
+  </div> identify regions where ZAO are driven by dynamical processes (related to our equivalent latitude field Z) and where we expect the P1 pathway to be most influential. The dashed contours of Figure 
+  <a rid="jame20869-fig-0002" ref-type="fig" href="#jame20869-fig-0002">2</a> outline where ZAO is suitably large but 
+  <div class="inline-formula">
+   <span class="italic">α</span>
+  </div> is negative, suggesting that the existing ZAO is not driven by dynamics and is instead related to other processes within the P2 pathway which can influence 
+  <div id="nlm-math-14" class="math">
+   <div class="msubsup">
+    <span mathvariant="normal" class="mi">O</span>
+    <span class="mn">3</span>
+    <span class="mo">′</span>
+   </div>
+  </div> (such as heterogeneous chemistry). Outside of the solid contoured region, there are large fluctuations in the value of 
+  <div class="inline-formula">
+   <span class="italic">α</span>
+  </div>, particularly in the tropics. However, the magnitude of ZAO in the tropics is small.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The following section will detail the differences from each of the prescribed ozone simulations, relative to the CCM. We will begin by discussing the relationship between PV and ozone in each simulation, followed by a detailed analysis of winter and springtime dynamics at high latitudes, focusing on the polar vortex in each hemisphere. All differences will be due to the nature of the specified ozone representation (all other boundary conditions and forcings being identical).</p>
+</sec>

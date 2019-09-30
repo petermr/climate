@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Scenario testing</div>
+ <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">Having effectively trained the model, in this section we assess how example combinations of the key drivers (climate, grazing pressure and wildfire) are expected to induce changes in sediment mobility, given the relationships learnt from historical data. First, using ANN2, after successfully predicting historical tree ring growth from historical growing season precipitation totals and average max and min daily temperatures (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>) (see Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>), two new tree ring growth futures were simulated based on two hypothetical climates (climate 1 &amp; 2) (see Methods and Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>) (Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>). Climate 1 growing season precipitation totals and max/min temperatures follow the trend set by long-term averages (1908–2015 AD). For comparison, climate 2 growing season temperatures increase by 4.5 °F by the end of the century based on future regional projections across a suite of climate models under a low emission scenario
+  <span class="sup">
+   <a ref-type="bibr" rid="CR68" href="#CR68">68</a>
+  </span>.
+  <div id="Fig2" class="fig">
+   <span class="label">Figure 2</span>
+   <div class="caption">
+    <p>Results from training network ANN2 simulating the relationship between growing season precipitation and temperature conditions with tree ring growth over the period 1908–1997 AD. Black line represents known historical tree ring growth index
+     <span class="sup">
+      <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+     </span> (smoothed 0.1 RLOESS), grey line is simulated tree ring growth based on the trained network.
+    </p>
+   </div>
+   <div xlink:href="41598_2019_40429_Fig2_HTML" id="d29e576" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <div id="Fig3" class="fig">
+   <span class="label">Figure 3</span>
+   <div class="caption">
+    <p>Simulated tree ring growth indices based on two different climate scenarios: (
+     <span class="bold">a</span>) Climate 1 (long-term averages), (
+     <span class="bold">b</span>) Climate 2 (low emission conditions with gradually increasing temperatures (see Methods). Mean (black) and standard errors (grey dashed) were calculated using 102 repeats. Multiple repeats ensured that the simulated dataset was not driven by random extreme values.
+    </p>
+   </div>
+   <div xlink:href="41598_2019_40429_Fig3_HTML" id="d29e591" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">Tree ring growth outputs across both climatic profiles produced results in line with theoretical expectations. After 8,000 model repeats, datasets which produced multiple extreme values outside of the bounds of the training set were excluded (see Methods); the mean and standard error were calculated with the remaining repeat datasets (Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>). Climate 1 shows a noisy signal with low-level sensitivity to precipitation and temperature changes (Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3a</a>) while the greater climatic stresses of climate 2 force a reduction in tree ring growth with time (Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3b</a>).
+ </p>
+ <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">Second, using the trained ANN1 and three levels of grazing pressure, simulated tree ring growth indices produced six future likelihoods for identifying deposition events in the near-surface sediments. Across both climate futures, an antiphase relationship between tree ring growth and the likelihood for sediment deposition (deposition event score) suggests sediment movement is largely driven by climatic conditions (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, see Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">6</a>). Under historical average climatic conditions (climate 1) a noisy signal is seen across all three combinations of grazing conditions with the output profile in general mirroring the signal found in the tree ring growth index (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4a,c,e</a>). Increased aridity (in climate 2), reduced the tree ring growth index with time, and similarly increased the likelihood of identifying a period of deposition in the sediment (i.e. higher deposition event score) (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4b,d,f</a>). This relationship is particularly visible under low grazing conditions but is less well-defined with noisy shallow peaks under higher levels of grazing pressure.
+  <div id="Fig4" class="fig">
+   <span class="label">Figure 4</span>
+   <div class="caption">
+    <p>ANN1 and ANN2 simulated output results based on two future climate scenarios and three different grazing pressures. Blue output refers to simulated tree ring growth index based on climate 1 and 2 hypothetical scenarios. Grey output demonstrates ANN1 likelihood of identifying a depositional event (ANN1 output is plotted as ‘deposition event score’ where relative high points correspond with an increased likelihood of identifying an episode of deposition in the sediment). Dotted lines depict mean values calculated after repeat runs were screened for optimum model performance, shaded area corresponds with standard error. Repeat runs were screened according to ability to predict the correct location of deposition events in the training dataset (see Methods).</p>
+   </div>
+   <div xlink:href="41598_2019_40429_Fig4_HTML" id="d29e625" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">Third, to explore the added impact of increased grazing pressure (above background levels) and wildfire frequency, additional grazing pressure was added to low and moderate grazing regimes for a 10-year period (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5</a> brown bars) and wildfires were added when average max temperatures &gt;80 °F (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5</a> red bars). Temperature is considered a strong determinant of fire frequency in the Great Plains
+  <span class="sup">
+   <a ref-type="bibr" rid="CR69" href="#CR69">69</a>
+  </span>. Under low grazing conditions, an increase in pressure results in a lagged-system response with a notable increase in the likelihood to identify episodes of sediment deposition (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5a</a>). By contrast, when background grazing conditions are already at moderate levels, or when climates are tending towards more arid conditions, an increase in grazing pressure does not alter the model projections (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5c,e,g</a>); the signal is driven by climatic disturbances as demonstrated in the tree ring growth index. Additional grazing pressure was not added to the already heavily grazed scenarios (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5i–l</a>).
+  <div id="Fig5" class="fig">
+   <span class="label">Figure 5</span>
+   <div class="caption">
+    <p>Output results when new scenarios of climatic conditions, grazing pressure and wildfire occurrence are combined over a 100-year period. Deposition event scores are presented as mean ± standard error following 5,000 repeats. Repeat runs were screened according to ability to predict the correct location of deposition events in the training dataset (see Methods). Six different disturbance scenarios (see Methods) are plotted across the 4 columns for each of the 3 different grazing pressure levels (Low grazing: 
+     <span class="bold">a–d</span>, Moderate grazing: 
+     <span class="bold">e–h</span>, Heavy grazing: 
+     <span class="bold">i–l</span>). Column 1: compares scenarios 1 and 2. Column 2: compares scenarios 1 and 3. Column 3: compares scenarios 4 and 5. Column 4: compares scenarios 4 and 6. Blue output: simulated tree ring growth index based on either climate 1or 2. Grey output: ANN1 OSL output based on climate-only scenarios. Green output: includes added grazing pressure scenarios. Brown bar depicts period of increased grazing pressure. Red output: includes wildfire. Red bars represent years with wildfire occurrence.
+    </p>
+   </div>
+   <div xlink:href="41598_2019_40429_Fig5_HTML" id="d29e665" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">A complex relationship with wildfire occurrence shows a marginal increase in the deposition event score following a wildfire event. Typically, wildfire occurrence results in an amplified likelihood of sediment deposition 1–2 years after the event and tends to follow the general trend of the output profile defined by the climatic conditions. An increased amplification of the sediment deposition likelihood associated with wildfire is particularly apparent under low grazing conditions with consecutive wildfires (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5b,d</a>). Under heavily grazed conditions, wildfire events do not cause a statistical increase in the likelihood of identifying sediment mobility in the record, except for following a series of three wildfire events (Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5j</a>: 2021–2024 AD) under average climatic conditions (climate 1).
+ </p>
+</sec>

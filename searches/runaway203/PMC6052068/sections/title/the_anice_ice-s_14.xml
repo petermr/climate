@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec15" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">The ANICE ice-sheet model</div>
+ <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">The ANICE ice-sheet model is a 3-D thermo-mechanical finite difference ice-sheet model and is part of the IMAU-ICE (Institute for Marine and Atmospheric Research Utrecht) ice-sheet model package. The model we use here is the same version as has been used in previous publications
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>,
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span>. In ANICE, ice velocities are calculated on land with the SIA and uses the SSA for sliding, i.e. ice streams and shelf velocities. A Mohr–Coulomb plastic law paramaterisation is employed to derive basal stresses that are used to derive the SSA velocities on land
+  <span class="sup">
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>,
+   <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+  </span>.
+ </p>
+ <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">The surface mass balance is determined with monthly fields of precipitation, temperature and insolation at the top of the atmosphere. The precipitation is adjusted with surface temperature. Surface melting is calculated with an insolation temperature melt model, for which a linear relation is used for temperature combined with the net incoming short-wave radiation, using an internally calculated albedo
+  <span class="sup">
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span>. Sub-shelf melting underneath the ice shelves is included as a heat-transfer equation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+  </span>:
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$M_{{\mathrm{shelf}}} = \rho _{\mathrm{w}}c_{{\mathrm{pO}}}\gamma _{\mathrm{T}}F_{{\mathrm{melt}}}\left( {T_{{\mathrm{oc}}} - T_{\mathrm{f}}} \right)^n/L\rho _{\mathrm{i}}.$$\end{document}</span>
+    <div id="M8" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">M</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">shelf</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">w</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">c</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">pO</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">γ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">T</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">F</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">melt</span>
+      </div>
+     </div>
+     <div class="msup">
+      <div class="mrow">
+       <div close=")" open="(" separators="" class="mfenced">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">oc</span>
+          </div>
+         </div>
+         <span class="mo">-</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">f</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">∕</span>
+     <span class="mi">L</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2018_5179_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">The different parameters are described in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>. For ANICE, 
+  <span class="italic">n</span> = 1. Here, 
+  <span class="italic">T</span>
+  <sub>oc</sub> is the ocean temperatures of each GCM that are vertically interpolated to the depth of the ice shelves and 
+  <span class="italic">T</span>
+  <sub>f</sub> is the freezing temperature
+  <span class="sup">
+   <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+  </span>:
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$T_{\mathrm{f}} = 0.0939 - 0.057\cdot S_{\mathrm{O}} + 7.64 \times 10^{ - 4}z_{\mathrm{b}},$$\end{document}</span>
+    <div id="M10" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">f</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">0.0939</span>
+     <span class="mo">-</span>
+     <span class="mn">0.057</span>
+     <span class="mo">⋅</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">O</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mn">7.64</span>
+     <span class="mo">×</span>
+     <span class="mn">1</span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mn">0</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">-</span>
+       <span class="mn">4</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">b</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2018_5179_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>with 
+  <span class="italic">S</span>
+  <sub>O</sub> is the mean value for the salinity of the ocean and 
+  <span class="italic">z</span>
+  <sub>b</sub> is the bottom of the ice-shelf below sea level. The different parameters are described in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>. For exposed ice-shelves and open ocean grid points, additional melt rates of 3 and 5 m year
+  <span class="sup">−1</span> are included, respectively. No additional calving law is applied.
+ </p>
+</sec>

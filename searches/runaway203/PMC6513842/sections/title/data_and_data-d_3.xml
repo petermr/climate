@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data and data-driven model</div>
+ <p id="Par6" xmlns="http://www.w3.org/1999/xhtml">For the purpose stated above we restrict our consideration by the widely used LR04 stack of benthic 
+  <span class="italic">δ</span>
+  <span class="sup">18</span>O records
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+  </span>. This stack accumulates data from 57 sites scattered over the globe and reflects the global average of total climate changes. We took only the last part of the time series beginning form 2.6 Ma when the glacial-interglacial cycles became regular
+  <span class="sup">
+   <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+  </span>. Additionally, for technical reasons, we made this time series uniformly sampled with 2.5 kyr time step by means of applying the 5 kyr sliding window (see Methods). The latter smoothing does not disturb much the structure of the cycles, while just slightly decreases short-term noise in the data. The time series used for analysis together with its wavelet transform are shown in Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1(A,B)</a>.
+ </p>
+ <p id="Par7" xmlns="http://www.w3.org/1999/xhtml">The data-driven model is constructed in the form of stochastic discrete dynamical system following the works refs
+  <span class="sup">
+   <a ref-type="bibr" rid="CR12" href="#CR12">12</a>–
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+  </span>.
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${X}_{n}=f({X}_{n-1},\,\cdots \,{X}_{n-L},{t}_{n},{{\bf{q}}}_{n})+g({X}_{n-1},\,\cdots {X}_{n-L}){\zeta }_{n}\mathrm{.}$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">X</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">f</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">X</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <span width=".25em" class="mspace"/>
+     <span class="mo">⋯</span>
+     <span width=".25em" class="mspace"/>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">X</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+       <span class="mo">−</span>
+       <span class="mi">L</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">q</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">+</span>
+     <span class="mi">g</span>
+     <div class="mrow">
+      <span stretchy="true" class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">X</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">n</span>
+         <span class="mo">−</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span width=".25em" class="mspace"/>
+       <span class="mo">⋯</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">X</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">n</span>
+         <span class="mo">−</span>
+         <span class="mi">L</span>
+        </div>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">)</span>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ζ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mn">.</span>
+    </div>
+    <div xlink:href="41598_2019_43867_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div list-type="simple" class="list">
+   <div class="list-item">
+    <span class="label">(i)</span>
+    <p id="Par8">The first term here is the deterministic evolution operator (dynamical system) mapping some history of climate’s states of duration 
+     <span class="italic">L</span> (the model dimension) to the next state. This term describes the internal dynamical properties of the system. The second term parameterizes the stochastic forcing of the model, which is needed to account for processes with time scales under the time resolution of our data, e.g. the millennial and centennial dynamics. Such a “noise” was shown to play a crucial role in the ice ages (see e.g. refs
+     <span class="sup">
+      <a ref-type="bibr" rid="CR5" href="#CR5">5</a>,
+      <a ref-type="bibr" rid="CR7" href="#CR7">7</a>,
+      <a ref-type="bibr" rid="CR9" href="#CR9">9</a>
+     </span>), so the random perturbations are expected to be an essential part of the model. In the suggested model form such a noise can be state-dependent due to the product of the function 
+     <span class="italic">g</span> and uncorrelated Gaussian noise 
+     <span class="italic">ζ</span>. Both the functions 
+     <span class="italic">f</span> and 
+     <span class="italic">g</span> are unknown 
+     <span class="italic">a priori</span> and found by means of Bayesian machine learning techniques. In this work we define them via universal approximators (see Methods for details), that makes the form of the model Eq. 
+     <a rid="Equ1" ref-type="" href="#Equ1">1</a> quite general and able to describe a wide class of dynamical systems.
+    </p>
+   </div>
+   <div class="list-item">
+    <span class="label">(ii)</span>
+    <p id="Par9">Next, it was proposed by a number of theories of the MPT that the long-term Cenozoic cooling – e.g. a secular decrease in atmospheric pCO
+     <sub>2</sub>
+     <span class="sup">
+      <a ref-type="bibr" rid="CR15" href="#CR15">15</a>
+     </span>, global mean temperature
+     <span class="sup">
+      <a ref-type="bibr" rid="CR16" href="#CR16">16</a>
+     </span>, deep water temperature
+     <span class="sup">
+      <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+     </span> – have brought the climate system to some critical transition after which the nonlinear oscillations of ice sheets became feasible. To reflect possible changes of this type, we make the deterministic part 
+     <span class="italic">f</span> of the model depend explicitly on time 
+     <span class="italic">t</span>
+     <sub>
+      <span class="italic">n</span>
+     </sub> by some modification of standard functions used for its approximation (see Methods). Such a time-dependence allows us to study a slow evolution of the climate system in time and thus to reveal dynamical mechanisms underlying the observed transitions. Moreover, it gives us an opportunity to extrapolate the model beyond the observations and predict the dynamical regime over some time interval in future
+     <span class="sup">
+      <a ref-type="bibr" rid="CR12" href="#CR12">12</a>–
+      <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+     </span>.
+    </p>
+   </div>
+   <div class="list-item">
+    <span class="label">(iii)</span>
+    <p id="Par10">The last factor Eq. 
+     <a rid="Equ1" ref-type="" href="#Equ1">1</a> depends on is an orbital forcing 
+     <span class="bold">q</span> – the Earth’s insolation variations. This signal is affected primarily by three astronomical parameters: precession of both the Earth’s axis and orbit yielding together 19 and 23 kyr spectral peaks, obliquity oscillations with the 41 kyr dominating period, and less-powerful variations of the Earth’s orbit eccentricity contributing to time scales around 100 kyrs (see power spectra of the insolation in Fig. 
+     <a rid="MOESM1" ref-type="media" href="#MOESM1">S3</a>). Although the insolation signals have the same spectral components over the globe, the relationships between different harmonics are latitude-dependent: in particular, the obliquity peaks being strong far from the equator vanish in the tropics. We take into account such a dependence by using a two-dimensional forcing 
+     <span class="bold">q</span> taken from the dataset described in ref.
+     <span class="sup">
+      <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+     </span> consisting of July insolation time series at the tropical (15°N) and sub-polar (65°N) latitudes.
+    </p>
+   </div>
+  </div>
+ </p>
+ <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">The complexity of the model Eq. 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a> is determined by a set of the structural parameters – the dimension 
+  <span class="italic">L</span> and the numbers of nonlinear elements in the approximators of both functions 
+  <span class="italic">f</span> and 
+  <span class="italic">g</span> parameterizing the deterministic and stochastic parts respectively (see Methods and Supplementary Information (SI)). For the selection of the optimal model’s structure, we use Bayesian methodology: the optimal model is the one that maximizes the probability of generating the time series in hand; see the section Methods for details and practical implementation of the approach.
+ </p>
+ <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">Regarding the LR04 dataset analysis presented here, the model Eq. 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a> was trained with different sets of structural parameters. Then the different models were compared in accordance with the Bayesian criterion (see methods and SI) and the top-10 best models were considered further. All the models considered demonstrate qualitatively very similar results as well as the same mechanism of the MPT; therefore, hereinafter we illustrate the results using the best model only.
+ </p>
+</sec>

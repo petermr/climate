@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Species distribution modeling</div>
+ <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Based on the occurrence data (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>), we calibrated Ecological Niche Models (ENMs) to estimate current and future potential distribution for each lizard species. To mitigate oversampling effects in our model, occurrences were re-sampled to one point per pixel with respect to the environmental grids. Coordinates were divided into two groups for calibration and other evaluation, based on four quadrants with similar numbers of points, using two off-diagonal quadrants for calibration and two for evaluation. ENMs were developed using Maxent 3.3.3k
+  <span class="sup">
+   <a ref-type="bibr" rid="CR70" href="#CR70">70</a>
+  </span>, a presence-background software that estimates environmental suitability via an index of similarity that resembles a heterogeneous occurrence process or logistic regression function
+  <span class="sup">
+   <a ref-type="bibr" rid="CR70" href="#CR70">70</a>,
+   <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+  </span>. We used Maxent with clamping and extrapolation turned off (i.e., no prediction outside the range of environmental conditions in the calibration areas). To facilitate interpretations, we used the relative probability of presence as a proxy of environmental suitability
+  <span class="sup">
+   <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+  </span>. Suitable area for each species was estimated as a Boolean (presence/absence) map that was thresholded based on the minimum training presence
+  <span class="sup">
+   <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+  </span>. To determine the model parametrization with the best fit to the data available, we assessed six models for each species under different regularization multiplier values (i.e., 0.5, 1, 5, 10, 15, and 20)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+  </span>. Then, we assessed AIC (Akaike Information Criterion; implemented in ENMTools
+  <span class="sup">
+   <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+  </span>) values to choose the model with the best performance (i.e., descriptive-model evaluation; Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S10</a>). Once the models with the best fit were selected, we assessed their performance using the software PartialROC
+  <span class="sup">
+   <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+  </span>, considering an α = 0.05 to determine whether models anticipate independent occurrences better than by random expectations.
+ </p>
+ <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">To determine changes between the current and future potential distributions, we identified the expansion, contraction, and stability (‘no change’) of areas predicted climatically suitable by using the SDM toolbox in ArcGIS v.10.2
+  <span class="sup">
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>. Direction of the potential distributional changes was calculated based on the centroid of the species’ potential ranges. We applied Rayleigh’s Test of Uniformity
+  <span class="sup">
+   <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+  </span> to compare direction of centroid shifts vs a uniform circular distribution reflecting a null hypothesis of random centroid shifts. Rayleigh’s statistic quantifies the angular dispersion among the vectors from 0 (representing uniform dispersion) to 1 (indicating complete concentration in a single direction).
+ </p>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Finally, to determine the spatial relationships between oviparous and viviparous species, we quantified the range overlap among the predicted distributions of oviparous and viviparous species. These calculations were made using the predicted present-day and future SDMs under GISS-ER and the MIROC5 models and each greenhouse emission scenarios (RCP 2.6 and 8.5).</p>
+</sec>

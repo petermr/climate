@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec15" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Process challenges</div>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">At the process level, a number of challenges arise due to the time-dependent nature of the processes giving rise to strong autocorrelation (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 1) and time delays (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 2). Next, ubiquitous nonlinearity (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 3), also in the form of state-dependence (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 4) and synergy (see Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3c</a>), requires a careful selection of the estimation method (see nonlinear methods in method overview section). Note that sometimes variables from model output can be deterministically related via a set of equations, which poses a serious problem for many, but not all, causal methods
+  <span class="sup">
+   <a ref-type="bibr" rid="CR12" href="#CR12">12</a>,
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span>. As mentioned in the jet stream example, a geoscientific time series will typically contain signals from different processes acting on vastly different time scales, e.g., oceanic and atmospheric ones, which may need to be disentangled to better interpret causal links (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 5). A basic assumption in a number of statistical methods used in causal inference frameworks (e.g., linear regression) is the assumption that the noise distribution is Gaussian, which is violated by processes featuring heavy tails and extreme events (e.g., precipitation; Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 6). On the other hand, some methods turn non-Gaussianity into an advantage
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span> (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2d</a>).
+  <div id="Fig4" class="fig">
+   <span class="label">Fig. 4</span>
+   <div class="caption">
+    <p>Methodological challenges for causal discovery in complex spatio-temporal systems such as the Earth system. At the process level, autocorrelation (1), time delays (2), and nonlinearity (3), also in the form of state-dependence and synergistic behavior (4), require a careful selection of the estimation method. Further, a time series might contain signals from different processes acting on vastly different time scales (5). Noise distributions (6) can feature heavy tails and extreme-values which challenges the ubiquitous methodological Gaussian assumption. At the data aggregation level, the most basic challenge is the definition of the causally relevant variables (7) representing the subprocesses of interest from spatio-temporally gridded data (e.g., from satellites) or station data measurements. Unobserved variables (8) need to be taken into account regarding a causal interpretation of the estimated graph. Time sub-sampling (9) and aggregation (10) can make causal links appear contemporaneous and even cyclic due to insufficient time resolution (e.g., due to the standard practice of time averaging depicted here in a time series graph
+     <span class="sup">
+      <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+     </span>). Causal inferences are degraded due to measurement errors (11) such as observational noise, systematic biases (first few samples), or even missing values (grey samples), that may be causally related to the measured process, constituting a form of selection bias (12). Some datasets are of a discrete type (13), either due to quantization, or as categorical data, e.g., an index representing different weather regimes, and require methods that deal with discrete, and also mixed data types. Next to measurement value uncertainties, for paleo-climatic data even the measurement time points typically are given only with uncertainty (14), which especially challenges methods exploiting time-order. At the computational and statistical level, the scalability of methods, regarding both sample size (15) and high dimensionality (16) due to the number of variables as well as large time delays, is of crucial practical relevance for computational run-time and detection power. Finally, uncertainty estimation (17, width of links), also taking into account data uncertainties, poses a major challenge
+    </p>
+   </div>
+   <div xlink:href="41467_2019_10105_Fig4_HTML" id="d29e2545" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+</sec>

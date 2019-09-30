@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">MATERIALS AND METHODS</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ice sheet model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used PISM (
+   <a rid="R55" ref-type="bibr" href="#R55">
+    <span class="italic">55</span>
+   </a>, 
+   <a rid="R56" ref-type="bibr" href="#R56">
+    <span class="italic">56</span>
+   </a>) to carry out regional simulations of the WAIS at a horizontal resolution of 4 km and a minimum vertical resolution of 7 m. The model applies a superposition of the shallow ice approximation (
+   <a rid="R35" ref-type="bibr" href="#R35">
+    <span class="italic">35</span>
+   </a>) and the shallow shelf approximation (
+   <a rid="R36" ref-type="bibr" href="#R36">
+    <span class="italic">36</span>
+   </a>, 
+   <a rid="R37" ref-type="bibr" href="#R37">
+    <span class="italic">37</span>
+   </a>) of the full-Stokes stress balance (
+   <a rid="R38" ref-type="bibr" href="#R38">
+    <span class="italic">38</span>
+   </a>). This hybrid scheme ensures a smooth transition between different ice sheet flow regimes and allows for stress transmission across the grounding line. A linear interpolation of the freely evolving grounding line and, accordingly, interpolated basal friction enable realistic grounding line motion also at medium or low resolution (
+   <a rid="R40" ref-type="bibr" href="#R40">
+    <span class="italic">40</span>
+   </a>). Basal friction was calculated using a nonlinear Weertman-type sliding law (
+   <a rid="R38" ref-type="bibr" href="#R38">
+    <span class="italic">38</span>
+   </a>) with a sliding exponent of 3/4 in combination with a Mohr-Coulomb model for plastic till (
+   <a rid="R57" ref-type="bibr" href="#R57">
+    <span class="italic">57</span>
+   </a>, 
+   <a rid="R58" ref-type="bibr" href="#R58">
+    <span class="italic">58</span>
+   </a>) that accounts for the effect of evolving ice thickness and the associated change in overburden pressure on the basal till (
+   <a rid="R59" ref-type="bibr" href="#R59">
+    <span class="italic">59</span>
+   </a>). The till friction angle was parameterized with bed elevation, as in (
+   <a rid="R60" ref-type="bibr" href="#R60">
+    <span class="italic">60</span>
+   </a>), and the basal pore water pressure was limited to a maximum fraction of 0.97 of the overburden pressure. This friction scheme ensures a continuous transition from quasi–nonslip regimes in elevated regions to the marine areas where basal resistance was low. We used a kinematic first-order calving law (
+   <a rid="R61" ref-type="bibr" href="#R61">
+    <span class="italic">61</span>
+   </a>, 
+   <a rid="R62" ref-type="bibr" href="#R62">
+    <span class="italic">62</span>
+   </a>), with a prescribed proportionality factor of 10
+   <span class="sup">17</span> m·s and a minimum ice thickness at the calving front of 200 m. The physically motivated calving law takes into account the eigenvalues of the horizontal strain-rate tensor, allowing for geographically confined ice shelves and dynamic calving front positions. A physical stress boundary condition was applied at the calving front to close the equations of the shallow shelf approximation (
+   <a rid="R56" ref-type="bibr" href="#R56">
+    <span class="italic">56</span>
+   </a>).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Boundary conditions</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The landward boundary of our model domain was chosen along present-day East Antarctic ice divides (
+   <a rid="R63" ref-type="bibr" href="#R63">
+    <span class="italic">63</span>
+   </a>) and hence far away from the marine parts of the WAIS. Along this fixed boundary, ice velocities were set to zero, whereas the coastal ice margin was free to evolve. The perturbation simulations were initialized from an ice sheet that was spun up for 100,000 model years under present-day constant conditions of the ocean, atmosphere, and ice and bed geometry, i.e., an ice sheet that is in thermal equilibrium with its boundaries. Ice and bed geometry was fixed during spin-up. Letting the ice evolve freely afterward, a marine ice sheet instability starts to unfold, originating from TG. After 100 years, the acceleration of ice loss from the PIG and TG basins was well within the range of present-day observations (
+   <a rid="F2" ref-type="fig" href="#F2">Fig. 2</a>) (
+   <a rid="R1" ref-type="bibr" href="#R1">
+    <span class="italic">1</span>
+   </a>). We chose this point in time as the starting point of the perturbation through the local addition of ice. The mass deposition took place in a sector covering the coastal region of PIG and TG, which spans the area between −110° and − 97° of longitude and − 76.5° and − 74.5° of latitude (
+   <a rid="F1" ref-type="fig" href="#F1">Fig. 1</a>), and was restricted to ice-covered areas that were grounded at the onset of the perturbation. The perturbations were applied for durations of 10, 15, 20, 25, 30, 35, 40, 45, and 50 years, and rates of additional accumulation in that region ranged from 62.5 to 875 Gt year
+   <span class="sup">−1</span>, yielding a total of 92 simulations. After the end of the perturbation pulse, the original present-day accumulation rates were applied, and the simulations were integrated for 3000 years to investigate the long-term stability of the evolving ice sheet.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Initial bed and ice topography was obtained from the Bedmap2 dataset (
+   <a rid="R64" ref-type="bibr" href="#R64">
+    <span class="italic">64</span>
+   </a>). Atmospheric boundary conditions stem from RACMO [version 2.3p2 (
+   <a rid="R43" ref-type="bibr" href="#R43">
+    <span class="italic">43</span>
+   </a>)]. RACMO is forced by ERA-Interim reanalysis data at the lateral boundaries, simulating the interaction of the ice sheet with its atmospheric environment, involving relevant processes such as solid precipitation, snow sublimation, and surface meltwater runoff. We averaged the resulting fields of surface mass balance and temperature over the historic period (1979–2016) to obtain a present-day representation of the atmosphere, which was prescribed in the PISM simulations. Oceanic boundary conditions (temperature and sub–ice shelf melt rates) were calculated via PICO (
+   <a rid="R41" ref-type="bibr" href="#R41">
+    <span class="italic">41</span>
+   </a>), which, as a module of PISM, simulates the basic vertical overturning circulation in ice shelf cavities. PICO uses a boundary layer melt formulation and extends the box model approach by Olbers and Hellmer (
+   <a rid="R65" ref-type="bibr" href="#R65">
+    <span class="italic">65</span>
+   </a>) to two horizontal dimensions, following the shape of the grounding line and the calving front. This way, the model qualitatively reproduces the typical pattern of ice shelf melt, with high melting at the grounding line and low melting or refreezing toward the calving front. PISM supplies the evolving ice shelf geometry to PICO, which, in turn, adjusts in each time step the ocean box geometry to the ice shelf geometry. PICO was forced by circum-Antarctic observations of ocean temperature and salinity (
+   <a rid="R42" ref-type="bibr" href="#R42">
+    <span class="italic">42</span>
+   </a>), averaged over the period 1975–2012. The resulting PICO melt rates capture the wide range of observed present-day average melt rates for the individual Antarctic ice shelves (
+   <a rid="R41" ref-type="bibr" href="#R41">
+    <span class="italic">41</span>
+   </a>).
+  </p>
+ </sec>
+</sec>

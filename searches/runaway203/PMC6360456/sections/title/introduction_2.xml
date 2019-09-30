@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="jame20790-sec-0001" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">1</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Introduction</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Comprehensive and detailed models of the global climate system, called atmosphere‐ocean general circulation models (AOGCMs), are essential tools to understand the climate system. Such an understanding strives to explain past, present, and future climate processes and their changes. This is especially relevant in the context of ongoing man‐made global change (IPCC, 
+  <a rid="jame20790-bib-0033" ref-type="ref" href="#jame20790-bib-0033">2013</a>). For the current global intercomparison of AOGCMs in the Coupled Model Intercomparison Project Phase 6 (CMIP6; Eyring et al., 
+  <a rid="jame20790-bib-0020" ref-type="ref" href="#jame20790-bib-0020">2016</a>), it is expected that simulations from several dozen AOGCMs will be submitted for analysis. The same models will also be used to make projections of the future climate over the coming century, providing a vital service to policy‐makers and society at large.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The physical climate model HadGEM3 (Hadley Centre Global Environment Model 3) has been developed by the Met Office Hadley Centre in the United Kingdom since the late 2000s. It was always intended that it could be configured at different spatial resolutions and with varying degrees of complexity (e.g., number of physical and biogeophysical processes included) depending on the research questions (Hewitt et al., 
+  <a rid="jame20790-bib-0030" ref-type="ref" href="#jame20790-bib-0030">2011</a>). Here we report on a new configuration, developed at a relatively coarse horizontal resolution, N96ORCA1, for use as the physical core of the UK Earth System Model (UKESM1). Because of the added process complexity in an Earth system model (ESM), and the need to advect many additional tracers, the previously existing medium‐resolution version of HadGEM3, N216ORCA025 (Williams et al., 
+  <a rid="jame20790-bib-0075" ref-type="ref" href="#jame20790-bib-0075">2017</a>) would have been computationally too expensive for this purpose. The horizontal resolutions are 135 km in the atmosphere and 1° in the ocean for N96ORCA1 and 60 km/0.25° for N216ORCA025.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In this article we give a first description of the physical low‐resolution configuration N96ORCA1, comprising atmosphere, ocean, sea ice, and land surface models. Within this special issue of 
+  <span class="italic">JAMES</span> on HadGEM3 GC3 and UKESM1, there are, or will be, a number of companion papers exploring in greater depth many of the aspects that we mention here. For instance, Williams et al. (
+  <a rid="jame20790-bib-0075" ref-type="ref" href="#jame20790-bib-0075">2017</a>) describe the medium‐resolution atmosphere, ocean, sea ice, and land surface model configuration. A forthcoming paper will describe the performance of UKESM1, which is based on N96ORCA1 and represents interactively the global carbon cycle, including dynamic vegetation and a model for stratosphere‐troposphere chemistry. Further papers in preparation will evaluate the performance of the preindustrial (PI) control simulations, the historical simulations for CMIP6, radiative forcing and climate sensitivity, etc.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In the process of developing and evaluating the coarse‐resolution version, N96ORCA1, in relation to the preexisting resolutions, N216ORCA025 and N96ORCA025, 
+  <span class="italic">traceability</span> was of paramount importance. By traceability we mean that ideally the scientific settings and adjustments of HadGEM3 are not dependent on the chosen spatial resolution. Excepted are parameterizations of processes that are resolved at higher resolution, for example, mesoscale ocean eddies that need to be fully parameterized at 1° resolution but less so at 0.25° resolution. For any resolution‐specific settings that are necessary, we have documented their motivation and their consequences carefully in the present paper. At the same time, we aimed at reproducing the observed, present‐day (PD) climate as closely as possible.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Changing the spatial resolution of a model can affect the scientific performance. For instance, Lauer et al. (
+  <a rid="jame20790-bib-0043" ref-type="ref" href="#jame20790-bib-0043">2018</a>) showed an improvement in—mostly intraday—rainfall variability over tropical regions with increasing resolution of the EC‐Earth atmosphere model (up to, but not beyond, ~0.4°). For diagnostics related to mean precipitation, Demory et al. (
+  <a rid="jame20790-bib-0015" ref-type="ref" href="#jame20790-bib-0015">2014</a>) found an improvement over the same range of resolutions in an earlier version of HadGEM3. At the same time, as we show in this paper (for the Southern Ocean), an increase in resolution does not necessarily lead to improved model performance.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Model biases (affecting mean values or variability) can have an effect on the future climate response, as assessed by evaluation of historical simulations against observations (e.g., Massonnet et al., 
+  <a rid="jame20790-bib-0049" ref-type="ref" href="#jame20790-bib-0049">2012</a>). Sometimes a relationship between model biases and future feedback responses, common across an ensemble of models, can be exploited to constrain the future response of a given process (e.g., Wenzel et al., 
+  <a rid="jame20790-bib-0073" ref-type="ref" href="#jame20790-bib-0073">2014</a>). However, it is not a given that a reliable model performance during the observational record equates to a realistic future projection response (Knutti et al., 
+  <a rid="jame20790-bib-0039" ref-type="ref" href="#jame20790-bib-0039">2010</a>). In addition, there are a number of long‐standing biases, common to many climate models, that may predicate an unrealistic future response compared to what would be seen if the bias were corrected through physically reasonable improvements. These include sea ice biases and impacts on the future sea ice albedo feedback (Qu &amp; Hall, 
+  <a rid="jame20790-bib-0054" ref-type="ref" href="#jame20790-bib-0054">2007</a>), biases in surface‐atmosphere interaction and the magnitude of future soil moisture feedbacks (Hohenegger et al., 
+  <a rid="jame20790-bib-0031" ref-type="ref" href="#jame20790-bib-0031">2009</a>), and systematic PD cloud biases influencing future cloud feedbacks (Trenberth &amp; Fasullo, 
+  <a rid="jame20790-bib-0069" ref-type="ref" href="#jame20790-bib-0069">2010</a>). By analyzing such biases (and the impact of different spatial resolutions) we hope to lead the way to their further understanding and reduction.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The component models of HadGEM3 are the Unified Model (UM) for the atmosphere, Nucleus for European Modeling of the Ocean (NEMO) for the ocean, CICE for the sea ice, and JULES for land surface processes. Hewitt et al. (
+  <a rid="jame20790-bib-0030" ref-type="ref" href="#jame20790-bib-0030">2011</a>) provide a detailed account of how these component models interact through the OASIS3‐MCT coupler. The present low‐resolution configuration of HadGEM3 is based on the latest release of the global coupled configuration, GC3.1 (Williams et al., 
+  <a rid="jame20790-bib-0075" ref-type="ref" href="#jame20790-bib-0075">2017</a>). This comprises the latest configurations for the atmosphere, GA7.1 (Walters et al., 
+  <a rid="jame20790-bib-0071" ref-type="ref" href="#jame20790-bib-0071">2017</a>); the ocean, GO6.0 (Storkey et al., 
+  <a rid="jame20790-bib-0067" ref-type="ref" href="#jame20790-bib-0067">2018</a>); the sea ice, GSI8.1 (Rae et al., 
+  <a rid="jame20790-bib-0055" ref-type="ref" href="#jame20790-bib-0055">2015</a>; Ridley et al., 
+  <a rid="jame20790-bib-0059" ref-type="ref" href="#jame20790-bib-0059">2018</a>); and the land surface, GL7.0 (Walters et al., 
+  <a rid="jame20790-bib-0071" ref-type="ref" href="#jame20790-bib-0071">2017</a>). Both the atmosphere and the ocean models use a common vertical resolution across different horizontal resolutions (GA7.1: 85 levels, GO6.0: 75 levels).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The following section describes the development process of N96ORCA1 and details how traceability across resolutions was ensured. The bulk of this paper is dedicated to evaluating the model in section 
+  <a rid="jame20790-sec-0003" ref-type="sec" href="#jame20790-sec-0003">3</a>, beginning with the global radiation budget and progressing from the ocean, the sea ice, the atmosphere, and the land surface to coupled atmosphere‐ocean variability. We present our conclusions in section 
+  <a rid="jame20790-sec-0011" ref-type="sec" href="#jame20790-sec-0011">4</a>.
+ </p>
+</sec>

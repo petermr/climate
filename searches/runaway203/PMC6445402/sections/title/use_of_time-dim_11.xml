@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Use of time-dimensional singular vectors as predictors</div>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">In regression studies, it often proves advantageous to use as predictors a set of standardized and mutually uncorrelated variables, like 
+  <span class="italic">p</span>
+  <sub>1</sub>, 
+  <span class="italic">p</span>
+  <sub>2</sub>, ..., 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">m</span>
+  </sub> (their time series 
+  <span class="bold">p</span>
+  <sub>i</sub>, 
+  <span class="italic">i</span> = 1, 2, ..., 
+  <span class="italic">m</span>, are given by columns of matrix 
+  <span class="bold">P</span> and represent rescaled time-dimensional (left) singular vectors of 
+  <span class="bold">X</span>), instead of the original variables that lack these properties, leading to more tractable and easier to interpret results. Indeed, consider the regression model:
+  <div id="Equ14" class="disp-formula">
+   <span class="label">14</span>
+   <div class="alternatives">
+    <span id="M43" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ y={a}_1{p}_1+{a}_2{p}_2+\dots +{a}_m{p}_m+\varepsilon $$\end{document}</span>
+    <div id="M44" display="block" class="math">
+     <span class="mi">y</span>
+     <span class="mo">=</span>
+     <div class="msub">
+      <span class="mi">a</span>
+      <span class="mn">1</span>
+     </div>
+     <div class="msub">
+      <span class="mi">p</span>
+      <span class="mn">1</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span class="mi">a</span>
+      <span class="mn">2</span>
+     </div>
+     <div class="msub">
+      <span class="mi">p</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mo">…</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span class="mi">a</span>
+      <span class="mi">m</span>
+     </div>
+     <div class="msub">
+      <span class="mi">p</span>
+      <span class="mi">m</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mi">ε</span>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equ14.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">ε</span> is a random error and, for simplicity, the predictand 
+  <span class="italic">y</span> is assumed standardized. The vector of unknown regression coefficients 
+  <span class="bold">a</span> = (
+  <span class="italic">a</span>
+  <sub>1</sub>, 
+  <span class="italic">a</span>
+  <sub>2</sub>, …, 
+  <span class="italic">a</span>
+  <sub>
+   <span class="italic">m</span>
+  </sub>)
+  <span class="sup">
+   <span class="italic">T</span>
+  </span> has to be found by the least-squares best fit to the system
+  <div id="Equh" class="disp-formula">
+   <div class="alternatives">
+    <span id="M45" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{y}=\mathbf{Pa} $$\end{document}</span>
+    <div id="M46" display="block" class="math">
+     <span mathvariant="bold" class="mi">y</span>
+     <span class="mo">=</span>
+     <span mathvariant="bold" class="mi">Pa</span>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equh.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="bold">y</span> is an 
+  <span class="italic">n</span>-dimensional vector—a column that contains the standardized data sample for variable 
+  <span class="italic">y</span>. Dividing normal equations
+  <div id="Equi" class="disp-formula">
+   <div class="alternatives">
+    <span id="M47" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \left({\mathbf{P}}^{\mathrm{T}}\mathbf{P}\right)\mathbf{a}={\mathbf{P}}^{\mathrm{T}}\mathbf{y} $$\end{document}</span>
+    <div id="M48" display="block" class="math">
+     <span stretchy="false" class="mo">(</span>
+     <div class="msup">
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">P</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">T</span>
+       </div>
+      </div>
+     </div>
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">P</span>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">a</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msup">
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">P</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">T</span>
+       </div>
+      </div>
+     </div>
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">y</span>
+     </div>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equi.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>by 
+  <span class="italic">n</span>–1, we find, since 
+  <span class="bold">P</span>
+  <span class="sup">T</span>
+  <span class="bold">P</span>/(
+  <span class="italic">n</span> −1) = 
+  <span class="bold">I</span> (where 
+  <span class="bold">I</span> is an 
+  <span class="italic">n</span> × 
+  <span class="italic">n</span> identity matrix),
+  <div id="Equj" class="disp-formula">
+   <div class="alternatives">
+    <span id="M49" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{a}={\mathbf{P}}^{\mathrm{T}}\mathbf{y}/\left(n-1\right)={\left({\rho}_1,{\rho}_2,\dots, {\rho}_m\right)}^T, $$\end{document}</span>
+    <div id="M50" display="block" class="math">
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">a</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msup">
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">P</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">T</span>
+       </div>
+      </div>
+     </div>
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">y</span>
+     </div>
+     <div class="mrow">
+      <span fence="true" maxsize="1.2em" minsize="1.2em" stretchy="true" symmetric="true" class="mo">/</span>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <span class="mi">n</span>
+      <span class="mo">−</span>
+      <span class="mn">1</span>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msup">
+      <div class="mrow">
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ρ</span>
+         </div>
+         <span class="mn">1</span>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ρ</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">,</span>
+        <span class="mo">…</span>
+        <span class="mo">,</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">ρ</span>
+         </div>
+         <span class="mi">m</span>
+        </div>
+        <span class="mo">)</span>
+       </div>
+      </div>
+      <span class="mi">T</span>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equj.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">ρ</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>, for each 
+  <span class="italic">i</span> = 1, 2, ..., 
+  <span class="italic">m</span>, is the sample correlation coefficient between 
+  <span class="italic">p</span>
+  <sub>i</sub> and 
+  <span class="italic">y</span> (
+  <div id="IEq4" class="inline-formula">
+   <div class="alternatives">
+    <span id="M51" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {\rho}_i={p}_i^Ty/\left(n-1\right) $$\end{document}</span>
+    <div id="M52" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+      </div>
+      <span class="mi">i</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+      <span class="mi">i</span>
+      <span class="mi">T</span>
+     </div>
+     <span class="mi">y</span>
+     <div class="mrow">
+      <span class="mo">/</span>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <span class="mi">n</span>
+      <span class="mo">−</span>
+      <span class="mn">1</span>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="10584_2018_2341_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, since 
+  <span class="bold">y</span> and columns of 
+  <span class="bold">P</span> are all standardized). Therefore, regression model Eq. (
+  <a rid="Equ14" ref-type="" href="#Equ14">14</a>) results in the prediction:
+  <div id="Equ15" class="disp-formula">
+   <span class="label">15</span>
+   <div class="alternatives">
+    <span id="M53" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{y}={\rho}_1{p}_1+{\rho}_2{p}_2+\dots +{\rho}_m{p}_m $$\end{document}</span>
+    <div id="M54" display="block" class="math">
+     <div accent="true" class="mover">
+      <span class="mi">y</span>
+      <span stretchy="true" class="mo">^</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <span class="mi">ρ</span>
+      <span class="mn">1</span>
+     </div>
+     <div class="msub">
+      <span class="mi">p</span>
+      <span class="mn">1</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span class="mi">ρ</span>
+      <span class="mn">2</span>
+     </div>
+     <div class="msub">
+      <span class="mi">p</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mo">…</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <span class="mi">ρ</span>
+      <span class="mi">m</span>
+     </div>
+     <div class="msub">
+      <span class="mi">p</span>
+      <span class="mi">m</span>
+     </div>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equ15.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>for which the sample estimate 
+  <div id="IEq5" class="inline-formula">
+   <div class="alternatives">
+    <span id="M55" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{\rho} $$\end{document}</span>
+    <div id="M56" display="inline" class="math">
+     <div accent="true" class="mover">
+      <span class="mi">ρ</span>
+      <span stretchy="true" class="mo">^</span>
+     </div>
+    </div>
+    <span xlink:href="10584_2018_2341_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> of its correlation coefficient with the actual value of 
+  <span class="italic">y</span> satisfies the relationship:
+  <div id="Equk" class="disp-formula">
+   <div class="alternatives">
+    <span id="M57" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {\widehat{\rho}}^2={\rho}_1^2+{\rho}_2^2+\dots {\rho}_m^2, $$\end{document}</span>
+    <div id="M58" display="block" class="math">
+     <div class="msup">
+      <div accent="true" class="mover">
+       <span class="mi">ρ</span>
+       <span stretchy="true" class="mo">^</span>
+      </div>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msubsup">
+      <span class="mi">ρ</span>
+      <span class="mn">1</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">+</span>
+     <div class="msubsup">
+      <span class="mi">ρ</span>
+      <span class="mn">2</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">+</span>
+     <span class="mo">…</span>
+     <div class="msubsup">
+      <span class="mi">ρ</span>
+      <span class="mi">m</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equk.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>making it easy to see how the inclusion of time series 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> of each individual mode 
+  <span class="italic">i</span> into the regression model contributes to the overall skill of prediction. Another measure of in-sample skill estimate for prediction Eq. (
+  <a rid="Equ15" ref-type="" href="#Equ15">15</a>), the standard deviation 
+  <div id="IEq6" class="inline-formula">
+   <div class="alternatives">
+    <span id="M59" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{e} $$\end{document}</span>
+    <div id="M60" display="inline" class="math">
+     <div accent="true" class="mover">
+      <span class="mi">e</span>
+      <span stretchy="true" class="mo">^</span>
+     </div>
+    </div>
+    <span xlink:href="10584_2018_2341_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, of the difference 
+  <div id="IEq7" class="inline-formula">
+   <div class="alternatives">
+    <span id="M61" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \hat{y}-y $$\end{document}</span>
+    <div id="M62" class="math">
+     <div class="mrow">
+      <div class="mover">
+       <span class="mi">y</span>
+       <span class="mo">^</span>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <span class="mi">y</span>
+    </div>
+    <span xlink:href="10584_2018_2341_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, can be expressed through 
+  <div id="IEq8" class="inline-formula">
+   <div class="alternatives">
+    <span id="M63" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{\rho} $$\end{document}</span>
+    <div id="M64" display="inline" class="math">
+     <div accent="true" class="mover">
+      <span class="mi">ρ</span>
+      <span stretchy="true" class="mo">^</span>
+     </div>
+    </div>
+    <span xlink:href="10584_2018_2341_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> as 
+  <div id="IEq9" class="inline-formula">
+   <div class="alternatives">
+    <span id="M65" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{e}=\sqrt{1-{\widehat{\rho}}^2} $$\end{document}</span>
+    <div id="M66" display="inline" class="math">
+     <div accent="true" class="mover">
+      <span class="mi">e</span>
+      <span stretchy="true" class="mo">^</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msqrt">
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">−</span>
+       <div class="msup">
+        <div accent="true" class="mover">
+         <span class="mi">ρ</span>
+         <span stretchy="true" class="mo">^</span>
+        </div>
+        <span class="mn">2</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="10584_2018_2341_Article_IEq9.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>.
+ </p>
+</sec>

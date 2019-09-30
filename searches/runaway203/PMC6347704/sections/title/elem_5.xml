@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s5" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Observation-Based Datasets.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We use the ECCO-GODAE (ECCO version 2) solution (
+   <a rid="r12" ref-type="bibr" href="#r12">12</a>) to derive the time–mean transport matrix and GFs (
+   <span class="italic">GF Reconstruction: OHC and Thermosteric Sea Level</span>). The ECCO-GODAE solution combines a state-of-the-art ocean general circulation model, the MITgcm (
+   <a rid="r45" ref-type="bibr" href="#r45">45</a>), at a 
+   <div class="inline-formula">
+    <div id="i60" class="math">
+     <span mathvariant="normal" class="mn">1</span>
+     <span class="mo">°</span>
+    </div>
+   </div> horizontal resolution and an adjoint-based assimilation with all available global ocean datasets over the period ranging from 1992 to 2004. The domain extends from 80 °S to 80 °N. To compare our GF-based OHC estimates with direct observations, we use the following data products. From the National Centers for Environmental Information (NCEI), we use the global analyzed gridded fields of OHC from 1955 to 2017. We use yearly averaged fields for the depth range 0–700 m and pentadal averages for 0–2,000 m (
+   <a rid="r2" ref-type="bibr" href="#r2">2</a>, 
+   <a rid="r46" ref-type="bibr" href="#r46">46</a>). From the Institute of Atmospheric Physics (IAP) and the objective analysis of Ishii et al. (
+   <a rid="r20" ref-type="bibr" href="#r20">20</a>), we use the yearly average ocean temperatures from the 41 vertical levels down to 2,000 m between 1940 and 2016 (
+   <a rid="r1" ref-type="bibr" href="#r1">1</a>) and between 1955 and 2017, respectively. All datasets are gridded products with 
+   <div class="inline-formula">
+    <div id="i61" class="math">
+     <span mathvariant="normal" class="mn">1</span>
+     <span class="mo">°</span>
+    </div>
+   </div> latitude–longitude horizontal resolution. For the upper 700 m, we also used the global updated OHC estimates from Domingues et al. (
+   <a rid="r21" ref-type="bibr" href="#r21">21</a>, 
+   <a rid="r22" ref-type="bibr" href="#r22">22</a>). The SST datasets used as surface boundary conditions (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1808838115/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S1
+   </span>) are from The Met Office Hadley Center’s Sea Ice and Sea Surface Temperature Dataset HadISST, which combines fields of SST on a 
+   <div class="inline-formula">
+    <div id="i62" class="math">
+     <span mathvariant="normal" class="mn">1</span>
+     <span class="mo">°</span>
+    </div>
+   </div> latitude–longitude grid from 1871 to 2017. We use both HadISST v1 (
+   <a rid="r13" ref-type="bibr" href="#r13">13</a>) and v2.0 (
+   <a rid="r47" ref-type="bibr" href="#r47">47</a>); the latter offers a 10-member ensemble, which is used as part of the uncertainty quantification of our OHC estimates.
+  </p>
+ </sec>
+ <sec id="s7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">GF Reconstruction: OHC and Thermosteric Sea Level.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We calculate the GFs over zonally averaged 
+   <div class="inline-formula">
+    <div id="i63" class="math">
+     <span mathvariant="normal" class="mn">10</span>
+     <span class="mo">°</span>
+    </div>
+   </div> latitudinal bands and 22 vertical levels from the ECCO-GODAE state estimate using the Transport Matrix Method (
+   <a rid="r48" ref-type="bibr" href="#r48">48</a>, 
+   <a rid="r49" ref-type="bibr" href="#r49">49</a>). The transport matrix and associated GFs represent tracer transport, including resolved and parametrized advection, and parametrized subgrid-scale mixing processes. The GFs are a representation of ocean pathways in terms of a distribution of timescales and therefore, probability. The GFs reflect the steady-state linearized ocean transport and can be used to propagate any tracer from the surface into the interior, assuming that the tracer does not affect ocean transport. The 26 surface patches used to connect the surface to the interior are defined based on their climatological density in each basin (
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>), and they are shown in 
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1808838115/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S1
+   </span>. The temporal evolution of area-weighted SST anomalies relative to 1871 in each of the 26 patches is also shown in 
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1808838115/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S1
+   </span>. Positive trends in SSTs, especially since 1950, are apparent in most regions with a few exceptions: mostly patches 1 and 2 in the North Atlantic and patches 12 and 16 in the Pacific, which only exhibit low-frequency fluctuations. The use of large-scale averages for SST patches and GFs, in addition to reducing computational cost, substantially minimizes the possible impact of model-dependent transport on the OHC. We estimate the OHC in the interior over a volume 
+   <div class="inline-formula">
+    <div id="i64" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">V</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">R</span>
+      </div>
+     </div>
+    </div>
+   </div> relative to 1871 using the following convolution:
+   <div id="eq1" class="disp-formula">
+    <div id="me1" class="math">
+     <span class="mi">O</span>
+     <span class="mi">H</span>
+     <span class="mi">C</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">V</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">R</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="munder">
+      <div class="mrow">
+       <span largeop="true" movablelimits="false" symmetric="true" class="mo">∫</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">V</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">R</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mi">d</span>
+     <span mathvariant="bold" class="mi">r</span>
+     <span class="mo"> </span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">c</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo"> </span>
+     <span class="mi">ρ</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <div accentunder="false" accent="false" class="munderover">
+      <div class="mrow">
+       <span largeop="true" movablelimits="false" symmetric="true" class="mo">∫</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">1871</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mi">d</span>
+     <span class="mi">t</span>
+     <span class="mo">′</span>
+     <div class="munder">
+      <div class="mrow">
+       <span largeop="true" movablelimits="false" symmetric="true" class="mo">∫</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+     </div>
+     <span class="mi">d</span>
+     <span mathvariant="bold" class="mi">r</span>
+     <span class="mo">′</span>
+     <span class="mi">G</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">−</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">′</span>
+       </div>
+       <span class="mo">;</span>
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">r</span>
+        <span class="mo">′</span>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo"> </span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">′</span>
+       <span class="mo">,</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">′</span>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <span class="label">[1]</span>
+   </div>where 
+   <div class="inline-formula">
+    <div id="i65" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">c</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">3,992</span>
+     <span class="mo"> </span>
+     <span mathvariant="normal" class="mi">J</span>
+     <span class="mo"> </span>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">k</span>
+       <span mathvariant="normal" class="mi">g</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">C</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+   </div> is the specific heat capacity, 
+   <div class="inline-formula">
+    <div id="i66" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+     </div>
+    </div>
+   </div> is the SST anomaly at location 
+   <div class="inline-formula">
+    <div id="i67" class="math">
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">r</span>
+      <span class="mo">′</span>
+     </div>
+    </div>
+   </div> and time 
+   <div class="inline-formula">
+    <div id="i68" class="math">
+     <div class="mrow">
+      <span class="mi">t</span>
+      <span class="mo">′</span>
+     </div>
+    </div>
+   </div> relative to 1871, and 
+   <div class="inline-formula">
+    <div id="i69" class="math">
+     <span class="mi">S</span>
+    </div>
+   </div> is the surface of the ocean. The operator 
+   <div class="inline-formula">
+    <div id="i70" class="math">
+     <span class="mi">G</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">−</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">′</span>
+       </div>
+       <span class="mo">;</span>
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">r</span>
+        <span class="mo">′</span>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+   </div> is defined as the GF (
+   <a rid="r10" ref-type="bibr" href="#r10">10</a>, 
+   <a rid="r11" ref-type="bibr" href="#r11">11</a>) that propagates SST anomalies 
+   <div class="inline-formula">
+    <div id="i71" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+     </div>
+    </div>
+   </div> at a location 
+   <div class="inline-formula">
+    <div id="i72" class="math">
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">r</span>
+      <span class="mo">′</span>
+     </div>
+    </div>
+   </div> and time 
+   <div class="inline-formula">
+    <div id="i73" class="math">
+     <div class="mrow">
+      <span class="mi">t</span>
+      <span class="mo">′</span>
+     </div>
+    </div>
+   </div> to the interior at location 
+   <div class="inline-formula">
+    <div id="i74" class="math">
+     <span mathvariant="bold" class="mi">r</span>
+    </div>
+   </div> and time 
+   <div class="inline-formula">
+    <div id="i75" class="math">
+     <span class="mi">t</span>
+    </div>
+   </div>. The GF has no time dependence, and the convolution (
+   <a ref-type="disp-formula" rid="eq1" href="#eq1">Eq. 
+    <span class="bold">1</span>
+   </a>) assumes that the SST anomalies before 1871 must be zero; therefore, the ocean circulation must be in equilibrium. The density 
+   <div class="inline-formula">
+    <div id="i76" class="math">
+     <span class="mi">ρ</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+   </div> in kilograms per cubic meter is calculated using temperature 
+   <div class="inline-formula">
+    <div id="i77" class="math">
+     <span class="mi">T</span>
+    </div>
+   </div> and salinity 
+   <div class="inline-formula">
+    <div id="i78" class="math">
+     <span class="mi">S</span>
+    </div>
+   </div> at 
+   <div class="inline-formula">
+    <div id="i79" class="math">
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+   </div> from the Ishii dataset (
+   <a rid="r20" ref-type="bibr" href="#r20">20</a>) and the Gibbs Seawater Oceanographic Toolbox (
+   <a rid="r50" ref-type="bibr" href="#r50">50</a>). The surface integral in 
+   <a ref-type="disp-formula" rid="eq1" href="#eq1">Eq. 
+    <span class="bold">1</span>
+   </a> is discretized over the 26 surface regions, each denoted by 
+   <div class="inline-formula">
+    <div id="i80" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">′</span>
+      </div>
+     </div>
+    </div>
+   </div> with 
+   <div class="inline-formula">
+    <div id="i81" class="math">
+     <span class="mi">i</span>
+     <span class="mo">=</span>
+     <span class="mn">1</span>
+     <span class="mo">,</span>
+     <span class="mo">…</span>
+     <span class="mo">,</span>
+     <span class="mn">26</span>
+    </div>
+   </div>. The integrated cumulative heat uptake (
+   <a ref-type="fig" rid="fig02" href="#fig02">Fig. 2</a>) through a patch 
+   <div class="inline-formula">
+    <div id="i82" class="math">
+     <span class="mi">i</span>
+    </div>
+   </div> from 1871 to time 
+   <div class="inline-formula">
+    <div id="i83" class="math">
+     <span class="mi">t</span>
+    </div>
+   </div> is such that
+   <div id="eq2" class="disp-formula">
+    <div id="me2" class="math">
+     <span class="mi">O</span>
+     <span class="mi">H</span>
+     <span class="mi">U</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">′</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">V</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">R</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="munder">
+      <div class="mrow">
+       <span largeop="true" movablelimits="false" symmetric="true" class="mo">∫</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">V</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">R</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo"> </span>
+     <span class="mi">d</span>
+     <span mathvariant="bold" class="mi">r</span>
+     <div accentunder="false" accent="false" class="munderover">
+      <div class="mrow">
+       <span largeop="true" movablelimits="false" symmetric="true" class="mo">∫</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">1871</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mi">d</span>
+     <div class="mrow">
+      <span class="mi">t</span>
+      <span class="mo">′</span>
+     </div>
+     <span class="mo"> </span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">c</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo"> </span>
+     <span class="mi">ρ</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo"> </span>
+     <span class="mi">G</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">r</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">−</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">′</span>
+       </div>
+       <span class="mo">;</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">′</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo"> </span>
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">S</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">r</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">′</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">′</span>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <span class="label">[2]</span>
+   </div>where 
+   <div class="inline-formula">
+    <div id="i84" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">r</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">′</span>
+      </div>
+     </div>
+    </div>
+   </div> is the discretized surface patch 
+   <div class="inline-formula">
+    <div id="i85" class="math">
+     <span class="mi">i</span>
+    </div>
+   </div> with surface area 
+   <div class="inline-formula">
+    <div id="i86" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+   </div>. Consider that 
+   <div class="inline-formula">
+    <div id="i87" class="math">
+     <span class="mi">O</span>
+     <span class="mi">H</span>
+     <span class="mi">C</span>
+     <span class="mo">=</span>
+     <span class="mi">ρ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">c</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">p</span>
+      </div>
+     </div>
+     <span class="mo"> </span>
+     <span class="mi">V</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">T</span>
+    </div>
+   </div>, with 
+   <div class="inline-formula">
+    <div id="i88" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">T</span>
+    </div>
+   </div> being the change in ocean temperature in a region with a volume 
+   <div class="inline-formula">
+    <div id="i89" class="math">
+     <span class="mi">V</span>
+    </div>
+   </div>. For a change in temperature, the associated induced change in volume is 
+   <div class="inline-formula">
+    <div id="i90" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">V</span>
+     <span class="mo">=</span>
+     <span class="mi">V</span>
+     <span class="mi">α</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">T</span>
+    </div>
+   </div>. Therefore, 
+   <div class="inline-formula">
+    <div id="i91" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">V</span>
+     <span class="mo">=</span>
+     <span class="mi">A</span>
+     <span class="mo"> </span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">S</span>
+     <span class="mi">S</span>
+     <span class="mi">H</span>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mi">α</span>
+       <span class="mi">O</span>
+       <span class="mi">H</span>
+       <span class="mi">C</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">ρ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">c</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">p</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>, where 
+   <div class="inline-formula">
+    <div id="i92" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">S</span>
+     <span class="mi">S</span>
+     <span class="mi">H</span>
+    </div>
+   </div> is the thermosteric sea-level change, 
+   <div class="inline-formula">
+    <div id="i93" class="math">
+     <span class="mi">A</span>
+    </div>
+   </div> is the surface area, and 
+   <div class="inline-formula">
+    <div id="i94" class="math">
+     <span class="mi">α</span>
+     <span class="mo">=</span>
+     <span class="mo">−</span>
+     <span class="mn">1</span>
+     <span class="mo">/</span>
+     <span class="mi">ρ</span>
+     <span class="mo"> </span>
+     <span class="mi">∂</span>
+     <span class="mi">ρ</span>
+     <span class="mo">/</span>
+     <span class="mi">∂</span>
+     <span class="mi">T</span>
+    </div>
+   </div> is the thermal expansion coefficients calculated using Gibbs Seawater Oceanographic Toolbox (
+   <a rid="r50" ref-type="bibr" href="#r50">50</a>) and Ishii temperature and salinity analyses (
+   <a rid="r20" ref-type="bibr" href="#r20">20</a>). The thermosteric sea-level change can be expressed as 
+   <div class="inline-formula">
+    <div id="i95" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">S</span>
+     <span class="mi">S</span>
+     <span class="mi">H</span>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mi">α</span>
+       <span class="mi">O</span>
+       <span class="mi">H</span>
+       <span class="mi">C</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">A</span>
+       <span class="mi">ρ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">C</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">p</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>. The calculations for OHC and 
+   <div class="inline-formula">
+    <div id="i96" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">S</span>
+     <span class="mi">S</span>
+     <span class="mi">H</span>
+    </div>
+   </div> using a reference density or pentadal salinity and temperature anomalies from the NCEI (
+   <a rid="r46" ref-type="bibr" href="#r46">46</a>) resulted in changes of less than 2% in our estimates of integrated OHC and thermosteric sea-level change.
+  </p>
+ </sec>
+</sec>

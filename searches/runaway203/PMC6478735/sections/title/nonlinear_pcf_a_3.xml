@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Nonlinear PCF and SAF</div>
+ <p id="Par9" xmlns="http://www.w3.org/1999/xhtml">We base the PCF emulator on simulated emissions of thawed permafrost carbon from the two permafrost-enabled global land surface models (LSMs): SiBCASA (Simple Biosphere/Carnegie-Ames-Stanford Approach) and JULES (Joint UK Land Environment Simulator)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR7" href="#CR7">7</a>,
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>,
+   <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+  </span> (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). Permafrost carbon is organic matter buried and frozen in permafrost. The two LSMs have markedly different responses to future climate change: SiBCASA appears to be on the upper end and JULES on the lower end of the reference multi-models studies
+  <span class="sup">
+   <a ref-type="bibr" rid="CR8" href="#CR8">8</a>,
+   <a ref-type="bibr" rid="CR29" href="#CR29">29</a>,
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span> (Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>, Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). Their combined use here provides a suitable estimate of the range of permafrost responses arising from uncertainty in LSM parameterizations.
+  <div id="Fig1" class="fig">
+   <span class="label">Fig. 1</span>
+   <div class="caption">
+    <p>Cumulative carbon emissions from thawing land permafrost simulated using specialised land surface models. CO
+     <sub>2</sub> component of cumulative emissions of carbon from thawing land permafrost, obtained from 
+     <span class="bold">a</span> SiBCASA and 
+     <span class="bold">b</span> JULES LSMs forced by multiple climate models (GCMs) under a range of climate scenarios out to 2300. Thick lines: multi-GCM means; shaded areas: multi-GCM spread between the lowest and the highest values; thin black lines: SiBCASA runs with individual GCMs. Horizontal black dashed lines: legacy zero permafrost emissions currently assumed in IAMs. Units: GtC. Source data are provided as a Source Data file
+    </p>
+   </div>
+   <div xlink:href="41467_2019_9863_Fig1_HTML" id="d29e564" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">Our uncertainty estimate also depends on the range of global climate model (GCM) outputs used to force the LSMs, accounting for both the structural uncertainty arising from the different GCM’s climate sensitivities, as well as the irreducible uncertainty arising from weather and climate variability. To capture this uncertainty in the PCF, both LSMs were forced with output from a range of GCMs, sampling the full range of expected Arctic responses under a given climate scenario to 2300. SiBCASA is an explicit LSM and was run to 2300 with output from five CMIP5 GCMs under two scenarios, whereas JULES was configured to run to 2300 with output from 22 CMIP3 GCMs under three climate scenarios (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). Having information to 2300 is important to capture the nonlinear transitions in the permafrost emissions.
+ </p>
+ <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">The dynamic PCF emulator uses a statistical fit to SiBCASA and JULES outputs for the land permafrost carbon emissions in the form of CO
+  <sub>2</sub> and methane, capturing nonlinear effects seen in the LSM simulations. The PCF emulator only models the emitted permafrost carbon explicitly, while also accounting for the time lags between the temperature rise, thawed carbon and emitted carbon, as well as the uncertainty in the initial permafrost carbon stock
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span>. The PAGE-ICE model adds the permafrost fluxes from the PCF emulator to the anthropogenic global CO
+  <sub>2</sub> and methane emissions that follow a given climate scenario.
+ </p>
+ <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">We base the SAF emulator on the ALL/CLR method of calculating the SAF using downward and upward atmospheric transmissivity and reflectivity inferred from climate models (GCMs)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>,
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+  </span>. The method involves an atmospheric reflectivity parameterisation, which represents the effect of clouds and is based on clear sky and all sky shortwave fluxes diagnosed from the GCMs. It allows us to account for the localised changes to the cloud cover and its effect on the SAF in line with the physical interactions represented in the fully-coupled CMIP5 models (Supplementary Figure 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR34" href="#CR34">34</a>–
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+  </span>. We do not compute the global cloud feedback; instead, it is included implicitly in the ECS parameter in the PAGE-ICE model and is assumed to be state-independent (see the section on the robustness of the results below).
+ </p>
+ <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">We use historic and RCP8.5 simulations of 16 CMIP5 GCMs that have the diagnostic variables required for the SAF calculation (Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+  </span>. While short of the complete CMIP5 ensemble, these models sample the full range of Arctic responses as seen in the whole ensemble. Eight of the models have simulations that extend out to 2300, which is necessary to capture the nonlinear transitions in the SAF. Each model has its own domains for Arctic sea ice and land snow covers based on their respective monthly maximum extents during the pre-industrial period. The SAF, therefore, is separated into the northern hemispheric sea ice, northern hemispheric land snow and rest of the world. The components are represented as functions of the GMST rise individually for each model, at which point the multi-model statistics is established (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). The sea ice and land snow components of the SAF peak for the GMST anomalies between 0–1 °C and 1–3 °C, respectively, coinciding with the loss of the summer sea ice
+  <span class="sup">
+   <a ref-type="bibr" rid="CR2" href="#CR2">2</a>,
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+  </span> and spring and summer land snow
+  <span class="sup">
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span> covers coupled with high Arctic insolation. However, both components decrease for higher GMST as the sea ice and land snow covers continue to decline, and eventually approach zero when the covers disappear. The plateau in the sea ice SAF component between 5–7 °C coincides with the loss of the spring sea ice
+  <span class="sup">
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>,
+   <a ref-type="bibr" rid="CR40" href="#CR40">40</a>
+  </span>. In contrast, the SAF for the rest of the world stays nearly constant until high GMST anomalies.
+  <div id="Fig2" class="fig">
+   <span class="label">Fig. 2</span>
+   <div class="caption">
+    <p>Three components of the surface albedo feedback deduced from simulations of fully coupled climate models. SAF components (average global equivalent values) for 
+     <span class="bold">a</span> Arctic sea ice, 
+     <span class="bold">b</span> Northern Hemisphere land snow and 
+     <span class="bold">c</span> rest of the world, presented as functions of the GMST rise relative to pre-industrial conditions. Obtained from multiple CMIP5 GCMs using the ALL/CLR method. Solid red line: multi-model mean; shaded area: ±1 standard deviation (SD). Horizontal black dashed lines: legacy SAF forcing currently assumed in IAMs. Source data are provided as a Source Data file
+    </p>
+   </div>
+   <div xlink:href="41467_2019_9863_Fig2_HTML" id="d29e649" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">The SAF emulator models the global SAF as a function of the GMST (Methods), reproducing the nearly monotonic decline driven largely by the Arctic sea ice and land snow components. While IAMs other than PAGE-ICE have implied unrealistic constant SAF (dashed lines in Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>), which is implicitly included in the 2 × CO
+  <sub>2</sub> ECS parameter (Methods), the SAF emulator accounts for the difference between the nonlinear SAF and its constant legacy value. It alters the governing equation for the GMST change in PAGE-ICE by adding extra terms to the total anthropogenic radiative forcing (RF) for a given climate scenario (Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>).
+ </p>
+</sec>

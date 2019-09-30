@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="results" id="sec3-sensors-19-01118" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">3. Results and Discussion</div>
+ <sec id="sec3dot1-sensors-19-01118" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.1. Estimated Anthropogenic Emissions by GRNN</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We use the annual dXCO
+   <sub>2</sub> dataset and ODIAC CO
+   <sub>2</sub> emissions data from the year 2010 to 2014 as the training dataset, which have the total of 5415 samples available, to build a GRNN model for estimating anthropogenic emission. By applying “the holdout method” described in 
+   <a ref-type="sec" rid="sec2dot3-sensors-19-01118" href="#sec2dot3-sensors-19-01118">Section 2.3</a>, we obtain the optimized spread parameter 
+   <div class="inline-formula">
+    <div id="mm12" class="math">
+     <div class="mrow">
+      <span class="mi">σ</span>
+     </div>
+    </div>
+   </div> as 0.1. Then we apply GRNN model to the annual dXCO
+   <sub>2</sub> data in 2015 to predict target dependent variable, anthropogenic emission with the same unit as the ODIAC CO
+   <sub>2</sub> emissions.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The CO
+   <sub>2</sub> emissions estimated using the annual dXCO
+   <sub>2</sub> and the actual ODIAC CO
+   <sub>2</sub> emission in 2015 are shown in 
+   <a ref-type="fig" rid="sensors-19-01118-f004" href="#sensors-19-01118-f004">Figure 4</a>. Comparing 
+   <a ref-type="fig" rid="sensors-19-01118-f004" href="#sensors-19-01118-f004">Figure 4</a>a with 
+   <a ref-type="fig" rid="sensors-19-01118-f004" href="#sensors-19-01118-f004">Figure 4</a>b, we can see that the spatially changing pattern of estimated emission by satellite-based observation is exactly similar as that of the actual magnitude of ODIAC. Moreover, the estimated emission presents a more smoothing spatial details than the actual emission, which is mainly because the Kriging procedure smooths the CO
+   <sub>2</sub> signals from point sources of strong anthropogenic emission, and 10 km spatial resolution of each GOSAT footprint observations also smooths the signals. The magnitude of estimated emission is generally less than that of ODIAC. 
+   <a ref-type="fig" rid="sensors-19-01118-f005" href="#sensors-19-01118-f005">Figure 5</a> presents the differences between them and the corresponding histogram.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">It can be seen from 
+   <a ref-type="fig" rid="sensors-19-01118-f005" href="#sensors-19-01118-f005">Figure 5</a>a that the difference between the estimated CO
+   <sub>2</sub> emission and ODIAC emission mainly change from −5 Mt to 5 Mt, which accounts for 91% of the total grids. The magnitude of difference from −1 Mt to 1 Mt accounts for 71% of the total grids. The low magnitude of ODIAC emissions in the range of 1–10
+   <span class="sup">4</span> t/year shown in 
+   <a ref-type="fig" rid="sensors-19-01118-f004" href="#sensors-19-01118-f004">Figure 4</a>b are generally underestimated by satellite-based observations (shown in yellow in 
+   <a ref-type="fig" rid="sensors-19-01118-f005" href="#sensors-19-01118-f005">Figure 5</a>a). These are mostly located in semi-arid grasslands, forests in the northern areas as shown in land use map of 
+   <a ref-type="fig" rid="sensors-19-01118-f005" href="#sensors-19-01118-f005">Figure 5</a>c. 
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">This underestimation implies that the emission estimated by dXCO
+   <sub>2</sub> has high uncertainty in the areas of low anthropogenic emission that is likely due to the CO
+   <sub>2</sub> uptake of biosphere which is still remaining in dXCO
+   <sub>2</sub>. The estimated emission, moreover, is much lower than ODIAC emission over the areas around big cities, such as Beijing, Shanghai, Guangzhou. This underestimation indicates that the smoothing effects of the estimated emission, which is likely because the spatial resolution of GOSAT observations (10 km) is not sufficient to detect the emission of point sources. On the other hand, the estimated emissions are generally larger than ODIAC emission in the south-eastern region of China where there are many anthropogenic emitting sources which can be seen in Figure 8. The general overestimation in this region is likely because the large emitting sources around raise the concentration of CO
+   <sub>2</sub> over those non-emitting areas nearby them through the atmospheric transport. 
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Lastly, comparing the satellite-based estimation of CO
+   <sub>2</sub> emissions with ODIAC emission for all grids as shown in 
+   <a ref-type="fig" rid="sensors-19-01118-f006" href="#sensors-19-01118-f006">Figure 6</a>, we find they show a significant correlation (R
+   <span class="sup">2</span>) of 0.65 with p value less than 0.01.
+  </p>
+ </sec>
+ <sec id="sec3dot2-sensors-19-01118" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">3.2. Discussion of Correlation between Retrieved X
+   <sub>CO2</sub> and Anthropogenic Emissons
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">It has been indicated that the cluster of XCO
+   <sub>2</sub> changes derived from GOSAT observations shows a correlating coefficient of 0.5 with anthropogenic emission. This correlation is more significant than a single grid of XCO
+   <sub>2</sub> as the atmospheric CO
+   <sub>2</sub> measurement is an instantaneous snapshot of the realistic atmosphere [
+   <a rid="B33-sensors-19-01118" ref-type="bibr" href="#B33-sensors-19-01118">33</a>]. Its clustering analysis is derived from original XCO
+   <sub>2</sub> data. 
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We segment the ODIAC emissions which are binned according to every 0.3 t/yr of lgE (
+   <a ref-type="fig" rid="sensors-19-01118-f007" href="#sensors-19-01118-f007">Figure 7</a>a) using mean emission calculated from annual emission during 2010–2015, and then make correlation analysis between the mean of emission and mean of dXCO
+   <sub>2</sub> within binned regions. It is found that the segmental mean of dXCO
+   <sub>2</sub> demonstrate a significant and positive correlation with ODIAC emissions in which the determined coefficient (R
+   <span class="sup">2</span>) for all data is up to 0.82 (
+   <a ref-type="fig" rid="sensors-19-01118-f007" href="#sensors-19-01118-f007">Figure 7</a>b) and the dXCO
+   <sub>2</sub> demonstrate strong positive linear correlation with emission starting from 10
+   <span class="sup">4</span> t/yr where R
+   <span class="sup">2</span> is up to 0.95 (red line in 
+   <a ref-type="fig" rid="sensors-19-01118-f007" href="#sensors-19-01118-f007">Figure 7</a>b). The dXCO
+   <sub>2</sub> is almost unchanged in the region with emission lower than 10
+   <span class="sup">4</span> t/yr. These results imply that satellite observations of atmospheric CO
+   <sub>2</sub> could be used to estimate regional anthropogenic emissions for those regions with larger magnitude of anthropogenic CO
+   <sub>2</sub> emissions. Additionally, we overlay the CARMA power plants dataset on the mean dXCO
+   <sub>2</sub> from the annual dXCO
+   <sub>2</sub> during 2010 to 2015 (
+   <a ref-type="fig" rid="sensors-19-01118-f008" href="#sensors-19-01118-f008">Figure 8</a>a). It can be seen that the high dXCO
+   <sub>2</sub> are corresponding to high-density power plants, especially in northeast China. We accumulate the magnitude of emissions of power plants within one grid of mapping XCO
+   <sub>2</sub> dataset, then we segment emissions of power plants which are binned according to every 0.3 t of lgE, and take correlation analysis between the mean of power plants emission and the mean of dXCO
+   <sub>2</sub> within binned regions (
+   <a ref-type="fig" rid="sensors-19-01118-f008" href="#sensors-19-01118-f008">Figure 8</a>a). dXCO
+   <sub>2</sub> demonstrate strong positive linear correlation with power plants emission starting from 10
+   <span class="sup">6</span> t (blue dots). The grids they represent are distributed consistently with high dXCO
+   <sub>2</sub> area. The result demonstrates a R
+   <span class="sup">2</span> of 0.59 which is less than regional statistics. Power plants emission lower than 10
+   <span class="sup">5.5</span> t demonstrate weak linear correlation with dXCO
+   <sub>2</sub> because the influence of CO
+   <sub>2</sub> uptake of biosphere.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">From 
+   <a ref-type="fig" rid="sensors-19-01118-f008" href="#sensors-19-01118-f008">Figure 8</a>a, it can be found that the dXCO
+   <sub>2</sub> in western area, the desert area of Xinjiang, shows high values even if there are much less anthropogenic emission over this area as shown in 
+   <a ref-type="fig" rid="sensors-19-01118-f004" href="#sensors-19-01118-f004">Figure 4</a>b. This is likely resulted in the uncertainty of ACOS XCO
+   <sub>2</sub> retrievals in desert which has been indicated by Bie et al. [
+   <a rid="B34-sensors-19-01118" ref-type="bibr" href="#B34-sensors-19-01118">34</a>].
+  </p>
+ </sec>
+</sec>

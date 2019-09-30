@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate models</div>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">We used climate model simulations under the framework of CMIP5
+   <span class="sup">
+    <a ref-type="bibr" rid="CR5" href="#CR5">5</a>,
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>–
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+   </span>. Four emissions scenarios, called representative concentration pathways (RCPs) were used. Each is identified by its approximate total radiative forcing W/m
+   <span class="sup">2</span> in year 2100 relative to preindustrial conditions (1750): RCP2.6, RCP4.5, RCP6.0 RCP8.5
+   <span class="sup">
+    <a ref-type="bibr" rid="CR5" href="#CR5">5</a>
+   </span>. The radiative forcing of RCP2.6 peaks first and then declines, representing the lowest scenario; the radiative forcing of RCP4.5 stabilizes at 4.5 W/m
+   <span class="sup">2</span> by 2100, representing the medium-low scenario; the radiative forcing of RCP6.0 and RCP8.5 does not stabilize by 2100, representing the medium-high and highest scenario respectively. The CMIP5 multi-model ensembles (MMEs) are available via portals to the Earth System Grid Federation (ESGF) archive (
+   <span ext-link-type="uri" xlink:href="http://cmip-pcmdi.llnl.gov/cmip5/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://cmip-pcmdi.llnl.gov/cmip5/</span>).
+  </p>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">We used the monthly surface (upper 10 cm) soil moisture (variable: mrsos) outputs from CMIP5 MMEs for historical simulations (1900–2005) and future projections (2006–2100). We used all available models providing surface soil moisture values during the simulation periods (listed in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>). To enable comparison across the four RCP scenarios, Figs 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>, 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a> and 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a> only contain models that are available across all RCP scenarios and historical forcing (those models are annotated with star symbols in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>). All model outputs were interpolated onto a common 2° × 2° latitude-longitude grid by bilinear interpolation method to allow for computing multi-model mean and uncertainty. The multi-ensemble mean was calculated for each GCM and each scenario.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Soil moisture anomalies</div>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">Near-surface soil moisture is a function of precipitation, evapotranspiration, soil texture and infiltration, drainage, slope, vegetation cover, etc. which are heterogeneous and difficult to characterize
+   <span class="sup">
+    <a ref-type="bibr" rid="CR5" href="#CR5">5</a>
+   </span>. The surface soil moisture (upper 10 cm) provided by CMIP5 differs greatly model by model. For example, the global (excluding Antarctica and Greenland) annual mean surface soil moisture for the period of 1976–2005 varies from 8.381 kg/m
+   <span class="sup">2</span> in model IPSL-CM5A-MR to 33.598 kg/m
+   <span class="sup">2</span> in model FGOALS-s2, while the standard deviation for the period of 1976–2005 is only 0.058 kg/m
+   <span class="sup">2</span> in model IPSL-CM5A-MR and 0.089 kg/m
+   <span class="sup">2</span> in model FGOALS-s2. Differences between models are far greater than interannual variability for a single model. Thus, comparing the raw surface soil moisture between models is not robust. Here, we compute the soil moisture anomalies using future projections (or historical simulation) minus the mean of historical simulation (1900–2005). In addition, since the interannual variability of soil moisture differs by model, we also compute the standardized soil moisture anomalies to investigate how future long-term changes compare to historical interannual variability
+   <span class="sup">
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>
+   </span>. The standardized soil moisture anomalies are computed using future projections (or historical simulation) minus the mean of historical simulation (1900–2005) and normalized by interannual standard deviation of historical simulation (1900–2005). The anomalies are calculated for each model due to differences model by model, calculated for each month due to varying soil moisture conditions each month, and calculated for each pixel due to spatial heterogeneity.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Drought quantification</div>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">We estimate future wetting and drying of surface soil moisture with respect to the historical empirical probability distribution
+   <span class="sup">
+    <a ref-type="bibr" rid="CR23" href="#CR23">23</a>
+   </span>. Our approach considers United States Drought Monitor (USDM) drought classification categories: D0 abnormally dry (21st to 30th percentile), D1 moderate drought (11st to 20th), D2 severe drought (6th to 10th), D3 extreme drought (3rd to 5th), and D4 exceptional drought (0 to 2nd) (
+   <span ext-link-type="uri" xlink:href="http://droughtmonitor.unl.edu/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://droughtmonitor.unl.edu/</span>). Here, we focus on severe drought and even worse (0 to 10th percentile), i.e., including D2, D3, and D4 drought category in USDM. A threshold value of 10% is chosen reflecting a drought condition for a specific month that could be expected once every ten years on average. Hence, following the method of Sheffield and Wood
+   <span class="sup">
+    <a ref-type="bibr" rid="CR23" href="#CR23">23</a>
+   </span>, for each grid point, each month, and each GCM, an empirical cumulative distribution function (ECDF) is calculated for the surface soil moisture from the historical simulation (1900–2005) and then the 10% quantile threshold of surface soil moisture is computed. A 1-month drought occurrence either in the historical period or future period is defined as the month with a surface soil moisture value lower than the 10% quantile threshold based on the ECDF. We selected a long enough historical period (106-year, 1900–2005) to sufficiently account for the historical variability in surface soil moisture.
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Based on the theory of runs and the method of Sheffield and Wood
+   <span class="sup">
+    <a ref-type="bibr" rid="CR23" href="#CR23">23</a>
+   </span>, a drought event is characterized in terms of duration, severity, intensity, and spatial extent. A consecutive sequence of 1-month drought occurrence results in a drought event of different durations. We define two types of drought duration based on the USDM: short-term drought (less than 6 months) and long-term drought (longer than or equal to 6 months). We define severity as the sum of deficit below the 10% threshold. For example, the cumulative probability of the surface soil moisture in the 1st, 2nd, and 3rd month during a 3-month drought event are respectively 6%, 2%, and 3%, and hence the deficit below the 10% threshold for those three months is 4%, 8%, and 7% respectively. Consequently, the sum of deficit below the threshold is 19%, i.e., the severity of this drought event is 19%. We define intensity as the mean deficit below the threshold for a drought event, i.e., severity divided by duration. For example, the intensity of this 3-month duration drought mentioned above is 19%/3 (6.33%). We define spatial extent of drought as the percentage of grid points in which the surface soil moisture falls below the threshold for each month in the region of interest. The area of each grid point is weighted by the cosine of the latitude to account for the actual grid size. We estimate the drought characteristics for the 15 regions defined by the IPCC
+   <span class="sup">
+    <a ref-type="bibr" rid="CR5" href="#CR5">5</a>
+   </span> (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2(b)</a>) and calculate the regional mean for each drought statistic using an area-weighted mean by the cosine of the latitudes.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Uncertainty quantification and partition</div>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Future climate change projections are subject to considerable uncertainties. Here, we consider three dominant sources of uncertainty in drought projection
+   <span class="sup">
+    <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+   </span>: (1) internal variability of climate system, i.e., natural fluctuation, which arises in the absence of any radiative forcing; (2) model uncertainty (known as response uncertainty), which occurs because different GCMs project different climate changes in response to the same radiative forcing; and (3) scenario uncertainty, which arises from uncertainty in future anthropogenic greenhouse gas emissions, leading to uncertainty in future radiative forcing.
+  </p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">We follow the methods in Hawkins and Sutton
+   <span class="sup">
+    <a ref-type="bibr" rid="CR24" href="#CR24">24</a>,
+    <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+   </span> to partition and quantify the uncertainties for drought projection. Here, we describe the method in brief. (1) For each individual projection, we fit a smooth fourth-order polynomial model to the decadal mean projection during the period, 1900–2100, to account for the non-linearity and to separate out the trend and internal variability. Each model is assumed independent for simplicity, although they don’t (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>). The internal variability for each projection is defined as the variance of the residuals from the smooth fit. We assume that the internal variability is constant over lead time and that changes of internal variability are negligible. We take the multi-model mean of the variances of the residuals as the internal variability component. (2) For one particular scenario, the spread of different models is considered as the model uncertainty. We estimate the model uncertainty for each scenario as the variance of the smooth fits for different models. The multi-scenario mean of the variance is considered as an estimate of model uncertainty. (3) The spread of the multi-model mean for each scenario is considered as the scenario uncertainty. We estimate the scenario uncertainty as the variance of the multi-model means for the four scenarios. The model uncertainty and scenario uncertainty varies by lead time. Those three uncertainties are assumed independent from one another
+   <span class="sup">
+    <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+   </span>. The total uncertainty is estimated as the sum of internal variability, model uncertainty, and scenario uncertainty.
+  </p>
+ </sec>
+</sec>

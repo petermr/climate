@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Detailed Methods</div>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Channel measurements</div>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">This work is based on an analysis of 9,736 individual river cross-sectional channel surveys (transects) taken over a period of almost 70 years at 67 alluvial USGS stream gages. The methods used for preparing and filtering USGS stream field measurements are similar to
+   <span class="sup">
+    <a ref-type="bibr" rid="CR6" href="#CR6">6</a>,
+    <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+   </span> but are detailed below for clarity. USGS field stream measurements between 1950-01-01 and 2017-12-31 were downloaded from the USGS NWIS
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+   </span>. These are transect measurements of channel streamflow (
+   <span class="italic">Q</span>, m
+   <span class="sup">3</span>/s), cross-sectional flow area (
+   <span class="italic">A</span>, m
+   <span class="sup">2</span>), channel width (
+   <span class="italic">W</span>, m), and average cross-sectional flow velocity (
+   <span class="italic">V</span>, m/s), for different values of stage, i.e. gage height (
+   <span class="italic">G</span>). In addition, we also consider the relative mean river bed elevation (
+   <span class="italic">B</span>), which is computed as: 
+   <span class="italic">B</span> = 
+   <span class="italic">G</span> − (
+   <span class="italic">A</span>/
+   <span class="italic">W</span>). We converted all channel measurements to metric units and then removed any measurements made in icy conditions (i.e. where the control_type_cd contained any of the following strings: “ICE”, “CICE”, “SICE”, “AICE”, “IceAnchor”, “IceShore”, or “IceCover”). We removed any transect measurements with negative values of 
+   <span class="italic">Q</span>, 
+   <span class="italic">W</span>, or 
+   <span class="italic">A</span>, as well as any measurements that were infinite or incomplete (i.e. there had to be a measurement of 
+   <span class="italic">Q</span>, 
+   <span class="italic">A</span>, 
+   <span class="italic">W</span>, and 
+   <span class="italic">V</span> for the entire transect to be retained in the dataset).
+  </p>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">To detect potential measurement inaccuracies, we computed a dummy variable 
+   <span class="italic">Q</span>/(
+   <span class="italic">AV</span>) then removed any streamflow measurements where this value was greater than 1.1 or less than 0.9 (i.e. retaining only sites with measurement errors less than 10%). For each site we kept the single channel number (variable “chan_nu”) with the greatest number of measurements, to increase confidence in measurement location. To limit the influence of gaps in data, we calculated data completeness (defined here as the ratio of years with data to the total time span of the data, in years) over the available period for each site. We retained only active sites (where transects were still made after 2016) with at least 80% completeness, and at least 45 years of data. After all these filtering steps and in addition to those described below, the remaining 67 sites had a mean of 312 field channel measurements each (between 109 and 603) with a mean of 94% completeness over 59 years (min = 47, max = 68 years) over the entire period (1950 to 2017).
+  </p>
+ </sec>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Estimating the channel conveyance capacity and geometry</div>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">We quantify how channel conveyance and geometry vary over time using the residuals of the relationships between log-transformed estimates of channel dimensions and gage height. The approach is similar to
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>,
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span> and simplified from our earlier work
+   <span class="sup">
+    <a ref-type="bibr" rid="CR6" href="#CR6">6</a>,
+    <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+   </span> because here we only require standardised residuals and not dimensional estimates of channel form. The method removes the influence of gage height on the relationship between the channel dimensions and time
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span>. Values of 
+   <span class="italic">Q</span>, 
+   <span class="italic">A</span>, 
+   <span class="italic">V, W</span>, and 
+   <span class="italic">B</span> are transformed using the natural logarithm. We fit a Loess (locally weighted scatterplot smoothing) curve with a span of alpha = 0.25 (found to be appropriate for all sites by examining all plots of the estimated channel measurements) to the relationships between 
+   <span class="italic">G</span>-
+   <span class="italic">lnQ</span>, 
+   <span class="italic">G</span>-
+   <span class="italic">lnA, G</span>-
+   <span class="italic">lnV, G</span>-
+   <span class="italic">lnW, and G</span>-
+   <span class="italic">lnB</span> (all Loess fits are shown in Supplementary Figs S5–S205). The Loess fit represents time-averaged values of 
+   <span class="italic">lnQ</span>, 
+   <span class="italic">lnA, lnV, lnW, and lnB</span> for every value of 
+   <span class="italic">G</span>. We compute the regression residuals (i.e. the observed minus the predicted values of the relationship) and transform the residuals back to dimensional units using the antilog (exp). These residuals provide an indication of variations in channels dimensions over time. However, to compare changes in channel form with precipitation, streamflow, and the channel indices, we must still detrend the data as described next.
+  </p>
+ </sec>
+ <sec id="Sec6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Anthropogenic influences and variable detrending</div>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Very few USGS stream gages can be defined as ‘pristine’ (i.e. have not experienced any human impacts on their sediment and/or streamflow regimes). Thus, restricting the data to pristine sites would have limited the analysis considerably given the strictness of our filtering criteria. Further, this analysis seeks to assess whether climate signals can be detected broadly across many USA sites – not just in pristine, unpopulated catchments (which are of lesser relevance to risk management). We remove any systematic long-term trajectories in the channel data (e.g., due to progressive shifts in sediment delivery from upstream) to minimize any potentially spurious correlations with the climate indices. For instance, long-term trends in channel geometry due to anthropogenic influences might coincide with an upward trend in the AOI. Channel measurements are thus detrended by extracting the standardised residuals from the linear regression between the dimensional residuals and the date, using the MASS
+   <span class="sup">
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span> package in R. The effects of detrending are shown in Supplementary Fig. S1: after detrending, the relationship between channel geometry and streamflow/AMOI is still present, but not as strong as before.
+  </p>
+ </sec>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Verification of measurement location</div>
+  <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">Channel measurements were filtered to retain only the most reliable measurements made consistently at the same gaging location over time, by evaluating the scatterplots of 
+   <span class="italic">G</span>-
+   <span class="italic">lnQ</span>, 
+   <span class="italic">G</span>-
+   <span class="italic">lnA, G</span>-
+   <span class="italic">lnV, G</span>-
+   <span class="italic">lnW, and G</span>-
+   <span class="italic">lnB</span> (all exclusions are indicated as grey circles in Supplementary Figs S5–S205). Typically, this meant removing measurements made at very high or very low stage, if these measurements were made in different locations (indicated by, for example, an abrupt shift in channel width or flow area).
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Streamflow and climate data</div>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Mean daily streamflow data were downloaded for all sites from the USGS NWIS
+   <span class="sup">
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span> using the dataRetrieval
+   <span class="sup">
+    <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+   </span> package in R. Monthly time series of the climate indices were downloaded from the NOAA Climate Prediction Center for the same period, 1950-01-01 to 2017-12-31
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>. The monthly time series originate from data that were computed as follows: AMOI
+   <span class="sup">
+    <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+   </span> timeseries were calculated from the Kaplan SST dataset which is updated monthly, and series reflect North Atlantic temperatures. The daily AO index (AOI
+   <span class="sup">
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span>) was constructed by projecting the daily (00Z) 1000 mb height anomalies poleward of 20°N onto the loading pattern of the AO. ONI
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span> was computed as 3 month running mean of ERSST.v5 SST anomalies in the Niño 3.4 region (5°N-5°S, 120–170°W), based on centred 30-year base periods updated every 5 years.
+  </p>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Precipitation data were obtained from the PRISM climate group
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span> using the prism
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span> package in R. Catchment-averaged values of monthly precipitation were computed using basin boundaries from USGS NHDPlus shapefiles (version 1).
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Choice of sites (channel gaging locations)</div>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">We investigate 67 sites that have a high number and regular temporal density of transect measurements made consistently over five to seven decades at the same location. We sought to retain as many sites as possible. However, most gaging sites have either a sparse/irregular temporal density of measurements or inconsistent/unreliable transect location. Every page in Supplementary Figs S5–S205 indicates one site and one climate index. We used metadata from the USGS Annual Water Data reports to obtain information about any changes in gage location at all the sites. Sites with a change in gage location since 1950 were removed. Any minor changes in gage datum (i.e. at the same location) were corrected following ref.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR66" href="#CR66">66</a>
+   </span>. Any sites where there were doubts about the accuracy of channel measurements (e.g. due to potential changes in measurement location or gage datum) were discarded. To further ascertain measurement location, we checked that channel measurements (of 
+   <span class="italic">Q, A</span>, 
+   <span class="italic">W</span>, 
+   <span class="italic">V</span>, 
+   <span class="italic">B</span>) were made within a similar range over the entire measurement period (1950–2017). Any unreliable sites were systematically discarded, as we prioritized having fewer sites with highest quality measurements over a greater number of sites with higher uncertainty.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Variable standardisation, aggregation, and correlation</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">We computed standardised anomalies of the streamflow and precipitation aggregates (by subtracting the sample mean and dividing by the sample standard deviation)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span>, to facilitate comparisons with the climate indices and among sites with different physical and climate characteristics. The mean values of Q
+   <sub>50</sub> and of Q
+   <sub>99</sub>/Q
+   <sub>50</sub> were computed using the 50
+   <span class="sup">th</span> and 99
+   <span class="sup">th</span> percentiles of the daily streamflow distribution using all available data (where Q
+   <sub>99</sub> indicates the flow that is exceeded 1% of the time). Time series of estimated cross-sectional channel geometry, climate indices, streamflow, and precipitation data were all aggregated using the median value over two-, five- and ten-year periods starting on 1950-01-01. Spearman’s rank correlation coefficients (ρ) were computed between variables (e.g. precipitation and channel geometry) using two-, five- and ten-year median values calculated over identical timeframes. Across all sites (201 combinations), the mean sample size on which these correlations are based is 31 values (two-year aggregates), 13.1 (five-year) 6.7 (ten-year).
+  </p>
+ </sec>
+</sec>

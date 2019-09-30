@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2e" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">GAM analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We specified the expected number of dengue cases during month 
+  <span class="italic">t</span> and province 
+  <span class="italic">i</span> as:
+  <div id="pntd.0002503.e001" class="disp-formula">
+   <div xlink:href="pntd.0002503.e001.jpg" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <span class="label">(1)</span>
+  </div>where 
+  <span class="italic">g</span>(.) is a log link function of the expectation 
+  <span class="italic">μ</span>
+  <sub>it</sub>≡
+  <span class="italic">E</span>(
+  <span class="italic">Y
+   <sub>it</sub>
+  </span>), with 
+  <span class="italic">Y
+   <sub>it</sub>
+  </span> as the series of dengue counts. 
+  <span class="italic">X
+   <sub>jit</sub>
+  </span> denotes the 
+  <span class="italic">j</span>-th meteorological variables, 
+  <span class="italic">s
+   <sub>j</sub>
+  </span>(.) and 
+  <span class="italic">s
+   <sub>1</sub>
+  </span>(.) are smooth functions for the meteorological variables and the time trend defined via penalized cubic regressions splines; 
+  <span class="italic">Z
+   <sub>kit</sub>
+  </span> denotes the 
+  <span class="italic">k</span>-th socio-economic variables (GDP per capita, proportion of people living in urban areas, proportion of people with access to piped water) which enter the model linearly; 
+  <span class="italic">d
+   <sub>i</sub>
+  </span> are province-specific fixed effects 
+  <a rid="pntd.0002503-Johnston1" ref-type="bibr" href="#pntd.0002503-Johnston1">[32]</a> to capture the effects of potential unobserved confounders (e.g. social behaviour) in the model. Log(
+  <span class="italic">ξ
+   <sub>it</sub>
+  </span>) indicates the logarithm of the population/month at risk included as an offset variable. This offset variable standardises dengue occurrence by population to compute estimations on the incidence rate rather than on the total number of dengue cases. To account for possible over-dispersion, we allowed the scale parameter to be different from the mean 
+  <a rid="pntd.0002503-Cameron1" ref-type="bibr" href="#pntd.0002503-Cameron1">[33]</a>. This led to a quasi-maximum likelihood Poisson model, which is the standard consistent estimator for count variables 
+  <a rid="pntd.0002503-Wooldridge1" ref-type="bibr" href="#pntd.0002503-Wooldridge1">[34]</a>.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The province-specific fixed effects control for province-specific omitted variable bias and un-modelled confounders such as social behaviour. The smooth function of time controls for long-term trends and seasonality that could arise from non-climatic factors such as resistance of the vector to insecticides, changes in the diagnostic techniques, holidays and seasonal water storage practices. To ensure the robustness of our results, we tested other specifications to account for long-term and seasonal trends including: 0,1 categorical variables for each year and for each season for the period, categorical variables for each year with a sinusoidal term for seasonal trends, and a linear trend with a sinusoidal term for seasonal trends. As is the case of the smooth function for time, our categorical variables account for long-term and seasonal changes that could happen as a consequence of confounding non-climatic factors such as seasonal water storage or year-specific disruptions in the public health systems. Estimations were conducted using the ‘mgcv’ package 
+  <a rid="pntd.0002503-Wood1" ref-type="bibr" href="#pntd.0002503-Wood1">[21]</a> for R version 2.12.0 
+  <a rid="pntd.0002503-R1" ref-type="bibr" href="#pntd.0002503-R1">[31]</a>.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The smooth functions are represented by regression splines, which can be written as linear-combinations of known basis functions of the regressors.
+  <div id="pntd.0002503.e002" class="disp-formula">
+   <div xlink:href="pntd.0002503.e002.jpg" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <span class="label">(2)</span>
+  </div>where 
+  <span class="italic">b
+   <sub>l</sub>
+  </span>(.) denotes the basis functions and 
+  <span class="italic">δ
+   <sub>l</sub>
+  </span> the parameters to be estimated. The number of basis functions 
+  <span class="italic">q</span> determines the maximum possible flexibility of the relation between 
+  <span class="italic">X
+   <sub>jit</sub>
+  </span> and 
+  <span class="italic">g</span>(
+  <span class="italic">μ
+   <sub>it</sub>
+  </span>) (see 
+  <a ref-type="disp-formula" rid="pntd.0002503.e001" href="#pntd.0002503.e001">Equation 1</a>); the greater the value of 
+  <span class="italic">q</span>, the more flexible is the estimated effect. Here, we used Cubic Regression Splines (CRS) in which the basis functions 
+  <span class="italic">b
+   <sub>l</sub>
+  </span>(.) are constructed by dividing the range of values of the independent variable into segments separated by knots. A local cubic regression is fitted to each segment. The continuity and smoothness at the knots is ensured imposing conditions on the first and second-order derivatives 
+  <a rid="pntd.0002503-Keele1" ref-type="bibr" href="#pntd.0002503-Keele1">[35]</a>. Our estimation method, implemented via Penalized Iteratively Reweighted Least Squares (P-IRLS) is designed to automatically reduce the nonlinearities not supported by the data to simple linear forms 
+  <a rid="pntd.0002503-Wood1" ref-type="bibr" href="#pntd.0002503-Wood1">[21]</a>.
+ </p>
+</sec>

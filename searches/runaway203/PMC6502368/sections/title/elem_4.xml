@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2c" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3.</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Niche modelling and quantifying range dynamics</div>
+ <sec id="s2c1" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3.1.</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Niche comparisons</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">As previously noted, short-term observations of distribution dynamics can be inherently biased by a taxon not occupying its full geographical or environmental space. However, an additional fundamental question is whether environmental niches are conserved over evolutionary time scales [
+   <a rid="RSOS182111C45" ref-type="bibr" href="#RSOS182111C45">45</a>]. To evaluate this, we used the R-package ECOSPAT [
+   <a rid="RSOS182111C46" ref-type="bibr" href="#RSOS182111C46">46</a>] to quantify measures of niche margin dynamics (unfilling, expansion and stability). We also performed niche overlap analyses, testing for niche equivalency and similarity of the reef coral niches occupied across two temporal windows (LIG and modern). The ECOSPAT niche overlap analysis applies kernel smoothers to the densities of species occurrences in gridded environmental space, using a randomization test framework to compare observed equivalency and similarity to that anticipated under a null hypothesis [
+   <a rid="RSOS182111C46" ref-type="bibr" href="#RSOS182111C46">46</a>]. Both niche equivalency and similarity are quantified in terms of Schoener's 
+   <span class="italic">D</span> [
+   <a rid="RSOS182111C47" ref-type="bibr" href="#RSOS182111C47">47</a>], with values ranging from 0 (least equivalent or similar) to 1 (most equivalent or similar). We compared the subsampled occupied niches of LIG and modern reef corals using a principal component analysis (PCA-env), testing the null hypothesis by randomly sampling 5000 replicates of both LIG and modern niches. The PCA-env was calibrated with all five environmental variables implemented in the construction of our ENMs, and allowed us to assess differences in the occupied niche of reef corals from the LIG and modern (see [
+   <a rid="RSOS182111C48" ref-type="bibr" href="#RSOS182111C48">48</a>] for detailed descriptions of the ECOSPAT package).
+  </p>
+ </sec>
+ <sec id="s2c2" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3.2.</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecological niche modelling</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To map the potential distribution of reef corals in the modern, LIG and under future climate change scenarios (RCP4.5 and RCP8.5), we implemented three ENM methods: BIOCLIM [
+   <a rid="RSOS182111C49" ref-type="bibr" href="#RSOS182111C49">49</a>], randomForest [
+   <a rid="RSOS182111C50" ref-type="bibr" href="#RSOS182111C50">50</a>] and MaxEnt v. 3.4.1 [
+   <a rid="RSOS182111C51" ref-type="bibr" href="#RSOS182111C51">51</a>]. In particular, MaxEnt has been shown to perform well in previous studies on coral reefs, as well as those using the fossil record for other taxonomic groups [
+   <a rid="RSOS182111C14" ref-type="bibr" href="#RSOS182111C14">14</a>,
+   <a rid="RSOS182111C16" ref-type="bibr" href="#RSOS182111C16">16</a>,
+   <a rid="RSOS182111C30" ref-type="bibr" href="#RSOS182111C30">30</a>,
+   <a rid="RSOS182111C32" ref-type="bibr" href="#RSOS182111C32">32</a>,
+   <a rid="RSOS182111C52" ref-type="bibr" href="#RSOS182111C52">52</a>,
+   <a rid="RSOS182111C53" ref-type="bibr" href="#RSOS182111C53">53</a>]. ENMs were generated using the R-package ‘biomod2’ v. 3.3-7 [
+   <a rid="RSOS182111C54" ref-type="bibr" href="#RSOS182111C54">54</a>,
+   <a rid="RSOS182111C55" ref-type="bibr" href="#RSOS182111C55">55</a>], running 100 subsample replicates with 75% of occurrences for model training, while 25% were reserved (randomly seeded) for model testing. We generated two model classes, training the ENM with both the LIG and modern occurrences, offering insights into the occupied niche and distribution under two diverse climate states. Using the three ENM methods, we produced an ensemble model based on mean projections from all modelling algorithms for each climate scenario, and for each model class (LIG- and modern-trained). As reef corals reside at the upper thermal limit of the oceans, we also built clamping masks for model projections to identify geographical areas which indicate environmental variable values outside of the training range.
+  </p>
+ </sec>
+ <sec id="s2c3" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3.3.</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Range comparisons</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">In order to measure distribution dynamics, we first generated 24 binary maps from the ensemble models using two different training datasets (LIG reef corals and modern reef corals) and three different binary thresholds for the four climate scenarios (LIG, modern, RCP4.5 and RCP8.5). We selected three thresholds for binary conversion: the 5th-, 10th- and 20th-percentiles of the lowest tail of habitat suitability values (5LPT, 10LPT, 20LPT) associated with the occurrence data for each model to provide insight into habitability dynamics (see electronic supplementary material, SM2, for further details). As short-term observations are intrinsically biased and perhaps incomplete in both environmental and geographical space, we combined binary predictions generated from both LIG and modern training datasets. This was done for each time-slice/climate scenario to establish a multi-temporal approach, estimating the full geographical localities reef corals may occupy. We then assessed whether this approach improved the models' capability to predict the occurrence of both LIG and modern localities, which would have implications for forecasting under future climate scenarios. The latitudinal range and habitability of reef corals for past, present and future climatic scenarios were computed as a function of the sum of suitable cells, within 5° latitudinal bins, for each model class’ projections (LIG, modern and combined).</p>
+ </sec>
+</sec>

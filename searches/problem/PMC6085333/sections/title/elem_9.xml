@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">AeroCom fire emissions</div>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">The AeroCom inventory consists of multiple datasets of global natural and anthropogenic aerosol and precursor emissions for the pre-industrial (PI) year 1750 and the present day (PD) year 2000
+   <span class="sup">
+    <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+   </span>. AeroCom PI fire emissions are calculated by scaling back present day (year 2000) fire emissions from the Global Fire Emissions Database (GFED2)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span> database according to the change in human population density between the PI and PD. Deforestation fires are scaled solely by population density data while fire emissions from all other land surface types are scaled to 60% of their PD value, assuming 40% would burn naturally. Exceptions for high latitude boreal regions were made to account for changes in fire suppression and are assumed to be double PD levels.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Coupled Model Intercomparison Project phase 6 fire emissions</div>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">The Coupled Model Intercomparison Project (CMIP) phase 6 fire emission inventory
+   <span class="sup">
+    <a ref-type="bibr" rid="CR16" href="#CR16">16</a>
+   </span> provides monthly fire emissions from 1750 to 2015 anchored to GFED4s PD (1997–2015) emissions. Estimates of historical fire emissions are derived by merging the satellite record with fire proxy records (fire tracers contained within snow and ice and the charcoal record) in regions with suitable proxy coverage (North America and Europe), and by using the mean of six fire models in regions of limited proxy record coverage. Within the tropical rainforest regions of Equatorial Asia (including Indonesia, Micronesia, and Polynesia) and South America fire emissions are held constant back in time from 1960 and 1970, respectively. Agricultural fires are also kept relatively constant over time. Here we use the mean of emissions from 1750 to 1770 to represent the PI and the mean of emissions from 2006 to 2015 to represent the PD. The CMIP6 PI dataset is presented here as a lower bound to, and likely underestimates, the magnitude of PI fire emissions because the fire models used to construct the main part of the inventory are unable to reproduce the observed 24% decrease in global burned area over the last 18 years due to human impact
+   <span class="sup">
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">SIMFIRE-BLAZE fire model description</div>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">The principle fire modelling dataset is a transient simulation using the LPJ-GUESS-SIMFIRE-BLAZE model, where PI is defined as the mean of 1750-to-1770 and PD is defined as the mean of 2003-to-2012. The BLAZE (L.P.N. et al., manuscript in preparation) combustion model simulates fire driven fluxes within the biosphere and from biosphere to atmosphere. It computes survival-probabilities for stands of trees based on the vegetation properties and potential fire-line intensity (FLI)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span>, which is derived from available fuels and local meteorology. In the event of a fire the survival probability of each tree is tested individually. The total area burned is computed by SIMFIRE (SIMple FIREmodel)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+   </span> using an algorithm fitted to values of average annual maximum fraction of absorbed photosynthetically active radiation (fAPAR), the maximum annual Nesterov-index, the biome-type, and human population density. The reciprocal of the monthly fractional area of grassland burned is used as a stochastic proxy for the occurrence of fire affecting forested regions in each grid cell. Fluxes between live and litter pools as well as the atmosphere are then computed depending on FLI. SIMFIRE-BLAZE is incorporated within the LPJ-GUESS dynamic vegetation model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR62" href="#CR62">62</a>,
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span>
+  </p>
+ </sec>
+ <sec id="Sec14" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">LPJ-LMfire fire model description</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">The LPJ-LMfire model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>,
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span> includes processes to simulate natural wildfires from lightning ignition and a unique representation of fire generated by both agricultural and pastoral societies. To run LMfire we combined climatological mean climate fields that provide a high-spatial-resolution baseline, with detrended, interpolated climate anomalies from reanalysis simulations that provide interannual variability. The original datasets used to drive the model are described in Table 3 of Pfeiffer et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span>; here we describe the process that were used to prepare the interannually variable climate driver input files.
+  </p>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">A 20th Century Reanalysis
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span> is used to impose interannual variability in our simulations in several steps. First, we prepared monthly anomalies relative to the period 1961–1990 for: mean temperature, diurnal temperature range, total precipitation, number of days with precipitation, cloud cover, wind speed, and convective-available potential energy (CAPE). These monthly anomalies are then detrended using a robust loess regression filter
+   <span class="sup">
+    <a ref-type="bibr" rid="CR66" href="#CR66">66</a>
+   </span> with a bandwidth of 30 years. Next, we interpolated the detrended anomalies for each meteorological variable to 0.5° spatial resolution. Next, a climate driver dataset was generated from a 1080-year climate dataset by dividing the 140-year detrended climate anomalies into twelve 30-year blocks at 10-year intervals. Anomalies were then sampled using a pseudo-random scheme where once a block was chosen it was not selected again until all of the other remaining blocks have been selected. In order to generate a 1080-year timeseries 36 blocks were selected, i.e., each block was used three times but appeared in a different order each time. Finally, each anomaly timeseries was added to its complementary baseline climatological mean climate field, and used the resulting 1080-year (12960-month) climate data input file to run LMfire. For the PI simulation in LMfire, we used only the last 150 years of this model run, i.e., years 931–1080, as this is the period where all of the model pools are considered to be in equilibrium, although we acknowledge that the actual state of the terrestrial biosphere in the late preindustrial Holocene may have been far from equilibrium in many regions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR33" href="#CR33">33</a>,
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>,
+    <a ref-type="bibr" rid="CR68" href="#CR68">68</a>
+   </span>. Atmospheric CO
+   <sub>2</sub> concentrations were set to 1770 levels for the duration of this simulation.
+  </p>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">In the LMfire PI simulation, land use is prescribed from the KK10 scenario
+   <span class="sup">
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span> for the year 1770. The managed burning routine of the fire module
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span> defines that 50% of the litter on 20% of the used land (cropland and pasture) is burned annually. As the seasonality of burning on used land is not well known at global scale, fire emissions are partitioned evenly across all snow-free days of the year with mean temperature above 0 °C. In reality, most biomass burning on used land probably occurred during certain periods of the year, e.g., after harvest, but it is currently beyond the capability of any global land use scenario to prescribe these periods.
+  </p>
+  <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">To perform a PD simulation with LMfire, we made a transient model simulation for the period 1701–2000 driven by the synthetic climate timeseries described above, transient land use, and reconstructed and measured atmospheric CO
+   <sub>2</sub> concentrations. Land use was provided by merging KK10, which ends in 1850, to the Hundred Year Database for Integrated Environmental Assessments (HYDE) dataset following the protocol described in Kaplan et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR68" href="#CR68">68</a>
+   </span>. The LMfire PD results presented here represent the mean over the period 1991–2000.
+  </p>
+  <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Modern agricultural practices and legislation to protect air quality mean that in some parts of the world intentional burning of used land is currently rare. To account for this in the PD simulation, we set the burning-on-used-land factor described above to not exceed the observed burned area fraction in the JR12 burned area dataset
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>,
+    <a ref-type="bibr" rid="CR69" href="#CR69">69</a>
+   </span>, which leads to burning on used land at PD to be effectively zero in large parts of North America and Europe.
+  </p>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">Although passive fire suppression as a result of land use is included in this simulation following Pfeiffer et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span>, and burning on used land is largely eliminated in many parts of the world, the PD simulation of LMfire still overestimates mean annual burned area in parts of the world, notably in the western United States, southern Europe, and the Middle East. Because these are PD regions known to be subject to large-scale industrial fire suppression efforts, we accounted for this fire suppression by further correcting the LMfire output in a model postprocessing step. To identify regions affected by potential model bias, we compared modelled burned area with GFED4s at the level of GFED regions, with Europe further subdivided into North and South at 45° N (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">9</a>). Within those regions where the discrepancy between modelled and observed burned area was ≥90%, i.e., the USA, southern Europe, and Middle East, we assumed that the primary reason for the discrepancy was active fire suppression. To correct this model PD bias in these regions, we scaled the modelled BC emissions by the ratio of GFED4s observed to LMfire modelled burned area calculated at the GFED regional level. This resulted in a slightly &lt;10% decrease to the global BC annual emission flux. In all other regions, we used modelled BC emissions without bias correction because the discrepancy was smaller and we could not justify industrial fire suppression as being the potential primary cause of model-data mismatch. The primary region where simulated burned area remains overestimated by LMfire is in the tropical seasonal forests of South America. This is both a region of rapid land use change over recent decades where anthropogenic influences on burning may not be well captured in the PD LMfire simulation, and where it has already been identified
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span> as a place where the process representation of fire could be improved in the LMfire model.
+  </p>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">In all three GFED regions (encompassing the USA and Mediterranean) where PD LMfire emissions were scaled, the scaling reflects a modern-day fire suppression practice driven largely by technologies and ideologies that were not present in 1750. For example, in the PD US &gt; 99.5% fires are actively suppressed
+   <span class="sup">
+    <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+   </span>, and due to this the USA underwent reductions in annual burned area over the 20th Century of over 80% from &gt;40 m ha in late 1920s to ≤5 m ha in the early 2000s (
+   <span ext-link-type="uri" xlink:href="http://www.fao.org/docrep/010/ai412e/AI412E06.htm" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.fao.org/docrep/010/ai412e/AI412E06.htm</span>)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR70" href="#CR70">70</a>
+   </span>. We therefore assume that a similar small (&lt;10% global emission reduction) PI bias correction is not required here. This does however highlight once more that fire models should aim to move beyond present-day optimisations
+   <span class="sup">
+    <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+   </span> by incorporating more paleofire data.
+  </p>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">Differences in fire emissions within boreal regions between LMfire and GFED4s are in part due to the longer simulation time within LMfire (150 years) compared to satellite measurements, resulting in fires being simulated in the model that are not represented in the satellite record used to construct the GFED4s emission dataset. In particular, the wide range of fire regimes within the Arctic tundra leads to fire return periods of between decades to millennia
+   <span class="sup">
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>. Many high latitude fires are therefore unaccounted for in fire emission datasets
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+   </span>, including the CMIP6 and SIMFIRE-BLAZE datasets presented here, but can occur within LMfire. Other differences include assumptions about fuel load, combustion completeness, emission factors, permafrost, PD fire suppression and increased post-harvest agricultural burning in the PI that is not present in the PD due to land use change practices. Within semi-arid regions LMfire predicts a shorter fire return interval
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span> than suggested by recent studies
+   <span class="sup">
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>, however total emissions from these regions are generally low, and therefore less important for climate, due to the sparse vegetation cover within them
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span>.
+  </p>
+  <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">To test the sensitivity of PI fire emission estimates to natural climate variability the 150-year emission dataset of LMfire was partitioned into 15 decadal mean fire climatologies, each representing a plausible PI fire landscape. As tropical and extra-tropical fires belong to distinct regimes with different characteristics, four different scenarios (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>) based on the maximum and minimum emissions from each were selected. These four scenarios were then used to generate the uncertainty range in estimates of LMfire emissions in Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a> and the range in radiative forcing calculations in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>.
+  </p>
+ </sec>
+ <sec id="Sec15" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modelled fire emissions</div>
+  <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">Dry biomass burned from both fire models is used to calculate fire emissions (mass of aerosol species emitted per mass of dry matter burned) in each grid cell using carbonaceous aerosol emission factors from Li et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+   </span> for non-herbaceous vegetation and emission factors from van der Werf et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+   </span> for herbaceous vegetation and sulphur dioxide emissions.
+  </p>
+  <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">Total biomass available as fuel (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>) is calculated for SIMFIRE-BLAZE as the sum of carbon in living vegetation and the carbon in litter, and for LMfire as the sum of living vegetation in herbaceous vegetation and the carbon in litter. The spatial distribution of PI biomass is largely similar to the PD
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span> with peak biomass amounts simulated in SH tropical and NH boreal regions and appreciable biomass amounts in NH mid-latitudes (particularly around the Mediterranean and Eastern USA and China regions). Burned area (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>) is defined as the annual mean fraction of the grid cell which burns over the studied simulation time frame. Burned area in LMfire is calculated based on the well-established Rothermel equations of rate of fire spread, so fires spread only when fuel is available. Globally, modelled maxima in burned area for both LMfire and SIMFIRE-BLAZE do not exceed PD maxima observed burned areas within African Savannah regions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>.
+  </p>
+  <p id="Par46" xmlns="http://www.w3.org/1999/xhtml">Different representations of anthropogenic land cover and land use change over the industrial period in each fire dataset contribute significantly to the difference in PI emissions at northern mid-latitudes (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>). The AeroCom and CMIP6 datasets assume that anthropogenic land cover does not change much over time, which is unrealistic
+   <span class="sup">
+    <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+   </span>, and therefore PI emissions are spatially co-located with observed PD emissions. The SIMFIRE-BLAZE simulation incorporates the HYDE 3.1 dataset
+   <span class="sup">
+    <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+   </span> within the host LPJ-GUESS vegetation model, which linearly extrapolates historical land cover change based on 1961 land use, and results in increases to anthropogenic land use in western Europe at 1750
+   <span class="sup">
+    <a ref-type="bibr" rid="CR38" href="#CR38">38</a>,
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>,
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span>. The LMfire simulation incorporates the KK10 dataset
+   <span class="sup">
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span> within the host LPJ vegetation model, which assumes a Boserupian view of non-linear land use intensification where low population densities lead to fast anthropogenic land expansion
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>,
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span>. The LMfire simulation therefore features significantly more anthropogenic land use in the early PI period than SIMFIRE-BLAZE, particularly over Eurasia, India, southeast Asia and Africa
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>,
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span>. As LMfire incorporates a dedicated modelling scheme for simulating post-harvest agricultural fires, the extra impact of agricultural fires on emissions from cropland areas are contributing to the larger emissions in these regions compared to SIMFIRE-BLAZE. In these simulations 10% of the annual agricultural biomass is assumed to be left on the field post-harvest and subsequently burned each year.
+  </p>
+  <p id="Par47" xmlns="http://www.w3.org/1999/xhtml">LMfire emissions are approximately a factor 2 higher than SIMFIRE-BLAZE while CMIP6 approximately a factor of 2 lower. This level of uncertainty in fire emissions is half that reported in Lee et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR78" href="#CR78">78</a>
+   </span> and common place when comparing modelled fire-related aerosol optical depth (AOD) to measured AOD. For example, Reddington et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR79" href="#CR79">79</a>
+   </span> found that discrepancies between modelled aerosol and measured AOD and surface PM
+   <sub>2.5</sub> from biomass burning can be resolved by scaling fire emissions by a factor of 1.5–3.4, depending on dataset. They also note that other models require a scaling as high as a factor of 6, although 2–3 is more common. We therefore suggest that our uncertainty (factor of 2) in PI emissions reflects this current PD uncertainty—but is not higher and hence not unrealistic.
+  </p>
+ </sec>
+ <sec id="Sec16" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Global aerosol microphysics model description</div>
+  <p id="Par48" xmlns="http://www.w3.org/1999/xhtml">The GLObal Model of Aerosol Processes (GLOMAP) was used to calculate monthly mean aerosol mass and number concentrations in seven lognormal modes (one soluble nucleation mode, plus one insoluble and one soluble for each of the Aitken, accumulation and coarse modes)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR80" href="#CR80">80</a>
+   </span>. This study follows the experimental set up of Hamilton et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+   </span> with the addition of CMIP6 fire emissions for the PD. GLOMAP simulates particle nucleation, growth, coagulation, cloud cycling and deposition. The horizontal grid resolution is 2.8° × 2.8° with 31 vertical levels between the surface and 10 hPa. Modelled aerosol transport in both time periods is prescribed by 3D gridded wind speed, temperature and humidity fields for year 2008 from the European Centre for Medium-range Weather Forecasts (ECMWF), which are interpolated every 6 h. Cloud condensation nuclei (CCN) number concentrations are calculated at 0.2% supersaturation following Petters and Kreidenweis
+   <span class="sup">
+    <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+   </span>, we assign hygroscopicities (
+   <span class="italic">κ</span>) values of 0.61 for sulphate, 1.28 for sea salt, 0.1 for organic carbon and 0.0 for black carbon (BC). Aged soluble aerosols in GLOMAP are internally mixed and contain the species: sulphate, sea salt, organic carbon, BC and dust. We report CCN concentrations at the 915 hPa model level (~850 m a.s.l.), approximately corresponding to cloud base for low-level warm stratiform clouds. GLOMAP-mode has previously been used to model aerosol number concentrations in various studies involving biomass burning aerosols
+   <span class="sup">
+    <a ref-type="bibr" rid="CR30" href="#CR30">30</a>,
+    <a ref-type="bibr" rid="CR82" href="#CR82">82</a>–
+    <a ref-type="bibr" rid="CR85" href="#CR85">85</a>
+   </span> and has been shown to perform well against CCN measurements in different environments
+   <span class="sup">
+    <a ref-type="bibr" rid="CR86" href="#CR86">86</a>
+   </span>. In the PI fossil fuel emissions and the concentration of anthropogenic volatile organic compounds are assumed to be zero in all scenarios. A small PI biofuel component exists, mainly due to domestic heating and cooking
+   <span class="sup">
+    <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+   </span>. Natural emission fluxes of ocean dimethyl sulphide
+   <span class="sup">
+    <a ref-type="bibr" rid="CR87" href="#CR87">87</a>
+   </span>, sea spray and dust to the atmosphere are generated as a function of the local wind speed
+   <span class="sup">
+    <a ref-type="bibr" rid="CR88" href="#CR88">88</a>,
+    <a ref-type="bibr" rid="CR89" href="#CR89">89</a>
+   </span>, resulting in identical emission fluxes for each time period. Biogenic volatile organic compound
+   <span class="sup">
+    <a ref-type="bibr" rid="CR90" href="#CR90">90</a>
+   </span> and volcanic emissions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR91" href="#CR91">91</a>
+   </span> are also identical in both time periods.
+  </p>
+ </sec>
+ <sec id="Sec17" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ice core black carbon and fire tracer comparison</div>
+  <p id="Par49" xmlns="http://www.w3.org/1999/xhtml">The Wyoming ice core
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span> is located at 43.1° N, 109.6° W and 4100 m above sea level. The D4 Greenland ice core
+   <span class="sup">
+    <a ref-type="bibr" rid="CR10" href="#CR10">10</a>
+   </span> is located at 71.4° N, 44.0° W and 2713 m above sea level. The North Greenland Eemian (NEEM) ice cores
+   <span class="sup">
+    <a ref-type="bibr" rid="CR42" href="#CR42">42</a>
+   </span> at 77.5° N, 51.2° W and 2480 m above sea level. The Colle Gnifetti (CG) Swiss-Italian Alps ice core
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span> at 45.6° N, 7.5° E and 4450 m above sea level. Each site has BC measurements for different historical periods: D4 1788 to 2002; NEEM 78 to 1998; CG has a single year PI measurement at 1750 and an average PD measurement between 1950 and 1980. The CG site is located within a heterogeneous alpine environment and BC concentrations in both time periods are calculated as the average concentrations from the model level matching the ice core site over six grid cells: the grid cell containing the CG site plus the grid cells directly to the east, west, south, southeast and southwest, those adjacent to the north were not included as it is assumed the Alps would provide a barrier to continental air flow. As the Greenland sites are within a more homogenous Arctic environment BC concentrations in both time periods are calculated at the ground level within the closest four grid cell containing the site.
+  </p>
+  <p id="Par50" xmlns="http://www.w3.org/1999/xhtml">While our model does not directly calculate BC concentrations in snow, as the processes involved are not represented, deposition data was retrieved from the model in a previous study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+   </span> and tested offline within the Community Land Model, which does represent the relevant processes. Results from this study showed that GLOMAP simulates BC deposition close to the mean for the Arctic region
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+   </span>. We therefore expect relative BC changes in air and in ice to be approximately comparable. Ice core measurements of fire emission tracers are sparse, limiting our analysis to BC, levoglucosan and vanillic acid (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). We therefore assume that as the trends in these three species are generally similar pre-1880 (wide scale industrialisation) that POM and SO
+   <sub>2</sub> will follow similar trends. Limitations in comparing PI ice core measurements to PI modelled atmospheric concentrations centre on a lack of understanding of how the PI atmospheric state was behaving
+   <span class="sup">
+    <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+   </span>. For example, there are uncertainties in aerosol transport and residence time, chemical transformation and deposition processes to Arctic regions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR92" href="#CR92">92</a>
+   </span>. Furthermore, in this study we assume that these processes are the same in the PI as the PD, although some could be different
+   <span class="sup">
+    <a ref-type="bibr" rid="CR93" href="#CR93">93</a>
+   </span>, and by using a single year’s meteorology we do not capture possible changes to modelled deposition process (e.g., precipitation rates) at the ice core location. Another issue is relating the modelled regional aerosol emissions and processes to the point measurements of a single ice core, which can also capture emissions from varying sources. To account for uncertainties in the PI period caused by natural variability in fire activity and atmospheric circulation, the Greenland and Wyoming ice core BC concentrations in the PI were calculated as a 20-year mean (D4: 1788–1807, NEEM: 1740–1759, Wyoming: 1747–1766). In the PD Greenland ice core BC concentrations are also heavily influenced by industrial emissions that have been decreasing in strength over the past decades. We therefore calculate Greenland ice core means over a shorter 5-year period (D4: 1998–2002, NEEM: 1994–1998), and the Wyoming ice core over a 10 year period (1970–1979). The PD/PI ratio range was calculated using the standard error of the mean. The mean PD/PI BC, ratio for 5, 10 and 20-year averages in both time periods, and the standard errors, are shown in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. Mean PI BC concentrations from the Wyoming ice core are highly sensitive to the chosen PI start year; altering from 1747 (first year in the record) to 1750 (first year in the fire emission datasets) would increase mean PI BC concentrations by 23%, further reducing the measurement-based PD/PI BC ratio. For model M and observation O the symmetric bias factor was calculated as: For M &gt; O: (M/O)−1; For O &gt; M: –(O/M) + 1. Uncertainty in the CMIP6 industrial BC emission inventory used to calculate the decrease in BC emissions from anthropogenic activity in the region of the WY (factor of 1.6) and CG (factor of 2) glacier ice cores could be up to a factor of two
+   <span class="sup">
+    <a ref-type="bibr" rid="CR78" href="#CR78">78</a>
+   </span>, however as the uncertainties in European and American BC emission datasets are much lower than other regions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR43" href="#CR43">43</a>
+   </span> we estimate the uncertainty at ±25%.
+  </p>
+  <p id="Par51" xmlns="http://www.w3.org/1999/xhtml">Specific fire emission tracers are also recorded within the Greenland ice cores: yearly measurements of Vanillic acid (VA) at D4 and sub-decadal (~2 measurements decade
+   <span class="sup">−1</span>) Levoglucosan (LG) measurements at NEEM. The mean PD/PI VA and LG ratio for 5, 10 and 20-year averages in both time periods, and the standard errors, are shown in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. The sub-decadal NEEM data has a large fire year within the 20-year mean (155 ng/g LG compared to a mean of 44 ng/g LG without that year) and therefore the PD/PI ratio is shown both with and without this year included. Measurements of LG and VA show that PD fire emissions deposited to Greenland have decreased since the PI, further supporting the fire model emission data (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>).
+  </p>
+ </sec>
+ <sec id="Sec18" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Charcoal database comparison</div>
+  <p id="Par53" xmlns="http://www.w3.org/1999/xhtml">The Global Charcoal Database (GCD version 3.0.3) was used within the paleofire R package (
+   <span ext-link-type="uri" xlink:href="http://cran.r-project.org/web/packages/paleofire/paleofire.pdf" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://cran.r-project.org/web/packages/paleofire/paleofire.pdf</span>) to determine trends in fire activity over the industrial period (1750–2000). The GCD contains 736 charcoal records (NH: 436, SH: 300). Following Marlon et al.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR9" href="#CR9">9</a>
+   </span> charcoal accumulation records in the GCD are transformed in a 3 step process prior to examination to allow comparison of records that are based on a wide range of sampling techniques. Step 1: minimax transformation to rescale values. Step 2: Box-Cox transformation to homogenise the variance within individual time series. Step 3: rescaling values to Z-scores. A LOcally WEighted regression Scatter plot Smoother (LOWESS) smoothing of the data was employed with a 10-year window half-width (i.e., a 20 year smoothing). Bootstrap analysis (1000 samples by site) gives a 97.5% confidence interval. The main difference in the charcoal analysis presented here compared to those in previous studies
+   <span class="sup">
+    <a ref-type="bibr" rid="CR8" href="#CR8">8</a>,
+    <a ref-type="bibr" rid="CR9" href="#CR9">9</a>,
+    <a ref-type="bibr" rid="CR94" href="#CR94">94</a>
+   </span> is that the charcoal influx anomaly base period for all panels is 1750–2015 CE. This time period is omitted from the base period in other charcoal reconstructions so as to avoid the impacts of anthropogenic activity on the results, which is what we wish to capture in this study.
+  </p>
+ </sec>
+ <sec id="Sec19" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Aerosol radiative forcing calculation</div>
+  <p id="Par54" xmlns="http://www.w3.org/1999/xhtml">We calculate the aerosol direct radiative forcing and cloud albedo forcing, also known as the first indirect forcing, between the PI and PD using the Suite Of Community RAdiative Transfer codes based on Edwards and Slingo (SOCRATES)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR95" href="#CR95">95</a>
+   </span>, with nine bands in the longwave (LW) and six bands in the shortwave (SW). We use an offline configuration driven by year 2000 monthly mean temperature and water vapour concentrations from ECMWF reanalysis data. We use a monthly mean cloud climatology (1983–2008) from the ISCCP-D2 archive
+   <span class="sup">
+    <a ref-type="bibr" rid="CR96" href="#CR96">96</a>
+   </span>. The same PD simulation (with CMIP6 fire emissions) was paired with the three PI simulations using CMIP6, SIMFIRE-BLAZE and LMfire fire emissions. Both PI and PD fire emissions are used to calculate the AeroCom radiative forcing values in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> in order to provide a reference to compare the radiative forcing values calculated by using the CMIP6 PI and PD fire emissions. Each paired PI–PD simulation accounts for changes in anthropogenic aerosol emissions from 1750 to 2000 (due to industrial, transport and domestic fossil fuel combustion sources)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+   </span>.
+  </p>
+  <p id="Par55" xmlns="http://www.w3.org/1999/xhtml">The direct radiative forcing is calculated as the difference in the net (SW + LW) top-of-atmosphere all-sky radiative flux between the PI and PD, based on the aerosol optical properties (scattering and absorption coefficients and the asymmetry parameter) for each size mode and spectral band
+   <span class="sup">
+    <a ref-type="bibr" rid="CR97" href="#CR97">97</a>
+   </span>. The cloud albedo forcing is determined from the radiative perturbation induced by the change to cloud droplet number concentration (CDNC) between the PI and PD
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>,
+    <a ref-type="bibr" rid="CR98" href="#CR98">98</a>
+   </span>.
+  </p>
+  <p id="Par56" xmlns="http://www.w3.org/1999/xhtml">Cloud droplet number concentrations are calculated
+   <span class="sup">
+    <a ref-type="bibr" rid="CR99" href="#CR99">99</a>–
+    <a ref-type="bibr" rid="CR101" href="#CR101">101</a>
+   </span> from the monthly mean aerosol size distribution, assuming a uniform updraught velocity of 0.15 m s
+   <span class="sup">−1</span> over ocean and 0.3 m s
+   <span class="sup">−1</span> over land. The critical supersaturation is calculated using the hygroscopicity parameter (
+   <span class="italic">κ</span>) approach
+   <span class="sup">
+    <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+   </span>. A multi-component 
+   <span class="italic">κ</span> is obtained by weighting individual 
+   <span class="italic">κ</span> values by the volume fraction of each component. We assign 
+   <span class="italic">κ</span> values as follows: sulphate (0.61, assuming ammonium sulphate), sea-salt (1.28), black carbon (0.0), and particulate organic matter (0.1).
+  </p>
+  <p id="Par57" xmlns="http://www.w3.org/1999/xhtml">To calculate the cloud albedo forcing, a uniform control cloud droplet effective radius (
+   <span class="italic">r</span>
+   <sub>e1</sub>) of 10 µm is assumed to maintain consistency with the ISCCP derivation of the liquid water path. For each paired PI−PD experiment the effective radius (
+   <span class="italic">r</span>
+   <sub>e2</sub>) for low- and mid-level clouds (up to 600 hPa) is calculated as in Eqn. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>, from the monthly mean cloud droplet number fields CDNC
+   <sub>1</sub> and CDNC
+   <sub>2</sub>, respectively (where CDNC
+   <sub>1</sub> represents the PD simulation, and CDNC
+   <sub>2</sub> represents the PI simulation).
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${r}_{{\mathrm{e}}2} = {r}_{{\mathrm{e}}1} \times \left[ {\frac{{{\mathrm{CDNC}}_1}}{{{\mathrm{CDNC}}_2}}} \right]^{\frac{1}{3}}$$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">r</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">e</span>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">r</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">e</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="msup">
+       <div class="mrow">
+        <div close="]" open="[" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="mfrac">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">CDNC</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">1</span>
+             </div>
+            </div>
+           </div>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">CDNC</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">3</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2018_5592_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par58" xmlns="http://www.w3.org/1999/xhtml">In these offline experiments, we do not calculate the second aerosol indirect (cloud lifetime) effect.</p>
+ </sec>
+ <sec id="Sec20" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Code availability</div>
+  <p id="Par59" xmlns="http://www.w3.org/1999/xhtml">The codes used to conduct the analysis presented in this paper can be obtained by contacting the corresponding author (D.S.H.).</p>
+ </sec>
+ <sec id="Sec21" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p id="Par60" xmlns="http://www.w3.org/1999/xhtml">Data are available upon request from the corresponding author (D.S.H.).</p>
+ </sec>
+</sec>

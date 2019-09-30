@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Meteorological forcing data</div>
+ <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">The CLSM simulation was driven by the Princeton forcing dataset which comprises time series of precipitation, short and long wave radiation, air temperature, relative humidity, surface pressure and wind speed. The dataset, which spans 1948 to 2014, was constructed by bias correcting the precipitation, solar radiation, and air temperature fields from the National Center for Environmental Prediction (NCEP)/National Center for Atmospheric Research (NCAR) re-analysis using 
+  <span class="italic">in situ</span> and satellite observations
+  <span class="sup">
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+  </span>. The data are provided on a 1° global grid (excluding the Antarctica) with a 3-hourly timestep. The Princeton dataset has been used for a wide variety of applications including examining long-term trends of drought
+  <span class="sup">
+   <a ref-type="bibr" rid="CR34" href="#CR34">34</a>
+  </span>, runoff
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span>, and changes in the water cycle
+  <span class="sup">
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+  </span>. CLSM was first spun up from uniform initial conditions over the period, 1948 to 2014. The first 10 years of that simulation were discarded and the temporal (1959–2014) mean of each variable at each grid pixel on December 31 was used to initialize the experimental simulation on January 1, 1948. Use of multi-year average initial conditions is optimal for reducing the impacts of climatological anomalies on an experimental model simulation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+  </span>.
+ </p>
+ <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">WaterGAP simulations from 1960 to 2009 were driven by gridded time series of monthly precipitation and potential ET. Monthly precipitation obtained from Global Precipitation Climate Center
+  <span class="sup">
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span> (GPCC), Version 6, were downscaled by evenly distributing the monthly values to wet days of the month determined from Climate Research Unit (CRU) data
+  <span class="sup">
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+  </span>, version TS 3.10. CRU temperature and cloud cover data were used to derive monthly potential ET based on the Priestley and Taylor equation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR40" href="#CR40">40</a>,
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+  </span> which requires fewer atmospheric variable inputs than the Penman-Monteith method used by most land surface models including CLSM. Monthly time series of potential ET were further downscaled to daily values prior to model simulation.
+ </p>
+ <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">The forcing data used for PCR-GLOBWB simulations during 1958–2015 were based on monthly CRU (TS 3.21.2 for 1958–2010 and TS.3.24 for 2011–2015) precipitation, temperature and potential ET, which were spatially and temporally downscaled using ERA40 and ERA-Interim data
+  <span class="sup">
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+  </span>. CRU data are provided at 5 arc minute resolution but the temperature data were further downscaled for better simulation of snow dynamics. Monthly CRU precipitation was proportionally distributed to ERA rainy days for a given threshold (0.1 mm day
+  <span class="sup">−1</span>) with daily values re-scaled to match monthly CRU precipitation. In areas with too few CRU stations, CRU precipitation was replaced by ERA precipitation, thus this precipitation dataset is referred to as CRU-ERA in this study. Monthly reference ET was estimated outside of the model simulation using CRU meteorological data and the Penman-Monteith method and was downscaled to daily values using a daily temperature-based ET product. PCR-GLOBWB was first repeatedly executed for 150 years using the mean atmospheric forcing conditions under the non-anthropogenic scenario from 1968–2000 to allow simulated groundwater to reach a steady state. The resulting conditions were then used to initialize the model under non-anthropogenic and anthropogenic simulation scenarios.
+ </p>
+</sec>

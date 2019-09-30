@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec11" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Transcriptome methods</div>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">Protolaeospira stalagmia</span> were dissected from their calcified skeletons, snap frozen in liquid nitrogen and stored at −80 °C prior to RNA extraction. Total RNA was extracted from dissected 
+  <span class="italic">Protolaeospira stalagmia</span> (
+  <span class="italic">n</span> = 6 per panel, per treatment: 3 each of control, +1, +2; total of 54 individuals) using ReliaPrep TM RNA Miniprep Systems (Promega) according to the manufacturer’s instructions. RNA samples were assessed for concentration and quality using a NanoDrop ND-100 Spectrometer (NanoDrop Technologies) and an Agilent 2200 Tapestation (Agilent Technologies). RNA samples (
+  <span class="italic">n</span> = 6 per panel, per treatment) were pooled to obtain a total of three replicates per treatment (control, +1, +2) producing a final total of nine samples of 150 ng RNA for each sample.
+ </p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">To obtain sufficient RNA for library preparation each RNA pool was cDNA was amplified using the Ovation RNA-Seq system v2 kit (NuGEN) according to the manufacturer’s instructions. Library preparation and sequencing was carried out by Edinburgh Genomics (Edinburgh, UK). For each sample, cDNA was converted to a sequencing library using the TruSeq standed mRNA-Seq library for NeoPrep (Ilumina) and barcoded libraries were pooled and sequenced on an Illumina HiSeq 4000 using 125 base paired-end reads to generate 50 million raw reads per sample.</p>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">Reads were trimmed using Cutadapt (version 1.9 dev2)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span> for quality at the 3′ end using a quality threshold of 30 and for adapter sequences of the TruSeq Nano DNA kit (AGATCGGAAGAGC) and a minimum length of 35 bp. rRNA reads were removed using sortMeRNA (version 2.1)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+  </span>. The filtered reads were assembled using Trinity (version 2.5)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>, which produced over five million sequences. Transcripts were quantified using the RSEM method
+  <span class="sup">
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+  </span> and any sequences with TPM (transcripts per million) &lt;1 and isopct (minimal level of dominant isoform expression) &lt;1 were discarded. In order to further reduce any redundancy, transcripts with 95% similarity were clustered using CD-HIT-EST (version 4.7)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR50" href="#CR50">50</a>,
+   <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+  </span>. These contigs were annotated using Trinotate (version 3.1.1)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>. As part of this pipeline, peptide sequences were predicted using transdecoder, which were further searched against the SwissProt non-redundant database using BLASTP
+  <span class="sup">
+   <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+  </span>. BLASTX
+  <span class="sup">
+   <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+  </span> search was also performed with the transcript sequences as the query and the SwissProt non-redudant database as the target. The Pfam databases
+  <span class="sup">
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span> were used to predict protein domains using HMMER
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span>. SignalP (version 4.1)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR55" href="#CR55">55</a>
+  </span> was used to predict the presence of signal peptides, and TMHMM
+  <span class="sup">
+   <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+  </span> was used to predict transmembrane helices within the predicted peptide sequences.
+ </p>
+ <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">The trimmed reads free from rRNA were aligned against the reference transcriptome using bwa mem (version 0.7.13-r1126)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR57" href="#CR57">57</a>
+  </span> with parameter ‘-M’. Duplicates were marked using Picard tools (version 2.8.1) (
+  <span ext-link-type="uri" xlink:href="http://broadinstitute.github.io/picard" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://broadinstitute.github.io/picard</span>). Read counts by transcript were generated using Salmon (version 0.9.1)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+  </span>. The transcriptome assembly produced earlier was used to produce a quasi-mapping index. The quantification step was carried out with parameter ‘-1 U’ to specify an unstranded library and bias correction parameters –seqBias, --gcBias and –posBias
+  <span class="sup">
+   <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+  </span>. Transcripts were filtered on counts per million (CPM) to remove transcripts consisting of near-zero counts and to avoid artefacts due to library depth. Transcripts were required to have a CPM &gt;0.3 in at least three samples, corresponding to the smallest sample group as defined by group, once any samples were removed. Reads were normalised using the weighted trimmed mean of 
+  <span class="italic">M</span>-values method
+  <span class="sup">
+   <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+  </span>. ‘TMM’ was passed as the method to the calcNormFactors method of edgeR. edgeR (version 3.16.5)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+  </span> was used to perform differential expression analysis. Fold changes were estimated as per the default behaviour of edgeR. Statistical assessment of differential expression was carried out with the quasi-likehood (QL) 
+  <span class="italic">F</span>-test using the following contrasts: Control versus 1 °C, controls versus 2 °C and 1 °C versus 2 °C. To adjust for confounding covariates such as batch effects, a blocking factor was incorporated as part of the additive model. Differential gene set analysis was carried out using ROAST
+  <span class="sup">
+   <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+  </span> from the Limma package version 3.30.13 (ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span>) of Bioconductor using the same models and contrasts as used in the differential transcript analysis expression. A PCA analysis was undertaken on normalised and filtered expression data to explore observed patterns with respect to experimental factors. The cumulative proportion of variance associated with each factor was used to study the level of structure in the data, while associations between continuous value ranges in principal components and categorical factors was assessed with an ANOVA test. The following Gene Ontology (GO) gene sets were used: GO Molecular Function, GO Cellular Component and GO Biological Process
+  <span class="sup">
+   <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+  </span>. For GO enrichment analyses, the GO annotations were extracted from the Trans-D_trinotate_annotation_report.txt. ROAST was executed using 9999 rotations. GO terms that were not associated with at least five genes were excluded from the analysis. All transcripts in the contrasts of interest with either a BLASTX and/or a BLASTP annotation were re-searched against the human SwissProt database
+  <span class="sup">
+   <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+  </span>. A list of unique human protein identifiers was then entered into both the STRING
+  <span class="sup">
+   <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+  </span> and PANTHER
+  <span class="sup">
+   <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+  </span> databases to evaluate enrichment of functional groups.
+ </p>
+</sec>

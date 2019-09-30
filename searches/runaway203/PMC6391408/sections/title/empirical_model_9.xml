@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Empirical model of nitrogen loading</div>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">The empirical model reported in an earlier study
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span> that relates precipitation, land use, and NANI to TN loading at the HUC8 scale was developed based on land use categories included in National Land Cover Database 2006 (NLCD 2006). There is, however, no simple correspondence between the NLCD 2006 land use categories and those reported in the LUH2 dataset. Rather than create an approximate mapping, we instead developed a modified model, with model selection and model calibration based directly on the land use variables available in the LUH2 dataset. The approach was analogous to the earlier study
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span>, with the following differences. The 12 land use categories of LUH2 dataset were aggregated into six categories as illustrated in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>. Following the methodology of the earlier study
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span>, all six land use categories and all their combinations were considered in the model selection. In addition, because the observation-based NANI data are now available through 2012
+  <span class="sup">
+   <a ref-type="bibr" rid="CR72" href="#CR72">72</a>,
+   <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+  </span>, the calibration dataset included the same catchments as the earlier study
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span>, but observed TN loading for 2012 was added where available. The total number of catchment-years for model build was thus increased from 242 to 280. Also, whereas the NLCD database only provides land use for a single year, the LUH2 dataset provides annual values for all land use categories, and land use was therefore no longer held constant over time.
+ </p>
+ <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">The final model based on LUH2 land use categories represents the natural log of TN loading (ln(
+  <span class="italic">Q</span>
+  <sub>TN</sub>)) as:
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{ln}}\left( Q_{\mathrm{TN}} \right) = 0.538 + 0.438 \cdot f_{\mathrm{NANI}} + 0.0012 \cdot P_{\mathrm{Annual}} + 0.0033 \cdot P_{{\mathrm{MAM}},p &gt; 0 .95} + 0.0213 \cdot {\mathrm{LU}}_{\mathrm{D,C}},$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <span mathvariant="normal" class="mi">ln</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">Q</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">TN</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">0.538</span>
+     <span class="mo">+</span>
+     <span class="mn">0.438</span>
+     <span class="mo">⋅</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">NANI</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mn">0.0012</span>
+     <span class="mo">⋅</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">P</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Annual</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mn">0.0033</span>
+     <span class="mo">⋅</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">P</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">MAM</span>
+       <span class="mo">,</span>
+       <span class="mi">p</span>
+       <span class="mo">&gt;</span>
+       <span class="mn">0.95</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span class="mn">0.0213</span>
+     <span class="mo">⋅</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">LU</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">D,C</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_8884_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$f_{\mathrm{NANI}} = a{\mathrm{sin}}h\left( {\mathrm{NANI}}/2 \right) = {\mathrm{ln}} \left({\mathrm{NANI}}/2 + \sqrt {\left( {\mathrm{NANI}}/2 \right)^2 + 1}\right),$$\end{document}</span>
+    <div id="M4" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">NANI</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">a</span>
+     <span mathvariant="normal" class="mi">sin</span>
+     <span class="mi">h</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">NANI</span>
+       <span class="mo">∕</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span mathvariant="normal" class="mi">ln</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">NANI</span>
+       <span class="mo">∕</span>
+       <span class="mn">2</span>
+       <span class="mo">+</span>
+       <div class="msqrt">
+        <div class="msup">
+         <div class="mrow">
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">NANI</span>
+            <span class="mo">∕</span>
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_8884_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">f</span>
+  <sub>NANI</sub> [ln(kg N km
+  <span class="sup">−2</span> y
+  <span class="sup">−</span>
+  <span class="sup">1</span>))] is the transformed annual NANI for the target year; 
+  <span class="italic">P</span>
+  <sub>Annual</sub> [mm] is annual precipitation in the catchment; 
+  <span class="italic">P</span>
+  <sub>MAM,
+   <span class="italic">p</span>&gt;0.95
+  </sub> [mm] is extreme precipitation in March–May expressed as the amount of precipitation that fell on days with precipitation greater than the 95th percentile (where the percentiles are calculated based on daily precipitation for 1981–2010); LU
+  <sub>D,C</sub> [%] is the percentage of the catchment area classified as developed or cropland. While the original model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span> explained 76% of the observed variability in ln(
+  <span class="italic">Q</span>
+  <sub>TN</sub>), the updated model explained 67%, suggesting that the land use categories in the LUH2 dataset are less representative relative to those in the NLCD data. Beyond the land use description, the updated model is very similar to the original, with the selected nonland-use predictor variables being identical to the original (
+  <span class="italic">f</span>
+  <sub>NANI</sub>, 
+  <span class="italic">P</span>
+  <sub>Annual</sub>, and 
+  <span class="italic">P</span>
+  <sub>MAM,
+   <span class="italic">p</span>&gt;0.95
+  </sub>). In terms of land use, the two variables based on NLCD land use classification, namely percent land cover by wetlands and percent land cover by forests or shrublands and herbaceous land are replaced by a single variable based on the LUH2 land use classification, namely percent agricultural or developed land use. The two land use variables included in the original model were associated with negative drift coefficients, meaning that, all else being equal, an increase in wetlands, forests, or shrublands was associated with a decrease in TN loading. In the updated model, croplands and developed land is associated with a positive drift coefficient, meaning that, all else being equal, an increase in croplands and developed lands leads to an increase in TN loading. Therefore, although the two models use different land use variables, they tell an entirely consistent story about the relative impacts of various land use categories on TN loading. Mechanistically, increased TN loading from agricultural and developed land (beyond the impact accounted for by NANI) is attributable to drainage that directly transports TN from land to streams and the lack of nitrogen retention that occurs in more natural landscapes.
+ </p>
+</sec>

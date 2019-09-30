@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="sec" title="sec">
+      <div xmlns="http://www.w3.org/1999/xhtml">Three Signal Regression Model</div>
+      <p xmlns="http://www.w3.org/1999/xhtml">We analyze the contributions from greenhouse gas forcing (
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${X}_{{GHG}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>X</span></div>
+                     <div><span>GHG</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>), other non-greenhouse gas anthropogenic forcings (
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${X}_{{OA}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>X</span></div>
+                     <div><span>OA</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>) and natural forcings (
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${X}_{{NAT}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>X</span></div>
+                     <div><span>NAT</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>) with corresponding scaling factors 
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${\beta }_{{GHG}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>β</span></div>
+                     <div><span>GHG</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>, 
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${\beta }_{{OA}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>β</span></div>
+                     <div><span>OA</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>, and 
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${\beta }_{{NAT}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>β</span></div>
+                     <div><span>NAT</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>. Since we only have the historical, historicalGHG, and historicalNat experiments
+         we deduce the scaling factors from a transformation on the historical, historicalNat,
+         and historicalGHG scaling factors 
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${\beta }_{{historical}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>β</span></div>
+                     <div><span>historical</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>, 
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${\beta }_{{historicalGHG}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>β</span></div>
+                     <div><span>historicalGHG</span></div>
+                  </div>
+               </div><span></span></div>
+         </div>, and 
+         
+         <div>
+            <div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$${\beta }_{{historicalNat}}$$\end{document}</span><div>
+                  <div>
+                     <div><span>β</span></div>
+                     <div><span>historicalNat</span></div>
+                  </div>
+               </div><span></span></div>
+         </div> as in Tett 
+         <span>et al</span>. (ref.
+         <span><a>19</a></span>) and Jones 
+         <span>et al</span>. (ref.
+         <span><a>21</a></span>):
+         
+         <div><span>2</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$(\begin{array}{c}{{\boldsymbol{\beta
+                  }}}_{{\boldsymbol{G}}{\boldsymbol{H}}{\boldsymbol{G}}}\\ {{\boldsymbol{\beta }}}_{{\boldsymbol{O}}{\boldsymbol{A}}}\\
+                  {{\boldsymbol{\beta }}}_{{\boldsymbol{N}}{\boldsymbol{A}}{\boldsymbol{T}}}\end{array})=(\begin{array}{ccc}1
+                  &amp; 1 &amp; 0\\ 0 &amp; 1 &amp; 0\\ 0 &amp; 1 &amp; 1\end{array})(\begin{array}{c}{{\boldsymbol{\beta }}}_{{\bf{h}}{\bf{i}}{\bf{s}}{\bf{t}}{\bf{o}}{\bf{r}}{\bf{i}}{\bf{c}}{\bf{a}}{\bf{l}}{\bf{G}}{\bf{H}}{\bf{G}}}\\
+                  {{\boldsymbol{\beta }}}_{{\bf{h}}{\bf{i}}{\bf{s}}{\bf{t}}{\bf{o}}{\bf{r}}{\bf{i}}{\bf{c}}{\bf{a}}{\bf{l}}}\\
+                  {{\boldsymbol{\beta }}}_{{\bf{h}}{\bf{i}}{\bf{s}}{\bf{t}}{\bf{o}}{\bf{r}}{\bf{i}}{\bf{c}}{\bf{a}}{\bf{l}}{\bf{N}}{\bf{a}}{\bf{t}}}\end{array})$$\end{document}</span><div>
+                  <div><span>(</span><div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>β</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>G</span><span>H</span><span>G</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>β</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>O</span><span>A</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>β</span></div>
+                                 </div>
+                                 <div>
+                                    <div><span>N</span><span>A</span><span>T</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div><span>)</span></div><span>=</span><div><span>(</span><div>
+                        <div>
+                           <div><span>1</span></div>
+                           <div><span>1</span></div>
+                           <div><span>0</span></div>
+                        </div>
+                        <div>
+                           <div><span>0</span></div>
+                           <div><span>1</span></div>
+                           <div><span>0</span></div>
+                        </div>
+                        <div>
+                           <div><span>0</span></div>
+                           <div><span>1</span></div>
+                           <div><span>1</span></div>
+                        </div>
+                     </div><span>)</span></div>
+                  <div><span>(</span><div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>β</span></div>
+                                 </div>
+                                 <div>
+                                    <div>
+                                       <div><span>h</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>i</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>s</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>t</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>o</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>r</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>i</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>c</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>a</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>l</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>G</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>H</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>G</span></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>β</span></div>
+                                 </div>
+                                 <div>
+                                    <div>
+                                       <div><span>h</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>i</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>s</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>t</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>o</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>r</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>i</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>c</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>a</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>l</span></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>β</span></div>
+                                 </div>
+                                 <div>
+                                    <div>
+                                       <div><span>h</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>i</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>s</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>t</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>o</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>r</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>i</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>c</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>a</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>l</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>N</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>a</span></div>
+                                    </div>
+                                    <div>
+                                       <div><span>t</span></div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div><span>)</span></div>
+               </div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">Further details on the implementation can be found in the Supplementary Information.</p>
+   </div>
+</html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">A literature review was conducted for studies meeting the following criteria. First, studies needed to be experiments with a control and treatment(s), and include measurements of SOC stocks or the data needed to compute stocks (bulk density, organic C concentration, and gravel content). Second, we required the depth of the measurements and number of years from the beginning of the experiment. Furthermore, short-term studies and studies that only sampled the topsoil were not excluded as has been done in other meta-analyses
+  <span class="sup">
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span> because we applied a regression modeling method to predict changes in SOC as a function of time since no-till adoption and as a function of depth without aggregation. Third, soil texture data were needed to evaluate the impact of edaphic conditions and location of the experiment to assess the impact of climate. Fourth, we required sufficient information to classify full tillage into mixing and inversion practices. We did not exclude studies because there was not enough information to estimate equivalent mass. However, we did extract data when available to estimate the change in mass, and address mass equivalency
+  <span class="sup">
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>,
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span>. We compiled data from 178 experimental sites with 1205 observations based on these criteria (See Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>).
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">A semi-parametric mixed effect models was developed to estimate the difference in SOC between no-till and full tillage management
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span>. The response variable (Δ
+  <span class="italic">SOC</span>) is
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}SOC=SO{C}_{NT}-SO{C}_{FT},$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <span class="mi">S</span>
+     <span class="mi">O</span>
+     <span class="mi">C</span>
+     <span class="mo">=</span>
+     <span class="mi">S</span>
+     <span class="mi">O</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">C</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">N</span>
+       <span class="mi">T</span>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <span class="mi">S</span>
+     <span class="mi">O</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">C</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">F</span>
+       <span class="mi">T</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41598_2019_47861_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where SOC stock under full tillage (
+  <span class="italic">SOC</span>
+  <sub>
+   <span class="italic">FT</span>
+  </sub>) is subtracted from the SOC stock under no-till management (
+  <span class="italic">SOC</span>
+  <sub>
+   <span class="italic">NT</span>
+  </sub>). Several predictor variables were tested for the model including depth; number of years since the management change; climate; soil texture classes for sandy (greater than 55% sand) compared to loamy, silty and clayey soils; the type of full tillage, i.e., inversion and mixing tillage; in addition to two-way interactions among the variables. Variables were retained in the model if they met an alpha level of 0.05 and decreased the Akaike Information Criterion by two.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Data were not aggregated to a standardized set of depths but rather all of the original depth increments as measured in the experiments were used in the analysis as separate observations of SOC stock changes (e.g., 0–5 cm, 5–10 cm, and 10–30 cm). Similarly, time series data were not aggregated, even though those measurements are taken from the same plots. Consequently, random effects were included to account for the dependencies in times series data and among data points representing different depths from the same experimental site.</p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">Data were collected by researchers at various depths that did not match among studies, and measurements correspond to depth increments (e.g., 10–30 cm) rather than a specific depth (e.g., 14 cm). Such increment data require special consideration for statistically valid inference
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span>. Depth appears as an explanatory variable in the model not directly, but as a custom covariate obtained as the definite integral of depth over each increment in each study. For example, the integral of depth is (depth)
+  <span class="sup">2</span>/2, therefore the value of the custom covariate for 10–30 cm is 30
+  <span class="sup">2</span>/2 – 10
+  <span class="sup">2</span>/2 = 400. Similarly, each function of depth (e.g., quadratic or other polynomial functions of depth to capture curvature associated with SOC differences between tillage practices) that is used as an explanatory variable required its own custom covariate, again obtained as the definite integral of the function over each increment. Additionally, these custom depth covariates were interacted with years and all other variables. This approach was needed to make statistically valid inferences with the semi-parametric mixed effect model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span>.
+ </p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">The best-fit statistical model contained all the variables except the type of full tillage practice (inversion versus mixing), which was not significant at the 0.05 alpha level. The model also included the two-way interactions between the number of years since the management change and each of the other individual variables.</p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">We developed and applied a second model to modify the predictions by adjusting for mass-equivalency
+  <span class="sup">
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+  </span>. We used a modified approach compared to other studies
+  <span class="sup">
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span> in which we adjusted the predicted Δ
+  <span class="italic">SOC</span> estimates from the semi-parametric mixed-effect model rather than the initial dataset prior to the analysis. This approach allowed us to include all observations from the experiments in the development of the Δ
+  <span class="italic">SOC</span> estimates, rather than losing information by excluding studies that did not provide sufficient data to estimate mass-equivalency for the depth increments.
+ </p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">The model predicting the difference in soil mass between full tillage and no-till management was based on 33 experimental sites with 214 observations (See Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>). We used the same semi-parametric modeling approach described above and tested the same covariates for significance. The final model included depth and the number of years since the management change. Sandy soils did not have statistically significant differences in soil mass between full tillage and no-till management so data for this soil type were removed from the analysis, and so the Δ
+  <span class="italic">SOC</span> estimates for sandy soils were not adjusted for mass equivalency (More information about the model is provided in the Supplementary Information).
+ </p>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">Estimates and uncertainty in Δ
+  <span class="italic">SOC</span> were derived using a Monte Carlo simulation approach to produce a mean and 95% confidence interval for each result. For sandy soils, the distribution of Δ
+  <span class="italic">SOC</span> was approximated with 1000 random draws of parameter values from the joint probability distributions of the fixed effects in the semi-parametric mixed effect model predicting ΔSOC (Equation 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>). For loamy, silty and clayey soils, a distribution of ΔSOC was produced using the same procedure as sandy soils (Equation 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>), but these values were adjusted for mass equivalency (Supplementary Equation 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a>) based on 1000 random draws of values for the fixed effects in the semi-parametric mixed effect model predicting the change in soil mass (Supplementary Equation 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>).
+ </p>
+</sec>

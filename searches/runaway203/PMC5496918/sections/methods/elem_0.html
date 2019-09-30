@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="materials_methods" title="materials|methods">
+      <div xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Sea Ice Data</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">The NSIDC data product comprises merged satellite passive microwave measurements from
+            the Defense Meteorological Satellite Program (DMSP) Special Sensor Microwave Imager/Sounder,
+            the older DMSP Special Sensor Microwave/Imager, and the Nimbus-7 Scanning Multichannel
+            Microwave Radiometer. The NASA Team algorithm is used to derive sea ice concentrations.
+            These data (version 2.1 for the monthly sea ice index data, version 1.1 for the daily
+            data) are available since November 1978. Prior to that time, we use the Walsh 
+            <span>et al</span>.
+            <span><a>19</a></span> gridded monthly sea ice data which synthesizes the (sparse) records of sea ice extent,
+            primarily from hand-drawn charts
+            <span><a>50</a></span>. Similarly, we use HadISST data
+            <span><a>21</a></span> for the Antarctic before the satellite era. The PIOMAS product
+            <span><a>20</a></span> blends ice concentration and sea-surface temperature data with a dynamical sea ice
+            and ocean circulation model.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Sea ice extent is defined as the area of ocean enclosed by the 15% sea ice concentration
+            contour, which is computed from the sea ice distribution. Sea ice area is the integrated
+            area covered by ice. It is a metric that avoids the non-linearity inherent in sea
+            ice extent, but has a larger observational uncertainty. The correlation coefficient
+            for northern hemisphere sea ice extent and sea ice area is 0.94. Sea ice volume is
+            the area-integrated product of sea ice concentration (ice-covered area fraction) and
+            thickness and is harder to estimate than either sea ice extent or area because of
+            the uncertainty in ice thickness.
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">The NSIDC satellite data contain various uncertainties, but they all cause small errors
+            compared to the inter-annual changes and the decadal trend seen in the seasonality
+            number in Fig. 
+            <a>1b</a>. First, a region near 90°N is unobserved by the satellites (the so-called “pole-hole”).
+            Various assumptions exist to extrapolate the sea ice concentration over the unobserved
+            region, but they do not affect the seasonality number. Second, uncertainty in sea
+            ice concentration for individual grid cells in the daily sea ice images (between 5
+            and 15%, depending on season) causes uncertainty in the seasonality number that is
+            smaller than the thickness of the line in Fig. 
+            <a>1b</a>. Consistently, the uncertainty on total sea ice extent is 2–3 × 10
+            <span>4</span> km
+            <span>2</span> (W. Meier, Personal Communication), which gives an uncertainty in 
+            <span>Se</span> of a few parts in a thousand. Finally, different algorithms exist to process the
+            satellite data, but they do not cause large uncertainty in the seasonality number:
+            for example, the NASA Bootstrap sea ice product (version 2.1)
+            <span><a>51</a></span> gives an 
+            <span>Se</span> timeseries that differs from that of the NSIDC data in Fig. 
+            <a>1b</a> by 0.028 (smaller) on average, a standard deviation of 0.016, and a correlation coefficient
+            of 0.993.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Peak Sea Ice Impact on Surface Air Temperature</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">Year-to-year differences of summer minimum (here, September mean) sea ice area (SIA)
+            and autumn (September through November mean) surface air temperature (SAT) anomalies
+            (with respect to the 1960–1980 mean) averaged over the Arctic Ocean (here, the area
+            north of 70°N) and globally are computed from CMIP5 model output which is smoothed
+            with a 30-year boxcar filter. Year-to-year differences are displayed in Fig. 
+            <a>4c</a> as time series and in Fig. 
+            <a>SI7</a> as scatter plots. The scatter diagram of Arctic SIA versus SAT is used to compute
+            a normalized distance 
+            <span>d</span> from the origin for each year 
+            <span>T</span>, as follows (Fig. 
+            <a>SI7</a>):
+            
+            <div><span>2</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                     \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                     \setlength{\oddsidemargin}{-69pt} \begin{document}$$d{(T)}^{2}={[\frac{{\rm{\Delta
+                     }}\mathrm{SAT}}{{\rm{\max }}(|{\rm{\Delta }}\mathrm{SAT}|)}]}^{2}+{[\frac{{\rm{\Delta
+                     }}\mathrm{SIA}}{{\rm{\max }}(|{\rm{\Delta }}\mathrm{SIA}|)}]}^{2},$$\end{document}</span><div><span>d</span><div>
+                        <div><span>(</span><span>T</span><span>)</span></div><span>2</span></div><span>=</span><div>
+                        <div><span>[</span><div>
+                              <div>
+                                 <div><span>Δ</span><span>SAT</span></div>
+                                 <div><span>max</span><div><span>(</span><div><span>|</span><div><span>Δ</span><span>SAT</span></div><span>|</span></div><span>)</span></div>
+                                 </div>
+                              </div>
+                           </div><span>]</span></div><span>2</span></div><span>+</span><div>
+                        <div><span>[</span><div>
+                              <div>
+                                 <div><span>Δ</span><span>SIA</span></div>
+                                 <div><span>max</span><div><span>(</span><div><span>|</span><div><span>Δ</span><span>SIA</span></div><span>|</span></div><span>)</span></div>
+                                 </div>
+                              </div>
+                           </div><span>]</span></div><span>2</span></div><span>,</span></div>
+                  <div></div>
+               </div>
+            </div>with
+            
+            <div><span>3</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                     \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                     \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}\mathrm{SAT}={{\rm{SAT}}}_{T}-{{\rm{SAT}}}_{T-1}\,{\rm{and}}\,{\rm{\Delta
+                     }}\mathrm{SIA}={{\rm{SIA}}}_{T}-{{\rm{SIA}}}_{T-1}.$$\end{document}</span><div><span>Δ</span><span>SAT</span><span>=</span><div>
+                        <div><span>SAT</span></div>
+                        <div><span>T</span></div>
+                     </div><span>−</span><div>
+                        <div><span>SAT</span></div>
+                        <div><span>T</span><span>−</span><span>1</span></div>
+                     </div><span></span><span>and</span><span></span><span>Δ</span><span>SIA</span><span>=</span><div>
+                        <div><span>SIA</span></div>
+                        <div><span>T</span></div>
+                     </div><span>−</span><div>
+                        <div><span>SIA</span></div>
+                        <div><span>T</span><span>−</span><span>1</span></div>
+                     </div><span>.</span></div>
+                  <div></div>
+               </div>
+            </div>
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">The algorithm is applied to the CMIP5 model realizations combining the historical
+            runs and RCP8.5 climate projections and to the multi-model mean (black vertical dashed
+            lines in Fig. 
+            <a>4b–d</a>; black × in Fig. 
+            <a>SI7</a>).
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">We use a 30-year running mean to low-pass filter the CMIP5 sea-ice area and surface
+            air temperature records. The intention is to focus on the trend forced by the increase
+            of greenhouse gases (RCP8.5 scenario) and to reduce the impact of interannual to decadal
+            internal variability. This procedure does not fully eliminate internal variability,
+            however, which differs between models
+            <span><a>52</a></span>.
+            
+         </p>
+      </div>
+   </div>
+</html>

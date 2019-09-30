@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2dot3dot2-sensors-19-01118" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.3.2. Estimation of Anthropogenic CO
+  <sub>2</sub> Emission by Neural Network Development
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Because XCO
+  <sub>2</sub> variations are forced by anthropogenic emissions, exchange between the atmosphere and the ocean and the terrestrial biosphere [
+  <a rid="B27-sensors-19-01118" ref-type="bibr" href="#B27-sensors-19-01118">27</a>,
+  <a rid="B28-sensors-19-01118" ref-type="bibr" href="#B28-sensors-19-01118">28</a>], there are both non-linear and linear mapping between XCO
+  <sub>2</sub> and emissions. Here we adopt a General Regression Neural Network (GRNN) algorithm [
+  <a rid="B29-sensors-19-01118" ref-type="bibr" href="#B29-sensors-19-01118">29</a>] to represent non-linear mapping between the independent variables (dXCO
+  <sub>2</sub> in this study) and dependent variable (CO
+  <sub>2</sub> emissions in this study). GRNN directly draws the function estimate approximating any arbitrary function between the input and output vectors of variables. The GRNN converges to the optimal regression result when the training samples increases in number, meanwhile, the error of estimation is closed to 0. There are four layers in the GRNN model we used, an input layer, a hidden layer, a summation layer, and a decision layer (
+  <a ref-type="fig" rid="sensors-19-01118-f003" href="#sensors-19-01118-f003">Figure 3</a>; [
+  <a rid="B30-sensors-19-01118" ref-type="bibr" href="#B30-sensors-19-01118">30</a>,
+  <a rid="B31-sensors-19-01118" ref-type="bibr" href="#B31-sensors-19-01118">31</a>]). In the input layer, each neuron corresponds to an independent variable which is defined as a mathematical function, the independent variable values will be standardized. Then the standardized independent variable values were transferred to the neurons in the hidden layer. In this layer, each neurons stores the values of the independent variables and the dependent variable, and a scalar function will be calculated. There are two neurons in the summation layer, the denominator summation unit sums the weight values coming from the hidden neurons, and the numerator summation unit sums the weight values multiplied by the actual target dependent variable value for each hidden neuron. At last, dividing the value accumulated in the numerator summation unit by the value in the denominator summation unit in the decision layer, we uses the division result as the predicted target dependent variable value [
+  <a rid="B32-sensors-19-01118" ref-type="bibr" href="#B32-sensors-19-01118">32</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">According to the calculation steps of developing a neural network, we need to standardize all the independent and dependent training variables, so that in the input layer all training data will have the same order of magnitudes. 
+  <div id="FD2-sensors-19-01118" class="disp-formula">
+   <span class="label">(2)</span>
+   <div id="mm2" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span class="mi">d</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mn">0</span>
+        </div>
+        <span class="mo">−</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="munderover">
+       <div mathsize="140%" displaystyle="true" class="mstyle">
+        <span class="mo">∑</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">j</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mi">p</span>
+      </div>
+      <div class="msup">
+       <div class="mrow">
+        <div class="mrow">
+         <span class="mo">[</span>
+         <div class="mrow">
+          <div class="mfrac">
+           <div class="mrow">
+            <div class="msub">
+             <span class="mi">x</span>
+             <div class="mrow">
+              <span class="mn">0</span>
+              <span class="mi">j</span>
+             </div>
+            </div>
+            <span class="mo">−</span>
+            <div class="msub">
+             <span class="mi">x</span>
+             <div class="mrow">
+              <span class="mi">i</span>
+              <span class="mi">j</span>
+             </div>
+            </div>
+           </div>
+           <span class="mi">σ</span>
+          </div>
+         </div>
+         <span class="mo">]</span>
+        </div>
+       </div>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>where 
+  <div class="inline-formula">
+   <div id="mm3" class="math">
+    <div class="mrow">
+     <span class="mi">p</span>
+    </div>
+   </div>
+  </div> denotes the dimension of variable vector 
+  <div class="inline-formula">
+   <div id="mm4" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">x</span>
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, 
+  <div class="inline-formula">
+   <div id="mm5" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span class="mi">σ</span>
+     </div>
+    </div>
+   </div>
+  </div> is the spread parameter, whose optimal value is determined by minimizing the root mean square error (RMSE) between the training data and the predicted values of the dependent variable. 
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The weight of the denominator neuron is set to 1.0. The GRNN training algorithm uses only one adjustable parameter 
+  <div class="inline-formula">
+   <div id="mm6" class="math">
+    <div class="mrow">
+     <span class="mi">σ</span>
+    </div>
+   </div>
+  </div> for a given training set. Here we use “the holdout method” [
+  <a rid="B29-sensors-19-01118" ref-type="bibr" href="#B29-sensors-19-01118">29</a>] to optimize the 
+  <div class="inline-formula">
+   <div id="mm7" class="math">
+    <div class="mrow">
+     <span class="mi">σ</span>
+    </div>
+   </div>
+  </div> value, and detailed introduction can refer to the article [
+  <a rid="B29-sensors-19-01118" ref-type="bibr" href="#B29-sensors-19-01118">29</a>]. The predicted target dependent variable, the ODIAC CO
+  <sub>2</sub> emissions, is defined by the following Equation (3): 
+  <div id="FD3-sensors-19-01118" class="disp-formula">
+   <span class="label">(3)</span>
+   <div id="mm8" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div accent="true" class="mover">
+       <span class="mi">y</span>
+       <span class="mo">^</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mn">0</span>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mo">∑</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">n</span>
+        </div>
+        <div class="msub">
+         <span class="mi">y</span>
+         <span class="mi">i</span>
+        </div>
+        <div class="msup">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <span class="mo">−</span>
+          <span class="mi">d</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <span class="mi">x</span>
+             <span class="mn">0</span>
+            </div>
+            <span class="mo">,</span>
+            <div class="msub">
+             <span class="mi">x</span>
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mo">∑</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">n</span>
+        </div>
+        <div class="msup">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <span class="mo">−</span>
+          <span class="mi">d</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <span class="mi">x</span>
+             <span class="mn">0</span>
+            </div>
+            <span class="mo">,</span>
+            <div class="msub">
+             <span class="mi">x</span>
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>where the values calculated with the scalar function in a hidden neuron 
+  <div class="inline-formula">
+   <div id="mm9" class="math">
+    <div class="mrow">
+     <span class="mi">i</span>
+    </div>
+   </div>
+  </div> are weighted with the corresponding values of the training samples 
+  <div class="inline-formula">
+   <div id="mm10" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">y</span>
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, and then passed to the numerator neuron. 
+  <div class="inline-formula">
+   <div id="mm11" class="math">
+    <div class="mrow">
+     <span class="mi">n</span>
+    </div>
+   </div>
+  </div> is the number of training samples.
+ </p>
+</sec>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" sec-type="discussion" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Discussion</div>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Drivers of future deposition events</div>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Results highlight the dominance of climatic disturbance in driving vegetation growth (as shown in the tree ring growth index) which in turn explains the majority of the variability found in the deposition event score (ANN1 output profile). When additional grazing (or land use pressure) is added to a previously low pressure grazed environment, a significant increase in identifying periods of sediment deposition is found. Yet, in environments under already stressed conditions (i.e. moderate/heavy grazing or drier climates), an increase in pressure bares no additional impact on the likelihood of identifying sediment movement in the geomorphic system. These results agree with previous studies
+   <span class="sup">
+    <a ref-type="bibr" rid="CR70" href="#CR70">70</a>,
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span> that have commented on the non-linear nature of dryland geomorphic systems, whereby a threshold of disturbance is required to initiate sediment reactivation. Our results show that the force exerted by external disturbances is not linearly related to the likelihood for periods of sediment deposition to be identified in the record; the geomorphic response is binary not continuous. Additional grazing pressure does not increase the likelihood for reactivation in a system that is already experiencing sediment mobilisation, but it might contribute to pockets of localised heterogeneity in the record and, in particular, the formation of blowouts
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>,
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+   </span>.
+  </p>
+  <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">Whilst some studies have suggested that fire may not contribute to the likelihood of sediment reactivation in semi-arid grassland environments
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>, our findings support existing research
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>,
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+   </span> that has suggested that wildfires may damage surface vegetation and increase the likelihood for sediment remobilisation (e.g. Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5d</a>: 2083–88 AD period) and during periods of low climatic stress (Fig. 
+   <a rid="Fig5" ref-type="fig" href="#Fig5">5b</a>). Under low and moderate grazing regimes, model outputs predict a marginal increase in the deposition event score following the 2012 wildfire. In 2012, a large wildfire (76,000 acres) stripped the study region of trees, shrubs and grass species. Yet, despite the extensive nature of the fire, anecdotally ranchers and preserve managers commented on the lack of evidence for sediment remobilisation following this event – likely caused by extensive root networks
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>, sediment crusting
+   <span class="sup">
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>, and wildfire management practices
+   <span class="sup">
+    <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+   </span>. Changes in grazing strategy and landscape management following wildfires have been instrumental in determining the subsequent likelihood for sediment remobilisation. The model used in this example has been trained on the land management practices during the 20
+   <span class="sup">th</span>-century and is unable to predict how future human decision-making will change. As such, whilst the model predicted a sediment response post-2012 fire, the lack of physical evidence to support this simulation is likely caused by non-analogous behaviour to the training dataset.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Limitations of the approach</div>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Whilst our results have demonstrated the potential application of ANNs for estimating future landscape sensitivity, it is essential to equally understand the limitations of the method used. Out-of-sample predicting is the main limitation for the approach outlined here; this is the likely inability to provide accurate forecasts when models are trained on a limited or non-analogous dataset. The unique set of input conditions found at site B is not replicated at any of the other 5 sites, and without another set of comparable data to train from, the predicted output is beyond the limited conditions represented in the training dataset (e.g. Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a> site B). In this study, we have attempted to reduce such errors in expanding the dataset by training across multiple study sites. As in all inferential methods, a larger dataset that encompasses more drought cycles would improve the training (and therefore the predictable capabilities) further. An inherent weakness of data-informed models in this context is that under future climate change, if forcing conditions (or combinations of conditions) stray significantly far from past experience (significantly ‘non-analogous’), supervised models may no longer be able to accurately predict future landscape responses.
+  </p>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Another difficulty using this method is associated with identifying what the relative peaks and troughs in the simulated outputs represent. As mentioned earlier, the network has been trained on a luminescence-dated target dataset which provides a continuous estimate of the probability of identifying a luminescence age (i.e. episode of deposition) in the sedimentary record. However, ascertaining what peaks in the simulation output correspond with a deposition ‘event’ in the profile is dependent on where the relative baseline associated with stability is positioned (i.e. are all periods with scores &gt;0 indicative of sediment mobilisation episodes?). In this study, the network has been trained on definitively identified episodes of sediment deposition, not periods of known stability (see Methods). A series of erosional filters gradually remove evidence of historic reactivation events from the sedimentary system
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span>. As such, our target dataset does not provide evidence for all deposition events, but more importantly, it does not provide definitive evidence of periods of stability. There is a distinct difference between an absence of evidence and an evidence of absence, but this is not resolved in the depositional record. A baseline at zero therefore, to represent no likelihood of identifying a deposition event in the forecasted plots, is incorrect and thus events are inferred as the most prominent relative peaks in the deposition event profile as opposed to those that are identified above a set threshold, or those that are representative of extreme model runs (see Supplementary Note 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>).
+  </p>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">The relatively large error margins associated with dated episodes of deposition (see Supplementary Note 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>) further compound the difficulty in identifying specific deposition events and associated conditions. This is problematic for the network training as input conditions over large windows are considered to be inducing a short-lived sediment reactivation event that is characterised by large uncertainties (Fig. 
+   <a rid="Fig6" ref-type="fig" href="#Fig6">6</a>). Conditions that are therefore reflective of landscape stability may falsely be associated with identified periods of deposition. Since the model has trained against a dataset that has already undergone a series of natural filters
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span>, the simulated outcome does not necessarily depict every deposition event. Additional known point-in-time observations taken from historical aerial imagery, oral records, agricultural reports would improve the resolution of the training.
+   <div id="Fig6" class="fig">
+    <span class="label">Figure 6</span>
+    <div class="caption">
+     <p>Schematic figure demonstrating how the wide training window of activity as defined by the target dataset (solid line) forces the model to train the equivalent period of input datasets (dashed line) to that target – even if the true ‘disturbance’ was only a short-lived event.</p>
+    </div>
+    <div xlink:href="41598_2019_40429_Fig6_HTML" id="d29e771" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Wider significance</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">We have shown the capacity to use ANN models coupled with empirical datasets to improve our understanding of aeolian geomorphological systems and future sensitivity to climatic and human disturbance. Our results demonstrate how ANNs can identify relationships between paired historical input-target datasets, as well as the potential for trained models to make predictions about the likelihood of future reactivations. When known forcings are included in the simulations, we can identify peaks in reactivation driven largely by perturbations in climatic conditions, but also grazing pressure and fire frequency when aridity stresses are low. Results from this study suggest that fire can increase the capacity for near-surface reactivation and could be used to explain heterogeneity in local sediment profiles under low-stress climatic conditions. Likewise, the resilience of grasslands to grazing pressures is largely related to the ambient climate
+   <span class="sup">
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>. As expected, the dynamic nature of dryland environments means that the likelihood for sediment reactivation is not linearly related to individual forcings. Through ANN simulations, we demonstrate the dynamic relationships between disturbances and response, exploring the idea of thresholds and a lagged-response to external perturbations.
+  </p>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">The black box nature of ANNs prevent a defined weighting of each disturbance parameter being produced, but sensitivity testing has demonstrated the non-linear response of the system to different combinations of disturbance conditions. These findings corroborate with existing research that synergies between forcing parameters are the key to near-surface reactivations in semi-arid grasslands
+   <span class="sup">
+    <a ref-type="bibr" rid="CR43" href="#CR43">43</a>,
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+   </span>.
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">Using cross-validation tests, we have demonstrated the bounds within which these models most optimally perform. Without all potential outcomes represented in the original training dataset, the ability to predict accurate outcomes is limited. If future models are to accurately predict future sediment reactivation events, non-linear multivariate tools are needed to fully-integrate the variety of parameters influencing near-surface activation. ANNs represent an opportunity within drylands, and wider landscape dynamics, to define environmental relationships and thresholds in systems where process-based mechanistic models are absent. The potential for future models, however, to accurately simulate hypothetical futures is constrained by the capacity to identify suitable training datasets that capture analogues for forthcoming conditions.</p>
+ </sec>
+</sec>

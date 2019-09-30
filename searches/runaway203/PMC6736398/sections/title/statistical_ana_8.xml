@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2-6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">All statistical analyses were performed with a combination of QIIME1 V 1.90 (Caporaso 
+  <span class="italic">et al</span>. 
+  <a rid="bib9" ref-type="bibr" href="#bib9">2010</a>) and the R environment (R Core Team 
+  <a rid="bib62" ref-type="bibr" href="#bib62">2013</a>). Multiple rarefactions were performed in QIIME with the smallest sample size as maximum depth. Alpha diversity (richness, Shannon and Simpson indices) were calculated in QIIME on the matrices resulting from the multiple rarefactions. The differences in alpha diversity indices were tested in QIIME using nonparametric (Monte-Carlo) tests across different pH categories with a Bonferroni correction.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The nonrarefied OTU table was normalized using cumulative-sum scaling (CSS) in QIIME (Paulson 
+  <span class="italic">et al</span>. 
+  <a rid="bib49" ref-type="bibr" href="#bib49">2013</a>). The resulting OTU table was input into R for subsequent analyses. Using the phyloseq package (McMurdie and Holmes 
+  <a rid="bib43" ref-type="bibr" href="#bib43">2013</a>), we calculated the Bray–Curtis dissimilarity distance and visualized the ordination using principal coordinate analysis (PCoA). Using the cmdscale, envfit and ordisurf functions in the vegan package (Dixon 
+  <a rid="bib15" ref-type="bibr" href="#bib15">2003</a>), we calculated and visualized the significant correlations between edaphic properties and bacterial community dissimilarity in relation to the pH gradient. Permutational multivariate analyses of variance (PerMANOVA) was conducted using the adonis function with 999 permutations. Pearson's correlation with 999 permutations was used to evaluate the collinearity of environmental variables.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To evaluate the spatial component, the geographic locations of the sampling sites were transformed into cartesian coordinates using the SoDA package (Chambers 
+  <a rid="bib11" ref-type="bibr" href="#bib11">2008</a>) and the euclidean distance was calculated using the vegan package. The presence of a linear trend was tested by redundancy discriminant analysis and ANOVA as prescribed in Borcard, Gillet and Legendre (
+  <a rid="bib4" ref-type="bibr" href="#bib4">2018</a>). A significant linear trend was identified, violating the second-order stationarity assumption where the mean of the variable and its spatial covariance are the same over the study area and its variance is finite. In other words, spatial correlation coefficients cannot be tested for significance if an overall trend is present in the data (Franklin and Mills 
+  <a rid="bib22" ref-type="bibr" href="#bib22">2007</a>; Borcard, Gillet and Legendre 
+  <a rid="bib4" ref-type="bibr" href="#bib4">2018</a>) and therefore, the data was detrended by linear regression of the 
+  <span class="italic">x</span>,
+  <span class="italic">y</span> coordinates. To carry meaningful spatial analysis, constructing spatial variables representing spatial structures at all relevant scales is necessary (Borcard, Gillet and Legendre 
+  <a rid="bib4" ref-type="bibr" href="#bib4">2018</a>). To do so, we used distance-based Moran's Eigenvector Maps (dbMEM) on detrended data and 
+  <span class="italic">x</span>,
+  <span class="italic">y</span> coordinates using the adespatial R package (Dray 
+  <span class="italic">et al</span>. 
+  <a rid="bib16" ref-type="bibr" href="#bib16">2017</a>). Significance of the spatial vectors was assessed using ANOVA. Forward selection was carried out to identify significant dbMEM vectors.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Variation partitioning analysis (VPA) was used to assess the impact of environmental and spatial factors on Bray–Curtis dissimilarity. The linear trend was considered to represent a source of variation like any other and therefore, we performed variation partitioning analysis using the environmental variables, 
+  <span class="italic">x</span>,
+  <span class="italic">y</span> coordinates (trend) and significant dbMEM vectors.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Generalist and specialist taxa were identified by selecting taxa present in over 95% of samples within each unique and overlapped pH category. Indicator taxa were determined by the Dufrene-Legendre indicator species analysis using the multipatt function (Cáceres and Legendre 
+  <a rid="bib6" ref-type="bibr" href="#bib6">2009</a>) to identify abundant OTUs that were specifically associated with the different pH ranges. The phylogenetic tree of indicator species was built using the aligned sequences from the identified indicator OTUs and input into FastTree. The tree was visualized using the Interactive Tree of Life (iTOL) online tool (Letunic and Bork 
+  <a rid="bib35" ref-type="bibr" href="#bib35">2016</a>).
+ </p>
+</sec>

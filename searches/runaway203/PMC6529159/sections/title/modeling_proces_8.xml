@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec006" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modeling process approach</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The maximum entropy approach MaxEnt v. 3.3.3 [
+  <a rid="pone.0211171.ref065" ref-type="bibr" href="#pone.0211171.ref065">65</a>, 
+  <a rid="pone.0211171.ref066" ref-type="bibr" href="#pone.0211171.ref066">66</a>, 
+  <a rid="pone.0211171.ref067" ref-type="bibr" href="#pone.0211171.ref067">67</a>] was used to model the potential distribution of 
+  <span class="italic">M</span>. 
+  <span class="italic">harttii</span>. MaxEnt is one of the most widely used algorithms for SDMs [
+  <a rid="pone.0211171.ref068" ref-type="bibr" href="#pone.0211171.ref068">68</a>], because it presents consistent predictive performance compared to other algorithms [
+  <a rid="pone.0211171.ref069" ref-type="bibr" href="#pone.0211171.ref069">69</a>], especially when the number of occurrence points is low [
+  <a rid="pone.0211171.ref051" ref-type="bibr" href="#pone.0211171.ref051">51</a>, 
+  <a rid="pone.0211171.ref070" ref-type="bibr" href="#pone.0211171.ref070">70</a>]. Maxent also resolves truncation issues via a more conservative assumption that is termed ‘clamping’. When a pixel has a value for a given variable outside the range covered by the model (calibration model), is given to that pixel the closest value of the pixel present for that variable in the model [
+  <a rid="pone.0211171.ref043" ref-type="bibr" href="#pone.0211171.ref043">43</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Traditionally, the task of choosing the best parameter values has been considered a challenge for these models [
+  <a rid="pone.0211171.ref071" ref-type="bibr" href="#pone.0211171.ref071">71</a>]. We used the "ENMeval" package [
+  <a rid="pone.0211171.ref072" ref-type="bibr" href="#pone.0211171.ref072">72</a>] to choose the best parameter values. For each set of variables, 48 models were constructed [
+  <a rid="pone.0211171.ref073" ref-type="bibr" href="#pone.0211171.ref073">73</a>] through the dismo package [
+  <a rid="pone.0211171.ref074" ref-type="bibr" href="#pone.0211171.ref074">74</a>], using the three variables of each set, modeling records (using checkerboard2 for partitioning of occurrence data), maximum background number (10000) and using the following parameter settings: multiplayer regularization values (0.5–4.0 with 0.5 intervals), six resource class configurations: L, LQ, H, LQH, LQHP and LQHPT (where L = linear, Q = quadratic, H = hinge, P = product and T = threshold). The Jackknife function of MaxEnt [
+  <a rid="pone.0211171.ref075" ref-type="bibr" href="#pone.0211171.ref075">75</a>] was used to identify the percentage of contribution for each variable. The best model for each set of variables (
+  <a rid="pone.0211171.t001" ref-type="table" href="#pone.0211171.t001">Table 1</a>) was chosen based on the lowest Akaike Information Criterion (AICc) values [
+  <a rid="pone.0211171.ref076" ref-type="bibr" href="#pone.0211171.ref076">76</a>]. The Akaike information criterion is an important metric in ecological niche modeling [
+  <a rid="pone.0211171.ref077" ref-type="bibr" href="#pone.0211171.ref077">77</a>], but it is necessary to use other statistical criteria to evaluate the performance of the model through independent data [
+  <a rid="pone.0211171.ref078" ref-type="bibr" href="#pone.0211171.ref078">78</a>].
+ </p>
+</sec>

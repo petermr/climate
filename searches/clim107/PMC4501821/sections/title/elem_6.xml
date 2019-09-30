@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec005" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.2.1. Artificial neural network input-layer nodes</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">At the tree level, individual trees were described in the model by their species and size (i.e., BA). Forty-three tree species present in the PSPs were grouped into eighteen separate species categories for simplification (
+  <a rid="pone.0132066.t001" ref-type="table" href="#pone.0132066.t001">Table 1</a>; [
+  <a rid="pone.0132066.ref034" ref-type="bibr" href="#pone.0132066.ref034">34</a>]). Dominant tree height was used to reflect stand developmental stage. Total stand BA of softwoods and hardwoods (BASW, BAHW) were used to reflect the overall stand composition. Inter-tree competition was captured by ranking trees according to their size. PSP total BA of all larger softwood and hardwood trees than a given tree (BALSW, BALHW) were used as inputs to account for competition among individual trees [
+  <a rid="pone.0132066.ref035" ref-type="bibr" href="#pone.0132066.ref035">35</a>]. Stocking, a descriptor of tree occupancy of a stand to a standard value of stand-density conditions [
+  <a rid="pone.0132066.ref036" ref-type="bibr" href="#pone.0132066.ref036">36</a>], was selected as a model input to help capture stand-growing conditions. Site conditions and growing environment were defined by biophysical variables, such as (i) incident solar radiation (SR), (ii) cumulative growing degree-days (GDD), and (iii) indices of soil nutrient and water content. Present-day and future forest response to changing climate was defined for four main forest growth scenarios: historical tree-growth records (PSP data) were considered to represent present-day climate, whereas JABOWA-3 generated data for three climate-change scenarios were used to represent future growing conditions. The inputs, their units, abbreviated codes, and species groups are listed in Tables 
+  <a rid="pone.0132066.t001" ref-type="table" href="#pone.0132066.t001">1</a> and 
+  <a rid="pone.0132066.t002" ref-type="table" href="#pone.0132066.t002">2</a>. Further detail about inputs selection and calculation procedures is available in Ashraf 
+  <span class="italic">et al</span>. [
+  <a rid="pone.0132066.ref034" ref-type="bibr" href="#pone.0132066.ref034">34</a>].
+ </p>
+ <div id="pone.0132066.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0132066.t001</span>
+  <span class="label">Table 1</span>
+  <div class="caption">
+   <div class="title">Tree species groups, their codes, and assigned values used as categorical input for ANNs of basal area and volume growth.</div>
+  </div>
+  <div class="alternatives">
+   <div id="pone.0132066.t001g" xlink:href="pone.0132066.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <table frame="hsides" rules="groups">
+    <colgroup span="1">
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+    </colgroup>
+    <thead>
+     <tr>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Input Node 9values</span>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Code</span>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Species Group</span>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Common Name</span>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Scientific Name</span>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td rowspan="2" align="left" colspan="1">1</td>
+      <td rowspan="2" align="left" colspan="1">ASH</td>
+      <td rowspan="2" align="left" colspan="1">Ash</td>
+      <td align="left" rowspan="1" colspan="1">Black ash</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Fraxinus nigra</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">White ash</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Fraxinus americana</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">2</td>
+      <td align="left" rowspan="1" colspan="1">BE</td>
+      <td align="left" rowspan="1" colspan="1">Beech</td>
+      <td align="left" rowspan="1" colspan="1">American beech</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Fagus grandifolia</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">3</td>
+      <td align="left" rowspan="1" colspan="1">BF</td>
+      <td align="left" rowspan="1" colspan="1">Balsam fir</td>
+      <td align="left" rowspan="1" colspan="1">Balsam fir</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Abies balsamea</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">4</td>
+      <td align="left" rowspan="1" colspan="1">BS</td>
+      <td align="left" rowspan="1" colspan="1">Black spruce</td>
+      <td align="left" rowspan="1" colspan="1">Black spruce</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Picea mariana</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">5</td>
+      <td align="left" rowspan="1" colspan="1">EH</td>
+      <td align="left" rowspan="1" colspan="1">Eastern hemlock</td>
+      <td align="left" rowspan="1" colspan="1">Eastern hemlock</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Tsuga canadensis</span>
+      </td>
+     </tr>
+     <tr>
+      <td rowspan="16" align="left" colspan="1">6</td>
+      <td rowspan="16" align="left" colspan="1">MH</td>
+      <td rowspan="16" align="left" colspan="1">Misc. hardwoods</td>
+      <td align="left" rowspan="1" colspan="1">Alder (speckled)</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Alnus rugosa</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Ailanthus</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Ailanthus altissima</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Apple</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Malus sp</span>.
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Black cherry</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Prunus serotina</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Choke cherry</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Prunus virginiana</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Dogwood</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Cornus sp</span>.
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">English oak</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Betula populifolia</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Hawthorn</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Crataegus sp</span>.
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Ironwood</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Ostrya virginiana</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Mountain ash</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Sorbus Americana</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Mountain maple</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Acer spicatum</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Pin cherry</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Prunus pensylvanica</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Service berry</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Amelanchier sp</span>.
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Striped maple</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Acer pensylvanicum</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">American elm</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Ulmus americana</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Willow</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Salix sp</span>.
+      </td>
+     </tr>
+     <tr>
+      <td rowspan="3" align="left" colspan="1">7</td>
+      <td rowspan="3" align="left" colspan="1">MP</td>
+      <td rowspan="3" align="left" colspan="1">Misc. pines</td>
+      <td align="left" rowspan="1" colspan="1">Jack pine</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Pinus banksiana</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Red pine</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Pinus resinosa</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Scots pine</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Pinus sylvestris</span>
+      </td>
+     </tr>
+     <tr>
+      <td rowspan="3" align="left" colspan="1">8</td>
+      <td rowspan="3" align="left" colspan="1">MS</td>
+      <td rowspan="3" align="left" colspan="1">Misc. softwoods</td>
+      <td align="left" rowspan="1" colspan="1">Japanese larch</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Larix kaempferi</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Norway spruce</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Picea abies</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Sitka spruce</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Picea strobus</span>
+      </td>
+     </tr>
+     <tr>
+      <td rowspan="3" align="left" colspan="1">9</td>
+      <td rowspan="3" align="left" colspan="1">PO</td>
+      <td rowspan="3" align="left" colspan="1">Poplar</td>
+      <td align="left" rowspan="1" colspan="1">Balsam poplar</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Populus balsamifera</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Larch</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Larix sp</span>.
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Trembling aspen</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Populus tremuloides</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1"/>
+      <td align="left" rowspan="1" colspan="1">Large-tooth aspen</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Populus grandidentata</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">10</td>
+      <td align="left" rowspan="1" colspan="1">RM</td>
+      <td align="left" rowspan="1" colspan="1">Red maple</td>
+      <td align="left" rowspan="1" colspan="1">Red maple</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Acer rubrum</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">11</td>
+      <td align="left" rowspan="1" colspan="1">RO</td>
+      <td align="left" rowspan="1" colspan="1">Red oak</td>
+      <td align="left" rowspan="1" colspan="1">Red oak</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Quercus rubra</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">12</td>
+      <td align="left" rowspan="1" colspan="1">RS</td>
+      <td align="left" rowspan="1" colspan="1">Red spruce</td>
+      <td align="left" rowspan="1" colspan="1">Red spruce</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Picea rubens</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">13</td>
+      <td align="left" rowspan="1" colspan="1">SM</td>
+      <td align="left" rowspan="1" colspan="1">Sugar maple</td>
+      <td align="left" rowspan="1" colspan="1">Sugar maple</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Acer saccharum</span>
+      </td>
+     </tr>
+     <tr>
+      <td rowspan="2" align="left" colspan="1">14</td>
+      <td rowspan="2" align="left" colspan="1">TL</td>
+      <td rowspan="2" align="left" colspan="1">Tamarack</td>
+      <td align="left" rowspan="1" colspan="1">European larch</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Larix decidua</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">Tamarack</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Larix laricina</span>
+      </td>
+     </tr>
+     <tr>
+      <td rowspan="2" align="left" colspan="1">15</td>
+      <td rowspan="2" align="left" colspan="1">WB</td>
+      <td rowspan="2" align="left" colspan="1">White birch</td>
+      <td align="left" rowspan="1" colspan="1">Grey birch</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Quercus robura</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">White birch</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Betula papyrifera</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">16</td>
+      <td align="left" rowspan="1" colspan="1">WP</td>
+      <td align="left" rowspan="1" colspan="1">White pine</td>
+      <td align="left" rowspan="1" colspan="1">White pine</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Pinus strobus</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">17</td>
+      <td align="left" rowspan="1" colspan="1">WS</td>
+      <td align="left" rowspan="1" colspan="1">White spruce</td>
+      <td align="left" rowspan="1" colspan="1">White spruce</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Picea glauca</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">18</td>
+      <td align="left" rowspan="1" colspan="1">YB</td>
+      <td align="left" rowspan="1" colspan="1">Yellow birch</td>
+      <td align="left" rowspan="1" colspan="1">Yellow birch</td>
+      <td align="left" rowspan="1" colspan="1">
+       <span class="italic">Betula alleghaniensis</span>
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="table-wrap-foot">
+   <fn id="t001fn001" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">Adapted from 
+     <span class="italic">Ashraf et al</span>. 
+     <span class="italic">2013</span> [
+     <a rid="pone.0132066.ref034" ref-type="bibr" href="#pone.0132066.ref034">34</a>].
+    </p>
+   </fn>
+  </div>
+ </div>
+ <div id="pone.0132066.t002" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0132066.t002</span>
+  <span class="label">Table 2</span>
+  <div class="caption">
+   <div class="title">Input variables for ANN-models of basal area (BA) increment and volume increment.</div>
+  </div>
+  <div class="alternatives">
+   <div id="pone.0132066.t002g" xlink:href="pone.0132066.t002" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <table frame="hsides" rules="groups">
+    <colgroup span="1">
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+     <col align="left" valign="middle" span="1"/>
+    </colgroup>
+    <thead>
+     <tr>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Input Node #</span>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Code</span>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Description</span>
+      </th>
+      <th align="left" rowspan="1" colspan="1">
+       <span class="bold">Units</span>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">1</td>
+      <td align="left" rowspan="1" colspan="1">BA</td>
+      <td align="left" rowspan="1" colspan="1">Basal area</td>
+      <td align="left" rowspan="1" colspan="1">cm
+       <span class="sup">2</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">2</td>
+      <td align="left" rowspan="1" colspan="1">BASW</td>
+      <td align="left" rowspan="1" colspan="1">Sum of SW BA in PSP</td>
+      <td align="left" rowspan="1" colspan="1">m
+       <span class="sup">2</span> ha
+       <span class="sup">-1</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">3</td>
+      <td align="left" rowspan="1" colspan="1">BAHW</td>
+      <td align="left" rowspan="1" colspan="1">Sum of HW BA in PSP</td>
+      <td align="left" rowspan="1" colspan="1">m
+       <span class="sup">2</span> ha
+       <span class="sup">-1</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">4</td>
+      <td align="left" rowspan="1" colspan="1">BALSW</td>
+      <td align="left" rowspan="1" colspan="1">Sum of BA of larger SW trees 
+       <a rid="t002fn001" ref-type="table-fn" href="#t002fn001">
+        <span class="sup">a</span>
+       </a>
+      </td>
+      <td align="left" rowspan="1" colspan="1">m
+       <span class="sup">2</span> ha
+       <span class="sup">-1</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">5</td>
+      <td align="left" rowspan="1" colspan="1">BALHW</td>
+      <td align="left" rowspan="1" colspan="1">Sum of BA of larger HW trees 
+       <a rid="t002fn001" ref-type="table-fn" href="#t002fn001">
+        <span class="sup">a</span>
+       </a>
+      </td>
+      <td align="left" rowspan="1" colspan="1">m
+       <span class="sup">2</span> ha
+       <span class="sup">-1</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">6</td>
+      <td align="left" rowspan="1" colspan="1">DOM-HT</td>
+      <td align="left" rowspan="1" colspan="1">Dominant height</td>
+      <td align="left" rowspan="1" colspan="1">m</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">7</td>
+      <td align="left" rowspan="1" colspan="1">SMO</td>
+      <td align="left" rowspan="1" colspan="1">Soil moisture</td>
+      <td align="left" rowspan="1" colspan="1">1–7 unit less</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">8</td>
+      <td align="left" rowspan="1" colspan="1">SN</td>
+      <td align="left" rowspan="1" colspan="1">Soil nutrients</td>
+      <td align="left" rowspan="1" colspan="1">5–47 unit less</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">9</td>
+      <td align="left" rowspan="1" colspan="1">SPE</td>
+      <td align="left" rowspan="1" colspan="1">Species class identification</td>
+      <td align="left" rowspan="1" colspan="1">1–18 
+       <a rid="t002fn002" ref-type="table-fn" href="#t002fn002">
+        <span class="sup">b</span>
+       </a> unit less
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">10</td>
+      <td align="left" rowspan="1" colspan="1">STOC-FAC</td>
+      <td align="left" rowspan="1" colspan="1">Stocking factor</td>
+      <td align="left" rowspan="1" colspan="1">Relative index</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">11</td>
+      <td align="left" rowspan="1" colspan="1">GDD</td>
+      <td align="left" rowspan="1" colspan="1">Growing degree days</td>
+      <td align="left" rowspan="1" colspan="1">Temperature index; &gt; 5°C</td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">12</td>
+      <td align="left" rowspan="1" colspan="1">SR</td>
+      <td align="left" rowspan="1" colspan="1">Solar radiation</td>
+      <td align="left" rowspan="1" colspan="1">watt-hours m
+       <span class="sup">-2</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left" rowspan="1" colspan="1">13</td>
+      <td align="left" rowspan="1" colspan="1">Climate</td>
+      <td align="left" rowspan="1" colspan="1">Climate scenarios</td>
+      <td align="left" rowspan="1" colspan="1">1–4 
+       <a rid="t002fn003" ref-type="table-fn" href="#t002fn003">
+        <span class="sup">c</span>
+       </a> unit less
+      </td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="table-wrap-foot">
+   <fn id="t002fn001" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">
+     <span class="sup">a</span> Sum of the BA of large trees (based on diameter) in a PSP, larger than a given tree.
+    </p>
+   </fn>
+   <fn id="t002fn002" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">
+     <span class="sup">b</span> A complete list of species groups and assigned values are provided in 
+     <a rid="pone.0132066.t001" ref-type="table" href="#pone.0132066.t001">Table 1</a>.
+    </p>
+   </fn>
+   <fn id="t002fn003" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">
+     <span class="sup">c</span> 1: present-day climate (PC); projected climate change scenarios: 2: minimal (B1), 3: moderate (A1B), 4: maximum (A2)
+    </p>
+   </fn>
+   <fn id="t002fn004" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">SW: softwood trees; HW: hardwood trees.</p>
+   </fn>
+  </div>
+ </div>
+</sec>

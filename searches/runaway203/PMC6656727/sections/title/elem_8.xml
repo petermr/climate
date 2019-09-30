@@ -1,0 +1,1119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data</div>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">The 25 × 25 km gridded ice concentration data provided in the National Snow and Ice Data Center (NSIDC) are used. The data are derived by the brightness temperature field obtained from Nimbus-7 SMMR and DMSP SSM/I-SSMIS. Missing values in the data are replaced by linear temporal interpolation. Using the sea ice concentration, the sea ice extent is calculated by summing the areas of the grid cells where the sea ice concentration is greater than 15%. The local sea ice extent is reinterpolated into a regular 2.5° × 2.5° grid and meridionally summed over the Southern Hemisphere. The local sea ice extent is linearly detrended before analysis to exclude the global warming effect. The daily outgoing longwave radiation (OLR) data from the National Oceanic and Atmospheric Administration (NOAA) are utilized as a proxy for the tropical deep convection. For other atmospheric variables such as circulation and near surface temperature, the ERA-Interim reanalysis data provided by the European Centre for Medium-range Weather Forecasts (ECMWF) are used
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span>. All obtained variables has 2.5° horizontal resolution. Intraseasonal variability for each variable is obtained by removing the annual cycle, which is calculated as the first three harmonics of the calendar mean cycle, and then by applying a 20–90-day Lanczos bandpass filter. Only austral winter, from June to August [JJA], is considered for the period of 1979 to 2015.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Definition of the MJO index and composite</div>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">To categorize the evolution of the MJO, an empirical orthogonal function (EOF) analysis is performed with the filtered OLR anomaly in the tropics from 30°N to 30°S. The obtained first two EOF modes are used to divide the MJO propagation into 8 phases, according to the location of MJO convection
+   <span class="sup">
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>
+   </span>. The phase rotates from phase 1 to 8, and phases 1–4 represent an antisymmetric structure with respect to phases 5–8. The MJO index is calculated with the amplitude of the normalized first two PCs (i.e., 
+   <div id="IEq1" class="inline-formula">
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\sqrt{PC{1}^{2}+PC{2}^{2}})$$\end{document}</span>
+     <div id="M2" class="math">
+      <div class="msqrt">
+       <div class="mrow">
+        <span class="mi">P</span>
+        <span class="mi">C</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <span class="mi">P</span>
+        <span class="mi">C</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>. The obtained index is largely identical to the OLR-based MJO index (OMI) of Kiladis 
+   <span class="italic">et al</span>.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+   </span>, implying insensitiveness to the choice of MJO index. Cases in which the MJO index is greater than 1.5 standard deviations are used for the composite analysis. To evaluate the statistical significance of the composite, a Monte Carlo test is conducted with 2000 samples. To obtain the null probability distribution of samples, the MJO index time series are randomly shifted to forward or backward but the variables to be tested are fixed.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Experimental design</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">To investigate the circulation response to the MJO, a numerical experiment is performed using an atmospheric linear baroclinic model (LBM) with T42 horizontal resolution and 20 vertical levels in sigma coordinates. The LBM is based on the primitive equations and its code is available from http://ccsr.aori.u-tokyo.ac.jp/~lbm/sub/lbm.html. The horizontal diffusion is set such that the 
+   <span class="italic">e</span>-holding decay time of 6 h for the largest wavenumber, and the vertical diffusion is set with a damping time scale of 1000 days to suppress the vertical computational mode. The time scale of linear drag, which mimics Rayleigh friction and Newtonian damping, is set to 0.5 days for the lowest three levels, 1 day for the topmost two levels, and 20 days for the mid-levels. The experiment is initialized with the JJA-climatological background state, which contains the 3-dimensional wind, temperature, geopotential height, specific humidity, and mean sea level pressure. To imitate the MJO convection in the experiment, the areas where the OLR is greater (lesser) than 10 (−10) W m
+   <span class="sup">−2</span> in the composite map are chosen as diabatic cooling (heating). Since the MJO convection is not spatially stationary, the diabatic forcing is given for the first 7 days and then turned off. Note that the simulated circulation fields have weaker intensity than that observed due to the switching-off of the forcing. If the forcing is persistently applied, the intensity is similar to that of the observation, although the circulation pattern in the subtropics is somewhat different than that indicated from the observation.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ray tracing and stationary total wavenumber</div>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Ray tracing analysis is used to demonstrate the evolution of the nondivergent barotropic Rossby wave activity
+   <span class="sup">
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>,
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>. The dispersion relationship, which includes the effect of the basic meridional flow on a beta plane, is written as
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+   </span>:
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\omega ={\bar{u}}_{M}k+{\bar{v}}_{M}l+\frac{{\bar{q}}_{x}l-{\bar{q}}_{y}k}{{k}^{2}+{l}^{2}},$$\end{document}</span>
+     <div id="M4" display="block" class="math">
+      <span class="mi">ω</span>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">u</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+      <span class="mi">k</span>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">v</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+      <span class="mi">l</span>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">x</span>
+         </div>
+        </div>
+        <span class="mi">l</span>
+        <span class="mo">−</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+        </div>
+        <span class="mi">k</span>
+       </div>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">k</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">l</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+     <div xlink:href="41598_2019_47150_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <span class="italic">ω</span>, 
+   <span class="italic">k</span>, and 
+   <span class="italic">l</span> are the angular frequency and the zonal and meridional wavenumber, respectively, and 
+   <div id="IEq2" class="inline-formula">
+    <div class="alternatives">
+     <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{u}}_{M}$$\end{document}</span>
+     <div id="M6" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">u</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq3" class="inline-formula">
+    <div class="alternatives">
+     <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{v}}_{M}$$\end{document}</span>
+     <div id="M8" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">v</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> denote the basic zonal and meridional flow on a Mercator projection, respectively. The JJA-climatological 250-hPa horizontal wind is adopted as the basic flow. Variables 
+   <div id="IEq4" class="inline-formula">
+    <div class="alternatives">
+     <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{q}}_{x}$$\end{document}</span>
+     <div id="M10" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">q</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq5" class="inline-formula">
+    <div class="alternatives">
+     <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{q}}_{y}\,\,$$\end{document}</span>
+     <div id="M12" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">q</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">y</span>
+       </div>
+      </div>
+      <span width=".25em" class="mspace"/>
+      <span width=".25em" class="mspace"/>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>are the zonal and meridional gradients of absolute vorticity, respectively, taking the forms 
+   <div id="IEq6" class="inline-formula">
+    <div class="alternatives">
+     <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{q}}_{x}=\frac{1}{{a}^{2}\,\cos \,\phi }(\frac{{\partial }^{2}\bar{v}}{\partial {\lambda }^{2}}-\frac{{\partial }^{2}\bar{u}}{\partial \lambda \partial \phi }\,\cos \,\phi +\frac{\partial \bar{u}}{\partial \lambda }\,\sin \,\phi )$$\end{document}</span>
+     <div id="M14" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">q</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">x</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span width=".25em" class="mspace"/>
+        <span class="mi">cos</span>
+        <span width=".10em" class="mspace"/>
+        <span class="mi">ϕ</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span stretchy="true" class="mo">(</span>
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">∂</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <div accent="true" class="mover">
+           <span class="mi">v</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">λ</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+         </div>
+        </div>
+        <span class="mo">−</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">∂</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <div accent="true" class="mover">
+           <span class="mi">u</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <span class="mi">λ</span>
+          <span class="mi">∂</span>
+          <span class="mi">ϕ</span>
+         </div>
+        </div>
+        <span width=".25em" class="mspace"/>
+        <span class="mi">cos</span>
+        <span width=".10em" class="mspace"/>
+        <span class="mi">ϕ</span>
+        <span class="mo">+</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <div accent="true" class="mover">
+           <span class="mi">u</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <span class="mi">λ</span>
+         </div>
+        </div>
+        <span width=".25em" class="mspace"/>
+        <span class="mi">sin</span>
+        <span width=".10em" class="mspace"/>
+        <span class="mi">ϕ</span>
+       </div>
+       <span stretchy="true" class="mo">)</span>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq7" class="inline-formula">
+    <div class="alternatives">
+     <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{q}}_{y}={\bar{\beta }}_{M}+\frac{{\partial }^{2}\bar{v}}{\partial \lambda \partial \phi }+\,\tan \,\phi \frac{\partial \bar{v}}{\partial \lambda }$$\end{document}</span>
+     <div id="M16" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">q</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">y</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">β</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">∂</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <div accent="true" class="mover">
+         <span class="mi">v</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <span class="mi">λ</span>
+        <span class="mi">∂</span>
+        <span class="mi">ϕ</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span width=".25em" class="mspace"/>
+      <span class="mi">tan</span>
+      <span width=".10em" class="mspace"/>
+      <span class="mi">ϕ</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <div accent="true" class="mover">
+         <span class="mi">v</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <span class="mi">λ</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>, where 
+   <div id="IEq8" class="inline-formula">
+    <div class="alternatives">
+     <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{\beta }}_{M}=\partial f/\partial y-{\partial }^{2}{\bar{u}}_{M}/\partial {y}^{2}$$\end{document}</span>
+     <div id="M18" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">β</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">∂</span>
+      <span class="mi">f</span>
+      <span class="mo">/</span>
+      <span class="mi">∂</span>
+      <span class="mi">y</span>
+      <span class="mo">−</span>
+      <div class="msup">
+       <div class="mrow">
+        <span class="mi">∂</span>
+       </div>
+       <span class="mn">2</span>
+      </div>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">u</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+      <span class="mo">/</span>
+      <span class="mi">∂</span>
+      <div class="msup">
+       <div class="mrow">
+        <span class="mi">y</span>
+       </div>
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <span class="italic">f</span> is the planetary vorticity. The case of 
+   <span class="italic">ω</span> = 0 produces the stationary Rossby wave. The zonal and meridional group velocities, calculated by the partial derivatives of equation (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) with respect to 
+   <span class="italic">k</span> and 
+   <span class="italic">l</span>, are expressed as:
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${c}_{gx}={\bar{u}}_{M}+\frac{({k}^{2}-{l}^{2}){\bar{q}}_{y}-2kl{\bar{q}}_{x}}{{K}^{4}}\,{\rm{and}}$$\end{document}</span>
+     <div id="M20" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">c</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">g</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">u</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="mrow">
+         <span stretchy="true" class="mo">(</span>
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">k</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">−</span>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">l</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span stretchy="true" class="mo">)</span>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+        </div>
+        <span class="mo">−</span>
+        <span class="mn">2</span>
+        <span class="mi">k</span>
+        <span class="mi">l</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">x</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">K</span>
+         </div>
+         <span class="mn">4</span>
+        </div>
+       </div>
+      </div>
+      <span width=".25em" class="mspace"/>
+      <span mathvariant="normal" class="mi">and</span>
+     </div>
+     <div xlink:href="41598_2019_47150_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ3" class="disp-formula">
+    <span class="label">3</span>
+    <div class="alternatives">
+     <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${c}_{gy}={\bar{v}}_{M}+\frac{({k}^{2}-{l}^{2}){\bar{q}}_{x}+2kl{\bar{q}}_{y}}{{K}^{4}}.$$\end{document}</span>
+     <div id="M22" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">c</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">g</span>
+        <span class="mi">y</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <span class="mi">v</span>
+         <span class="mo">¯</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="mrow">
+         <span stretchy="true" class="mo">(</span>
+         <div class="mrow">
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">k</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+          <span class="mo">−</span>
+          <div class="msup">
+           <div class="mrow">
+            <span class="mi">l</span>
+           </div>
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span stretchy="true" class="mo">)</span>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">x</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mn">2</span>
+        <span class="mi">k</span>
+        <span class="mi">l</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">K</span>
+         </div>
+         <span class="mn">4</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">.</span>
+     </div>
+     <div xlink:href="41598_2019_47150_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">To calculate the group velocities, the cubic polynomial of 
+   <span class="italic">l</span>, which is derived from equation (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>), should be solved. Afterwards, the ray path of the Rossby wave activity is determined by the following form: 
+   <div id="IEq9" class="inline-formula">
+    <div class="alternatives">
+     <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{dx}{dt}={c}_{gx}$$\end{document}</span>
+     <div id="M24" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">d</span>
+        <span class="mi">x</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">c</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">g</span>
+        <span class="mi">x</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq9.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> and 
+   <div id="IEq10" class="inline-formula">
+    <div class="alternatives">
+     <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{dy}{dt}={c}_{gy}$$\end{document}</span>
+     <div id="M26" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">d</span>
+        <span class="mi">y</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">d</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">c</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">g</span>
+        <span class="mi">y</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq10.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>. The location of the ray is computed by using the fourth-order Runge-Kutta method
+   <span class="sup">
+    <a ref-type="bibr" rid="CR16" href="#CR16">16</a>,
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>,
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>. Grids within the MJO convection are utilized as a starting point for seeding the Rossby wave, and the integration is carried out for 18 days. The zonal and meridional wavenumbers vary along the ray as follows:
+   <div id="Equ4" class="disp-formula">
+    <span class="label">4</span>
+    <div class="alternatives">
+     <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{d}_{g}k}{dT}=-\,k\frac{\partial {\bar{u}}_{M}}{\partial X}-l\frac{\partial {\bar{v}}_{M}}{\partial X}-\frac{1}{{K}^{2}}(l\frac{\partial {\bar{q}}_{x}}{\partial X}-k\frac{\partial {\bar{q}}_{y}}{\partial X})\,{\rm{and}}$$\end{document}</span>
+     <div id="M28" display="block" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">d</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">g</span>
+         </div>
+        </div>
+        <span class="mi">k</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">d</span>
+        <span class="mi">T</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mo">−</span>
+      <span width="-.25em" class="mspace"/>
+      <span class="mi">k</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">u</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+      <span class="mo">−</span>
+      <span class="mi">l</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">v</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <span class="mi">X</span>
+       </div>
+      </div>
+      <span class="mo">−</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">K</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span stretchy="true" class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">l</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <span class="mi">q</span>
+             <span class="mo">¯</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">x</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <span class="mi">X</span>
+         </div>
+        </div>
+        <span class="mo">−</span>
+        <span class="mi">k</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <span class="mi">q</span>
+             <span class="mo">¯</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">y</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <span class="mi">X</span>
+         </div>
+        </div>
+       </div>
+       <span stretchy="true" class="mo">)</span>
+      </div>
+      <span width=".25em" class="mspace"/>
+      <span mathvariant="normal" class="mi">and</span>
+     </div>
+     <div xlink:href="41598_2019_47150_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ5" class="disp-formula">
+    <span class="label">5</span>
+    <div class="alternatives">
+     <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\frac{{d}_{g}l}{dT}=-\,k\frac{\partial {\bar{u}}_{M}}{\partial Y}-l\frac{\partial {\bar{v}}_{M}}{\partial Y}-\frac{1}{{K}^{2}}(l\frac{\partial {\bar{q}}_{x}}{\partial Y}-k\frac{\partial {\bar{q}}_{y}}{\partial Y}),$$\end{document}</span>
+     <div id="M30" display="block" class="math">
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">d</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">g</span>
+         </div>
+        </div>
+        <span class="mi">l</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">d</span>
+        <span class="mi">T</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mo">−</span>
+      <span width="-.25em" class="mspace"/>
+      <span class="mi">k</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">u</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <span class="mi">Y</span>
+       </div>
+      </div>
+      <span class="mo">−</span>
+      <span class="mi">l</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">v</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mi">∂</span>
+        <span class="mi">Y</span>
+       </div>
+      </div>
+      <span class="mo">−</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span class="mi">K</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span stretchy="true" class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">l</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <span class="mi">q</span>
+             <span class="mo">¯</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">x</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <span class="mi">Y</span>
+         </div>
+        </div>
+        <span class="mo">−</span>
+        <span class="mi">k</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <span class="mi">q</span>
+             <span class="mo">¯</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">y</span>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">∂</span>
+          <span class="mi">Y</span>
+         </div>
+        </div>
+       </div>
+       <span stretchy="true" class="mo">)</span>
+      </div>
+      <span class="mo">,</span>
+     </div>
+     <div xlink:href="41598_2019_47150_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <div id="IEq11" class="inline-formula">
+    <div class="alternatives">
+     <span id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${d}_{g}/dT=\partial /\partial T+{u}_{g}\partial /\partial X+{v}_{g}\partial /\partial Y$$\end{document}</span>
+     <div id="M32" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">d</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">g</span>
+       </div>
+      </div>
+      <span class="mo">/</span>
+      <span class="mi">d</span>
+      <span class="mi">T</span>
+      <span class="mo">=</span>
+      <span class="mi">∂</span>
+      <span class="mo">/</span>
+      <span class="mi">∂</span>
+      <span class="mi">T</span>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">u</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">g</span>
+       </div>
+      </div>
+      <span class="mi">∂</span>
+      <span class="mo">/</span>
+      <span class="mi">∂</span>
+      <span class="mi">X</span>
+      <span class="mo">+</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">v</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">g</span>
+       </div>
+      </div>
+      <span class="mi">∂</span>
+      <span class="mo">/</span>
+      <span class="mi">∂</span>
+      <span class="mi">Y</span>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq11.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> represents the Lagrangian derivative. The ray tracing technique helps to understand meridional propagation of the Rossby waves across a critical latitude, e.g., tropical easterly region.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">The stationary total wavenumber (
+   <span class="italic">K</span>
+   <sub>s</sub>) in the Mercator coordinate system is written as 
+   <div id="IEq12" class="inline-formula">
+    <div class="alternatives">
+     <span id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${{K}_{s}}^{2}=\frac{{\bar{q}}_{y}k-{\bar{q}}_{x}l}{{\bar{u}}_{M}k+{\bar{v}}_{M}l-\omega }$$\end{document}</span>
+     <div id="M34" class="math">
+      <div class="msup">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">K</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">y</span>
+         </div>
+        </div>
+        <span class="mi">k</span>
+        <span class="mo">−</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">q</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">x</span>
+         </div>
+        </div>
+        <span class="mi">l</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">u</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+        </div>
+        <span class="mi">k</span>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">v</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+        </div>
+        <span class="mi">l</span>
+        <span class="mo">−</span>
+        <span class="mi">ω</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41598_2019_47150_Article_IEq12.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> . The larger 
+   <span class="italic">K</span>
+   <sub>s</sub>value indicates the preferred region for wave propagation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>
+   </span>.
+  </p>
+ </sec>
+</sec>

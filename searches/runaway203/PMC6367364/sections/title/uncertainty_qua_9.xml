@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Uncertainty quantification</div>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">ADT-HURSAT and IBTrACS respectively provide intensity estimates to the nearest 1–3 and 5 knots. We use Monte Carlo techniques to create random noise before analyzing the discretized data. Random noise prevents multiple data points from having the same value and provides an estimate of the typical error associated with measuring TC intensity. 1000 subsamples were produced by adding random noise from a uniform distribution on the interval ±
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{2 \times }}\sqrt {{\mathrm{50}}}$$\end{document}</span>
+    <div id="M2" class="math">
+     <span mathvariant="normal" class="mi">2×</span>
+     <div class="msqrt">
+      <span mathvariant="normal" class="mi">50</span>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_8471_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> knots to each intensity change value. The magnitude of this random noise is derived by adding 5 knots of error in quadrature (propagation of errors stemming from the intensity change calculation), which is a conservative estimate for the typical error associated with each TC intensity observation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>,
+   <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+  </span>. To calculate the slope of any intensification metric for ADT-HURSAT and IBTrACS, we use the slope of the mean of the 1000 subsamples for that particular metric. For example, quantile regression involved the calculation of every 5th percentile in each of the 1000 subsamples for each year. One-thousand slopes of each percentile were calculated and the mean of the slopes was considered the best estimate of the 1982–2009 slope of the quantile. The 5th and 95th percentiles of the 1000 slopes were considered the uncertainty bounds for the quantile.
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">For the creation of Fig. 
+  <a rid="Fig6" ref-type="fig" href="#Fig6">6</a>, random error is not added to the data because we only compare spatial differences in RI ratio among the different HiFLOR simulations. Statistical significance is computed using a binomial proportion test with 
+  <span class="italic">p</span> values below 0.05 considered significant
+  <span class="sup">
+   <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+  </span>. Data is only plotted in a grid box if there is at least one-fourth of a TC day per year in the two HiFLOR simulations used to calculate the percent difference.
+ </p>
+</sec>

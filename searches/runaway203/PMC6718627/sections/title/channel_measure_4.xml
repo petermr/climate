@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Channel measurements</div>
+ <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">This work is based on an analysis of 9,736 individual river cross-sectional channel surveys (transects) taken over a period of almost 70 years at 67 alluvial USGS stream gages. The methods used for preparing and filtering USGS stream field measurements are similar to
+  <span class="sup">
+   <a ref-type="bibr" rid="CR6" href="#CR6">6</a>,
+   <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+  </span> but are detailed below for clarity. USGS field stream measurements between 1950-01-01 and 2017-12-31 were downloaded from the USGS NWIS
+  <span class="sup">
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+  </span>. These are transect measurements of channel streamflow (
+  <span class="italic">Q</span>, m
+  <span class="sup">3</span>/s), cross-sectional flow area (
+  <span class="italic">A</span>, m
+  <span class="sup">2</span>), channel width (
+  <span class="italic">W</span>, m), and average cross-sectional flow velocity (
+  <span class="italic">V</span>, m/s), for different values of stage, i.e. gage height (
+  <span class="italic">G</span>). In addition, we also consider the relative mean river bed elevation (
+  <span class="italic">B</span>), which is computed as: 
+  <span class="italic">B</span> = 
+  <span class="italic">G</span> − (
+  <span class="italic">A</span>/
+  <span class="italic">W</span>). We converted all channel measurements to metric units and then removed any measurements made in icy conditions (i.e. where the control_type_cd contained any of the following strings: “ICE”, “CICE”, “SICE”, “AICE”, “IceAnchor”, “IceShore”, or “IceCover”). We removed any transect measurements with negative values of 
+  <span class="italic">Q</span>, 
+  <span class="italic">W</span>, or 
+  <span class="italic">A</span>, as well as any measurements that were infinite or incomplete (i.e. there had to be a measurement of 
+  <span class="italic">Q</span>, 
+  <span class="italic">A</span>, 
+  <span class="italic">W</span>, and 
+  <span class="italic">V</span> for the entire transect to be retained in the dataset).
+ </p>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">To detect potential measurement inaccuracies, we computed a dummy variable 
+  <span class="italic">Q</span>/(
+  <span class="italic">AV</span>) then removed any streamflow measurements where this value was greater than 1.1 or less than 0.9 (i.e. retaining only sites with measurement errors less than 10%). For each site we kept the single channel number (variable “chan_nu”) with the greatest number of measurements, to increase confidence in measurement location. To limit the influence of gaps in data, we calculated data completeness (defined here as the ratio of years with data to the total time span of the data, in years) over the available period for each site. We retained only active sites (where transects were still made after 2016) with at least 80% completeness, and at least 45 years of data. After all these filtering steps and in addition to those described below, the remaining 67 sites had a mean of 312 field channel measurements each (between 109 and 603) with a mean of 94% completeness over 59 years (min = 47, max = 68 years) over the entire period (1950 to 2017).
+ </p>
+</sec>

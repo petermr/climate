@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec004" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Timing and duration of production season model</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We modeled the duration of the production season, which was defined as the interval between the first (start) and the last (end) week of production for a given region and year. It is important to note that this definition may not always match exactly with the physiological sap flow period, but rather with the period during which maple sap is actively transformed into syrup. In some circumstances, the actual sap flow period may extend over the production season because the producers may cease to produce syrup because of low sap quality or volume, especially towards the end of the season. Our definition thus combines both the physiological and operational aspects of maple syrup production. Logistic regression was used to predict the duration, start and end of the production season (
+  <a rid="pone.0144844.e001" ref-type="disp-formula" href="#pone.0144844.e001">Eq 1</a>). The outcome modelled in this case is whether production is achieved or not in a given week.
+ </p>
+ <div id="pone.0144844.e001" class="disp-formula" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="alternatives">
+   <div xlink:href="pone.0144844.e001.jpg" id="pone.0144844.e001g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <div id="M1" class="math">
+    <div accent="true" class="mover">
+     <div class="mrow">
+      <span class="mi">y</span>
+     </div>
+     <span class="mo">^</span>
+    </div>
+    <span class="mo">=</span>
+    <div class="mfrac">
+     <div class="mrow">
+      <div class="msup">
+       <div class="mrow">
+        <span class="mi">e</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">β</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">x</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">β</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mi">x</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mo">…</span>
+        <div class="msub">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">β</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+          <span class="mi">x</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <div class="mrow">
+      <span class="mn">1</span>
+      <span class="mo">+</span>
+      <div class="msup">
+       <div class="mrow">
+        <span class="mi">e</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">β</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">x</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">β</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mi">x</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <span class="mo">…</span>
+        <div class="msub">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">β</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+          <span class="mi">x</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span class="mo">+</span>
+    <span class="mi">ϵ</span>
+   </div>
+  </div>
+  <span class="label">(1)</span>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Where 
+  <div id="pone.0144844.e002" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0144844.e002.jpg" id="pone.0144844.e002g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M2" class="math">
+     <div accent="true" class="mover">
+      <div class="mrow">
+       <span class="mi">y</span>
+      </div>
+      <span class="mo">^</span>
+     </div>
+    </div>
+   </div>
+  </div> is the probability of a given week to have some production, β
+  <sub>1</sub> to β
+  <sub>n</sub> are the parameters to estimate, x
+  <sub>1</sub> to x
+  <sub>n</sub> the independent explanatory variables, and ε the residual error of the model.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">A categorical variable was created to discriminate the weeks that belong to the period of production. To select the explanatory variables, Pearson’s correlation was calculated between the categorical variable and the climatic variables. Climatic variables with the largest correlations with the categorical variable were tested individually in a logistic model. The Akaike criterion (AIC) [
+  <a rid="pone.0144844.ref017" ref-type="bibr" href="#pone.0144844.ref017">17</a>] was used to compare the different models. The model with the smallest AIC was selected and the correlation between the residuals of the selected model and the climatic variables was calculated. Variables with high correlation with the residuals were added individually to the initial model in order to produce improved models. Each improved model was compared to the initial model with a likelihood ratio test. If the likelihood ratio test detected a significant difference between the original model and the improved model, the improved model was retained. Among all the retained improved models, the model with the smallest value of AIC was kept and the precedent steps were repeated in an attempt to improve the model. These steps were repeated until additional variables did not improve the model. Once a final model was obtained, a ten-fold cross-validation was used to test model dependency on the "training" dataset used to calibrate it [
+  <a rid="pone.0144844.ref018" ref-type="bibr" href="#pone.0144844.ref018">18</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The cut-point (the value between 0 and 1 over which the week was considered as a production week) was first established at 0.5 and adjusted iteratively to 0.51 in order to maximise the sensitivity (ability of the model to accurately classify the production weeks) and specificity (ability of the model to accurately classify the non-production weeks) of the model.</p>
+</sec>

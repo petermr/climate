@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Analysis techniques</div>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">For all analyses, the first 30 years of time series of melt and bottom temperature, which contain the model spin-up signal, are excluded. The resulting time series are detrended with a linear fit.</p>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Signal-to-noise ratio is calculated as the ratio of variances 
+  <span class="italic">σ</span>
+  <span class="sup">2</span>, calculated as
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{SNR}} = \frac{{\sigma _{{\mathrm{COREv}}2}^2}}{{\sigma _{{\mathrm{COREv}}1}^2}},$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <span mathvariant="normal" class="mi">SNR</span>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">σ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">COREv</span>
+         <span class="mn">2</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">σ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">COREv</span>
+         <span class="mn">1</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2018_5618_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\sigma _{{\mathrm{COREv}}2}^2$$\end{document}</span>
+    <div id="M4" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">COREv</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2018_5618_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the square of the standard deviation of the melt rate anomaly for the interannually varying run with COREv2 forcing, while 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\sigma _{{\mathrm{COREv}}1}^2$$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">σ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">COREv</span>
+       <span class="mn">1</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2018_5618_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the square of the standard deviation of the melt rate anomaly for the intrinsic variability-only run with COREv1 forcing.
+ </p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Cross correlations of MCDW depth and volume flux with melt rate were calculated and a lag of 0 months is found to be optimal. As analysis is computed on monthly averages, a short lag or lead of less than 1 month is possible.</p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Empirical orthogonal function (EOF) analysis is used to decompose a time series into orthogonal spatial patterns (EOFs) along with the associated time series or principal components (PCs) and the variance explained by each mode
+  <span class="sup">
+   <a ref-type="bibr" rid="CR43" href="#CR43">43</a>
+  </span>. While EOF analysis can provide useful decomposition of data, it has limitations such as domain dependence. While the leading mode(s) may often be physical, successively higher order modes, which explain less of the remaining variance, are unphysical as a consequence of the mode orthonormalisation.
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">Consequently, we employ singular spectral analysis (SSA) to express the original time series as a linear combination of components derived from singular value decomposition of the (time) lagged covariance matrix with maximum lag 
+  <span class="italic">M</span>. The resulting modes together sum to the original time series, while the slowest varying mode represents the non-linear trend with (time) variability of the order of the chosen embedding dimension 
+  <span class="italic">M</span> or longer. The decomposition is data driven (based on smaller, lagged portions of the original time series) and does not require projection on predefined basis functions, as required for example with Fourier transform methods. SSA readily provides non-linear smoothing of the original time series with the degree of smoothing controlled by 
+  <span class="italic">M</span>
+  <span class="sup">
+   <a ref-type="bibr" rid="CR12" href="#CR12">12</a>,
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. The SSA in-band variance shows the percentage of total variance present in the chosen time band bounded by predefined embedding dimension values, i.e. 0–1, 1–5, 5–10 and 10–30 years as in Figs. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3j–m</a> and 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>g–j.
+ </p>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Plots made with assistance from the Antarctic Mapping Tools for MATLAB toolbox
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span> and cmocean
+  <span class="sup">
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+  </span> colourmaps.
+ </p>
+</sec>

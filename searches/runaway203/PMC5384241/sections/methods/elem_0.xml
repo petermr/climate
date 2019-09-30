@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Kepler-35</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We perform climate simulations of a fictitious aquaplanet orbiting the two stars of the Kepler-35 system with the GCM described further below. Kepler-35 was found to have a gas giant orbiting the two stars
+   <a ref-type="bibr" rid="b1" href="#b1">1</a>. Its gravitational effect is not included in the calculations of our orbital model. We shall, nonetheless, refer to the simulated system as Kepler-35 for simplicity. The orbit-dependent TSI and the substellar points are obtained by the orbital model described below.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Orbital model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The binary star—planet configuration constitutes a hierarchical three body problem, see 
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1</a>. The planet's orbit tends to evolve rapidly and significantly in such systems. Yet, its time evolution can be modelled analytically given the following assumptions
+   <a ref-type="bibr" rid="b14" href="#b14">14</a>
+   <a ref-type="bibr" rid="b43" href="#b43">43</a>
+   <a ref-type="bibr" rid="b44" href="#b44">44</a>. We assume the system to be co-planar, that is, all bodies move in the same plane perpendicular to the system's total angular momentum vector. The variations in the semimajor axes of both binary and planetary orbit are negligible, so that they shall be considered to remain constant, and the planet is not in mean motion resonance with the binary. Furthermore, we assume that the eccentricity vector of the binary star evolves due to perturbations of the outer body and General Relativity. The planet is started on an initially circular orbit, but the orbit will evolve with time to account for the gravitational perturbations of the binary following the prescriptions in ref. 
+   <a ref-type="bibr" rid="b14" href="#b14">14</a>. Starting the planet on a circular orbit generally produces a more excited state of the planet's eccentricity evolution with larger amplitudes variations compared to using the so-called ‘forced eccentricity'. (In linear secular theory, the planet's eccentricity vector is a composite of a forced component—the binary's immutable contribution to the planet's eccentricity—as well as a free component that represents the planets proper initial conditions. For a detailed discussion see, for instance ref. 
+   <a ref-type="bibr" rid="b45" href="#b45">45</a>.) However, it is still unclear whether circumbinary planets actually form close to the relaxed dynamical state, that is, with the forced eccentricity or whether migration, resonances, as well as interaction with other protoplanets and/or the disc can excite the free eccentricity of planets
+   <a ref-type="bibr" rid="b46" href="#b46">46</a>
+   <a ref-type="bibr" rid="b47" href="#b47">47</a>. Hence, we have chosen zero initial eccentricity for the planet, in order to be able to compare our results with those of a single star single planet system on a circular orbit—the model that is predominantly used to determine the habitability of planets
+   <a ref-type="bibr" rid="b16" href="#b16">16</a>
+   <a ref-type="bibr" rid="b19" href="#b19">19</a>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">General circulation model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We employ a modified version of the atmospheric GCM ECHAM6 (ref. 
+   <a ref-type="bibr" rid="b48" href="#b48">48</a>) that has been described in detail in ref. 
+   <a ref-type="bibr" rid="b13" href="#b13">13</a>. Therefore, we will just summarize the general features of the model setup and explain how the orbital model is incorporated into the GCM. We run the model with a spectral truncation of T31, which corresponds to a Gaussian grid with a grid-point spacing of 3.75°. The atmosphere is resolved vertically by 47 layers up to a pressure (of dry air) of 0.01 hPa. The atmosphere is coupled to a slab ocean of 50 m depth and the oceanic heat transport is prescribed by a sinusoidal function of latitude. Unlike in the simulations performed in ref. 
+   <a ref-type="bibr" rid="b13" href="#b13">13</a> the formation of sea ice is enabled and the direct effect of aerosol on radiation turned off in our simulations. The model uses a full hydrological cycle including representations of surface exchange, turbulence and vertical diffusion
+   <a ref-type="bibr" rid="b49" href="#b49">49</a>
+   <a ref-type="bibr" rid="b50" href="#b50">50</a>, convection
+   <a ref-type="bibr" rid="b51" href="#b51">51</a>
+   <a ref-type="bibr" rid="b52" href="#b52">52</a>, cloud cover
+   <a ref-type="bibr" rid="b53" href="#b53">53</a> and cloud microphysics
+   <a ref-type="bibr" rid="b54" href="#b54">54</a>. These schemes were adjusted for better representation of the relevant physical processes at high temperatures as described in refs 
+   <a ref-type="bibr" rid="b15" href="#b15">15</a>, 
+   <a ref-type="bibr" rid="b25" href="#b25">25</a>. Thus the model can run to surface temperatures of up to 350 K.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The orbital model provides the black-body stellar spectra corresponding to the effective temperatures of the stars, as well as the longitude and latitude of the substellar point for each star. The solar spectra are divided and integrated over the 14 bands required by the short-wave radiative transfer scheme
+   <a ref-type="bibr" rid="b55" href="#b55">55</a>
+   <a ref-type="bibr" rid="b56" href="#b56">56</a>. We employ a modified version of the original radiative-transfer scheme described and evaluated in ref. 
+   <a ref-type="bibr" rid="b25" href="#b25">25</a>. The shortwave radiative transfer is then performed for each star separately. The zenith angle of each star is also taken into account separately for the surface albedo and for calculating the radiative heating. Stellar eclipses from the point of view of the planet are taken into account as well.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Initial conditions and experimental setup</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We have considered several initial starting positions for the planet at distances of 1.140, 1.165, 1.195 and 1.225 a.u. from the binary stars' centre of mass. The masses and properties of the binary system are taken from the Supplementary Table 1 in ref. 
+   <a ref-type="bibr" rid="b1" href="#b1">1</a> (
+   <a ref-type="table" rid="t2" href="#t2">Table 2</a>). An additional simulation was performed in which the semimajor axis of the binary orbit was increased from 0.176 to 0.250 a.u. for a planetary semimajor axis of 1.175 a.u. Two additional simulations were performed in which the spectra of the stars were replaced by the spectrum of our sun. The semimajor axis of the planet in these simulations was set to be 1.165 and 1.195 a.u. respectively. Four additional simulations were performed to assess the region where the same aquaplanet could maintain habitable states with a perfectly circular orbit around our sun. The semimajor axis of the planet in these simulations was set to be 0.975, 1.000, 1.025 and 1.050 a.u. respectively.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The obliquity of the planet was 0° in all simulations and its mass, radius and rotation period were equal to that of Earth (
+   <a ref-type="table" rid="t2" href="#t2">Table 2</a>). Simulations run until a habitable quasi-equilibrium persisted for 10,800 Earth-days.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Definitions of climate states</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We assume here that the aquaplanet becomes uninhabitable if either a transition into a Snowball or a transition to a Moist Greenhouse occurs.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In a Snowball state the planet's surface is fully ice-covered. Snowball states are a harsh environment for life, but may well be habitable. In that sense, a transition to a Snowball may not render a planet completely uninhabitable. The minimum required forcing to keep a planet from falling into a Snowball state depends on the amount of atmospheric greenhouse gases such as CO
+   <sub>2</sub>. In our simulations we use, however, fixed atmospheric greenhouse concentrations (except for water vapour) and, therefore, the transition to a Snowball state may occur at different TSI for different atmospheric levels of greenhouse gases.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Moist Greenhouse states are characterized by an upper atmosphere that is sufficiently moist for the planet to lose its entire water inventory to space in its lifetime as a consequence of the photo-dissociation of water and the subsequent escape of hydrogen to space. A planet in this state would not be uninhabitable immediately, but would eventually become so by losing all of its water to space. Since the humidity increases in the upper atmosphere with gST and thus with increasing TSI, the Moist-Greenhouse limit, at which rapid water-loss occurs, can be considered as the transition from a habitable to an eventually uninhabitable planet. Recent studies have shown that the minimum TSI required to cause a transition to a Moist Greenhouse depends also on CO
+   <sub>2</sub>-concentrations
+   <a ref-type="bibr" rid="b13" href="#b13">13</a>
+   <a ref-type="bibr" rid="b57" href="#b57">57</a>
+   <a ref-type="bibr" rid="b58" href="#b58">58</a>. Previous studies suggest that a planet orbiting a sun-like star would lose the equivalent of one Earth ocean, if the mixing ratio in the upper atmosphere exceeds 0.1–0.3% (refs 
+   <a ref-type="bibr" rid="b15" href="#b15">15</a>, 
+   <a ref-type="bibr" rid="b16" href="#b16">16</a>). The time required for a planet to lose the equivalent of one Earth ocean depends on the type of star and therefore the required atmospheric mixing ratio may be different for Kepler-35. However, the upper atmospheric mixing ratio of water vapour increases very fast with surface temperatures in our model once values of the order of 0.1% are attained. Therefore, we choose an upper-atmospheric mixing ratio of 0.3% as the Moist Greenhouse limit, as this should not lead to a substantial error in the TSI required for our planet to become uninhabitable.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In summary, we assume planets to be habitable, if the surface is at least partially covered by liquid water and if the upper atmospheric water vapour concentration does not exceed the Moist Greenhouse limit.</p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Linear feedback model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Let 
+   <span class="italic">L</span>(
+   <span class="italic">t</span>) be the departure from the temporal mean of any quantity such as gST at the time 
+   <span class="italic">t</span>, and 
+   <span class="italic">F</span>(
+   <span class="italic">t</span>) a forcing to which 
+   <span class="italic">L</span>(
+   <span class="italic">t</span>) reacts. Then 
+   <span class="italic">L</span>(
+   <span class="italic">t</span>) can be written as
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq6" class="disp-formula">
+    <span id="d32e1123" xlink:href="ncomms14957-m6.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">if terms higher than 
+   <span class="italic">O</span>(1) and higher-order derivatives are neglected. 
+   <span class="italic">α</span> can be interpreted as a linear feedback parameter of 
+   <span class="italic">L</span>(
+   <span class="italic">t</span>). Note that this feedback parameter is not the feedback parameter used in climate change experiments. 
+   <span class="italic">α</span> is real and can be positive or negative, but a negative 
+   <span class="italic">α</span> would mean that the system is unstable and, therefore, we will think of 
+   <span class="italic">α</span> being positive here. 
+   <span class="italic">β</span> is a real number and describes how strongly 
+   <span class="italic">L</span>(
+   <span class="italic">t</span>) reacts to the forcing. Note that 
+   <span class="italic">β</span> can be positive or negative. Since we consider a real-valued periodic forcing we can expand 
+   <span class="italic">F</span>(
+   <span class="italic">t</span>) in a Fourier series of the following form:
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq7" class="disp-formula">
+    <span id="d32e1169" xlink:href="ncomms14957-m7.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The solution for 
+   <span class="italic">L</span>(
+   <span class="italic">t</span>) then takes the form
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq8" class="disp-formula">
+    <span id="d32e1180" xlink:href="ncomms14957-m8.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">This can easily be verified by applying the solution, together with the Fourier series of the forcing to 
+   <a ref-type="disp-formula" rid="eq6" href="#eq6">equation (6)</a>. Note that each mode of the solution
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq9" class="disp-formula">
+    <span id="d32e1188" xlink:href="ncomms14957-m9.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">is a solution for each mode of the forcing 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">k</span>
+   </sub>. This means that 
+   <span class="italic">L</span>
+   <sub>
+    <span class="italic">k</span>
+   </sub>(
+   <span class="italic">t</span>) satisfies the equations
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq10" class="disp-formula">
+    <span id="d32e1208" xlink:href="ncomms14957-m10.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">for all 
+   <span class="italic">k</span> and therefore each mode of the forcing can be identified in the solution. Or in other words, the modes of the forcing and the solution are the same.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The amplitude of the mode 
+   <span class="italic">L</span>
+   <sub>
+    <span class="italic">k</span>
+   </sub>(
+   <span class="italic">t</span>) is
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq11" class="disp-formula">
+    <span id="d32e1228" xlink:href="ncomms14957-m11.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">and thus has the following properties:</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq12" class="disp-formula">
+    <span id="d32e1233" xlink:href="ncomms14957-m12.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">P</span>
+   <sub>
+    <span class="italic">k</span>
+   </sub> is the period of the mode 
+   <span class="italic">k</span>. On the one hand the amplitude increases for each mode with the magnitude of the forcing, with the strength of the coupling between forcing and forced quantity (which is described by 
+   <span class="italic">β</span>) and with the period (which is inverse proportional to 
+   <span class="italic">ω</span>
+   <sub>
+    <span class="italic">k</span>
+   </sub>). On the other hand the amplitude decreases with the strength of the feedback.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The phase shift of the solution for positive values of 
+   <span class="italic">β</span> is
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq13" class="disp-formula">
+    <span id="d32e1261" xlink:href="ncomms14957-m13.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">and for negative values of 
+   <span class="italic">β</span> it is
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq14" class="disp-formula">
+    <span id="d32e1269" xlink:href="ncomms14957-m14.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The lag of the solution is then obtained by dividing the phase shift by 
+   <span class="italic">ω</span>
+   <sub>
+    <span class="italic">k</span>
+   </sub>. For positive values of 
+   <span class="italic">β</span> we thus obtain
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq15" class="disp-formula">
+    <span id="d32e1284" xlink:href="ncomms14957-m15.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">and for negative values of 
+   <span class="italic">β</span> we obtain
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq16" class="disp-formula">
+    <span id="d32e1292" xlink:href="ncomms14957-m16.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The lag has the following properties:</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq17" class="disp-formula">
+    <span id="d32e1297" xlink:href="ncomms14957-m17.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">It decreases with the strength of the feedback and increases with the length of the period.</p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Code availability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The code of the employed GCM alone and of the GCM coupled to the orbit propagator, the employed boundary data and the runscripts can be obtained from M.P. (mpopp@princeton.edu). The orbit propagator can be obtained from S.E. (
+   <span ext-link-type="uri" xlink:href="file:///D:\preeditjobs\npg\natcomm\ncomms14957\siegfried.eggl@jpl.nasa.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">siegfried.eggl@jpl.nasa.gov</span>).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All original and processed data, the processing scripts and the scripts used to create the figures can be obtained from M.P. (
+   <span ext-link-type="uri" xlink:href="file:///D:\preeditjobs\npg\natcomm\ncomms14957\mpopp@princeton.edu" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">mpopp@princeton.edu</span>).
+  </p>
+ </sec>
+</sec>

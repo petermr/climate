@@ -1,0 +1,1639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec12" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical model and detailed likelihood function</div>
+ <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">We assume each present-day model SIE output, as well as observations can be modeled as sum of a linear trend and an AR(1) process:
+  <div id="Equ14" class="disp-formula">
+   <span class="label">14</span>
+   <div class="alternatives">
+    <span id="M69" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left\{ {\begin{array}{*{20}{l}} {{\bf{y}}_{\mathrm{o}} = \mu _{\mathrm{o}} + \hat k_{\mathrm{o}}{\bf{\Delta t}} + {\mathbf{\varepsilon}}_{\mathrm{o}}} \hfill &amp; {} \hfill \\ {{\bf{y}}_i = \mu _i + \hat k_i{\bf{\Delta t}} + {\mathbf{\varepsilon}}_i} \hfill &amp; {\forall i = 1, \ldots ,n,} \hfill \end{array}} \right.$$\end{document}</span>
+    <div id="M70" class="math">
+     <div close="" open="{" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="mtable">
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span mathvariant="bold" class="mi">Δt</span>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">ε</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd"/>
+        </div>
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span mathvariant="bold" class="mi">Δt</span>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">ε</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd">
+          <span class="mo">∀</span>
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <span class="mi">n</span>
+          <span class="mo">,</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ14.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <div id="IEq21" class="inline-formula">
+   <div class="alternatives">
+    <span id="M71" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat k_{\mathrm{o}}$$\end{document}</span>
+    <div id="M72" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">k</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq21.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq22" class="inline-formula">
+   <div class="alternatives">
+    <span id="M73" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat k_i$$\end{document}</span>
+    <div id="M74" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">k</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq22.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are observed and modeled sample slopes respectively, 
+  <span class="bold">Δt</span> = (
+  <span class="italic">t</span>
+  <sub>1</sub> − 
+  <span class="italic">t</span>
+  <sub>0</sub>, 
+  <span class="italic">t</span>
+  <sub>2</sub> − 
+  <span class="italic">t</span>
+  <sub>0</sub>, …, 
+  <span class="italic">t</span>
+  <sub>
+   <span class="italic">p</span>
+  </sub> − 
+  <span class="italic">t</span>
+  <sub>0</sub>) is the vector of centered years with 
+  <span class="italic">t</span>
+  <sub>0</sub> being the mid-period year (e.g., 1998 for the 1979–2017 data, etc.), while 
+  <div id="IEq23" class="inline-formula">
+   <div class="alternatives">
+    <span id="M75" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\boldsymbol{\varepsilon }}_{\mathrm{o}} = (\epsilon _{{\mathrm{o}},1},\epsilon _{{\mathrm{o}},2}, \ldots ,\epsilon _{{\mathrm{o}},p})$$\end{document}</span>
+    <div id="M76" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">ϵ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">o</span>
+         <span class="mo">,</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">ϵ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">o</span>
+         <span class="mo">,</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mo">…</span>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">ϵ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">o</span>
+         <span class="mo">,</span>
+         <span class="mi">p</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq23.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq24" class="inline-formula">
+   <div class="alternatives">
+    <span id="M77" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\boldsymbol{\varepsilon }}_i = (\epsilon _{i,1},\epsilon _{i,2}, \ldots ,\epsilon _{i,p})$$\end{document}</span>
+    <div id="M78" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold-italic" class="mi">ε</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">ϵ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mo">,</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">ϵ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mo">,</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <span class="mo">…</span>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">ϵ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mo">,</span>
+         <span class="mi">p</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq24.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are residual AR(1) processes (representing interannual variability) where 
+  <span class="italic">p</span> is the number of yearly datapoints. The AR(1) processes are defined as
+  <div id="Equ15" class="disp-formula">
+   <span class="label">15</span>
+   <div class="alternatives">
+    <span id="M79" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left\{ {\begin{array}{*{20}{l}} {\epsilon _{{\mathrm{o}},t} = \hat \rho _{\mathrm{o}}\epsilon _{{\mathrm{o}},t - 1} + w_{{\mathrm{o}},t}} \hfill &amp; {} \hfill \\ {\epsilon _{i,t} = \hat \rho _{i} \epsilon _{i,t - 1} + w_{i,t}} \hfill &amp; {\forall i = 1, \ldots ,n,} \hfill \end{array}} \right.$$\end{document}</span>
+    <div id="M80" class="math">
+     <div close="" open="{" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="mtable">
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">ϵ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">ρ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">ϵ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">w</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd"/>
+        </div>
+        <div class="mtr">
+         <div columnalign="left" class="mtd">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">ϵ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">ρ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">ϵ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">w</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mo">,</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+         </div>
+         <div columnalign="left" class="mtd">
+          <span class="mo">∀</span>
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <span class="mi">n</span>
+          <span class="mo">,</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ15.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>with 
+  <div id="IEq25" class="inline-formula">
+   <div class="alternatives">
+    <span id="M81" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat \rho _{\mathrm{o}}$$\end{document}</span>
+    <div id="M82" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">ρ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq25.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq26" class="inline-formula">
+   <div class="alternatives">
+    <span id="M83" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat \rho _{i}$$\end{document}</span>
+    <div id="M84" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">ρ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq26.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> being the observed and modeled sample autocorrelations, 
+  <div id="IEq27" class="inline-formula">
+   <div class="alternatives">
+    <span id="M85" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$w_{{\mathrm{o}},t}\sim N(0,{\hat {\sigma}} _{\mathrm{o}}^{2})$$\end{document}</span>
+    <div id="M86" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">w</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">~</span>
+     <span class="mi">N</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mn">0</span>
+       <span class="mo">,</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <div class="mrow">
+           <span class="mi">σ</span>
+          </div>
+          <span class="mo">^</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">o</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq27.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> being the observed random noise term with the sample innovation standard deviation 
+  <div id="IEq28" class="inline-formula">
+   <div class="alternatives">
+    <span id="M87" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\hat {\sigma}} _{\mathrm{o}}$$\end{document}</span>
+    <div id="M88" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">σ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq28.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq29" class="inline-formula">
+   <div class="alternatives">
+    <span id="M89" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$w_{i,t}\sim N\left( {0,{\hat {\sigma}} _i^2} \right)$$\end{document}</span>
+    <div id="M90" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">w</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">~</span>
+     <span class="mi">N</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mn">0</span>
+       <span class="mo">,</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <div class="mrow">
+           <span class="mi">σ</span>
+          </div>
+          <span class="mo">^</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq29.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> being the modeled random noise with the sample innovation standard deviation 
+  <div id="IEq30" class="inline-formula">
+   <div class="alternatives">
+    <span id="M91" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\hat {\sigma}} _{i}$$\end{document}</span>
+    <div id="M92" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">σ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq30.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> for each model 
+  <span class="italic">i</span>. The slopes 
+  <div id="IEq31" class="inline-formula">
+   <div class="alternatives">
+    <span id="M93" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat k_{\mathrm{o}}$$\end{document}</span>
+    <div id="M94" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">k</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq31.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq32" class="inline-formula">
+   <div class="alternatives">
+    <span id="M95" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat k_{i}$$\end{document}</span>
+    <div id="M96" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">k</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq32.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are obtained by linear regression, and the variability properties 
+  <div id="IEq33" class="inline-formula">
+   <div class="alternatives">
+    <span id="M97" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\hat {\sigma}} _{\mathrm{o}}$$\end{document}</span>
+    <div id="M98" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">σ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq33.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, 
+  <div id="IEq34" class="inline-formula">
+   <div class="alternatives">
+    <span id="M99" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\hat {\sigma}} _i$$\end{document}</span>
+    <div id="M100" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">σ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq34.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, 
+  <div id="IEq35" class="inline-formula">
+   <div class="alternatives">
+    <span id="M101" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat \rho _{\mathrm{o}}$$\end{document}</span>
+    <div id="M102" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">ρ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq35.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, and 
+  <div id="IEq36" class="inline-formula">
+   <div class="alternatives">
+    <span id="M103" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat \rho _i$$\end{document}</span>
+    <div id="M104" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">ρ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq36.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are found by maximum likelihood.
+ </p>
+ <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">To obtain the likelihood function for the observations 
+  <span class="bold">y</span> we assume that the random variable 
+  <span class="bold">Y</span> describing the historical climate and model SIE output is independent between the models, and real climate, given the present-day modeled and observed SIE mean 
+  <span class="bold">μ</span>. This is justified as internal variability in climate models and observations is known to be random. Under such assumption the likelihood function can be decomposed as
+  <div id="Equ16" class="disp-formula">
+   <span class="label">16</span>
+   <div class="alternatives">
+    <span id="M105" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{l}} {p({\bf{Y}}|{\mathbf{\mu}} )} \hfill &amp; = \hfill &amp; {p\left( {{\bf{y}}_{\mathrm{o}},{\bf{y}}_1,{\bf{y}}_2, \ldots ,{\bf{y}}_n|\mu _{\mathrm{o}},\mu _1,\mu _2, \ldots ,\mu _n} \right)} \hfill \\ {} \hfill &amp; = \hfill &amp; {p({\bf{y}}_{\mathrm{o}}|\mu _{\mathrm{o}},\mu _1,\mu_2, \ldots ,\mu _n) \times \mathop {\prod}\limits_{i = 1}^n {p\left( {{\mathbf{y}}_i|\mu _{\mathrm{o}},\mu _1,\mu _2, \ldots ,\mu _n} \right)} } \hfill \\ {} \hfill &amp; = \hfill &amp; {p({\bf{y}}_{\mathrm{o}}|\mu _{\mathrm{o}}) \times \mathop {\prod}\limits_{i = 1}^n {p({\bf{y}}_i|\mu _i)} } \hfill \\ {} \hfill &amp; = \hfill &amp; {p\left( {{\bf{y}}_{\mathrm{o}}|\mu _{\mathrm{o}},\hat k_{\mathrm{o}},{\hat {\sigma}} _{\mathrm{o}},\hat \rho _{\mathrm{o}}} \right) \times \mathop {\prod}\limits_{i = 1}^{n} {p\left( {{\bf{y}}_i| \mu _i,\hat k_{i} , {\hat {\sigma}} _{i} ,{\hat {\rho}} _{i}} \right)} .} \hfill \end{array}$$\end{document}</span>
+    <div id="M106" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span mathvariant="bold" class="mi">Y </span>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">μ</span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">×</span>
+        <div accent="false" accentunder="false" class="munderover">
+         <div class="mrow">
+          <span class="mo">∏</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <span class="mo">…</span>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <span class="mo">×</span>
+        <div accent="false" accentunder="false" class="munderover">
+         <div class="mrow">
+          <span class="mo">∏</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">σ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">ρ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mo">×</span>
+        <div accent="false" accentunder="false" class="munderover">
+         <div class="mrow">
+          <span class="mo">∏</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">σ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">ρ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mo">.</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ16.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par46" xmlns="http://www.w3.org/1999/xhtml">Here, individual likelihood terms are standard AR(1) process likelihood functions
+  <span class="sup">
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span>. For example,
+  <div id="Equ17" class="disp-formula">
+   <span class="label">17</span>
+   <div class="alternatives">
+    <span id="M107" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{ccccc} p\left( {{\bf{y}}_{\mathrm{o}}|\mu _{\mathrm{o}},\hat k_{\mathrm{o}},\hat \sigma _{\mathrm{o}},\hat \rho _{\mathrm{o}}} \right) = &amp; \left( {2{\mathrm{\pi }}\hat s_{\mathrm{o}}^2} \right)^{ - 1/2}{\mathrm{exp}}\left( { - \frac{{\epsilon _{{\mathrm{o}},1}^2}}{{2\hat s_{\mathrm{o}}^2}}} \right) \times \left( {2{\mathrm{\pi }}\hat \sigma _{\mathrm{o}}^2} \right)^{ - (p - 1)/2}\\ &amp; \times {\mathrm{exp}}\left( { - \frac{1}{{2\hat \sigma _{\mathrm{o}}^2}}\mathop {\sum}\limits_{j = 2}^p {w_{{\mathrm{o}},j}^2} } \right), \end{array}$$\end{document}</span>
+    <div id="M108" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="center" class="mtd">
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="bold" class="mi">y</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">μ</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">σ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <div class="mrow">
+            <div accent="true" class="mover">
+             <div class="mrow">
+              <span class="mi">ρ</span>
+             </div>
+             <span class="mo">^</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="center" class="mtd">
+        <div class="msup">
+         <div class="mrow">
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">2</span>
+            <span mathvariant="normal" class="mi">π</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">ŝ</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">o</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mo">-</span>
+          <span class="mn">1</span>
+          <span class="mo">∕</span>
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span mathvariant="normal" class="mi">exp</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mo">-</span>
+          <div class="mfrac">
+           <div class="mrow">
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">ϵ</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">o</span>
+              <span class="mo">,</span>
+              <span class="mn">1</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">ŝ</span>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">o</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mo">×</span>
+        <div class="msup">
+         <div class="mrow">
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <span class="mn">2</span>
+            <span mathvariant="normal" class="mi">π</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <div accent="true" class="mover">
+               <div class="mrow">
+                <span class="mi">σ</span>
+               </div>
+               <span class="mo">^</span>
+              </div>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">o</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mo">-</span>
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mi">p</span>
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+          <span class="mo">∕</span>
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="center" class="mtd"/>
+       <div columnalign="center" class="mtd">
+        <span class="mo">×</span>
+        <span mathvariant="normal" class="mi">exp</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mo">-</span>
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+            <div class="msubsup">
+             <div class="mrow">
+              <div accent="true" class="mover">
+               <div class="mrow">
+                <span class="mi">σ</span>
+               </div>
+               <span class="mo">^</span>
+              </div>
+             </div>
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">o</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div accent="false" accentunder="false" class="munderover">
+           <div class="mrow">
+            <span class="mo"> ∑</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+            <span class="mo">=</span>
+            <span class="mn">2</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">p</span>
+           </div>
+          </div>
+          <div class="msubsup">
+           <div class="mrow">
+            <span class="mi">w</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">o</span>
+            <span class="mo">,</span>
+            <span class="mi">j</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mo">,</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ17.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <div id="IEq37" class="inline-formula">
+   <div class="alternatives">
+    <span id="M109" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\hat s_{\mathrm{o}}^2 = {\hat {\sigma}} _{\mathrm{o}}^2/\left( {1 - {\hat {\rho}} _{\mathrm{o}}^2} \right)$$\end{document}</span>
+    <div id="M110" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">ŝ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msubsup">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">σ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <span class="mo">∕</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">-</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <div class="mrow">
+           <span class="mi">ρ</span>
+          </div>
+          <span class="mo">^</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">o</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq37.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is stationary process variance for observed variability, and 
+  <div id="IEq38" class="inline-formula">
+   <div class="alternatives">
+    <span id="M111" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$w_{{\mathrm{o}},t} = \epsilon _{{\mathrm{o}},t} - \hat \rho _{\mathrm{o}}\epsilon _{{\mathrm{o}},t - 1},\,t &gt; 1$$\end{document}</span>
+    <div id="M112" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">w</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ϵ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">-</span>
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <div class="mrow">
+         <span class="mi">ρ</span>
+        </div>
+        <span class="mo">^</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+      </div>
+     </div>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ϵ</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">o</span>
+       <span class="mo">,</span>
+       <span class="mi">t</span>
+       <span class="mo">-</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <span width="0.25em" class="mspace"/>
+     <span class="mi">t</span>
+     <span class="mo">&gt;</span>
+     <span class="mn">1</span>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq38.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> represent whitened observed variability. The likelihoods for model outputs 
+  <div id="IEq39" class="inline-formula">
+   <div class="alternatives">
+    <span id="M113" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p( {{\bf{y}}_i|\mu _i,\hat k_i,{\hat {\sigma}} _i,{\hat {\rho}} _i} )$$\end{document}</span>
+    <div id="M114" class="math">
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="bold" class="mi">y</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">∣</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">μ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <div class="mrow">
+           <span class="mi">k</span>
+          </div>
+          <span class="mo">^</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <div class="mrow">
+           <span class="mi">σ</span>
+          </div>
+          <span class="mo">^</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <div class="mrow">
+           <span class="mi">ρ</span>
+          </div>
+          <span class="mo">^</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">)</span>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq39.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are defined similarly; we omit them for brevity.
+ </p>
+ <p id="Par47" xmlns="http://www.w3.org/1999/xhtml">Spectral analysis strongly suggests that AR(1) is a reasonable approximation for climate models used here (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">8</a>). For the spectral analysis we use time series of September SIE variability of CMIP5 models over years 1880–2004 around a lowess trend
+  <span class="sup">
+   <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+  </span> with a span = 0.8. We choose this value because it appears to remove multidecadal variability from the trends.
+ </p>
+</sec>

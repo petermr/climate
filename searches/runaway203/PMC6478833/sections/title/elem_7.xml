@@ -1,0 +1,1612 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Aircraft measurements</div>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">Aircraft measurements of CO
+   <sub>2</sub> and CH
+   <sub>4</sub> over the Athabasca OS region of northern Alberta were performed from August 13 to September 7, 2013 as part of an intensive field campaign. Details of the study objectives, aircraft implementation, and other technical aspects have been described previously
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>,
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>
+   </span>. During the study, 22 flights totaling 84 h were conducted over individual facilities of the OS and downwind of the facilities at distances up to 120 km. The flight patterns have been shown previously
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>, 13 of which were used to quantify primary emissions from individual OS facilities, and 4 conducted to quantify their transformation downwind. Emission quantification flights were conducted by flying a 4- or 5-sided polygon, at multiple altitudes, resulting in 21 separate virtual boxes encompassing 7 OS facilities. Results from 17 flights were used in the current analysis, while the others were excluded because of highly variable wind speeds and direction and/or the presence of confounding pollutant interferences from adjacent OS facilities. The specific facilities studied and their corresponding flight numbers are given in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. Three of the flights (F7, F19, and F20) examined the photo-chemical transformation of pollutants downwind of the OS facilities
+   <span class="sup">
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>
+   </span> and are used here to quantify total emissions from all OS surface mining facilities (for comparison to the sum of individual emission flights), as they encompass the majority of emissions from the region. These transformation flights were designed as Lagrangian, such that the same air parcel in the OS plumes was sampled successively, 1 h apart, in virtual screens constructed from level flight tracks at multiple altitudes (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>, Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). There were no industrial emissions between the screens of each flight.
+  </p>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">Gas, particle, meteorological, and aircraft state measurements were made during flights, with a detailed description provided elsewhere
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>,
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>,
+    <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+   </span>. The current work makes use of a subset of these measurements specifically for the quantitation of CO
+   <sub>2</sub> and SO
+   <sub>2</sub> gases. CO
+   <sub>2</sub> was measured using a Picarro model G2401-
+   <span class="italic">m</span> instrument (
+   <span ext-link-type="uri" xlink:href="http://www.picarro.com/products_solutions/gas_analyzers/flight_co_co2_ch4_h2o" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.picarro.com/products_solutions/gas_analyzers/flight_co_co2_ch4_h2o</span>) with a time resolution of 2 s
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span>. The instrument sampled ambient air through a 6.35-mm (1/4 inch) diameter perfluoroalkoxy, backwards facing sampling line with a residence time of ~2 s. Calibrations were performed before, during, and after the field campaign using a range of mixing ratios from NIST certified standard cylinders (350–450 ppm). The precision of the CO
+   <sub>2</sub> measurements in flight were estimated to be &lt;100 ppb. SO
+   <sub>2</sub> was measured using a Thermo Scientific 43iTLE analyzer with a time resolution of 1 s. The SO
+   <sub>2</sub> instrument was calibrated with NIST certified standard cylinders over a range of 0–400 ppb. The standard deviation of the calibration slopes was 0.9% and the average standard deviation of the 1-s data during calibrations was 1.99 ppb
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span>. The time delay for the SO
+   <sub>2</sub> measurement, due to the gas traversing the length of the inlet, was ≈6 s and was corrected for in the data. NO and NO
+   <sub>2</sub> measurements were made using two Thermo Scientific 42iTLE analyzers at 1 Hz (NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> averaged to 2 s) with a sample residence time of ≈3–4 s. Each instrument was calibrated with NIST standard cylinders of NO. High frequency wind data were averaged to 1 or 2 s for subsequent analysis in the emission rate algorithm.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Top–down emission rate retrieval algorithm analysis</div>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">CO
+   <sub>2</sub> emission rates for each OS surface mining facility and for the entire OS region were derived using an algorithm designed to estimate pollutant transfer rates through the virtual boxes/screens of aircraft measurements. The algorithm is based on the Divergence Theorem to resolve mass balance (TERRA)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span> and has been used extensively for determining emission rates of volatile organic compounds (VOCs), black carbon, CH
+   <sub>4</sub>, secondary organic aerosol (SOA), organic/inorganic acids, and SO
+   <sub>2</sub>
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>,
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>,
+    <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+   </span> Emissions are derived with the TERRA algorithm by combining box-like aircraft flight patterns with pollutant concentration measurements at high time resolution and wind speed and direction data. The algorithm applies simple kriging
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span> to the data to produce virtual walls of gridded 20 × 40 m
+   <span class="sup">2</span> mesh on the virtual box, resolves the air mass balance within the virtual box, and determines the mass transfer rates across the walls (including the top of the box) to derive a net emission rate for a pollutant. In the case of virtual screens (rather than boxes), TERRA quantifies the mass transfer rate of a pollutant (kg h
+   <span class="sup">−1</span>) through the virtual screens, in the same manner as it does for a single wall of a virtual box flight
+   <span class="sup">
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>,
+    <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+   </span>.
+  </p>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">The use of the standard TERRA to estimate emissions accounts for incoming and outgoing air mass advective and turbulent fluxes within a volume, including the top of the virtual box, and is ideal for species that have little background contribution to the measured concentration. However, in the case of CO
+   <sub>2</sub> that has a large background concentration, this approach can introduce large uncertainties if even a small portion of the measured CO
+   <sub>2</sub> is calculated to leave through the top of the box. To address this uncertainty, a background CO
+   <sub>2</sub> is subtracted prior to the use of TERRA, such that the transfer rate through any one outgoing side of a box (or single screen) represents the facility emission rate. This approach has been used successfully for CH
+   <sub>4</sub>
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span>, VOCs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR35" href="#CR35">35</a>,
+    <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+   </span>, and SOAs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>
+   </span> and is similar to other single screen approaches
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>,
+    <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+   </span>. Background CO
+   <sub>2</sub> was determined using upwind measurements for box flights and screen flights (where available). For screen flights where upwind measurements were not conducted, the levels at the edges of the screen were used as background. The background between upwind data was linearly interpolated and box-car smoothed within a 20–40-min moving window to derive a variable baseline CO
+   <sub>2</sub> for the entire 2–3 h flight. Examples of the derived CO
+   <sub>2</sub> baseline are shown in Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>. The uncertainty added to the final emission rate for each flight contributed by the baseline estimation method was examined by varying the derived CO
+   <sub>2</sub> baseline by the standard deviation of the upwind data (±0.5–3 ppm CO
+   <sub>2</sub>), followed by input into TERRA. This baseline CO
+   <sub>2</sub> sensitivity analysis resulted in CO
+   <sub>2</sub> emission rates that varied by 1–33% (
+   <span class="italic">δ</span>
+   <sub>B</sub>; Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). This relatively small variation in emission rates caused by the background CO
+   <sub>2</sub> is due to the short duration of the flights, which were flown during an established planetary boundary layer and because there was significant enhancement of plume CO
+   <sub>2</sub> of up to &gt;80 ppm above background. In general, a changing boundary layer depth could in principle introduce additional uncertainty in the emission results from TERRA. However, the flights were intentionally conducted during mid-afternoon hours, when the boundary layer was constant. This was assessed through vertical profiles performed before and after the emission estimation portions of the flights. Under conditions where boundary layer depth was stable, real-time vertical profile data (pollutants, water vapor, temperature) from the flights were used to ensure that the highest flight track was always above the top of the boundary layer, hence ensuring that the entire plume from the various facilities was contained within the specific flight box or within the flight screen.
+  </p>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">It has been demonstrated previously that extrapolation of pollutant concentrations from the lowest flight level to the ground is the main source of uncertainty in TERRA, with an overall uncertainty in the derived emission rates of approximately 20%
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span>. This was determined previously
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span> through a sensitivity analysis in a series of closed-loop numerical experiments. In such experiments, a simulated Gaussian plume driven by a known emission flux was created and sampled with the TERRA algorithm, while also using various forms of extrapolation to the ground (i.e., linear to the ground, exponential, constant, linear to zero). A similar analysis was performed in the current study, with the differences in extrapolations also resulting in a &lt;20% difference in final estimated emissions. For pollutant sources that are entirely above the lowest flight level, extrapolation to the ground is not relevant and the associated uncertainty in the TERRA-derived emissions has been demonstrated to be ≈ 4%
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+   </span>. This was determined by comparing the TERRA-derived emissions of SO
+   <sub>2</sub> with continuous emissions monitoring system (CEMS) data for the same facility stack (CNRL) and for the exact hour of the flight. We note that CEMS data are regularly audited and mandated to be accurate to within 10%. Further comparisons of TERRA-derived SO
+   <sub>2</sub> stack emission rates with those concurrently measured with CEMS indicate that this uncertainty may be even smaller (&lt;1%) as shown in Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4a</a>. However, the larger 4% uncertainty for elevated stack emissions is used in this analysis. The excellent agreement between TERRA emissions and the audited CEMS data provide confidence that uncertainties associated with possible under sampling are negligible. The uncertainties for stack and ground-based emissions (i.e., 4% and 20%) are applied separately in cases where low level and elevated stack sources are clearly spatially differentiated, which are further propagated with the uncertainties associated with the background CO
+   <sub>2</sub> determination described above. The overall propagated uncertainty associated with the hourly emission rates derived for individual facilities ranged from 8% to 28% 
+   <div id="IEq33" class="inline-formula">
+    <div class="alternatives">
+     <span id="M65" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$(\Delta E_{{\mathrm{CO}}_2})$$\end{document}</span>
+     <div id="M66" class="math">
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span class="mi">Δ</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq33.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> for facility flights and from 24% to 38% for downwind transformation flights as shown in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. In contrast to the emission box flights, the largest uncertainty in the transfer rates through the downwind screens arises from the background subtraction of CO
+   <sub>2</sub> (
+   <span class="italic">δ</span>
+   <sub>B</sub> in Eq. 
+   <a rid="Equ9" ref-type="" href="#Equ9">9</a> below) due to the higher variability in background CO
+   <sub>2</sub> over a typically longer flight time. Such uncertainties are included in the emission results from TERRA and reported separately in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Upscaling OS emissions</div>
+  <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">The hourly emissions of CO
+   <sub>2</sub> derived with TERRA in Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a> and Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a> are used to calculate the CO
+   <sub>2</sub> emission intensity 
+   <div id="IEq34" class="inline-formula">
+    <div class="alternatives">
+     <span id="M67" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left( {I_{{\mathrm{CO}}_2}} \right)$$\end{document}</span>
+     <div id="M68" class="math">
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">I</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq34.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> for individual facilities (
+   <div id="IEq35" class="inline-formula">
+    <div class="alternatives">
+     <span id="M69" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{kg}}_{{\mathrm{CO}}_2}{\mathrm{barrel}}^{ - 1}$$\end{document}</span>
+     <div id="M70" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">kg</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="msup">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">barrel</span>
+       </div>
+       <div class="mrow">
+        <span class="mo">-</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq35.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> SCO) as a first step to estimating annual CO
+   <sub>2</sub> emissions. This emission intensity is derived as
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M71" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_2} = \frac{{E_{{\mathrm{M}}_{{\mathrm{CO}}_2}}}}{{P_{{\mathrm{SCO}}}}}$$\end{document}</span>
+     <div id="M72" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">M</span>
+           </div>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span mathvariant="normal" class="mi">CO</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">P</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">SCO</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <div id="IEq36" class="inline-formula">
+    <div class="alternatives">
+     <span id="M73" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{M}}_{{\mathrm{CO}}_2}}$$\end{document}</span>
+     <div id="M74" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq36.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the measured emission rate of CO
+   <sub>2</sub> for a given facility scaled to a month and 
+   <span class="italic">P</span>
+   <sub>SCO</sub> is the reported monthly production volume of SCO in units of barrels (reported to the Alberta Energy Regulator (AER)). Since production volumes are reported as monthly totals
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>, the measured hourly emission rates (
+   <div id="IEq37" class="inline-formula">
+    <div class="alternatives">
+     <span id="M75" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{CO}}_2}$$\end{document}</span>
+     <div id="M76" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq37.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) must be scaled up to a month to be used in the above equation (see below). The fact that the relative standard deviation between flights for a single facility spanning a period of a month was &lt;10% supports this monthly upscaling of emission rates. Alternatively, production volumes and hourly CO
+   <sub>2</sub> emissions can both be scaled to daily values. For simplicity, we have chosen to only scale the emissions measurements to monthly values; however, scaling both the emissions up and the production down to 1 day results in the same CO
+   <sub>2</sub> intensities (within &lt;1%).
+  </p>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Scaling the hourly CO
+   <sub>2</sub> emissions to daily or monthly values with a simple 24 h (i.e., 1 day) or 744 h (i.e., 1 month) scaling factor may overestimate the total emissions during that time period. Rather, we have used an approach described previously for VOC emissions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>. As described in Li et al., the TERRA-derived hourly emission rates are converted to daily (or monthly) emission rates based on the diurnal (or monthly) changes in bitumen production. This approach is ideally suited to CO
+   <sub>2</sub> as it is not likely to have the added complexity of temporally/temperature-dependent emissions from non-combustion sources, which may not scale with production. For combustion-based emissions, the hourly emission rate (
+   <span class="italic">E</span>
+   <sub>m</sub>) is related to the average hourly emission rate (
+   <div id="IEq38" class="inline-formula">
+    <div class="alternatives">
+     <span id="M77" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\overline {E_{\mathrm{m}}}$$\end{document}</span>
+     <div id="M78" class="math">
+      <div accent="true" class="mover">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">m</span>
+         </div>
+        </div>
+       </div>
+       <span accent="true" class="mo">¯</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq38.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>), the hourly bitumen production 
+   <span class="italic">q</span> at the hour of measurement, and the 24-h production 
+   <span class="italic">p</span>.
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M79" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{\mathrm{m}} = 24 \ast \overline {E_{\mathrm{m}}} \left( {\frac{q}{p}} \right)$$\end{document}</span>
+     <div id="M80" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">m</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mn">24</span>
+      <span class="mo">*</span>
+      <div accent="true" class="mover">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">m</span>
+         </div>
+        </div>
+       </div>
+       <span accent="true" class="mo">¯</span>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">q</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">p</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>Since combustion and thus production is accompanied by NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> emissions, the ratio 
+   <span class="italic">q</span>/
+   <span class="italic">p</span> may be derived as
+   <div id="Equ3" class="disp-formula">
+    <span class="label">3</span>
+    <div class="alternatives">
+     <span id="M81" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\left( {\frac{q}{p}} \right) = \frac{{E_{{\mathrm{NO}}_X}}}{{\mathop {\sum }\nolimits E_{{\mathrm{NO}}_X}}}$$\end{document}</span>
+     <div id="M82" class="math">
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mfrac">
+         <div class="mrow">
+          <span class="mi">q</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">p</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">NO</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mo">∑</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">NO</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <div id="IEq39" class="inline-formula">
+    <div class="alternatives">
+     <span id="M83" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{NO}}_X}$$\end{document}</span>
+     <div id="M84" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">NO</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq39.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the hourly emission rate during aircraft measurement, and 
+   <div id="IEq40" class="inline-formula">
+    <div class="alternatives">
+     <span id="M85" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\mathop {\sum }\nolimits E_{{\mathrm{NO}}_X}$$\end{document}</span>
+     <div id="M86" class="math">
+      <span class="mo"> ∑</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">NO</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq40.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the daily NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> emission rate. Thus a factor 
+   <span class="italic">C</span>
+   <sub>daily</sub>, for converting hourly to daily emission rates, can be expressed as
+   <div id="Equ4" class="disp-formula">
+    <span class="label">4</span>
+    <div class="alternatives">
+     <span id="M87" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$C_{{\mathrm{daily}}} = 24 \ast \frac{q}{p} = \frac{{24 \ast E_{{\mathrm{NO}}_X}}}{{\mathop {\sum }\nolimits E_{{\mathrm{NO}}_X}}}$$\end{document}</span>
+     <div id="M88" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">C</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">daily</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mn">24</span>
+      <span class="mo">*</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mi">q</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">p</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">24</span>
+        <span class="mo">*</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">NO</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mo">∑</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">NO</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">X</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>Similarly, a scaling factor to convert hourly to monthly emission rates is derived as
+   <div id="Equ5" class="disp-formula">
+    <span class="label">5</span>
+    <div class="alternatives">
+     <span id="M89" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$C_{{\mathrm{monthly}}} = \frac{{744 \ast E_{{\mathrm{NO}}_{\mathrm{X}}}}}{{\mathop {\sum }\nolimits E_{{\mathrm{NO}}_{\mathrm{X}}}}}$$\end{document}</span>
+     <div id="M90" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">C</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">monthly</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">744</span>
+        <span class="mo">*</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">NO</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">X</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mo">∑</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">E</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">NO</span>
+           </div>
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">X</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <div id="IEq41" class="inline-formula">
+    <div class="alternatives">
+     <span id="M91" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\sum} {E_{{\mathrm{NO}}_X}}$$\end{document}</span>
+     <div id="M92" class="math">
+      <span class="mo">∑</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">NO</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq41.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the monthly emission rate. Using NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> as an indicator of production is convenient since hourly, daily, and monthly NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> emission rates are available from CEMS measurements. The underlying assumption is that both CO
+   <sub>2</sub> and NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> emissions are proportional to SCO production, which is consistent with the fundamental assumptions for emission factor-based emission reporting, and consistent with the empirical relationship between CO
+   <sub>2</sub> and NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> observed here (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4b</a>). Although various in-plant sources of combustion exist, each with a different NO
+   <sub>
+    <span class="italic">X</span>
+   </sub>/CO
+   <sub>2</sub> ratio, this assumption requires the aggregate NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> emissions (sum of all CEMS data) to vary with production. While SO
+   <sub>2</sub> was chosen previously as a surrogate for production
+   <span class="sup">
+    <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+   </span>, we have chosen to use NO
+   <sub>
+    <span class="italic">X</span>
+   </sub>, as the CEMS data for NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> is more likely to include other stack combustion sources in addition to the upgrader stacks, which are the main source of SO
+   <sub>2</sub>. While it is not known whether the NO
+   <sub>X</sub>/CO
+   <sub>2</sub> ratios from different sources within a facility are temporally invariant, the standard deviation of the slope of the empirical relationships in Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4b</a> are used as a measure of the potential error introduced by variable NO
+   <sub>
+    <span class="italic">X</span>
+   </sub>/CO
+   <sub>2</sub> ratios during the study (
+   <span class="italic">δ</span>
+   <sub>V</sub>). The CEMS data for 
+   <div id="IEq42" class="inline-formula">
+    <div class="alternatives">
+     <span id="M93" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{NO}}_X}$$\end{document}</span>
+     <div id="M94" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">NO</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq42.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> from the facilities are reported to be accurate to within 10%
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+   </span> (
+   <span class="italic">δ</span>
+   <sub>CEM</sub>). The uncertainty in each 
+   <span class="italic">C</span>
+   <sub>monthly</sub> scaling factor per flight (
+   <span class="italic">δ</span>
+   <sub>C</sub>) is then derived as
+   <div id="Equ6" class="disp-formula">
+    <span class="label">6</span>
+    <div class="alternatives">
+     <span id="M95" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\delta _{\mathrm{C}} = \sqrt {2(\delta _{{\mathrm{CEM}}}^2) + \delta _{\mathrm{V}}^2}$$\end{document}</span>
+     <div id="M96" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">δ</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">C</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <span class="mn">2</span>
+       <div class="mrow">
+        <span class="mo">(</span>
+        <div class="mrow">
+         <div class="msubsup">
+          <div class="mrow">
+           <span class="mi">δ</span>
+          </div>
+          <div class="mrow">
+           <span mathvariant="normal" class="mi">CEM</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">2</span>
+          </div>
+         </div>
+        </div>
+        <span class="mo">)</span>
+       </div>
+       <span class="mo">+</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">δ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">V</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>and ranged from ≈14% to 15%. The mean scaling factor 
+   <span class="italic">C</span>
+   <sub>monthly</sub> is derived to be 0.83 ± 0.05, 1.00 ± 0.07, and 0.89 ± 0.06 for SML, SUN, and CNRL, respectively. For other facilities where no CEMS data were available, the average of the terms above is used to calculate 
+   <span class="italic">C</span>
+   <sub>monthly</sub> (0.91 ± 0.13). The monthly CO
+   <sub>2</sub> emission rates (
+   <div id="IEq43" class="inline-formula">
+    <div class="alternatives">
+     <span id="M97" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{M}}_{{\mathrm{CO}}_2}}$$\end{document}</span>
+     <div id="M98" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq43.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) for a given facility are then derived as
+   <div id="Equ7" class="disp-formula">
+    <span class="label">7</span>
+    <div class="alternatives">
+     <span id="M99" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{M}}_{{\mathrm{CO}}_2}} = E_{{\mathrm{CO}}_2} \times \frac{{744}}{{C_{{\mathrm{monthly}}}}}$$\end{document}</span>
+     <div id="M100" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">744</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">C</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">monthly</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <div id="IEq44" class="inline-formula">
+    <div class="alternatives">
+     <span id="M101" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{CO}}_2}$$\end{document}</span>
+     <div id="M102" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq44.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the TERRA-derived hourly emission rate (720/
+   <span class="italic">C</span>
+   <sub>monthly</sub> is used for September)
+   <span class="italic">.</span> This is subsequently used to compute the CO
+   <sub>2</sub> emission intensities 
+   <div id="IEq45" class="inline-formula">
+    <div class="alternatives">
+     <span id="M103" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$( {I_{{\mathrm{CO}}_2}} )$$\end{document}</span>
+     <div id="M104" class="math">
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">I</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq45.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> via Eq. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) above and shown in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2a</a> and Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Annual OS CO
+   <sub>2</sub> estimates and uncertainties
+  </div>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Annual CO
+   <sub>2</sub> emissions (
+   <span class="italic">E</span>
+   <sub>annual</sub>) for individual facilities are derived by multiplying the top–down derived CO
+   <sub>2</sub> emission intensities (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>), by the reported annual SCO production volumes for the year 2013
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>:
+   <div id="Equ8" class="disp-formula">
+    <span class="label">8</span>
+    <div class="alternatives">
+     <span id="M105" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$E_{{\mathrm{annual}}} = I_{{\mathrm{CO}}_2} \times P_{{\mathrm{SCO}}_{{\mathrm{annual}}}}$$\end{document}</span>
+     <div id="M106" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">E</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">annual</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">P</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">SCO</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">annual</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">The derived annual CO
+   <sub>2</sub> emissions have an overall relative error (
+   <span class="italic">δ</span>
+   <sub>E</sub>) with contributions from the errors associated with the application of TERRA (
+   <span class="italic">δ</span>
+   <sub>T</sub> ≈ 7–20%), the baseline CO
+   <sub>2</sub> estimation (
+   <span class="italic">δ</span>
+   <sub>B</sub> ≈ 1–20%), the hourly to monthly scaling factor (
+   <span class="italic">δ</span>
+   <sub>C</sub> ≈ 14–15%; above), the relative measured variability in TERRA-derived emissions from multiple flights per facility (standard error; 
+   <span class="italic">δ</span>
+   <sub>D</sub> ≈ 4–10%), and the reported production volumes of SCO (
+   <span class="italic">δ</span>
+   <sub>P</sub> ≈ 1%). The overall relative uncertainty in the annual emission rate (
+   <span class="italic">δ</span>
+   <sub>E</sub> = 
+   <span class="italic">ΔE</span>
+   <sub>annual</sub>/
+   <span class="italic">E</span>
+   <sub>annual</sub>) can hence be calculated as
+   <div id="Equ9" class="disp-formula">
+    <span class="label">9</span>
+    <div class="alternatives">
+     <span id="M107" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\delta} _{\mathrm{E}} = \sqrt {{\delta} _{\mathrm{T}}^2 + {\delta} _{\mathrm{B}}^2 + {\delta} _{\mathrm{C}}^2 + {\delta} _{\mathrm{D}}^2 + {\delta} _{\mathrm{P}}^2}$$\end{document}</span>
+     <div id="M108" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">δ</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">E</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msqrt">
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">δ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">δ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">B</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">δ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">C</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">δ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">D</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msubsup">
+        <div class="mrow">
+         <span class="mi">δ</span>
+        </div>
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">P</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>for each flight and ranged from 17% to 32% depending on the facility (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). The mean annual emissions (across individual flights) for each facility is shown in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2b</a>, with the error bars representing the propagated uncertainty of the mean (see Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>).
+  </p>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">The uncertainty associated with the calculated emission intensities 
+   <div id="IEq46" class="inline-formula">
+    <div class="alternatives">
+     <span id="M109" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$( {I_{{\mathrm{CO}}_2}} )$$\end{document}</span>
+     <div id="M110" class="math">
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">I</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq46.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> of Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2a</a> are also derived with Eq. (
+   <a rid="Equ9" ref-type="" href="#Equ9">9</a>), but using a value of 
+   <span class="italic">δ</span>
+   <sub>P</sub> (≈ 1%) for monthly reported production (rather than annual production). This also results in a calculated uncertainty in 
+   <div id="IEq47" class="inline-formula">
+    <div class="alternatives">
+     <span id="M111" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_2}$$\end{document}</span>
+     <div id="M112" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq47.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> of 17–32%. The absolute uncertainties in 
+   <div id="IEq48" class="inline-formula">
+    <div class="alternatives">
+     <span id="M113" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_2}$$\end{document}</span>
+     <div id="M114" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq48.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> derived for each individual facility flight are provided in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> and ranged from ±10 to ±76 kg CO
+   <sub>2</sub> barrel
+   <span class="sup">−1</span>, with a propagated error in the mean 
+   <div id="IEq49" class="inline-formula">
+    <div class="alternatives">
+     <span id="M115" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_2}$$\end{document}</span>
+     <div id="M116" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq49.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> for each facility ranging from ±7 to ±26 kg CO
+   <sub>2</sub> barrel
+   <span class="sup">−1</span> (see Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). It is expected that applying the emission intensities 
+   <div id="IEq50" class="inline-formula">
+    <div class="alternatives">
+     <span id="M117" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$( {I_{{\mathrm{CO}}_2}} )$$\end{document}</span>
+     <div id="M118" class="math">
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">I</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq50.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> derived for 1 month in this study across the entire year to determine annual emissions is significantly more accurate than attempting to scale the measured CO
+   <sub>2</sub> emissions from these flights directly to a full year. This intrinsically assumes that the measured emission rates are more representative of a month than they are to a full year and only requires 
+   <div id="IEq51" class="inline-formula">
+    <div class="alternatives">
+     <span id="M119" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$( {I_{{\mathrm{CO}}_2}} )$$\end{document}</span>
+     <div id="M120" class="math">
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">I</span>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span mathvariant="normal" class="mi">CO</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq51.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> to be relatively constant from month to month (see other considerations and assumptions section).
+  </p>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Annual CH
+   <sub>4</sub> emissions used in Fig. 
+   <a rid="Fig4" ref-type="fig" href="#Fig4">4</a> were taken directly from previous work
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span>. Deriving an emission intensity for methane (to be included in the total 
+   <div id="IEq52" class="inline-formula">
+    <div class="alternatives">
+     <span id="M121" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_{2{\mathrm{eq}}}}$$\end{document}</span>
+     <div id="M122" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+          <span mathvariant="normal" class="mi">eq</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq52.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) using similar upscaling factors as was done for CO
+   <sub>2</sub> may not be fully appropriate for CH
+   <sub>4</sub>, as most CH
+   <sub>4</sub> in the OS is not derived via combustion. Hence 
+   <div id="IEq53" class="inline-formula">
+    <div class="alternatives">
+     <span id="M123" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_{2{\mathrm{eq}}}}$$\end{document}</span>
+     <div id="M124" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+          <span mathvariant="normal" class="mi">eq</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq53.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> for CH
+   <sub>4</sub> specifically was derived by dividing previously reported annual CH
+   <sub>4</sub>
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>
+   </span> by annual production volumes of SCO
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>. Regardless, applying the upscaling approach for CO
+   <sub>2</sub> described above to hourly CH
+   <sub>4</sub> resulted in CH
+   <sub>4</sub> emission intensities that differed by &lt;5% and remain a small contributor to overall OS GHG emissions (using 100-year GWP).
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The statistical significance of the differences between reported annual CO
+   <sub>2</sub> emissions and those derived here (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2b</a>) are investigated through the use of a single-sample 
+   <span class="italic">t</span> test, since as with all reported emissions there is only a single reported value for each facility. This analysis tests the null hypothesis that can be stated as: 
+   <div id="IEq54" class="inline-formula">
+    <div class="alternatives">
+     <span id="M125" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar M$$\end{document}</span>
+     <div id="M126" class="math">
+      <div accent="true" class="mover">
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+       <span class="mo">¯</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq54.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> = 
+   <span class="italic">μ</span>
+   <sub>o</sub>, i.e., the mean of all aircraft measurement results for a given facility (
+   <div id="IEq55" class="inline-formula">
+    <div class="alternatives">
+     <span id="M127" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar M$$\end{document}</span>
+     <div id="M128" class="math">
+      <div accent="true" class="mover">
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+       <span class="mo">¯</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq55.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>) equals the reported value (
+   <span class="italic">μ</span>
+   <sub>o</sub>). Consequently, the 
+   <span class="italic">t</span> statistic can be given as:
+   <div id="Equ10" class="disp-formula">
+    <span class="label">10</span>
+    <div class="alternatives">
+     <span id="M129" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$t = \frac{{\bar M - \mu _{\mathrm{o}}}}{{\sqrt {\frac{{{\sum} {{{X}}^2} - \left( {\left( {\left( {{\sum} {{X}} } \right)^2} \right)/N} \right)}}{{\left( {N - 1} \right)N}}} }}$$\end{document}</span>
+     <div id="M130" class="math">
+      <span class="mi">t</span>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div accent="true" class="mover">
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+         <span class="mo">¯</span>
+        </div>
+        <span class="mo">-</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">μ</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">o</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msqrt">
+         <div class="mfrac">
+          <div class="mrow">
+           <span mathsize="big" class="mo">∑</span>
+           <div class="msup">
+            <div class="mrow">
+             <span class="mi">X</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <span class="mo">-</span>
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <div close=")" open="(" separators="" class="mfenced">
+              <div class="mrow">
+               <div class="msup">
+                <div class="mrow">
+                 <div close=")" open="(" separators="" class="mfenced">
+                  <div class="mrow">
+                   <span mathsize="big" class="mo">∑</span>
+                   <span class="mi">X</span>
+                  </div>
+                 </div>
+                </div>
+                <div class="mrow">
+                 <span class="mn">2</span>
+                </div>
+               </div>
+              </div>
+             </div>
+             <span class="mo">∕</span>
+             <span class="mi">N</span>
+            </div>
+           </div>
+          </div>
+          <div class="mrow">
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <span class="mi">N</span>
+             <span class="mo">-</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mi">N</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41467_2019_9714_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <div id="IEq56" class="inline-formula">
+    <div class="alternatives">
+     <span id="M131" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar M$$\end{document}</span>
+     <div id="M132" class="math">
+      <div accent="true" class="mover">
+       <div class="mrow">
+        <span class="mi">M</span>
+       </div>
+       <span class="mo">¯</span>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq56.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> is the sample mean, 
+   <span class="italic">μ</span>
+   <sub>o</sub> is the reported value, 
+   <span class="italic">X</span> are the aircraft-based emission rates from all flights of a facility, and 
+   <span class="italic">N</span> is the number of flights for each facility, with a degree of freedom of 
+   <span class="italic">N</span> − 1. Using this test for the SML facility results in a 
+   <span class="italic">t</span> = 8.4, which translates into a 
+   <span class="italic">p</span> value of 0.0004. This indicates that the aircraft measurement-based emission results for SML are statistically and significantly different from the reported emission at the 99.9% confidence level. The results for other facilities resulted in 
+   <span class="italic">t</span> values of 1.95, 2.32, and 2.69 for SUN, CNRL, and SAJ, respectively. This corresponds to means that are different than reported values at 
+   <span class="italic">p</span> &lt; 0.2, &lt;0.1 and &lt;0.1 (i.e., ~80–90% confidence level).
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Other considerations and assumptions</div>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">There are potentially additional considerations that should be noted with respect to the estimated emission intensities and annual emissions particularly when compared to traditional bottom–up approaches. Such bottom–up approaches rely upon accurate and detailed knowledge of: the technology in use, emission factors, fuel mixture data, operating conditions, quality of maintenance, control technologies in use, carbon content data, and the lower or higher heating values (LHV vs HHV) of the process. These items can have a degree of uncertainty associated with them and do not include the potential for unintentional errors or omissions of sources (among the very many bottom–up sources that exist). While aircraft measurements of CO
+   <sub>2</sub> concentrations and associated top–down methodologies are also subject to a range of quantifiable uncertainties, the approach provides a useful and complimentary dataset to bottom–up methods, which can identify when further investigation into emissions is required, particularly when discrepancies exist. While it is not possible to unequivocally determine the root causes of the observed discrepancies here, it is speculated that that they may arise from a combination of factors, including outdated emission factors and activity data, unknown/poorly updated fuel carbon content data, poorly quantified area sources, and human error. Such difficulties are expected to be faced by various O&amp;G and other industries, suggesting the potential for universal differences between top–down and bottom–up emission estimation methods.
+  </p>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Some additional uncertainties for the top–down methodology (those not already stated in methods) are also possible. For example, the aircraft measurements were performed over the course of a month and appropriately scaled, taking into account monthly production to derive emission intensity. A seasonal change in emission intensity during non-sampled months is possible, although we expect that this should be minimal (&lt;15%) as noted previously
+   <span class="sup">
+    <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+   </span>, particularly since seasonal emissions of CO
+   <sub>2</sub> from fugitive sources such as tailing ponds are small contributors to overall CO
+   <sub>2</sub> emissions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>
+   </span>. Since much of the CO
+   <sub>2</sub> is a result of combustion, it expected that increased energy/heat would be required during the winter, potentially resulting in increased emission intensities compared to the summer. In addition, changes in the fuel mixture used within facilities over the year can influence the derived emission intensities. For example, increased use of pet coke as fuel (which is known to emit more CO
+   <sub>2</sub>) during the month of this study could bias the derived emission intensities high compared to other months. The underlying assumption in this regard is that the relative proportion of fuel types used during the aircraft flights was similar to other months. This is supported by OS plant statistics
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>, which show that the fraction of pet coke used varied by &lt;10% month to month in 2013 for SML. Regardless, the carbon content of pet coke is only 10–15% higher than that of natural gas and process gas used for fuel and would only apply to 60–70% of total facility emissions (i.e., not from the mining process).
+  </p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Other end products arising from OS operation (i.e., not SCO) are also possible, which could introduce some uncertainty into the emission intensity estimates that use SCO production in the denominator of the equation for 
+   <div id="IEq57" class="inline-formula">
+    <div class="alternatives">
+     <span id="M133" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_2}$$\end{document}</span>
+     <div id="M134" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq57.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>. This is also expected to be relatively small as SML and SUN generally produce ~90% SCO
+   <span class="sup">
+    <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+   </span>. Regardless, using an alternative emission factor approach (i.e., CO
+   <sub>2</sub>/SO
+   <sub>2</sub> or CO
+   <sub>2</sub>/ore mined) results in very similar annual emissions compared to the emission intensity approach. The results from these independent approaches are good evidence that they are valid and support the underlying assumption that NO
+   <sub>
+    <span class="italic">X</span>
+   </sub> emissions on aggregate are proportional to SCO production (see Methods). Regardless, provided that the product mixture does not change significantly from month to month, the derived 
+   <div id="IEq58" class="inline-formula">
+    <div class="alternatives">
+     <span id="M135" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$I_{{\mathrm{CO}}_2}$$\end{document}</span>
+     <div id="M136" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">CO</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span xlink:href="41467_2019_9714_Article_IEq58.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div> remains a valid emission factor that can be used to calculate annual emissions. The OS plant statistics
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span> support the assumption of a constant product mixture as it varies by &lt;10% month to month. Finally, the possibility of unforeseen facility maintenance, open burning of overburden, or increased flaring resulting in increased CO
+   <sub>2</sub> emissions cannot be ruled out. However, there was no evidence of maintenance or burning occurring during this study, and flaring is expected to account for a very small fraction of the overall CO
+   <sub>2</sub> emissions. Regardless, such events are unlikely to have occurred systematically across the exact days of study during the months of August and September.
+  </p>
+ </sec>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Reporting summary</div>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">Further information on experimental design is available in the 
+   <a rid="MOESM2" ref-type="media" href="#MOESM2">Nature Research Reporting Summary</a> linked to this article.
+  </p>
+ </sec>
+</sec>

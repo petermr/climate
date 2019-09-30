@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec13" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sub-models B1 and B2 for predicting the area fractions of alpine vegetation communities</div>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">We developed two sub-models to predict the area fractions of alpine vegetation communities (B1 and B2). In general, plant species distributions are assumed to be controlled by climate at large scales and by non-climatic factors at small scales, including topography, soil conditions, and biotic interactions [
+  <a ref-type="bibr" rid="CR47" href="#CR47">47</a>]. In the present study, we assumed that climatic conditions control the occurrence of alpine vegetation zones at macro-scales, whereas topographic conditions with climatic suitability control the area fractions of alpine vegetation communities at micro-scales. On the basis of this assumption, we constructed two sub-models by using different explanatory variables at different spatial scales for each sub-model as follows.
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">We used a GAM to predict the occurrence of the alpine vegetation zone (sub-model B1), which contained the 
+  <span class="italic">P. pumila</span> community, snowbed grassland community, and alpine fellfield community, at 100-m grid cells (ca. 0.01 km
+  <span class="sup">2</span>). Four climatic variables—warmth index [
+  <a ref-type="bibr" rid="CR32" href="#CR32">32</a>], minimum temperature, summer precipitation, and maximum snowwater—at 1-km resolution were used as explanatory variables. Warmth index was used as an interaction term with minimum temperature based on the thin plate smoothing spline algorithm [
+  <a ref-type="bibr" rid="CR43" href="#CR43">43</a>]. Model accuracy was evaluated by using the AUC together with sensitivity and specificity. Current and future occurrence probabilities of the alpine vegetation zone were predicted by applying the GAM on the current climate and 24 future climate scenarios.
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">We used random forests (RF) [
+  <a ref-type="bibr" rid="CR48" href="#CR48">48</a>] to predict area fractions of alpine vegetation communities (sub-model B2). The package “randomForest” was used for constructing an RF in R. The RF is a model that is based on the machine learning method and has a powerful and high generalizing capability. The model was developed based on the ensemble of numerous classification tree models, by using sub-sampled data from the training data. Area fractions of alpine vegetation communities in each grid cell were used as response variables. As explanatory variables, we used five topographic variables (slope, aspect, curvature, TWI, and distance from the ridgeline) and the occurrence probability of the alpine vegetation zone calculated by sub-model B1. The occurrence probability of the alpine vegetation zone was used as an indicator of climatic suitability for each alpine vegetation community. Correlations between actual and predicted values of area fractions were verified by using Spearman’s rank sum test. The importance of each variable was identified based on increased mean square errors (increased MSE). Increased MSE measures the effect on the predictive power when the value of a specific original variable is randomly permuted [
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>].
+ </p>
+</sec>
