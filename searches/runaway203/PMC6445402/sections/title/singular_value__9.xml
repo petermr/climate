@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Singular Value Decomposition of an 
+  <span class="italic">m</span>-dimensional predictors’ space
+ </div>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Suppose an 
+  <span class="italic">n</span> × 
+  <span class="italic">m</span> matrix 
+  <span class="bold">X</span> contains, by columns, centralized samples of 
+  <span class="italic">m</span> variables 
+  <span class="italic">x</span>
+  <sub>1</sub>, 
+  <span class="italic">x</span>
+  <sub>2</sub>, ..., 
+  <span class="italic">x</span>
+  <sub>m</sub> (our 
+  <span class="italic">original predictors</span>), each observed at the same 
+  <span class="italic">n &gt; m</span> times. The well-known 
+  <span class="italic">thin</span> Singular Value Decomposition (SVD) presents 
+  <span class="bold">X</span> as:
+  <div id="Equa" class="disp-formula">
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{X}=\mathbf{U}\boldsymbol{\Sigma } {\mathbf{E}}^{\mathbf{T}} $$\end{document}</span>
+    <div id="M14" display="block" class="math">
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">X</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">U</span>
+     </div>
+     <span mathvariant="bold" class="mi">Σ</span>
+     <div class="msup">
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">E</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">T</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="bold">U</span> is an 
+  <span class="italic">n</span> × 
+  <span class="italic">m</span> matrix of orthonormal columns, 
+  <span class="bold">E</span> is an 
+  <span class="italic">m</span> × 
+  <span class="italic">m</span> orthogonal matrix, and 
+  <span class="bold">Σ</span> is a diagonal matrix with non-negative diagonal elements in non-ascending order, called singular values (Golub and Van Loan 
+  <a ref-type="bibr" rid="CR24" href="#CR24">1996</a>). Superscript 
+  <span class="sup">
+   <span class="italic">T</span>
+  </span> denotes matrix transposition. The columns of 
+  <span class="bold">U</span> and 
+  <span class="bold">E</span> are called left and right singular vectors. Rescaling the left singular vectors by 
+  <div id="IEq3" class="inline-formula">
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{P}=\sqrt{n-1}\mathbf{U} $$\end{document}</span>
+    <div id="M16" display="inline" class="math">
+     <span mathvariant="bold" class="mi">P</span>
+     <span class="mo">=</span>
+     <div class="msqrt">
+      <div class="mrow">
+       <span class="mi">n</span>
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span mathvariant="bold" class="mi">U</span>
+    </div>
+    <span xlink:href="10584_2018_2341_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and introducing 
+  <span class="bold">Λ</span> = 
+  <span class="bold">Σ</span>
+  <span class="sup">2</span>/(
+  <span class="italic">n</span> − 1), we rewrite 
+  <span class="bold">X</span> as:
+  <div id="Equ7" class="disp-formula">
+   <span class="label">7</span>
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{X}=\mathbf{P}{\boldsymbol{\Lambda}}^{1/2}{\mathbf{E}}^{\mathrm{T}} $$\end{document}</span>
+    <div id="M18" display="block" class="math">
+     <span mathvariant="bold" class="mi">X</span>
+     <span class="mo">=</span>
+     <span mathvariant="bold" class="mi">P</span>
+     <div class="msup">
+      <span mathvariant="bold" class="mi">Λ</span>
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">/</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <div class="msup">
+      <span mathvariant="bold" class="mi">E</span>
+      <span mathvariant="normal" class="mi">T</span>
+     </div>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">By construction, the columns of 
+  <span class="bold">P</span> are standardized, mutually uncorrelated time series. Each column is associated with a pattern of 
+  <span class="italic">loadings</span> (from the corresponding column of matrix 
+  <span class="bold">E</span>) on the original 
+  <span class="italic">m</span> variables and with the amount of variance (given by the corresponding diagonal element in 
+  <span class="bold">Λ</span>) that it 
+  <span class="italic">explains</span> within the total variance of the 
+  <span class="italic">m</span> original variables. The latter is easy to see from observing that the variance-covariance matrix of the original variables:
+  <div id="Equ8" class="disp-formula">
+   <span class="label">8</span>
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{C}={\mathbf{X}}^{\mathrm{T}}\mathbf{X}/\left(n-1\right)=\mathbf{E}\boldsymbol{\Lambda } {\mathbf{E}}^{\mathrm{T}} $$\end{document}</span>
+    <div id="M20" display="block" class="math">
+     <span mathvariant="bold" class="mi">C</span>
+     <span class="mo">=</span>
+     <div class="msup">
+      <span mathvariant="bold" class="mi">X</span>
+      <span mathvariant="normal" class="mi">T</span>
+     </div>
+     <span mathvariant="bold" class="mi">X</span>
+     <span class="mo">/</span>
+     <div close=")" open="(" class="mfenced">
+      <div class="mrow">
+       <span class="mi">n</span>
+       <span class="mo">−</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span mathvariant="bold" class="mi">EΛ</span>
+     <div class="msup">
+      <span mathvariant="bold" class="mi">E</span>
+      <span mathvariant="normal" class="mi">T</span>
+     </div>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>has its eigenvalues and eigenvectors equal to diagonal elements of 
+  <span class="bold">Λ</span> and to columns of 
+  <span class="bold">E</span>, respectively. The columns of 
+  <span class="bold">E</span> are also known as Empirical Orthogonal Functions (EOFs), while the columns of 
+  <span class="bold">V</span> = 
+  <span class="bold">PΛ</span>
+  <span class="sup">1/2</span> are known as Principal Components (PC) of the data set contained in matrix 
+  <span class="bold">X</span>. Decomposition of the data set into EOFs and PCs:
+  <div id="Equb" class="disp-formula">
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{X}={\mathbf{VE}}^{\mathrm{T}} $$\end{document}</span>
+    <div id="M22" display="block" class="math">
+     <div class="mrow">
+      <span mathvariant="bold" class="mi">X</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="msup">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">V</span>
+       <span mathvariant="bold" class="mi">E</span>
+      </div>
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">T</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="10584_2018_2341_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>is often used in climate science to represent the overall co-variability of the original variables as the superposition of linearly independent modes, with several leading modes usually explaining most of the total variance in the system (von Storch and Zwiers 
+  <a ref-type="bibr" rid="CR53" href="#CR53">1999</a>).
+ </p>
+</sec>

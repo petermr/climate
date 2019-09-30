@@ -1,0 +1,954 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate change in the Sahel through the lens of oceanic influence</div>
+ <p id="Par9" xmlns="http://www.w3.org/1999/xhtml">We build an argument for indirect attribution based on the influence of external forcing—external to the coupled ocean-atmosphere system—on the SST patterns that affect Sahel rainfall. In the “
+  <a rid="Sec4" ref-type="sec" href="#Sec4">Transformation of predictors</a>” sub-section, we concisely describe oceanic influence using SVD applied to our set of two original predictors for Sahel rainfall, sub-tropical North Atlantic and global tropical SSTs. In the “
+  <a rid="Sec5" ref-type="sec" href="#Sec5">Linear regressions of Sahel rainfall</a>” sub-section, we use the resulting singular vectors as predictors in bivariate regression. Results of the analyses of the multi-model means and observations are reported in Tables 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a> and 
+  <a rid="Tab2" ref-type="table" href="#Tab2">2</a>. Results of the analyses of the single-model ensemble means are collected in tables in 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">Supplementary Material</a>. The Appendices provide a brief review of the nomenclature and definitions for SVD in the general 
+  <span class="italic">m</span>-dimensional case (
+  <a rid="Sec8" ref-type="sec" href="#Sec8">Singular Value Decomposition of an m-dimensional predictors’ space</a>) and for linear regression (
+  <a rid="Sec10" ref-type="sec" href="#Sec10">Use of time-dimensional singular vectors as predictors</a>), as well as the derivation of the explicit form for the parameters of SVD in the bivariate case (
+  <a rid="Sec9" ref-type="sec" href="#Sec9">Singular Value Decomposition of a two-dimensional predictors’ space; derivation of Eqs.</a> (
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a>)–(
+  <a rid="Equ5" ref-type="" href="#Equ5">5</a>)).
+  <div id="Tab1" class="table-wrap">
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <p>Predictors’ space characteristics for the multi-model means from CMIP5 simulations and for twentieth century observations</p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <thead>
+     <tr>
+      <th>Century</th>
+      <th>CMIP5 simulation</th>
+      <th>σ
+       <sub>1</sub>, °C
+       <span class="break"/>GT
+      </th>
+      <th>σ
+       <sub>1</sub>, °C
+       <span class="break"/>NA
+      </th>
+      <th>
+       <span class="italic">ϱ</span>
+      </th>
+      <th>
+       <span class="italic">k</span>
+      </th>
+      <th>
+       <span class="italic">ϕ</span>, arc°
+      </th>
+      <th>
+       <span class="italic">λ</span>
+       <sub>1</sub>
+       <span class="break"/>°C
+       <span class="sup">2</span>
+      </th>
+      <th>
+       <span class="italic">λ</span>
+       <sub>2</sub>
+       <span class="break"/>°C
+       <span class="sup">2</span>
+      </th>
+      <th>
+       <span class="italic">λ</span>
+       <sub>1</sub>/(
+       <span class="italic">λ</span>
+       <sub>1</sub> + 
+       <span class="italic">λ</span>
+       <sub>2</sub>)
+       <span class="break"/>%
+      </th>
+      <th>
+       <span class="italic">λ</span>
+       <sub>2</sub>/(
+       <span class="italic">λ</span>
+       <sub>1</sub> + 
+       <span class="italic">λ</span>
+       <sub>2</sub>)
+       <span class="break"/>%
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>19th</td>
+      <td>PI control</td>
+      <td>0.03234</td>
+      <td>0.04195</td>
+      <td>0.369</td>
+      <td>0.771</td>
+      <td>62.75</td>
+      <td>0.0020</td>
+      <td>0.0008</td>
+      <td>71.90</td>
+      <td>28.10</td>
+     </tr>
+     <tr>
+      <td>20th</td>
+      <td>Historical</td>
+      <td>0.13150</td>
+      <td>0.12475</td>
+      <td>0.955</td>
+      <td>1.054</td>
+      <td>43.42</td>
+      <td>0.0321</td>
+      <td>0.0007</td>
+      <td>97.74</td>
+      <td>2.26</td>
+     </tr>
+     <tr>
+      <td>21st</td>
+      <td>RCP8.5</td>
+      <td>0.86711</td>
+      <td>0.83118</td>
+      <td>0.999</td>
+      <td>1.043</td>
+      <td>43.79</td>
+      <td>1.4422</td>
+      <td>0.0005</td>
+      <td>99.96</td>
+      <td>0.04</td>
+     </tr>
+     <tr>
+      <td>1901–1999</td>
+      <td>Observations</td>
+      <td>0.19565</td>
+      <td>0.22748</td>
+      <td>0.619</td>
+      <td>0.860</td>
+      <td>51.86</td>
+      <td>0.0734</td>
+      <td>0.0166</td>
+      <td>81.52</td>
+      <td>18.48</td>
+     </tr>
+    </tbody>
+   </table>
+   <div class="table-wrap-foot">
+    <p>Columns from the left to right show the simulated century and the type of CMIP simulation (or observational reference period), the standard deviations of the original predictors, 
+     <span class="italic">σ</span>
+     <sub>1</sub> and 
+     <span class="italic">σ</span>
+     <sub>2</sub>, in °C (for GT and NA, respectively), their correlation coefficient, 
+     <span class="italic">ρ</span>, the ratio of their standard deviations, 
+     <span class="italic">k</span> = 
+     <span class="italic">σ</span>
+     <sub>1</sub>/
+     <span class="italic">σ</span>
+     <sub>2</sub>, angle 
+     <span class="italic">ϕ</span> from Eq. (
+     <a rid="Equ3" ref-type="" href="#Equ3">3</a>), in arc degree, variances 
+     <span class="italic">λ</span>
+     <sub>1</sub> and 
+     <span class="italic">λ</span>
+     <sub>2</sub>, in (°C)
+     <span class="sup">2</span>, respectively, explained by the leading and trailing modes, corresponding to time series 
+     <span class="italic">p</span>
+     <sub>1</sub> and 
+     <span class="italic">p</span>
+     <sub>2</sub>, and the same in percent of the total variance 
+     <span class="italic">λ</span>
+     <sub>1</sub> + 
+     <span class="italic">λ</span>
+     <sub>2</sub>
+    </p>
+   </div>
+  </div>
+  <div id="Tab2" class="table-wrap">
+   <span class="label">Table 2</span>
+   <div class="caption">
+    <p>Regression coefficients and skill for Sahel rainfall in CMIP5 multi-model means and in twentieth century observations</p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <thead>
+     <tr>
+      <th>Century</th>
+      <th>CMIP5
+       <span class="break"/>simulation
+      </th>
+      <th>
+       <span class="italic">a</span>
+      </th>
+      <th>
+       <span class="italic">b</span>
+      </th>
+      <th>Correlation coefficient of 
+       <span class="italic">y</span>, 
+       <span class="italic">ŷ</span>
+      </th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>19th</td>
+      <td>PI-control</td>
+      <td>0.054</td>
+      <td>0.312</td>
+      <td>0.317</td>
+     </tr>
+     <tr>
+      <td>20th</td>
+      <td>Historical</td>
+      <td>−0.320</td>
+      <td>0.477</td>
+      <td>0.574</td>
+     </tr>
+     <tr>
+      <td>21st</td>
+      <td>RCP8.5</td>
+      <td>0.783</td>
+      <td>0.171</td>
+      <td>0.801</td>
+     </tr>
+     <tr>
+      <td>1901–1999</td>
+      <td>Observations</td>
+      <td>−0.182</td>
+      <td>0.607</td>
+      <td>0.633</td>
+     </tr>
+    </tbody>
+   </table>
+   <div class="table-wrap-foot">
+    <p>Columns from the left to right show the simulated century and the type of CMIP simulation (or observational reference period), regression coefficients 
+     <span class="italic">a</span> and 
+     <span class="italic">b</span> of Sahel rainfall on the time series 
+     <span class="italic">p</span>
+     <sub>1</sub> and 
+     <span class="italic">p</span>
+     <sub>2</sub>, respectively, and the correlation coefficient between 
+     <span class="italic">y</span>, Sahel rainfall simulated in CMIP5, or observed, and its predicted values from regression model (6): 
+     <span class="italic">ŷ</span> = 
+     <span class="italic">ap</span>
+     <sub>1</sub> + 
+     <span class="italic">bp</span>
+     <sub>2</sub>
+    </p>
+   </div>
+  </div>
+ </p>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Transformation of predictors</div>
+  <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">We relate differences between our predictors’ covariance structures to differences in the external forcing applied to the pre-Industrial control and twentieth and twenty-first century simulations. The latter two types of simulations are run with time-varying external forcing, natural and anthropogenic: variations in each realization of a single model’s ensemble are a combination of internal variability and externally forced change, and their ensemble mean is taken to filter out internal variability. The former are run with constant external forcing, including CO
+   <sub>2</sub> concentrations held fixed at pre-Industrial levels (280 ppm), the intent being to provide a truthful estimation of each model’s internal variability. We repeat analyses on each model’s first 100 years of the pre-Industrial control simulation (typically, there is only one such simulation per model, of variable length) and on each model’s ensemble mean (with ensemble sizes varying between one and ten) for the twentieth and twenty-first century simulations.
+  </p>
+  <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">When there are only two predictors—in our case, 
+   <span class="italic">x</span>
+   <sub>1</sub> = GT and 
+   <span class="italic">x</span>
+   <sub>2</sub> = NA—standardized and mutually uncorrelated SVD-based predictors 
+   <span class="italic">p</span>
+   <sub>1</sub>, 
+   <span class="italic">p</span>
+   <sub>2</sub> are obtained from the original predictors 
+   <span class="italic">x</span>
+   <sub>1</sub>, 
+   <span class="italic">x</span>
+   <sub>2</sub> by orthogonal rotation in the 
+   <span class="italic">x</span>
+   <sub>1</sub>
+   <span class="italic">x</span>
+   <sub>2</sub> plane followed by rescaling:
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {p}_1=\left({x}_1\cos \phi +{x}_2\sin \phi \right)/\sqrt{\lambda_1} $$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <div class="msub">
+       <span class="mi">p</span>
+       <span class="mn">1</span>
+      </div>
+      <span class="mo">=</span>
+      <div close=")" open="(" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mn">1</span>
+        </div>
+        <span class="mo">cos</span>
+        <span mathvariant="italic" class="mi">ϕ</span>
+        <span class="mo">+</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">sin</span>
+        <span mathvariant="italic" class="mi">ϕ</span>
+       </div>
+      </div>
+      <span class="mo">/</span>
+      <div class="msqrt">
+       <div class="msub">
+        <span class="mi">λ</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="10584_2018_2341_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>and
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {p}_2=\left({x}_2\cos \phi -{x}_1\sin \phi \right)/\sqrt{\lambda_2} $$\end{document}</span>
+     <div id="M4" display="block" class="math">
+      <div class="msub">
+       <span class="mi">p</span>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">=</span>
+      <div close=")" open="(" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">cos</span>
+        <span mathvariant="italic" class="mi">ϕ</span>
+        <span class="mo">−</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mn">1</span>
+        </div>
+        <span class="mo">sin</span>
+        <span mathvariant="italic" class="mi">ϕ</span>
+       </div>
+      </div>
+      <span class="mo">/</span>
+      <div class="msqrt">
+       <div class="msub">
+        <span class="mi">λ</span>
+        <span class="mn">2</span>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="10584_2018_2341_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where the rotation angle 
+   <span class="italic">ϕ</span> and squared rescaling coefficient 
+   <span class="italic">λ</span>
+   <sub>1</sub>, 
+   <span class="italic">λ</span>
+   <sub>2</sub> are given by:
+   <div id="Equ3" class="disp-formula">
+    <span class="label">3</span>
+    <div class="alternatives">
+     <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \phi =\Big\{{\displaystyle \begin{array}{cc}\frac{1}{2}\operatorname{arccot}\left[\left(k-{k}^{-1}\right)/2\rho \right]&amp; :\rho &gt;0\\ {}\pi /2&amp; :\rho =0,0&lt;k&lt;1\\ {}0&amp; :\rho =0,k\ge 1\\ {}\frac{1}{2}\operatorname{arccot}\left[\left(k-{k}^{-1}\right)/2\rho \right]+\pi /2&amp; :\rho &lt;0\end{array}} $$\end{document}</span>
+     <div id="M6" display="block" class="math">
+      <span class="mi">ϕ</span>
+      <span class="mo">=</span>
+      <span stretchy="true" class="mo">{</span>
+      <div displaystyle="true" class="mtable">
+       <div class="mtr">
+        <div class="mtd">
+         <div class="mfrac">
+          <span class="mn">1</span>
+          <span class="mn">2</span>
+         </div>
+         <span class="mo">arccot</span>
+         <div close="]" open="[" class="mfenced">
+          <div class="mrow">
+           <div close=")" open="(" class="mfenced">
+            <div class="mrow">
+             <span class="mi">k</span>
+             <span class="mo">−</span>
+             <div class="msup">
+              <span class="mi">k</span>
+              <div class="mrow">
+               <span class="mo">−</span>
+               <span class="mn">1</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mo">/</span>
+           <span class="mn">2</span>
+           <span class="mi">ρ</span>
+          </div>
+         </div>
+        </div>
+        <div class="mtd">
+         <span class="mo">:</span>
+         <span class="mi">ρ</span>
+         <span class="mo">&gt;</span>
+         <span class="mn">0</span>
+        </div>
+       </div>
+       <div class="mtr">
+        <div class="mtd">
+         <span class="mi">π</span>
+         <span class="mo">/</span>
+         <span class="mn">2</span>
+        </div>
+        <div class="mtd">
+         <span class="mo">:</span>
+         <span class="mi">ρ</span>
+         <span class="mo">=</span>
+         <span class="mn">0</span>
+         <span class="mo">,</span>
+         <span class="mn">0</span>
+         <span class="mo">&lt;</span>
+         <span class="mi">k</span>
+         <span class="mo">&lt;</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <div class="mtr">
+        <div class="mtd">
+         <span class="mn">0</span>
+        </div>
+        <div class="mtd">
+         <span class="mo">:</span>
+         <span class="mi">ρ</span>
+         <span class="mo">=</span>
+         <span class="mn">0</span>
+         <span class="mo">,</span>
+         <span class="mi">k</span>
+         <span class="mo">≥</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <div class="mtr">
+        <div class="mtd">
+         <div class="mfrac">
+          <span class="mn">1</span>
+          <span class="mn">2</span>
+         </div>
+         <span class="mo">arccot</span>
+         <div close="]" open="[" class="mfenced">
+          <div class="mrow">
+           <div close=")" open="(" class="mfenced">
+            <div class="mrow">
+             <span class="mi">k</span>
+             <span class="mo">−</span>
+             <div class="msup">
+              <span class="mi">k</span>
+              <div class="mrow">
+               <span class="mo">−</span>
+               <span class="mn">1</span>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span class="mo">/</span>
+           <span class="mn">2</span>
+           <span class="mi">ρ</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mi">π</span>
+         <span class="mo">/</span>
+         <span class="mn">2</span>
+        </div>
+        <div class="mtd">
+         <span class="mo">:</span>
+         <span class="mi">ρ</span>
+         <span class="mo">&lt;</span>
+         <span class="mn">0</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="10584_2018_2341_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>and
+   <div id="Equ4" class="disp-formula">
+    <span class="label">4</span>
+    <div class="alternatives">
+     <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {\lambda}_1=\frac{1}{2}\left({\sigma}_1^2+{\sigma}_2^2+\mathcal{D}\right),{\lambda}_2=\frac{1}{2}\left({\sigma}_1^2+{\sigma}_2^2-\mathcal{D}\right),\mathcal{D}={\left[{\left({\sigma}_1^2-{\sigma}_2^2\right)}^2+4{\rho}^2{\sigma}_1^2{\sigma}_2^2\right]}^{1/2}. $$\end{document}</span>
+     <div id="M8" display="block" class="math">
+      <div class="msub">
+       <span class="mi">λ</span>
+       <span class="mn">1</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <span class="mn">2</span>
+      </div>
+      <div close=")" open="(" class="mfenced">
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mi">σ</span>
+         <span class="mn">1</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <span class="mi">σ</span>
+         <span class="mn">2</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <span mathvariant="script" class="mi">D</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <div class="msub">
+       <span class="mi">λ</span>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <span class="mn">2</span>
+      </div>
+      <div close=")" open="(" class="mfenced">
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mi">σ</span>
+         <span class="mn">1</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msubsup">
+         <span class="mi">σ</span>
+         <span class="mn">2</span>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">−</span>
+        <span mathvariant="script" class="mi">D</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <span mathvariant="script" class="mi">D</span>
+      <span class="mo">=</span>
+      <div class="msup">
+       <div close="]" open="[" class="mfenced">
+        <div class="mrow">
+         <div class="msup">
+          <div close=")" open="(" class="mfenced">
+           <div class="mrow">
+            <div class="msubsup">
+             <span class="mi">σ</span>
+             <span class="mn">1</span>
+             <span class="mn">2</span>
+            </div>
+            <span class="mo">−</span>
+            <div class="msubsup">
+             <span class="mi">σ</span>
+             <span class="mn">2</span>
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+          <span class="mn">2</span>
+         </div>
+         <span class="mo">+</span>
+         <span class="mn">4</span>
+         <div class="msup">
+          <span class="mi">ρ</span>
+          <span class="mn">2</span>
+         </div>
+         <div class="msubsup">
+          <span class="mi">σ</span>
+          <span class="mn">1</span>
+          <span class="mn">2</span>
+         </div>
+         <div class="msubsup">
+          <span class="mi">σ</span>
+          <span class="mn">2</span>
+          <span class="mn">2</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">1</span>
+        <span class="mo">/</span>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mo">.</span>
+     </div>
+     <div xlink:href="10584_2018_2341_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">In Eqs. (
+   <a rid="Equ3" ref-type="" href="#Equ3">3</a>)–(
+   <a rid="Equ4" ref-type="" href="#Equ4">4</a>), 
+   <span class="italic">k</span> = 
+   <span class="italic">σ</span>
+   <sub>1</sub>/
+   <span class="italic">σ</span>
+   <sub>2</sub> is the ratio of standard deviations σ
+   <sub>1</sub> and σ
+   <sub>2</sub> of 
+   <span class="italic">x</span>
+   <sub>1</sub> and 
+   <span class="italic">x</span>
+   <sub>2</sub>, respectively, and 
+   <span class="italic">ρ</span> is their correlation coefficient. Incidentally, 
+   <span class="italic">k</span> and 
+   <span class="italic">ρ</span> are the two non-dimensional parameters, characterizing the variance-covariance matrix of 
+   <span class="italic">x</span>
+   <sub>1</sub> and 
+   <span class="italic">x</span>
+   <sub>2</sub> up to a constant factor; to represent the same in terms of 
+   <span class="italic">p</span>
+   <sub>1</sub> and 
+   <span class="italic">p</span>
+   <sub>2</sub>, one such parameter is 
+   <span class="italic">ϕ</span>, while the relative value of either of 
+   <span class="italic">λ</span>
+   <sub>1</sub> or 
+   <span class="italic">λ</span>
+   <sub>2</sub> where 
+   <span class="italic">λ</span>
+   <sub>1</sub> &gt; 
+   <span class="italic">λ</span>
+   <sub>2</sub>, can be another:
+   <div id="Equ5" class="disp-formula">
+    <span class="label">5</span>
+    <div class="alternatives">
+     <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \frac{\lambda_2}{\lambda_1+{\lambda}_2}=\frac{1}{2}-\frac{1}{2}{\left[{\left(\frac{k-{k}^{-1}}{k+{k}^{-1}}\right)}^2+{\left(\frac{2\rho }{k+{k}^{-1}}\right)}^2\right]}^{1/2}. $$\end{document}</span>
+     <div id="M10" display="block" class="math">
+      <div class="mfrac">
+       <div class="msub">
+        <span class="mi">λ</span>
+        <span class="mn">2</span>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">λ</span>
+         <span class="mn">1</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <span class="mi">λ</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">−</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="msup">
+       <div class="mrow">
+        <span class="mo">[</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mi">k</span>
+            <span class="mo">−</span>
+            <div class="msup">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <div class="mrow">
+              <span class="mo">−</span>
+              <span class="mn">1</span>
+             </div>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">k</span>
+            <span class="mo">+</span>
+            <div class="msup">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <div class="mrow">
+              <span class="mo">−</span>
+              <span class="mn">1</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msup">
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mn">2</span>
+            <span class="mi">ρ</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">k</span>
+            <span class="mo">+</span>
+            <div class="msup">
+             <div class="mrow">
+              <span class="mi">k</span>
+             </div>
+             <div class="mrow">
+              <span class="mo">−</span>
+              <span class="mn">1</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+        <span class="mo">]</span>
+       </div>
+       <div class="mrow">
+        <span class="mn">1</span>
+        <div class="mrow">
+         <span class="mo">/</span>
+        </div>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mo">.</span>
+     </div>
+     <div xlink:href="10584_2018_2341_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">Derivation of Eqs. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>)–(
+   <a rid="Equ5" ref-type="" href="#Equ5">5</a>) is given in “
+   <a rid="Sec9" ref-type="sec" href="#Sec9">Singular Value Decomposition of a two-dimensional predictors’ space; derivation of Eqs. (1)–(5)</a>”.
+  </p>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">Figure 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a> illustrates these relationships in twentieth century observations (see the last row of Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a> for the values of relevant parameters). The observed values of the original predictors are the coordinates of the color triangles on the (
+   <span class="italic">x</span>
+   <sub>1</sub>, 
+   <span class="italic">x</span>
+   <sub>2</sub>) plane, with the corresponding standardized values of Sahel rainfall shown by color. The thick segments shown on the 
+   <span class="italic">x</span>
+   <sub>1</sub>, 
+   <span class="italic">x</span>
+   <sub>2</sub> axes indicate sample standard deviations, 
+   <span class="italic">σ</span>
+   <sub>1</sub> and 
+   <span class="italic">σ</span>
+   <sub>2</sub>, of these original predictors. Their values are approximately 0.20 and 0.23 °C, respectively, and their ratio is 
+   <span class="italic">k</span> = 
+   <span class="italic">σ</span>
+   <sub>1</sub>/
+   <span class="italic">σ</span>
+   <sub>2</sub> = 0.86. The correlation coefficient of the original predictors is 
+   <span class="italic">ρ</span> = 0.62. SVD-based predictors 
+   <span class="italic">p</span>
+   <sub>1</sub>, 
+   <span class="italic">p</span>
+   <sub>2</sub>, whose corresponding axes are shown by dash lines, are obtained by orthogonal rotation of the original predictors 
+   <span class="italic">x</span>
+   <sub>1</sub>, 
+   <span class="italic">x</span>
+   <sub>2</sub> with rotation angle about ϕ = 52°, indicated by the arc connecting the 
+   <span class="italic">x</span>
+   <sub>1</sub> and 
+   <span class="italic">p</span>
+   <sub>1</sub> axes. The thick segments on the 
+   <span class="italic">p</span>
+   <sub>1</sub> and 
+   <span class="italic">p</span>
+   <sub>2</sub> axes show standard deviations (in our notation, 
+   <span class="italic">λ</span>
+   <sub>1</sub>
+   <span class="sup">1/2</span> = 0.27 °C and 
+   <span class="italic">λ</span>
+   <sub>2</sub>
+   <span class="sup">1/2</span> = 0.13 °C) of the data projections on these axes. The variance of projections is maximized for 
+   <span class="italic">p</span>
+   <sub>1</sub>, among all possible directions on the 
+   <span class="italic">x</span>
+   <sub>1</sub>, 
+   <span class="italic">x</span>
+   <sub>2</sub> plane, therefore 
+   <span class="italic">λ</span>
+   <sub>1</sub> &gt; 
+   <span class="italic">λ</span>
+   <sub>2</sub>, necessarily. Also by construction, the in-sample correlation coefficient between 
+   <span class="italic">p</span>
+   <sub>1</sub> and 
+   <span class="italic">p</span>
+   <sub>2</sub> is zero; since there are only two predictors, 
+   <span class="italic">p</span>
+   <sub>2</sub>, being the “last” of them, minimizes the variance among all directions on the 
+   <span class="italic">x</span>
+   <sub>1</sub>, 
+   <span class="italic">x</span>
+   <sub>2</sub> plane. Therefore, 
+   <span class="italic">p</span>
+   <sub>2</sub> only explains 
+   <span class="italic">λ</span>
+   <sub>2</sub>/(
+   <span class="italic">λ</span>
+   <sub>1</sub> + 
+   <span class="italic">λ</span>
+   <sub>2</sub>) = 18.5% of variance in the sample (while 
+   <span class="italic">p</span>
+   <sub>1</sub> explains the other 81.5%). These features of the data and predictors’ pairs are illustrated by the shape of “concentration ellipses” (von Storch and Zwiers 
+   <a ref-type="bibr" rid="CR53" href="#CR53">1999</a>; see their example 2.8.12, p. 43). The 95% concentration ellipse is shown by the dotted line in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>; its major semiaxes are 2.45
+   <span class="italic">λ</span>
+   <sub>1</sub>
+   <span class="sup">1/2</span> and 2.45
+   <span class="italic">λ</span>
+   <sub>2</sub>
+   <span class="sup">1/2</span>. It should be noted that 
+   <span class="italic">λ</span>
+   <sub>1</sub> and 
+   <span class="italic">λ</span>
+   <sub>2</sub> do not necessarily determine the relative importance of the predictors 
+   <span class="italic">p</span>
+   <sub>1</sub> and 
+   <span class="italic">p</span>
+   <sub>2</sub> in modeling other variables: as color changes among triangles in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a> demonstrate, 
+   <span class="italic">p</span>
+   <sub>2</sub> is much more important than 
+   <span class="italic">p</span>
+   <sub>1</sub> in describing Sahel rainfall changes over 1901–1999. This is confirmed by the calculation of the regression coefficients in the last row of Table 
+   <a rid="Tab2" ref-type="table" href="#Tab2">2</a>.
+  </p>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">In models, since the ratio, 
+   <span class="italic">k</span>, of standard deviations of global tropical and sub-tropical North Atlantic SSTs is also close to 1 in the twentieth and twenty-first centuries, and the correlation coefficient of the SST indices, 
+   <span class="italic">ρ</span>, is positive (Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>), the angle 
+   <span class="italic">ϕ</span> in Eq. (
+   <a rid="Equ3" ref-type="" href="#Equ3">3</a>) is close to 45°. That the diagonal is the direction along which is expressed the greatest covariance between 
+   <span class="italic">x</span>
+   <sub>1</sub> = GT and 
+   <span class="italic">x</span>
+   <sub>2</sub> = NA can also be clearly seen in Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>. The remaining variance, orthogonal to it by construction, is larger in the twentieth (blue dots in Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>) than in the twenty-first century (red squares). Since sin
+   <span class="italic">ϕ</span> = cos
+   <span class="italic">ϕ</span> for 
+   <span class="italic">ϕ</span> = 45
+   <span class="sup">o</span>, 
+   <span class="italic">p</span>
+   <sub>1</sub> and 
+   <span class="italic">p</span>
+   <sub>2</sub>, respectively, in Eqs. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) and (
+   <a rid="Equ2" ref-type="" href="#Equ2">2</a>), become nearly proportional to the sum and difference of the original predictors, and specifically, 
+   <span class="italic">p</span>
+   <sub>2</sub> approximates NARI. The time series of 
+   <span class="italic">p</span>
+   <sub>1</sub> are depicted in the middle panels of Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>: indeed, 
+   <span class="italic">p</span>
+   <sub>
+    <span class="bold">1</span>
+   </sub> represents a “global warming” mode, evident in both sub-tropical North Atlantic and global tropical ocean temperatures. 
+   <span class="italic">p</span>
+   <sub>2</sub> (~NARI) explains more variance in the twentieth than in the twenty-first century. Its standardized form is depicted in the bottom panels of Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>. In the middle and bottom left-hand side panels, thick red lines represent the principal components in observations (Kaplan et al. 
+   <a ref-type="bibr" rid="CR31" href="#CR31">1998</a>).
+   <div id="Fig3" class="fig">
+    <span class="label">Fig. 3</span>
+    <div class="caption">
+     <p>Scatterplots of sub-tropical North Atlantic and global tropical ocean temperatures in 100 years of pre-Industrial control (
+      <span class="italic">green circles</span>), in the twentieth century/historical (
+      <span class="italic">blue dots</span>), and in the twenty-first century/RCP8.5 (
+      <span class="italic">red squares</span>) simulations. The first 29 panels correspond to single-model ensemble means, and the last panel (in the lower right corner) corresponds to the multi-model mean
+     </p>
+    </div>
+    <div xlink:href="10584_2018_2341_Fig3_HTML" id="MO3" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">Our original predictors, GT and NA, are highly correlated in the twentieth and twenty-first century simulations, less so in the pre-Industrial control simulations (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a> and Table 
+   <a rid="Tab1" ref-type="table" href="#Tab1">1</a>). As a consequence, the percent of variance explained by the leading mode, 
+   <span class="italic">λ</span>
+   <sub>1</sub> in Eq. (
+   <a rid="Equ4" ref-type="" href="#Equ4">4</a>), increases in the simulations with time-dependent external forcing, as compared to those with constant forcing. The correlation further increases from twentieth to twenty-first century and consequently so does the relative variance of the leading mode, 
+   <span class="italic">λ</span>
+   <sub>1</sub>/(
+   <span class="italic">λ</span>
+   <sub>1</sub> + 
+   <span class="italic">λ</span>
+   <sub>2</sub>) = 1 − 
+   <span class="italic">λ</span>
+   <sub>2</sub>/(
+   <span class="italic">λ</span>
+   <sub>1</sub> + 
+   <span class="italic">λ</span>
+   <sub>2</sub>), see Eq. (
+   <a rid="Equ5" ref-type="" href="#Equ5">5</a>). This behavior represents one prominent way in which external forcing expresses itself: it forces a positive correlation between the two predictors, through their common, GHG-induced warming. In addition, the relative cooling of the North Atlantic associated with aerosols contributes to the co-variability of indices with a second, preferred direction along which variance is expressed, which by construction is orthogonal to the first. This direction expresses more variance, visible in the scatter plots in Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>, in the twentieth (blue dots) than in the twenty-first century (red squares).
+  </p>
+ </sec>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Linear regressions of Sahel rainfall</div>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">Our SVD analysis of the original predictors confines any trend entirely to the leading mode time series, 
+   <span class="italic">p</span>
+   <sub>1</sub>, i.e., the “sum” or “warming” mode, while the residual mode, 
+   <span class="italic">p</span>
+   <sub>2</sub>, i.e., the “difference” or NARI, is completely devoid of any significant trend. We model standardized Sahel rainfall 
+   <span class="italic">y</span>, our predictand, by linear regression on 
+   <span class="italic">p</span>
+   <sub>1</sub> and 
+   <span class="italic">p</span>
+   <sub>2</sub> (see Section “
+   <a rid="Sec10" ref-type="sec" href="#Sec10">Use of time-dimensional singular vectors as predictors</a>” in the Appendix):
+   <div id="Equ6" class="disp-formula">
+    <span class="label">6</span>
+    <div class="alternatives">
+     <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{y}=a{p}_1+b{p}_2 $$\end{document}</span>
+     <div id="M12" display="block" class="math">
+      <div accent="true" class="mover">
+       <span class="mi">y</span>
+       <span stretchy="true" class="mo">^</span>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">a</span>
+      <div class="msub">
+       <span class="mi">p</span>
+       <span class="mn">1</span>
+      </div>
+      <span class="mo">+</span>
+      <span class="mi">b</span>
+      <div class="msub">
+       <span class="mi">p</span>
+       <span class="mn">2</span>
+      </div>
+     </div>
+     <div xlink:href="10584_2018_2341_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Regression coefficients 
+   <span class="italic">a</span> and 
+   <span class="italic">b</span> and the correlation coefficients between simulated and predicted Sahel rainfall for the multi-model mean and for observations are reported in Table 
+   <a rid="Tab2" ref-type="table" href="#Tab2">2</a>. Since the SVD-based predictor time series are standardized and mutually uncorrelated, and predictand time series are standardized, the regression coefficients, 
+   <span class="italic">a</span> and 
+   <span class="italic">b</span>, are precisely the correlation coefficients of the predictand and corresponding predictors. In the twentieth century, correlation of the multi-model mean simulation of Sahel rainfall with its SST-based regression is 0.574 and correlation in observations is 0.633. Both terms in the regression contribute, but 
+   <span class="italic">p</span>
+   <sub>2</sub> contributes more (since 
+   <span class="italic">b &gt; a</span>): late twentieth century Sahel drought is explained by the absence of North Atlantic warming, relative to warming of the global tropical oceans. The (positive) sign of 
+   <span class="italic">b</span>, the regression coefficient multiplying 
+   <span class="italic">p</span>
+   <sub>2</sub> (NARI), is consistent across centuries. However, its magnitude and explanatory power vis à vis Sahel rainfall are drastically diminished in the twenty-first century. Over the twenty-first century, the correlation between the simulated Sahel rainfall and its in-sample prediction is 0.801. The multi-model ensemble achieves this high a correlation essentially through a positive correlation between Sahel rainfall and warming, captured by 
+   <span class="italic">p</span>
+   <sub>1</sub>. This happens because the coherence among models in projections of twenty-first century precipitation change has increased considerably from CMIP3 to CMIP5 (Biasutti 
+   <a ref-type="bibr" rid="CR4" href="#CR4">2013</a>): a majority of models in CMIP5 project a future increase in Sahel rainfal to go along with warming (Schewe and Levermann 
+   <a ref-type="bibr" rid="CR46" href="#CR46">2017</a>), in analogy to paleoclimate reconstructions of the “Green Sahara”, when summer insolation was stronger than now (de Menocal et al. 
+   <a ref-type="bibr" rid="CR15" href="#CR15">2000</a>). Among the models with a twenty-first century correlation coefficient between 
+   <span class="italic">p</span>
+   <sub>1</sub> and Sahel rainfall larger than 0.45 (thus explaining ~ 20% of the variance with the single predictor 
+   <span class="italic">p</span>
+   <sub>1</sub>), seven of nine project future wetting (Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S3</a> in Supplementary Materials). In sum, regression models between centuries are nearly orthogonal: 
+   <span class="italic">p</span>
+   <sub>2</sub>, analogous to the difference of predictors or NARI, explains a larger fraction of twentieth century variation, while 
+   <span class="italic">p</span>
+   <sub>1</sub>, analogous to the sum of predictors or warming, alone explains the externally forced twenty-first century change.
+  </p>
+ </sec>
+</sec>

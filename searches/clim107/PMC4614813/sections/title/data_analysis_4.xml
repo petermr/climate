@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2c" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The sugar content per flower (micrograms) was calculated (volume per flower × concentration × density) with the density values taken from available sugar solution density tables (
+  <a rid="PLV111C5" ref-type="bibr" href="#PLV111C5">Dafni 
+   <span class="italic">et al</span>. 2005
+  </a>). In the very few cases (18/840 flowers of 
+  <span class="italic">B. acetabulosa</span> and 7/845 of 
+  <span class="italic">T. divaricatum</span>) when the collected nectar volume was too small for the refractometer to measure sugar concentration, the average value of sugar concentration of the other two flowers from the same plant was used, in order to be able to calculate sugar content per flower. For data analysis, we used the average values of the three sampled flowers per plant. Sugar content per plant was calculated by multiplying the average sugar content per flower with the number of flowers per plant produced on Day 3. The proportion of empty flowers per plant (i.e. producing no nectar) was also calculated based on the three flowers sampled for nectar. Proportion of empty flowers per plant was used in models only in the case of 
+  <span class="italic">B. acetabulosa</span>, because 
+  <span class="italic">T. divaricatum</span> produced only few nectarless flowers. We calculated the coefficient of variation (CV) for each of the measured flower traits (nectar volume, concentration, sugar content and biomass per flower) to characterize trait variation within a plant. In the case of sugar concentration per flower, the CV was determined based on the original data, prior to calculating the sugar concentration for the measurements with too small nectar volumes for direct sugar concentration detection. If the mean trait value of a plant was zero, the CV of the corresponding trait was also defined to be zero for that plant. Nectar volume per flower, sugar content per flower, sugar content per plant, number of flowers per plant and biomass per flower data were log-transformed and nectar sugar concentration per flower was logit-transformed to deal with the constraints of percentage data.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We tested for the possible differences between the original and replacement plants of 
+  <span class="italic">T. divaricatum</span> in their response to time, using linear mixed models (LMM) with interaction terms (‘time × replacement group’). There were no significant differences in the studied traits, except in sugar concentration per flower in the outdoor group (time
+  <span class="sup">2</span>× replacement group interaction, 
+  <span class="italic">t</span> = −2.013, 
+  <span class="italic">P</span> = 0.049). Similarity of response indicates that the replacement plants had similar response patterns to the original plants and that the two plant groups can be analysed together in order to identify the general response patterns.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Data analysis was carried out in three consecutive steps. First, we used LMM models to identify the effect of temperature on plant traits in the climate chamber, testing both linear and quadratic effect of temperature on the traits and using plant number (plant ID) as a random factor. Analysis of variance (ANOVA) was used to compare the fit of the linear and quadratic models, based on the AIC values. However, it is essential to note that in the climate chamber we could not truly separate the effect of temperature and time on plants, since the temperature was increased linearly with time.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Secondly, we used the outdoor data to discern the separate effect of temperature on plant traits independent of time, fitting LMM models with two crossed random factors (plant ID and time from the beginning of the experiment) on the outdoor data. Naturally, temperature outdoors increased with time throughout the study period from May to July (
+  <span class="italic">r</span> = 0.65, 
+  <span class="italic">P</span> = 0.009). However, this modelling approach enables us to separate the real effect of temperature on plant traits by taking into account the effect of time as a random factor.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">As a third step, we identified the possible differences in response to time between the plants manipulated in the climate chamber and the plants grown outdoors. In these models we defined treatment group (climate chamber or outdoor) as an explanatory variable and used ‘trait × group’ interaction for identifying differences between the groups. No difference in trait response between the groups would therefore indicate that the trends in the climate chamber could be explained by the effect of time and that the effect of temperature was negligible or at least not significant. If the interaction terms in the models are significant, then the difference between the climate chamber and outdoor group can be attributed to the effect of elevated temperatures in the climate chamber. We did not perform the third set of models for the trait variation (CV) data because the effect of temperature on these traits was negligible in the first two sets of models.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In order to compare the response to time between the climate chamber and outdoor treatment groups, which had a different experiment duration, we used standardized time (mean = 0, SD = 1) in the models. Although having a different duration, the time span corresponds to the same ecological period for plants in both test groups, since the plants were examined from the beginning of full bloom until the end of the flowering period both in the climate chamber and outdoors.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">All studied traits except the proportion of empty flowers per plant were modelled by following the description above. For modelling the proportion of empty flowers of 
+  <span class="italic">B. acetabulosa</span>, we followed a similar protocol, but used generalized linear mixed models (GLMM) with a negative binomial error distribution to account for the different distribution in the data. We also tested for the need to use zero-inflated models, but models with no zero-inflation parameter had a better fit (lower AIC values).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The analyses were conducted in R 3.1.1 (
+  <a rid="PLV111C36" ref-type="bibr" href="#PLV111C36">R Core Team 2014</a>). Linear mixed models were fitted using the function 
+  <span class="italic">lmer</span> in the 
+  <span class="italic">lme4</span> package (
+  <a rid="PLV111C2" ref-type="bibr" href="#PLV111C2">Bates 
+   <span class="italic">et al</span>. 2014
+  </a>), the GLMM models were built using the function 
+  <span class="italic">glmmadmb</span> in the package 
+  <span class="italic">glmmADMB</span> (
+  <a rid="PLV111C10" ref-type="bibr" href="#PLV111C10">Fournier 
+   <span class="italic">et al</span>. 2012
+  </a>; 
+  <a rid="PLV111C42" ref-type="bibr" href="#PLV111C42">Skaug 
+   <span class="italic">et al</span>. 2015
+  </a>). Additional 
+  <span class="italic">P</span>-values for the 
+  <span class="italic">t</span>-values in LMM models were calculated using the package 
+  <span class="italic">lmerTest</span> (
+  <a rid="PLV111C21" ref-type="bibr" href="#PLV111C21">Kuznetsova 
+   <span class="italic">et al</span>. 2014
+  </a>) and the conditional and marginal coefficients of determination (
+  <span class="italic">R</span>
+  <span class="sup">2</span>c and 
+  <span class="italic">R</span>
+  <span class="sup">2</span>m) for the LMM models were calculated with the function 
+  <span class="italic">r.squaredGLMM</span> in the package 
+  <span class="italic">MuMIn</span> (
+  <a rid="PLV111C1" ref-type="bibr" href="#PLV111C1">Barton 2015</a>). 
+  <span class="italic">R</span>
+  <span class="sup">2</span>c shows the model variance explained by both fixed and random factors, while 
+  <span class="italic">R</span>
+  <span class="sup">2</span>m represents the variance explained by fixed factors alone. Graphs were compiled using the function 
+  <span class="italic">ggplot</span> in the 
+  <span class="italic">ggplot2</span> package (
+  <a rid="PLV111C48" ref-type="bibr" href="#PLV111C48">Wickham 2009</a>) using a smoothing function to plot the relationships.
+ </p>
+</sec>

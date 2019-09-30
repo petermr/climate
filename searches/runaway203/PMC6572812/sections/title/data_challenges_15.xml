@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec16" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data challenges</div>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">At the data aggregation level, our generic examples demonstrate that a major challenge is to define and reconstruct the causally relevant variables that represent the subprocesses of interest (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 7). These variables have to be extracted from typically high-dimensional spatio-temporal gridded datasets (e.g., from satellite observations or model output) or station data measurements, which can be done by dimensionality reduction methods. Moreover, these extracted variables should be interpretable and represent physical subprocesses of the system.
+ </p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Often, relevant drivers cannot be measured, which requires to consider the possibility of unobserved variables (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 8) regarding a causal interpretation of the estimated graph, since they may render detected links spurious (see also Box 
+  <a rid="Sec8" ref-type="sec" href="#Sec8">1</a>). Arguably, identifying the absence of a causal link, implying that a physical mechanism is unlikely
+  <span class="sup">
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span>, is a more robust finding, which requires less strong assumptions (no Causal Sufficiency). Another aspect of Causal Sufficiency is that not taking into account important drivers, such as anthropogenic climate forcings, may render time series nonstationary. Time series pose a particular challenge regarding time-subsampling (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 9), which can also be considered as a case of unobserved samples of a variable, and time-aggregation (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 10) which can let causal dependencies appear contemporaneous or even cyclic. The standard GC cannot deal with contemporaneous links, which can be identified using network learning algorithms or SCMs (see also Box 
+  <a rid="Sec8" ref-type="sec" href="#Sec8">1</a>).
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">On the data quality side, satellites, as well as station instruments, are plagued by all kinds of measurement errors (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 11) such as observational noise, systematic biases, and also missing values (notably cloud occlusions or sensor malfunctioning). These may also be causally related to the measured process, constituting a form of selection bias (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 12).
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">While in Earth system sciences the data will often attain a continuous range of values (e.g., temperature), variables can also be of a discrete type (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 13), either due to quantization, or as categorical data. For example, one may be interested in causal drivers of an index representing different weather regimes or a time series of rarely occurring extreme events, which additionally raises the challenge of class imbalance—many 0 and few 1. Causal inference problems with such data require a suitable choice of methods, for example, conditional independence tests adapted to mixed data types. For paleo-climate data, the assumption of a time order is challenged since the measurement time points typically are given only with uncertainty (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>, point 14).
+ </p>
+</sec>

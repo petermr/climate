@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="methods" id="sec2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">METHODS</div>
+ <sec id="sec2-1" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sample collection</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Soil samples were collected across the Arctic region between April 2017 and September 2017, and the global positioning system (GPS) coordinates of each site were recorded with a portable GPS (Fig.   
+   <a ref-type="fig" rid="fig1" href="#fig1">1</a>). All sites were generally remote with limited human presence; however, in Iceland and Norway where tourist activities are frequent, we aimed to sample at least 500 m away from human-related activities. At each location, three to five soil samples were collected within 100 m
+   <span class="sup">2</span> under the most common vegetation, for a total of 200 independent Arctic samples across 43 sites, with the aim to cover the broadest geographical area possible. Despite the extent, it should be noted that large areas of Canada and Russia remain uncharacterized and under-represented, highlighting areas where sampling should be prioritized in the future. Approximately 150 g of soil per sample was collected from the top 15 cm, avoiding plant roots and rocks and using an ethanol-cleaned shovel and Whirl-Pak bags (Nasco, WI, USA). Remaining plant roots and rocks were removed manually in a class II microbiological safety cabinet; samples were homogenized by manual mixing and frozen at −20°C before transportation to the United Kingdom. Samples were conserved at –20°C until analyzed.
+  </p>
+  <div id="fig1" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 1.</span>
+   <div class="caption">
+    <p>Map of sampling sites within the Arctic Region, as characterized by the Arctic circle (black line), the 10°C isotherm (red) and the tree line boundary (green). 200 individual soil samples at 43 different sites were collected for this study, all within at least one of the definitions of the Arctic region.</p>
+   </div>
+   <div xlink:href="fiz128fig1" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec id="sec2-2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Soil properties</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We focused our investigation on environmental variables previously identified as influencing bacterial communities and included pH, conductivity, moisture and organic carbon. Moisture content was measured gravimetrically for each soil sample after drying at 150°C for 24 h and total organic carbon (TOC) was measured gravimetrically by heating previously dried soils to 550°C for 4 h. pH and conductivity were measured in the laboratory in a 1:5 freshly thawed soil to water ratio, using a Mettler-Toledo FE20 pH meter (Mettler-Toledo Instruments Co., Shanghai, China) and a CMD500 conductivity meter (WPA, Cambridge, UK).</p>
+ </sec>
+ <sec id="sec2-3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">DNA extraction</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Soil DNA was extracted for each sample using the PowerSoil kit (Qiagen, Hilden, Germany), for a total of 400 DNA extracts. Each sample was amplified by polymerase chain reaction (PCR) using the universal primers 515F-806R, as per the Schloss lab standard operating procedure (Kozich 
+   <span class="italic">et al</span>. 
+   <a rid="bib32" ref-type="bibr" href="#bib32">2013</a>) and the Earth Microbiome Project (Thompson 
+   <span class="italic">et al</span>. 
+   <a rid="bib64" ref-type="bibr" href="#bib64">2017</a>), under the following conditions: initial denaturation at 95°C for 2 min then 30 cycles of 20 s denaturation at 95°C; primer annealing at 55°C for 15 s; elongation at 72°C for 5 min and then a final elongation at 72°C for 10 min. Negative controls, DNA extraction kit controls and ZymoBIOMICS mock communities (Zymo Research, Irvine, CA, USA) were included alongside the soil DNA and sequenced. PCR amplicons were cleaned and normalized using SequalPrep Plate Normalization Kit (Invitrogen, Carlsbad, CA, USA) and combined into four pools. The fragment size in each pool was assessed using the BioAnalyzer hsDNA assay (Agilent technologies, Santa Clara, CA, USA) and the concentration was measured using the Qubit hsDNA kit (Invitrogen). The library was supplemented with 5% PhiX and loaded on an Illumina MiSeq V2 500 cycles cartridge (Illumina, San Diego, Ca, USA).
+  </p>
+ </sec>
+ <sec id="sec2-4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Illumina sequencing and data processing</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Raw amplicon sequences were demultiplexed with the associated barcodes. Cutadapt (Martin 
+   <a rid="bib41" ref-type="bibr" href="#bib41">2011</a>) was used for adaptor and primer clipping. Forward and reverse reads longer than 240 bp were merged (98% ± 0.8%/sample) using FLASH (fast length adjustment of short reads) (Magoč and Salzberg 
+   <a rid="bib38" ref-type="bibr" href="#bib38">2011</a>) for a total of 20 million reads (∼50 000 ± 30 000 reads/sample) initially. Vsearch (Rognes 
+   <span class="italic">et al</span>. 
+   <a rid="bib52" ref-type="bibr" href="#bib52">2016</a>) was used for downstream analyses. Quality filtering was carried out with an expected error &lt;1.5. Dereplication was performed to identify unique sequences. A two-step chimera detection method was used, first by aligning against ChimeraSlayer Gold database provided with SILVA (Pruesse 
+   <span class="italic">et al</span>. 
+   <a rid="bib51" ref-type="bibr" href="#bib51">2007</a>), second by using the 
+   <span class="italic">de novo</span> detection module in vsearch. 
+   <span class="italic">De novo</span> operational taxonomic unit (OTU) calling was performed on high-quality trimmed sequences at 97% similarity level using the USEARCH (Edgar 
+   <a rid="bib18" ref-type="bibr" href="#bib18">2010</a>) algorithm for clustering implemented in vsearch to generate OTUs. Unique chimera filtered sequences were aligned using the Python Nearest Alignment Space Termination (PyNAST) (Caporaso 
+   <span class="italic">et al</span>. 
+   <a rid="bib7" ref-type="bibr" href="#bib7">2009</a>) tool with a relaxed neighbor-joining tree built using FastTree (Price, Dehal and Arkin 
+   <a rid="bib50" ref-type="bibr" href="#bib50">2010</a>). The taxonomy was determined using the Classification Resources for Environmental Sequence Tags (CREST) (Lanzén 
+   <span class="italic">et al</span>. 
+   <a rid="bib33" ref-type="bibr" href="#bib33">2012</a>) classifier with a confidence threshold of 0.80 against SILVA release 128 as a reference database.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Samples less than at least 2000 reads/sample were filtered from the OTU table in order to have sufficient reads as described in Caporaso 
+   <span class="italic">et al</span>. (
+   <a rid="bib8" ref-type="bibr" href="#bib8">2011</a>). After filtering, 386 samples were used for the statistical analyses, corresponding to 386 DNA extracts from 200 independent samples and ∼19.5 million reads (50 609 ± 26 700 reads/sample) assigned against 48 147 OTUs.
+  </p>
+ </sec>
+ <sec sec-type="data-availability" id="sec2-5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The dataset is deposited at European Nucleotide Archive/SRA under the accession number PRJEB29109.</p>
+ </sec>
+ <sec id="sec2-6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All statistical analyses were performed with a combination of QIIME1 V 1.90 (Caporaso 
+   <span class="italic">et al</span>. 
+   <a rid="bib9" ref-type="bibr" href="#bib9">2010</a>) and the R environment (R Core Team 
+   <a rid="bib62" ref-type="bibr" href="#bib62">2013</a>). Multiple rarefactions were performed in QIIME with the smallest sample size as maximum depth. Alpha diversity (richness, Shannon and Simpson indices) were calculated in QIIME on the matrices resulting from the multiple rarefactions. The differences in alpha diversity indices were tested in QIIME using nonparametric (Monte-Carlo) tests across different pH categories with a Bonferroni correction.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The nonrarefied OTU table was normalized using cumulative-sum scaling (CSS) in QIIME (Paulson 
+   <span class="italic">et al</span>. 
+   <a rid="bib49" ref-type="bibr" href="#bib49">2013</a>). The resulting OTU table was input into R for subsequent analyses. Using the phyloseq package (McMurdie and Holmes 
+   <a rid="bib43" ref-type="bibr" href="#bib43">2013</a>), we calculated the Bray–Curtis dissimilarity distance and visualized the ordination using principal coordinate analysis (PCoA). Using the cmdscale, envfit and ordisurf functions in the vegan package (Dixon 
+   <a rid="bib15" ref-type="bibr" href="#bib15">2003</a>), we calculated and visualized the significant correlations between edaphic properties and bacterial community dissimilarity in relation to the pH gradient. Permutational multivariate analyses of variance (PerMANOVA) was conducted using the adonis function with 999 permutations. Pearson's correlation with 999 permutations was used to evaluate the collinearity of environmental variables.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To evaluate the spatial component, the geographic locations of the sampling sites were transformed into cartesian coordinates using the SoDA package (Chambers 
+   <a rid="bib11" ref-type="bibr" href="#bib11">2008</a>) and the euclidean distance was calculated using the vegan package. The presence of a linear trend was tested by redundancy discriminant analysis and ANOVA as prescribed in Borcard, Gillet and Legendre (
+   <a rid="bib4" ref-type="bibr" href="#bib4">2018</a>). A significant linear trend was identified, violating the second-order stationarity assumption where the mean of the variable and its spatial covariance are the same over the study area and its variance is finite. In other words, spatial correlation coefficients cannot be tested for significance if an overall trend is present in the data (Franklin and Mills 
+   <a rid="bib22" ref-type="bibr" href="#bib22">2007</a>; Borcard, Gillet and Legendre 
+   <a rid="bib4" ref-type="bibr" href="#bib4">2018</a>) and therefore, the data was detrended by linear regression of the 
+   <span class="italic">x</span>,
+   <span class="italic">y</span> coordinates. To carry meaningful spatial analysis, constructing spatial variables representing spatial structures at all relevant scales is necessary (Borcard, Gillet and Legendre 
+   <a rid="bib4" ref-type="bibr" href="#bib4">2018</a>). To do so, we used distance-based Moran's Eigenvector Maps (dbMEM) on detrended data and 
+   <span class="italic">x</span>,
+   <span class="italic">y</span> coordinates using the adespatial R package (Dray 
+   <span class="italic">et al</span>. 
+   <a rid="bib16" ref-type="bibr" href="#bib16">2017</a>). Significance of the spatial vectors was assessed using ANOVA. Forward selection was carried out to identify significant dbMEM vectors.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Variation partitioning analysis (VPA) was used to assess the impact of environmental and spatial factors on Bray–Curtis dissimilarity. The linear trend was considered to represent a source of variation like any other and therefore, we performed variation partitioning analysis using the environmental variables, 
+   <span class="italic">x</span>,
+   <span class="italic">y</span> coordinates (trend) and significant dbMEM vectors.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Generalist and specialist taxa were identified by selecting taxa present in over 95% of samples within each unique and overlapped pH category. Indicator taxa were determined by the Dufrene-Legendre indicator species analysis using the multipatt function (Cáceres and Legendre 
+   <a rid="bib6" ref-type="bibr" href="#bib6">2009</a>) to identify abundant OTUs that were specifically associated with the different pH ranges. The phylogenetic tree of indicator species was built using the aligned sequences from the identified indicator OTUs and input into FastTree. The tree was visualized using the Interactive Tree of Life (iTOL) online tool (Letunic and Bork 
+   <a rid="bib35" ref-type="bibr" href="#bib35">2016</a>).
+  </p>
+ </sec>
+</sec>

@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="sec" title="sec">
+      <div xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Summary of the modeling approach</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">Permafrost-region 21st-century soil carbon emissions are compared between two model
+            types using IPCC RCP4.5 and RCP8.5. Both models represent basic sets of permafrost
+            processes and have multiple soil organic carbon pools, but the models differ in their
+            complexity of how individual processes are described. While CLM4.5BGC
+            <span><a>7</a></span> simulates the full physical interactions between the atmosphere and the soil, including
+            vegetation uptake of CO
+            <sub>2</sub>, AThaw parameterizes soil thaw rates, depending on ground thermal properties, mean
+            annual ground temperatures, active layer depth, and magnitude of the regional warming
+            anomaly which drives permafrost degradation
+            <span><a>23</a></span>. In its current model design, CLM4.5BGC simulates gradual thaw in terrestrial uplands.
+            We utilized CLM4.5BGC emission data for years 1950–2100 partitioned according to non-permafrost
+            carbon, originating from present-day active layer horizons, and permafrost carbon,
+            which becomes thawed from the top down as active layer gradually deepens. In contrast,
+            the more simplistic, but therefore more flexible model design in AThaw also allows
+            for abrupt thaw under thermokarst lakes by tuning model parameters to simulated talik
+            growth rates of a physically-based thermokarst-lake model
+            <span><a>16</a></span>. Newly-formed thermokarst lakes and laterally-expanding lake margins are a large
+            net source of atmospheric CH
+            <sub>4</sub> and CO
+            <sub>2</sub>, in contrast to mature thermokarst-lake stages, where fluxes are lower (Supplementary
+            Tables 5 and 6). AThaw simulates only the carbon emissions from newly thawed sub-lake
+            sediments comprising contributions from expansion of thaw lakes present since 1850,
+            and from new lake initiation in response to warming after the year 1850. AThaw does
+            not simulate fluxes for older lake areas already present on the landscape at year
+            1850. Further, permafrost degradation in CLM4.5BGC is driven by spatially resolved
+            climatic forcing fields, while AThaw focuses on large-scale latitudinal climatic gradients.
+            In addition to differences in spatial resolution, CLM4.5BGC is more complete, simulating
+            a large set of climate variables which all determine surface vegetation and soil conditions,
+            while AThaw considers surface air temperatures only as the key driver for the net
+            balance of lake expansion versus drainage.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">AThaw model</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">AThaw is a conceptual model which projects carbon release from abrupt thaw by accounting
+            for the full chain of processes from formation of new thermokarst lakes under global
+            warming and talik deepening in sub-lake sediments to eventual carbon release to the
+            atmosphere following anaerobic microbial degradation of organic matter and CH
+            <sub>4</sub> oxidation. AThaw also accounts for lake drainage; although, carbon fluxes in drained
+            lake basins are not modeled
+            <span><a>24</a>,
+               <a>63</a>–
+               <a>65</a></span>. AThaw is incorporated into a multi-box permafrost-carbon release model which allocates
+            soil organic matter into latitudinally and vertically gridded boxes of differing conditions
+            regarding soil physics, carbon quantity and quality, and biogeochemistry
+            <span><a>23</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Briefly, AThaw model resolution consists of (a) 20 latitudinal bands, ranging from
+            45°N to 85°N with a 2° gridding, and of (b) 27 vertical soil layers corresponding
+            to layer thicknesses of 25 cm for the upper 4 m, and of 1 m thickness for the depth
+            range of 4–15 m. AThaw assumes typical soil organic matter residence times in permafrost
+            soils, which are determined by partitioning into passive, slow, and fast cycling carbon
+            pools with decomposition timescale parameters based on incubation experiments. Q
+            <sub>10</sub> temperature sensitivity is accounted for as well as CH
+            <sub>4</sub> oxidation [for details see Supplementary Table 
+            <a>1</a> and Schneider von Deimling et al.
+            <span><a>23</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">AThaw assumes that increasing Arctic temperatures will drive expansion of existing
+            lakes and new thermokarst-lake formation by melting of near-surface ground ice and
+            subsequent ground subsidence. This assumption is in line with Community Land Model
+            (CLM4.5) results from Lee et al.
+            <span><a>66</a></span>, whereby surface excess ice in permafrost soils of many regions will largely melt
+            by 2100 when subject to intense warming. AThaw assumes that comparatively small 19th
+            and 20th-century warming rates have initiated some formation of new but rather shallow
+            thermokarst lakes with likely winter-refreeze of lake bottom sediments. Start of abrupt
+            thaw (i.e., formation of sub-lake taliks) is only assumed to occur for stronger warming
+            starting in the 21st century and beyond. The evolution of newly-formed thermokarst
+            lakes is parameterized in AThaw by an optimum function which non-linearly scales the
+            latitudinal thermokarst lake area fraction by the surface air temperature anomaly
+            <span><a>23</a></span> (Supplementary Figs 4 and 5). The lake formation scheme models an increase of newly-formed
+            thermokarst-lake areas with temperature until a maximum extent [F
+            <span>TKLmax</span> (~8 to ~40% increase, depending on soil type)], is reached under a temperature optimum
+            dT′
+            <span>TKLmax</span>. The temperature optimum corresponds to high-latitude surface air temperatures 4–6 °C
+            above pre-industrial; warming above this optimum shifts 21st century lake dynamics
+            toward net drainage. Such responses of thermokarst lake formation to temperature increases
+            are not unprecedented, given that the early Holocene Arctic temperature increase of
+            1.6 °C
+            <span><a>37</a></span> resulted in a 570% increase in thermokarst-lake formation rates
+            <span><a>24</a></span>. AThaw-projected increases in lake area are lower for 2010–2100 compared to the early-Holocene
+            observational record, because permafrost soils are now more protected from warming
+            and thawing by thick organic soil surfaces
+            <span><a>67</a></span> and less likely to form large lakes compared to the less dissected early Holocene
+            periglacial landscape
+            <span><a>52</a></span>.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Temperature-driven thermokarst lake dynamics</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">Rather than simulating individual lake life cycles of formation, expansion, drainage,
+            and re-initiation of later generation lakes (e.g., ref. 
+            <span><a>43</a></span>), AThaw quantifies the net effect of new lake formation and drainage in modelled
+            lake areas (F
+            <span>TKL</span>). We capture a wide range of uncertainty in net lake formation and drainage trajectories
+            by varying two key model parameters: The maximum net lake area, F
+            <span>TKLmax</span>, and the optimum high latitude surface temperature increase, dT′
+            <span>TKLmax</span> (Supplementary Fig. 
+            <a>5</a>). Model parameters for the maximum lake area extent (F
+            <span>TKLmax</span>) were chosen individually for the four AThaw soil classes to capture expected differences
+            in the potential for future lake development (see Methane and CO
+            <sub>2</sub> in newly-formed thermokarst lakes). However, the parameter that most strongly controls
+            the dynamics of thermokarst lake formation and drainage is the temperature optimum,
+            dT′
+            <span>TKLmax</span>, the temperature at which the maximum lake area occurs. We prescribed a mean estimate
+            of 5 °C for dT′
+            <span>TKLmax</span> (i.e., high latitude surface air warming above pre-industrial) and consider a full
+            range of 4–6 °C in our model ensemble. This parameter choice is based on paleoenvironmental
+            evidence of Early Holocene warming by a few degrees Celsius in Northern Hemisphere
+            land areas
+            <span><a>37</a>,
+               <a>68</a>,
+               <a>69</a></span> which resulted in rapid and intensive thermokarst activity
+            <span><a>24</a>,
+               <a>29</a>,
+               <a>70</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">This range of dT′
+            <span>TKLmax</span> values was also chosen to capture the sensitivity of future surface ice-wedge melt
+            to climate warming, since ice-wedge melt is a critical step in thermokarst lake formation
+            and drainage. Increases in permafrost temperature, which typically mirror increases
+            in air temperature, have been observed in many Arctic regions, with warming of up
+            to 3 °C since the 1970’s in some of the coldest permafrost regions
+            <span><a>3</a>,
+               <a>38</a>,
+               <a>71</a></span>. Permafrost warming is often accompanied by active layer deepening and increased
+            ground-ice melt. Widespread surficial degradation of ice wedges and a significant
+            increase in areas of water-filled polygonal troughs has been linked to climatic warming
+            during the past few decades in northern Alaska, the Canadian Arctic Archipelago, and
+            Siberia
+            <span><a>14</a>,
+               <a>15</a>,
+               <a>41</a></span>. Additional permafrost warming on the order of 2–3 °C anticipated by 2050 for RCP4.5
+            and RCP8.5
+            <span><a>49</a></span>, is expected to intensify permafrost and surface ice wedge degradation
+            <span><a>66</a></span>, enhancing thermokarst. For RCP4.5, permafrost warming slows beyond 2050
+            <span><a>49</a></span>, supporting AThaw ensembles of lower net thermokarst lake formation during the latter
+            part of the century (Supplementary Figs 4 and 5). In contrast, extreme warming after
+            2050 for RCP8.5 is expected to heavily degrade permafrost, such that near-surface
+            permafrost disappears entirely from many arctic regions
+            <span><a>49</a></span>. These conditions lend support to AThaw parameterization, which leads to net lake
+            drainage in the later part of the century for RCP8.5.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">In AThaw, warming above the temperature optimum in the 21st century is assumed to
+            lead to a reduction in AThaw lake area due to increasing lake drainage
+            <span><a>23</a>,
+               <a>43</a>,
+               <a>45</a></span>, until a prescribed minimum fraction F
+            <span>TKLmin</span> remains. The minimum fraction of the landscape still covered by newly formed lakes,
+            decreases from north to south
+            <span><a>23</a></span>. In northern, continuous permafrost regions, lakes in AThaw are prescribed to drain
+            laterally as melting of the ice-wedge network in the surface surrounding lakes can
+            create drainage pathways
+            <span><a>52</a></span>. Other mechanisms of lake drainage include bank overtopping, headward gully erosion
+            towards a lake; and tapping of lakes by streams, rivers, or other water bodies
+            <span><a>36</a></span>. Higher drainage potential in southern, discontinuous permafrost regions also encompasses
+            internal drainage of lake water through open taliks that penetrate thin permafrost
+            in groundwater recharge settings
+            <span><a>54</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">While the 4–6 °C dT′
+            <span>TKLmax</span> range used in our modeling was prescribed based on paleoenvironmental evidence, historical
+            observations, and modeling of future permafrost dynamics, we can consider the implications
+            of using smaller or larger dT′
+            <span>TKLmax</span> values. Smaller dT′
+            <span>TKLmax</span> values would imply that the maximum area of thermokarst lake coverage would occur
+            earlier in the century. This would result in a relatively larger AThaw increase to
+            the PCF earlier in the 21st century and a lower AThaw contribution to PCF toward the
+            end of the century due to more widespread drainage. If dT′
+            <span>TKLmax</span> aligned more closely with the range of simulated high latitude warming inferred from
+            higher concentration pathways (e.g., dT′
+            <span>TKLmax</span> &gt; 6 °C), we would expect maximum thermokarst lake coverage (i.e., F
+            <span>TKLmax</span>) to occur later in the century, less drainage of AThaw lakes during the 21st century,
+            and a larger relative contribution of AThaw to end-of-the century PCF under stronger
+            future warming.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">It is interesting to note that that while thermokarst-lake initiation and drainage
+            rates are linked to climate, thermokarst-lake growth—the long process between initiation
+            and drainage that results in most of the carbon release—has dynamics (e.g., talik
+            growth, shore expansion) that once started become rather decoupled from climate due
+            to strong linkage with local factors such as ground ice content and ice-layer thickness
+            <span><a>72</a>–
+               <a>75</a></span>. Hence, thermokarst lakes are found across the entire range of Arctic climatic zones
+            and permafrost temperatures as long as there is sufficient ground ice
+            <span><a>36</a>,
+               <a>76</a>,
+               <a>77</a></span>. A thermokarst lake on the New Siberian Islands has the same potential to release
+            carbon as a thermokarst lake in Central Yakutia; the differences are largely not determined
+            by climate (or RCP conditions) but by local conditions such as permafrost soil carbon
+            and ground ice contents. Hence, either RCP scenario will result in more lakes (earlier
+            or later) and both scenarios will have a similar emission magnitude linked to maximum
+            lake areas, but relative to anthropogenic emissions, the thermokarst lake emissions
+            from RCP4.5 will be more relevant.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Factors other than temperature that are not included in AThaw, but which can also
+            affect thermokarst lake dynamics include natural and anthropogenic surface disturbance,
+            precipitation changes, and local topography
+            <span><a>43</a></span>. However, since CMIP5 models consistently predict a moistening trend in the Arctic
+            (i.e., an increase in precipitation relative to evapotranspiration)
+            <span><a>51</a></span>, an explicit accounting for predicted 21st-century precipitation and evaporation
+            trends would reinforce rather than weaken the AThaw lake dynamics driven by temperature
+            changes alone.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Methane and CO
+            <sub>2</sub> in newly-formed thermokarst lakes
+            
+         </div>
+         <p xmlns="http://www.w3.org/1999/xhtml">AThaw simulates pan-Arctic CH
+            <sub>4</sub> (CH
+            <sub>4TKL</sub>) and CO
+            <sub>2</sub> (CO
+            <sub>2TKL</sub>) release from thermokarst lakes proportional to the amount of newly-thawed carbon
+            that becomes vulnerable to microbial decomposition. The volume of this newly-thawed
+            carbon expands vertically by talik growth in sub-lake sediments and horizontally by
+            increases in the extent to which thermokarst lakes cover the landscape. Here we discuss
+            how these two processes, vertical and horizontal growth, are captured in AThaw and
+            how they compare to other modeling studies and observational evidence.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">First, AThaw simulates vertical talik growth rates beneath lakes as a function of
+            atmospheric temperature anomalies, which in turn determine lake bottom temperatures
+            and ultimately drive sub-lake sediment warming. Thaw rates are assumed to depend on
+            soil ice contents, mean ground temperature, depth of the thaw front, and are tuned
+            to reproduce talik deepening simulated by Kessler et al.
+            <span><a>16</a></span>. For instance, AThaw simulates typical talik depth beneath lakes of 11 m (7.8–13.4 m,
+            68% uncertainty range; 20 m max) in warm permafrost environments (i.e., mean annual
+            soil temperatures close to 0 °C) with mineral soils by the year 2050 under RCP8.5.
+            Our helicopter-borne electromagnetic measurements of sites with comparable climatic
+            and soil conditions (i.e., relatively warm permafrost temperatures between −3 and
+            −1°C) (Supplementary Information) have inferred lake talik growth of 8–15 m in &lt; 50
+            years (Supplementary Fig. 
+            <a>7</a>). It should be noted that advective heat transport by groundwater can accelerate
+            vertical thaw; maximum reported thaw rates are up to a meter per year
+            <span><a>78</a>,
+               <a>79</a></span>. When accounting for the effect of ground subsidence in a modeling context, Westermann
+            et al.
+            <span><a>79</a></span> suggest that several meters of ground ice can be removed in less than a decade. The
+            authors simulated a talik growth of 15 m by 2100 under RCP8.5 for a site characterized
+            by yedoma ice complex in cold, continuous permafrost. In contrast, AThaw simulates
+            6 m (4–8 m, 68% range) talik depth under comparable climatic conditions by end of
+            the century. Therefore, given modeling and observational evidence, we consider that
+            the thaw rates in sub-lake sediments simulated by AThaw are relatively conservative.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">A second key AThaw model assumption concerns simulated thermokarst-lake expansion
+            in a warmer climate. Central to this aspect is the question to which extent newly-formed
+            thermokarst lakes will cover degrading permafrost landscapes in a warmer climate.
+            AThaw assumes that future thermokarst-lake formation will strongly depend on soil
+            conditions (e.g., ice content) and landscape morphology. Therefore, the model assumes
+            different maximum lake formation extents for four different ice-rich soil type distributions
+            in the permafrost region of the Arctic: mineral soil (Orthels and Turbels), organic
+            soils (Histels), undisturbed yedoma, and refrozen thermokarst deposits in the yedoma
+            region (Supplementary Table 
+            <a>1</a>, Supplementary Figs 4 and 5). Orthels, Turbels and Histels follow the Northern Circumpolar
+            Soil Carbon Database (NCSCD)
+            <span><a>80</a></span>, while undisturbed yedoma and refrozen thermokarst deposits in the Pleistocene-aged
+            ice-rich yedoma soil region are distinguished according to Strauss et al.
+            <span><a>81</a></span> and Walter Anthony et al.
+            <span><a>24</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">For mineral soils, AThaw assumes that newly-formed lakes can degrade a maximum fraction
+            F
+            <span>TKLmax</span> of 7% (4–9%, 68% range; Supplementary Fig. 
+            <a>4</a>) of the landscape. Given the large-scale dominance of mineral soils in the permafrost
+            region soil carbon inventory (540 Pg C, NCSCD)
+            <span><a>80</a></span>, this soil class contributes significantly to cumulative pan-arctic CH
+            <sub>4TKL</sub> (at year 2100, 46% for RCP8.5, 28% for RCP4.5). Organic soils (120 Pg C, NCSCD)
+            <span><a>80</a></span> are typically richer in ground ice than mineral soils and therefore AThaw assumes
+            a factor two larger potential for the formation of new thermokarst lakes [F
+            <span>TKLmax</span> of 14% (10–17%, 68% range; Supplementary Fig. 
+            <a>4</a>)]. This soil type contributes 17% for RCP8.5 and 14% for RCP4.5 to cumulative pan-arctic
+            CH
+            <sub>4TKL</sub>. AThaw explicitly accounts for ice- and organic-rich soils in yedoma regions, separated
+            into undisturbed yedoma landscapes (80 Pg C)
+            <span><a>81</a></span> and drained lake basins in the yedoma region that subsequently formed permafrost
+            following lake drainage (refrozen thermokarst; 240 Pg C)
+            <span><a>24</a>,
+               <a>81</a></span>. Given the high ice contents of these yedoma-region soils
+            <span><a>81</a>–
+               <a>83</a></span>, both soil classes are assigned a high potential for the formation of new thermokarst
+            lakes once rising temperatures have resulted in ground subsidence. Given the high
+            volumetric ice contents of refrozen drained thermokarst lake basins (&gt; 50%)
+            <span><a>81</a>,
+               <a>83</a></span> in conjunction with its basin-type geomorphology, which favors water ponding
+            <span><a>16</a></span>, AThaw assumes a maximum F
+            <span>TKLmax</span> of 21% (11–27%, 68% range; Supplementary Fig. 
+            <a>4</a>). Refrozen thermokarst basins in the yedoma region cover only about 4% of the permafrost
+            domain of the Arctic, but they contribute 28% under RCP8.5 (38% under RCP4.5) to cumulative
+            pan-arctic CH
+            <sub>4TKL</sub> by 2100. The highest potential for new-lake formation is assumed for unaltered ice-rich
+            yedoma soils, where volumetric segregated ice content is typically 47–53% and high
+            wedge-ice volumes (~40%) further increase permafrost ice concentration
+            <span><a>81</a></span>. Here AThaw assumes a F
+            <span>TKLmax</span> of 33% (16–42%, 68% range; Supplementary Fig. 
+            <a>4</a>). Considering that thermokarst activity in ice-rich regions had degraded about 80%
+            of the landscape in specific regions during the Holocene
+            <span><a>24</a>,
+               <a>81</a>,
+               <a>84</a></span>, we consider a factor two reduced lake-forming potential plausible, especially under
+            the assumption of strong future warming. While undisturbed yedoma landscapes constitute
+            our carbon pool with the smallest areal extent (covering 0.41 million km
+            <span>2</span>, 2% of the permafrost domain)
+            <span><a>81</a></span>, they contribute 9% under RCP8.5 (20% under RCP4.5) to cumulated pan-arctic CH
+            <sub>4TKL</sub> by 2100, revealing the importance of carbon release from deep deposits beneath abruptly-formed
+            yedoma thermokarst lakes.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">We derived estimates of present-day abrupt-thaw emissions from AThaw and independently
+            from upscaling observations. The estimated emission range from AThaw [20 (7–49) Tg C-CO
+            <sub>2</sub>e yr
+            <span>−1</span>] represents the median and 68% uncertainty range for years 2011–2017 (Supplementary
+            Data 
+            <a>1</a>). The observation-based estimate (19–58 Tg C-CO
+            <sub>2</sub>e yr
+            <span>−1</span>) was derived by upscaling observed lake carbon fluxes from abrupt-thaw features (Fig. 
+            <a>2b</a>) to the extent of observed gross lake expansion areas (5–15%) among pan-arctic regions
+            during the past 60 years
+            <span><a>21</a></span>. This range of gross lake expansion is comparable to our observation of gross lake-area
+            increase in northern and western Alaska (i.e., 1999–2014, 1.1–1.7% gross lake area
+            increase upscaled to 5–7% assuming similar expansion/formation rates over the past
+            60 years; Supplementary Table 
+            <a>3</a>, Fig. 
+            <a>3</a>). We acknowledge that present-day emissions associated with abrupt thaw may be conservative
+            since gross lake-area increases in some regions are higher (e.g., &gt; 50% in Quebec
+            <span><a>85</a></span> and &gt; 23% in West Siberia
+            <span><a>86</a></span>), potentially due to hydrological changes in addition to permafrost thaw.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">The formation/expansion of new thermokarst-lake areas and subsequent sub-lake talik
+            growth is not the only mechanism of abrupt permafrost degradation making newly thawed
+            permafrost carbon available for microbial decomposition. Further contribution comes
+            from talik growth of present-day lakes which have not yet formed a deep talik and
+            still store large amounts of labile carbon in sub-lake sediments. For instance, on
+            the Alaska North Slope, Arp et al.
+            <span><a>17</a></span> demonstrated that a rapid decrease in lake-ice thickness and duration has already
+            led to many shallow lakes transitioning from bed-ice fast lakes underlain by permafrost
+            to floating ice lakes that have started to develop taliks. This talik formation takes
+            place about 70 years before talik formation is projected for the adjacent terrestrial
+            environment by top-down permafrost models in this cold continuous permafrost zone,
+            a feedback process also not accounted for in AThaw or other models of permafrost degradation.
+            These and other non-lake modes of abrupt thaw
+            <span><a>13</a></span>, including coastal and river erosion, thermoerosional gully formation, thaw slumps,
+            collapse of permafrost peat plateaus, and talik formation in upland terrestrial environments,
+            which may occur sooner than predicted by large-scale models when finer resolution
+            soil and vegetation properties are taken into account
+            <span><a>49</a></span>, are not explicitly accounted for in the AThaw model description; hence, we consider
+            our assumed F
+            <span>TKLmax</span> values a conservative estimate of the abrupt thaw extent in the 21st century.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Uncertainty</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">Uncertainty in AThaw modeled carbon fluxes is based on independent sampling of a set
+            of 18 key model parameters which are subject to either observational or to model description
+            uncertainty
+            <span><a>23</a></span> (Supplementary Table 
+            <a>1</a>). For each warming scenario (RCP4.5 and RCP8.5), 500 ensemble runs were performed
+            by applying a statistical Monte Carlo sampling and by assuming uniformity and independence
+            in the distributions of model parameters and initial values. AThaw results are presented
+            as the median and 68% uncertainty range. We acknowledge that our ability to accurately
+            quantify uncertainties is limited given the use of this single model and its assumptions
+            in a highly complex and large system.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Double counting</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">To avoid double counting CLM4.5BGC emissions from land areas that become thermokarst
+            lakes in AThaw, and to account only for the increase in emissions and CPCRE caused
+            by abrupt thaw, we have subtracted from the AThaw emissions and CPCRE, in our total
+            permafrost landscape calculations, the quantity of carbon emissions and associated
+            radiative forcing already assumed to be emitted from those land surfaces from CLM4.5BGC.
+            We used the AThaw thermokarst-lake area fraction at each time step for each of the
+            four soil classes (Supplementary Fig. 
+            <a>4</a>) and weighted those fractions by the areal extent of the soil classes according to
+            Hugelius et al.
+            <span><a>80</a></span> and Strauss et al.
+            <span><a>81</a></span> based on the implicit assumption of homogenous soil carbon distribution within each
+            of the soil classes. Our calculations consider that this fraction of the land surface,
+            subject to gradual thaw in CLM4.5BGC, undergoes abrupt thaw instead.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Additional methods</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">We calculated the radiative forcing due to atmospheric perturbations in CH
+            <sub>4</sub> and CO
+            <sub>2</sub> concentration for CLM and AThaw permafrost-soil-carbon flux trajectories following
+            Frolking &amp; Roulet
+            <span><a>87</a></span> (Supplementary Methods). Methodology underlying our remote-sensing based quantification
+            of abrupt thaw in Alaska and field-based estimates of carbon emissions from abruptly-formed
+            thermokarst areas of lakes in Alaska and Siberia are also provided in Supplementary
+            Methods. Field and lab measurements include bubble-trap observations of ebullition
+            fluxes, aerial and ground-based ebullition seep-mapping, and quantification of CH
+            <sub>4</sub> and CO
+            <sub>2</sub> concentrations and radiocarbon dating.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Statistics</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">To test differences between gradual thaw and abrupt thaw net ecosystem exchange (Fig. 
+            <a>2b</a>) we used the two-sided Kolmogorov-Smirnov test. We used this test also to compare
+            radiocarbon ages of permafrost soil carbon respiration in gradual thaw versus abrupt thaw
+            environments (Fig. 
+            <a>2c</a>) Radiocarbon statistical analysis was performed on percent modern carbon data. All
+            statistical analyses were performed in R
+            <span><a>88</a></span>.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">CLM data are publicly available at the National Energy Research Scientific Computing
+            Center archive (
+            <span>https://www.portal.nersc.gov/archive/home/c/cdkoven/www/clm45_permafrostsims/permafrostRCN_modeldata</span>). AThaw data and calculated radiative forcing for CLM and AThaw fluxes presented
+            in this study are available within the article’s supplementary information file (Supplementary
+            Data 
+            <a>1</a>). Radiocarbon data are provided in Supplementary Data 
+            <a>2</a>. All other data that support the findings of this study are available from the corresponding
+            author (K.M.W.A.) upon request.
+            
+         </p>
+      </div>
+   </div>
+</html>

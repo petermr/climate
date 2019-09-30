@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Limitations of the approach</div>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Whilst our results have demonstrated the potential application of ANNs for estimating future landscape sensitivity, it is essential to equally understand the limitations of the method used. Out-of-sample predicting is the main limitation for the approach outlined here; this is the likely inability to provide accurate forecasts when models are trained on a limited or non-analogous dataset. The unique set of input conditions found at site B is not replicated at any of the other 5 sites, and without another set of comparable data to train from, the predicted output is beyond the limited conditions represented in the training dataset (e.g. Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a> site B). In this study, we have attempted to reduce such errors in expanding the dataset by training across multiple study sites. As in all inferential methods, a larger dataset that encompasses more drought cycles would improve the training (and therefore the predictable capabilities) further. An inherent weakness of data-informed models in this context is that under future climate change, if forcing conditions (or combinations of conditions) stray significantly far from past experience (significantly ‘non-analogous’), supervised models may no longer be able to accurately predict future landscape responses.
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Another difficulty using this method is associated with identifying what the relative peaks and troughs in the simulated outputs represent. As mentioned earlier, the network has been trained on a luminescence-dated target dataset which provides a continuous estimate of the probability of identifying a luminescence age (i.e. episode of deposition) in the sedimentary record. However, ascertaining what peaks in the simulation output correspond with a deposition ‘event’ in the profile is dependent on where the relative baseline associated with stability is positioned (i.e. are all periods with scores &gt;0 indicative of sediment mobilisation episodes?). In this study, the network has been trained on definitively identified episodes of sediment deposition, not periods of known stability (see Methods). A series of erosional filters gradually remove evidence of historic reactivation events from the sedimentary system
+  <span class="sup">
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>. As such, our target dataset does not provide evidence for all deposition events, but more importantly, it does not provide definitive evidence of periods of stability. There is a distinct difference between an absence of evidence and an evidence of absence, but this is not resolved in the depositional record. A baseline at zero therefore, to represent no likelihood of identifying a deposition event in the forecasted plots, is incorrect and thus events are inferred as the most prominent relative peaks in the deposition event profile as opposed to those that are identified above a set threshold, or those that are representative of extreme model runs (see Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>).
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">The relatively large error margins associated with dated episodes of deposition (see Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>) further compound the difficulty in identifying specific deposition events and associated conditions. This is problematic for the network training as input conditions over large windows are considered to be inducing a short-lived sediment reactivation event that is characterised by large uncertainties (Fig. 
+  <a rid="Fig6" ref-type="fig" href="#Fig6">6</a>). Conditions that are therefore reflective of landscape stability may falsely be associated with identified periods of deposition. Since the model has trained against a dataset that has already undergone a series of natural filters
+  <span class="sup">
+   <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+  </span>, the simulated outcome does not necessarily depict every deposition event. Additional known point-in-time observations taken from historical aerial imagery, oral records, agricultural reports would improve the resolution of the training.
+  <div id="Fig6" class="fig">
+   <span class="label">Figure 6</span>
+   <div class="caption">
+    <p>Schematic figure demonstrating how the wide training window of activity as defined by the target dataset (solid line) forces the model to train the equivalent period of input datasets (dashed line) to that target – even if the true ‘disturbance’ was only a short-lived event.</p>
+   </div>
+   <div xlink:href="41598_2019_40429_Fig6_HTML" id="d29e771" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+</sec>

@@ -1,0 +1,1014 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//Springer-Verlag//DTD A++ V2.4//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName A++V2.4.dtd?><?SourceDTD.Version 2.4?><?ConverterInfo.XSLTName springer2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Nat Commun</journal-id><journal-id journal-id-type="iso-abbrev">Nat Commun</journal-id><journal-title-group><journal-title>Nature Communications</journal-title></journal-title-group><issn pub-type="epub">2041-1723</issn><publisher><publisher-name>Nature Publishing Group UK</publisher-name><publisher-loc>London</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6744453</article-id><article-id pub-id-type="publisher-id">11975</article-id><article-id pub-id-type="doi">10.1038/s41467-019-11975-3</article-id><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>On the warm bias in atmospheric reanalyses induced by the missing snow over Arctic sea-ice</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-0756-2295</contrib-id><name><surname>Batrak</surname><given-names>Yurii</given-names></name><xref ref-type="aff" rid="Aff1"/></contrib><contrib contrib-type="author" corresp="yes"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-2871-8359</contrib-id><name><surname>M&#x000fc;ller</surname><given-names>Malte</given-names></name><address><email>maltem@met.no</email></address><xref ref-type="aff" rid="Aff1"/></contrib><aff id="Aff1"><institution-wrap><institution-id institution-id-type="ISNI">0000 0001 0226 1499</institution-id><institution-id institution-id-type="GRID">grid.82418.37</institution-id><institution>Development Centre for Weather Forecasting, </institution><institution>Norwegian Meteorological Institute, </institution></institution-wrap>Henrik Mohns Plass 1, 0313 Oslo, Norway </aff></contrib-group><pub-date pub-type="epub"><day>13</day><month>9</month><year>2019</year></pub-date><pub-date pub-type="pmc-release"><day>13</day><month>9</month><year>2019</year></pub-date><pub-date pub-type="collection"><year>2019</year></pub-date><volume>10</volume><elocation-id>4170</elocation-id><history><date date-type="received"><day>4</day><month>3</month><year>2019</year></date><date date-type="accepted"><day>13</day><month>8</month><year>2019</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2019</copyright-statement><license license-type="OpenAccess"><license-p><bold>Open Access</bold> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article&#x02019;s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article&#x02019;s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>.</license-p></license></permissions><abstract id="Abs1"><p id="Par1">Over the past decades, the Arctic has been warming more than any other region in the world with profound socio-economic consequences. One of the key elements for understanding this rapid climate change is the surface energy budget. However, in the Arctic this budget is not consistently described across the various climate models, reanalyses and observation products. Recognising the physical causes of these inconsistencies is highly relevant for improving climate predictions and projections. Here we show that a 5 to 10&#x02009;&#x000b0;C warm bias of the sea-ice surface temperature in global atmospheric reanalyses and weather forecasts is mainly caused by a missing representation of the snow layer on top of the sea-ice. Due to the low thermal conductivity of snow compared to sea-ice, a thin snow layer reduces the conductive heat flux much more efficiently than sea-ice, and thus insulates the cold atmosphere from the relatively warm ocean.</p></abstract><abstract id="Abs2" abstract-type="web-summary"><p id="Par2">Contemporary atmospheric reanalysis and forecast systems often neglect the snow layer on top of the sea ice. This can result in a 5 to 10&#x02009;&#x000b0;C warm bias of the sea-ice surface temperature and thus, in a misrepresentation of the surface energy budget.</p></abstract><kwd-group kwd-group-type="npg-subject"><title>Subject terms</title><kwd>Atmospheric science</kwd><kwd>Climate and Earth system modelling</kwd><kwd>Cryospheric science</kwd></kwd-group><custom-meta-group><custom-meta><meta-name>issue-copyright-statement</meta-name><meta-value>&#x000a9; The Author(s) 2019</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="Sec1" sec-type="introduction"><title>Introduction</title><p id="Par3">There is a growing demand for a more accurate prediction and understanding of Arctic weather and climate, which puts great expectations on the global and regional forecasting and reanalysis systems<sup><xref ref-type="bibr" rid="CR1">1</xref></sup>. Currently, weather and climate models are subjected to having various systematic errors, which induce large spread in results of different climate models<sup><xref ref-type="bibr" rid="CR2">2</xref></sup> and have a significant impact on the local and mid-latitude prediction skill<sup><xref ref-type="bibr" rid="CR3">3</xref></sup>. Also, contemporary global reanalysis products, often used in climate research in order to monitor climate change and variability, or to evaluate climate model systems<sup><xref ref-type="bibr" rid="CR4">4</xref></sup>, have large biases in temperature, humidity and wind speed in the Arctic<sup><xref ref-type="bibr" rid="CR5">5</xref>&#x02013;<xref ref-type="bibr" rid="CR7">7</xref></sup>.</p><p id="Par4">Specifically, in the Arctic surface energy balance significant deviations between climate models are found<sup><xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR4">4</xref></sup>. Within the coupled atmosphere, ocean, snow, and sea-ice system, this energy balance controls the growth and melt of sea-ice, as well, as the thermal stratification of the lower atmosphere. Thus, the accurate simulation of the Arctic surface energy budget is key for improving our understanding of the rapid climate change in the Arctic, as well as, advancing long term prediction of sea-ice properties in the future.</p><p id="Par5">During Arctic winter clear-sky events (CSE) over sea-ice, with&#x000a0;the absence of solar radiation and the strong longwave radiative cooling, the air temperatures can drop to &#x02212;40&#x02009;&#x000b0;C. Studies of the winter&#x000a0;Arctic surface energy budget show that the radiative cooling of the troposphere is balanced by the advection of heat from lower latitudes<sup><xref ref-type="bibr" rid="CR8">8</xref>,<xref ref-type="bibr" rid="CR9">9</xref></sup>. In addition, in sea-ice covered regions the ocean moderates the low temperatures during CSEs in contrast to the land surfaces, where minimum temperatures of &#x02212;50 to &#x02212;60&#x02009;&#x000b0;C occur<sup><xref ref-type="bibr" rid="CR8">8</xref></sup>.</p><p id="Par6">In the present study, we investigate the ability of contemporary regional and global weather prediction systems and global reanalysis systems to simulate the low temperatures observed during CSEs. We use the in-situ data set from the N-ICE 2015 drift campaign<sup><xref ref-type="bibr" rid="CR10">10</xref></sup> and a pan-Arctic sea-ice surface temperature satellite product. We find a warm bias in almost all analysed model systems and show that it is induced by a missing representation of snow on sea-ice. Furthermore, the simplistic representation of sea-ice thickness and concentration in the analysed model systems contribute to inconsistencies in the simulation of sea-ice surface temperatures.</p></sec><sec id="Sec2" sec-type="results"><title>Results</title><sec id="Sec3"><title>Overview of the studied models and utilised observations</title><p id="Par7">We use the observational in&#x000a0;situ&#x000a0;data&#x000a0;set of atmospheric, snow, sea-ice and ocean observations which is available from the N-ICE 2015 campaign and taken during the four subsequent drifts of a research vessel in between January and June 2015 (Fig. <xref rid="Fig1" ref-type="fig">1</xref>). The meteorological conditions, the thermodynamic structure of the troposphere, and the surface energy budget during the campaign are analysed in a set of studies<sup><xref ref-type="bibr" rid="CR11">11</xref>&#x02013;<xref ref-type="bibr" rid="CR13">13</xref></sup>. Several CSE have been observed during N-ICE campaign<sup><xref ref-type="bibr" rid="CR13">13</xref></sup>. In addition, we utilise a pan-Arctic sea-ice surface temperature satellite product<sup><xref ref-type="bibr" rid="CR14">14</xref></sup> based on infrared data from AVHRR instruments in order to extend our results to the pan-Arctic scale. More details on the use of the observations are given in the Methods section.<fig id="Fig1"><label>Fig. 1</label><caption><p>General overview of the sea-ice cover, experimental model domains and N-ICE 2015 campaign drifts. Background: mean sea ice concentration in January&#x02013;February 2015 according to OSI-SAF data; A: model domain for the AA&#x000a0;(control) experiment, B: model domain for the AA-snow&#x000a0;(sensitivity) experiment; coloured curves: trajectories of the different N-ICE 2015 campaign legs; inset: trajectories of N-ICE 2015 drifts and restored true colour image retrieved from MODIS radiances showing the ice cover on 3 April 2015. Leg 1: 15 January&#x02013;21 February; leg 2: 24 February&#x02013;19 March; leg 3: 18 April&#x02013;5 June; leg 4: 7 June&#x02013;22 June</p></caption><graphic xlink:href="41467_2019_11975_Fig1_HTML" id="d29e312"/></fig></p><p id="Par8">We investigate the ability of regional and global weather prediction systems (HARMONIE-AROME<sup><xref ref-type="bibr" rid="CR15">15</xref></sup> configuration of the ALADIN-HIRLAM numerical weather prediction system, and IFS-HRES<sup><xref ref-type="bibr" rid="CR16">16</xref></sup>), and global reanalysis systems (ERA-Interim<sup><xref ref-type="bibr" rid="CR17">17</xref></sup>, ERA5, MERRA-2<sup><xref ref-type="bibr" rid="CR18">18</xref></sup>, JRA-55<sup><xref ref-type="bibr" rid="CR19">19</xref></sup>, and NCEP-DOE Reanalysis 2<sup><xref ref-type="bibr" rid="CR20">20</xref></sup>) to simulate those low temperature events. For HARMONIE-AROME two configurations of the sea-ice parameterisation scheme are studied. First, the control experiment (AA) which resembles sea-ice handling in IFS-HRES and has a snow-free sea-ice layer of uniform and fixed thickness. Second, the sensitivity experiment (AA-snow) which uses extended sea-ice parameterisation scheme that includes a prognostic sea-ice thickness and snow layer model (see the Methods section for further details). General overview of the model systems discussed in the present study is provided in the Table <xref rid="Tab1" ref-type="table">1</xref>.<table-wrap id="Tab1"><label>Table 1</label><caption><p>Overview of the numerical weather prediction systems and global reanalysis systems</p></caption><table frame="hsides" rules="groups"><thead><tr><th/><th>AA</th><th>AA-snow</th><th>IFS-HRES</th><th>MERRA-2</th><th>ERA5</th><th>ERA-I&#x000a0;(Interim)</th><th>JRA-55</th><th>NCEP-2</th></tr></thead><tbody><tr><td>Weather model</td><td colspan="2">HARMONIE-AROME cy40h1.1</td><td>IFS cy40r1</td><td>GEOS 5.12.4</td><td>IFS cy41r2</td><td>IFS cy31r2</td><td>JMA-GSM0603</td><td>modified GFS MRF95</td></tr><tr><td>Horizontal resolution</td><td/><td/><td>T1279</td><td>
+<inline-formula id="IEq1"><alternatives><tex-math id="M1">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$0.{5}^{\circ }\times 0.{6}^{\circ }$$\end{document}</tex-math><mml:math id="M2"><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:msup><mml:mrow><mml:mn>5</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02218;</mml:mo></mml:mrow></mml:msup><mml:mo>&#x000d7;</mml:mo><mml:mn>0</mml:mn><mml:mo>.</mml:mo><mml:msup><mml:mrow><mml:mn>6</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02218;</mml:mo></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq1.gif"/></alternatives></inline-formula>
+</td><td>T639</td><td>T255</td><td>T319</td><td>T62</td></tr><tr><td/><td>2.5&#x02009;km</td><td>2.5&#x02009;km</td><td>16&#x02009;km</td><td>65&#x02009;km</td><td>31&#x02009;km</td><td>79&#x02009;km</td><td>55&#x02009;km</td><td>210&#x02009;km</td></tr><tr><td>Vertical levels</td><td>65</td><td>65</td><td>137</td><td>72</td><td>137</td><td>60</td><td>60</td><td>28</td></tr><tr><td>Sea ice thickness</td><td>0.75&#x02009;m</td><td>Prognostic</td><td>1.5&#x02009;m</td><td>n/a<sup>a</sup></td><td>1.5&#x02009;m</td><td>1.5&#x02009;m</td><td>2&#x02009;m</td><td>2&#x02009;m</td></tr><tr><td>Sea ice cover</td><td>Fractional</td><td>Fractional</td><td>Fractional</td><td>Fractional</td><td>Fractional</td><td>Fractional</td><td>Binary</td><td>Binary</td></tr><tr><td>Snow on sea ice</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Yes<sup>b</sup></td></tr></tbody></table><table-wrap-foot><p><sup>a</sup>Ice temperature is resolved by means of thermal balance of a single ice layer of 7-cm thickness. Obtained temperature is relaxed towards 0&#x02009;&#x000b0;C to take account of the upwelling ocean heat flux</p><p><sup>b</sup>Snow has no effect on the thermal conductivity of the sea-ice layer</p></table-wrap-foot></table-wrap></p></sec><sec id="Sec4"><title>Analysis of a clear-sky event from N-ICE 2015</title><p id="Par9">During the winter drifts of the N-ICE 2015 campaign a large number of storms has been observed<sup><xref ref-type="bibr" rid="CR11">11</xref></sup>. Since those storms are connected to the advection of warm air onto the sea-ice, they can be identified in the temperature timeseries by relatively high temperatures close to 0&#x02009;&#x000b0;C (Fig. <xref rid="Fig2" ref-type="fig">2</xref>). In between those storms, periods of clear-sky conditions occurred, marked by reduced longwave downwelling radiation flux (LW<inline-formula id="IEq2"><alternatives><tex-math id="M3">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M4"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq2.gif"/></alternatives></inline-formula>) of around <inline-formula id="IEq3"><alternatives><tex-math id="M5">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$160\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M6"><mml:mn>160</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq3.gif"/></alternatives></inline-formula> and low temperatures of around &#x02212;30 to &#x02212;40&#x02009;&#x000b0;C. We refer in the following to three clear-sky events, CSE-1, CSE-2, and CSE-3, which are marked in Fig. <xref rid="Fig2" ref-type="fig">2</xref>.<fig id="Fig2"><label>Fig. 2</label><caption><p>Observations from the N-ICE 2015 campaign compared to various reanalysis products and model experiments. <bold>a</bold> Difference between the skin temperature predicted by different models and skin temperature observed during the N-ICE 2015 campaign (background); time series of the measured skin temperature (foreground curve). <bold>b</bold> Same as <bold>a</bold> but for downwelling longwave radiation</p></caption><graphic xlink:href="41467_2019_11975_Fig2_HTML" id="d29e685"/></fig></p><p id="Par10">During the CSE-1 all models showed low <italic>LW</italic><inline-formula id="IEq4"><alternatives><tex-math id="M7">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M8"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq4.gif"/></alternatives></inline-formula> values of 140 to <inline-formula id="IEq5"><alternatives><tex-math id="M9">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$150\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M10"><mml:mn>150</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq5.gif"/></alternatives></inline-formula>, which are consistent with the observations (see the Fig. <xref rid="Fig2" ref-type="fig">2)</xref> and indicate that clear-sky conditions are well simulated. However, the simulated surface temperatures (<inline-formula id="IEq6"><alternatives><tex-math id="M11">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M12"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq6.gif"/></alternatives></inline-formula>) are much higher than observed. While the observations show values of down to <inline-formula id="IEq7"><alternatives><tex-math id="M13">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$-4{0}^{\circ }\ {\rm{C}}$$\end{document}</tex-math><mml:math id="M14"><mml:mo>&#x02212;</mml:mo><mml:mn>4</mml:mn><mml:msup><mml:mrow><mml:mn>0</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02218;</mml:mo></mml:mrow></mml:msup><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq7.gif"/></alternatives></inline-formula>, most of the models simulate temperatures of 5 to <inline-formula id="IEq8"><alternatives><tex-math id="M15">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$1{5}^{\circ }\ {\rm{C}}$$\end{document}</tex-math><mml:math id="M16"><mml:mn>1</mml:mn><mml:msup><mml:mrow><mml:mn>5</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02218;</mml:mo></mml:mrow></mml:msup><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq8.gif"/></alternatives></inline-formula> too warm, with the strongest deviations found in the snow-free AA experiment. The sensitivity experiment AA-snow, with a prognostic sea-ice thickness and snow layer model, is the only model simulation with small deviations. For all model products, the <inline-formula id="IEq9"><alternatives><tex-math id="M17">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M18"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq9.gif"/></alternatives></inline-formula> is obtained from the LW<inline-formula id="IEq10"><alternatives><tex-math id="M19">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M20"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq10.gif"/></alternatives></inline-formula> and LW<inline-formula id="IEq11"><alternatives><tex-math id="M21">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M22"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq11.gif"/></alternatives></inline-formula>, while LW<inline-formula id="IEq12"><alternatives><tex-math id="M23">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M24"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq12.gif"/></alternatives></inline-formula> corresponds to the sea-ice covered part of the grid cell only (see also Eq. (<xref rid="Equ6" ref-type="">6</xref>) in the Methods section).</p><p id="Par11">During the CSE-2 and CSE-3, the models show a similar warm temperature bias as during the CSE-1, but with differences in their capabilities in simulating the low LW<inline-formula id="IEq13"><alternatives><tex-math id="M25">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M26"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq13.gif"/></alternatives></inline-formula>, which are characteristic for clear-sky conditions. During CSE-2, MERRA-2 and ERA5 show too high LW<inline-formula id="IEq14"><alternatives><tex-math id="M27">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M28"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq14.gif"/></alternatives></inline-formula> indicating that the clear sky conditions are not well resolved. During CSE-3, the ECMWF products (ERA5, ERA-I, and IFS-HRES) and MERRA-2 do not show the resolved clear-sky conditions and provide too high LW<inline-formula id="IEq15"><alternatives><tex-math id="M29">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M30"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq15.gif"/></alternatives></inline-formula>. For this event, the temperature biases are largest in the ECMWF products with the values of up to 15&#x02009;&#x000b0;C.</p><p id="Par12">In general, the models show a consistent warm bias during the polar winter clear-sky conditions over sea-ice, when observed temperatures are usually below &#x02212;25&#x02009;&#x000b0;C. In order to better understand this discrepancy between the modelled and observed temperatures, we analyse the surface energy budget (see also the Methods section) during the CSE-1, where all models show a consistent representation of the clear sky conditions in terms of the simulated low LW<inline-formula id="IEq16"><alternatives><tex-math id="M31">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M32"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq16.gif"/></alternatives></inline-formula> values. Averaged values of the surface energy budget are given in Table <xref rid="Tab2" ref-type="table">2</xref>. The conductive heat flux <inline-formula id="IEq17"><alternatives><tex-math id="M33">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$C$$\end{document}</tex-math><mml:math id="M34"><mml:mi>C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq17.gif"/></alternatives></inline-formula> is calculated (assuming steady linear sea-ice temperature profile) by using the respective snow and sea-ice thickness properties of the models (Table <xref rid="Tab1" ref-type="table">1)</xref> or, in case of AA-snow, the directly simulated daily values of the sea-ice and snow thickness. Note that, for the sake of convenience, we assumed a 1.5-m sea-ice thickness for the MERRA-2 reanalysis. We tested the sensitivity of the flux by also prescribing sea-ice thicknesses of 1 and 2&#x02009;m, which resulted in conductive heat fluxes ranging from 30 to <inline-formula id="IEq18"><alternatives><tex-math id="M35">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$61\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M36"><mml:mn>61</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq18.gif"/></alternatives></inline-formula>, i.e., in the range of the values obtained from the other model systems. In order to compute the observed conductive heat flux the mean observed values for sea ice and snow thickness are used<sup><xref ref-type="bibr" rid="CR21">21</xref></sup>, i.e., <inline-formula id="IEq19"><alternatives><tex-math id="M37">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${h}_{{\rm{s}}}=0.5\ {\mathrm{m}}$$\end{document}</tex-math><mml:math id="M38"><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>0.5</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq19.gif"/></alternatives></inline-formula> and <inline-formula id="IEq20"><alternatives><tex-math id="M39">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${h}_{{\rm{i}}}=1.4\ {\mathrm{m}}$$\end{document}</tex-math><mml:math id="M40"><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1.4</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq20.gif"/></alternatives></inline-formula>.<table-wrap id="Tab2"><label>Table 2</label><caption><p>Surface energy budget&#x02013;Clear sky event 1</p></caption><table frame="hsides" rules="groups"><thead><tr><th/><th>OBS</th><th>AA</th><th>AA-snow</th><th>IFS-HRES</th><th>MERRA-2</th><th>ERA5</th><th>ERA-I</th><th>JRA-55</th><th>NCEP-2</th></tr></thead><tbody><tr><td><inline-formula id="IEq21"><alternatives><tex-math id="M41">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$C$$\end{document}</tex-math><mml:math id="M42"><mml:mi>C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq21.gif"/></alternatives></inline-formula>, <inline-formula id="IEq22"><alternatives><tex-math id="M43">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M44"><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq22.gif"/></alternatives></inline-formula></td><td>16</td><td>61</td><td>15</td><td>38</td><td>40</td><td>37</td><td>39</td><td>28</td><td>32</td></tr><tr><td>LW<inline-formula id="IEq23"><alternatives><tex-math id="M45">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M46"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq23.gif"/></alternatives></inline-formula>, <inline-formula id="IEq24"><alternatives><tex-math id="M47">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M48"><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq24.gif"/></alternatives></inline-formula></td><td>&#x02212;182</td><td>&#x02212;221</td><td>&#x02212;179</td><td>&#x02212;199</td><td>&#x02212;197</td><td>&#x02212;201</td><td>&#x02212;198</td><td>&#x02212;203</td><td>&#x02212;199</td></tr><tr><td>LW<inline-formula id="IEq25"><alternatives><tex-math id="M49">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M50"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq25.gif"/></alternatives></inline-formula>, <inline-formula id="IEq26"><alternatives><tex-math id="M51">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M52"><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq26.gif"/></alternatives></inline-formula></td><td>142</td><td>148</td><td>140</td><td>146</td><td>144</td><td>145</td><td>140</td><td>138</td><td>132</td></tr><tr><td><inline-formula id="IEq27"><alternatives><tex-math id="M53">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{LW}}{\uparrow} +\,{\rm{LW}}{\downarrow}$$\end{document}</tex-math><mml:math id="M54"><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02191;</mml:mi><mml:mo>+</mml:mo><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq27.gif"/></alternatives></inline-formula>, <inline-formula id="IEq28"><alternatives><tex-math id="M55">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{W}}{{\rm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M56"><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq28.gif"/></alternatives></inline-formula></td><td>&#x02212;40</td><td>&#x02212;73</td><td>&#x02212;39</td><td>&#x02212;53</td><td>&#x02212;53</td><td>&#x02212;56</td><td>&#x02212;58</td><td>&#x02212;65</td><td>&#x02212;67</td></tr></tbody></table></table-wrap></p><p id="Par13">The conductive heat flux in the observations is <inline-formula id="IEq29"><alternatives><tex-math id="M57">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$16\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M58"><mml:mn>16</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq29.gif"/></alternatives></inline-formula>. The AA-snow experiment shows a conductive heat flux consistent with the observations. The AA experiment shows a much higher flux of <inline-formula id="IEq30"><alternatives><tex-math id="M59">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$61\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M60"><mml:mn>61</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq30.gif"/></alternatives></inline-formula>, which is due to the combination of a missing snow layer and a small prescribed sea-ice thickness of 0.75&#x02009;m. The global reanalyses, which do not represent snow over sea-ice (NCEP-2 has a rudimentary parameterisation for snow over sea-ice, but it could be neglected. See Table <xref rid="Tab1" ref-type="table">1</xref> and Methods for further details) but have a realistic assumption of the sea-ice thickness of 1.5 to 2&#x02009;m, still overestimate the conductive heat flux by a factor of more than two, with values between 28 and <inline-formula id="IEq31"><alternatives><tex-math id="M61">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$40\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M62"><mml:mn>40</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq31.gif"/></alternatives></inline-formula>. The JRA-55 and NCEP-2 have the smallest values, due to their relatively large sea-ice thickness of 2&#x02009;m.</p><p id="Par14">The overestimation in <inline-formula id="IEq32"><alternatives><tex-math id="M63">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$C$$\end{document}</tex-math><mml:math id="M64"><mml:mi>C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq32.gif"/></alternatives></inline-formula> from the ocean to the surface is to a large extent compensated by an increased LW<inline-formula id="IEq33"><alternatives><tex-math id="M65">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M66"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq33.gif"/></alternatives></inline-formula>. The observed value for LW<inline-formula id="IEq34"><alternatives><tex-math id="M67">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M68"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq34.gif"/></alternatives></inline-formula> is <inline-formula id="IEq35"><alternatives><tex-math id="M69">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$182\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M70"><mml:mn>182</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq35.gif"/></alternatives></inline-formula>, while the global reanalyses show values of around <inline-formula id="IEq36"><alternatives><tex-math id="M71">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$200\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M72"><mml:mn>200</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq36.gif"/></alternatives></inline-formula> and in the AA experiment the flux reaches <inline-formula id="IEq37"><alternatives><tex-math id="M73">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$220\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M74"><mml:mn>220</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq37.gif"/></alternatives></inline-formula>. Again, AA-snow is consistent to the observations with a value of <inline-formula id="IEq38"><alternatives><tex-math id="M75">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$179\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M76"><mml:mn>179</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq38.gif"/></alternatives></inline-formula>.</p><p id="Par15">We conclude that the missing snow layer on top of the sea-ice results in the overestimated conductive heat flux from the ocean to the atmosphere, which is compensated by an increase in outgoing longwave radiation and too high surface temperatures. The resulting bias in the net surface radiation budget (<inline-formula id="IEq39"><alternatives><tex-math id="M77">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{LW}}{\uparrow} +\,{\mathrm{LW}}{\downarrow}$$\end{document}</tex-math><mml:math id="M78"><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02191;</mml:mi><mml:mo>+</mml:mo><mml:mspace width="0.25em"/><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq39.gif"/></alternatives></inline-formula>) is about 20 to <inline-formula id="IEq40"><alternatives><tex-math id="M79">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$30\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M80"><mml:mn>30</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq40.gif"/></alternatives></inline-formula>.</p></sec><sec id="Sec5"><title>A pan-Arctic view of the temperature bias</title><p id="Par16">From infrared satellite observations we can estimate the pan-Arctic <inline-formula id="IEq41"><alternatives><tex-math id="M81">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M82"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq41.gif"/></alternatives></inline-formula> during winter clear-sky conditions in the selected period from 2015 to 2017. In the satellite observations the mean clear-sky surface temperatures are as low as &#x02212;35&#x02009;&#x000b0;C in large parts of the central Arctic and towards the Canadian coastline (Fig. <xref rid="Fig3" ref-type="fig">3a</xref>).<fig id="Fig3"><label>Fig. 3</label><caption><p>Satellite ice surface temperature product compared to various reanalysis products. <bold>a</bold> Climatological winter-time clear-sky ice surface temperature in CMEMS for years 2015&#x02013;2017; <bold>b</bold> Climatological snow thickness according to the TOPAZ reanalysis for years 2015&#x02013;2017; <bold>c</bold>&#x02013;<bold>f</bold> difference between the climatological winter-time clear-sky ice surface temperature in different reanalysis products and the climatological winter-time clear-sky ice surface temperature in CMEMS for years 2015&#x02013;2017, (<bold>c</bold>) ERA5, (<bold>d</bold>) JRA-55, (<bold>e</bold>) MERRA-2, (<bold>f</bold>) NCEP-2</p></caption><graphic xlink:href="41467_2019_11975_Fig3_HTML" id="d29e1546"/></fig></p><p id="Par17">In the coldest areas, all reanalyses have a warm bias of about 5 to 10&#x02009;&#x000b0;C (Fig. <xref rid="Fig3" ref-type="fig">3e&#x02013;f</xref>). ERA5 (Fig. <xref rid="Fig3" ref-type="fig">3c</xref>) and MERRA-2 (Fig. <xref rid="Fig3" ref-type="fig">3e</xref>) have similar spatial characteristics for the surface temperature with both showing a warm bias in all sea-ice covered areas and MERRA-2 having the largest temperature biases. The JRA-55 (Fig. <xref rid="Fig3" ref-type="fig">3d</xref>) and NCEP-2 (Fig. <xref rid="Fig3" ref-type="fig">3f</xref>) reanalyses have a smaller warm bias in the central Arctic and tend to have a cold bias in the areas further away from the North pole. This cold bias is about 5 to 10&#x02009;&#x000b0;C and is most pronounced in the Northern Barents Sea, the areas from Hudson Bay towards Baffin Bay and some parts along the Russian, Canadian and American coastlines. Note, here we derive the model simulated surface skin temperature from the LW<inline-formula id="IEq42"><alternatives><tex-math id="M83">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M84"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq42.gif"/></alternatives></inline-formula> and LW<inline-formula id="IEq43"><alternatives><tex-math id="M85">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M86"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq43.gif"/></alternatives></inline-formula>, following the Eq. (<xref rid="Equ1" ref-type="">1</xref>) in the Methods section. This is equivalent to the grid cell mean temperature of the model, and not the surface temperature of the sea-ice part of the grid cell only, and thus consistent to the infrared surface observation.</p><p id="Par18">The pattern of the <inline-formula id="IEq44"><alternatives><tex-math id="M87">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M88"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq44.gif"/></alternatives></inline-formula> warm bias in the global reanalyses shows similar characteristics to the retrieved mean snow depth from the TOPAZ4 ocean and sea-ice reanalysis<sup><xref ref-type="bibr" rid="CR22">22</xref></sup> during CSEs in 2015 to 2017 (Fig. <xref rid="Fig3" ref-type="fig">3b</xref>). For example the lower snow-depths in Baffin Bay and Labrador Sea result in higher observed <inline-formula id="IEq45"><alternatives><tex-math id="M89">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M90"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq45.gif"/></alternatives></inline-formula> and a smaller bias, while the largest snow-depths in the central Arctic and towards the Canadian Archipelago are co-existing with the lowest temperatures and the largest temperature biases in the models.</p><p id="Par19">Our findings of a temperature bias during clear sky conditions in the satellite analysis are consistent to results of the N-ICE 2015 drift analysis in the previous section. In order to further strengthen the conclusion that the snow representation is the key factor, the surface temperature bias can be formulated as a function of the misrepresentation of snow and the sea-ice thickness (see Methods section and Fig. <xref rid="Fig4" ref-type="fig">4</xref>). If the prescribed sea-ice thickness is 1.5&#x02009;m, an error in the snow thickness of only 0.25&#x02009;m can induce a warm bias of 8&#x02009;&#x000b0;C. This could be seen in ERA5 and MERRA-2 over the central Arctic (see Fig. <xref rid="Fig3" ref-type="fig">3c</xref> and e) where largest warm biases of the surface temperature are in a good agreement with the pattern of the mean snow depth (Fig. <xref rid="Fig3" ref-type="fig">3b</xref>). A misrepresentation in the sea-ice thickness can also have a strong effect on the surface temperature in cases of only a thin snow layer. The JRA-55 and NCEP-2 reanalyses have a 2&#x02009;m sea-ice thickness representation, compared to 1.5&#x02009;m in ERA5 and MERRA-2. If we assume that there is a 0.5&#x02009;m overestimation in sea-ice thickness in regions with no snow cover, it would lead to a cold bias of about &#x02212;5&#x02009;&#x000b0;C, and counter-balance the warm bias induced by the missing snow in areas with a snow layer of around 0.1&#x02009;m (Fig. <xref rid="Fig4" ref-type="fig">4)</xref>. This is consistent with the relatively small warm bias in central parts of the Arctic in JRA-55 and NCEP-2, and agrees with the cold bias further away from the North pole in these reanalyses (see the Fig. <xref rid="Fig3" ref-type="fig">3d</xref> and f). In addition, JRA-55 and NCEP-2 have a binary representation of the sea-ice cover. When sea-ice concentration is above 55% (or 50% for NCEP-2) these reanalyses assume that sea is completely ice-covered. This induces the additional spurious insulation from the ocean and, in turn, a cold surface temperature bias in regions closer to the sea-ice edge.<fig id="Fig4"><label>Fig. 4</label><caption><p>The dependency of the surface temperature bias on ice and snow thickness errors. The bias <inline-formula id="IEq46"><alternatives><tex-math id="M91">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta {T}_{{\rm{s}}}$$\end{document}</tex-math><mml:math id="M92"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq46.gif"/></alternatives></inline-formula> is induced by the errors of ice <inline-formula id="IEq47"><alternatives><tex-math id="M93">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta {h}_{{\rm{i}}}$$\end{document}</tex-math><mml:math id="M94"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq47.gif"/></alternatives></inline-formula> and snow thickness <inline-formula id="IEq48"><alternatives><tex-math id="M95">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta {h}_{{\rm{s}}}$$\end{document}</tex-math><mml:math id="M96"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq48.gif"/></alternatives></inline-formula>. Here, we assume a simulated 1.5&#x02009;m thick sea-ice without a snow layer, i.e., <inline-formula id="IEq49"><alternatives><tex-math id="M97">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${h}_{{\rm{i}}}=1.5\ {\mathrm{m}}$$\end{document}</tex-math><mml:math id="M98"><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1.5</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq49.gif"/></alternatives></inline-formula> and <inline-formula id="IEq50"><alternatives><tex-math id="M99">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${h}_{{\rm{s}}}=0\ {\mathrm{m}}$$\end{document}</tex-math><mml:math id="M100"><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>0</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq50.gif"/></alternatives></inline-formula></p></caption><graphic xlink:href="41467_2019_11975_Fig4_HTML" id="d29e1747"/></fig></p></sec></sec><sec id="Sec6" sec-type="discussion"><title>Discussion</title><p id="Par20">An evaluation of the surface energy budget of current global and regional model configurations, which are used for weather forecasting and reanalysis products, highlights the importance of the simulation of snow on sea-ice. Three CSEs occurred during polar night are analysed using the N-ICE 2015 drift campaign data. The analysis shows that the models in their standard configurations are 5 to 15&#x02009;&#x000b0;C too warm during these events. In the CSE-1 the low incoming longwave radiation in the model products is low, which indicates that the clear-sky conditions are reasonably well resolved. However, the outgoing longwave radiation is too high, as the consequence of a warm bias in the surface temperature. In turn, this bias can be attributed to the overestimation of the conductive heat flux from the ocean to the surface by 20 to <inline-formula id="IEq51"><alternatives><tex-math id="M101">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$40\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M102"><mml:mn>40</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq51.gif"/></alternatives></inline-formula>. This heat flux is regulated by the difference between the ocean and atmospheric temperatures and by the thickness of the sea-ice and snow layers. A snow layer, which has a thermal conductivity about seven times lower than that of sea-ice, is missing in most of the analysed models, and thus, is identified as the main reason for the deviations in the surface energy budget.</p><p id="Par21">The warm bias in the ice surface temperatures is a characteristic feature of the analysed global reanalysis products on the pan-Arctic scale. By comparing to a multiyear product obtained from infrared satellite measurements we show that all tested systems have issues in simulating the extreme low temperatures over large parts of the Arctic. The most drastic deviations in the temperature are found over the areas with the thick snow cover according to the winter snow climatology (see the Fig. <xref rid="Fig3" ref-type="fig">3b&#x02013;f</xref>). This strengthens the argument that the snow layer is strongly connected to the temperature bias found in the global atmospheric reanalyses. In two of the reanalyses, which have thicker sea-ice (JRA-55 and NCEP-2), the warm bias is reduced, but instead a cold bias is produced, specifically in areas where sea-ice is thinner than the prescribed 2&#x02009;m and only a thin snow layer exists. In general, the characteristics of the surface temperature in the reanalysis products can be explained by the surface energy budget. We conclude that the snow component on the sea-ice improves the surface atmospheric energy budget in cold atmospheric conditions and thus is an important but often missing component in state-of-the-art reanalysis and forecasting systems. In addition, sea-ice thickness plays an important role, as well, but mainly in the areas where the snow layer is thin.</p><p id="Par22">The surface energy budget is an integral part of many climate processes in the Arctic. For example, it determines the available energy for sea-ice melting and freezing, and also the thermal stratification in the lower troposphere. Thus, the accuracy of its representation can have a strong impact on the skill of climate prediction and our understanding of large-scale climate dynamics. The bias in the surface energy budget due to the misrepresentation of the snow and sea-ice layer is about <inline-formula id="IEq52"><alternatives><tex-math id="M103">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$20\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M104"><mml:mn>20</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq52.gif"/></alternatives></inline-formula>. Compared to the spread of 20 and <inline-formula id="IEq53"><alternatives><tex-math id="M105">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$60\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M106"><mml:mn>60</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq53.gif"/></alternatives></inline-formula> between the various climate models in the winter-time net longwave radiation budget<sup><xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR4">4</xref></sup>, the temperature bias, which is induced by the missing snow layer and misrepresentation of sea-ice thickness, is of significant importance. This bias in the net radiation budget can induce wrong conclusions, e.g., assuming that the climate models have a &#x0201c;cold temperature&#x0201d; bias in winter<sup><xref ref-type="bibr" rid="CR4">4</xref></sup>, or generally refine process studies which rely on the atmospheric reanalyses <sup><xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR23">23</xref></sup>.</p><p id="Par23">Due to the widespread use of the atmospheric reanalysis products for model validation, initialisation of prediction systems, forcing of ocean and sea-ice reanalyses<sup><xref ref-type="bibr" rid="CR24">24</xref></sup>, etc., it is very important to take into account this temperature bias in the contemporary reanalyses. Future reanalyses could be enhanced primarily by considering a prognostic parameterisation scheme to represent snow cover over the sea-ice, and by improving the spatial characteristics of the sea-ice thickness.</p></sec><sec id="Sec7"><title>Methods</title><sec id="Sec8"><title>Observations</title><p id="Par24">We use the observational data set from the N-ICE 2015 drift north of the Svalbard Archipelago<sup><xref ref-type="bibr" rid="CR10">10</xref></sup>. The N-ICE 2015 campaign consisted in total of four legs. In the present study we focus on the first two legs within the Arctic winter period, between 15 January and 19 March (Fig. <xref rid="Fig1" ref-type="fig">1),</xref> and analyse the meteorological observations of longwave radiation<sup><xref ref-type="bibr" rid="CR11">11</xref></sup>. The skin temperature of the snow surface is obtained from the longwave upwelling LW<inline-formula id="IEq54"><alternatives><tex-math id="M107">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M108"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq54.gif"/></alternatives></inline-formula> and downwelling LW<inline-formula id="IEq55"><alternatives><tex-math id="M109">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M110"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq55.gif"/></alternatives></inline-formula> radiation by<disp-formula id="Equ1"><label>1</label><alternatives><tex-math id="M111">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}={\left(\frac{{\mathrm{LW}}{\uparrow} -(1-{\varepsilon }_{{\rm{s}}}){\mathrm{LW}}{\downarrow} }{{\varepsilon }_{{\rm{s}}}\sigma }\right)}^{\frac{1}{4}},$$\end{document}</tex-math><mml:math id="M112"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mfenced close=")" open="(" separators=""><mml:mrow><mml:mfrac><mml:mrow><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02191;</mml:mi><mml:mo>&#x02212;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>&#x003b5;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02193;</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>&#x003b5;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mi>&#x003c3;</mml:mi></mml:mrow></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:mfrac></mml:mrow></mml:msup><mml:mo>,</mml:mo></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ1.gif" position="anchor"/></alternatives></disp-formula>where <inline-formula id="IEq56"><alternatives><tex-math id="M113">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\sigma$$\end{document}</tex-math><mml:math id="M114"><mml:mi>&#x003c3;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq56.gif"/></alternatives></inline-formula> is the Stefan&#x02013;Boltzmann constant and <inline-formula id="IEq57"><alternatives><tex-math id="M115">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\varepsilon }_{s}$$\end{document}</tex-math><mml:math id="M116"><mml:msub><mml:mrow><mml:mi>&#x003b5;</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq57.gif"/></alternatives></inline-formula> is the emissivity of the snow, which we assume to be 0.99<sup><xref ref-type="bibr" rid="CR13">13</xref></sup>.</p><p id="Par25">In addition to the in-situ observation of N-ICE 2015, we include a satellite data set of daily sea-ice surface temperature (<inline-formula id="IEq58"><alternatives><tex-math id="M117">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M118"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq58.gif"/></alternatives></inline-formula>). The data product is based on infrared data from the AVHRR instrument on board the Metop-A satellite. The <inline-formula id="IEq59"><alternatives><tex-math id="M119">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M120"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq59.gif"/></alternatives></inline-formula> satellite data set is available from 2015 to present, as part of the Copernicus Marine Environmental Monitoring Service (CMEMS). Since satellite measurements of <inline-formula id="IEq60"><alternatives><tex-math id="M121">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M122"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq60.gif"/></alternatives></inline-formula> are only meaningful in case of cloud free conditions, for the satellite retrieval a cloud-mask has been used together with a bias-correction algorithm to obtain surface temperature estimates within cloud covered areas<sup><xref ref-type="bibr" rid="CR14">14</xref></sup>. In the present study, however, we excluded those corrected surface temperatures, due to our focus on CSEs in winter. We define the CSEs by considering only the data points where: incoming longwave radiation in ERA5 is lower than <inline-formula id="IEq61"><alternatives><tex-math id="M123">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$160\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M124"><mml:mn>160</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq61.gif"/></alternatives></inline-formula>, the OSI SAF Ice Edge product identifies the grid cell as closed ice, there are more than eight AVHRR infrared observations in the grid cell, and the date is within the winter season (October to February). The same mask is then applied to the daily surface temperature values, in order to derive the mean <inline-formula id="IEq62"><alternatives><tex-math id="M125">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M126"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq62.gif"/></alternatives></inline-formula> of reanalysis and observations during clear sky conditions on a pan-Arctic scale.</p></sec><sec id="Sec9"><title>Atmospheric models and global reanalysis products</title><p id="Par26">We analyse a suite of global reanalyses, i.e., two configurations of the ECMWF model system (ERA-Interim<sup><xref ref-type="bibr" rid="CR25">25</xref></sup> and ERA5), the Modern-Era Retrospective analysis for Research and Applications, Version 2 (MERRA-2<sup><xref ref-type="bibr" rid="CR18">18</xref></sup>), the Japanese 55-year Reanalysis (JRA-55<sup><xref ref-type="bibr" rid="CR19">19</xref></sup>), and the National Centers for Environmental Prediction Reanalysis 2 (NCEP-2<sup><xref ref-type="bibr" rid="CR20">20</xref></sup>).</p><p id="Par27">We also include the operational ECMWF global deterministic weather forecasting system (IFS-HRES<sup><xref ref-type="bibr" rid="CR16">16</xref></sup>), as well as, two experimental configurations of the regional convective scale model HARMONIE-AROME<sup><xref ref-type="bibr" rid="CR15">15</xref></sup>. The first of these configurations (AA) covers the same domain as the operational numerical weather prediction system AROME Arctic<sup><xref ref-type="bibr" rid="CR26">26</xref></sup> and has the same representation of the sea-ice cover. The second experimental configuration of HARMONIE-AROME (AA-snow) is similar to AA, but incorporates the parameterisations for the sea-ice mass-balance and snow layer on top of the sea-ice. The model domain for AA-snow is smaller than that one in the AA experiment (see the Fig. <xref rid="Fig1" ref-type="fig">1)</xref> to reduce the computational costs and to focus on the areas with extensive sea-ice cover. The AA experiment covers the time period from 10 January to 20 March 2015. The AA-snow experiment has been performed from 1 September 2014 to 20 March 2015. To allow realistic evolution of the snow cover in AA-snow, this experiment was started without snow layer on top of sea ice and snow was accumulated from the modelled precipitation. In both AA and AA-snow the initial ice thickness is 0.75&#x02009;m but in AA it remains constant during the experiment and in AA-snow it evolves according to the ice mass-balance parameterisation.</p><p id="Par28">Relevant features of the models, which were used to produce forecast and reanalysis products, are given in Table <xref rid="Tab1" ref-type="table">1</xref> and with a focus on the representation of the sea-ice surface in the Arctic. In short, none of the global model systems has a prognostic parameterisation of the sea-ice mass-balance nor a parameterisation of a snow layer on top of the sea-ice, which impacts the surface energy budget. NCEP-2 simulates snow on sea-ice, however, without any influence on the heat conductivity and surface albedo. In all models sea-ice concentration is updated daily by utilising satellite products. Operational configurations of HARMONIE-AROME do not simulate the sea-ice concentration and sea-ice thickness, but simulate sea-ice surface temperature<sup><xref ref-type="bibr" rid="CR26">26</xref>,<xref ref-type="bibr" rid="CR27">27</xref></sup>.</p><p id="Par29">To extend the existing sea-ice parameterisation of HARMONIE-AROME with ice mass-balance calculations, we added the representation of the following processes: ice growth and melting from the bottom, and surface melting. The more complex processes of internal melting and snow-ice formation were not considered.</p><p id="Par30">The interface between the sea-ice bottom and the underlying water body is governed by the balance between the sea-ice and ocean heat fluxes. When these fluxes are not in equilibrium state, the residual heat flux leads to growth or melting of the ice layer<sup><xref ref-type="bibr" rid="CR28">28</xref></sup>:<disp-formula id="Equ2"><label>2</label><alternatives><tex-math id="M127">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rho }_{{\rm{i}}}{L}_{{\rm{f}}}\frac{{\mathrm{d}}{h}_{{\rm{i}}}}{{\mathrm{d}}t}={k}_{{\rm{i}}}\left.{\frac{\partial {T}_{{\rm{i}}}}{\partial z}}\right\vert_{z={h}_{{\rm{i}}}}-{F}_{{\rm{w}}}$$\end{document}</tex-math><mml:math id="M128"><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">f</mml:mi></mml:mrow></mml:msub><mml:mfrac><mml:mrow><mml:mi mathvariant="normal">d</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mi mathvariant="normal">d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mfenced close="&#x02223;" open="" separators=""><mml:mrow><mml:mfrac><mml:mrow><mml:mi>&#x02202;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mi>&#x02202;</mml:mi><mml:mi>z</mml:mi></mml:mrow></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mi>z</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">w</mml:mi></mml:mrow></mml:msub></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ2.gif" position="anchor"/></alternatives></disp-formula>where <inline-formula id="IEq63"><alternatives><tex-math id="M129">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rho }_{{\rm{i}}}$$\end{document}</tex-math><mml:math id="M130"><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq63.gif"/></alternatives></inline-formula> is the density of sea-ice, <inline-formula id="IEq64"><alternatives><tex-math id="M131">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${L}_{{\rm{f}}}$$\end{document}</tex-math><mml:math id="M132"><mml:msub><mml:mrow><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">f</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq64.gif"/></alternatives></inline-formula> is the latent heat of fusion, <inline-formula id="IEq65"><alternatives><tex-math id="M133">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${h}_{{\rm{i}}}$$\end{document}</tex-math><mml:math id="M134"><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq65.gif"/></alternatives></inline-formula> is the total ice thickness, <inline-formula id="IEq66"><alternatives><tex-math id="M135">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{{\rm{i}}}$$\end{document}</tex-math><mml:math id="M136"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq66.gif"/></alternatives></inline-formula> is the thermal conductivity of sea-ice, and <inline-formula id="IEq67"><alternatives><tex-math id="M137">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${F}_{{\rm{w}}}$$\end{document}</tex-math><mml:math id="M138"><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">w</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq67.gif"/></alternatives></inline-formula> is the ocean heat flux. For the AA-snow experiment, the ocean heat flux was assumed to be constant with the value of <inline-formula id="IEq68"><alternatives><tex-math id="M139">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$2\ {\mathrm{W}}{{\mathrm{m}}}^{-2}$$\end{document}</tex-math><mml:math id="M140"><mml:mn>2</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq68.gif"/></alternatives></inline-formula>.</p><p id="Par31">The processes of surface melting is parameterised in the following way. At the first step, the ice surface temperature is calculated from the thermal balance of the surface layer of sea-ice. Then, if the obtained temperature is higher than the melting temperature of sea-ice, it is set to be equal this melting temperature and the residual heat flux <inline-formula id="IEq69"><alternatives><tex-math id="M141">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${F}_{{\rm{melt}}}$$\end{document}</tex-math><mml:math id="M142"><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">melt</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq69.gif"/></alternatives></inline-formula> induces the melting of the ice surface<sup><xref ref-type="bibr" rid="CR28">28</xref></sup>:<disp-formula id="Equ3"><label>3</label><alternatives><tex-math id="M143">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${F}_{{\rm{melt}}}=-{\rho }_{{\rm{i}}}{L}_{{\rm{f}}}\frac{{\mathrm{d}}{h}_{{\rm{i}}}}{{\mathrm{d}}t}$$\end{document}</tex-math><mml:math id="M144"><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">melt</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:msub><mml:mrow><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">f</mml:mi></mml:mrow></mml:msub><mml:mfrac><mml:mrow><mml:mi mathvariant="normal">d</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mi mathvariant="normal">d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ3.gif" position="anchor"/></alternatives></disp-formula></p><p id="Par32">The AA-snow experiment, which uses the updated sea-ice parameterisation scheme, shows simulated snow depths between 0.45 and 0.7&#x02009;m and sea-ice thickness between 1.4 and 1.7&#x02009;m. This is consistent with the observed snow and sea-ice thickness of <inline-formula id="IEq70"><alternatives><tex-math id="M145">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$0.5\pm 0.2\ {\mathrm{m}}$$\end{document}</tex-math><mml:math id="M146"><mml:mn>0.5</mml:mn><mml:mo>&#x000b1;</mml:mo><mml:mn>0.2</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq70.gif"/></alternatives></inline-formula> and <inline-formula id="IEq71"><alternatives><tex-math id="M147">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$1.4\pm 0.3\ {\mathrm{m}}$$\end{document}</tex-math><mml:math id="M148"><mml:mn>1.4</mml:mn><mml:mo>&#x000b1;</mml:mo><mml:mn>0.3</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq71.gif"/></alternatives></inline-formula>, respectively<sup><xref ref-type="bibr" rid="CR21">21</xref></sup>.</p><p id="Par33">We compare the model&#x02019;s <inline-formula id="IEq72"><alternatives><tex-math id="M149">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M150"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq72.gif"/></alternatives></inline-formula> with the satellite and in-situ observations described in the previous sections. For the satellite observations <inline-formula id="IEq73"><alternatives><tex-math id="M151">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M152"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq73.gif"/></alternatives></inline-formula> corresponds to the model&#x02019;s grid-cell mean temperature, and in case of the in-situ observations it corresponds to the <inline-formula id="IEq74"><alternatives><tex-math id="M153">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}$$\end{document}</tex-math><mml:math id="M154"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq74.gif"/></alternatives></inline-formula> of the sea-ice covered part only. Thus, for the satellite observation comparison we can use the Eq. (<xref rid="Equ1" ref-type="">1</xref>). For the comparison with the in-situ observations we partition the longwave upwelling radiation LW<inline-formula id="IEq75"><alternatives><tex-math id="M155">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M156"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq75.gif"/></alternatives></inline-formula> into an ocean and sea-ice covered part according to the sea-ice concentration <inline-formula id="IEq76"><alternatives><tex-math id="M157">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{SIC}}$$\end{document}</tex-math><mml:math id="M158"><mml:mi mathvariant="normal">SIC</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq76.gif"/></alternatives></inline-formula> at the respective grid-cell.<disp-formula id="Equ4"><label>4</label><alternatives><tex-math id="M159">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{LW}}{\uparrow} =({\mathrm{1}}-{\mathrm{SIC}})\cdot {\mathrm{LW}}{\uparrow }^{({\rm{ocean}})}+{\mathrm{SIC}}\cdot {\mathrm{LW}}{\uparrow }^{({\rm{sea-ice}})}$$\end{document}</tex-math><mml:math id="M160"><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02191;</mml:mi><mml:mo>=</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">1</mml:mi><mml:mo>&#x02212;</mml:mo><mml:mi mathvariant="normal">SIC</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>&#x022c5;</mml:mo><mml:mi mathvariant="normal">LW</mml:mi><mml:msup><mml:mrow><mml:mi>&#x02191;</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">ocean</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msup><mml:mo>+</mml:mo><mml:mi mathvariant="normal">SIC</mml:mi><mml:mo>&#x022c5;</mml:mo><mml:mi mathvariant="normal">LW</mml:mi><mml:msup><mml:mrow><mml:mi>&#x02191;</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">sea-ice</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msup></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ4.gif" position="anchor"/></alternatives></disp-formula>If we assume the ocean surface with temperature of <inline-formula id="IEq77"><alternatives><tex-math id="M161">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$-{2}^{\circ }\ {\rm{C}}$$\end{document}</tex-math><mml:math id="M162"><mml:mo>&#x02212;</mml:mo><mml:msup><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02218;</mml:mo></mml:mrow></mml:msup><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq77.gif"/></alternatives></inline-formula> and emissivity of 0.98, then by following the Stefan-Boltzman law we obtain<disp-formula id="Equ5"><label>5</label><alternatives><tex-math id="M163">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{LW}}{\uparrow }^{({\rm{ocean}})}=0.98\cdot \sigma \cdot 271.1{5}^{4}\cdot$$\end{document}</tex-math><mml:math id="M164"><mml:mi mathvariant="normal">LW</mml:mi><mml:msup><mml:mrow><mml:mi>&#x02191;</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">ocean</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msup><mml:mo>=</mml:mo><mml:mn>0.98</mml:mn><mml:mo>&#x022c5;</mml:mo><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x022c5;</mml:mo><mml:mn>271.1</mml:mn><mml:msup><mml:mrow><mml:mn>5</mml:mn></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msup><mml:mo>&#x022c5;</mml:mo></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ5.gif" position="anchor"/></alternatives></disp-formula>Thus, combining the Eqs. (<xref rid="Equ1" ref-type="">1</xref>), (<xref rid="Equ4" ref-type="">4</xref>), and (<xref rid="Equ5" ref-type="">5</xref>), the skin temperature of the ice covered part of the grid-cell is derived as follows:<disp-formula id="Equ6"><label>6</label><alternatives><tex-math id="M165">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{skin}}}^{({\rm{sea-ice}})}={\left[\frac{{{\mathrm{SIC}}}^{-1}\left({\mathrm{LW}}{\uparrow} -({\mathrm{1}}-{\mathrm{SIC}}){\mathrm{LW}}{\uparrow }^{({\rm{ocean}})}\right)-({\mathrm{1}}-{\varepsilon }_{{\rm{s}}}){\mathrm{LW}}{\downarrow}}{{\varepsilon }_{{\rm{s}}}\sigma }\right]}^{\frac{1}{4}}$$\end{document}</tex-math><mml:math id="M166"><mml:msubsup><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">sea-ice</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mfenced close="]" open="[" separators=""><mml:mrow><mml:mfrac><mml:mrow><mml:msup><mml:mrow><mml:mi mathvariant="normal">SIC</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mfenced close=")" open="(" separators=""><mml:mrow><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02191;</mml:mi><mml:mo>&#x02212;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">1</mml:mi><mml:mo>&#x02212;</mml:mo><mml:mi mathvariant="normal">SIC</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi mathvariant="normal">LW</mml:mi><mml:msup><mml:mrow><mml:mi>&#x02191;</mml:mi></mml:mrow><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">ocean</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:msup></mml:mrow></mml:mfenced><mml:mo>&#x02212;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi mathvariant="normal">1</mml:mi><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>&#x003b5;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02193;</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>&#x003b5;</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mi>&#x003c3;</mml:mi></mml:mrow></mml:mfrac></mml:mrow></mml:mfenced></mml:mrow><mml:mrow><mml:mfrac><mml:mrow><mml:mn>1</mml:mn></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:mfrac></mml:mrow></mml:msup></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ6.gif" position="anchor"/></alternatives></disp-formula></p></sec><sec id="Sec10"><title>Surface energy budget and surface temperature</title><p id="Par34">The energy budget of the surface layer, or the net-energy transfer <inline-formula id="IEq78"><alternatives><tex-math id="M167">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${F}_{{\rm{sfc}}}$$\end{document}</tex-math><mml:math id="M168"><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">sfc</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq78.gif"/></alternatives></inline-formula> between the atmosphere and the ocean can be written as<sup><xref ref-type="bibr" rid="CR9">9</xref>,<xref ref-type="bibr" rid="CR13">13</xref></sup><disp-formula id="Equ7"><label>7</label><alternatives><tex-math id="M169">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${F}_{{\rm{sfc}}}={C}_{{\rm{t}}}\frac{\partial {T}_{{\rm{s}}}}{\partial t}-C=\left(1-{i}_{0}\right)\left(1-\alpha \right){\mathrm{SW}}{\downarrow} +{\mathrm{LW}}{\downarrow} +{\mathrm{LW}}{\uparrow} +Q$$\end{document}</tex-math><mml:math id="M170"><mml:msub><mml:mrow><mml:mi>F</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">sfc</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">t</mml:mi></mml:mrow></mml:msub><mml:mfrac><mml:mrow><mml:mi>&#x02202;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:mi>&#x02202;</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>&#x02212;</mml:mo><mml:mi>C</mml:mi><mml:mo>=</mml:mo><mml:mfenced close=")" open="(" separators=""><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:mrow></mml:mfenced><mml:mfenced close=")" open="(" separators=""><mml:mrow><mml:mn>1</mml:mn><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003b1;</mml:mi></mml:mrow></mml:mfenced><mml:mi mathvariant="normal">SW</mml:mi><mml:mi>&#x02193;</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02193;</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02191;</mml:mi><mml:mo>+</mml:mo><mml:mi>Q</mml:mi></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ7.gif" position="anchor"/></alternatives></disp-formula>where <inline-formula id="IEq79"><alternatives><tex-math id="M171">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${C}_{{\rm{t}}}$$\end{document}</tex-math><mml:math id="M172"><mml:msub><mml:mrow><mml:mi>C</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">t</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq79.gif"/></alternatives></inline-formula> is the thermal resistance of the surface layer, <inline-formula id="IEq80"><alternatives><tex-math id="M173">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$C$$\end{document}</tex-math><mml:math id="M174"><mml:mi>C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq80.gif"/></alternatives></inline-formula> is the the conduction of heat from the ocean through the sea-ice/snow to the atmosphere, <inline-formula id="IEq81"><alternatives><tex-math id="M175">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${i}_{0}$$\end{document}</tex-math><mml:math id="M176"><mml:msub><mml:mrow><mml:mi>i</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq81.gif"/></alternatives></inline-formula> denotes the part of the downwelling shortwave radiation that penetrated through the surface layer, <inline-formula id="IEq82"><alternatives><tex-math id="M177">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\alpha$$\end{document}</tex-math><mml:math id="M178"><mml:mi>&#x003b1;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq82.gif"/></alternatives></inline-formula> is the surface albedo, <inline-formula id="IEq83"><alternatives><tex-math id="M179">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\mathrm{SW}}{\downarrow}$$\end{document}</tex-math><mml:math id="M180"><mml:mi mathvariant="normal">SW</mml:mi><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq83.gif"/></alternatives></inline-formula> is the surface downwelling short-wave radiation flux, LW<inline-formula id="IEq84"><alternatives><tex-math id="M181">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\downarrow$$\end{document}</tex-math><mml:math id="M182"><mml:mi>&#x02193;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq84.gif"/></alternatives></inline-formula> is the surface downwelling longwave radiation flux, LW<inline-formula id="IEq85"><alternatives><tex-math id="M183">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\uparrow$$\end{document}</tex-math><mml:math id="M184"><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq85.gif"/></alternatives></inline-formula> is the surface upwelling long-wave radiation flux, <inline-formula id="IEq86"><alternatives><tex-math id="M185">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$Q$$\end{document}</tex-math><mml:math id="M186"><mml:mi>Q</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq86.gif"/></alternatives></inline-formula> is the turbulent flux of sensible and latent heat. In the polar night conditions the downwelling shortwave radiation flux is very small and could be neglected from the Eq. (<xref rid="Equ7" ref-type="">7</xref>). The conductive flux from the ocean to the snow surface is not directly observed. However, we can estimate it as<disp-formula id="Equ8"><label>8</label><alternatives><tex-math id="M187">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$C=\frac{{k}_{{\rm{i}}}\cdot {k}_{{\rm{s}}}}{{k}_{{\rm{s}}}\cdot {h}_{{\rm{i}}}+{k}_{{\rm{i}}}\cdot {h}_{{\rm{s}}}}({T}_{{\rm{o}}}-{T}_{{\rm{skin}}})$$\end{document}</tex-math><mml:math id="M188"><mml:mi>C</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">o</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ8.gif" position="anchor"/></alternatives></disp-formula>where <inline-formula id="IEq87"><alternatives><tex-math id="M189">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${T}_{{\rm{o}}}$$\end{document}</tex-math><mml:math id="M190"><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">o</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq87.gif"/></alternatives></inline-formula> is the surface ocean temperature, <inline-formula id="IEq88"><alternatives><tex-math id="M191">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{{\rm{s}}}$$\end{document}</tex-math><mml:math id="M192"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq88.gif"/></alternatives></inline-formula> is the thermal conductivity of snow, and <inline-formula id="IEq89"><alternatives><tex-math id="M193">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${h}_{{\rm{s}}}$$\end{document}</tex-math><mml:math id="M194"><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq89.gif"/></alternatives></inline-formula> is the thickness of the snow layer on top of sea-ice. For the thermal conductivity of snow and sea-ice we assume, <inline-formula id="IEq90"><alternatives><tex-math id="M195">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{{\rm{s}}}=0.31\ {\mathrm{W}}{{\mathrm{m}}}^{-1} \, {{\mathrm{K}}}^{-1}$$\end{document}</tex-math><mml:math id="M196"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>0.31</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mspace width="0.25em"/><mml:msup><mml:mrow><mml:mi mathvariant="normal">K</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq90.gif"/></alternatives></inline-formula> and <inline-formula id="IEq91"><alternatives><tex-math id="M197">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{{\rm{i}}}=2.1\ {\mathrm{W}}{{\mathrm{m}}}^{-1} \, {{\mathrm{K}}}^{-1}$$\end{document}</tex-math><mml:math id="M198"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>2.1</mml:mn><mml:mspace width="0.33em"/><mml:mi mathvariant="normal">W</mml:mi><mml:msup><mml:mrow><mml:mi mathvariant="normal">m</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup><mml:mspace width="0.25em"/><mml:msup><mml:mrow><mml:mi mathvariant="normal">K</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq91.gif"/></alternatives></inline-formula>, respectively. Note that Eq. (<xref rid="Equ8" ref-type="">8</xref>) implies steady linear temperature profile within the sea-ice layer. This assumption is not generally correct in case of rapid changes of weather conditions or multilayer sea-ice schemes, especially when snow and ice layers are of considerable thickness. However, taking into account minor variability of weather conditions during a single polar night CSE, Eq. (<xref rid="Equ8" ref-type="">8</xref>) could provide a simple first-order estimate of the real conductive heat flux.</p><p id="Par35">If we assume that a variation <inline-formula id="IEq92"><alternatives><tex-math id="M199">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta R$$\end{document}</tex-math><mml:math id="M200"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>R</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq92.gif"/></alternatives></inline-formula> in the net longwave radiation budget <inline-formula id="IEq93"><alternatives><tex-math id="M201">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$R={\mathrm{LW}}{\downarrow} +{\mathrm{LW}}{\uparrow}$$\end{document}</tex-math><mml:math id="M202"><mml:mi>R</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02193;</mml:mi><mml:mo>+</mml:mo><mml:mi mathvariant="normal">LW</mml:mi><mml:mi>&#x02191;</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq93.gif"/></alternatives></inline-formula> balances the changes in the conductive heat flux <inline-formula id="IEq94"><alternatives><tex-math id="M203">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta C$$\end{document}</tex-math><mml:math id="M204"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq94.gif"/></alternatives></inline-formula> induced by errors in snow thickness <inline-formula id="IEq95"><alternatives><tex-math id="M205">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta {h}_{{\rm{s}}}$$\end{document}</tex-math><mml:math id="M206"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq95.gif"/></alternatives></inline-formula> and sea ice thickness <inline-formula id="IEq96"><alternatives><tex-math id="M207">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta {h}_{{\rm{i}}}$$\end{document}</tex-math><mml:math id="M208"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq96.gif"/></alternatives></inline-formula>, we can write <inline-formula id="IEq97"><alternatives><tex-math id="M209">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta R=\Delta C$$\end{document}</tex-math><mml:math id="M210"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>R</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>C</mml:mi></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq97.gif"/></alternatives></inline-formula>. For the radiation we yield<disp-formula id="Equ9"><label>9</label><alternatives><tex-math id="M211">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta R=R({T}_{{\rm{s}}}+\Delta {T}_{{\rm{s}}})-R({T}_{{\rm{s}}})=\varepsilon \sigma \cdot {({T}_{{\rm{s}}}+\Delta {T}_{{\rm{s}}})}^{4}-\varepsilon \sigma {T}_{{\rm{s}}}^{4}\approx 4\varepsilon \sigma {T}_{{\rm{s}}}^{3}\cdot \Delta {T}_{{\rm{s}}}$$\end{document}</tex-math><mml:math id="M212"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>R</mml:mi><mml:mo>=</mml:mo><mml:mi>R</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mi>R</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mi>&#x003b5;</mml:mi><mml:mi>&#x003c3;</mml:mi><mml:mo>&#x022c5;</mml:mo><mml:msup><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msup><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003b5;</mml:mi><mml:mi>&#x003c3;</mml:mi><mml:msubsup><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow><mml:mrow><mml:mn>4</mml:mn></mml:mrow></mml:msubsup><mml:mo>&#x02248;</mml:mo><mml:mn>4</mml:mn><mml:mi>&#x003b5;</mml:mi><mml:mi>&#x003c3;</mml:mi><mml:msubsup><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msubsup><mml:mo>&#x022c5;</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ9.gif" position="anchor"/></alternatives></disp-formula>with <inline-formula id="IEq98"><alternatives><tex-math id="M213">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta {T}_{{\rm{s}}}$$\end{document}</tex-math><mml:math id="M214"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41467_2019_11975_Article_IEq98.gif"/></alternatives></inline-formula> being the induced temperature bias. And the variation of the conductive heat flux is defined as<disp-formula id="Equ10"><label>10</label><alternatives><tex-math id="M215">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta C=C({T}_{{\rm{s}}}+\Delta {T}_{{\rm{s}}},{h}_{{\rm{i}}}+\Delta {h}_{{\rm{i}}},{h}_{{\rm{s}}}+\Delta {h}_{{\rm{s}}})-C({T}_{{\rm{s}}},{h}_{{\rm{i}}},{h}_{{\rm{s}}})$$\end{document}</tex-math><mml:math id="M216"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mi>C</mml:mi><mml:mo>=</mml:mo><mml:mi>C</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mi>C</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ10.gif" position="anchor"/></alternatives></disp-formula><disp-formula id="Equ11"><label>11</label><alternatives><tex-math id="M217">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$=\alpha {\prime} \cdot ({T}_{{\rm{o}}}+\Delta {T}_{{\rm{s}}}-{T}_{{\rm{skin}}})-\alpha \cdot ({T}_{{\rm{o}}}-{T}_{{\rm{skin}}})$$\end{document}</tex-math><mml:math id="M218"><mml:mo>=</mml:mo><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mo>&#x022c5;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">o</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x022c5;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">o</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">skin</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ11.gif" position="anchor"/></alternatives></disp-formula>where<disp-formula id="Equ12"><label>12</label><alternatives><tex-math id="M219">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\alpha \equiv \frac{{k}_{{\rm{i}}}\cdot {k}_{{\rm{s}}}}{{k}_{{\rm{s}}}\cdot {h}_{{\rm{i}}}+{k}_{{\rm{i}}}\cdot {h}_{{\rm{s}}}}$$\end{document}</tex-math><mml:math id="M220"><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x02261;</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:mfrac></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ12.gif" position="anchor"/></alternatives></disp-formula><disp-formula id="Equ13"><label>13</label><alternatives><tex-math id="M221">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\alpha {\prime} \equiv \frac{{k}_{{\rm{i}}}\cdot {k}_{{\rm{s}}}}{{k}_{{\rm{s}}}\cdot ({h}_{{\rm{i}}}+\Delta {h}_{{\rm{i}}})+{k}_{{\rm{i}}}\cdot ({h}_{{\rm{s}}}+\Delta {h}_{{\rm{s}}})}$$\end{document}</tex-math><mml:math id="M222"><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mo>&#x02261;</mml:mo><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x022c5;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>h</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:mfrac></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ13.gif" position="anchor"/></alternatives></disp-formula>Thus, we derive the temperature bias induced by changes in snow and sea-ice thickness during clear sky conditions as<disp-formula id="Equ14"><label>14</label><alternatives><tex-math id="M223">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\Delta {T}_{{\rm{s}}}=\frac{(\alpha {\prime} -\alpha)\cdot ({T}_{{\rm{s}}}-{T}_{{\rm{o}}})}{4\varepsilon \sigma {T}_{{\rm{s}}}^{3}-\alpha {\prime} }.$$\end{document}</tex-math><mml:math id="M224"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003b1;</mml:mi></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>&#x022c5;</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mrow><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">o</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow><mml:mrow><mml:mn>4</mml:mn><mml:mi>&#x003b5;</mml:mi><mml:mi>&#x003c3;</mml:mi><mml:msubsup><mml:mrow><mml:mi>T</mml:mi></mml:mrow><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow><mml:mrow><mml:mn>3</mml:mn></mml:mrow></mml:msubsup><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x02032;</mml:mo></mml:mrow></mml:mfrac><mml:mo>.</mml:mo></mml:math><graphic xlink:href="41467_2019_11975_Article_Equ14.gif" position="anchor"/></alternatives></disp-formula></p></sec></sec><sec sec-type="supplementary-material"><title>Supplementary information</title><sec id="Sec12"><p>
+<supplementary-material content-type="local-data" id="MOESM1"><media xlink:href="41467_2019_11975_MOESM1_ESM.pdf"><caption><p>Peer Review File</p></caption></media></supplementary-material>
+</p></sec></sec></body><back><fn-group><fn><p><bold>Peer review information</bold><italic> Nature Communications</italic> thanks Caixin Wang and other, anonymous, reviewer(s) for their contribution to the peer review of this work. Peer reviewer reports are available.</p></fn><fn><p><bold>Publisher&#x02019;s note</bold> Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></fn></fn-group><sec><title>Supplementary information</title><p><bold>Supplementary Information</bold> accompanies this paper at 10.1038/s41467-019-11975-3.</p></sec><ack><title>Acknowledgements</title><p>The authors would like to thank Wesley Ebisuzaki, Shinya Kobayashi, Ron Gelaro, and Richard Cullather for their valuable comments concerning the details of representation of the sea-ice cover in the reanalysis systems. We acknowledge the open data policy of the N-ICE project. This research was funded by the Research Council of Norway through the Nansen Legacy project (NFR-276730). This is a contribution to the Year of Polar Prediction (YOPP), a flagship activity of the Polar Prediction Project (PPP), initiated by the World Weather Research Programme (WWRP) of the World Meteorological Organization (WMO).</p></ack><notes notes-type="author-contribution"><title>Author contributions</title><p>The main idea was developed by Y.B. and M.M. Y.B. developed, designed, and performed the snow on sea-ice model experiments, and produced the figures. M.M. performed the analysis of the observations, model experiments, and reanalysis products. Both authors contributed to the discussions, interpretation of the results and writing the paper.</p></notes><notes notes-type="data-availability"><title>Data availability</title><p>The data from the N-ICE 2015 drift is available at the Norwegian Polar Data Centre (10.21334/npolar.2016.7f7e56d0). The sea-ice surface temperature satellite data product set is available from the Copernicus Marine Environmental Monitoring Service (<ext-link ext-link-type="uri" xlink:href="http://marine.copernicus.eu">http://marine.copernicus.eu</ext-link>). The reanalysis products are accessible via the respective dissemination units. Data generated and analysed during the current study are available from the corresponding author on reasonable request.</p></notes><notes notes-type="data-availability"><title>Code availability</title><p>ALADIN-HIRLAM numerical weather&#x000a0;prediction system is developed in cooperation between the ALADIN and HIRLAM consortia and not available to general public. A copy of the source code of the ALADIN-HIRLAM numerical weather prediction system could be obtained for non-commercial research purposes from a member institution of ALADIN or HIRLAM consortium in applicant&#x02019;s country after signing a standardised license agreement (<ext-link ext-link-type="uri" xlink:href="http://www.hirlam.org/index.php/hirlam-programme-53/access-to-the-models">http://www.hirlam.org/index.php/hirlam-programme-53/access-to-the-models</ext-link>).</p></notes><notes notes-type="COI-statement"><title>Competing interests</title><p id="Par37">The authors declare no competing interests.</p></notes><ref-list id="Bib1"><title>References</title><ref id="CR1"><label>1.</label><mixed-citation publication-type="other">Emmerson, C. &#x00026; Lahn, G. Arctic opening: opportunity and risk in the high north Chatham House-Lloydas Risk Insight Report (2012).</mixed-citation></ref><ref id="CR2"><label>2.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Boeke</surname><given-names>RC</given-names></name><name><surname>Taylor</surname><given-names>PC</given-names></name></person-group><article-title>Evaluation of the Arctic surface radiation budget in CMIP5 models</article-title><source>J. Geophys. Res.</source><year>2016</year><volume>121</volume><fpage>8525</fpage><lpage>8548</lpage></element-citation></ref><ref id="CR3"><label>3.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Jung</surname><given-names>T</given-names></name><etal/></person-group><article-title>Advancing polar prediction capabilities on daily to seasonal time scales</article-title><source>Bull. Amer. Math. Soc.</source><year>2016</year><volume>97</volume><fpage>1631</fpage><lpage>1647</lpage><pub-id pub-id-type="doi">10.1175/BAMS-D-14-00246.1</pub-id></element-citation></ref><ref id="CR4"><label>4.</label><mixed-citation publication-type="other">Sorteberg, A. Kattsov, V. Walsh, J. &#x00026; Pavlova, T. The Arctic surface energy budget as simulated with the IPCC AR4 AOGCMs. <italic>Clim</italic>. <italic>Dyn</italic>. <bold>29</bold>, 131&#x02013;156 (2007).</mixed-citation></ref><ref id="CR5"><label>5.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Tjernstr&#x000f6;m</surname><given-names>M</given-names></name><name><surname>Graversen</surname><given-names>RG</given-names></name></person-group><article-title>The vertical structure of the lower Arctic troposphere analysed from observations and the ERA-40 reanalysis</article-title><source>Q. J. R. Meteorol. Soc.</source><year>2009</year><volume>135</volume><fpage>431</fpage><lpage>443</lpage><pub-id pub-id-type="doi">10.1002/qj.380</pub-id></element-citation></ref><ref id="CR6"><label>6.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Jakobson</surname><given-names>E</given-names></name><etal/></person-group><article-title>Validation of atmospheric reanalyses over the central Arctic Ocean</article-title><source>Geophys. Res. Let.</source><year>2012</year><volume>39</volume><fpage>L10802</fpage></element-citation></ref><ref id="CR7"><label>7.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Lindsay</surname><given-names>R</given-names></name><name><surname>Wensnahan</surname><given-names>M</given-names></name><name><surname>Schweiger</surname><given-names>A</given-names></name><name><surname>Zhang</surname><given-names>J</given-names></name></person-group><article-title>Evaluation of seven different atmospheric reanalysis products in the Arctic</article-title><source>J. Climate</source><year>2014</year><volume>27</volume><fpage>2588</fpage><lpage>2606</lpage><pub-id pub-id-type="doi">10.1175/JCLI-D-13-00014.1</pub-id></element-citation></ref><ref id="CR8"><label>8.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Overland</surname><given-names>JE</given-names></name><name><surname>Guest</surname><given-names>PS</given-names></name></person-group><article-title>The Arctic snow and air temperature budget over sea ice during winter</article-title><source>J. Geophys. Res.</source><year>1996</year><volume>96</volume><fpage>4651</fpage><lpage>4662</lpage><pub-id pub-id-type="doi">10.1029/90JC02264</pub-id></element-citation></ref><ref id="CR9"><label>9.</label><mixed-citation publication-type="other">Serreze, M. C. et al. The large-scale energy budget of the Arctic. <italic>J. Geophys</italic>. <italic>Res.</italic><bold>112</bold>,&#x000a0;D11122 (2007).</mixed-citation></ref><ref id="CR10"><label>10.</label><mixed-citation publication-type="other">Granskog, M. A. et al. Arctic research on thin ice: Consequences of Arctic sea ice loss <italic>Eos</italic><italic>Trans.</italic><bold>97</bold>, 22&#x02013;26 (2016).</mixed-citation></ref><ref id="CR11"><label>11.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Cohen</surname><given-names>L</given-names></name><name><surname>Hudson</surname><given-names>SR</given-names></name><name><surname>Walden</surname><given-names>VP</given-names></name><name><surname>Graham</surname><given-names>RM</given-names></name><name><surname>Granskog</surname><given-names>MA</given-names></name></person-group><article-title>Meteorological conditions in a thinner arctic sea ice regime from winter to summer during the Norwegian Young Sea Ice expedition (N-ICE2015)</article-title><source>J. Geophys. Res.</source><year>2017</year><volume>122</volume><fpage>7235</fpage><lpage>7259</lpage></element-citation></ref><ref id="CR12"><label>12.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kayser</surname><given-names>M</given-names></name><etal/></person-group><article-title>Vertical thermodynamic structure of the troposphere during the Norwegian young sea ICE expedition (N-ICE2015)</article-title><source>J. Geophys. Res.</source><year>2017</year><volume>122</volume><fpage>10,855</fpage><lpage>10,872</lpage></element-citation></ref><ref id="CR13"><label>13.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Walden</surname><given-names>VP</given-names></name><name><surname>Hudson</surname><given-names>SR</given-names></name><name><surname>Cohen</surname><given-names>L</given-names></name><name><surname>Murphy</surname><given-names>SY</given-names></name><name><surname>Granskog</surname><given-names>MA</given-names></name></person-group><article-title>Atmospheric components of the surface energy budget over young sea ice: results from the NICE2015 campaign</article-title><source>J. Geophys. Res.</source><year>2017</year><volume>122</volume><fpage>8427</fpage><lpage>8446</lpage><pub-id pub-id-type="doi">10.1002/2017JC012854</pub-id></element-citation></ref><ref id="CR14"><label>14.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>H&#x000f8;yer</surname><given-names>JL</given-names></name><name><surname>P. Le Borgne</surname><given-names>P</given-names></name><name><surname>Eastwood</surname><given-names>S</given-names></name></person-group><article-title>A bias correction method for arctic satellite sea surface temperature observations</article-title><source>Remote Sens. of Environ.</source><year>2014</year><volume>146</volume><fpage>201</fpage><lpage>213</lpage><pub-id pub-id-type="doi">10.1016/j.rse.2013.04.020</pub-id></element-citation></ref><ref id="CR15"><label>15.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bengtsson</surname><given-names>L</given-names></name><etal/></person-group><article-title>The HARMONIE-AROME model configuration in the ALADIN-HIRLAM NWP system</article-title><source>Mon. Wea. Rev.</source><year>2017</year><volume>145</volume><fpage>1919</fpage><lpage>1935</lpage><pub-id pub-id-type="doi">10.1175/MWR-D-16-0417.1</pub-id></element-citation></ref><ref id="CR16"><label>16.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bauer</surname><given-names>P</given-names></name><name><surname>Magnusson</surname><given-names>L</given-names></name><name><surname>Th&#x000e9;paut</surname><given-names>J-N</given-names></name><name><surname>Hamill</surname><given-names>TM</given-names></name></person-group><article-title>Aspects of ECMWF model performance in polar areas</article-title><source>Q. J. R. Meteorol. Soc.</source><year>2016</year><volume>142</volume><fpage>583</fpage><lpage>596</lpage><pub-id pub-id-type="doi">10.1002/qj.2449</pub-id></element-citation></ref><ref id="CR17"><label>17.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dee</surname><given-names>D</given-names></name></person-group><article-title>The ERA&#x02010;Interim reanalysis: configuration and performance of the data assimilation system</article-title><source>Q. J. R. Meteorol. Soc.</source><year>2005</year><volume>131</volume><fpage>3323</fpage><lpage>334</lpage><pub-id pub-id-type="doi">10.1256/qj.05.137</pub-id></element-citation></ref><ref id="CR18"><label>18.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Gelaro</surname><given-names>R</given-names></name><etal/></person-group><article-title>The modern-era retrospective analysis for research and applications, Version 2 (MERRA-2)</article-title><source>J. Climate</source><year>2017</year><volume>30</volume><fpage>5419</fpage><lpage>5454</lpage><pub-id pub-id-type="doi">10.1175/JCLI-D-16-0758.1</pub-id></element-citation></ref><ref id="CR19"><label>19.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kobayashi</surname><given-names>S</given-names></name><etal/></person-group><article-title>The JRA-55 reanalysis: general specifications and basic characteristics</article-title><source>J. Meteorol. Soc. Jpn. Ser. II</source><year>2015</year><volume>93</volume><fpage>5</fpage><lpage>48</lpage><pub-id pub-id-type="doi">10.2151/jmsj.2015-001</pub-id></element-citation></ref><ref id="CR20"><label>20.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kanamitsu</surname><given-names>M</given-names></name><etal/></person-group><article-title>NCEP-DOE AMIP-II reanalysis (R-2)</article-title><source>Bull. Am. Math. Soc.</source><year>2002</year><volume>83</volume><fpage>1631</fpage><lpage>1644</lpage><pub-id pub-id-type="doi">10.1175/BAMS-83-11-1631</pub-id></element-citation></ref><ref id="CR21"><label>21.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Merkouriadi</surname><given-names>I</given-names></name><name><surname>Cheng</surname><given-names>B</given-names></name><name><surname>Graham</surname><given-names>RM</given-names></name><name><surname>R&#x000f6;sel</surname><given-names>A</given-names></name><name><surname>Granskog</surname><given-names>MA</given-names></name></person-group><article-title>Critical role of snow on sea ice growth in the Atlantic sector of the Arctic Ocean</article-title><source>Geophys. Res. Lett.</source><year>2017</year><volume>44</volume><fpage>10479</fpage><lpage>10485</lpage><pub-id pub-id-type="doi">10.1002/2017GL075494</pub-id></element-citation></ref><ref id="CR22"><label>22.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Xie</surname><given-names>J</given-names></name><name><surname>Bertino</surname><given-names>L</given-names></name><name><surname>Counillon</surname><given-names>F</given-names></name><name><surname>Lis&#x000e6;ter</surname><given-names>KA</given-names></name><name><surname>Sakov</surname><given-names>P</given-names></name></person-group><article-title>Quality assessment of the TOPAZ4 reanalysis in the Arctic over the period 1991&#x02013;2013</article-title><source>Ocean Sci.</source><year>2017</year><volume>13</volume><fpage>123</fpage><lpage>144</lpage><pub-id pub-id-type="doi">10.5194/os-13-123-2017</pub-id></element-citation></ref><ref id="CR23"><label>23.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hegyi</surname><given-names>BM</given-names></name><name><surname>Taylor</surname><given-names>PC</given-names></name></person-group><article-title>The unprecedented 2016&#x02013;2017 Arctic sea ice growth season: the crucial role of atmospheric rivers and longwave fluxes</article-title><source>Geophys. Res. Lett.</source><year>2018</year><volume>45</volume><fpage>5204</fpage><lpage>5212</lpage><pub-id pub-id-type="doi">10.1029/2017GL076717</pub-id></element-citation></ref><ref id="CR24"><label>24.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Uotila</surname><given-names>P</given-names></name><etal/></person-group><article-title>An assessment of ten ocean reanalyses in the polar regions</article-title><source>Clim. Dynamics</source><year>2018</year><volume>52</volume><fpage>1613</fpage><lpage>1650</lpage><pub-id pub-id-type="doi">10.1007/s00382-018-4242-z</pub-id></element-citation></ref><ref id="CR25"><label>25.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dee</surname><given-names>DP</given-names></name><etal/></person-group><article-title>The ERA-Interim reanalysis: configuration and performance of the data assimilation system</article-title><source>Q. J. R. Meteorol. Soc.</source><year>2011</year><volume>137</volume><fpage>553</fpage><lpage>597</lpage><pub-id pub-id-type="doi">10.1002/qj.828</pub-id></element-citation></ref><ref id="CR26"><label>26.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>M&#x000fc;ller</surname><given-names>M</given-names></name><etal/></person-group><article-title>Characteristics of a convective-scale weather forecasting system for the European Arctic</article-title><source>Mon. Wea. Rev.</source><year>2017</year><volume>145</volume><fpage>4771</fpage><lpage>4787</lpage><pub-id pub-id-type="doi">10.1175/MWR-D-17-0194.1</pub-id></element-citation></ref><ref id="CR27"><label>27.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Batrak</surname><given-names>Y</given-names></name><name><surname>Kourzeneva</surname><given-names>E</given-names></name><name><surname>Homleid</surname><given-names>M</given-names></name></person-group><article-title>Implementation of a simple thermodynamic sea ice scheme, SICE version 1.0-38h1, within the ALADIN-HIRLAM numerical weather prediction system version 38h1</article-title><source>Geosci. Model Dev.</source><year>2018</year><volume>11</volume><fpage>3347</fpage><lpage>3368</lpage><pub-id pub-id-type="doi">10.5194/gmd-11-3347-2018</pub-id></element-citation></ref><ref id="CR28"><label>28.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Cheng</surname><given-names>B</given-names></name><name><surname>Launiainen</surname><given-names>J</given-names></name></person-group><article-title>A one-dimensional thermodynamic air-ice-water model: technical and algorithm description report</article-title><source>Finnish Institute Marine Res.</source><year>1998</year><volume>37</volume><fpage>15</fpage><lpage>36</lpage></element-citation></ref></ref-list></back></article>

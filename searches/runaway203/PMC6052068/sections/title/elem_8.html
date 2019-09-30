@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="sec" title="sec">
+      <div xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Ice-sheet model forcing</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">Surface temperature, precipitation, ocean temperature and topography (Supplementary
+            Fig. 
+            <a>1</a>) were taken from results of the coupled-atmosphere ocean climate simulations run
+            as part of the PlioMIP project. Full details for the experimental design of PlioMIP
+            can be found in ref. 
+            <span><a>27</a></span>. Briefly it involved the implementation of PRISM3 boundary conditions
+            <span><a>26</a></span> in IPCC AR4 class general circulation models (GCMs). PRISM3 boundary conditions included
+            increased atmospheric CO
+            <sub>2</sub> concentrations, an altered palaeogeography, including changes to the land-sea mask
+            (LSM), a changed vegetation cover
+            <span><a>55</a></span> and altered Pliocene ice-sheet configurations. In PRISM3 West Antarctica is deglaciated
+            and East Antarctica is retreated beyond the marine portions of the Wilkes and Aurora
+            SGB
+            <span><a>56</a></span>. Where possible, modelling groups were asked to alter their LSM to allow for a West
+            Antarctic Seaway. More details of the seven GCMs that have been used in this study
+            and their implementation of the PRISM3 boundary conditions can be found in Supplementary
+            Table 
+            <a>1</a> and the references therein.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Experimental design PLISMIP</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">The experimental design of the simulations follows the same criteria as outlined in
+            ref. 
+            <span><a>27</a></span> and presented in ref. 
+            <span><a>28</a></span>. Here, we ran simulations with three different ice-sheet model focussing on the equilibrium
+            response of the ice-sheet to seven different climate models from the PlioMIP ensemble
+            <span><a>1</a></span>. An ensemble of simulations was performed for three different scenarios. The first
+            scenario was a control experiment with climate forcings from the GCMs that were run
+            with pre-industrial boundary conditions. The second was a Pliocene
+            <sub>Ice-PRISM3</sub> experiment with climate forcings from the GCMs that were run with Pliocene boundary
+            conditions. The ice-sheet models were initialised with the PRISM3 ice-sheet topography
+            <span><a>28</a></span>. The final scenario was a Pliocene
+            <sub>Ice-PD</sub> experiment with climate forcings from the GCMs that were run with Pliocene boundary
+            conditions. The ice-sheet models were initialised with the PD ice-sheet topography
+            from Bedmap2
+            <span><a>39</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">The seven Atmosphere-Ocean GCMs that we use here are outlined in Supplementary Table 
+            <a>1</a>. For all simulations, an initial spin-up procedure for ice-sheet temperatures is
+            employed for which ice-sheet topography and surface temperature of the ice-sheet stay
+            constant over 100 000 years. For the subsequent 100 000 year equilibrium run, the
+            surface temperature from the GCM is corrected with a lapse rate of −8 °C km
+            <span>−1</span> for the difference between the modelled surface elevation and the reference topography
+            in the GCM:
+            
+            <div><span>1</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                     \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                     \setlength{\oddsidemargin}{-69pt} \begin{document}$$T_{{\mathrm{surf}}}\left( t \right)
+                     = T_{{\mathrm{GCM}}} - 0.008 \times \left( {H_{{\mathrm{surf}}}\left( t \right) -
+                     H_{{\mathrm{GCM}}}} \right).$$\end{document}</span><div>
+                     <div>
+                        <div><span>T</span></div>
+                        <div><span>surf</span></div>
+                     </div>
+                     <div>
+                        <div><span>t</span></div>
+                     </div><span>=</span><div>
+                        <div><span>T</span></div>
+                        <div><span>GCM</span></div>
+                     </div><span>-</span><span>0.008</span><span>×</span><div>
+                        <div>
+                           <div>
+                              <div><span>H</span></div>
+                              <div><span>surf</span></div>
+                           </div>
+                           <div>
+                              <div><span>t</span></div>
+                           </div><span>-</span><div>
+                              <div><span>H</span></div>
+                              <div><span>GCM</span></div>
+                           </div>
+                        </div>
+                     </div><span>.</span></div>
+                  <div></div>
+               </div>
+            </div>
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Here, 
+            <span>T</span><sub>surf</sub> is the temperature at the surface of the ice-sheet and 
+            <span>T</span><sub>GCM</sub> is the temperature of the GCM in °C. The surface elevation in metres of the ice-sheet
+            and of the GCM are given by 
+            <span>H</span><sub>surf</sub> and 
+            <span>H</span><sub>GCM</sub>, respectively. For all experiments, we use monthly averaged climatologies of the
+            GCMs. It should also be noted that the ISMs reached equilibrium after the first 30 000
+            years of the simulation.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Simulations with ANICE and SICOPOLIS are performed including land-based and floating
+            ice, whereas for the BASISM simulations only land ice is included in the simulations.
+            For land ice all three models include the shallow ice approximation (SIA), which approximates
+            the stress balance by only taking into account horizontal shear stress and lead to
+            velocities that are dependent on depth
+            <span><a>57</a></span>. On the contrary, for floating ice we apply the SSA that only includes longitudinal
+            stress and vertically independent horizontal velocities
+            <span><a>58</a></span>.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Interpolation of climate fields</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">All ice-sheet models are run on a 40 km by 40 km grid of 141 × 141 grid points. All
+            climate fields from the GCMs, i.e. surface-air temperature, precipitation, ocean temperature
+            and reference topography, are interpolated on the ice-sheet rectangular grid using
+            OBLIMAP v2.0. A polar stereographic projection is employed, using a central longitude
+            of 0°E and a standard parallel of 24.7°, i.e. a latitude of true scale of 65.3°S
+            <span><a>59</a></span>. For the 3-D ocean temperatures, we use a distance weighting scheme to extrapolate
+            temperatures to underneath the ice shelves, where ocean temperatures are largely unresolved
+            in the GCMs.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Assessment of GCM–ISM performance for the modern AIS</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">All of the control ISM simulations were assessed in terms of how well they reconstruct
+            the modern AIS (when compared to Bedmap2
+            <span><a>39</a></span> (see Supplementary Note 
+            <a>1</a> and Supplementary Figs. 
+            <a>7</a>–
+            <a>9</a>)). Additionally, we have considered each GCM individually to assess whether the predicted
+            volumes (from the three ISMs) fall within the range of the mean plus or minus the
+            standard deviation of the other models. If we assume a normal distribution, we would
+            expect, on average 68% of predicted volumes to fall within this range. In cases where
+            only one or no present-day simulations are within one standard deviation of the mean,
+            it suggests that this particular GCM is producing ice-sheets significantly different
+            from the others and is skewing the ensemble means (Supplementary Table 
+            <a>2</a> and 
+            <a>S3</a>). Where a GCM falls outside of the ensemble mean (±1 standard deviation) and also
+            demonstrates poor skill in reconstructing elements of either volume, area or ice-sheet
+            thickness the GCM has been excluded (see Supplementary Note 
+            <a>1</a>). Nevertheless, for completeness and to demonstrate the effect of including all GCM–ISM
+            combinations, all results are shown in Supplementary Figs. 
+            <a>11</a> to 
+            <a>13</a>.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Calculating contributions to sea level</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">The sea level contribution from each modelled ice-sheet is calculated after a run
+            is finished, summing the ice thickness above flotation and including a correction
+            for the change in bedrock topography:
+            
+            <div><span>2</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                     \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                     \setlength{\oddsidemargin}{-69pt} \begin{document}$$\Delta S = \left( {\mathop {\sum}\nolimits_{i,j}
+                     {Hi_{0{\mathrm{af}}} - Hi_{{\mathrm{af}}} + {\mathrm{min}}\left( {0,Hb} \right) -
+                     {\mathrm{min}}\left( {0,Hb_0} \right)} } \right) \\ \times 40000 \times 40000/O_{{\mathrm{area}}}.$$\end{document}</span><div><span>Δ</span><span>S</span><span>=</span><div>
+                        <div>
+                           <div>
+                              <div><span>∑</span></div>
+                              <div><span>i</span><span>,</span><span>j</span></div>
+                           </div><span>H</span><div>
+                              <div><span>i</span></div>
+                              <div><span>0</span><span>af</span></div>
+                           </div><span>-</span><span>H</span><div>
+                              <div><span>i</span></div>
+                              <div><span>af</span></div>
+                           </div><span>+</span><span>min</span><div>
+                              <div><span>0</span><span>,</span><span>H</span><span>b</span></div>
+                           </div><span>-</span><span>min</span><div>
+                              <div><span>0</span><span>,</span><span>H</span><div>
+                                    <div><span>b</span></div>
+                                    <div><span>0</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div><span>×</span><span>40000</span><span>×</span><span>40000</span><span>∕</span><div>
+                        <div><span>O</span></div>
+                        <div><span>area</span></div>
+                     </div><span>.</span></div>
+                  <div></div>
+               </div>
+            </div>
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Here, 
+            <span>Hi</span><sub>0af</sub> and 
+            <span>Hi</span><sub>af</sub> are the ice thickness above flotation for the initial Bedmap2 ice-sheet and the final
+            modelled ice-sheet in metres water equivalent, respectively:
+            
+            <div><span>3</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                     \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                     \setlength{\oddsidemargin}{-69pt} \begin{document}$$Hi_{{\mathrm{af}}} = \frac{{\rho
+                     _{\mathrm{i}}}}{{\rho _{\mathrm{w}}}}Hi + Hb.$$\end{document}</span><div><span>H</span><div>
+                        <div><span>i</span></div>
+                        <div><span>af</span></div>
+                     </div><span>=</span><div>
+                        <div>
+                           <div>
+                              <div><span>ρ</span></div>
+                              <div><span>i</span></div>
+                           </div>
+                        </div>
+                        <div>
+                           <div>
+                              <div><span>ρ</span></div>
+                              <div><span>w</span></div>
+                           </div>
+                        </div>
+                     </div><span>H</span><span>i</span><span>+</span><span>H</span><span>b</span><span>.</span></div>
+                  <div></div>
+               </div>
+            </div>
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml"><span>Hi</span> is the ice thickness in metres and 
+            <span>Hb</span> is the bedrock topography in metres below sea level. Parameters are given in Supplementary
+            Table 
+            <a>4</a>. Ice-sheet volumes and sea level contributions shown here include an area correction
+            following the methods described in ref. 
+            <span><a>60</a></span>.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">The ANICE ice-sheet model</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">The ANICE ice-sheet model is a 3-D thermo-mechanical finite difference ice-sheet model
+            and is part of the IMAU-ICE (Institute for Marine and Atmospheric Research Utrecht)
+            ice-sheet model package. The model we use here is the same version as has been used
+            in previous publications
+            <span><a>28</a>,
+               <a>61</a></span>. In ANICE, ice velocities are calculated on land with the SIA and uses the SSA for
+            sliding, i.e. ice streams and shelf velocities. A Mohr–Coulomb plastic law paramaterisation
+            is employed to derive basal stresses that are used to derive the SSA velocities on
+            land
+            <span><a>61</a>,
+               <a>62</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">The surface mass balance is determined with monthly fields of precipitation, temperature
+            and insolation at the top of the atmosphere. The precipitation is adjusted with surface
+            temperature. Surface melting is calculated with an insolation temperature melt model,
+            for which a linear relation is used for temperature combined with the net incoming
+            short-wave radiation, using an internally calculated albedo
+            <span><a>61</a></span>. Sub-shelf melting underneath the ice shelves is included as a heat-transfer equation
+            <span><a>63</a></span>:
+            
+            <div><span>4</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                     \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                     \setlength{\oddsidemargin}{-69pt} \begin{document}$$M_{{\mathrm{shelf}}} = \rho _{\mathrm{w}}c_{{\mathrm{pO}}}\gamma
+                     _{\mathrm{T}}F_{{\mathrm{melt}}}\left( {T_{{\mathrm{oc}}} - T_{\mathrm{f}}} \right)^n/L\rho
+                     _{\mathrm{i}}.$$\end{document}</span><div>
+                     <div>
+                        <div><span>M</span></div>
+                        <div><span>shelf</span></div>
+                     </div><span>=</span><div>
+                        <div><span>ρ</span></div>
+                        <div><span>w</span></div>
+                     </div>
+                     <div>
+                        <div><span>c</span></div>
+                        <div><span>pO</span></div>
+                     </div>
+                     <div>
+                        <div><span>γ</span></div>
+                        <div><span>T</span></div>
+                     </div>
+                     <div>
+                        <div><span>F</span></div>
+                        <div><span>melt</span></div>
+                     </div>
+                     <div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div>
+                                    <div><span>T</span></div>
+                                    <div><span>oc</span></div>
+                                 </div><span>-</span><div>
+                                    <div><span>T</span></div>
+                                    <div><span>f</span></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div><span>n</span></div>
+                     </div><span>∕</span><span>L</span><div>
+                        <div><span>ρ</span></div>
+                        <div><span>i</span></div>
+                     </div><span>.</span></div>
+                  <div></div>
+               </div>
+            </div>
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">The different parameters are described in Supplementary Table 
+            <a>4</a>. For ANICE, 
+            <span>n</span> = 1. Here, 
+            <span>T</span><sub>oc</sub> is the ocean temperatures of each GCM that are vertically interpolated to the depth
+            of the ice shelves and 
+            <span>T</span><sub>f</sub> is the freezing temperature
+            <span><a>63</a></span>:
+            
+            <div><span>5</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                     \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                     \setlength{\oddsidemargin}{-69pt} \begin{document}$$T_{\mathrm{f}} = 0.0939 - 0.057\cdot
+                     S_{\mathrm{O}} + 7.64 \times 10^{ - 4}z_{\mathrm{b}},$$\end{document}</span><div>
+                     <div>
+                        <div><span>T</span></div>
+                        <div><span>f</span></div>
+                     </div><span>=</span><span>0.0939</span><span>-</span><span>0.057</span><span>⋅</span><div>
+                        <div><span>S</span></div>
+                        <div><span>O</span></div>
+                     </div><span>+</span><span>7.64</span><span>×</span><span>1</span><div>
+                        <div><span>0</span></div>
+                        <div><span>-</span><span>4</span></div>
+                     </div>
+                     <div>
+                        <div><span>z</span></div>
+                        <div><span>b</span></div>
+                     </div><span>,</span></div>
+                  <div></div>
+               </div>
+            </div>with 
+            <span>S</span><sub>O</sub> is the mean value for the salinity of the ocean and 
+            <span>z</span><sub>b</sub> is the bottom of the ice-shelf below sea level. The different parameters are described
+            in Supplementary Table 
+            <a>4</a>. For exposed ice-shelves and open ocean grid points, additional melt rates of 3 and
+            5 m year
+            <span>−1</span> are included, respectively. No additional calving law is applied.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">The SICOPOLIS ice-sheet model</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">SICOPOLIS (SImulation COde for POLythermal Ice-sheets) is a 3-D thermo-mechanical
+            finite difference ice-sheet-shelf model
+            <span><a>29</a></span>. On land, the model utilises a hybrid combination of the SIA and the SSA (including
+            basal drag) as described in ref. 
+            <span><a>30</a></span>, following ref. 
+            <span><a>62</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Basal sliding is described by a Weertman-type power law with a cubic dependence on
+            basal shear stress, allowing sub-melt sliding following ref. 
+            <span><a>64</a></span>. The distribution of basal sliding coefficients used in all runs is obtained from
+            a calibration run using an iterative technique
+            <span><a>17</a>,
+               <a>30</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">For the surface mass balance, precipitation is converted to snow accumulation with
+            a linear function of surface temperatures
+            <span><a>65</a></span>. Surface melting is parameterised by a PDD method
+            <span><a>66</a>,
+               <a>67</a></span>. PDD factors are 8 and 3 mm day
+            <span>−1</span> °C
+            <span>−1</span> for ice and snow, respectively.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">Ice-shelf basal melting is computed using Eq. (
+            <a>4</a>)
+            <span><a>68</a></span>, with 
+            <span>n</span> = 2. For the control simulations, a tuning melt factor of 
+            <span>F</span><sub>melt</sub> = 0.2 m s
+            <span>−1</span> K
+            <span>−1</span> is applied at the floating side of some grounding lines (northwest of Ronne Ice Shelf
+            and south of Amery Ice shelf) to better represent their modern positions. At each
+            time step, the calving front is iteratively checked for grid points with a thickness
+            below 50 m, which are calved out, until no more calving occurs.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">SIA-only model BASISM</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">BASISM (British Antarctic Survey Ice-sheet Model) is a finite difference thermomechanical
+            3-D ice-sheet model, only including land-based ice using the SIA
+            <span><a>31</a>,
+               <a>56</a></span>. Basal sliding is not included in the model. Here, the model is free to grow to the
+            extent of the modern grounding line.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">An exponential function is used to convert temperatures into the number of PDDs
+            <span><a>66</a></span>, which shows a high level of correlation between warmest month temperatures and observations
+            of present-day melt
+            <span><a>56</a></span>. This assumes that melt is determined by temperature variations alone and uses separate
+            PDD factors for ice and snow melt and a maximum fractional refreezing rate. Here,
+            standard parameters are set to 8 and 3 mm day
+            <span>−1</span> °C
+            <span>−1</span> for ice and snow melt, respectively
+            <span><a>69</a></span>.
+            
+         </p>
+         <p xmlns="http://www.w3.org/1999/xhtml">BASISM has been used in a number of previous mid-Pliocene modelling studies
+            <span><a>19</a>,
+               <a>20</a>,
+               <a>40</a>,
+               <a>56</a>,
+               <a>70</a></span> and therefore provides a frame of reference against which the more complex SSA–SIA
+            hybrid models can be compared.
+            
+         </p>
+      </div>
+      <div class="sec" title="sec">
+         <div xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+         <p xmlns="http://www.w3.org/1999/xhtml">Data available on request from the authors.</p>
+      </div>
+   </div>
+</html>

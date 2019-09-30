@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec003" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climatic velocity</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Climate data were downscaled to a 50km by 50km grid using locally weighted, lapse-rate-adjusted interpolation. Monthly climate data from 1961 to 1990 were then averaged to produce a base-line time period. Future climate projections were taken from ten general circulation model (GCM) simulations archived by the World Climate Research Program Coupled Model Intercomparison Project phase 3 (CMIP3)(
+  <a rid="pone.0140486.s008" ref-type="supplementary-material" href="#pone.0140486.s008">S1 Table</a>). Climate projections were averaged over a 30-year period from 2071 to 2100 and represent climates simulated for a mid-to-high (SRES A2) greenhouse-gas emissions scenario [
+  <a rid="pone.0140486.ref021" ref-type="bibr" href="#pone.0140486.ref021">21</a>]. Thirty-seven bioclimatic variables were developed from the primary climate data [
+  <a rid="pone.0140486.ref022" ref-type="bibr" href="#pone.0140486.ref022">22</a>] (
+  <a rid="pone.0140486.s009" ref-type="supplementary-material" href="#pone.0140486.s009">S2 Table</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">A mid-to-high emissions scenario (SRES A2) was selected because the recent global CO
+  <sub>2</sub> emissions trajectory has fallen at the high end of the range of projections used in IPCC scenarios [
+  <a rid="pone.0140486.ref026" ref-type="bibr" href="#pone.0140486.ref026">26</a>]. Use of previously-published niche models limited the analysis to CMIP3 data rather than the recently-released CMIP5 projections. However, because CMIP5 projections are an incremental advance over CMIP3 data [
+  <a rid="pone.0140486.ref027" ref-type="bibr" href="#pone.0140486.ref027">27</a>, 
+  <a rid="pone.0140486.ref028" ref-type="bibr" href="#pone.0140486.ref028">28</a>], this decision does not substantially limit the relevance of our results as a tool for threat assessment. Temperature projections from the SRES A2 scenario are intermediate to those of CMIP5 representative concentration pathways (RCP) 6.0 and 8.5 [
+  <a rid="pone.0140486.ref028" ref-type="bibr" href="#pone.0140486.ref028">28</a>, 
+  <a rid="pone.0140486.ref029" ref-type="bibr" href="#pone.0140486.ref029">29</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used a direct estimate of climatic velocity, or the distance between a location and the nearest location with analogous climate in the future [
+  <a rid="pone.0140486.ref007" ref-type="bibr" href="#pone.0140486.ref007">7</a>]. Climate analogs were identified using multivariate Euclidean climate distance estimated from the first 5 axes of a principal components analysis of the 37 bioclimatic variables. Use of multivariate Euclidean distance based on PCA scores reduced the effect of collinearity between bioclimatic variables and approximated a Mahalanobis distance based on the original set of variables.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Principal components analysis of the 37 bioclimatic variables resulted in first and second PCA component dominated by temperature and precipitation, respectively. These two components captured 57.2% and 20.6% of total variance, respectively. The five components capturing greater than 2% of variance each, which cumulatively captured 91.4% of total variance, were used in the subsequent velocity calculations. We used equally spaced intervals to divide current and future climate space into multivariate bins. Because the width of each bin was maintained across all 5 PCA axes, the number of bins on each axis, and its importance in determining a climate analog, is approximately proportional to the variance explained by that axis.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The degree of similarity which constitutes an analogous climate type (i.e., the width of a climate bin) is a key parameter in derivation of analog-based velocity. In a two-dimensional plot of the first two PCA components, these bins can be visualized as rectangular areas with similar climate values in multivariate space. Given enough precision in measurements, no two grid cells will have the same climate value. As bin width widens and precision decreases, velocity values decrease to the point where information is lost because many areas show zero velocity (
+  <a rid="pone.0140486.s001" ref-type="supplementary-material" href="#pone.0140486.s001">S1A Fig</a>)[
+  <a rid="pone.0140486.ref007" ref-type="bibr" href="#pone.0140486.ref007">7</a>]. Conversely, as bin width narrows past a certain threshold, the proportion of no-analog climates, which also hold limited information value, sharply increases (
+  <a rid="pone.0140486.s001" ref-type="supplementary-material" href="#pone.0140486.s001">S1B Fig</a>) [
+  <a rid="pone.0140486.ref007" ref-type="bibr" href="#pone.0140486.ref007">7</a>]. We found that a bin width of 2 PCA units optimized the information value of the resulting velocity maps by balancing loss of information due to excessively broad bins versus domination of the results by disappearing or no-analog climates due to excessively narrow bins (
+  <a rid="pone.0140486.s001" ref-type="supplementary-material" href="#pone.0140486.s001">S1 Fig</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">For each unique climate type (bin), we identified cells (sites or pixels) within that type under both current and projected climates. Then, we used fast approximate-nearest-neighbor algorithms (using the R package yaImpute [
+  <a rid="pone.0140486.ref030" ref-type="bibr" href="#pone.0140486.ref030">30</a>]; see 
+  <a rid="pone.0140486.s007" ref-type="supplementary-material" href="#pone.0140486.s007">S1 File</a> and 
+  <span ext-link-type="uri" xlink:href="http://adaptwest.databasin.org/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://adaptwest.databasin.org</span> for code) to identify, for each current cell, the nearest cell of the same type under future climates. This distance provided the basis for deriving forward climatic velocity. Additionally, for each future cell, we identified the nearest neighboring cell of the same type under current climate. This distance provided the basis for deriving backward climatic velocity [
+  <a rid="pone.0140486.ref007" ref-type="bibr" href="#pone.0140486.ref007">7</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Cells for which no match can be found in the other time period represent cells which have velocities that extend beyond the analysis region. Although these areas could be assigned an arbitrarily high velocity value, this would obscure patterns in the velocity results. Therefore, the probability of disappearance of climate types (as well as of species; see below) was tabulated separately from calculations of climatic velocity. Disappearing or no-analog climates can also arise as an artifact of the arbitrary boundaries between climate bins. We incrementally offset bin boundaries over 100 replicated velocity calculations and averaged the results to eliminate this effect. We then averaged velocities from the ten GCMs to derive a mean velocity value.</p>
+</sec>

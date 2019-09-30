@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="grl58884-sec-0002" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="grl58884-sec-0003" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.1</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">TSC Estimation Framework</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Suppose GHG concentrations continue to increase until year 2000 + 
+   <span class="italic">N</span>, after which GHG concentrations stabilize and are held constant for centuries. We let 
+   <span class="italic">m</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> be the rate of warming at year 
+   <span class="italic">t</span> and assume that at some point following 2000 + 
+   <span class="italic">N</span>, warming slows to a steady rate, 
+   <div class="inline-formula">
+    <span class="italic">m</span>
+    <sub>end</sub> ± 
+    <span class="italic">ϵ</span>
+   </div>
+   <span class="italic">,</span> that continues for centuries. TSC is then defined as the first of 
+   <span class="italic">k</span> consecutive years in which 
+   <div class="inline-formula">
+    <span class="italic">m</span>
+    <sub>
+     <span class="italic">t</span>
+    </sub> ≤ 
+    <span class="italic">m</span>
+    <sub>end</sub>+
+    <span class="italic">ϵ</span>.
+   </div>
+  </p>
+ </sec>
+ <sec id="grl58884-sec-0004" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.2</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Estimating Rates</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Due to natural variability in the climate system, background noise can obscure the warming signal, especially at small spatial scales. Therefore, to estimate a robust warming rate, we first average the annual mean temperature over a 5° × 5° grid cell resolution. Note that other spatial scales of aggregation have been tested with aggregation over larger spatial scales leading to smaller values in 
+   <div class="inline-formula">
+    <span class="italic">ϵ</span>
+   </div> (e.g., see Figure 
+   <a rid="grl58884-fig-0001" ref-type="fig" href="#grl58884-fig-0001">1</a>a for globally averaged rates and Figure 
+   <a rid="grl58884-supitem-0001" ref-type="supplementary-material" href="#grl58884-supitem-0001">S2</a> in the 
+   <a rid="grl58884-supinf-0001" ref-type="supplementary-material" href="#grl58884-supinf-0001">supporting information</a> (SI) for rates averaged over 20° × 20° grid cell). Warming rates for each grid cell and each GCM are then estimated over a 50‐year moving window using a modified version of the Theil‐Sen bootstrap estimator (Sen, 
+   <a rid="grl58884-bib-0027" ref-type="ref" href="#grl58884-bib-0027">1968</a>): 10,000 pairs of points at least 10 years apart are uniformly randomly sampled from the 50‐year window. We exclude pairs within 10 years so that the sampled distribution of the warming rate reflects warming over decadal and longer time scales. A sample size of 10,000 pairs of points was chosen for consistency across simulations. The median slope of the 10,000 pairs is the estimated warming rate for the year in the center of the 50‐year window. A 50‐year window was chosen because it was the smallest window that produced similar estimates of TSC moving both forward in time and backward in time. Rates are then smoothed using a 10‐year moving average. This results in yearly estimated warming rates for 2031–2275 and 2036–2275 for the Coupled Model Intercomparison Project Phase 3(CMIP3) and CMIP5 ensembles, respectively.
+  </p>
+ </sec>
+ <sec id="grl58884-sec-0005" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Estimating TSC With GCM Ensembles</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We apply the TSC estimation framework to GCM simulations as follows: 
+   <span class="italic">m</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> is the multimodel median (MMM) warming rate for year 
+   <span class="italic">t</span>, 
+   <div class="inline-formula">
+    <span class="italic">m</span>
+    <sub>end</sub>
+   </div> is the MMM rate of warming averaged over the 23rd century (i.e., for rates between 2201 and 2275). The value 
+   <div class="inline-formula">
+    <span class="italic">ϵ</span>
+   </div> quantifies the multimodel standard deviation of 
+   <div class="inline-formula">
+    <span class="italic">m</span>
+    <sub>end</sub>
+   </div>. We select 
+   <span class="italic">k</span> to be 20 years to account for multidecadal oscillations that may affect the robustness of TSC. With this selection, the earliest value of TSC could be 2051 and 2056 for CMIP3 and CMIP5, respectively.
+  </p>
+ </sec>
+</sec>

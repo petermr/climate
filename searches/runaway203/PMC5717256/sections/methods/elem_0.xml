@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" sec-type="materials|methods" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model</div>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">We use the Community Climate System Model (CCSM) version 4
+   <span class="sup">
+    <a ref-type="bibr" rid="CR69" href="#CR69">69</a>
+   </span>. The model configuration incorporates the Community Atmosphere Model version 4 (CAM4)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR70" href="#CR70">70</a>
+   </span>, Community Land Model version 4 (CLM4)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>, and Los Alamos Sea Ice Model version 4 (Community Ice CodeE 4—CICE4)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+   </span> coupled to a mixed-layer (slab) ocean. The atmosphere and land models are run on a 1.9° × 2.5° (latitude × longitude) finite volume grid with 26 atmospheric levels in the vertical dimension. The ice and ocean models use a 1° displaced pole grid. The greenhouse gas concentrations, solar insolation, and orbital parameters are representative of the year 2000 values for all simulations. The prescribed ocean heat flux (“q-flux”), salinity, temperature, and velocity fields required for the mixed-layer ocean model simulations are derived from a fully coupled CCSM simulation using the full-depth ocean.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Perturbed sea-ice physics parameter simulations</div>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">In order to isolate the atmospheric impacts of sea-ice loss, we compare two sets of experiments that differ only in the amount of sea-ice cover. For this purpose, we have developed a novel experimental configuration in which we alter the sea-ice cover without imposing artificial energy fluxes in the high latitudes as done in the previous studies. When sea-ice loss is achieved by imposing non-physical heat flux perturbations, energy is not conserved. This makes it difficult to determine if the observed atmospheric response originates solely from the sea-ice changes or if it is also impacted by the imposed energy flux perturbations. Analyzed response represents cumulative effect of sea-ice extent and thickness changes.</p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Sea-ice loss in our model simulations is achieved through sea-ice physics parameter perturbations. We use an ensemble of 70 Latin hypercube simulations to select the sea-ice physics parameters that have the strongest impact on the resulting sea-ice extent
+   <span class="sup">
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+   </span>. The selected sea-ice physics parameters are shown in Supplementary Table 
+   <a rid="MOESM2" ref-type="media" href="#MOESM2">1</a>. Parameter values were not varied outside of their respective expert-defined ranges. Two sets of sea-ice physics parameter values are chosen, both resulting in similar amounts of sea-ice loss (see Supplementary Fig. 
+   <a rid="MOESM2" ref-type="media" href="#MOESM2">1</a> and “Methods” section). Parameter perturbations are separately applied in each hemisphere: “low Arctic ice” (“low Antarctic ice”) simulation sets are obtained by applying the parameter changes in the Northern (Southern) hemisphere alone. For each set of ice parameter values used (control, set 1 and set 2) we performed five additional simulations with altered initial atmospheric conditions. The length of each model simulation was 40 years. Our focus is on the last 20 years of these simulations. “Low Arctic ice” and “low Antarctic ice” ensemble means are an average of all simulations with the perturbed sea-ice parameter values applied in the Northern and Southern hemispheres, respectively. The anomalies represent the ensemble mean differences between “low Arctic ice” (or “low Antarctic ice”) and control simulations.
+  </p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Statistical significance is estimated using Welch’s 
+   <span class="italic">t</span>-test in order to account for different sample size and variances between the control and “low Arctic ice” simulations. Prior to 
+   <span class="italic">t</span>-test calculations, the equivalent sample size is determined at each grid point (accounting for temporal autocorrelation).
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">Simulation output processed for the purpose of this study has been made public and can be obtained at 
+   <span ext-link-type="uri" xlink:href="https://esgf-node.llnl.gov/projects/psipps/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://esgf-node.llnl.gov/projects/psipps/</span>. Provided are monthly means of the following CAM4 variables: ice fraction (ICEFRAC), surface pressure (PS), surface temperature (TS), upper tropospheric temperature (TROP_T), total precipitation (PRECT), geopotential (Z3), horizontal and meridional wind speed components (U and V), vertical (pressure) velocity (OMEGA), net longwave flux at the atmosphere top (FLNT), and high cloud cover (CLDHGH); all for years 20–40 of model integration. Additional data can be made available on request.
+  </p>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Perturbed sea-ice physics parameter simulations require changes to the following parameters: snow grain radius tuning parameter, thermal conductivity of snow, and snow melt maximum radius. Their respective values are given in Supplementary Table 
+   <a rid="MOESM2" ref-type="media" href="#MOESM2">1</a>. Implementation of the perturbed sea-ice parameter values requires namelist and CICE4 source code changes (available per request).
+  </p>
+ </sec>
+</sec>

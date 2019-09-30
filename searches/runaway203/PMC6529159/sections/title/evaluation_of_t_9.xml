@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec007" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Evaluation of the models</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The Area Under the Receiver Operating Curve (AUC-ROC) is the most common metric to evaluate the accuracy of models [
+  <a rid="pone.0211171.ref079" ref-type="bibr" href="#pone.0211171.ref079">79</a>]. AUC values ≤ 0.5 indicate that the model failed to perform better than random expectations, whereas values close to 1 indicate a good performance of the model [
+  <a rid="pone.0211171.ref080" ref-type="bibr" href="#pone.0211171.ref080">80</a>]. In practice, the AUC-ROC is calculated based on a series of trapezoids [
+  <a rid="pone.0211171.ref081" ref-type="bibr" href="#pone.0211171.ref081">81</a>], with the curve essentially "connecting the points" representing the different thresholds of the prediction [
+  <a rid="pone.0211171.ref082" ref-type="bibr" href="#pone.0211171.ref082">82</a>]. This approach is used when input data is partitioned, in this case into training and test data [
+  <a rid="pone.0211171.ref083" ref-type="bibr" href="#pone.0211171.ref083">83</a>]. When biotic data are divided into presence and absence (background), the AUC measures the discriminatory ability of the model to correctly predict the origin of these data if randomly selected [
+  <a rid="pone.0211171.ref051" ref-type="bibr" href="#pone.0211171.ref051">51</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Although the use of AUC-ROC for model evaluation is not questioned herein [
+  <a rid="pone.0211171.ref084" ref-type="bibr" href="#pone.0211171.ref084">84</a>], we additionally used the partial ROC (AUCratio) to choose the best model. AUCratio is an independent cutoff threshold metric where significant values are above 1 [
+  <a rid="pone.0211171.ref085" ref-type="bibr" href="#pone.0211171.ref085">85</a>]. The AUCratio is a ratio between the predicted model AUC and null expectation [
+  <a rid="pone.0211171.ref082" ref-type="bibr" href="#pone.0211171.ref082">82</a>] that a model generated with random data does not have a better prediction than the models generated with the input data [
+  <a rid="pone.0211171.ref086" ref-type="bibr" href="#pone.0211171.ref086">86</a>]. We calculated the ratio of AUCrandon (at level of 0.5) and the AUCatual (calibrating 5% of omission and 1000 bootstrap interactions) using the predicted distribution model [
+  <a rid="pone.0211171.ref068" ref-type="bibr" href="#pone.0211171.ref068">68</a>] and evaluation records, through the package "ntbox" v.0.2.5.3 [
+  <a rid="pone.0211171.ref063" ref-type="bibr" href="#pone.0211171.ref063">63</a>] for Rstudio [
+  <a rid="pone.0211171.ref087" ref-type="bibr" href="#pone.0211171.ref087">87</a>], to ensure greater robustness in model analysis [
+  <a rid="pone.0211171.ref088" ref-type="bibr" href="#pone.0211171.ref088">88</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The best model was designed for the two future scenarios (RCP 4.5 and RCP 8.5), within the 
+  <span class="bold">G’</span> region, through the "predict" function available in the dismo package [
+  <a rid="pone.0211171.ref074" ref-type="bibr" href="#pone.0211171.ref074">74</a>].
+ </p>
+</sec>

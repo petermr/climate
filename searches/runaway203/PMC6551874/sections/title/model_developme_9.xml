@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model development</div>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">We used the machine learning algorithm, TreeNet (Salford Systems, Inc., San Diego, CA), a type of stochastic gradient boosting, to analyze associations between locational records of caribou and dozens of climatic, topographic, and anthropogenic predictors (Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>), and to spatially model herd distribution during biologically significant seasons over 8 years. This approach, which uses iterative tree-building to reduce overall error and collinearity among points and predictors, is known as “boosting” and differs from traditional frequentist statistical analyses in its analysis and assumptions. Boosted decision tree analyses are capable of quantifying complex, non-linear relationships among many interacting categorical and continuous predictors, and are insensitive to outliers and missing data [
+  <a ref-type="bibr" rid="CR47" href="#CR47">47</a>, 
+  <a ref-type="bibr" rid="CR48" href="#CR48">48</a>]. Because TreeNet is a data-driven approach and not specifically designed to test a priori hypotheses, datasets need not conform to assumptions of normality and independence, and so do not require prior data manipulation. We chose this approach over parametric analyses like dynamic Brownian Bridge and step-selection analyses, that are constrained by a priori assumptions, for its ability to incorporate numerous, interacting, non-linear, environmental relationships in predicting the distribution of species across broad landscapes. While this approach is unable to determine causation between predictors and the response, it is adept at producing accurate predictions and useful for exploring the relative importance and non-linear responses of predictors.
+  <div id="Tab1" class="table-wrap">
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <p>Predictors and variable importance scores in seasonal distribution models of the Western Arctic Herd</p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <thead>
+     <tr>
+      <th>Included 2010 Predictors (units)</th>
+      <th>Source</th>
+      <th>Spring</th>
+      <th>Calving</th>
+      <th>Insect Relief</th>
+      <th>Late Summer</th>
+      <th>Fall</th>
+      <th>Winter</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>Active Layer Thickness*∆ (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>31.0</td>
+      <td>15.1</td>
+      <td>16.6</td>
+      <td>15.6</td>
+      <td>31.4</td>
+      <td>18.4</td>
+     </tr>
+     <tr>
+      <td>Aspect (°)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://ned.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">ned.usgs.gov</span>
+      </td>
+      <td>27.6</td>
+      <td>13.5</td>
+      <td>11.3</td>
+      <td>15.2</td>
+      <td>24.6</td>
+      <td>10.6</td>
+     </tr>
+     <tr>
+      <td>Coast Distance (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.asgdc.state.ak.us" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.asgdc.state.ak.us</span>
+      </td>
+      <td>43.3</td>
+      <td>23.6</td>
+      <td>18.3</td>
+      <td>24.0</td>
+      <td>42.9</td>
+      <td>34.8</td>
+     </tr>
+     <tr>
+      <td>Elevation (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://ned.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">ned.usgs.gov</span>
+      </td>
+      <td>30.6</td>
+      <td>13.2</td>
+      <td>14.3</td>
+      <td>15.7</td>
+      <td>32.3</td>
+      <td>16.1</td>
+     </tr>
+     <tr>
+      <td>Freeze Date*∆ (Julian date)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>9.7</td>
+      <td>4.2</td>
+      <td>3.1</td>
+      <td>5.3</td>
+      <td>17.9</td>
+      <td>7.3</td>
+     </tr>
+     <tr>
+      <td>Thaw Date*∆ (Julian date)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>17.2</td>
+      <td>5.5</td>
+      <td>5.1</td>
+      <td>4.1</td>
+      <td>12.3</td>
+      <td>8.5</td>
+     </tr>
+     <tr>
+      <td>Fire History∆ (year)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://agdc.usgs.gov/data/projects/fhm" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">agdc.usgs.gov/data/projects/fhm</span>
+      </td>
+      <td>14.6</td>
+      <td>3.8</td>
+      <td>2.5</td>
+      <td>3.2</td>
+      <td>14.1</td>
+      <td>15.9</td>
+     </tr>
+     <tr>
+      <td>Lake Distance (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://nhd.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">nhd.usgs.gov</span>
+      </td>
+      <td>31.5</td>
+      <td>15.3</td>
+      <td>11.6</td>
+      <td>17.6</td>
+      <td>29.4</td>
+      <td>15.5</td>
+     </tr>
+     <tr>
+      <td>Growing Season Length*∆ (days)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>32.8</td>
+      <td>9.6</td>
+      <td>6.2</td>
+      <td>10.0</td>
+      <td>51.2</td>
+      <td>16.0</td>
+     </tr>
+     <tr>
+      <td>Ground Temperature*∆ (°C)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>36.6</td>
+      <td>14.8</td>
+      <td>11.7</td>
+      <td>15.0</td>
+      <td>64.6</td>
+      <td>21.3</td>
+     </tr>
+     <tr>
+      <td>NDVI Greenup Rate∆ (−0.2˗˗1.0)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://nhd.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">nhd.usgs.gov</span>
+      </td>
+      <td>25.6</td>
+      <td>13.7</td>
+      <td>11.7</td>
+      <td>16.1</td>
+      <td>24.8</td>
+      <td>10.7</td>
+     </tr>
+     <tr>
+      <td>Max NDVI∆ (−0.2˗˗1.0)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://alaska.portal.gina.alaska.edu" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">alaska.portal.gina.alaska.edu</span>/search
+      </td>
+      <td>22.2</td>
+      <td>5.4</td>
+      <td>7.9</td>
+      <td>17.9</td>
+      <td>27.5</td>
+      <td>15.6</td>
+     </tr>
+     <tr>
+      <td>Potential Evapotranspiration*∆ (mm/yr)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://arcticlcc.org/products/spatial-data" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">arcticlcc.org/products/spatial-data</span>
+      </td>
+      <td>69.0</td>
+      <td>100.0</td>
+      <td>100.0</td>
+      <td>28.1</td>
+      <td>100.0</td>
+      <td>35.5</td>
+     </tr>
+     <tr>
+      <td>Permafrost Probability (%)</td>
+      <td>[
+       <a ref-type="bibr" rid="CR91" href="#CR91">91</a>]
+      </td>
+      <td>18.9</td>
+      <td>10.6</td>
+      <td>10.2</td>
+      <td>16.0</td>
+      <td>32.9</td>
+      <td>18.1</td>
+     </tr>
+     <tr>
+      <td>Winter Precipitation*∆ (mm)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>100.0</td>
+      <td>13.0</td>
+      <td>8.0</td>
+      <td>57.6</td>
+      <td>47.1</td>
+      <td>25.3</td>
+     </tr>
+     <tr>
+      <td>Summer Precipitation*∆ (mm)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>26.7</td>
+      <td>12.7</td>
+      <td>14.2</td>
+      <td>21.4</td>
+      <td>34.0</td>
+      <td>26.9</td>
+     </tr>
+     <tr>
+      <td>Spring Precipitation*∆ (mm)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>31.5</td>
+      <td>25.4</td>
+      <td>6.7</td>
+      <td>15.8</td>
+      <td>27.8</td>
+      <td>19.1</td>
+     </tr>
+     <tr>
+      <td>Fall Precipitation*∆ (mm)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>35.7</td>
+      <td>12.5</td>
+      <td>35.5</td>
+      <td>20.1</td>
+      <td>44.4</td>
+      <td>21.1</td>
+     </tr>
+     <tr>
+      <td>Stream Distance (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://nhd.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">nhd.usgs.gov</span>
+      </td>
+      <td>30.1</td>
+      <td>13.9</td>
+      <td>10.8</td>
+      <td>15.8</td>
+      <td>26.8</td>
+      <td>13.9</td>
+     </tr>
+     <tr>
+      <td>Road Distance (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.asgdc.state.ak.us" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.asgdc.state.ak.us</span>
+      </td>
+      <td>60.9</td>
+      <td>31.1</td>
+      <td>26.5</td>
+      <td>27.9</td>
+      <td>44.3</td>
+      <td>39.1</td>
+     </tr>
+     <tr>
+      <td>Max (Mar) Sea Ice Distance*∆ (m)</td>
+      <td>[
+       <a ref-type="bibr" rid="CR92" href="#CR92">92</a>]
+      </td>
+      <td>53.4</td>
+      <td>18.7</td>
+      <td>12.9</td>
+      <td>17.1</td>
+      <td>41.8</td>
+      <td>30.9</td>
+     </tr>
+     <tr>
+      <td>Min (Sep.) Sea Ice Distance*∆ (m)</td>
+      <td>[
+       <a ref-type="bibr" rid="CR92" href="#CR92">92</a>]
+      </td>
+      <td>58.3</td>
+      <td>47.5</td>
+      <td>16.4</td>
+      <td>21.9</td>
+      <td>43.2</td>
+      <td>37.4</td>
+     </tr>
+     <tr>
+      <td>Slope (⎕)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://ned.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">ned.usgs.gov</span>
+      </td>
+      <td>28.4</td>
+      <td>13.3</td>
+      <td>12.2</td>
+      <td>17.9</td>
+      <td>34.8</td>
+      <td>13.0</td>
+     </tr>
+     <tr>
+      <td>Winter Snow Day Fraction*∆ (%)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>11.6</td>
+      <td>2.8</td>
+      <td>14.1</td>
+      <td>24.7</td>
+      <td>20.6</td>
+      <td>100.0</td>
+     </tr>
+     <tr>
+      <td>Summer Snow Day Fraction*∆ (%)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>18.1</td>
+      <td>10.0</td>
+      <td>6.1</td>
+      <td>9.3</td>
+      <td>14.8</td>
+      <td>10.0</td>
+     </tr>
+     <tr>
+      <td>Spring Snow Day Fraction*∆ (%)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>25.2</td>
+      <td>7.2</td>
+      <td>7.0</td>
+      <td>9.0</td>
+      <td>16.1</td>
+      <td>13.6</td>
+     </tr>
+     <tr>
+      <td>Fall Snow Day Fraction*∆ (%)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>26.6</td>
+      <td>7.0</td>
+      <td>6.9</td>
+      <td>100.0</td>
+      <td>23.7</td>
+      <td>19.9</td>
+     </tr>
+     <tr>
+      <td>Snow-free Date*∆ (Julian date)</td>
+      <td>[
+       <a ref-type="bibr" rid="CR62" href="#CR62">62</a>]
+      </td>
+      <td>64.2</td>
+      <td>10.4</td>
+      <td>9.3</td>
+      <td>11.7</td>
+      <td>27.7</td>
+      <td>25.8</td>
+     </tr>
+     <tr>
+      <td>Winter Temperature*∆ (°C)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>25.8</td>
+      <td>17.4</td>
+      <td>9.0</td>
+      <td>15.6</td>
+      <td>29.5</td>
+      <td>28.1</td>
+     </tr>
+     <tr>
+      <td>Summer Temperature*∆ (°C)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>28.3</td>
+      <td>15.4</td>
+      <td>7.6</td>
+      <td>10.2</td>
+      <td>28.5</td>
+      <td>12.0</td>
+     </tr>
+     <tr>
+      <td>Spring Temperature*∆ (°C)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>22.0</td>
+      <td>12.1</td>
+      <td>9.8</td>
+      <td>10.5</td>
+      <td>24.7</td>
+      <td>12.6</td>
+     </tr>
+     <tr>
+      <td>Fall Temperature*∆ (°C)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.snap.uaf.edu/tools/data-downloads" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.snap.uaf.edu/tools/data-downloads</span>
+      </td>
+      <td>65.4</td>
+      <td>20.8</td>
+      <td>9.3</td>
+      <td>13.7</td>
+      <td>26.6</td>
+      <td>21.4</td>
+     </tr>
+     <tr>
+      <td>Distance to Trails (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.asgdc.state.ak.us" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.asgdc.state.ak.us</span>
+      </td>
+      <td>35.7</td>
+      <td>16.1</td>
+      <td>17.0</td>
+      <td>18.9</td>
+      <td>34.2</td>
+      <td>23.6</td>
+     </tr>
+     <tr>
+      <td>Terrain Ruggedness 17 × 17 (0–1)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://ned.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">ned.usgs.gov</span>
+      </td>
+      <td>28.2</td>
+      <td>20.6</td>
+      <td>18.7</td>
+      <td>21.4</td>
+      <td>28.8</td>
+      <td>33.7</td>
+     </tr>
+     <tr>
+      <td>Terrain Ruggedness 3 × 3 (0–1)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://ned.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">ned.usgs.gov</span>
+      </td>
+      <td>26.5</td>
+      <td>13.8</td>
+      <td>12.1</td>
+      <td>16.1</td>
+      <td>24.4</td>
+      <td>10.5</td>
+     </tr>
+     <tr>
+      <td>Community Distance (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="http://www.asgdc.state.ak.us" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.asgdc.state.ak.us</span>
+      </td>
+      <td>43.4</td>
+      <td>14.9</td>
+      <td>11.9</td>
+      <td>15.1</td>
+      <td>43.6</td>
+      <td>13.6</td>
+     </tr>
+     <tr>
+      <td>Wetland Distance (m)</td>
+      <td>
+       <span ext-link-type="uri" xlink:href="https://www.fws.gov/wetlands/Data/Data-Download.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://www.fws.gov/wetlands/Data/Data-Download.html</span>
+      </td>
+      <td>25.4</td>
+      <td>13.7</td>
+      <td>11.9</td>
+      <td>15.6</td>
+      <td>30.7</td>
+      <td>13.8</td>
+     </tr>
+    </tbody>
+   </table>
+   <div class="table-wrap-foot">
+    <p>Predictors denoted with an * are decadal means, and ∆ indicates dynamic predictors that change annually. Active layer thickness is the depth of ground that thaws and freezes each year. Freeze and thaw dates refer to the mean annual date of first freeze (or thaw) during 2010–2020. Fire history denotes the year of the most recent fire in a given area. Growing season length is defined as the number of days between the date of first thaw and date of first freeze. Ground temperature refers to the modeled mean annual ground temperature. NDVI (Normalized Difference Vegetation Index) is an infrared-based measure of landscape greenness indicative of biomass; green-up rate and maximum NDVI are annual metrics calculated from NDVI. Potential evapotranspiration (PET) here is the amount of evaporation that would occur over a year if a sufficient water source were available. Seasonal climate variables are decadal averages of downscaled seasonal totals. Seasons are grouped as follows: Spring (Mar.-May), Summer (Jun.-Aug.), Fall (Sep.-Nov.), Winter (Dec.-Feb.). Permafrost probability describes the distribution of near-surface permafrost. Distance refers to the shortest Euclidean distance to the nearest feature. Snow day fraction is an average of the percentage of days with snow on the ground. Terrain ruggedness predictors were calculated from slope and elevation using 2 moving window scales of 3 and 17 m, respectively. Predictor importance values are out of 100.0 with the top predictor always receiving the maximum</p>
+   </div>
+  </div>
+ </p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">We developed landscape distribution models for northwestern Alaska based on GPS locations attributed with 37 environmental predictors for 6 seasons (averaged over the course of 8 years) as well as each year for the spring and fall migratory seasons (Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>). For consistency, we defined seasons based on previously determined date ranges (Joly and Cameron 2017). We developed distribution models for 6 biologically-relevant seasons: spring (April 1–May 27), calving (May 28–June 14), insect-relief (June-15-July 14), late summer (July 15–August 31), fall (September 1–November 30), and winter (December 1–March 31). Training datasets for each season consisted of the recorded locations for all individuals across all years for which we had data. Because models are based on presence-only datasets, we used sets of randomly-distributed pseudo-absences in lieu of observed absences, which are not inherent to telemetry datasets. We determined the numbers of pseudo-absences in each model by multiplying the number of presences for each season or year by the study area extent and dividing by the minimum convex hull area of the presence locations. We did this to ensure that the relative densities of presences and pseudo-absences were consistent across seasons and years to avoid ‘swamping’ the presence set. We defined the study area as the portion of northwest Alaska encompassing the full extent of telemetry locations from 2010 to 2017 (e.g., Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>).
+ </p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Together presences and pseudo-absences composed the training dataset for each model. We attributed these points with the 37 environmental predictors using the ‘extract’ function in R 3.5.1 (R Development Core Team 2018). Environmental predictors in the models included climatic, anthropogenic, geographic and topographic predictors known or hypothesized to affect caribou ecology in some way (Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>). We then analyzed the training data, using TreeNet, to iteratively classify non-linear relationships between predictors and the response (Relative Index of Occurrence; RIO). We used model classifications to make predictions regarding the spatio-temporal distributions of caribou, to identify important predictors in the models, and to quantify thresholds of influence in the non-linear contribution of those predictors to the response. TreeNet functions by first developing a single decision tree to estimate the main effect on the response by accounting for the largest proportion of variance in a system [
+  <a ref-type="bibr" rid="CR47" href="#CR47">47</a>, 
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>]. In subsequent, iterative steps, additional trees are ‘grown’ to explain the residual error that remains from previous trees [
+  <a ref-type="bibr" rid="CR48" href="#CR48">48</a>, 
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>]. TreeNet builds thousands of trees, uses recursive data sampling, and predictors enter the model in a gradual, non-linear fashion, with different splitting rules each time they are used. This iterative resampling helps to minimize the effect of issues such as model over-fitting [
+  <a ref-type="bibr" rid="CR47" href="#CR47">47</a>, 
+  <a ref-type="bibr" rid="CR48" href="#CR48">48</a>] and spatial autocorrelation [
+  <a ref-type="bibr" rid="CR50" href="#CR50">50</a>, 
+  <a ref-type="bibr" rid="CR51" href="#CR51">51</a>]. Stochastic gradient boosting algorithms also automatically include interactions among all predictors in a model [
+  <a ref-type="bibr" rid="CR48" href="#CR48">48</a>, 
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>, 
+  <a ref-type="bibr" rid="CR52" href="#CR52">52</a>, 
+  <a ref-type="bibr" rid="CR53" href="#CR53">53</a>]. Boosting improves model accuracy by averaging contribution from numerous satisfactory but imperfect models in a successive fashion rather than attempting to find a single parsimonious model to approximate the system [
+  <a ref-type="bibr" rid="CR48" href="#CR48">48</a>, 
+  <a ref-type="bibr" rid="CR49" href="#CR49">49</a>, 
+  <a ref-type="bibr" rid="CR53" href="#CR53">53</a>, 
+  <a ref-type="bibr" rid="CR54" href="#CR54">54</a>].
+ </p>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">We varied the number of trees (1000–2000), number of nodes per tree (6–20), and minimum cases per terminal node (2–50) in TreeNet to identify the best model with the highest area under the receiver operators curve (AUC) and the lowest misclassification rate. We excluded the poorest performing predictors in successive modeling attempts to improve predictive accuracy, but the full predictor set proved to be most accurate. We used the ‘balanced’ option to ensure equal contribution to the model from unequal class sizes in the response variable. We validated models using two internal means, using the out-of-bag data withheld during the tree building process, and also by withholding 20% of the training data (test subset) before model construction. Models were graded as “excellent” (1.0 &gt; % Correct &gt; 0.90), “good” (0.90 &gt; % Correct &gt; 0.80), “fair” (0.80 &gt; % Correct &gt; 0.70). We also used telemetry data from 2018 as an independent dataset to validate the predictive spatial accuracy of models by calculating the mean and standard deviation of residuals (1 – RIO).</p>
+ <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">For each model, TreeNet developed a unique algorithm to describe patterns in the data, which was then ‘scored’ to a regularly-spaced grid of points (500-m resolution) across the study area that was also attributed with the same environmental variables. Predictions at points were smoothed using the inverse-distance weighting function to produce a continuous raster depicting the RIO for caribou in northwestern Alaska. This process was repeated to produce distribution models for each of the 6 caribou seasons pooled across years and 8 individual fall and spring models for each year between 2010 and 2017. TreeNet also produced partial dependence plots for each predictor. These are model-based simulations that chart the non-linear relationship of the response over the range of each predictor variable while controlling for the other variables [
+  <a ref-type="bibr" rid="CR55" href="#CR55">55</a>]. Partial dependence plots are useful for depicting trends and identifying threshold levels in predictors which correspond with the predicted presence or absence of caribou. We used partial dependence plots to identify thresholds and delineate data ranges in environmental predictors that were associated with the predicted occurrence of caribou. Each of these ranges represents a single plane of realized niche space composing a theoretical n-dimensional hypervolume of available environmental conditions that constrain the potential niche of caribou [
+  <a ref-type="bibr" rid="CR56" href="#CR56">56</a>].
+ </p>
+</sec>

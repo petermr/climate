@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec14" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Biofilm methods</div>
+ <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">Panels from North Cove were brought up to the surface by SCUBA divers and placed in a 10 L tank on the boat with sea water at the same temperature as the ambient sea water (~0 °C). Biofilm swabs were taken from the panels while on the boat and stored in 100% ethanol for subsequent analyses. Four to five biofilm swabs were taken per treatment (control, +1, +2). Total genomic DNA was extracted from the biofilm swabs using the PowerBiofilm DNA isolation kit (MO BIO Laboratories, Inc.) following the manufacturer’s instructions. A blank swab was also included and extracted as a no-template control. DNA samples were assessed for concentration and quality using a NanoDrop ND-100 Spectrometer (NanoDrop Technologies) and an Agilent 2200 Tapestation (Agilent Technologies). To enable compatibility with the Illumina 16S Metagenomic Sequencing Protocol, the hypervariable V4 region of the 16S rRNA genes was PCR-amplified using the 16S Amplicon PCR forward primer (5′-TCGTCGGCAGCGTCAGATGTGTATAAGAGACAGCCTACGGGNGGCWGCAG) and the 16S Amplicon reverse PCR primer (5′-GTCTCGTGGGCTCGGAGATGTGTATAAGAGACAGGACTACHVGGGTATCTAATCC). PCR reactions were carried out using the KAPA Hifi HotStart ReadyMix according to manufacturer’s instructions. Amplifications were carried out in an AlphaCycler (PCRmax) under the following conditions: 95 °C for 30 s, followed by 25 cycles of 95 °C for 30 s, 55 °C for 30 s and 72 °C for 30 s. A final elongation step at 72 °C for 5 min was performed. Resulting PCR products were checked by standard agarose gel (1.5%) electrophoresis and purified using the QIAquick PCR Purification kit (Qiagen) following the manufacturer’s instructions.</p>
+ <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">Library preparation and sequencing was carried out by the Department of Biochemistry at the University of Cambridge. For each sample (
+  <span class="italic">n</span> = 4–5 swabs per sample per treatment: control, +1, +2 and control) DNA was converted in to a sequencing library using the 16S Metagenomic Sequencing Library preparation kit (DNA input 1 ug, 8 PCR cycles), and sequenced in triplicate (39 samples total) on an Illumina MiSeq using 300 base paired-end reads, to generate 44–50 million raw reads per pool.
+ </p>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Oligotyping analysis was used
+  <span class="sup">
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+  </span> to define biofilm community composition differences in heated and non-heated settlement panels. Adapters were trimmed from the raw reads using trim_galore software (
+  <span ext-link-type="uri" xlink:href="https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://www.bioinformatics.babraham.ac.uk/projects/trim_galore/</span>). Reads were merged using mothur v.1.35.1 (ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR70" href="#CR70">70</a>
+  </span>), MiSeq SOP site accessed on the 18/08/17). Entropy and oligotyping analyses were conducted according to ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>. Sequences were not aligned to a reference alignment since length read varied due to partially overlapping reads. Hence the 
+  <span class="italic">0-pad-with-gaps</span> script from the Minimum entropy decomposition (MED) pipeline 1.2 (ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+  </span>) was run on the reads. All analyses were carried out using default parameters unless otherwise specified. MED analysis was performed using the MED pipeline version 1.2. The minimum substantive abundance criterion (M) was set to 50 to filter noise in the data. After the initial round of oligotyping, high entropy positions were chosen (-C option). To minimise the impact of sequences errors, an oligotype was required to be represented in at least 1000 reads (-M option). Moreover, rare oligotypes present in less than five samples were discarded (-s option). These parameters led to 1,478,129 sequences left in the database. Oligotypes were searched using blastn against the ENA sequence database using NCBI Blast +via the EBI web services
+  <span class="sup">
+   <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+  </span>. Further oligotyping analysis was performed on the rare oligotypes removed from the original analysis to look at differences in microbial diversity in the rarer species between treatments (control, +1, +2). Rare oligotypes were explored by selecting the parameter M (minimum substantive abundance) and by using the oligotype command in the pipeline to scrutinise the data. The minimum substantive abundance criterion was set to 50 (-M 50) to filter noise in the data. After the initial round of oligotyping, nucleotide positions (9, 13, 120, 122 and 130) were carefully selected to explore the rare oligotypes. Two more rounds of oligotyping were performed with the minimum substantive abundance set to 50 and by further selecting nucleotide positions (9, 13, 26, 80, 120, 122 and 130). Those rare oligotypes enriched by PCR errors did not converge. Individual oligotype sequences were searched against reference sequences in the NCBI’s nr database using BLAST
+  <span class="sup">
+   <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+  </span>.
+ </p>
+</sec>

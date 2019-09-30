@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Reconstruction of past temperature</div>
+  <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">We used multiple Antarctic ice core records of oxygen isotopes from the recently published global multi-proxy data from the PAGES 2k millennium for this study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR16" href="#CR16">16</a>
+   </span>. Common temperature signal extracted separately for East and West Antarctica based on principal components analysis of oxygen isotope records of ice cores. The first component (PC1) explains maximum variability in δ
+   <span class="sup">18</span>O records attributed to the surface air temperature change. In order to reconstruct past surface air temperature, we also performed calibration tests by comparing ERA 40 Reanalysis temperature with PC1 (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>) and regression equation was employed to the entire δ
+   <span class="sup">18</span>O records to reconstruct past temperature anomaly records.
+  </p>
+ </sec>
+ <sec id="Sec6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Power spectrum analysis</div>
+  <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">A Fortran 90 program (REDFIT)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+   </span> is used to test if peaks in the spectrum of a time series are significant against the red noise background from a first-order autoregressive (AR1) process. The spectrum of an irregularly spaced time series is determined without the need for interpolation by means of the Lomb-Scargle Fourier transform
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>,
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span>. A Matlab code of this program available online 
+   <span ext-link-type="uri" xlink:href="https://www.geo.uni-bremen.de/geomod/staff/mschulz/#software" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://www.geo.uni-bremen.de/geomod/staff/mschulz/#software</span> is used to determine the significant periodicities against the red noise.
+  </p>
+ </sec>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Wavelet analysis</div>
+  <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">The wavelet transform can be used to analyze time series that contain nonstationary power at many different frequencies. We use Morlet wavelet to decompose the time series into time-frequency space which enable us to identify the modes of variability and how those modes vary with time
+   <span class="sup">
+    <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+   </span>. Statistical significance was estimated against a red noise model. For analysis of the covariance of two time series we used cross wavelet which highlights the common highest power in two time series
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span>. Statistical significance is estimated against a red noise model. This wavelet analysis was performed using Matlab code available 
+   <span ext-link-type="uri" xlink:href="http://grinsted.github.io/wavelet-coherence/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://grinsted.github.io/wavelet-coherence/</span>.
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Scaled average variance analysis</div>
+  <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">To examine fluctuations in power over a range of scales (a band), we used scale-averaged wavelet power which is a time series of the average variance in a certain band. Thus, the scale-averaged wavelet power can be used to examine modulation of one time series by another, or modulation of one frequency by another within the same time series. We have performed this analysis using online Matlab codes 
+   <span ext-link-type="uri" xlink:href="http://paos.colorado.edu/research/wavelets/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://paos.colorado.edu/research/wavelets/</span>.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">PSA and EOF analysis</div>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">Investigations of changes in SH atmospheric circulation in response to ENSO are performed using ensemble simulation with GHG forcing from the CESM-LME project (
+   <span ext-link-type="uri" xlink:href="http://www.cesm.ucar.edu/projects/community-projects/LME/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.cesm.ucar.edu/projects/community-projects/LME/</span>). Three ensemble members are available under this project with transient GHG forcing for the period 850–2005 CE. Since the changes in GHG before 1850 are small and due to natural causes we only investigate the period after 1850 when the GHG increases constantly. The PSA pattern is obtained through EOF analysis of the SON average 500 mb geopotential height in the Southern Hemisphere (30°S–90°S; 0°–360°E) for the period 1850–2005. Before applying EOF analysis the data is weighted with square root of cosine of its latitude. While all three ensemble members shows the similar PSA pattern in EOF analysis, only third ensemble member is used in this study as the increase in PSA activity, as discussed in the text, is most prominent in this member than other two.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pearson correlation analysis</div>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">Pearson correlation coefficients (r
+   <span class="sup">2</span>) of two time series at different time slices were calculated, taking into account the effect of their autocorrelation using online available MATLAB codes 
+   <span ext-link-type="uri" xlink:href="https://oxlel.zoo.ox.ac.uk/resources/reconstats" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://oxlel.zoo.ox.ac.uk/resources/reconstats</span>. Details of the mathematical function and the codes are described elsewhere
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span>.
+  </p>
+ </sec>
+</sec>

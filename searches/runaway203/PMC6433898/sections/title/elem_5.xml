@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Species geographic distribution</div>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">We gathered a large-scale dataset encompassing three lizard radiations differing in their patterns of geographic distribution and in parity modes, which spans large species-samples of 
+   <span class="italic">Liolaemus</span> (40 oviparous and 52 viviparous species), 
+   <span class="italic">Phymaturus</span> (11 species, exclusively viviparous – although our dataset contained data for most species within this genus, we excluded most of them given their extremely limited geographic range sizes, which makes it inviable to perform the analyses employed to address our core predictions), and 
+   <span class="italic">Stenocercus</span> (40 species, exclusively oviparous) (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>). The distributional and life-history data comprise 4,532 geographic occurrence records (after all duplicated points collected from different individuals at same localities were removed). This includes all known records of presence of these lizards following 20+ years of field and museum work, and museum-validated published occurrences
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>,
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+    <a ref-type="bibr" rid="CR55" href="#CR55">55</a>–
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span>. All the occurrences were individually checked and confirmed by experts (i.e., Daniel Pincheira-Donoso: 
+   <span class="italic">Liolaemus</span> + 
+   <span class="italic">Phymaturus</span> and Omar Torres-Carvajal: 
+   <span class="italic">Stenocercus</span>, to assure accuracy).
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Environmental predictors</div>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">To analyse the environmental space occupied by lizard lineages, we used the bioclimatic variables characterizing climate during the 1970–2000 period, obtained from the WorldClim 2 data repository
+   <span class="sup">
+    <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+   </span> (available at: 
+   <span ext-link-type="uri" xlink:href="http://www.worldclim.org/version2" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.worldclim.org/version2</span>) at a spatial resolution of 30 seconds (~1 km). To reduce collinearity between the environmental variables, we used VIF (Variance Inflation Factors) implemented in the “usdm” R-package
+   <span class="sup">
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+   </span>. Using this approach, we excluded all the highly correlated variables from the model (VIF greater than 10), which is associated with a signal that the model has a collinearity problem
+   <span class="sup">
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span>. This method is based on the square of the multiple correlation coefficient (
+   <span class="italic">R</span>
+   <span class="sup">2</span>) resulting from regressing the predictor variable against all other predictor variables. We used the remaining uncorrelated variables to calibrate models: mean annual temperature (bio1), mean diurnal range (bio2), isothermality (bio3), temperature seasonality (bio4), max temperature of warmest month (bio5), min temperature of coldest month (bio6), temperature annual range (bio7), mean temperature of warmest quarter (bio10), mean temperature of coldest quarter (bio11), annual precipitation (bio12) precipitation of wettest month (bio13), precipitation of driest month (bio14), and precipitation seasonality (bio15), precipitation of wettest quarter (bio16), and precipitation of driest quarter (bio17).
+  </p>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">To explore the occupation of environmental space by 
+   <span class="italic">Liolaemus</span>, 
+   <span class="italic">Phymaturus</span>, and 
+   <span class="italic">Stenocercus</span> and their reproductive modes, we performed a principal component analysis (PCA) of present-day climate conditions in South America using NicheA v3.0 software
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span> (available at: 
+   <span ext-link-type="uri" xlink:href="http://nichea.sourceforge.net" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://nichea.sourceforge.net</span>), an open-source application that analyses ecological niches (or ‘climatic spaces’) in both environmental and geographic space (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S3a,b</a>).
+  </p>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">To estimate impacts of climate change on distributions of species, we employed two models of future climate conditions, the GISS-ER and the MIROC5 general circulation models for the period around 2070 (2061–2080). Each model consists of two Representative Concentration Pathways (RCPs) versions representing a stringent mitigation scenario (RCP2.6, which predicts magnitude of climatic variation for the parameters of the model) and one scenario assuming high anthropogenic greenhouse gas (GHG) emissions (RCP8.5, which predicts the highest magnitude of climatic change for the parameters of the model) as alternative scenarios of climate change
+   <span class="sup">
+    <a ref-type="bibr" rid="CR66" href="#CR66">66</a>
+   </span> (IPCC, Fifth Assessment), because it is extremely likely that human activities caused more than half of the observed increase in GMST (Global Mean Surface Temperature) from 1951 to 2010
+   <span class="sup">
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span>. We selected these models based on their high resolution and incorporation of covariates
+   <span class="sup">
+    <a ref-type="bibr" rid="CR68" href="#CR68">68</a>,
+    <a ref-type="bibr" rid="CR69" href="#CR69">69</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Species distribution modeling</div>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Based on the occurrence data (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>), we calibrated Ecological Niche Models (ENMs) to estimate current and future potential distribution for each lizard species. To mitigate oversampling effects in our model, occurrences were re-sampled to one point per pixel with respect to the environmental grids. Coordinates were divided into two groups for calibration and other evaluation, based on four quadrants with similar numbers of points, using two off-diagonal quadrants for calibration and two for evaluation. ENMs were developed using Maxent 3.3.3k
+   <span class="sup">
+    <a ref-type="bibr" rid="CR70" href="#CR70">70</a>
+   </span>, a presence-background software that estimates environmental suitability via an index of similarity that resembles a heterogeneous occurrence process or logistic regression function
+   <span class="sup">
+    <a ref-type="bibr" rid="CR70" href="#CR70">70</a>,
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>. We used Maxent with clamping and extrapolation turned off (i.e., no prediction outside the range of environmental conditions in the calibration areas). To facilitate interpretations, we used the relative probability of presence as a proxy of environmental suitability
+   <span class="sup">
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>. Suitable area for each species was estimated as a Boolean (presence/absence) map that was thresholded based on the minimum training presence
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>
+   </span>. To determine the model parametrization with the best fit to the data available, we assessed six models for each species under different regularization multiplier values (i.e., 0.5, 1, 5, 10, 15, and 20)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>. Then, we assessed AIC (Akaike Information Criterion; implemented in ENMTools
+   <span class="sup">
+    <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+   </span>) values to choose the model with the best performance (i.e., descriptive-model evaluation; Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S10</a>). Once the models with the best fit were selected, we assessed their performance using the software PartialROC
+   <span class="sup">
+    <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+   </span>, considering an α = 0.05 to determine whether models anticipate independent occurrences better than by random expectations.
+  </p>
+  <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">To determine changes between the current and future potential distributions, we identified the expansion, contraction, and stability (‘no change’) of areas predicted climatically suitable by using the SDM toolbox in ArcGIS v.10.2
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span>. Direction of the potential distributional changes was calculated based on the centroid of the species’ potential ranges. We applied Rayleigh’s Test of Uniformity
+   <span class="sup">
+    <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+   </span> to compare direction of centroid shifts vs a uniform circular distribution reflecting a null hypothesis of random centroid shifts. Rayleigh’s statistic quantifies the angular dispersion among the vectors from 0 (representing uniform dispersion) to 1 (indicating complete concentration in a single direction).
+  </p>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Finally, to determine the spatial relationships between oviparous and viviparous species, we quantified the range overlap among the predicted distributions of oviparous and viviparous species. These calculations were made using the predicted present-day and future SDMs under GISS-ER and the MIROC5 models and each greenhouse emission scenarios (RCP 2.6 and 8.5).</p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate change impacts on life-histories</div>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">To determine effects of climate change on parity mode, we performed an independent-sample 
+   <span class="italic">t</span>-test using the variables: (i) range extents of current and future ENMs, (ii) magnitude and direction of distributions based on range centroids, and (iii) average elevation of current and future ranges. Analyses were corrected for phylogenetic non-independence to test whether the predicted impacts of climate change (i.e., as geographic range, centroid or elevational shifts) were statistically significant between species with different parity mode (i.e., oviparous and viviparous), as well as among ‘parity-by-taxonomy’ groups (i.e., 
+   <span class="italic">Stenocercus</span>, 
+   <span class="italic">Liolaemus</span>-oviparous, 
+   <span class="italic">Liolaemus</span>-viviparous and 
+   <span class="italic">Phymaturus</span>) using the fully-sampled phylogeny of Squamates recently published by Tonini, 
+   <span class="italic">et al</span>.
+   <span class="sup">
+    <a ref-type="bibr" rid="CR77" href="#CR77">77</a>
+   </span> which spans all 143 species in our dataset. We performed phylogenetic analyses (
+   <span class="italic">t</span>-test and ANOVA) implemented in the R-package “phytools”
+   <span class="sup">
+    <a ref-type="bibr" rid="CR78" href="#CR78">78</a>
+   </span>. Additionally, to calculate the differences between each independent pair of groups we applied ANOVA test with “holm” post-hoc pairwise method, owing to it is one of the most powerful multitests when the sample sizes of the groups are different, to perform this analysis, we used the R-package “DescTools”. These analyses were performed for the two models of climate change (GISS-ER and MIROC5) and for each scenario of greenhouse gases emissions indicated above (RCP 2.6 and 8.5). Finally, we performed a spatial autocorrelation analysis (Global Moran’s I) using the Spatial Statistics toolbox in ArcGIS to evaluate whether geographic rage shifts were clustered, dispersed, or randomly distributed.
+  </p>
+ </sec>
+</sec>

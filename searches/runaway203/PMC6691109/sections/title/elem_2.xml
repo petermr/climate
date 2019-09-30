@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">We calculated change in the intensity of 14 stressors from human-based activities during an 11 year period from 2003 to 2013 at a ~1 km resolution and estimated the impact on the global ocean based on the magnitude of the stressor as well as the vulnerability of 21 marine ecosystems to each stressor. The cumulative impact of all 14 stressors was then calculated for each km
+  <span class="sup">2</span> for each year. To determine annual change in stressor and cumulative impacts, we applied a linear regression model to each raster cell and calculate whether the slope is significantly different from 0.
+ </p>
+ <sec id="Sec3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">General model</div>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">We calculated stressor and cumulative impact 
+   <span class="italic">I</span>
+   <sub>
+    <span class="italic">c</span>
+   </sub> at a ~1 km resolution, based on previously developed methods
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>,
+    <a ref-type="bibr" rid="CR13" href="#CR13">13</a>
+   </span>, using the following information:
+   <div list-type="order" class="list">
+    <div class="list-item">
+     <p id="Par18">Stressor intensity rasters describing the magnitude of 14 stressors on a scale of 0–1 (1 is highest relative stress).</p>
+    </div>
+    <div class="list-item">
+     <p id="Par19">Ecosystem rasters describing the location (1 if present, otherwise NA) of 21 global marine ecosystem types.</p>
+    </div>
+    <div class="list-item">
+     <p id="Par20">Vulnerability matrix describing the vulnerability of each ecosystem to each stressor. Vulnerability is a value from 0–4.</p>
+    </div>
+   </div>
+  </p>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Stressor impacts, 
+   <span class="italic">I</span>
+   <sub>
+    <span class="italic">s</span>
+   </sub>, were calculated for each of the 14 stressors by first multiplying the stressor intensity raster, 
+   <span class="italic">D</span>
+   <sub>
+    <span class="italic">j</span>
+   </sub>, by each ecosystem raster, 
+   <span class="italic">E</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub>, and the corresponding vulnerability value, 
+   <span class="italic">μ</span>
+   <sub>
+    <span class="italic">ij</span>
+   </sub>. The stressor × ecosystem × vulnerability rasters are summed for each stressor and then divided by the number of habitats (
+   <span class="italic">m</span>) in each raster cell:
+   <div id="Equa" class="disp-formula">
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${I}_{s}=\frac{1}{m}\mathop{\sum }\limits_{i=1}^{m}{D}_{j}\times {E}_{i}\times {\mu }_{ij}$$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">s</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mn">1</span>
+       <span class="mi">m</span>
+      </div>
+      <div class="munderover">
+       <span class="mo">∑</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">D</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">E</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">μ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41598_2019_47201_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+  <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">Cumulative impact, 
+   <span class="italic">I</span>
+   <sub>
+    <span class="italic">c</span>
+   </sub>, is calculated by summing the 14 stressor impact rasters:
+   <div id="Equb" class="disp-formula">
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${I}_{c}=\mathop{\sum }\limits_{i=1}^{m}{I}_{s}$$\end{document}</span>
+     <div id="M4" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">I</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">c</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="munderover">
+       <span class="mo">∑</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">I</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div xlink:href="41598_2019_47201_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+  </p>
+ </sec>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data representation</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">All data are represented at ~1 km resolution with a WGS84 Mollweide projection. Nearly all source data used to derive the stressor layers had native coarser resolution (Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a>), and were therefore resampled/reprojected using nearest neighbor estimates of cell values. Using the nearest neighbor approach preserves the values of the original data, and assumes the coarse-scale value is evenly distributed across all 1 km cells within that region. The coarser scale pattern is essentially recreated and finer resolution information is preserved where and when it is appropriate.
+  </p>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">We used the WGS84 Mollweide projection because it preserves area so data towards the poles are not visually over-represented.</p>
+ </sec>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Stressors</div>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">We include stressors from 4 primary categories:
+   <div list-type="bullet" class="list">
+    <div class="list-item">
+     <p id="Par26">Fishing: commercial demersal destructive, commercial demersal nondestructive high bycatch, commercial demersal nondestructive low bycatch, pelagic high bycatch, pelagic low bycatch, artisanal</p>
+    </div>
+    <div class="list-item">
+     <p id="Par27">Climate change: sea surface temperature, ocean acidification, sea level rise</p>
+    </div>
+    <div class="list-item">
+     <p id="Par28">Ocean: shipping</p>
+    </div>
+    <div class="list-item">
+     <p id="Par29">Land-based: nutrient pollution, organic chemical pollution, direct human, light</p>
+    </div>
+   </div>
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">Stressors included in our analyses are listed in Tables 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a> and 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a> and described in detail within the Supplementary Information.
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">Given our focus of describing 
+   <span class="italic">trends</span> in human impact on marine ecosystems, global datasets reporting results at regular intervals were critical. Given this constraint, we were unable to include some stressors from previous impact analyses
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>,
+    <a ref-type="bibr" rid="CR13" href="#CR13">13</a>
+   </span> because they did not include enough information for us to estimate annual change from 2003 to 2013. These excluded stressors include invasive species, ocean pollution, UV intensity, and benthic structures.
+  </p>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Other anthropogenic drivers we considered, but could not be included due to incomplete spatial or temporal coverage, were: hypoxic zones, coastal engineering (piers, rock walls, etc.), non-cargo shipping (ferries, cruise ships, etc), aquaculture, disease, changes in sedimentation and freshwater input, and tourism.</p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Given discrepancies in how different data layers define the global coastline, we resolved differences by extending all stressor rasters to a common coastline. In some cases the gaps occurred because the monitoring that produced the stressor data missed some regions; however, it was most often due to converting a coarser resolution raster to a finer resolution raster, resulting in zig-zags of missing data along the coast. This made gapfilling necessary. Details for how spatial gapfilling was done for each stressor are provided in the Supplementary Information.</p>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Stressors are rescaled to have values between 0–1. Rescaling allows for direct comparison among drivers with dramatically different units of measurement. With the exception of ocean acidification, we rescaled the data by dividing by the 99.99th quantile across all global raster cells and years (values are capped to a maximum value of 1). We used all years of data to rescale the data to ensure comparability across time periods. The 99.99th quantile was used to minimize the influence of outliers. This approach assumes a linear relationship between the magnitude of the stressor and the impact on the ecosystem. This assumption ignores thresholds that likely exist but are known for very few stressors. For ocean acidification we used known information about biological thresholds to rescale the data.</p>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">For many stressors, the distribution of values was highly skewed such that rescaling relative to the highest values resulted in intermediate values of the stressor that were underestimated. In these cases, we log transformed stressor values prior to rescaling. We indicate when data were transformed in descriptions of each stressor in the Supplementary Information.</p>
+ </sec>
+</sec>

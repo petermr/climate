@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec5" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Analysis domain and discretization</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">The impact of changes in land use, land management, and precipitation patterns were examined for the continental United States at the HUC8 watershed scale. Analogously to an earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>, the analysis included all HUC8 catchments except for ten that are predominately made up of water, yielding a total of 2105 HUC8 watersheds. The HUC8 watershed boundaries were obtained from the U.S. Geological Survey (USGS) Watershed Boundary Dataset (WBD).
+  </p>
+ </sec>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Historical and future precipitation</div>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Historical and future precipitation was obtained following the methodology from an earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>, and was based on CMIP5 model projections for the RCP2.6 (16 models), RCP4.5 (20 models), RCP6.0 (12 models), and RCP8.5 (21 models) emission scenarios. The precipitation projections were obtained from the Downscaled CMIP3 and CMIP5 Climate and Hydrology Projections archive
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span>, which are bias-corrected and spatially downscaled to 1/8° resolution. For the model development step (see Section “Empirical model of nitrogen loading”), historical precipitation records from 1987 to 2012 were substituted, as described in an earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Historical and future land use and fertilizer application</div>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">Projected changes in land use and land management within the continental United States were based on the land use harmonization 2 (LUH2)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span> dataset prepared for the sixth phase of the Coupled Model Intercomparison Project (CMIP6). The LUH2 dataset includes land use scenarios for 12 land use categories (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>) and provides land management scenarios that include fertilizer application rate for five crop types for all global land grid cells at 1/4
+   <span class="bold">°</span> spatial resolution and annual temporal resolution. The LUH2 dataset is available for two time periods, with the historical (LUH2 v2h) period covering 850–2015 and the future period (LUH2 v2f) covering 2015–2100. For the future time period, land use and land management scenarios are available for five Shared SSP, each of which is coupled with a corresponding representative concentration pathway (RCP) or climate outcome (SSP1 with RCP2.6, SSP2 with RCP4.5, SSP3 with RCP7.0, SSP4 with RCP3.4, SSP4 with RCP6.0, and SSP5 with RCP8.5), yielding six combined scenarios overall because the SSP4 pathway is coupled to two different RCPs. Although multiple IAMs generated scenarios for each pathway, the scenarios compiled in the LUH2 dataset are based on the marker IAM for each pathway (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). Within the LUH2 database, the IAM outputs of various scenarios were harmonized such that the future projections for the six SSPs smoothly connect with the historical projections
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span>. This harmonization process results in a shift in the future scenario projections from the original IAM estimates for a portion of the future period.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">The SSPs describe prototypical trajectories for societal development that may occur in the future. The range of SSPs is intended to span the uncertainty associated with societal development, although outcomes outside of this range cannot be ruled out. Various assumptions regarding the SSP pathways
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span> and the IAM implementation of these pathways are described in earlier manuscripts
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>,
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>–
+    <a ref-type="bibr" rid="CR55" href="#CR55">55</a>,
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>,
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span> and a brief overview of these assumptions is included here. The SSP1-2.6 Sustainability scenario, contributed by the IMAGE model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+   </span>, assumes sustainable growth in the future that focuses on human well-being and respect for environmental boundaries
+   <span class="sup">
+    <a ref-type="bibr" rid="CR57" href="#CR57">57</a>
+   </span>. For the continental United States, cropland area and fertilizer usage are projected to increase slightly by the end-of-the-century, driven by an increase in energy crops. The SSP2-4.5 Middle of the Road scenario, contributed by the MESSAGE-GLOBIOM model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR63" href="#CR63">63</a>,
+    <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+   </span> assumes that future growth patterns will be similar to historical patterns, and is designed to cover the middle ground in terms of mitigation and adaptation challenges between more extreme SSPs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+   </span>. For the continental United States, cropland area is projected to remain unchanged while fertilizer usage is projected to decrease slightly. The SSP3-7.0 Regional rivalry scenario, contributed by the AIM model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR65" href="#CR65">65</a>
+   </span>, represents a world with increased nationalism and regional rivalry and decreased globalization
+   <span class="sup">
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>. For the continental United States, this scenario leads to increased deforestation associated with an increase in cropland area and fertilizer usage. The SSP4 Inequality pathway represents a world with increasing inequality both within and across countries
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span>. This pathway was combined with two climate outcomes, yielding the SSP4-3.4 and SSP4-6.0 scenarios, both based on the GCAM model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR66" href="#CR66">66</a>
+   </span>. These two scenarios are based a common set of high-level assumptions about societal growth, but with different climate outcomes representing different degrees of climate mitigation. For the continental United States, for both the SSP4-3.4 and SSP4-6.0 scenarios, cropland area and fertilizer usage is projected to increase in the future, as a result of an increase in bioenergy crops and an increase in domestic food production. The increase in bioenergy production for the SSP4-3.4, however, is much larger than for the SSP-6.0 (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>). The SSP5-8.5 Fossil-fueled development scenario, contributed by the REMIND-MAGPIE model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+   </span>, represents a world with increased globalization and high economic growth
+   <span class="sup">
+    <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+   </span>. For the continental United States, cropland area remains largely unchanged, developed land areas increase slightly, and fertilizer usage decreases due to an increase in productivity.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Historical and future net anthropogenic nitrogen inputs</div>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Nitrogen input to the watersheds was captured in the form of net anthropogenic nitrogen input (NANI), which is defined as the sum of five components: fertilizer nitrogen input, agricultural nitrogen fixation, net food and feed import, atmospheric deposition, and nonfood crop export. Net food and feed import accounts for crop and animal nitrogen production (removal of nitrogen from the watershed) and human and animal nitrogen consumption (addition of nitrogen to the watershed) and includes bioenergy production and consumption. The nonfood crop export represents the nitrogen in cotton and tobacco harvested for sale and exported elsewhere for nonfood use. On average during the historical period, fertilizer was +72% of NANI; fixation was +45% of NANI; deposition was+ 14% of NANI; food and feed import was −30% of NANI (negative sign designates net export over the continental United States); and nonfood crop export was+ 0.78% of NANI. The nonfood crop export represents nitrogen leaving the watershed and its value is subtracted from NANI while all other components are added to estimate NANI. NANI was estimated using two different methods. First, for the empirical model development and for assessing historical TN loading, available data on the various NANI components was used to estimate historical NANI. Second, for estimating future TN loading, NANI estimates were developed based on output available in the LUH2 dataset. In addition, historical NANI was also estimated directly based on LUH2 data in the analysis focusing on isolating the impact of future changes to cropland area, developed land, or fertilizer application rates, in the absence of concurrent changes to the other factors. The first approach is described here, while the second is presented in Section “Future changes in TN flux due to change in land use and land management”.</p>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Observation-based NANI estimates were obtained as described in an earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span> for 1987–2005. NANI for 1976–1986 was estimated by modifying this methodology to accommodate a more limited data record during this decade. Briefly, fertilizer rates for 1987–2005, 1985–1986, and 1976–1984 were obtained from three earlier studies
+   <span class="sup">
+    <a ref-type="bibr" rid="CR68" href="#CR68">68</a>–
+    <a ref-type="bibr" rid="CR70" href="#CR70">70</a>
+   </span>, respectively. Atmospheric deposition rates for 1979–2005 were based on data from the National Atmospheric Deposition Program
+   <span class="sup">
+    <a ref-type="bibr" rid="CR71" href="#CR71">71</a>
+   </span>. The NADP monitoring network was established in 1978, but had very few monitoring stations in that initial year. Atmospheric deposition rates for 1976, 1977, and 1978 were therefore assumed remain constant at 1979 levels. Agricultural nitrogen fixation, net food and feed import, and nonfood crop export were estimated for the agricultural census years of 1987, 1992, 1997, 2002, and 2007 using the NANI toolbox
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>,
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span> and for the intervening years (1988–1991; 1993–1996; 1998–2001; 2003–2006) using linear interpolation. For the years preceding 1987, agricultural nitrogen fixation and net food and feed import were estimated for each HUC8 watershed by extrapolating a linear trend estimated based on the values for 1987, 1992, 2997, 2002, 2007, and 2012. Nonfood crop export, which are an extremely small component of NANI (on average 0.78% of NANI), were assumed to remain at 1987 levels for 1976–1986.
+  </p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Empirical model of nitrogen loading</div>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">The empirical model reported in an earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span> that relates precipitation, land use, and NANI to TN loading at the HUC8 scale was developed based on land use categories included in National Land Cover Database 2006 (NLCD 2006). There is, however, no simple correspondence between the NLCD 2006 land use categories and those reported in the LUH2 dataset. Rather than create an approximate mapping, we instead developed a modified model, with model selection and model calibration based directly on the land use variables available in the LUH2 dataset. The approach was analogous to the earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>, with the following differences. The 12 land use categories of LUH2 dataset were aggregated into six categories as illustrated in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>. Following the methodology of the earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>, all six land use categories and all their combinations were considered in the model selection. In addition, because the observation-based NANI data are now available through 2012
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>,
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>, the calibration dataset included the same catchments as the earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span>, but observed TN loading for 2012 was added where available. The total number of catchment-years for model build was thus increased from 242 to 280. Also, whereas the NLCD database only provides land use for a single year, the LUH2 dataset provides annual values for all land use categories, and land use was therefore no longer held constant over time.
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">The final model based on LUH2 land use categories represents the natural log of TN loading (ln(
+   <span class="italic">Q</span>
+   <sub>TN</sub>)) as:
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mathrm{ln}}\left( Q_{\mathrm{TN}} \right) = 0.538 + 0.438 \cdot f_{\mathrm{NANI}} + 0.0012 \cdot P_{\mathrm{Annual}} + 0.0033 \cdot P_{{\mathrm{MAM}},p &gt; 0 .95} + 0.0213 \cdot {\mathrm{LU}}_{\mathrm{D,C}},$$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <span mathvariant="normal" class="mi">ln</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">Q</span>
+         </div>
+         <div class="mrow">
+          <span mathvariant="normal" class="mi">TN</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mn">0.538</span>
+      <span class="mo">+</span>
+      <span class="mn">0.438</span>
+      <span class="mo">⋅</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">f</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">NANI</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span class="mn">0.0012</span>
+      <span class="mo">⋅</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">P</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">Annual</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span class="mn">0.0033</span>
+      <span class="mo">⋅</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">P</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">MAM</span>
+        <span class="mo">,</span>
+        <span class="mi">p</span>
+        <span class="mo">&gt;</span>
+        <span class="mn">0.95</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <span class="mn">0.0213</span>
+      <span class="mo">⋅</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">LU</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">D,C</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+     <div xlink:href="41467_2019_8884_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div id="Equ2" class="disp-formula">
+    <span class="label">2</span>
+    <div class="alternatives">
+     <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$f_{\mathrm{NANI}} = a{\mathrm{sin}}h\left( {\mathrm{NANI}}/2 \right) = {\mathrm{ln}} \left({\mathrm{NANI}}/2 + \sqrt {\left( {\mathrm{NANI}}/2 \right)^2 + 1}\right),$$\end{document}</span>
+     <div id="M4" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">f</span>
+       </div>
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">NANI</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">a</span>
+      <span mathvariant="normal" class="mi">sin</span>
+      <span class="mi">h</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">NANI</span>
+        <span class="mo">∕</span>
+        <span class="mn">2</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">ln</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <span mathvariant="normal" class="mi">NANI</span>
+        <span class="mo">∕</span>
+        <span class="mn">2</span>
+        <span class="mo">+</span>
+        <div class="msqrt">
+         <div class="msup">
+          <div class="mrow">
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <span mathvariant="normal" class="mi">NANI</span>
+             <span class="mo">∕</span>
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mn">2</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+     <div xlink:href="41467_2019_8884_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <span class="italic">f</span>
+   <sub>NANI</sub> [ln(kg N km
+   <span class="sup">−2</span> y
+   <span class="sup">−</span>
+   <span class="sup">1</span>))] is the transformed annual NANI for the target year; 
+   <span class="italic">P</span>
+   <sub>Annual</sub> [mm] is annual precipitation in the catchment; 
+   <span class="italic">P</span>
+   <sub>MAM,
+    <span class="italic">p</span>&gt;0.95
+   </sub> [mm] is extreme precipitation in March–May expressed as the amount of precipitation that fell on days with precipitation greater than the 95th percentile (where the percentiles are calculated based on daily precipitation for 1981–2010); LU
+   <sub>D,C</sub> [%] is the percentage of the catchment area classified as developed or cropland. While the original model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+   </span> explained 76% of the observed variability in ln(
+   <span class="italic">Q</span>
+   <sub>TN</sub>), the updated model explained 67%, suggesting that the land use categories in the LUH2 dataset are less representative relative to those in the NLCD data. Beyond the land use description, the updated model is very similar to the original, with the selected nonland-use predictor variables being identical to the original (
+   <span class="italic">f</span>
+   <sub>NANI</sub>, 
+   <span class="italic">P</span>
+   <sub>Annual</sub>, and 
+   <span class="italic">P</span>
+   <sub>MAM,
+    <span class="italic">p</span>&gt;0.95
+   </sub>). In terms of land use, the two variables based on NLCD land use classification, namely percent land cover by wetlands and percent land cover by forests or shrublands and herbaceous land are replaced by a single variable based on the LUH2 land use classification, namely percent agricultural or developed land use. The two land use variables included in the original model were associated with negative drift coefficients, meaning that, all else being equal, an increase in wetlands, forests, or shrublands was associated with a decrease in TN loading. In the updated model, croplands and developed land is associated with a positive drift coefficient, meaning that, all else being equal, an increase in croplands and developed lands leads to an increase in TN loading. Therefore, although the two models use different land use variables, they tell an entirely consistent story about the relative impacts of various land use categories on TN loading. Mechanistically, increased TN loading from agricultural and developed land (beyond the impact accounted for by NANI) is attributable to drainage that directly transports TN from land to streams and the lack of nitrogen retention that occurs in more natural landscapes.
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Historical TN flux estimation</div>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">TN fluxes were estimated for the historical period (1976–2005) by applying the empirical model in Eq. (
+   <a ref-type="bibr" rid="CR1" href="#CR1">1</a>) to all HUC8 watersheds within the continental United States. For the historical period we utilized observation-based NANI estimates (see Section “Historical and future NANI datasets”), land use based on historical LUH2 dataset (see Section “Historical and future land use and fertilizer application datasets”), and precipitation projections from 21 CMIP5 models (see Section “Historical and future precipitation datasets”). This approach is analogous to that used in an earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>, except with the updated datasets and empirical model as described in Section “Datasets used”.
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Changes due to change in land use and land management</div>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">The impact of future changes in land use and land management on TN flux was estimated using land use (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>) and NANI (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">7</a>) based on the six scenarios from the LUH2 dataset (as described below), and historical precipitation based on 21 CMIP5 models (see Section “Historical and future precipitation datasets”). The robustness of projected change in TN flux was assessed in a manner analogous to an earlier study
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>, whereby a change is considered robust change if more than 50% of the models show a significant change, as assessed by a two-sided 
+   <span class="italic">t</span> test at the 95% confidence level, and more than 80% of the models agree on the sign of change
+   <span class="sup">
+    <a ref-type="bibr" rid="CR74" href="#CR74">74</a>
+   </span>. Because we are holding precipitation at historical levels, the only variability across the CMIP5 models for a given future land use and land management scenario therefore comes from how the historical precipitation patterns for a given CMIP5 model manifest themselves as TN loading in the framework of a given land use and land management scenario. In other words, a change in land use in a particular location of the country may have a different impact within the context of historical precipitation patterns as represented by one CMIP5 model vs. another.
+  </p>
+  <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">For the future period, three of the NANI components (fertilizer nitrogen input, agricultural nitrogen fixation, and net food and feed import) were estimated based on the future LUH2 dataset for the six scenarios (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">8</a>). The LUH2 dataset provides fertilizer application rates for five different crop types (C3 annual crops, C4 annual crops, C3 perennial crops, C4 perennial crops, and C3 nitrogen-fixing crops). Fertilizer usage was obtained by summing the area-weighted fertilizer application rate for all crop types. The fertilizer usage was scaled such that estimates from 1987 to 2012 period (obtained from LUH2 v2h) matched existing estimates of fertilizer usage
+   <span class="sup">
+    <a ref-type="bibr" rid="CR68" href="#CR68">68</a>
+   </span> for each HUC2 (first level of hydrologic unit) region (see Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a> in ref. 
+   <span class="sup">
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>). Nitrogen fixation was obtained by multiplying the C3 nitrogen-fixing crop area with a constant nitrogen fixation rate of 14,300 kg N km
+   <span class="sup">−</span>
+   <span class="sup">2</span> y
+   <span class="sup">−</span>
+   <span class="sup">1</span>, which itself was estimated by multiplying the fraction of the C3 nitrogen-fixing crop area for 2007 from the LUH2 database by a fixed nitrogen fixation rate such that the TN fixation at the continental United States scale matched the 2007 nitrogen fixation estimates of 6.9 Tg N based on the NANI toolbox
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>,
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>. Future food and feed import, which includes bioenergy production and consumption, was estimated using future fertilizer nitrogen input and agricultural nitrogen fixation for each HUC2 region under the assumption that the relationship between food and feed import and fertilizer input and agricultural nitrogen fixation will remain constant over time. The estimate was based on a multiple linear regression with historical food and feed import as the dependent variable, and historical fertilizer nitrogen input and historical agricultural nitrogen fixation as the independent variables (Supplementary Figure 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">9</a>). Data on historical values for all three variables for 1987, 1992, 1997, 2002, 2007, and 2012 were obtained from the NANI toolbox
+   <span class="sup">
+    <a ref-type="bibr" rid="CR72" href="#CR72">72</a>,
+    <a ref-type="bibr" rid="CR73" href="#CR73">73</a>
+   </span>. Future food and feed import is estimated as a function of fertilizer usage and agricultural nitrogen fixation; therefore, reductions in fertilizer usage resulting from either improvements in nitrogen use efficiency or reductions in cropland area will also impact the nitrogen embedded in net food and feed import. The fourth NANI component, atmospheric deposition was estimated based on existing future NOx deposition estimates
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span> for the RCP2.6, RCP4.5, RCP6.0, and RCP8.5 emission scenarios, which are based on the community multiscale air quality (CMAQ) model, while the TN flux empirical model was developed by utilizing the National Atmospheric Deposition Program (NLCD) NOx deposition estimates. The future NOx deposition estimates were therefore adjusted based on scaling factor between CMAQ model based NOx deposition (obtained from 
+   <span ext-link-type="uri" xlink:href="https://archive.epa.gov/amad/archive-amad/web/html/wdtdata.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://archive.epa.gov/amad/archive-amad/web/html/wdtdata.html</span>) and NADP-based NOx deposition for 2002, 2003, 2004, 2005, and 2006. The fifth NANI component, nonfood crop export, is an extremely small component of NANI and was held constant at the 2007 value (i.e., the approximate value at the end of the historical period) for all years after 2007.
+  </p>
+ </sec>
+ <sec id="Sec13" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Role of changes in cropland, developed land, and fertilizer use</div>
+  <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Future land conversion to (or from) cropland or developed land impacts TN flux via the land use term in Eq. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) (LU
+   <sub>D,C</sub>), but land conversion to (or from) cropland also indirectly impacts TN flux via the NANI term in Eq. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) (
+   <span class="italic">f</span>
+   <sub>NANI</sub>) because it affect three of the NANI components, namely fertilizer usage, agricultural nitrogen fixation, and net food and feed import. Future changes to fertilizer application rate for a given crop type, on the other hand, impact TN flux only via their impact on the NANI term in Eq. (
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) and this only via two of the NANI components, namely fertilizer usage and net food and feed import. To assess the contribution of changes in future cropland (together with its embedded change in anthropogenic nitrogen inputs), developed land, or future fertilizer application rate individually, we developed three additional sets of future TN flux estimates based on: first, future cropland change (and concomitant changes to NANI) but historical developed land and fertilizer application rates; second, future changes to developed land area, maintaining cropland and fertilizer application rates at historical levels; and third, historical cropland and developed land but with future fertilizer application rates. Because the observation-based NANI estimates (see Section “Historical and future NANI datasets”) do not make it possible to assess fertilizer application rates for the five crop types in the LUH2 database, for these additional runs the historical fertilizer application rate was based on LUH2 data, and for consistency all other components of NANI were based on LUH2 data (as described in Section “Future changes in TN flux due to change in land use and land management”) rather than observation-based NANI. Also, due to the nonlinear form of the model and the impact of interactions among changes in land use and NANI, the impacts of the three individual components are not simply additive.
+  </p>
+ </sec>
+ <sec id="Sec14" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Changes due to concomitant changes in precipitation patterns</div>
+  <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">The combined impact of changes in land use and land management and changes in precipitation patterns on future TN flux was examined by estimating TN fluxes for future periods based on LUH2-dataset-derived NANI and land use (six scenarios), and precipitation projections based on CMIP5 models (four climate outcomes). Bias-corrected and downscaled (1/8°) precipitation projections were obtained from the CMIP5 archive
+   <span class="sup">
+    <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+   </span>, which includes 21, 16, 20, 12, and 21 models for the historical, RCP2.6, RCP4.5, RCP6.0, and RCP8.5 climate outcomes, respectively. We assessed the joint influence of direct and indirect impacts by combining the six scenarios with the most similar climate outcome available from CMIP5 simulations. The SSP scenarios for which the equivalent concentration pathway exists in CMIP5 were paired. As such, SSP1-2.6 was combined with precipitation based on RCP2.6, SSP2-4.5 was combined with RCP4.5, SSP4-6.0 was combined with RCP6.0, and SSP5-8.5 was combined with the high-emission RCP8.5. The SSP scenarios for which a corresponding concentration pathway is not available within the CMIP5 simulations were paired with the most similar available pathway. Thus, the SSP4-3.4 scenario was paired with RCP2.6. The SSP3-7.0 scenario is described as combining "high societal vulnerability with high forcing"
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span>, and was therefore paired with the high emission RCP8.5 rather than with the medium stabilization RCP6.0
+   <span class="sup">
+    <a ref-type="bibr" rid="CR76" href="#CR76">76</a>
+   </span>.
+  </p>
+ </sec>
+ <sec id="Sec15" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">TN flux estimation at aggregated scales</div>
+  <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">In order to understand TN fluxes for large regions, TN flux estimates for HUC8 watersheds within those regions were combined in a manner analogous to earlier studies
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>,
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span>. Briefly, TN fluxes for large aggregated regions were estimated by aggregating the nitrogen loads [kg N y
+   <span class="sup">−1</span>] for all HUC8 watersheds falling within the region. The TN load from a watershed was obtained by multiplying the loading per unit area (
+   <span class="italic">Q</span>
+   <sub>TN</sub> [kg N km
+   <span class="sup">−</span>
+   <span class="sup">2</span> y
+   <span class="sup">−1</span>]) by the watershed area ([km
+   <span class="sup">2</span>]).
+  </p>
+ </sec>
+ <sec id="Sec16" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Differences across scenarios vs. across IAMs</div>
+  <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">As part of the scenario development process
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>,
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>, socioeconomic development pathways were converted into quantitative projections of energy, land use, and emissions using several IAMs. A single-IAM implementation (a.k.a., marker scenario) was then selected for each scenario for inclusion in the LUH2 database and ultimately for use as part of the CMIP6 effort. The selection was based on the internal consistency of the full set of SSP markers, and the ability of the different models to represent distinct characteristics of the storylines
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+   </span>. Examining the implementations of scenarios by other IAMs, however, can provide insights into alternative interpretations of the same storylines. With this goal in mind, we compared the cropland area (results not shown) and fertilizer usage projections for the six scenarios in the LUH2 database with the cropland area projection for those scenarios as implemented by the GCAM model. Comparing the GCAM outputs provide insight into the differences across the scenarios, while the LUH2 outputs represent the differences across both the scenarios and the IAMs, because the scenarios in the LUH2 database are contributed by five different IAMs. By comparing GCAM and LUH2 projections for matching scenarios, one can therefore get insight into the role of intermodel differences.
+  </p>
+ </sec>
+ <sec id="Sec016" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Code availability</div>
+  <p id="Par037" xmlns="http://www.w3.org/1999/xhtml">Simulation output evaluated in this study are available from the authors upon request.</p>
+ </sec>
+</sec>

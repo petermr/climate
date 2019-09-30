@@ -1,0 +1,1334 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//Springer-Verlag//DTD A++ V2.4//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName A++V2.4.dtd?><?SourceDTD.Version 2.4?><?ConverterInfo.XSLTName springer2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">Sci Rep</journal-id><journal-id journal-id-type="iso-abbrev">Sci Rep</journal-id><journal-title-group><journal-title>Scientific Reports</journal-title></journal-title-group><issn pub-type="epub">2045-2322</issn><publisher><publisher-name>Nature Publishing Group UK</publisher-name><publisher-loc>London</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">6646329</article-id><article-id pub-id-type="publisher-id">47103</article-id><article-id pub-id-type="doi">10.1038/s41598-019-47103-w</article-id><article-categories><subj-group subj-group-type="heading"><subject>Article</subject></subj-group></article-categories><title-group><article-title>Knot spectrum of turbulence</article-title></title-group><contrib-group><contrib contrib-type="author"><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-9351-3638</contrib-id><name><surname>Cooper</surname><given-names>R. G.</given-names></name><xref ref-type="aff" rid="Aff1">1</xref></contrib><contrib contrib-type="author"><name><surname>Mesgarnezhad</surname><given-names>M.</given-names></name><xref ref-type="aff" rid="Aff1">1</xref></contrib><contrib contrib-type="author"><name><surname>Baggaley</surname><given-names>A. W.</given-names></name><xref ref-type="aff" rid="Aff1">1</xref><xref ref-type="aff" rid="Aff2">2</xref></contrib><contrib contrib-type="author" corresp="yes"><name><surname>Barenghi</surname><given-names>C. F.</given-names></name><address><email>carlo.barenghi@newcastle.ac.uk</email></address><xref ref-type="aff" rid="Aff1">1</xref><xref ref-type="aff" rid="Aff2">2</xref></contrib><aff id="Aff1"><label>1</label><institution-wrap><institution-id institution-id-type="ISNI">0000 0001 0462 7212</institution-id><institution-id institution-id-type="GRID">grid.1006.7</institution-id><institution>School of Mathematics, </institution><institution>Statistics and Physics Newcastle University, </institution></institution-wrap>Newcastle upon Tyne, NE1 7RU UK </aff><aff id="Aff2"><label>2</label>JQC (Joint Quantum Centre), Durham-Newcastle, UK </aff></contrib-group><pub-date pub-type="epub"><day>22</day><month>7</month><year>2019</year></pub-date><pub-date pub-type="pmc-release"><day>22</day><month>7</month><year>2019</year></pub-date><pub-date pub-type="collection"><year>2019</year></pub-date><volume>9</volume><elocation-id>10545</elocation-id><history><date date-type="received"><day>3</day><month>8</month><year>2018</year></date><date date-type="accepted"><day>5</day><month>7</month><year>2019</year></date></history><permissions><copyright-statement>&#x000a9; The Author(s) 2019</copyright-statement><license license-type="OpenAccess"><license-p><bold>Open Access</bold> This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons license, and indicate if changes were made. The images or other third party material in this article are included in the article&#x02019;s Creative Commons license, unless indicated otherwise in a credit line to the material. If material is not included in the article&#x02019;s Creative Commons license and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this license, visit <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</ext-link>.</license-p></license></permissions><abstract id="Abs1"><p id="Par1">Streamlines, vortex lines and magnetic flux tubes in turbulent fluids and plasmas display a great amount of coiling, twisting and linking, raising the question as to whether their topological complexity (continually created and destroyed by reconnections) can be quantified. In superfluid helium, the discrete (quantized) nature of vorticity can be exploited to associate to each vortex loop a knot invariant called the Alexander polynomial whose degree characterizes the topology of that vortex loop. By numerically simulating the dynamics of a tangle of quantum vortex lines, we find that this quantum turbulence always contains vortex knots of very large degree which keep forming, vanishing and reforming, creating a distribution of topologies which we quantify in terms of a knot spectrum and its scaling law. We also find results analogous to those in the wider literature, demonstrating that the knotting probability of the vortex tangle grows with the vortex length, as for macromolecules, and saturates above a characteristic length, as found for tumbled strings.</p></abstract><kwd-group kwd-group-type="npg-subject"><title>Subject terms</title><kwd>Condensed-matter physics</kwd><kwd>Fluid dynamics</kwd></kwd-group><funding-group><award-group><funding-source><institution-wrap><institution-id institution-id-type="FundRef">https://doi.org/10.13039/501100000266</institution-id><institution>RCUK | Engineering and Physical Sciences Research Council (EPSRC)</institution></institution-wrap></funding-source><award-id>RES/0581/7397</award-id><principal-award-recipient><name><surname>Barenghi</surname><given-names>C. F.</given-names></name></principal-award-recipient></award-group></funding-group><custom-meta-group><custom-meta><meta-name>issue-copyright-statement</meta-name><meta-value>&#x000a9; The Author(s) 2019</meta-value></custom-meta></custom-meta-group></article-meta></front><body><sec id="Sec1" sec-type="introduction"><title>Introduction</title></sec><sec id="Sec2"><title>Motivation</title><p id="Par2">Tangled filamentary structures are a regular occurrence in physical systems ranging from turbulent fluids<sup><xref ref-type="bibr" rid="CR1">1</xref></sup> and magnetic fields<sup><xref ref-type="bibr" rid="CR2">2</xref>,<xref ref-type="bibr" rid="CR3">3</xref></sup> to optics<sup><xref ref-type="bibr" rid="CR4">4</xref>,<xref ref-type="bibr" rid="CR5">5</xref></sup>, nematic liquid crystals<sup><xref ref-type="bibr" rid="CR6">6</xref></sup> and superfluids<sup><xref ref-type="bibr" rid="CR7">7</xref></sup>. Knowing if such structures are knotted is important; for example, in DNA this knowledge provides valuable information on the global arrangement of molecules<sup><xref ref-type="bibr" rid="CR8">8</xref></sup>. In fluids, plasmas and superfluids any increase or decrease of linking or knottiness is caused by vortex reconnections<sup><xref ref-type="bibr" rid="CR9">9</xref>&#x02013;<xref ref-type="bibr" rid="CR11">11</xref></sup>, dramatic events which are associated with viscous, resistive and acoustic energy losses respectively. One would like to relate the topology of turbulent flows to their energy, and the first step in this direction is to precisely quantify the topology. The success in creating a single vortex knot in controlled laboratory conditions<sup><xref ref-type="bibr" rid="CR12">12</xref></sup> has stimulated new ideas, including the use of polynomials to analyse knotted structures. For example, it has been shown that the decay of a single knotted vortex<sup><xref ref-type="bibr" rid="CR13">13</xref></sup> can be tracked using the HOMFLYPT polynomial<sup><xref ref-type="bibr" rid="CR14">14</xref></sup>. Unfortunately, the step from one vortex to turbulence is still a big step. In computational fluid dynamics, a sample of vortex lines in a turbulent flow can be traced and analyzed (at least in principle) to determine whether they are knotted or linked; however, moving across regions of high and low background vorticity, we may find that, due to unavoidable numerical noise, the line does not close as required by the solenoidal property of vorticity.</p><p id="Par3">To overcome this difficulty we note that whereas in ordinary fluids vorticity is a continuous field of arbitrary shape and strength, in quantum fluids<sup><xref ref-type="bibr" rid="CR15">15</xref></sup> such as superfluid helium and atomic Bose-Einstein condensates (BECs), vorticity consists of individual vortex lines of fixed circulation <inline-formula id="IEq1"><alternatives><tex-math id="M1">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\kappa =h/m$$\end{document}</tex-math><mml:math id="M2"><mml:mi>&#x003ba;</mml:mi><mml:mo>=</mml:mo><mml:mi>h</mml:mi><mml:mo>/</mml:mo><mml:mi>m</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq1.gif"/></alternatives></inline-formula> (where <italic>h</italic> is Planck&#x02019;s constant and <italic>m</italic> the mass of the relevant boson) moving in the perfect background of inviscid potential flow. In these quantum systems, a vortex line is an individual topological defect (the phase of the complex wave function <inline-formula id="IEq2"><alternatives><tex-math id="M3">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Psi }}$$\end{document}</tex-math><mml:math id="M4"><mml:mi mathvariant="normal">&#x003a8;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq2.gif"/></alternatives></inline-formula> vanishes on the vortex axis, hence its phase is undefined) around which the phase changes by 2<italic>&#x003c0;</italic>, corresponding to the superflow <inline-formula id="IEq3"><alternatives><tex-math id="M5">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$v=\kappa /(2\pi r)$$\end{document}</tex-math><mml:math id="M6"><mml:mi>v</mml:mi><mml:mo>=</mml:mo><mml:mi>&#x003ba;</mml:mi><mml:mo>/</mml:mo><mml:mo stretchy="false">(</mml:mo><mml:mn>2</mml:mn><mml:mi>&#x003c0;</mml:mi><mml:mi>r</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq3.gif"/></alternatives></inline-formula> where <italic>r</italic> is the radial distance to the axis. This property guarantees that (away from boundaries where <inline-formula id="IEq4"><alternatives><tex-math id="M7">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$|{\rm{\Psi }}|\to 0$$\end{document}</tex-math><mml:math id="M8"><mml:mo stretchy="false">|</mml:mo><mml:mi mathvariant="normal">&#x003a8;</mml:mi><mml:mo stretchy="false">|</mml:mo><mml:mo>&#x02192;</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq4.gif"/></alternatives></inline-formula>) there is never any numerical ambiguity in localizing a vortex line, hence determining the linking and the knottiness of lines. It is therefore convenient to study the problem of the topology of turbulence in the context of turbulent quantum fluids. This state of &#x02018;quantum turbulence&#x02019; can be easily generated in the laboratory by stirring liquid helium or atomic condensates, and takes the form of a disordered tangle of vortex lines.</p><p id="Par4">An additional motivation to consider the topology of quantum turbulence is that if the superfluid is forced at length scales <italic>D</italic> much larger than the average distance <inline-formula id="IEq5"><alternatives><tex-math id="M9">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\ell $$\end{document}</tex-math><mml:math id="M10"><mml:mi>&#x02113;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq5.gif"/></alternatives></inline-formula> between vortex lines<sup><xref ref-type="bibr" rid="CR16">16</xref>&#x02013;<xref ref-type="bibr" rid="CR18">18</xref></sup> so that enough k-space is available, then, in this wide range between <italic>D</italic> and <inline-formula id="IEq6"><alternatives><tex-math id="M11">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\ell $$\end{document}</tex-math><mml:math id="M12"><mml:mi>&#x02113;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq6.gif"/></alternatives></inline-formula> the quantum turbulent flow displays the same velocity statistics<sup><xref ref-type="bibr" rid="CR19">19</xref>,<xref ref-type="bibr" rid="CR20">20</xref></sup> and the same<sup><xref ref-type="bibr" rid="CR21">21</xref></sup> power-law distribution of kinetic energy (the Kolmogorov law) which is observed in ordinary (classical) turbulence. In this particular regime, quantum turbulence therefore represents the &#x02018;skeleton&#x02019; of classical turbulence (other regimes of quantum turbulence exist which do not display the Kolmogorov law and lack an energy cascade<sup><xref ref-type="bibr" rid="CR18">18</xref></sup>).</p><p id="Par5">Thus motivated, our aim is to explore numerically the topology of quantum turbulence. At this early stage of investigation, the precise state of quantum turbulence which is examined must be chosen on the ground of its simplicity and experimental availability.</p><p id="Par6">As in classical fluids, a quantum vortex line is either a closed loops or it terminates at a boundary. To avoid any ambiguity or arbitrariety in characterizing the linking between two vortex lines, we restrict our attention to turbulence in an infinite domain, away from boundaries (assuming zero velocity at infinity), thus guaranteeing that all vortex lines are in the shape of closed loops. A further simplification is to restrict our study to statistical steady state regimes, such that forcing and dissipation are balanced, flow properties fluctuate around mean values, and the memory of the initial condition is lost.</p><p id="Par7">These considerations lead us to consider experiments in which quantum turbulence is generated at the centre of the experimental cell away from boundaries at sufficiently high temperatures that the mutual friction between the vortex lines and the thermal excitations (the normal fluid) provides a mechanism to inject (extract) energy into (from) the vortex lines; this temperature regime is also the most common in experiments. To sustain turbulence at the centre of the sample, the liquid helium must be stirred by suitably positioned small oscillating objects<sup><xref ref-type="bibr" rid="CR22">22</xref></sup>, such as forks<sup><xref ref-type="bibr" rid="CR23">23</xref></sup>, grids<sup><xref ref-type="bibr" rid="CR24">24</xref>,<xref ref-type="bibr" rid="CR25">25</xref></sup>, or wires<sup><xref ref-type="bibr" rid="CR26">26</xref></sup>, or by focusing ultrasound<sup><xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR28">28</xref></sup>; in atomic BECs, the analog set-up would be to create a localized tangle of vortex lines by stirring a large condensate with a laser spoon.</p><p id="Par8">Since we are not interested in modelling the detailed action of a specific oscillating object on the liquid helium but only in feeding/extracting energy into/from the vortex tangle in a localised region, we model the normal fluid&#x02019;s velocity field using a relatively simple, localised, time-dependent flow. Such flow is usually laminar (as Reynolds numbers based on the viscosity of the normal fluid and the velocity/size of small oscillating objects are never large). We choose a Dudley-James flow<sup><xref ref-type="bibr" rid="CR29">29</xref></sup> within a spherical region of radius <inline-formula id="IEq7"><alternatives><tex-math id="M13">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$D=0.03\,{\rm{cm}}$$\end{document}</tex-math><mml:math id="M14"><mml:mi>D</mml:mi><mml:mo>=</mml:mo><mml:mn>0.03</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq7.gif"/></alternatives></inline-formula> and zero outside (see Fig.&#x000a0;<xref rid="Fig1" ref-type="fig">1</xref>(left) and Methods for details). Unlike the random waves used in a preliminary investigation<sup><xref ref-type="bibr" rid="CR30">30</xref></sup> which focused on the superfluid helicity, the Dudley-James flow is incompressible, hence more realistic. Dudley-James flows have been used in MHD to study the kinematic dynamo (the growth and nonlinear saturation of magnetic field given a prescribed velocity field), a problem which is (at least in spirit) similar to ours (the growth and nonlinear saturation of a tangle of quantum vortex lines given a prescribed normal fluid velocity field). The initial condition of each numerical simulation consists of a few random seeding vortex rings. The evolution of this initial condition into a turbulent tangle of vortex lines in a statistical steady-state is simulated using the Vortex Filament Method (see Methods for details).<fig id="Fig1"><label>Figure 1</label><caption><p>Left: Instantaneous Dudley-James flow: plot of <inline-formula id="IEq8"><alternatives><tex-math id="M15">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$|{{\bf{v}}}_{n}|$$\end{document}</tex-math><mml:math id="M16"><mml:mo stretchy="false">|</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">|</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq8.gif"/></alternatives></inline-formula> vs <italic>x</italic>, <italic>z</italic> at <inline-formula id="IEq9"><alternatives><tex-math id="M17">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$y=0$$\end{document}</tex-math><mml:math id="M18"><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq9.gif"/></alternatives></inline-formula> in the region <inline-formula id="IEq10"><alternatives><tex-math id="M19">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$-0.05 &#x0003c; x$$\end{document}</tex-math><mml:math id="M20"><mml:mo>&#x02212;</mml:mo><mml:mn>0.05</mml:mn><mml:mo>&#x0003c;</mml:mo><mml:mi>x</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq10.gif"/></alternatives></inline-formula>, <inline-formula id="IEq11"><alternatives><tex-math id="M21">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$y &#x0003c; 0.05\,{\rm{cm}}$$\end{document}</tex-math><mml:math id="M22"><mml:mi>y</mml:mi><mml:mo>&#x0003c;</mml:mo><mml:mn>0.05</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq11.gif"/></alternatives></inline-formula> with superimposed arrowplots. Right: Instantaneous three-dimensional snapshot of the vortex tangle superimposed to the magnitude <inline-formula id="IEq12"><alternatives><tex-math id="M23">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$|{{\bf{v}}}_{n}|$$\end{document}</tex-math><mml:math id="M24"><mml:mo stretchy="false">|</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">|</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq12.gif"/></alternatives></inline-formula> of the driving Dudley-James flow on the <italic>x</italic>, <italic>z</italic> plane at <inline-formula id="IEq13"><alternatives><tex-math id="M25">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$y=0$$\end{document}</tex-math><mml:math id="M26"><mml:mi>y</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq13.gif"/></alternatives></inline-formula>. The cube <inline-formula id="IEq14"><alternatives><tex-math id="M27">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$-0.05 &#x0003c; x$$\end{document}</tex-math><mml:math id="M28"><mml:mo>&#x02212;</mml:mo><mml:mn>0.05</mml:mn><mml:mo>&#x0003c;</mml:mo><mml:mi>x</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq14.gif"/></alternatives></inline-formula>, <italic>y</italic>, <inline-formula id="IEq15"><alternatives><tex-math id="M29">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$z &#x0003c; 0.05\,{\rm{cm}}$$\end{document}</tex-math><mml:math id="M30"><mml:mi>z</mml:mi><mml:mo>&#x0003c;</mml:mo><mml:mn>0.05</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq15.gif"/></alternatives></inline-formula> around the vortex tangle is for visualization only (the simulation is performed in an infinite domain).</p></caption><graphic xlink:href="41598_2019_47103_Fig1_HTML" id="d29e631"/></fig></p></sec><sec id="Sec3" sec-type="results"><title>Results</title><p id="Par9">At the beginning of the time evolution, the length of the initial vortex configuration increases rapidly as energy is fed into the vortices by the normal fluid via the Donnelly-Glaberson (DG) instability<sup><xref ref-type="bibr" rid="CR31">31</xref></sup>. The DG instability manifests itself as growing Kelvin waves - helical displacements of the vortex lines away from their initial position - and occurs if the component of the normal fluid velocity parallel to a vortex line exceeds a critical value. Closely packed vortex lines interact, stretching and rotating around each other, and reconnect when they collide<sup><xref ref-type="bibr" rid="CR32">32</xref>,<xref ref-type="bibr" rid="CR33">33</xref></sup>. The relaxation of each reconnection cusp releases more Kelvin waves<sup><xref ref-type="bibr" rid="CR34">34</xref></sup>, and a turbulent tangle of vortex lines is quickly created.</p><p id="Par10">After the initial transient, the growth of the vortex line length is balanced by dissipation and the vortex tangle settles to a statistical steady-state in which the total vortex length fluctuates around a mean value which depends on the driving normal fluid velocity, as shown in Fig.&#x000a0;<xref rid="Fig2" ref-type="fig">2</xref>. This happens, firstly because the friction with the normal fluid damps out the Kelvin waves<sup><xref ref-type="bibr" rid="CR35">35</xref></sup>; secondly because the vortex loops which escape the central region (where the normal fluid stirs the turbulence) shrink and vanish due to the friction with the stationary normal fluid in the outer region (no DG instability takes place there). The vortex tangle, therefore, remains localised in the region of the driving normal flow, as shown in Fig.&#x000a0;<xref rid="Fig1" ref-type="fig">1</xref>(right).<fig id="Fig2"><label>Figure 2</label><caption><p>Time evolution of the vortex line length <inline-formula id="IEq16"><alternatives><tex-math id="M31">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Lambda }}$$\end{document}</tex-math><mml:math id="M32"><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq16.gif"/></alternatives></inline-formula> (cm) in the two numerical simulations. The lower/upper (blue/red) lines correspond to normal fluid drives of <inline-formula id="IEq17"><alternatives><tex-math id="M33">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=4.75\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M34"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>4.75</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq17.gif"/></alternatives></inline-formula> and <inline-formula id="IEq18"><alternatives><tex-math id="M35">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=5.25\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M36"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>5.25</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq18.gif"/></alternatives></inline-formula> respectively.</p></caption><graphic xlink:href="41598_2019_47103_Fig2_HTML" id="d29e734"/></fig></p><p id="Par11">Snapshots of the vortex configurations for the two different levels of normal fluid drive are plotted in Fig.&#x000a0;<xref rid="Fig3" ref-type="fig">3</xref>: the larger the driving normal fluid velocity, the more intense the turbulence (its intensity is traditionally quantified in experiments in terms of the vortex line density <italic>L</italic>, the length of vortex line per unit volume). At temperatures lower than the results presented here, the turbulent tangles shown in Fig.&#x000a0;<xref rid="Fig3" ref-type="fig">3</xref> would be surrounded by a cloud of small vortex loops which rapidly fly away<sup><xref ref-type="bibr" rid="CR36">36</xref></sup>; at the temperatures which we consider here these small loops are destroyed by friction. In either case, by either shrinking and vanishing (at intermediate and high temperatures) or by rapidly flying away (at low temperatures) these vortex loops represent an energy sink at short length scales. In this way a balance is reached between drive and dissipation, resulting in fluctuations of the vortex length and the energy about mean values.<fig id="Fig3"><label>Figure 3</label><caption><p>Snapshots of the vortex configuration for the lower (left) and higher (right) normal fluid drives <inline-formula id="IEq19"><alternatives><tex-math id="M37">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=4.75\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M38"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>4.75</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq19.gif"/></alternatives></inline-formula> and <inline-formula id="IEq20"><alternatives><tex-math id="M39">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=5.25\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M40"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>5.25</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq20.gif"/></alternatives></inline-formula> respectively at <italic>t</italic>&#x02009;=&#x02009;20&#x02009;s in the saturated steady-state regime. Different colours are used to identify distinct vortex lines in the two snapshots. The cubes around the vortex tangles are for visualization only (the simulations are performed in an infinite domain).</p></caption><graphic xlink:href="41598_2019_47103_Fig3_HTML" id="d29e813"/></fig></p><p id="Par12">To demonstrate in a quantitative way that our vortex configurations are turbulent, Fig.&#x000a0;<xref rid="Fig4" ref-type="fig">4</xref> shows the kinetic energy spectrum <italic>E</italic>(<italic>k</italic>) (where <italic>k</italic> is the magnitude of the three-dimensional wavenumber <bold>k</bold>) in the saturated regime. It is apparent that the energy injected at the large length scale <italic>D</italic> cascades to smaller length scales (larger wavenumbers <italic>k</italic>). As the total injected energy is balanced by friction, most energy remains contained in the length scales larger than the average intervortex distance <inline-formula id="IEq21"><alternatives><tex-math id="M41">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\ell $$\end{document}</tex-math><mml:math id="M42"><mml:mi>&#x02113;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq21.gif"/></alternatives></inline-formula>. In this region <inline-formula id="IEq22"><alternatives><tex-math id="M43">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{D} &#x0003c; k &#x0003c; {k}_{\ell }$$\end{document}</tex-math><mml:math id="M44"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>D</mml:mi></mml:mrow></mml:msub><mml:mo>&#x0003c;</mml:mo><mml:mi>k</mml:mi><mml:mo>&#x0003c;</mml:mo><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x02113;</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq22.gif"/></alternatives></inline-formula> of k-space (where <inline-formula id="IEq23"><alternatives><tex-math id="M45">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{D}=2\pi $$\end{document}</tex-math><mml:math id="M46"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>D</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mi>&#x003c0;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq23.gif"/></alternatives></inline-formula>/<italic>D</italic> and <inline-formula id="IEq24"><alternatives><tex-math id="M47">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{\ell }=2\pi $$\end{document}</tex-math><mml:math id="M48"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x02113;</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>2</mml:mn><mml:mi>&#x003c0;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq24.gif"/></alternatives></inline-formula>/<inline-formula id="IEq25"><alternatives><tex-math id="M49">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\ell $$\end{document}</tex-math><mml:math id="M50"><mml:mi>&#x02113;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq25.gif"/></alternatives></inline-formula>), we find that the energy spectrum is consistent with the famous Kolmogorov scaling <inline-formula id="IEq26"><alternatives><tex-math id="M51">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$E(k)\sim {k}^{-5/3}$$\end{document}</tex-math><mml:math id="M52"><mml:mi>E</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>k</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x0223c;</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>5</mml:mn><mml:mo>/</mml:mo><mml:mn>3</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq26.gif"/></alternatives></inline-formula> of classical homogeneous isotropic turbulence. We stress that we should not expect a precise <italic>k</italic><sup>&#x02212;5/3</sup> scaling in our simulations: our turbulent flow is not homogeneous and only one decade of k-space is available. The crossover from the Kolmogorov <italic>k</italic><sup>&#x02212;5/3</sup> scaling to the <inline-formula id="IEq27"><alternatives><tex-math id="M53">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$E(k)\sim {k}^{-1}$$\end{document}</tex-math><mml:math id="M54"><mml:mi>E</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>k</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x0223c;</mml:mo><mml:msup><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq27.gif"/></alternatives></inline-formula> scaling which is typical of individual vortex lines occurs at approximately <inline-formula id="IEq28"><alternatives><tex-math id="M55">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$k\approx {10}^{3}\,{{\rm{cm}}}^{-1}$$\end{document}</tex-math><mml:math id="M56"><mml:mi>k</mml:mi><mml:mo>&#x02248;</mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mn>3</mml:mn></mml:msup><mml:mspace width=".25em"/><mml:msup><mml:mrow><mml:mi mathvariant="normal">cm</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq28.gif"/></alternatives></inline-formula>, which is consistent with <inline-formula id="IEq29"><alternatives><tex-math id="M57">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${k}_{\ell }\approx 1300\,{{\rm{cm}}}^{-1}$$\end{document}</tex-math><mml:math id="M58"><mml:msub><mml:mrow><mml:mi>k</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x02113;</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02248;</mml:mo><mml:mn>1300</mml:mn><mml:mspace width=".25em"/><mml:msup><mml:mrow><mml:mi mathvariant="normal">cm</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq29.gif"/></alternatives></inline-formula> estimated from the vortex line density <inline-formula id="IEq30"><alternatives><tex-math id="M59">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$L={\rm{\Lambda }}$$\end{document}</tex-math><mml:math id="M60"><mml:mi>L</mml:mi><mml:mo>=</mml:mo><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq30.gif"/></alternatives></inline-formula>/<italic>V</italic> where <inline-formula id="IEq31"><alternatives><tex-math id="M61">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$V\approx 4\pi {D}^{3}$$\end{document}</tex-math><mml:math id="M62"><mml:mi>V</mml:mi><mml:mo>&#x02248;</mml:mo><mml:mn>4</mml:mn><mml:mi>&#x003c0;</mml:mi><mml:msup><mml:mrow><mml:mi>D</mml:mi></mml:mrow><mml:mn>3</mml:mn></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq31.gif"/></alternatives></inline-formula>/3 is the volume of the turbulent region and <inline-formula id="IEq32"><alternatives><tex-math id="M63">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\ell \approx {L}^{-1/2}\approx 4.8\times {10}^{-3}\,{\rm{cm}}$$\end{document}</tex-math><mml:math id="M64"><mml:mi>&#x02113;</mml:mi><mml:mo>&#x02248;</mml:mo><mml:msup><mml:mrow><mml:mi>L</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup><mml:mo>&#x02248;</mml:mo><mml:mn>4.8</mml:mn><mml:mo>&#x000d7;</mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>3</mml:mn></mml:mrow></mml:msup><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq32.gif"/></alternatives></inline-formula> is the average intervortex spacing corresponding to the numerical simulation at large drive (<inline-formula id="IEq33"><alternatives><tex-math id="M65">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Lambda }}\approx 5\,{\rm{cm}}$$\end{document}</tex-math><mml:math id="M66"><mml:mi mathvariant="normal">&#x0039b;</mml:mi><mml:mo>&#x02248;</mml:mo><mml:mn>5</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq33.gif"/></alternatives></inline-formula>).<fig id="Fig4"><label>Figure 4</label><caption><p>Instantaneous energy spectrum <italic>E</italic>(<italic>k</italic>) (arbitrary units) of the superfluid velocity at <inline-formula id="IEq34"><alternatives><tex-math id="M67">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$t=24\,{\rm{s}}$$\end{document}</tex-math><mml:math id="M68"><mml:mi>t</mml:mi><mml:mo>=</mml:mo><mml:mn>24</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq34.gif"/></alternatives></inline-formula> (in the saturated regime) for <inline-formula id="IEq35"><alternatives><tex-math id="M69">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=5.25\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M70"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>5.25</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq35.gif"/></alternatives></inline-formula> drive plotted vs wavenumber <italic>k</italic> (cm<sup>&#x02212;1</sup>). The red and blue dashed lines are guides to the eye to indicate the <italic>k</italic><sup>&#x02212;5/3</sup> and the <italic>k</italic><sup>&#x02212;1</sup> scaling slopes respectively. The crossover between the two behaviours corresponds to the average intervortex distance <inline-formula id="IEq36"><alternatives><tex-math id="M71">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\ell $$\end{document}</tex-math><mml:math id="M72"><mml:mi>&#x02113;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq36.gif"/></alternatives></inline-formula>.</p></caption><graphic xlink:href="41598_2019_47103_Fig4_HTML" id="d29e1242"/></fig></p><p id="Par13">Our technique to quantify the topology of the turbulence is based on a knot invariant: the Alexander polynomial<sup><xref ref-type="bibr" rid="CR37">37</xref></sup>. The polynomial <inline-formula id="IEq37"><alternatives><tex-math id="M73">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Delta }}(\tau )={a}_{0}+{a}_{1}\tau +\cdots +{a}_{\nu }{\tau }^{\nu }$$\end{document}</tex-math><mml:math id="M74"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mi>&#x003c4;</mml:mi><mml:mo>+</mml:mo><mml:mo>&#x022ef;</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow></mml:msub><mml:msup><mml:mrow><mml:mi>&#x003c4;</mml:mi></mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq37.gif"/></alternatives></inline-formula> of degree <inline-formula id="IEq38"><alternatives><tex-math id="M75">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu $$\end{document}</tex-math><mml:math id="M76"><mml:mi>&#x003bd;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq38.gif"/></alternatives></inline-formula> with integer coefficients <inline-formula id="IEq39"><alternatives><tex-math id="M77">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${a}_{0},\ldots ,{a}_{\nu }$$\end{document}</tex-math><mml:math id="M78"><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>,</mml:mo><mml:mi>&#x02026;</mml:mi><mml:mo>,</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq39.gif"/></alternatives></inline-formula> is assigned to a knot type. For example, a vortex ring has Alexander polynomial <inline-formula id="IEq40"><alternatives><tex-math id="M79">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Delta }}(\tau )=1$$\end{document}</tex-math><mml:math id="M80"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq40.gif"/></alternatives></inline-formula> which identifies the <italic>unknot</italic>; therefore any closed vortex loop which can be continuously (i.e. without reconnections) deformed into a ring corresponds to <inline-formula id="IEq41"><alternatives><tex-math id="M81">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Delta }}(\tau )=1$$\end{document}</tex-math><mml:math id="M82"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq41.gif"/></alternatives></inline-formula>. The simplest non-trivial knot is the <italic>trefoil knot</italic> which has Alexander polynomial <inline-formula id="IEq42"><alternatives><tex-math id="M83">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Delta }}(\tau )=1-\tau +{\tau }^{2}$$\end{document}</tex-math><mml:math id="M84"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mi>&#x003c4;</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq42.gif"/></alternatives></inline-formula> of degree <inline-formula id="IEq43"><alternatives><tex-math id="M85">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =2$$\end{document}</tex-math><mml:math id="M86"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq43.gif"/></alternatives></inline-formula>. In general, the higher the degree <inline-formula id="IEq44"><alternatives><tex-math id="M87">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu $$\end{document}</tex-math><mml:math id="M88"><mml:mi>&#x003bd;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq44.gif"/></alternatives></inline-formula> of the Alexander polynomial, the more complex the knot type of the vortex loop.</p><p id="Par14">The instantaneous vortex configuration consists of <italic>N</italic> vortex loops <inline-formula id="IEq45"><alternatives><tex-math id="M89">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${ {\mathcal L} }_{i}$$\end{document}</tex-math><mml:math id="M90"><mml:msub><mml:mrow><mml:mi>&#x02112;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq45.gif"/></alternatives></inline-formula> (<inline-formula id="IEq46"><alternatives><tex-math id="M91">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$i=1,\ldots N$$\end{document}</tex-math><mml:math id="M92"><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>&#x02026;</mml:mi><mml:mi>N</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq46.gif"/></alternatives></inline-formula>), where <italic>N</italic> changes with time as vortex reconnections continually merge and split vortex loops. After the initial transient, <italic>N</italic> fluctuates about a mean value. In this statistical steady state regime, at any given time <italic>t</italic>, we numerically determine the Alexander polynomial of each loop <inline-formula id="IEq47"><alternatives><tex-math id="M93">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${ {\mathcal L} }_{i}$$\end{document}</tex-math><mml:math id="M94"><mml:msub><mml:mrow><mml:mi>&#x02112;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq47.gif"/></alternatives></inline-formula> (<inline-formula id="IEq48"><alternatives><tex-math id="M95">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$i=1,\ldots N$$\end{document}</tex-math><mml:math id="M96"><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>&#x02026;</mml:mi><mml:mi>N</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq48.gif"/></alternatives></inline-formula>) and call <inline-formula id="IEq49"><alternatives><tex-math id="M97">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\nu }_{i}$$\end{document}</tex-math><mml:math id="M98"><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq49.gif"/></alternatives></inline-formula> its degree. We stress that our simulations are not stochastic: the only source of randomness in the tangle&#x02019;s topology arises from the turbulent fluctuations. Data are collected over time (in the steady-state regime) and cumulated to generate statistics for the analysis.</p><p id="Par15">Our initial focus is what determines the probability that a given loop is knotted. Perhaps unsurprisingly, this fundamental question has been addressed in studies of other physical systems that contain knots. For example, Arsuaga <italic>et al</italic>.<sup><xref ref-type="bibr" rid="CR38">38</xref></sup> performed Monte Carlo simulations of random knotting in confined volumes, which were directly compared to the visualisation of DNA molecules. Their simulations suggested a linear relationship between the length of a loop and its probability of being knotted, which we shall denote <italic>P</italic><sub><italic>k</italic></sub>. A more recent study by Raymer &#x00026; Smith<sup><xref ref-type="bibr" rid="CR39">39</xref></sup> performed experiments where strings of different lengths were tumbled inside a box. They found that <italic>P</italic><sub><italic>k</italic></sub> grows rapidly with the length of the string, and saturates to some limiting value above a characteristic string length. Interestingly, the limiting value which they found was substantially less than 1, which they attributed to the finite agitation time and the stiffness of the strings.</p><p id="Par16">We now proceed with the analysis of our results. Figure&#x000a0;<xref rid="Fig5" ref-type="fig">5</xref> displays <inline-formula id="IEq50"><alternatives><tex-math id="M99">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${P}_{k}({\rm{\Lambda }})$$\end{document}</tex-math><mml:math id="M100"><mml:msub><mml:mrow><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="normal">&#x0039b;</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq50.gif"/></alternatives></inline-formula>, the probability that a loop of length <inline-formula id="IEq51"><alternatives><tex-math id="M101">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Lambda }}$$\end{document}</tex-math><mml:math id="M102"><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq51.gif"/></alternatives></inline-formula> is knotted, calculated in the saturated steady-state regimes for both small and large normal fluid drives considered in this study. We find that <inline-formula id="IEq52"><alternatives><tex-math id="M103">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${P}_{k}({\rm{\Lambda }})$$\end{document}</tex-math><mml:math id="M104"><mml:msub><mml:mrow><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="normal">&#x0039b;</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq52.gif"/></alternatives></inline-formula> is independent of the normal fluid stirring (at least for the values considered here) and depends only on the loop length. Following Raymer &#x00026; Smith<sup><xref ref-type="bibr" rid="CR39">39</xref></sup>, we fit a sigmoidal curve to the data of the form <inline-formula id="IEq53"><alternatives><tex-math id="M105">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${P}_{k}({\rm{\Lambda }})=(1+{({\rm{\Lambda }}/{{\rm{\Lambda }}}_{0})}^{\gamma })$$\end{document}</tex-math><mml:math id="M106"><mml:msub><mml:mrow><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="normal">&#x0039b;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mo stretchy="false">(</mml:mo><mml:mn>1</mml:mn><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="normal">&#x0039b;</mml:mi><mml:mo>/</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo></mml:mrow><mml:mi>&#x003b3;</mml:mi></mml:msup><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq53.gif"/></alternatives></inline-formula>. Fitting our data using <inline-formula id="IEq54"><alternatives><tex-math id="M107">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=4.75\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M108"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>4.75</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq54.gif"/></alternatives></inline-formula>, we find <inline-formula id="IEq55"><alternatives><tex-math id="M109">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{0}=53\,{\rm{cm}}$$\end{document}</tex-math><mml:math id="M110"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>53</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq55.gif"/></alternatives></inline-formula> and <inline-formula id="IEq56"><alternatives><tex-math id="M111">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\gamma =-\,3.1$$\end{document}</tex-math><mml:math id="M112"><mml:mi>&#x003b3;</mml:mi><mml:mo>=</mml:mo><mml:mo>&#x02212;</mml:mo><mml:mspace width="-.25em"/><mml:mn>3.1</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq56.gif"/></alternatives></inline-formula>, in fair agreement with <inline-formula id="IEq57"><alternatives><tex-math id="M113">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\gamma =-\,2.9$$\end{document}</tex-math><mml:math id="M114"><mml:mi>&#x003b3;</mml:mi><mml:mo>=</mml:mo><mml:mo>&#x02212;</mml:mo><mml:mspace width="-.25em"/><mml:mn>2.9</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq57.gif"/></alternatives></inline-formula> reported by Raymer &#x00026; Smith<sup><xref ref-type="bibr" rid="CR39">39</xref></sup>, suggesting that the knotting probabilities of quantised vortices moving under reconnecting Biot-Savart dynamics and tumbled strings are not unrelated. To show that our results are statistically robust in the limit of large <inline-formula id="IEq58"><alternatives><tex-math id="M115">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i}$$\end{document}</tex-math><mml:math id="M116"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq58.gif"/></alternatives></inline-formula>, Fig.&#x000a0;<xref rid="Fig6" ref-type="fig">6</xref> displays the number of knots, <inline-formula id="IEq59"><alternatives><tex-math id="M117">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${M}_{{{\rm{\Lambda }}}_{i}}$$\end{document}</tex-math><mml:math id="M118"><mml:msub><mml:mrow><mml:mi>M</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq59.gif"/></alternatives></inline-formula>, within each of the bins of the histogram. Notice that in general there are at least 10 vortex loops within a bin, until <inline-formula id="IEq60"><alternatives><tex-math id="M119">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i} &#x0003e; 250$$\end{document}</tex-math><mml:math id="M120"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x0003e;</mml:mo><mml:mn>250</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq60.gif"/></alternatives></inline-formula> for the higher drive simulation which is well into the asymptotic regime of <inline-formula id="IEq61"><alternatives><tex-math id="M121">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${P}_{k}=1$$\end{document}</tex-math><mml:math id="M122"><mml:msub><mml:mrow><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq61.gif"/></alternatives></inline-formula>.<fig id="Fig5"><label>Figure 5</label><caption><p>Probability <italic>P</italic><sub><italic>k</italic></sub> that a vortex loop is knotted plotted vs the loop&#x02019;s length <inline-formula id="IEq62"><alternatives><tex-math id="M123">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Lambda }}$$\end{document}</tex-math><mml:math id="M124"><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq62.gif"/></alternatives></inline-formula>. We have fitted data from both simulations (<inline-formula id="IEq63"><alternatives><tex-math id="M125">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=4.75\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M126"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>4.75</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq63.gif"/></alternatives></inline-formula> and <inline-formula id="IEq64"><alternatives><tex-math id="M127">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$5.25\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M128"><mml:mn>5.25</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq64.gif"/></alternatives></inline-formula>, red and blue curves respectively) with the same sigmoidal curve (black dashed curve) with fitting parameters <inline-formula id="IEq65"><alternatives><tex-math id="M129">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{0}=53\,{\rm{cm}}$$\end{document}</tex-math><mml:math id="M130"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>53</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq65.gif"/></alternatives></inline-formula>, <inline-formula id="IEq66"><alternatives><tex-math id="M131">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\gamma =-\,3.1$$\end{document}</tex-math><mml:math id="M132"><mml:mi>&#x003b3;</mml:mi><mml:mo>=</mml:mo><mml:mo>&#x02212;</mml:mo><mml:mspace width="-.25em"/><mml:mn>3.1</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq66.gif"/></alternatives></inline-formula>. Bin widths are taken to be approximately 20&#x02009;cm.</p></caption><graphic xlink:href="41598_2019_47103_Fig5_HTML" id="d29e1954"/></fig><fig id="Fig6"><label>Figure 6</label><caption><p>The number of knots, <inline-formula id="IEq67"><alternatives><tex-math id="M133">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${M}_{{{\rm{\Lambda }}}_{i}}$$\end{document}</tex-math><mml:math id="M134"><mml:msub><mml:mrow><mml:mi>M</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq67.gif"/></alternatives></inline-formula> within each of the bin widths, <inline-formula id="IEq68"><alternatives><tex-math id="M135">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i}$$\end{document}</tex-math><mml:math id="M136"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq68.gif"/></alternatives></inline-formula>, used in Fig.&#x000a0;<xref rid="Fig5" ref-type="fig">5</xref>.</p></caption><graphic xlink:href="41598_2019_47103_Fig6_HTML" id="d29e2002"/></fig></p><p id="Par17">We now move to consider the topological complexity of individual vortex loops and how it depends on the normal fluid drive and the loop&#x02019;s length. As we have discussed, at any instant of time, the vortex tangle contains knots, and the most complex knot has the largest value of <inline-formula id="IEq69"><alternatives><tex-math id="M137">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu $$\end{document}</tex-math><mml:math id="M138"><mml:mi>&#x003bd;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq69.gif"/></alternatives></inline-formula>. Figure&#x000a0;<xref rid="Fig7" ref-type="fig">7</xref> shows the time series of the maximal degree of Alexander polynomial present in the vortex tangle, revealing that at all times the vortex tangle contains a significant topological complexity - we never observe that the tangle is simply a collection of unknots. It must be stressed that the very knotted vortex structures which we detect are unstable: they are continually broken down by vortex reconnections, but they keep reforming by further reconnections. The natural question is whether the complexity depends on the driving normal fluid velocity. To answer the question we show a scatter-plot of <inline-formula id="IEq70"><alternatives><tex-math id="M139">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i}$$\end{document}</tex-math><mml:math id="M140"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq70.gif"/></alternatives></inline-formula> vs <inline-formula id="IEq71"><alternatives><tex-math id="M141">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\nu }_{i}$$\end{document}</tex-math><mml:math id="M142"><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq71.gif"/></alternatives></inline-formula>, see Fig.&#x000a0;<xref rid="Fig8" ref-type="fig">8</xref>. It is apparent that complexity is strongly related to the loop&#x02019;s length, which is perhaps unsurprising. However, as for <inline-formula id="IEq72"><alternatives><tex-math id="M143">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${P}_{k}({\rm{\Lambda }})$$\end{document}</tex-math><mml:math id="M144"><mml:msub><mml:mrow><mml:mi>P</mml:mi></mml:mrow><mml:mrow><mml:mi>k</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="normal">&#x0039b;</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq72.gif"/></alternatives></inline-formula>, the underlying functional relationship between <inline-formula id="IEq73"><alternatives><tex-math id="M145">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\nu }_{i}$$\end{document}</tex-math><mml:math id="M146"><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq73.gif"/></alternatives></inline-formula> and <inline-formula id="IEq74"><alternatives><tex-math id="M147">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i}$$\end{document}</tex-math><mml:math id="M148"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq74.gif"/></alternatives></inline-formula> appears independent of <italic>v</italic><sub><italic>f</italic></sub>, so the additional complexity which is evident in Fig.&#x000a0;<xref rid="Fig8" ref-type="fig">8</xref> is simply due to a stronger drive&#x02019;s propensity to generate longer loops (larger values of <inline-formula id="IEq75"><alternatives><tex-math id="M149">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i}$$\end{document}</tex-math><mml:math id="M150"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq75.gif"/></alternatives></inline-formula>).<fig id="Fig7"><label>Figure 7</label><caption><p>Time series of the largest degree of Alexander polynomial in the vortex configuration. The upper line is for <inline-formula id="IEq76"><alternatives><tex-math id="M151">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=4.75\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M152"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>4.75</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq76.gif"/></alternatives></inline-formula>, and the lower line for <inline-formula id="IEq77"><alternatives><tex-math id="M153">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=5.25\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M154"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>5.25</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq77.gif"/></alternatives></inline-formula>.</p></caption><graphic xlink:href="41598_2019_47103_Fig7_HTML" id="d29e2188"/></fig><fig id="Fig8"><label>Figure 8</label><caption><p>The degree <inline-formula id="IEq78"><alternatives><tex-math id="M155">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\nu }_{i}$$\end{document}</tex-math><mml:math id="M156"><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq78.gif"/></alternatives></inline-formula> of the Alexander polynomial of each vortex loop plotted against its length <inline-formula id="IEq79"><alternatives><tex-math id="M157">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i}$$\end{document}</tex-math><mml:math id="M158"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq79.gif"/></alternatives></inline-formula> (in cm) for the lower normal fluid drive (<inline-formula id="IEq80"><alternatives><tex-math id="M159">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=4.75\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M160"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>4.75</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq80.gif"/></alternatives></inline-formula>, blue symbols) and the higher drive (<inline-formula id="IEq81"><alternatives><tex-math id="M161">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=5.15\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M162"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>5.15</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq81.gif"/></alternatives></inline-formula>, red symbols).</p></caption><graphic xlink:href="41598_2019_47103_Fig8_HTML" id="d29e2279"/></fig></p><p id="Par18">Finally, attempting to gain a probabilistic understanding of the topological complexity of quantum turbulence which in the future could be compared to the distribution of knots in DNA, polymers, etc, we consider the distribution of <inline-formula id="IEq82"><alternatives><tex-math id="M163">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\nu }_{i} &#x0003e; 0$$\end{document}</tex-math><mml:math id="M164"><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo>&#x0003e;</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq82.gif"/></alternatives></inline-formula>. Figure&#x000a0;<xref rid="Fig9" ref-type="fig">9</xref> shows the Probability Mass Function (PMF) (normalized histogram of discrete variable) of the degrees of Alexander polynomials: <inline-formula id="IEq83"><alternatives><tex-math id="M165">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{PMF}}({\nu }_{i})$$\end{document}</tex-math><mml:math id="M166"><mml:mi mathvariant="normal">PMF</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq83.gif"/></alternatives></inline-formula> vs <inline-formula id="IEq84"><alternatives><tex-math id="M167">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\nu }_{i}$$\end{document}</tex-math><mml:math id="M168"><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq84.gif"/></alternatives></inline-formula>. We find two striking results: firstly that the PMFs are again independent of the normal fluid drive, and secondly that there appears a distinct scaling <inline-formula id="IEq85"><alternatives><tex-math id="M169">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{PMF}}(\nu )\sim {\nu }^{-3/2}$$\end{document}</tex-math><mml:math id="M170"><mml:mi mathvariant="normal">PMF</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003bd;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x0223c;</mml:mo><mml:msup><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>3</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq85.gif"/></alternatives></inline-formula> which we can call the &#x02018;knot spectrum&#x02019; of turbulence.<fig id="Fig9"><label>Figure 9</label><caption><p>Probability mass functions (PMFs) of the degree of the Alexander polynomial <inline-formula id="IEq86"><alternatives><tex-math id="M171">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu $$\end{document}</tex-math><mml:math id="M172"><mml:mi>&#x003bd;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq86.gif"/></alternatives></inline-formula> plotted on a log-log scale (main graph) and linear-linear scale (inset). The logarithmic scale suggests <inline-formula id="IEq87"><alternatives><tex-math id="M173">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$PMF(\nu )\sim {\nu }^{-3/2}$$\end{document}</tex-math><mml:math id="M174"><mml:mi>P</mml:mi><mml:mi>M</mml:mi><mml:mi>F</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003bd;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x0223c;</mml:mo><mml:msup><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>3</mml:mn><mml:mo>/</mml:mo><mml:mn>2</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq87.gif"/></alternatives></inline-formula>, as shown by the black dashed line.</p></caption><graphic xlink:href="41598_2019_47103_Fig9_HTML" id="d29e2425"/></fig></p></sec><sec id="Sec4" sec-type="discussion"><title>Discussion</title><p id="Par19">We have exploited the key property of quantum fluids - the discrete nature of vorticity - to quantify the topology of a small region of quantum turbulence (a vortex tangle) away from boundaries in a statistical steady-state regime. Such inhomogeneous vortex configuration can be realized in experiments in which turbulence is driven by small oscillating objects<sup><xref ref-type="bibr" rid="CR22">22</xref>&#x02013;<xref ref-type="bibr" rid="CR26">26</xref></sup> or by focussing ultrasound<sup><xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR28">28</xref></sup>. The temperature regime which we have chosen is typical of many <sup>4</sup>He experiments.</p><p id="Par20">We have found that the probability that a vortex loop is knotted increases with the loop&#x02019;s length as for random knots studied in the context of DNA and macromolecules<sup><xref ref-type="bibr" rid="CR8">8</xref></sup>, and saturates above a characteristic length as for tumbled strings<sup><xref ref-type="bibr" rid="CR39">39</xref></sup>, despite the very different physical mechanisms of agitation of these systems (respectively Brownian motion, mechanical chaos, the Biot-Savart law of Eulerian fluid dynamics). We have also found that, at any instant of time, the vortex tangle contains a distribution of vortex knots. We have quantified the topological complexity of these knots in terms of the degree of the Alexander polynomial which we numerically associate to each vortex loop. Surprisingly, the turbulence always contains some very long vortex loops of great topological complexity, and the distribution of this complexity (measured by the degree of the Alexander polynomials) displays a scaling law, or knot spectrum.</p><p id="Par21">With more computing power available, future work will consider larger, denser vortex tangles at different temperatures and drives, including the zero temperature limit, with the aim of determining the dynamical origin of the characteristic length for the knotting probability and of verifying if the knot spectrum scaling is universal or not. One should also extend this initial study to flows in larger periodic domains (where the turbulence can be driven to a more accurate classical Kolmogorov regime), and to flows within channel boundaries, where tools from braid theory may be used. Finally, it would be interesting to perform a similar analysis using HOMFLYPT polynomials.</p></sec><sec id="Sec5"><title>Methods</title><sec id="Sec6"><title>Superfluid</title><p id="Par22">We use the Vortex Filament Model (VFM) of Schwarz<sup><xref ref-type="bibr" rid="CR40">40</xref></sup>. The method is based on the observation that the average separation between vortex lines in typical superfluid helium (<sup>4</sup>He) experiments is <inline-formula id="IEq88"><alternatives><tex-math id="M175">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\ell \approx {10}^{-5}$$\end{document}</tex-math><mml:math id="M176"><mml:mi>&#x02113;</mml:mi><mml:mo>&#x02248;</mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>5</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq88.gif"/></alternatives></inline-formula> or <inline-formula id="IEq89"><alternatives><tex-math id="M177">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${10}^{-6}\,{\rm{m}}$$\end{document}</tex-math><mml:math id="M178"><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>6</mml:mn></mml:mrow></mml:msup><mml:mspace width=".25em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq89.gif"/></alternatives></inline-formula>, which is many orders of magnitude bigger than the radius of the vortex core, <inline-formula id="IEq90"><alternatives><tex-math id="M179">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${a}_{0}\approx {10}^{-10}\,{\rm{m}}$$\end{document}</tex-math><mml:math id="M180"><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>&#x02248;</mml:mo><mml:msup><mml:mrow><mml:mn>10</mml:mn></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>10</mml:mn></mml:mrow></mml:msup><mml:mspace width=".25em"/><mml:mi mathvariant="normal">m</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq90.gif"/></alternatives></inline-formula>. We can therefore model superfluid vortex lines as closed space-curves <inline-formula id="IEq91"><alternatives><tex-math id="M181">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$s(\xi ,t)$$\end{document}</tex-math><mml:math id="M182"><mml:mi>s</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003be;</mml:mi><mml:mo>,</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq91.gif"/></alternatives></inline-formula> of thickness which is infinitesimal to any other length scale of the flow, where <italic>t</italic> is time and <inline-formula id="IEq92"><alternatives><tex-math id="M183">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\xi $$\end{document}</tex-math><mml:math id="M184"><mml:mi>&#x003be;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq92.gif"/></alternatives></inline-formula> is arc-length. The velocity of a vortex line at the point <italic>s</italic> is given by Schwarz&#x02019;s equation<sup><xref ref-type="bibr" rid="CR40">40</xref></sup><disp-formula id="Equ1"><label>1</label><alternatives><tex-math id="M185">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\frac{d{\bf{s}}}{dt}={{\bf{v}}}_{self}+\alpha {\bf{s}}^{\prime} \times ({{\bf{v}}}_{n}-{{\bf{v}}}_{self})-\alpha ^{\prime} {\bf{s}}^{\prime} \times [{\bf{s}}^{\prime} \times ({{\bf{v}}}_{n}-{{\bf{v}}}_{self})],$$\end{document}</tex-math><mml:math id="M186" display="block"><mml:mfrac><mml:mrow><mml:mi>d</mml:mi><mml:mi mathvariant="bold">s</mml:mi></mml:mrow><mml:mrow><mml:mi>d</mml:mi><mml:mi>t</mml:mi></mml:mrow></mml:mfrac><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>l</mml:mi><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:mi>&#x003b1;</mml:mi><mml:mi mathvariant="bold">s</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mo>&#x000d7;</mml:mo><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>l</mml:mi><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mi mathvariant="bold">s</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mo>&#x000d7;</mml:mo><mml:mo stretchy="false">[</mml:mo><mml:mi mathvariant="bold">s</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mo>&#x000d7;</mml:mo><mml:mo stretchy="false">(</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>l</mml:mi><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">)</mml:mo><mml:mo stretchy="false">]</mml:mo><mml:mo>,</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ1.gif" position="anchor"/></alternatives></disp-formula>where <inline-formula id="IEq93"><alternatives><tex-math id="M187">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\bf{s}}{\rm{^{\prime} }}=d{\bf{s}}/d\xi $$\end{document}</tex-math><mml:math id="M188"><mml:mrow><mml:mrow><mml:mi mathvariant="bold">s</mml:mi></mml:mrow></mml:mrow><mml:mrow><mml:mi mathvariant="normal">&#x02032;</mml:mi></mml:mrow><mml:mo>=</mml:mo><mml:mi>d</mml:mi><mml:mrow><mml:mrow><mml:mi mathvariant="bold">s</mml:mi></mml:mrow></mml:mrow><mml:mrow><mml:mo>/</mml:mo></mml:mrow><mml:mi>d</mml:mi><mml:mi>&#x003be;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq93.gif"/></alternatives></inline-formula> is the unit tangent vector to the curve at the point <bold>s</bold>, <bold>v</bold><sub><italic>n</italic></sub> is the velocity of the normal fluid at <bold>s</bold>, and <italic>&#x003b1;</italic> and <italic>&#x003b1;</italic>&#x02032; are small dimensionless temperature-dependent friction coefficients<sup><xref ref-type="bibr" rid="CR41">41</xref>,<xref ref-type="bibr" rid="CR42">42</xref></sup>. The self-induced velocity of the vortex line at the point <bold>s</bold> is given by the Biot-Savart law<sup><xref ref-type="bibr" rid="CR43">43</xref></sup><disp-formula id="Equ2"><label>2</label><alternatives><tex-math id="M189">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\bf{v}}}_{self}({\bf{s}})=-\,\frac{\kappa }{4\pi }\,{\oint }_{ {\mathcal L} }\,\frac{({\bf{s}}-{\bf{r}})\times {\bf{d}}{\bf{r}}}{{|{\bf{s}}-{\bf{r}}|}^{3}},$$\end{document}</tex-math><mml:math id="M190" display="block"><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>l</mml:mi><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="bold">s</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mo>&#x02212;</mml:mo><mml:mspace width="-.25em"/><mml:mfrac><mml:mi>&#x003ba;</mml:mi><mml:mrow><mml:mn>4</mml:mn><mml:mi>&#x003c0;</mml:mi></mml:mrow></mml:mfrac><mml:mspace width=".1em"/><mml:msub><mml:mo>&#x0222e;</mml:mo><mml:mi>&#x02112;</mml:mi></mml:msub><mml:mrow><mml:mspace width=".1em"/><mml:mfrac><mml:mrow><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="bold">s</mml:mi><mml:mo>&#x02212;</mml:mo><mml:mi mathvariant="bold">r</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>&#x000d7;</mml:mo><mml:mi mathvariant="bold">d</mml:mi><mml:mi mathvariant="bold">r</mml:mi></mml:mrow><mml:mrow><mml:msup><mml:mrow><mml:mo stretchy="true">|</mml:mo><mml:mrow><mml:mi mathvariant="bold">s</mml:mi><mml:mo>&#x02212;</mml:mo><mml:mi mathvariant="bold">r</mml:mi></mml:mrow><mml:mo stretchy="true">|</mml:mo></mml:mrow><mml:mn>3</mml:mn></mml:msup></mml:mrow></mml:mfrac></mml:mrow><mml:mo>,</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ2.gif" position="anchor"/></alternatives></disp-formula>where the line integral extends over all vortex lines: <inline-formula id="IEq94"><alternatives><tex-math id="M191">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$ {\mathcal L} ={\cup }_{i=1}^{N}\,{ {\mathcal L} }_{i}$$\end{document}</tex-math><mml:math id="M192"><mml:mi>&#x02112;</mml:mi><mml:mo>=</mml:mo><mml:msubsup><mml:mo>&#x0222a;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>N</mml:mi></mml:msubsup><mml:mrow><mml:mspace width=".1em"/><mml:msub><mml:mrow><mml:mi>&#x02112;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq94.gif"/></alternatives></inline-formula>. In the low-temperature limit <inline-formula id="IEq95"><alternatives><tex-math id="M193">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$T\to 0$$\end{document}</tex-math><mml:math id="M194"><mml:mi>T</mml:mi><mml:mo>&#x02192;</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq95.gif"/></alternatives></inline-formula>, the friction coefficients vanish, vortex lines are simply advected by the flow which they generate, and Schwarz&#x02019;s equation reduces to <inline-formula id="IEq96"><alternatives><tex-math id="M195">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$d{\bf{s}}/dt={{\bf{v}}}_{self}({\bf{s}})$$\end{document}</tex-math><mml:math id="M196"><mml:mi>d</mml:mi><mml:mi mathvariant="bold">s</mml:mi><mml:mo>/</mml:mo><mml:mi>d</mml:mi><mml:mi>t</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi><mml:mi>e</mml:mi><mml:mi>l</mml:mi><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi mathvariant="bold">s</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq96.gif"/></alternatives></inline-formula> in agreement with the classical Helmholtz&#x02019;s Theorem. In practice, the zero-temperature limit is a good approximation for for <inline-formula id="IEq97"><alternatives><tex-math id="M197">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$T &#x0003c; 1\,{\rm{K}}$$\end{document}</tex-math><mml:math id="M198"><mml:mi>T</mml:mi><mml:mo>&#x0003c;</mml:mo><mml:mn>1</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">K</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq97.gif"/></alternatives></inline-formula>; At higher temperatures, the normal fluid fraction is not negligible and the friction terms must be included in Schwarz&#x02019;s equation. In our numerical simulations we choose the temperature <inline-formula id="IEq98"><alternatives><tex-math id="M199">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$T=1.9\,{\rm{K}}$$\end{document}</tex-math><mml:math id="M200"><mml:mi>T</mml:mi><mml:mo>=</mml:mo><mml:mn>1.9</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">K</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq98.gif"/></alternatives></inline-formula> which is typical of many experiments and corresponds to <inline-formula id="IEq99"><alternatives><tex-math id="M201">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\alpha =0.206$$\end{document}</tex-math><mml:math id="M202"><mml:mi>&#x003b1;</mml:mi><mml:mo>=</mml:mo><mml:mn>0.206</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq99.gif"/></alternatives></inline-formula> and <inline-formula id="IEq100"><alternatives><tex-math id="M203">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\alpha ^{\prime} =0.00834$$\end{document}</tex-math><mml:math id="M204"><mml:mi>&#x003b1;</mml:mi><mml:mo>&#x02032;</mml:mo><mml:mo>=</mml:mo><mml:mn>0.00834</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq100.gif"/></alternatives></inline-formula>; at this temperature, the superfluid and normal fluid fractions are respectively <inline-formula id="IEq101"><alternatives><tex-math id="M205">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rho }_{s}/\rho =0.58$$\end{document}</tex-math><mml:math id="M206"><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub><mml:mo>/</mml:mo><mml:mi>&#x003c1;</mml:mi><mml:mo>=</mml:mo><mml:mn>0.58</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq101.gif"/></alternatives></inline-formula> and <inline-formula id="IEq102"><alternatives><tex-math id="M207">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rho }_{n}/\rho =0.42$$\end{document}</tex-math><mml:math id="M208"><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo>/</mml:mo><mml:mi>&#x003c1;</mml:mi><mml:mo>=</mml:mo><mml:mn>0.42</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq102.gif"/></alternatives></inline-formula>, where <inline-formula id="IEq103"><alternatives><tex-math id="M209">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rho }_{s}$$\end{document}</tex-math><mml:math id="M210"><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq103.gif"/></alternatives></inline-formula> is the superfluid density, <inline-formula id="IEq104"><alternatives><tex-math id="M211">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rho }_{n}$$\end{document}</tex-math><mml:math id="M212"><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq104.gif"/></alternatives></inline-formula> the normal fluid density and <inline-formula id="IEq105"><alternatives><tex-math id="M213">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\rho ={\rho }_{s}+{\rho }_{n}$$\end{document}</tex-math><mml:math id="M214"><mml:mi>&#x003c1;</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq105.gif"/></alternatives></inline-formula> the total density of liquid helium.</p><p id="Par23">Our numerical model uses a variable Lagrangian discretization along the vortex lines<sup><xref ref-type="bibr" rid="CR40">40</xref></sup> in which the density of discretization points depends on the local curvature. The Biot-Savart integral in equation (<xref rid="Equ2" ref-type="">2</xref>) is de-singularised in a standard way<sup><xref ref-type="bibr" rid="CR40">40</xref></sup> based on the vortex core cutoff <italic>a</italic><sub>0</sub>, and the procedure for vortex reconnections is implemented algorithmically<sup><xref ref-type="bibr" rid="CR40">40</xref>,<xref ref-type="bibr" rid="CR44">44</xref></sup>. The initial condition consists of 40 randomly oriented loops of radius varying according to a normal distribution and with an average number of 200 discretization points on each; the initial rings are located at the centre of the infinite computational domain. The vortex configuration remains localised in a finite volume due to our choice of normal fluid (see below) and temperature, it is important to emphasise that the superfluid velocity is computed in unbounded space, i.e. without the presence of external boundary conditions. The total length of the vortex configuration is<disp-formula id="Equ3"><label>3</label><alternatives><tex-math id="M215">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Lambda }}={\oint }_{ {\mathcal L} }\,d\xi ,$$\end{document}</tex-math><mml:math id="M216" display="block"><mml:mi mathvariant="normal">&#x0039b;</mml:mi><mml:mo>=</mml:mo><mml:msub><mml:mo>&#x0222e;</mml:mo><mml:mi>&#x02112;</mml:mi></mml:msub><mml:mrow><mml:mspace width=".1em"/><mml:mi>d</mml:mi><mml:mi>&#x003be;</mml:mi></mml:mrow><mml:mo>,</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ3.gif" position="anchor"/></alternatives></disp-formula>and similar integrals over distinct loops (<inline-formula id="IEq106"><alternatives><tex-math id="M217">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${ {\mathcal L} }_{i}$$\end{document}</tex-math><mml:math id="M218"><mml:msub><mml:mrow><mml:mi>&#x02112;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq106.gif"/></alternatives></inline-formula>) determine the length of the <italic>i</italic><sup>th</sup> loop, <inline-formula id="IEq107"><alternatives><tex-math id="M219">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Lambda }}}_{i}$$\end{document}</tex-math><mml:math id="M220"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x0039b;</mml:mi></mml:mrow><mml:mrow><mml:mi>i</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq107.gif"/></alternatives></inline-formula>. Finally, the superfluid energy spectrum <italic>E</italic>(<italic>k</italic>) is defined by<disp-formula id="Equ4"><label>4</label><alternatives><tex-math id="M221">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$E=\frac{1}{V}\,{\int }_{V}\,\frac{{\rho }_{s}}{2}|{{\bf{v}}}_{s}{|}^{2}dV={\int }_{0}^{\infty }\,E(k)dk.$$\end{document}</tex-math><mml:math id="M222" display="block"><mml:mi>E</mml:mi><mml:mo>=</mml:mo><mml:mfrac><mml:mn>1</mml:mn><mml:mi>V</mml:mi></mml:mfrac><mml:mspace width=".1em"/><mml:msub><mml:mo>&#x0222b;</mml:mo><mml:mi>V</mml:mi></mml:msub><mml:mrow><mml:mspace width=".1em"/><mml:mfrac><mml:mrow><mml:msub><mml:mrow><mml:mi>&#x003c1;</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub></mml:mrow><mml:mn>2</mml:mn></mml:mfrac><mml:mo stretchy="false">|</mml:mo><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>s</mml:mi></mml:mrow></mml:msub><mml:msup><mml:mrow><mml:mo stretchy="false">|</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mi>d</mml:mi><mml:mi>V</mml:mi></mml:mrow><mml:mo>=</mml:mo><mml:msubsup><mml:mo>&#x0222b;</mml:mo><mml:mn>0</mml:mn><mml:mi>&#x0221e;</mml:mi></mml:msubsup><mml:mrow><mml:mspace width=".1em"/><mml:mi>E</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>k</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mi>d</mml:mi><mml:mi>k</mml:mi></mml:mrow><mml:mo>.</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ4.gif" position="anchor"/></alternatives></disp-formula></p></sec><sec id="Sec7"><title>Normal fluid</title><p id="Par24">Following the classical turbulence literature, quantum turbulence is usually studied in statistically stationary, homogeneous regimes in three-dimensional periodic domains<sup><xref ref-type="bibr" rid="CR45">45</xref></sup>. However, periodic boundary conditions complicate the definition of the topological properties of the vortex tangle. Fortunately there exist experimental techniques to generate turbulence away from boundaries in <sup>4</sup>He or <sup>3</sup>He-B by oscillating objects<sup><xref ref-type="bibr" rid="CR22">22</xref></sup> such as forks<sup><xref ref-type="bibr" rid="CR23">23</xref></sup>, grids<sup><xref ref-type="bibr" rid="CR24">24</xref>,<xref ref-type="bibr" rid="CR26">26</xref></sup>, wires<sup><xref ref-type="bibr" rid="CR26">26</xref></sup>, or by focussing ultrasound<sup><xref ref-type="bibr" rid="CR27">27</xref>,<xref ref-type="bibr" rid="CR28">28</xref></sup>. The microscopic details of the vortex nucleation (e.g. the implosion of cavitating bubbles which create vortex rings<sup><xref ref-type="bibr" rid="CR46">46</xref></sup> or the interaction with the unavoidable microscopic irregularities of a hard boundary<sup><xref ref-type="bibr" rid="CR47">47</xref></sup>) are not relevant here - we are only concerned on what happens to the vortex lines once they are injected into the fluid.</p><p id="Par25">At finite temperatures, a steady state of quantum turbulence can be maintained by the injection of energy from the normal fluid, whose velocity field we denote <bold>v</bold><sub><italic>n</italic></sub>. Hence, to study the topology of a vortex tangle in a statistically steady state of turbulence, but confined to a finite volume of space, we can make use of a confined normal fluid flow. In a previous study<sup><xref ref-type="bibr" rid="CR30">30</xref></sup>, we made use of random waves modulated by an exponential window so that the velocity field decayed rapidly like <inline-formula id="IEq108"><alternatives><tex-math id="M223">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${e}^{-|{\bf{x}}{|}^{2}}$$\end{document}</tex-math><mml:math id="M224"><mml:msup><mml:mrow><mml:mi>e</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mo stretchy="false">|</mml:mo><mml:mi mathvariant="bold">x</mml:mi><mml:msup><mml:mrow><mml:mo stretchy="false">|</mml:mo></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq108.gif"/></alternatives></inline-formula>. Whilst this is mathematically convenient, physically it is unrealistic as the normal fluid&#x02019;s velocity field is no longer solenoidal. Here we make use of a Dudley-James flow<sup><xref ref-type="bibr" rid="CR29">29</xref></sup>, which is well known in the context of dynamo theory and provides a convenient analytic velocity field which is both confined and solenoidal. Importantly, the flow is sufficiently complex to support a magnetic dynamo, and here we shall show it can act effectively as a quantised vorticity dynamo. Using radial coordinates <inline-formula id="IEq109"><alternatives><tex-math id="M225">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$(r,\theta ,\varphi )$$\end{document}</tex-math><mml:math id="M226"><mml:mo stretchy="false">(</mml:mo><mml:mi>r</mml:mi><mml:mo>,</mml:mo><mml:mi>&#x003b8;</mml:mi><mml:mo>,</mml:mo><mml:mi>&#x003c6;</mml:mi><mml:mo stretchy="false">)</mml:mo></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq109.gif"/></alternatives></inline-formula>, we assume the following form for the velocity field:<disp-formula id="Equ5"><label>5</label><alternatives><tex-math id="M227">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\bf{v}}}_{n}(r,\theta ,\varphi )=\sum _{l,m}\,{{\bf{t}}}_{l}^{m}+{{\bf{s}}}_{l}^{m},$$\end{document}</tex-math><mml:math id="M228" display="block"><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>r</mml:mi><mml:mo>,</mml:mo><mml:mi>&#x003b8;</mml:mi><mml:mo>,</mml:mo><mml:mi>&#x003c6;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mrow><mml:munder><mml:mo>&#x02211;</mml:mo><mml:mrow><mml:mi>l</mml:mi><mml:mo>,</mml:mo><mml:mi>m</mml:mi></mml:mrow></mml:munder><mml:mrow><mml:mspace width=".1em"/><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">t</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">s</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup></mml:mrow></mml:mrow><mml:mo>,</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ5.gif" position="anchor"/></alternatives></disp-formula>where,<disp-formula id="Equ6"><label>6</label><alternatives><tex-math id="M229">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\bf{t}}}_{l}^{m}=\nabla \times \hat{{\bf{r}}}{t}_{l}^{m}{Y}_{l}^{m}(\theta ,\varphi ),\,{{\bf{s}}}_{l}^{m}=\nabla \times \nabla \times \hat{{\bf{r}}}{s}_{l}^{m}{Y}_{l}^{m}(\theta ,\varphi ),\,-\,l\le m\le l.$$\end{document}</tex-math><mml:math id="M230" display="block"><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">t</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mo>&#x02207;</mml:mo><mml:mo>&#x000d7;</mml:mo><mml:mover accent="true"><mml:mi mathvariant="bold">r</mml:mi><mml:mo mathvariant="bold">&#x002c6;</mml:mo></mml:mover><mml:msubsup><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup><mml:msubsup><mml:mrow><mml:mi>Y</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003b8;</mml:mi><mml:mo>,</mml:mo><mml:mi>&#x003c6;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>,</mml:mo><mml:mspace width=".25em"/><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">s</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:mo>&#x02207;</mml:mo><mml:mo>&#x000d7;</mml:mo><mml:mo>&#x02207;</mml:mo><mml:mo>&#x000d7;</mml:mo><mml:mover accent="true"><mml:mi mathvariant="bold">r</mml:mi><mml:mo mathvariant="bold">&#x002c6;</mml:mo></mml:mover><mml:msubsup><mml:mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup><mml:msubsup><mml:mrow><mml:mi>Y</mml:mi></mml:mrow><mml:mrow><mml:mi>l</mml:mi></mml:mrow><mml:mrow><mml:mi>m</mml:mi></mml:mrow></mml:msubsup><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003b8;</mml:mi><mml:mo>,</mml:mo><mml:mi>&#x003c6;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>,</mml:mo><mml:mspace width=".25em"/><mml:mo>&#x02212;</mml:mo><mml:mspace width="-.25em"/><mml:mi>l</mml:mi><mml:mo>&#x02264;</mml:mo><mml:mi>m</mml:mi><mml:mo>&#x02264;</mml:mo><mml:mi>l</mml:mi><mml:mo>.</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ6.gif" position="anchor"/></alternatives></disp-formula></p><p id="Par26">Here we consider the following Dudley &#x00026; James flow:<disp-formula id="Equ7"><label>7</label><alternatives><tex-math id="M231">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\bf{v}}}_{n}={{\bf{t}}}_{2}^{0}+\varepsilon {{\bf{s}}}_{2}^{0},$$\end{document}</tex-math><mml:math id="M232" display="block"><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">t</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:mi>&#x003b5;</mml:mi><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">s</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msubsup><mml:mo>,</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ7.gif" position="anchor"/></alternatives></disp-formula>with<disp-formula id="Equ8"><label>8</label><alternatives><tex-math id="M233">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${t}_{2}^{0}={s}_{2}^{0}={r}^{2}\,\sin (\pi r/D).$$\end{document}</tex-math><mml:math id="M234" display="block"><mml:msubsup><mml:mrow><mml:mi>t</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:msubsup><mml:mrow><mml:mi>s</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msubsup><mml:mo>=</mml:mo><mml:msup><mml:mrow><mml:mi>r</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mspace width=".1em"/><mml:mi>sin</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c0;</mml:mi><mml:mi>r</mml:mi><mml:mo>/</mml:mo><mml:mi>D</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>.</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ8.gif" position="anchor"/></alternatives></disp-formula></p><p id="Par27">To introduce time dependence, we take for the normal fluid velocity the form<disp-formula id="Equ9"><label>9</label><alternatives><tex-math id="M235">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\bf{v}}}_{n}=\{\begin{array}{ll}A(t){{\bf{t}}}_{2}^{0}+B(t)\varepsilon {{\bf{s}}}_{2}^{0}, &#x00026; r\le D\\ 0, &#x00026; r &#x0003e; D,\end{array}$$\end{document}</tex-math><mml:math id="M236" display="block"><mml:msub><mml:mrow><mml:mi mathvariant="bold">v</mml:mi></mml:mrow><mml:mrow><mml:mi>n</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mrow><mml:mo stretchy="true">{</mml:mo><mml:mrow><mml:mtable columnalign="left"><mml:mtr columnalign="left"><mml:mtd columnalign="left"><mml:mrow><mml:mi>A</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">t</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msubsup><mml:mo>+</mml:mo><mml:mi>B</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mi>&#x003b5;</mml:mi><mml:msubsup><mml:mrow><mml:mi mathvariant="bold">s</mml:mi></mml:mrow><mml:mrow><mml:mn>2</mml:mn></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msubsup><mml:mo>,</mml:mo></mml:mrow></mml:mtd><mml:mtd columnalign="left"><mml:mrow><mml:mi>r</mml:mi><mml:mo>&#x02264;</mml:mo><mml:mi>D</mml:mi></mml:mrow></mml:mtd></mml:mtr><mml:mtr columnalign="left"><mml:mtd columnalign="left"><mml:mrow><mml:mn>0</mml:mn><mml:mo>,</mml:mo></mml:mrow></mml:mtd><mml:mtd columnalign="left"><mml:mrow><mml:mi>r</mml:mi><mml:mo>&#x0003e;</mml:mo><mml:mi>D</mml:mi><mml:mo>,</mml:mo></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:mrow></mml:mrow></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ9.gif" position="anchor"/></alternatives></disp-formula>with <inline-formula id="IEq110"><alternatives><tex-math id="M237">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$A(t)={v}_{f}\,\sin \,\omega t$$\end{document}</tex-math><mml:math id="M238"><mml:mi>A</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mspace width=".1em"/><mml:mi>sin</mml:mi><mml:mspace width=".1em"/><mml:mi>&#x003c9;</mml:mi><mml:mi>t</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq110.gif"/></alternatives></inline-formula> and <inline-formula id="IEq111"><alternatives><tex-math id="M239">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$B(t)={v}_{f}\,\cos \,\omega t$$\end{document}</tex-math><mml:math id="M240"><mml:mi>B</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>t</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mspace width=".1em"/><mml:mi>cos</mml:mi><mml:mspace width=".1em"/><mml:mi>&#x003c9;</mml:mi><mml:mi>t</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq111.gif"/></alternatives></inline-formula>; in all simulations presented we take <inline-formula id="IEq112"><alternatives><tex-math id="M241">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\varepsilon =0.2$$\end{document}</tex-math><mml:math id="M242"><mml:mi>&#x003b5;</mml:mi><mml:mo>=</mml:mo><mml:mn>0.2</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq112.gif"/></alternatives></inline-formula>, and <inline-formula id="IEq113"><alternatives><tex-math id="M243">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\omega =20\,{{\rm{s}}}^{-1}$$\end{document}</tex-math><mml:math id="M244"><mml:mi>&#x003c9;</mml:mi><mml:mo>=</mml:mo><mml:mn>20</mml:mn><mml:mspace width=".25em"/><mml:msup><mml:mrow><mml:mi mathvariant="normal">s</mml:mi></mml:mrow><mml:mrow><mml:mo>&#x02212;</mml:mo><mml:mn>1</mml:mn></mml:mrow></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq113.gif"/></alternatives></inline-formula>. We consider two levels of &#x02018;drive&#x02019;: <inline-formula id="IEq114"><alternatives><tex-math id="M245">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=4.75\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M246"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>4.75</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq114.gif"/></alternatives></inline-formula> and <inline-formula id="IEq115"><alternatives><tex-math id="M247">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${v}_{f}=5.25\,{\rm{cm}}/{\rm{s}}$$\end{document}</tex-math><mml:math id="M248"><mml:msub><mml:mrow><mml:mi>v</mml:mi></mml:mrow><mml:mrow><mml:mi>f</mml:mi></mml:mrow></mml:msub><mml:mo>=</mml:mo><mml:mn>5.25</mml:mn><mml:mspace width=".25em"/><mml:mi mathvariant="normal">cm</mml:mi><mml:mo>/</mml:mo><mml:mi mathvariant="normal">s</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq115.gif"/></alternatives></inline-formula>; the value of <italic>v</italic><sub><italic>f</italic></sub> sets the amount of energy injected from the normal fluid into the superfluid vortex lines, hence the vortex line length in the steady-state regime after the initial transient.</p></sec><sec id="Sec8"><title>Alexander polynomial</title><p id="Par28">In order to quantify the topological complexity of the vortex loop <inline-formula id="IEq116"><alternatives><tex-math id="M249">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${ {\mathcal L} }_{j}$$\end{document}</tex-math><mml:math id="M250"><mml:msub><mml:mrow><mml:mi>&#x02112;</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq116.gif"/></alternatives></inline-formula> we determine its Alexander polynomial<disp-formula id="Equ10"><label>10</label><alternatives><tex-math id="M251">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${{\rm{\Delta }}}_{j}(\tau )={a}_{0}+{a}_{1}\tau +\cdots +{a}_{{\nu }_{j}}{\tau }^{{\nu }_{j}}.$$\end{document}</tex-math><mml:math id="M252" display="block"><mml:msub><mml:mrow><mml:mi mathvariant="normal">&#x00394;</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>0</mml:mn></mml:mrow></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:mn>1</mml:mn></mml:mrow></mml:msub><mml:mi>&#x003c4;</mml:mi><mml:mo>+</mml:mo><mml:mo>&#x022ef;</mml:mo><mml:mo>+</mml:mo><mml:msub><mml:mrow><mml:mi>a</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msub><mml:msup><mml:mrow><mml:mi>&#x003c4;</mml:mi></mml:mrow><mml:mrow><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:mrow></mml:msup><mml:mo>.</mml:mo></mml:math><graphic xlink:href="41598_2019_47103_Article_Equ10.gif" position="anchor"/></alternatives></disp-formula></p><p id="Par29">The degree <inline-formula id="IEq117"><alternatives><tex-math id="M253">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\nu }_{j}$$\end{document}</tex-math><mml:math id="M254"><mml:msub><mml:mrow><mml:mi>&#x003bd;</mml:mi></mml:mrow><mml:mrow><mml:mi>j</mml:mi></mml:mrow></mml:msub></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq117.gif"/></alternatives></inline-formula> of the polynomial quantifies the complexity of the loop. For example, the Alexander polynomial of the trivial <italic>unknot</italic> is <inline-formula id="IEq118"><alternatives><tex-math id="M255">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Delta }}(\tau )=1$$\end{document}</tex-math><mml:math id="M256"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq118.gif"/></alternatives></inline-formula> hence its degree is <inline-formula id="IEq119"><alternatives><tex-math id="M257">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =0$$\end{document}</tex-math><mml:math id="M258"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq119.gif"/></alternatives></inline-formula>. The simplest nontrivial knot is the <italic>trefoil</italic> (3<sub>1</sub>) knot, which has Alexander polynomial <inline-formula id="IEq120"><alternatives><tex-math id="M259">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$${\rm{\Delta }}(\tau )=1-\tau +{\tau }^{2}$$\end{document}</tex-math><mml:math id="M260"><mml:mi mathvariant="normal">&#x00394;</mml:mi><mml:mo stretchy="false">(</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo stretchy="false">)</mml:mo><mml:mo>=</mml:mo><mml:mn>1</mml:mn><mml:mo>&#x02212;</mml:mo><mml:mi>&#x003c4;</mml:mi><mml:mo>+</mml:mo><mml:msup><mml:mrow><mml:mi>&#x003c4;</mml:mi></mml:mrow><mml:mn>2</mml:mn></mml:msup></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq120.gif"/></alternatives></inline-formula>, hence its degree is <inline-formula id="IEq121"><alternatives><tex-math id="M261">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =2$$\end{document}</tex-math><mml:math id="M262"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq121.gif"/></alternatives></inline-formula>. Any vortex loop which has an Alexander polynomial of degree <inline-formula id="IEq122"><alternatives><tex-math id="M263">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu  &#x0003e; 0$$\end{document}</tex-math><mml:math id="M264"><mml:mi>&#x003bd;</mml:mi><mml:mo>&#x0003e;</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq122.gif"/></alternatives></inline-formula> is knotted (however the converse is not necessarily true: a long-standing problem of knot theory is the lack of a unique method of distinguishing knots from each other; in particular, the Alexander polynomial is not unique to a particular knot type. For example there exist knots which have the same Alexander polynomial as the <italic>unknot</italic><sup><xref ref-type="bibr" rid="CR48">48</xref></sup>, so the fact that a vortex loop has an Alexander polynomial of degree <inline-formula id="IEq123"><alternatives><tex-math id="M265">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =0$$\end{document}</tex-math><mml:math id="M266"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq123.gif"/></alternatives></inline-formula> does not necessarily imply that it is an <italic>unknot</italic>).</p><p id="Par30">Figure&#x000a0;<xref rid="Fig10" ref-type="fig">10</xref> shows a selection of standard and numerically simulated knots with the degree <inline-formula id="IEq124"><alternatives><tex-math id="M267">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu $$\end{document}</tex-math><mml:math id="M268"><mml:mi>&#x003bd;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq124.gif"/></alternatives></inline-formula> of their respective Alexander polynomials. The six knots on the first two rows are standard knots; the <italic>unknot</italic>, the 3<sub>1</sub> knot (also known as the trefoil knot), the 5<sub>1</sub> knot (Solomon&#x02019;s Seal), the, 6<sub>2</sub> knot, the 7<sub>5</sub> knot and the 8<sub>21</sub> knot. It is apparent that the degree <inline-formula id="IEq125"><alternatives><tex-math id="M269">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu $$\end{document}</tex-math><mml:math id="M270"><mml:mi>&#x003bd;</mml:mi></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq125.gif"/></alternatives></inline-formula> increases with the knots&#x02019; complexity. The first (left) knot of the third row, despite its complex appearance, has Alexander polynomial with degree <inline-formula id="IEq126"><alternatives><tex-math id="M271">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =0$$\end{document}</tex-math><mml:math id="M272"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq126.gif"/></alternatives></inline-formula>, and indeed, by untwisting it in visible locations, it can be easily manipulated into an unknot. The remaining knots are obtained from numerical simulations of vortex lines.<fig id="Fig10"><label>Figure 10</label><caption><p>Examples of knots and the degrees of their Alexander polynomials. First (top) row, from left to right: <inline-formula id="IEq127"><alternatives><tex-math id="M273">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =0$$\end{document}</tex-math><mml:math id="M274"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq127.gif"/></alternatives></inline-formula>, <inline-formula id="IEq128"><alternatives><tex-math id="M275">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =2$$\end{document}</tex-math><mml:math id="M276"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>2</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq128.gif"/></alternatives></inline-formula> and <inline-formula id="IEq129"><alternatives><tex-math id="M277">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =4$$\end{document}</tex-math><mml:math id="M278"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>4</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq129.gif"/></alternatives></inline-formula>; Second row, from left to right: <inline-formula id="IEq130"><alternatives><tex-math id="M279">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =4$$\end{document}</tex-math><mml:math id="M280"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>4</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq130.gif"/></alternatives></inline-formula>, <inline-formula id="IEq131"><alternatives><tex-math id="M281">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =4$$\end{document}</tex-math><mml:math id="M282"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>4</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq131.gif"/></alternatives></inline-formula> and <inline-formula id="IEq132"><alternatives><tex-math id="M283">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =4$$\end{document}</tex-math><mml:math id="M284"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>4</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq132.gif"/></alternatives></inline-formula>; Third row, from left to right: <inline-formula id="IEq133"><alternatives><tex-math id="M285">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =0$$\end{document}</tex-math><mml:math id="M286"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>0</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq133.gif"/></alternatives></inline-formula>, <inline-formula id="IEq134"><alternatives><tex-math id="M287">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =8$$\end{document}</tex-math><mml:math id="M288"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>8</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq134.gif"/></alternatives></inline-formula> and <inline-formula id="IEq135"><alternatives><tex-math id="M289">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =46$$\end{document}</tex-math><mml:math id="M290"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>46</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq135.gif"/></alternatives></inline-formula>; Fourth (bottom) row, from left to right: <inline-formula id="IEq136"><alternatives><tex-math id="M291">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =82$$\end{document}</tex-math><mml:math id="M292"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>82</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq136.gif"/></alternatives></inline-formula>, <inline-formula id="IEq137"><alternatives><tex-math id="M293">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =108$$\end{document}</tex-math><mml:math id="M294"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>108</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq137.gif"/></alternatives></inline-formula> and <inline-formula id="IEq138"><alternatives><tex-math id="M295">\documentclass[12pt]{minimal}
+				\usepackage{amsmath}
+				\usepackage{wasysym} 
+				\usepackage{amsfonts} 
+				\usepackage{amssymb} 
+				\usepackage{amsbsy}
+				\usepackage{mathrsfs}
+				\usepackage{upgreek}
+				\setlength{\oddsidemargin}{-69pt}
+				\begin{document}$$\nu =232$$\end{document}</tex-math><mml:math id="M296"><mml:mi>&#x003bd;</mml:mi><mml:mo>=</mml:mo><mml:mn>232</mml:mn></mml:math><inline-graphic xlink:href="41598_2019_47103_Article_IEq138.gif"/></alternatives></inline-formula>.</p></caption><graphic xlink:href="41598_2019_47103_Fig10_HTML" id="d29e4454"/></fig></p><p id="Par31">Following Livingstone<sup><xref ref-type="bibr" rid="CR49">49</xref></sup>, we compute the Alexander polynomial of a vortex loop by labelling segments of a loop between under-crossings when projected into a plane, followed by assigning coefficients to the relevant entries of a matrix for each segment, and then finding the determinant of the matrix with any single row and column removed<sup><xref ref-type="bibr" rid="CR49">49</xref></sup>. The numerical algorithm, described in R.G. Cooper&#x02019;s MMath thesis (<ext-link ext-link-type="uri" xlink:href="https://www.jqc.org.uk/publications/theses/">https://www.jqc.org.uk/publications/theses/</ext-link>), was tested against all the knots of the Rolfsen knot table (<ext-link ext-link-type="uri" xlink:href="http://katlas.org/wiki/The_Rolfsen_Knot_Table">http://katlas.org/wiki/The_Rolfsen_Knot_Table</ext-link>). To test knots with very large number of crossings we applied rotations to numerically simulated knots: a rotation changes the number of crossings onto a 2D plane, hence the matrix to determine the Alexander polynomial. A third test consisted in numerically deforming part of a loop adding &#x02018;false&#x02019; crossings (which could be untwisted easily if one had the knot in one&#x02019;s hands): these &#x02018;false&#x02019; crossings change the size of the matrix used to compute the Alexander polynomial.</p></sec></sec></body><back><fn-group><fn><p><bold>Publisher&#x02019;s note:</bold> Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p></fn></fn-group><ack><title>Acknowledgements</title><p>C.F.B. acknowledges the support of EPSRC grant number RES/0581/7397.</p></ack><notes notes-type="author-contribution"><title>Author Contributions</title><p>C.F.B. conceived this numerical experiment; A.W.B. wrote and tested the vortex code; R.G.C. wrote and tested the Alexander polynomial code; R.G.C. and M.M. performed the numerical simulations; R.G.C. analyzed the results; C.F.B., A.W.B. and R.G.C. wrote the manuscript.</p></notes><notes notes-type="data-availability"><title>Data Avaliability</title><p>The datasets generated and analyzed during the current study are available from Newcastle University&#x02019;s repository.</p></notes><notes notes-type="COI-statement"><title>Competing Interests</title><p id="Par32">The authors declare no competing interests.</p></notes><ref-list id="Bib1"><title>References</title><ref id="CR1"><label>1.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Ricca</surname><given-names>RL</given-names></name><name><surname>Berger</surname><given-names>MA</given-names></name></person-group><article-title>Topological ideas and fluid mechanics</article-title><source>Phys. Today</source><year>1996</year><volume>49</volume><fpage>28</fpage><pub-id pub-id-type="doi">10.1063/1.881574</pub-id></element-citation></ref><ref id="CR2"><label>2.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Glatzmaier</surname><given-names>GA</given-names></name><name><surname>Roberts</surname><given-names>PH</given-names></name></person-group><article-title>A three-dimensional self-consistent computer simulation of a geomagnetic field reversal</article-title><source>Nature</source><year>1995</year><volume>377</volume><fpage>203</fpage><pub-id pub-id-type="doi">10.1038/377203a0</pub-id></element-citation></ref><ref id="CR3"><label>3.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Rogers</surname><given-names>TM</given-names></name></person-group><article-title>Constraints on the magnetic field strength of HAT-P-7 b and other hot giant exoplanets</article-title><source>Nature Astronomy</source><year>2017</year><volume>1</volume><fpage>0131</fpage><pub-id pub-id-type="doi">10.1038/s41550-017-0131</pub-id></element-citation></ref><ref id="CR4"><label>4.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Irvine</surname><given-names>WTM</given-names></name><name><surname>Bouwmeester</surname><given-names>D</given-names></name></person-group><article-title>Linked and knotted beams of light</article-title><source>Nature Phys.</source><year>2008</year><volume>4</volume><fpage>716</fpage><pub-id pub-id-type="doi">10.1038/nphys1056</pub-id></element-citation></ref><ref id="CR5"><label>5.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dennis</surname><given-names>MR</given-names></name><name><surname>King</surname><given-names>RP</given-names></name><name><surname>Jack</surname><given-names>B</given-names></name><name><surname>O&#x02019;Holleran</surname><given-names>K</given-names></name><name><surname>Padgett</surname><given-names>M</given-names></name></person-group><article-title>Isolated optical vortex knots</article-title><source>Nature Phys.</source><year>2010</year><volume>6</volume><fpage>118</fpage><pub-id pub-id-type="doi">10.1038/nphys1504</pub-id></element-citation></ref><ref id="CR6"><label>6.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Deek</surname><given-names>J</given-names></name><name><surname>Chung</surname><given-names>PJ</given-names></name><name><surname>Kayser</surname><given-names>J</given-names></name><name><surname>Bausch</surname><given-names>AR</given-names></name><name><surname>Safinya</surname><given-names>CR</given-names></name></person-group><article-title>Neurofilament sidearms modulate parallel and crossed-filament orientations inducing nematic to isotropic and re-entrant birefringent hydrogels</article-title><source>Nature Comm.</source><year>2013</year><volume>4</volume><fpage>2224</fpage><pub-id pub-id-type="doi">10.1038/ncomms3224</pub-id></element-citation></ref><ref id="CR7"><label>7.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Barenghi</surname><given-names>CF</given-names></name><name><surname>Skrbek</surname><given-names>L</given-names></name><name><surname>Sreenivasan</surname><given-names>KR</given-names></name></person-group><article-title>Introduction to quantum turbulence</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2014</year><volume>111</volume><issue>(Suppl. 1</issue><fpage>4647</fpage><pub-id pub-id-type="doi">10.1073/pnas.1400033111</pub-id><pub-id pub-id-type="pmid">24704870</pub-id></element-citation></ref><ref id="CR8"><label>8.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Arsuaga</surname><given-names>J</given-names></name><etal/></person-group><article-title>DNA knots reveal a chiral organization of DNA in phage capsids</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2005</year><volume>102</volume><fpage>9165</fpage><pub-id pub-id-type="doi">10.1073/pnas.0409323102</pub-id><pub-id pub-id-type="pmid">15958528</pub-id></element-citation></ref><ref id="CR9"><label>9.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kida</surname><given-names>S</given-names></name></person-group><article-title>Vortex reconnections</article-title><source>Ann. Rev. Fluid Mech.</source><year>1994</year><volume>26</volume><fpage>169</fpage><pub-id pub-id-type="doi">10.1146/annurev.fl.26.010194.001125</pub-id></element-citation></ref><ref id="CR10"><label>10.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Hussain</surname><given-names>F</given-names></name><name><surname>Duraisamy</surname><given-names>K</given-names></name></person-group><article-title>Mechanics of viscous vortex reconnections</article-title><source>Phys. Fluids</source><year>2011</year><volume>23</volume><fpage>021701</fpage><pub-id pub-id-type="doi">10.1063/1.3532039</pub-id></element-citation></ref><ref id="CR11"><label>11.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Zuccher</surname><given-names>S</given-names></name><name><surname>Caliari</surname><given-names>M</given-names></name><name><surname>Baggaley</surname><given-names>AW</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Quantum vortex reconnections</article-title><source>Phys. Fluids</source><year>2012</year><volume>24</volume><fpage>125108</fpage><pub-id pub-id-type="doi">10.1063/1.4772198</pub-id></element-citation></ref><ref id="CR12"><label>12.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kleckner</surname><given-names>D</given-names></name><name><surname>Irvine</surname><given-names>WTM</given-names></name></person-group><article-title>Creation and dynamics of knotted vortices</article-title><source>Nature Phys.</source><year>2013</year><volume>9</volume><fpage>253</fpage><pub-id pub-id-type="doi">10.1038/nphys2560</pub-id></element-citation></ref><ref id="CR13"><label>13.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Kleckner</surname><given-names>D</given-names></name><name><surname>Kauffman</surname><given-names>LH</given-names></name><name><surname>Irvine</surname><given-names>WTM</given-names></name></person-group><article-title>How superfluid vortex knots untie</article-title><source>Nature Phys.</source><year>2015</year><volume>12</volume><fpage>650</fpage><pub-id pub-id-type="doi">10.1038/nphys3679</pub-id></element-citation></ref><ref id="CR14"><label>14.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Liu</surname><given-names>X</given-names></name><name><surname>Ricca</surname><given-names>RL</given-names></name></person-group><article-title>Knots cascade detected by a monotonically decreasing sequence of values</article-title><source>Sci. Rep.</source><year>2016</year><volume>6</volume><fpage>24118</fpage><pub-id pub-id-type="doi">10.1038/srep24118</pub-id><pub-id pub-id-type="pmid">27052386</pub-id></element-citation></ref><ref id="CR15"><label>15.</label><mixed-citation publication-type="other">Barenghi, C. F. &#x00026; Parker, N. G. <italic>A Primer on Quantum Fluids</italic> (Springer, 2016).</mixed-citation></ref><ref id="CR16"><label>16.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Barenghi</surname><given-names>CF</given-names></name><name><surname>L&#x02019;vov</surname><given-names>V</given-names></name><name><surname>Roche</surname><given-names>PE</given-names></name></person-group><article-title>Experimental, numerical and analytical velocity spectra in turbulent quantum fluid</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2014</year><volume>111</volume><issue>Suppl. 1</issue><fpage>4683</fpage><pub-id pub-id-type="doi">10.1073/pnas.1312548111</pub-id><pub-id pub-id-type="pmid">24704875</pub-id></element-citation></ref><ref id="CR17"><label>17.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Baggaley</surname><given-names>AW</given-names></name><name><surname>Laurie</surname><given-names>J</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Vortex-Density Fluctuations, Energy Spectra, and Vortical Regions in Superfluid Turbulence</article-title><source>Phys. Rev. Lett.</source><year>2012</year><volume>109</volume><fpage>205304</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.109.205304</pub-id><pub-id pub-id-type="pmid">23215501</pub-id></element-citation></ref><ref id="CR18"><label>18.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Barenghi</surname><given-names>CF</given-names></name><name><surname>Sergeev</surname><given-names>YA</given-names></name><name><surname>Baggaley</surname><given-names>AW</given-names></name></person-group><article-title>Regimes of turbulence without an energy cascade</article-title><source>Sci. Rep.</source><year>2016</year><volume>6</volume><fpage>35701</fpage><pub-id pub-id-type="doi">10.1038/srep35701</pub-id><pub-id pub-id-type="pmid">27761005</pub-id></element-citation></ref><ref id="CR19"><label>19.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Baggaley</surname><given-names>AW</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Quantum turbulent velocity statistics and quasiclassical limit</article-title><source>Phys. Rev. E</source><year>2011</year><volume>84</volume><fpage>067301</fpage><pub-id pub-id-type="doi">10.1103/PhysRevE.84.067301</pub-id></element-citation></ref><ref id="CR20"><label>20.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>La Mantia</surname><given-names>M</given-names></name><name><surname>Skrbek</surname><given-names>L</given-names></name></person-group><article-title>Quantum, or classical turbulence?</article-title><source>Europhys. Lett.</source><year>2014</year><volume>105</volume><fpage>46002</fpage><pub-id pub-id-type="doi">10.1209/0295-5075/105/46002</pub-id></element-citation></ref><ref id="CR21"><label>21.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Salort</surname><given-names>J</given-names></name><etal/></person-group><article-title>Turbulent velocity spectra in superfluid flows</article-title><source>Phys. Fluids</source><year>2010</year><volume>22</volume><fpage>125102</fpage><pub-id pub-id-type="doi">10.1063/1.3504375</pub-id></element-citation></ref><ref id="CR22"><label>22.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Vinen</surname><given-names>WF</given-names></name><name><surname>Skrbek</surname><given-names>L</given-names></name></person-group><article-title>Quantum turbulence generated by oscillating structures</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2014</year><volume>111</volume><issue>Suppl. 1</issue><fpage>4699</fpage><pub-id pub-id-type="doi">10.1073/pnas.1312551111</pub-id><pub-id pub-id-type="pmid">24704877</pub-id></element-citation></ref><ref id="CR23"><label>23.</label><mixed-citation publication-type="other">Schmoranzer, D. <italic>et al</italic>. Multiple critical velocities in oscillatory flow of superfluid <sup>4</sup>He due to quartz tuning forks. Phys. Rev. B <bold>94</bold>, 214503 (2016).</mixed-citation></ref><ref id="CR24"><label>24.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Davis</surname><given-names>SI</given-names></name><name><surname>Hendry</surname><given-names>PC</given-names></name><name><surname>McClintock</surname><given-names>PVE</given-names></name></person-group><article-title>Decay of quantized vorticity in superfluid <sup>4</sup>He at mK temperatures</article-title><source>Physica B</source><year>2000</year><volume>280</volume><fpage>43</fpage><pub-id pub-id-type="doi">10.1016/S0921-4526(99)01442-8</pub-id></element-citation></ref><ref id="CR25"><label>25.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bradley</surname><given-names>DI</given-names></name><etal/></person-group><article-title>Direct measurement of the energy dissipated by quantum turbulence</article-title><source>Nature Phys.</source><year>2011</year><volume>7</volume><fpage>473</fpage><pub-id pub-id-type="doi">10.1038/nphys1963</pub-id></element-citation></ref><ref id="CR26"><label>26.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bradley</surname><given-names>DI</given-names></name><etal/></person-group><article-title>Quantum turbulence in superfluid <sup>3</sup>He-B illuminated by a beam of quasiparticle excitations</article-title><source>Phys. Rev. Lett.</source><year>2004</year><volume>93</volume><fpage>235302</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.93.235302</pub-id><pub-id pub-id-type="pmid">15601170</pub-id></element-citation></ref><ref id="CR27"><label>27.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Schwarz</surname><given-names>KW</given-names></name><name><surname>Smith</surname><given-names>CW</given-names></name></person-group><article-title>Pulsed-ion study of ultrasonically generated turbulence in superfluid <sup>4</sup>He</article-title><source>Phys. Lett. A</source><year>1981</year><volume>82</volume><fpage>251</fpage><pub-id pub-id-type="doi">10.1016/0375-9601(81)90200-0</pub-id></element-citation></ref><ref id="CR28"><label>28.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Milliken</surname><given-names>FP</given-names></name><name><surname>Schwarz</surname><given-names>KW</given-names></name><name><surname>Smith</surname><given-names>CW</given-names></name></person-group><article-title>Free decay of superfluid turbulence</article-title><source>Phys. Rev. Lett.</source><year>1982</year><volume>48</volume><fpage>1204</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.48.1204</pub-id></element-citation></ref><ref id="CR29"><label>29.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Dudley</surname><given-names>ML</given-names></name><name><surname>James</surname><given-names>RW</given-names></name></person-group><article-title>Time-dependent kinematic dynamos with stationary flows</article-title><source>Proc. R. Soc. Lond. A</source><year>1989</year><volume>425</volume><fpage>407</fpage><pub-id pub-id-type="doi">10.1098/rspa.1989.0112</pub-id></element-citation></ref><ref id="CR30"><label>30.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Mesgarnezhad</surname><given-names>M</given-names></name><name><surname>Cooper</surname><given-names>RG</given-names></name><name><surname>Baggaley</surname><given-names>AW</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Helicity and topology of a small region of quantum vorticity</article-title><source>Fluid Dyn. Res.</source><year>2018</year><volume>50</volume><fpage>011403</fpage><pub-id pub-id-type="doi">10.1088/1873-7005/aa694f</pub-id></element-citation></ref><ref id="CR31"><label>31.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Tsubota</surname><given-names>M</given-names></name><name><surname>Araki</surname><given-names>T</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Rotating superfluid turbulence</article-title><source>Phys. Rev. Lett.</source><year>2003</year><volume>90</volume><fpage>205301</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.90.205301</pub-id><pub-id pub-id-type="pmid">12785904</pub-id></element-citation></ref><ref id="CR32"><label>32.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Koplik</surname><given-names>J</given-names></name><name><surname>Levine</surname><given-names>H</given-names></name></person-group><article-title>Vortex reconnection in superfluid helium</article-title><source>Phys. Rev. Lett.</source><year>1993</year><volume>71</volume><fpage>1375</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.71.1375</pub-id><pub-id pub-id-type="pmid">10055524</pub-id></element-citation></ref><ref id="CR33"><label>33.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Bewley</surname><given-names>GP</given-names></name><name><surname>Paoletti</surname><given-names>MS</given-names></name><name><surname>Sreenivasan</surname><given-names>KR</given-names></name><name><surname>Lathrop</surname><given-names>DP</given-names></name></person-group><article-title>Characterization of reconnecting vortices in superfluid helium</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2008</year><volume>105</volume><fpage>13707</fpage><pub-id pub-id-type="doi">10.1073/pnas.0806002105</pub-id><pub-id pub-id-type="pmid">18768790</pub-id></element-citation></ref><ref id="CR34"><label>34.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Fonda</surname><given-names>E</given-names></name><name><surname>Meichle</surname><given-names>DP</given-names></name><name><surname>Ouettette</surname><given-names>NT</given-names></name><name><surname>Hormoz</surname><given-names>S</given-names></name><name><surname>Lathrop</surname><given-names>DP</given-names></name></person-group><article-title>Direct observation of Kelvin waves excited by quantized vortex reconnections</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2014</year><volume>111</volume><issue>Suppl. 1</issue><fpage>4707</fpage><pub-id pub-id-type="doi">10.1073/pnas.1312536110</pub-id><pub-id pub-id-type="pmid">24704878</pub-id></element-citation></ref><ref id="CR35"><label>35.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Barenghi</surname><given-names>CF</given-names></name><name><surname>Donnelly</surname><given-names>RJ</given-names></name><name><surname>Vinen</surname><given-names>WF</given-names></name></person-group><article-title>Thermal excitations of waves on quantized vortices</article-title><source>Phys. Fluids</source><year>1985</year><volume>28</volume><fpage>498</fpage><pub-id pub-id-type="doi">10.1063/1.865113</pub-id></element-citation></ref><ref id="CR36"><label>36.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Barenghi</surname><given-names>CF</given-names></name><name><surname>Samuels</surname><given-names>DC</given-names></name></person-group><article-title>Evaporation of a packet of quantised vorticity</article-title><source>Phys. Rev. Lett.</source><year>2002</year><volume>89</volume><fpage>155302</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.89.155302</pub-id><pub-id pub-id-type="pmid">12365997</pub-id></element-citation></ref><ref id="CR37"><label>37.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Alexander</surname><given-names>JW</given-names></name></person-group><article-title>Topological invariants of knots and links</article-title><source>Trans. Amer. Math. Soc.</source><year>1928</year><volume>30</volume><fpage>275</fpage><pub-id pub-id-type="doi">10.1090/S0002-9947-1928-1501429-1</pub-id></element-citation></ref><ref id="CR38"><label>38.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Arsuaga</surname><given-names>J</given-names></name><name><surname>Vazquez</surname><given-names>M</given-names></name><name><surname>Trigueros</surname><given-names>S</given-names></name><name><surname>Sumners</surname><given-names>DW</given-names></name><name><surname>Roca</surname><given-names>J</given-names></name></person-group><article-title>Knotting probability of DNA molecules confined in restricted volumes: DNA knotting in phage capsids</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2002</year><volume>99</volume><fpage>5373</fpage><pub-id pub-id-type="doi">10.1073/pnas.032095099</pub-id><pub-id pub-id-type="pmid">11959991</pub-id></element-citation></ref><ref id="CR39"><label>39.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Raymer</surname><given-names>DM</given-names></name><name><surname>Smith</surname><given-names>DE</given-names></name></person-group><article-title>Spontaneous knotting of an agitated string</article-title><source>Proc. Nat. Acad. Sci. USA</source><year>2007</year><volume>104</volume><fpage>16432</fpage><pub-id pub-id-type="doi">10.1073/pnas.0611320104</pub-id><pub-id pub-id-type="pmid">17911269</pub-id></element-citation></ref><ref id="CR40"><label>40.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Schwarz</surname><given-names>KW</given-names></name></person-group><article-title>Three dimensional vortex dynamics in superfluid <sup>4</sup>He: homogeneous superfluid turbulence</article-title><source>Phys. Rev. B</source><year>1989</year><volume>38</volume><fpage>2398</fpage><pub-id pub-id-type="doi">10.1103/PhysRevB.38.2398</pub-id></element-citation></ref><ref id="CR41"><label>41.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Barenghi</surname><given-names>CF</given-names></name><name><surname>Donnelly</surname><given-names>RJ</given-names></name><name><surname>Vinen</surname><given-names>WF</given-names></name></person-group><article-title>Friction on quantized vortices in helium II. A review</article-title><source>J. Low Temp. Phys.</source><year>1983</year><volume>52</volume><fpage>189</fpage><pub-id pub-id-type="doi">10.1007/BF00682247</pub-id></element-citation></ref><ref id="CR42"><label>42.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Donnelly</surname><given-names>RJ</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>The observed properties of liquid helium at the saturated vapor pressure</article-title><source>J. Phys. Chem. Ref. Data</source><year>1998</year><volume>27</volume><fpage>1217</fpage><pub-id pub-id-type="doi">10.1063/1.556028</pub-id></element-citation></ref><ref id="CR43"><label>43.</label><mixed-citation publication-type="other">Saffman, P. G. <italic>Vortex Dynamics</italic>. (Cambridge University Press, 1992).</mixed-citation></ref><ref id="CR44"><label>44.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Baggaley</surname><given-names>AW</given-names></name></person-group><article-title>The sensitivity of the vortex filament method to different reconnection models</article-title><source>J. Low Temp. Phys.</source><year>2012</year><volume>168</volume><fpage>18</fpage><pub-id pub-id-type="doi">10.1007/s10909-012-0605-8</pub-id></element-citation></ref><ref id="CR45"><label>45.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Baggaley</surname><given-names>AW</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Vortex density fluctuations in quantum turbulence</article-title><source>Phys. Rev. B</source><year>2011</year><volume>84</volume><fpage>020504(R)</fpage><pub-id pub-id-type="doi">10.1103/PhysRevB.84.020504</pub-id></element-citation></ref><ref id="CR46"><label>46.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Berloff</surname><given-names>NG</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Vortex nucleation by collapsing bubbles in Bose-Einstein condensates</article-title><source>Phys. Rev. Lett.</source><year>2004</year><volume>93</volume><fpage>090401</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.93.090401</pub-id><pub-id pub-id-type="pmid">15447077</pub-id></element-citation></ref><ref id="CR47"><label>47.</label><element-citation publication-type="journal"><person-group person-group-type="author"><name><surname>Stagg</surname><given-names>GW</given-names></name><name><surname>Parker</surname><given-names>NG</given-names></name><name><surname>Barenghi</surname><given-names>CF</given-names></name></person-group><article-title>Superfluid boundary layer</article-title><source>Phys. Rev. Lett.</source><year>2017</year><volume>118</volume><fpage>135301</fpage><pub-id pub-id-type="doi">10.1103/PhysRevLett.118.135301</pub-id><pub-id pub-id-type="pmid">28409989</pub-id></element-citation></ref><ref id="CR48"><label>48.</label><mixed-citation publication-type="other">Des Cloizeaux, J. &#x00026; Mehta, M. L. <italic>J</italic>. <italic>de Physique</italic><bold>40</bold>, 665 (1979).</mixed-citation></ref><ref id="CR49"><label>49.</label><element-citation publication-type="book"><person-group person-group-type="author"><name><surname>Livingstone</surname><given-names>L</given-names></name></person-group><source>Knot Theory</source><year>1993</year><publisher-loc>Cambridge</publisher-loc><publisher-name>Cambridge University Press</publisher-name></element-citation></ref></ref-list></back></article>

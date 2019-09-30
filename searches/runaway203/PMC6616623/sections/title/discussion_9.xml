@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" sec-type="discussion" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Discussion</div>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">The non-mathematical understanding of our method is as follows. To provide pdf of the GMST change to melt, we randomly sample all GMST changes that fall within our sample space: GMST changes that are within some distance of at least one model whose present-day mean September SIE is within some distance of the observed mean, and whose present-day SIE sensitivity is also within some distance of the observed value. In addition, we also account for the uncertainty in present-day modeled and observed SIE, as well as for the uncertainty in distances themselves. We show that such an approach is equivalent to considering all model interactions of up to order 
+  <span class="italic">n</span>, where 
+  <span class="italic">n</span> is the number of models.
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Our results, specifically Eq. (
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a>) indicate that BMA is limited in that it considers that models are exclusive representations of reality. This point has been previously discussed in the literature
+  <span class="sup">
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>,
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>. We show that using standard BMA can lead to biased projections in the case of a single observational constraint (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4a</a>). In this case, the probability that more than one model is simultaneously correct is around 60% (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">7b</a>). Yet, adding a second constraint substantially reduces this probability (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">7a</a>). This illustrates that while the model non-exclusivity may be important, using multiple constraints may reduce its effect on model projections.
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">In the two-constraint cases, the most likely scenario is that of one and only one model (out of the 31 models in the ensemble) being adequate to represent reality. This raises a daunting question of usefulness of the model ensemble as a whole for making future projections. Should we not have restricted our sample space to a region with at least one model being adequate to represent relationship between sea ice and temperature, what would have been the probability of none of the models being adequate? To our knowledge, methods to quantify such a probability currently do not exist. Yet, determining the validity of the ensemble as a whole is fundamental from the policy-making perspective. This should become focus of future research on this topic.</p>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Our method can be compared with a recent study
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+  </span>. Specifically, that work uses singular value decomposition (SVD) and multidimensional scaling (MDS) to map present-day CMIP5 spatial model output, and corresponding observations into a 2D parameter space. Associated with each point in this space is a prediction property of interest (in this case climate sensitivity CS, as well as future regional temperature and precipitation changes), interpolated between model points. The study then proceeds to sample randomly from all points in the space within the convex hull of the models, with denser sampling close to observations, to construct a cumulative distribution function for CS, and pdfs for temperature and precipitation changes. The work claims their pdfs are just “resampled histograms of model behavior”
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+  </span>. However, we show using additional statistical analysis in Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> (for their “Gaussian” experiment), that their approach is similar, and also considers all model interactions under some limiting statistical assumptions. Specifically, by using deterministic interpolation they assume a degenerate conditional probability for CS given a value of parameters in the 2D space. In addition, convex hull of the models is clearly a crude approximation to the probability space. Even if questions remain about the justification for their statistical model, this means that Bayesian multi-model probabilistic projections accounting for all model interactions (2
+  <span class="sup">50</span> − 1 ≈ 1.1 × 10
+  <span class="sup">15</span> interactions) are already available to climate community. There are numerous differences between our work and that study. First, we consider dependence in both present-day and future model output. Second, we use time-series while that work uses spatial model output
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+  </span>. Third, we provide a statistical theory and method for finding non-exclusive hypothesis probabilities, and for prediction under such hypotheses that accounts for all hypothesis interactions.
+ </p>
+ <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">Another relevant method is Bayesian model combination or ensemble BMA
+  <span class="sup">
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>,
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+  </span>. This method accounts for model non-exclusivity in a different way. Specifically, it considers a collection of augmented models 
+  <div id="IEq20" class="inline-formula">
+   <div class="alternatives">
+    <span id="M67" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$H_j^ \ast$$\end{document}</span>
+    <div id="M68" class="math">
+     <div class="msubsup">
+      <div class="mrow">
+       <span class="mi">H</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">j</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">*</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq20.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, where each augmented model represents a combination of original models 
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>. It then performs standard BMA with the augmented models. However, such an approach suffers from the same problem as original BMA: it assumes exclusivity of model combinations. But if one model combination is correct, it does not preclude another model combination (e.g., a subset of the original combination) to be correct. We show here that the proper way to account for model interactions is to subtract model combination terms with an even number of models, and to add odd-number combinations following Eq. (
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a>). By working with a parameter space (Eq. (
+  <a rid="Equ8" ref-type="" href="#Equ8">8</a>)) as opposed to model combinations (Eq. (
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a>)), our approach can handle ensembles with a large number of combinations. This is because unlike the ensemble BMA we do not need to explicitly calculate the probability of each combination. Specifically, current work handles 2
+  <span class="sup">31</span>–1 combinations, which is approximately 2.1 billion. Finally, previous ensemble BMA implementation does not properly account for model dependence when evaluating model combination probabilities
+  <span class="sup">
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+  </span>.
+ </p>
+ <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">Our work is subject to important caveats. First, joint/combination model weights are dependent only on model and observed output in a low-dimensional space. As such, they do not explicitly consider model families
+  <span class="sup">
+   <a ref-type="bibr" rid="CR13" href="#CR13">13</a>
+  </span>, or sharing model code between institutions. While similar model output from unrelated models can result from subtle model dependencies such as sharing ideas or calibration datasets, it may also arise due to a random realization of internal variability
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>. Our code partially accounts for this by considering the uncertainty in the present-day model and observed SIE means. It has been previously shown, that when spatial information is considered, models from the same institution often produce similar output
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>,
+   <a ref-type="bibr" rid="CR13" href="#CR13">13</a>
+  </span>. Hence, incorporating such information can be considered in future work. Dimension reduction methods used previously may constitute one useful avenue for action
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>,
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+  </span>. Second, we consider only two observational SIE datasets
+  <span class="sup">
+   <a ref-type="bibr" rid="CR50" href="#CR50">50</a>–
+   <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+  </span>. However, another popular dataset, Meier dataset, is based on the same satellite observations as NSIDC from year 1979
+  <span class="sup">
+   <a ref-type="bibr" rid="CR50" href="#CR50">50</a>,
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span>. Third, we do not consider the uncertainty in the autocorrelation, or standard deviation of the interannual present-day September SIE variability. While considering such uncertainty may present a substantial improvement, we refrain from doing this to drastically reduce the computational cost and complexity. Considering these uncertainties is subject of future work. Fourth, we use only a subset of available models and do not make use of multi-parameter model ensembles, or intermediate complexity Earth System models. Fifth, our tolerances for sea ice sensitivity are the same for all models, and do not account for the different internal variability in different models
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span>. Ideally, this information should be incorporated in the sea ice sensitivity constraint. Note that this is not an issue with the mean SIE constraint, as there we sample from the pdfs of unknown population means. These pdfs take into account different internal variabilities of different models, e.g., if a particular model has a high internal variability this is expected to result in a broader pdf for the population mean of the SIE time series. Finally, our decision to formulate hypothesis tolerances using half-normal prior distributions is clearly subjective. We have chosen to make tolerances uncertain parameters because using fixed values resulted in flat pdfs with sharp cutoffs for a projection variable of interest in method validation experiments. We justify the prior distributions post-hoc by the fact that such priors lead to reasonable projection pdfs and model weights that gradually taper off further away from observations (Supplementary Figure 8). More rigorous determination of appropriate tolerance priors needs to be explored in future work.
+ </p>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">In closing, we provide a statistically-robust Bayesian method to calculate probabilities of non-exclusive dependent hypotheses and their combinations; and to make predictions under such hypotheses. The approach accounts for 2
+  <span class="sup">
+   <span class="italic">n</span>
+  </span> − 1 hypothesis combinations for 
+  <span class="italic">n</span> hypotheses. We use this method to make projections of the GMST change from preindustrial (1861–1890) climatology at which the Arctic will lose almost all of its September ice using 31 non-exclusive climate models. Neglecting model non-exclusivity produces biased results in case of using just a single mean sea ice extent (SIE) constraint on the models, but the effects of non-exclusivity appear to diminish when a second constraint of SIE sensitivity to temperature is added. There is a distinct probability the sea ice may vanish below 1.5 K warming limit of the Paris agreement, even if 40% of the recent sea ice decline has been naturally-caused. The projections of GMST change to melt are sensitive to the assumptions about the observational datasets, and to the natural fraction of the recent sea ice melt. The overall mean for the GMST change to melt is 2.54 K, and the 90% posterior credible interval is (1.49, 3.83) K. The study raises important questions about the usefulness of model ensembles (hypothesis sets) for making future projections. While the model runs used here were performed under RCP8.5 emissions scenario, the conclusions may hold more generally for a range of future emissions scenarios
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span> where GMST continuously increases with time. Finally, by making parallels between our work and a previous study
+  <span class="sup">
+   <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+  </span>, we show mathematically that probabilistic regional climate projections and climate sensitivity estimates accounting for all model interactions are already available to climate community.
+ </p>
+</sec>

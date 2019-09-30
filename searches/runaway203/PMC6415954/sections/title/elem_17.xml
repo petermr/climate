@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ocean temperature data and methods</div>
+ <sec disp-level="3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ocean temperature data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">1) TOPAZ4 Arctic Ocean reanalysis data (
+   <span ext-link-type="uri" xlink:href="http://marine.copernicus.eu/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://marine.copernicus.eu/</span>). The TOPAZ4 Arctic Ocean Physics reanalysis data provide physical ocean variables for the time period 1991–2015. These data are available from the CMEMS (product identifier: ARCTIC_REANALYSIS_PHYS_002_003). The TOPAZ reanalysis system assimilates all available satellite and in situ temperature-salinity profile observations, resulting in modeled data as a 12.5-km resolution grid (
+   <a rid="R25" ref-type="bibr" href="#R25">
+    <span class="italic">25</span>
+   </a>). We downloaded the mean monthly temperature and salinity NetCDF files at the subsurface standard depths available: 50, 100, 200, 400, and 700 m. Mean annual temperatures were calculated from the grid values at each depth. The quality information document (
+   <span ext-link-type="uri" xlink:href="http://cmems-resources.cls.fr/documents/QUID/CMEMS-ARC-QUID-002-001a.pdf" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://cmems-resources.cls.fr/documents/QUID/CMEMS-ARC-QUID-002-001a.pdf</span>) gives the estimated accuracy for modeled temperatures as statistical values for bias and root mean square (RMS) differences. The forecast biases are −0.35°C at 5- to 100-m depth, −0.2°C at 100- to 300-m depth, and 0.5°C at 300- to 800-m depth. Forecast RMS differences are 0.6°C at 5- to 100-m depth, 0.8°C at 100- to 300-m depth, and 1.0°C at 300- to 800-m depth. These accuracy estimates are for the full domain, but there is variability in the system accuracy, e.g., in some regions with few temperature profile data, the reanalysis Root Mean Square error (RMSE) can be up to 1.0°C. Our statistical analysis does not include TOPAZ4 reanalysis data, and therefore, these errors do not affect our results. Rather, the data are used to illustrate the regional overview of mean annual ocean temperature at each depth (
+   <a rid="F3" ref-type="fig" href="#F3">Fig. 3</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">2) World Ocean Database in situ measurements (
+   <span ext-link-type="uri" xlink:href="https://www.nodc.noaa.gov/OC5/WOD13" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.nodc.noaa.gov/OC5/WOD13</span>). The World Ocean Database (WOD13) (
+   <a rid="R28" ref-type="bibr" href="#R28">
+    <span class="italic">28</span>
+   </a>) is a comprehensive set of historical ocean profile data collected between 1972 and 2015. Data are provided by the NOAA National Centers for Environmental Information. We selected in situ data from CTD profiles for the region surrounding the CAA. We downloaded temperatures at the following standard depths available: 50, 100, 150, 200, 300, 400, and 500 m. WOD13 water properties at standard depths were measured and reported either directly or by interpolation, as set out by commonly used criteria (
+   <a rid="R28" ref-type="bibr" href="#R28">
+    <span class="italic">28</span>
+   </a>). The data variables include the measurement station ID, latitude/longitude, date, and year, in addition to temperature and salinity values. To download the data for our region of interest, we used the Ocean Data View software provided by NOAA. Error estimates described in the WOD13 report (
+   <a rid="R28" ref-type="bibr" href="#R28">
+    <span class="italic">28</span>
+   </a>) state that the accuracy of CTD measurements varies with instrument design, typically from 0.005° to 0.001°C for temperature. The overall quality of CTD measurements are also affected by calibration drift (i.e., prolonged use of the CTD instrument in the sea), data streaming problems, varying speeds of the CTD, and rapid changes in the ocean environment. The measurements are assigned a flag in quality control checks and measurements that are considered to fail quality control are excluded from WOD13. Other flags range from good quality (1), to potentially bad quality but based on visual inspection found no reason not to be used in scientific research (4) (
+   <a rid="R28" ref-type="bibr" href="#R28">
+    <span class="italic">28</span>
+   </a>). For our study, we included all measurements available in WOD13, and our representation of error in the statistical analysis methods is SE, considered the most valuable owing to the large sample size.
+  </p>
+ </sec>
+ <sec disp-level="3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bathymetric data (
+   <span ext-link-type="uri" xlink:href="https://www.ngdc.noaa.gov/mgg/bathymetry/arctic/arctic.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ngdc.noaa.gov/mgg/bathymetry/arctic/arctic.html</span>)
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The standard depths at which the ocean temperature measurements were chosen were based on the range of depths close to the glacier fronts. These were established from the NOAA International Bathymetric Chart of the Arctic Ocean v3, 500-m grid (fig. S3). The grid is compiled from all available multibeam, dense single beam, and land data and built using a gridding algorithm at 500-m resolution (
+   <a rid="R44" ref-type="bibr" href="#R44">
+    <span class="italic">44</span>
+   </a>). It is currently recognized as the best Arctic Ocean Digital Bathymetric Model available. We downloaded and clipped the dataset to our region of interest and removed land data before undertaking statistical analysis of depths close to glacier fronts.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Buffers extending from the marine-terminating glacier fronts (at their positions ca. 2000) were created at 5- and 20-km radii (fig. S3). The mean bathymetry within the 20-km buffer for all 300 glaciers is 166 m of which 40 glaciers have mean bathymetry deeper than 400 m. Within 5 km of all glacier fronts, the mean bathymetry is 90 m, and 11 glaciers have a mean bathymetry deeper than 400 m within 5 km of their fronts. Of the 117 glaciers with ≥10 ocean temperature measurements within 20 km, 36 have a mean depth deeper than 400 m (mean, 477 m). When all glaciers are separated by 1° latitudes, the mean depths within 20 km are shallower than 400 m in all latitudinal degree bands, and within 5 km, mean depths are shallower than 200 m.</p>
+ </sec>
+ <sec disp-level="3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ocean temperature statistics</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Regional modeled mean ocean temperatures were mapped in ArcMap using TOPAZ4 gridded data for the region surrounding the CAA and west Greenland (
+   <a rid="F3" ref-type="fig" href="#F3">Fig 3</a>). Ocean temperature analysis close to glacier fronts was carried out using in situ data from the WOD13 within the buffers at 20- and 5-km radii from each glacier front (fig. S3). In total, 117 glaciers have ≥10 CTD measurements within 20 km of their fronts, and 19 glaciers have ≥5 CTD measurements within 5 km of their fronts. Measurements within both radii have similar mean temperatures at each depth (fig. S4). Glaciers with ocean measurements within 20 km provided a wide-ranging sample for statistical analysis. Our investigations of glacier front change and ocean temperature correlations include glacier relative change value bins and mean ocean temperatures at each depth (glacier counts are shown in table S3). Spatiotemporal trends are based on WOD13 ocean temperature data within the 100-km buffer zone (
+   <a rid="F5" ref-type="fig" href="#F5">Fig. 5</a>). The region size was broken down by 1° latitudinal bands for regional mean ocean temperature analysis (fig. S3).
+  </p>
+ </sec>
+</sec>

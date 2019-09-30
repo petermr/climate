@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Study area</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The study area was Statistical Subarea 48.1 as defined by the Commission for the Conservation of Antarctic Marine Living Resources (CCAMLR). This is a region of the southwest Atlantic that includes the WAP and South Shetland Islands [
+   <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>]. Subarea 48.1 has an area of approximately 630,279 km
+   <span class="sup">2</span> [
+   <a rid="pone.0214814.ref009" ref-type="bibr" href="#pone.0214814.ref009">9</a>] and is south of South America (
+   <a ref-type="fig" rid="pone.0214814.g001" href="#pone.0214814.g001">Fig 1</a>). The only commercial fishery currently operating in Statistical Subarea 48.1 is the krill fishery, which removed an average of approximately 51,000 tonnes of krill per year in the 1990s and 33,000 tonnes of krill per year in the early 2000s [
+   <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>]. The krill catch in Statistical Subarea 48.1 has been increasing with catch exceeding 150,000 tonnes in 5 of the last eight years [
+   <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>].
+  </p>
+  <div id="pone.0214814.g001" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0214814.g001</span>
+   <span class="label">Fig 1</span>
+   <div class="caption">
+    <div class="title">Study area detail.</div>
+    <p>Map, including reticules, was created using ArcMap 10.6. The Antarctic continent shapefile is freely available from the Antarctic Digital Database [
+     <a rid="pone.0214814.ref026" ref-type="bibr" href="#pone.0214814.ref026">26</a>], the boundary of Statistical Area 48.1 is freely available from CCAMLR’s online GIS [
+     <a rid="pone.0214814.ref027" ref-type="bibr" href="#pone.0214814.ref027">27</a>]. The Natural Earth (
+     <span ext-link-type="uri" xlink:href="https://www.naturalearthdata.com/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://www.naturalearthdata.com/</span>) provides public domain shapefiles of the countries of the world. The polygon bounding the Palmer LTER Study Area was drawn to bound the stations identified in the Palmer LTER Basic Grid[
+     <a rid="pone.0214814.ref028" ref-type="bibr" href="#pone.0214814.ref028">28</a>] The displayed sea-ice maxima is a climatology (1981–2010) describing the median location of the sea edge in the month of August as made available from the National Snow and Ice Data Center [
+     <a rid="pone.0214814.ref029" ref-type="bibr" href="#pone.0214814.ref029">29</a>]. The displayed sea-ice minima is a climatology (1981–2010) describing the median location of the sea ice edge in February as made available from the National Snow and Ice Data Center [
+     <a rid="pone.0214814.ref029" ref-type="bibr" href="#pone.0214814.ref029">29</a>].
+    </p>
+   </div>
+   <div xlink:href="pone.0214814.g001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <sec id="sec004" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Mass-balanced food-web model (Ecopath)</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Ecopath with Ecosim (EwE) is open source, freely available software that has been used to model ecosystems worldwide [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>, 
+    <a rid="pone.0214814.ref021" ref-type="bibr" href="#pone.0214814.ref021">21</a>]. Ecopath creates a mass balanced model of the food web assuming that predation, fishing pressure, and competition are critical to structuring the community [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>, 
+    <a rid="pone.0214814.ref021" ref-type="bibr" href="#pone.0214814.ref021">21</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Ecopath relies on two master equations to parameterize the model. As described in Christensen and Walters (2004), the first equation describes the production term, 
+    <span class="italic">P</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub>. 
+    <div id="pone.0214814.e001" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0214814.e001.jpg" id="pone.0214814.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M1" class="math">
+       <span class="mi">P</span>
+       <span class="mi">i</span>
+       <span class="mo">=</span>
+       <span class="mi">Y</span>
+       <span class="mi">i</span>
+       <span class="mo">+</span>
+       <span class="mi">M</span>
+       <span class="mn">2</span>
+       <span class="mi">i</span>
+       <span class="mo">×</span>
+       <span class="mi">B</span>
+       <span class="mi">i</span>
+       <span class="mo">+</span>
+       <span class="mi">E</span>
+       <span class="mi">i</span>
+       <span class="mo">+</span>
+       <span class="mi">B</span>
+       <span class="mi">A</span>
+       <span class="mi">i</span>
+       <span class="mo">+</span>
+       <span class="mi">M</span>
+       <span class="mn">0</span>
+       <span class="mi">i</span>
+       <span class="mo">×</span>
+       <span class="mi">B</span>
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span class="label">(1)</span>
+    </div> For each species i, 
+    <span class="italic">Y</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the total fishery catch, 
+    <span class="italic">M</span>2
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the instantaneous predation rate, 
+    <span class="italic">B</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the biomass, 
+    <span class="italic">E</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the net migration rate, 
+    <span class="italic">BA</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is biomass accumulation, and 
+    <span class="italic">M</span>0
+    <sub>
+     <span class="italic">i</span>
+    </sub> is ‘other’ mortality.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The second master equation describes the energy balance of each group such that 
+    <div id="pone.0214814.e002" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0214814.e002.jpg" id="pone.0214814.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M2" class="math">
+       <span class="mi">C</span>
+       <span class="mi">o</span>
+       <span class="mi">n</span>
+       <span class="mi">s</span>
+       <span class="mi">u</span>
+       <span class="mi">m</span>
+       <span class="mi">p</span>
+       <span class="mi">t</span>
+       <span class="mi">i</span>
+       <span class="mi">o</span>
+       <span class="mi">n</span>
+       <span class="mo">=</span>
+       <span class="mi">p</span>
+       <span class="mi">r</span>
+       <span class="mi">o</span>
+       <span class="mi">d</span>
+       <span class="mi">u</span>
+       <span class="mi">c</span>
+       <span class="mi">t</span>
+       <span class="mi">i</span>
+       <span class="mi">o</span>
+       <span class="mi">n</span>
+       <span class="mo">+</span>
+       <span class="mi">r</span>
+       <span class="mi">e</span>
+       <span class="mi">s</span>
+       <span class="mi">p</span>
+       <span class="mi">i</span>
+       <span class="mi">r</span>
+       <span class="mi">a</span>
+       <span class="mi">t</span>
+       <span class="mi">i</span>
+       <span class="mi">o</span>
+       <span class="mi">n</span>
+       <span class="mo">+</span>
+       <span class="mi">u</span>
+       <span class="mi">n</span>
+       <span class="mi">a</span>
+       <span class="mi">s</span>
+       <span class="mi">s</span>
+       <span class="mi">i</span>
+       <span class="mi">m</span>
+       <span class="mi">i</span>
+       <span class="mi">l</span>
+       <span class="mi">a</span>
+       <span class="mi">t</span>
+       <span class="mi">e</span>
+       <span class="mi">d</span>
+       <span width="2pt" class="mspace"/>
+       <span class="mi">f</span>
+       <span class="mi">o</span>
+       <span class="mi">o</span>
+       <span class="mi">d</span>
+      </div>
+     </div>
+     <span class="label">(2)</span>
+    </div> This equation requires that the consumption of any one model group is always less than or equal to its production, thus ensuring energy balance within each group [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">For this study, the food web of the WAP was simplified into 35 single- and multi-species groups, and these groups were selected to represent all levels of the food web, from detritus to apex predators. (see 
+    <a ref-type="supplementary-material" rid="pone.0214814.s001" href="#pone.0214814.s001">S1 File</a> for group definitions). Due to the importance of krill in the region [
+    <a rid="pone.0214814.ref002" ref-type="bibr" href="#pone.0214814.ref002">2</a>, 
+    <a rid="pone.0214814.ref007" ref-type="bibr" href="#pone.0214814.ref007">7</a>, 
+    <a rid="pone.0214814.ref008" ref-type="bibr" href="#pone.0214814.ref008">8</a>], special attention was paid to krill and monitored krill predators. Species that the CCAMLR have designated as indicator species [
+    <a rid="pone.0214814.ref030" ref-type="bibr" href="#pone.0214814.ref030">30</a>, 
+    <a rid="pone.0214814.ref031" ref-type="bibr" href="#pone.0214814.ref031">31</a>] were represented as single-species groups. It was our intention that this model eventually be developed into a spatial model (Ecospace) that can be used to inform the development of marine protected areas in the region. All currently monitored species seem likely to feature in a research and monitoring plan associated with a new MPA and were modeled as single species. Other species, such as non-krill zooplankton, phytoplankton, and fishes for which relatively little data exist, were combined into multi-species functional groups.
+   </p>
+  </sec>
+  <sec id="sec005" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Specification of Ecopath biomass</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The base year of the model was 1996. Initial biomass estimates for all consumer groups reflected data collected during the period 1992–2002, and for many groups only a single estimate was available during this time frame (
+    <a ref-type="supplementary-material" rid="pone.0214814.s002" href="#pone.0214814.s002">S2 File</a>). For large krill, multiple density estimates are available during this time period and we averaged densities for the years 1996–2001 to determine the biomass to input to Ecopath. Data on the biomass of primary producers in the region are scarce and region-wide estimates are not available. While satellite imagery describing chlorophyll concentrations is available nine months of the year [
+    <a rid="pone.0214814.ref032" ref-type="bibr" href="#pone.0214814.ref032">32</a>], measurements of chlorophyll concentrations do not capture ice algae and may not correlate well with 
+    <span class="italic">in situ</span> measurements of phytoplankton biomass [
+    <a rid="pone.0214814.ref033" ref-type="bibr" href="#pone.0214814.ref033">33</a>]. Rather than introduce additional complexity and uncertainty by attempting to estimate the biomasses of the phytoplankton and ice-algae functional groups from remotely sensed imagery, we used the model itself to calculate biomass for primary producers. This was accomplished by setting the ecotrophic efficiency (EE), the proportion of production of any given model group utilized in the system (see equation 6 of [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]), and allowing the model to calculate the biomass required to balance this proportion of utilization. This was the same approach used by Ballerini et al. [
+    <a rid="pone.0214814.ref007" ref-type="bibr" href="#pone.0214814.ref007">7</a>]. Following the advice of Heymans et al. [
+    <a rid="pone.0214814.ref034" ref-type="bibr" href="#pone.0214814.ref034">34</a>], the EE for primary producers in this largely pelagic ecosystem was set to 0.5 [
+    <a rid="pone.0214814.ref033" ref-type="bibr" href="#pone.0214814.ref033">33</a>]. For all other groups, we input biomasses and used the model to calculate the EEs. Fisheries catch data are regularly reported to the CCAMLR [
+    <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>], and the average krill catch for the years 1995–2001, which represented catches near the base year of the model, was included as “landings” in Ecopath. We did not include discards as discards are not clearly identified in the publicly available CCAMLR data [
+    <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The abundances of two species of whales are known to be increasing in the study area [
+    <a rid="pone.0214814.ref035" ref-type="bibr" href="#pone.0214814.ref035">35</a>, 
+    <a rid="pone.0214814.ref036" ref-type="bibr" href="#pone.0214814.ref036">36</a>]. However, while estimates of the rate of increase have been presented, no reliable times series of abundance are available. Humpback whales (
+    <span class="italic">Megaptera novaeangliae</span>) have experienced an estimated average population growth for the region of 4.5% per year with a 95% confidence interval of -2.9% to 12.3% [
+    <a rid="pone.0214814.ref035" ref-type="bibr" href="#pone.0214814.ref035">35</a>]. Initially, we used a biomass accumulation term of 4.5%, but the model failed to balance if the biomass accumulation term for humpback whales was greater than 3.9%, so we used this later value. While annual population-growth rates have not been published for fin whales (
+    <span class="italic">Balaenoptera physalus</span>) in the study region, reported sightings data [
+    <a rid="pone.0214814.ref036" ref-type="bibr" href="#pone.0214814.ref036">36</a>] reveal that fin whale sightings have increased at a similar, but slightly lesser rate. A biomass accumulation term of 2.9% per year was used for Fin whales.
+   </p>
+  </sec>
+  <sec id="sec006" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Specification of Ecopath production to biomass ratio</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The production to biomass ratio (P/B) describes the turnover rate, or rate at which a trophic group can replace itself. This rate is poorly described for many species at lower trophic levels. Due to lack of data, the P/B ratios for primary producers, micro-, meso-, and macro- zooplankton, salps, and benthic invertebrates were adopted from previously published models. Ballerini et al. [
+    <a rid="pone.0214814.ref007" ref-type="bibr" href="#pone.0214814.ref007">7</a>] estimated phytoplankton productivity from satellite imagery; the estimated P/B for the “other euphausiid” functional group was from studies conducted in Japan [
+    <a rid="pone.0214814.ref037" ref-type="bibr" href="#pone.0214814.ref037">37</a>]; and the estimated P/B value for salps was from Pakhomov [
+    <a rid="pone.0214814.ref038" ref-type="bibr" href="#pone.0214814.ref038">38</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Krill were modeled as a multi-stanza group, with one stanza for animals younger than 24 months (small krill) and a second for animals older than 24 months (large krill). Instead of P/B, base mortality (Z) was input for each stanza [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. The multi-stanza approach assumes that body growth for the species follows a von Bertalanffy curve and that the species’ population, as a whole, has reached a stable age-size distribution [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. These assumptions seem valid for the Antarctic krill population [
+    <a rid="pone.0214814.ref039" ref-type="bibr" href="#pone.0214814.ref039">39</a>, 
+    <a rid="pone.0214814.ref040" ref-type="bibr" href="#pone.0214814.ref040">40</a>]. A recent review of published mortality rates for krill indicates that temperature, age composition of the population, and sub region where the krill are sampled can significantly influence estimated mortality rates; estimates range from 0.38 to 1.22 [
+    <a rid="pone.0214814.ref041" ref-type="bibr" href="#pone.0214814.ref041">41</a>]. Models currently used to inform the management of the krill fishery use a natural mortality value of 0.8 [
+    <a rid="pone.0214814.ref042" ref-type="bibr" href="#pone.0214814.ref042">42</a>]. Krill catches, approximately 210,000 tonnes for the entire fishery during the period 1992–2002 [
+    <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>] are low compared to consumption by predators [
+    <a rid="pone.0214814.ref043" ref-type="bibr" href="#pone.0214814.ref043">43</a>], so the natural mortality rate is a good approximation of Z for krill. We used the mortality value used to inform management of the krill fishery, 0.8, for both large and small krill. This value, and the von Bertalanffy curvature constant (K) of 0.440 are derived from the work of Rosenberg et al. [
+    <a rid="pone.0214814.ref040" ref-type="bibr" href="#pone.0214814.ref040">40</a>] and of Candy and Kawaguchi [
+    <a rid="pone.0214814.ref039" ref-type="bibr" href="#pone.0214814.ref039">39</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Hill et al. [
+    <a rid="pone.0214814.ref009" ref-type="bibr" href="#pone.0214814.ref009">9</a>] provide a compilation of all estimates of P/B ratios for fishes. The P/B value for myctophids ranges between 0.86–1.14. The value of 1.1 was used in the current model. Similarly, Hill et al. [
+    <a rid="pone.0214814.ref009" ref-type="bibr" href="#pone.0214814.ref009">9</a>] note that the P/Bs of fishes living on the continental shelf range from 0.19–0.60 and recommend a value of 0.46, which was adopted here. A natural mortality rate of 0.29 is recognized as the best estimate for 
+    <span class="italic">Notothenia rossii</span> [
+    <a rid="pone.0214814.ref018" ref-type="bibr" href="#pone.0214814.ref018">18</a>] and was used in our model. Iverson [
+    <a rid="pone.0214814.ref044" ref-type="bibr" href="#pone.0214814.ref044">44</a>] estimated that the pre-exploitation natural mortality rate of 
+    <span class="italic">Champsocephalus gunnari</span> ranged between 0.23–0.96, and models used to inform fisheries management for this species use the midrange value of 0.48 [
+    <a rid="pone.0214814.ref009" ref-type="bibr" href="#pone.0214814.ref009">9</a>]. We also used the value of 0.48. A specific P/B value for 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span> could not be found in the literature. The species is included in the Hill et al. [
+    <a rid="pone.0214814.ref009" ref-type="bibr" href="#pone.0214814.ref009">9</a>] assessment of the mortality for shelf-associated fishes, and, therefore, our model used a P/B of 0.46 for 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span>.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">For upper level predators, the P/B ratio can be represented by the annual rate of adult natural mortality [
+    <a rid="pone.0214814.ref007" ref-type="bibr" href="#pone.0214814.ref007">7</a>, 
+    <a rid="pone.0214814.ref045" ref-type="bibr" href="#pone.0214814.ref045">45</a>], and this is a commonly published parameter (
+    <a ref-type="supplementary-material" rid="pone.0214814.s003" href="#pone.0214814.s003">S3 File</a>). For all marine mammal and penguin groups, our model used published values of survival or mortality. Following Ballerini et al. [
+    <a rid="pone.0214814.ref007" ref-type="bibr" href="#pone.0214814.ref007">7</a>], the P/B value for flying birds was calculated using a weighted average of annual survival for each species included in the functional group. Weights were proportional to the relative abundances of the species as described by Ribic et al. [
+    <a rid="pone.0214814.ref046" ref-type="bibr" href="#pone.0214814.ref046">46</a>].
+   </p>
+  </sec>
+  <sec id="sec007" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Specification of Ecopath production to consumption ratio</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">To create a mass balanced model, Ecopath uses an estimate of consumption (Eqs 
+    <a ref-type="disp-formula" rid="pone.0214814.e001" href="#pone.0214814.e001">1</a> and 
+    <a ref-type="disp-formula" rid="pone.0214814.e002" href="#pone.0214814.e002">2</a>). This estimate is often input to the model as either a production to consumption (P/Q) ratio or a consumption to biomass (Q/B) ratio. The P/Q ratio can be calculated as growth efficiency, or the product of the assimilation efficiency (AE) and production efficiency [PE; 7]. Published AE values exist for many groups (
+    <a ref-type="supplementary-material" rid="pone.0214814.s004" href="#pone.0214814.s004">S4 File</a>). The PE values were derived from Townsend et al. [
+    <a rid="pone.0214814.ref047" ref-type="bibr" href="#pone.0214814.ref047">47</a>]. Consistent with Ballerini et al. [
+    <a rid="pone.0214814.ref007" ref-type="bibr" href="#pone.0214814.ref007">7</a>] we calculated Q/B ratios by dividing group specific estimates of P/Q into group specific estimate of P/B.
+   </p>
+  </sec>
+  <sec id="sec008" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Specification of Ecopath diet matrix</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The diet matrix describes trophic interactions among all species and functional groups in the model. Cannibalism was not allowed to occur for any group as it can cause instability [
+    <a rid="pone.0214814.ref007" ref-type="bibr" href="#pone.0214814.ref007">7</a>, 
+    <a rid="pone.0214814.ref048" ref-type="bibr" href="#pone.0214814.ref048">48</a>]. We note that for the multispecies functional groups where cannibalism is most likely to occur, there are not sufficient data to support further subdivision of the groups or creation of multi stanzas for the group to circumvent within group cannibalism. The diet matrix was informed by published diet-composition studies and publicly available reports of prey choices. Except for sperm whales, diet data were sourced from studies conducted in the Antarctic. Diet studies referenced include gut content analyses, visual observation of prey consumption, and stable isotope analysis. Sources for the diet matrix and notes describing how the diets were adapted from the values provided in the published literature are provided in 
+    <a ref-type="supplementary-material" rid="pone.0214814.s005" href="#pone.0214814.s005">S5 File</a>.
+   </p>
+  </sec>
+  <sec id="sec009" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Balancing the Ecopath model</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">We collated the data described above to create a mass balanced food-web model for the WAP, specifically Statistical Subarea 48.1. When the model was initially implemented, with parameters taken directly out of the literature, EE values for several groups, including important prey species such as krill and on-shelf fish, were significantly greater than 1. Predation pressure was too high on those groups. Many of the diet studies referenced within the diet matrix have small, spatially constrained sample sizes relative to their respective populations (e.g.[
+    <a rid="pone.0214814.ref049" ref-type="bibr" href="#pone.0214814.ref049">49</a>, 
+    <a rid="pone.0214814.ref050" ref-type="bibr" href="#pone.0214814.ref050">50</a>, 
+    <a rid="pone.0214814.ref051" ref-type="bibr" href="#pone.0214814.ref051">51</a>]). It was assumed that the diets presented in studies covering small or restricted areas accurately represent the diversity of important prey items for each species, but that the percentage of mass in the diet was uncertain. Thus, we balanced the model by adjusting the diet matrix. Starting with the diets of predators that ate the prey items with the highest EE, diets were adjusted incrementally until the model balanced. This was an iterative process during which we made small changes to diets, less than 5% at a time, and then checked the EE values for all prey items to ensure the latter parameters were less than one. Balance was achieved, and diet iterations complete, when the EEs for all groups were less than one.
+   </p>
+  </sec>
+ </sec>
+ <sec id="sec010" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Time dynamic simulation (Ecosim)</div>
+  <sec id="sec011" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Equations</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Ecosim allows for time dynamic simulations of the balanced model created in Ecopath. Ecosim employs coupled differential equations that are derived from the Ecopath Master Equation [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>] and are expressed as: 
+    <div id="pone.0214814.e003" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0214814.e003.jpg" id="pone.0214814.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M3" class="math">
+       <div class="mfrac">
+        <div class="mrow">
+         <span class="mi">d</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">B</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">d</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">g</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <span stretchy="false" class="mo">∑</span>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">Q</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">-</span>
+         <div class="mrow">
+          <div class="msub">
+           <span stretchy="false" class="mo">∑</span>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Q</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+             <span class="mi">j</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">I</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span class="mo">-</span>
+           <span class="mo">(</span>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">M</span>
+              <span class="mi">O</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">i</span>
+             </div>
+            </div>
+            <span class="mo">+</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">F</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">i</span>
+             </div>
+            </div>
+            <span class="mo">+</span>
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">e</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">i</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">)</span>
+           <span class="mo">×</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">B</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(3)</span>
+    </div> Where 
+    <div id="pone.0214814.e004" class="inline-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0214814.e004.jpg" id="pone.0214814.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M4" class="math">
+       <div class="mfrac">
+        <div class="mrow">
+         <span class="mi">d</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">B</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">d</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div> is the growth rate during time 
+    <span class="italic">t</span> of the biomass of group 
+    <span class="italic">i</span>; 
+    <span class="italic">g</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the net growth efficiency; 
+    <span class="italic">Q</span>
+    <sub>
+     <span class="italic">ji</span>
+    </sub> represents the total consumption by predator group 
+    <span class="italic">i</span> of prey from group 
+    <span class="italic">j</span> (
+    <span class="italic">Q</span>
+    <sub>
+     <span class="italic">ji</span>
+    </sub> is similar); 
+    <span class="italic">I</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the biomass immigration rate and is assumed constant over time; 
+    <span class="italic">MO</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the mortality rate that is not associated with predation; 
+    <span class="italic">F</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the fishing mortality rate; and 
+    <span class="italic">e</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the emigration rate. The net migration term is 
+    <span class="italic">e</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> x 
+    <span class="italic">B</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub>
+    <span class="italic">—I</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> and is composed of terms that are held constant over the simulation (
+    <span class="italic">I</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub>) and those that vary over the course of the simulation (
+    <span class="italic">e</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> x 
+    <span class="italic">B</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub>) [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Consumption rates in Ecosim are based on a simple Lotka-Volterra predator-prey model that has been modified to include “foraging arena” characteristics [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. The foraging-arena concept recognizes that prey can occur in states that are vulnerable to predation and states that are not. Prey shift between these states as they seek to access resources like shelters that make them safer or seek food in areas that leave them more exposed. The different vulnerabilities of the prey can affect the consumption rate by predators. [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. Consumption rates, Q
+    <sub>ij</sub>, are calculated as follows: 
+    <div id="pone.0214814.e005" class="disp-formula">
+     <div class="alternatives">
+      <div xlink:href="pone.0214814.e005.jpg" id="pone.0214814.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      <div id="M5" class="math">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">Q</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">=</span>
+       <div class="mfrac">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">a</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">v</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">B</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">B</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">S</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="mrow">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">M</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">i</span>
+              <span class="mi">j</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">/</span>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">D</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">j</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">v</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">v</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">T</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">M</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">a</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">M</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">B</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">S</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="mrow">
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">T</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">j</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">/</span>
+           <div class="mrow">
+            <div class="msub">
+             <div class="mrow">
+              <span class="mi">D</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">j</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="label">(4)</span>
+    </div> Where 
+    <span class="italic">a</span>
+    <sub>
+     <span class="italic">ij</span>
+    </sub> is the effective search rate for prey 
+    <span class="italic">i</span> by predator 
+    <span class="italic">j</span>; 
+    <span class="italic">v</span>
+    <sub>
+     <span class="italic">ij</span>
+    </sub> is the vulnerability of the prey 
+    <span class="italic">i</span> to predator 
+    <span class="italic">j</span>; 
+    <span class="italic">B</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the biomass of group 
+    <span class="italic">i</span>; 
+    <span class="italic">T</span>
+    <sub>
+     <span class="italic">i</span>
+    </sub> is the relative feeding time of group 
+    <span class="italic">i</span>; 
+    <span class="italic">S</span>
+    <sub>
+     <span class="italic">ij</span>
+    </sub> is a forcing function; 
+    <span class="italic">M</span>
+    <sub>
+     <span class="italic">ij</span>
+    </sub> represents mediation (which is not used in this model); and 
+    <span class="italic">D</span>
+    <sub>
+     <span class="italic">j</span>
+    </sub> describes how handling time limits consumption rates [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. Further information describing how forcing functions can be used to drive consumption dynamics is provided by Christensen et al. (see Equations 4 and 5 and Figure 1 in [
+    <a rid="pone.0214814.ref052" ref-type="bibr" href="#pone.0214814.ref052">52</a>]).
+   </p>
+  </sec>
+  <sec id="sec012" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecosim time series</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Three types of data were used in the time dynamic simulations for the WAP. The first were time series that describe trends in the biomasses of eight monitored species for the years 1996–2012 and which were used to asses model fit. None of the biomass time-series data were used to force corresponding biomasses the model. Reliable, yearly time-series datasets dating back to at least the 1990s are available for five species included in the model: Antarctic fur seals, Adélie penguins, chinstrap penguins, gentoo penguins, and Antarctic krill. Less regular time-series data are available for three fishes: 
+    <span class="italic">N</span>. 
+    <span class="italic">rossii</span>, 
+    <span class="italic">C</span>. 
+    <span class="italic">gunnari</span>, and 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span> (
+    <a ref-type="supplementary-material" rid="pone.0214814.s006" href="#pone.0214814.s006">S6 File</a> provides sources and notes describing the biomass time-series data). The time series-data used for fur seals were collected at the colony that is responsible for approximately 80% of the pup production in the region[
+    <a rid="pone.0214814.ref053" ref-type="bibr" href="#pone.0214814.ref053">53</a>]. The time-series data for the three penguin species reflect region-wide trends [
+    <a rid="pone.0214814.ref017" ref-type="bibr" href="#pone.0214814.ref017">17</a>, 
+    <a rid="pone.0214814.ref054" ref-type="bibr" href="#pone.0214814.ref054">54</a>]. Krill recruitment patterns are similar in terms of timing and magnitude in both the northern and southern half of the study area [
+    <a rid="pone.0214814.ref041" ref-type="bibr" href="#pone.0214814.ref041">41</a>] and therefore using data collected in the northern half of the study area can be considered to reflect region wide trends. Datasets for air-breathing vertebrates represent counts of animals in discrete locations; krill data represent estimated densities from acoustic surveys (fisheries independent) and fisheries catch (fisheries dependent); and fish data are biomass estimates derived from trawl surveys. Fisheries independent measurements of krill density were used to asses fit of the model. All time-series data describing trends in biomass were included in the model as “relative biomass”, which allows the model to fit to trends for these species, without information on scale. To keep the start of the time dynamic simulations consistent with the model year, data prior to 1996 were not included in the Ecosim runs.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Times series for catches taken by the krill fishery and krill-fishing effort [
+    <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>] were initially included in the model. It is possible to asses model fit for krill biomass using the catch data. However commercial fishing activity has recently concentrated in relatively confined areas defining preferred fishing grounds [
+    <a rid="pone.0214814.ref011" ref-type="bibr" href="#pone.0214814.ref011">11</a>]. These data may not be representative of the region and may show patterns more related to the economics of fishing than to krill biology. Therefore, the model was fitted to the fisheries independent data. Fishing effort data, as reported to CCAMLR [
+    <a rid="pone.0214814.ref010" ref-type="bibr" href="#pone.0214814.ref010">10</a>] were included in the model to capture the temporal dynamics of the fishery from 1996–2012.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The third type of data used in Ecosim simulations were time series describing environmental conditions that may have influenced biomass trends, called forcing functions. Four forcing functions were used: sea-ice area, open water area, chlorophyll 
+    <span class="italic">a</span> concentration, and observed predation mortality rate of fur seal pups. Forcing functions were applied as multipliers to impact specific predator-prey interactions, or for primary producers as a multiplier on production rate. For consumers, the multiplier can be applied to search rate, vulnerability, foraging arena area or a combination of vulnerability and arena area [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. Forcing functions were also applied to more directly drive the biomasses of krill and 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span> using response curves to tie the increases in biomass to changing environmental conditions. The processes for evaluating applications of forcing functions and response curves are discussed in the Model Calibration section below. Due to the hypothesized importance of the sea-ice regime in influencing krill abundance and ecosystem dynamics [
+    <a rid="pone.0214814.ref001" ref-type="bibr" href="#pone.0214814.ref001">1</a>, 
+    <a rid="pone.0214814.ref002" ref-type="bibr" href="#pone.0214814.ref002">2</a>, 
+    <a rid="pone.0214814.ref016" ref-type="bibr" href="#pone.0214814.ref016">16</a>], special attention was paid to sea-ice forcing.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The Palmer Long Term Ecological Research program (LTER) program serves time series of monthly average sea-ice and open water areas in km
+    <span class="sup">2</span> for their study area (
+    <span ext-link-type="uri" xlink:href="https://oceaninformatics.ucsd.edu/datazoo/catalogs/pallter/datasets/34" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://oceaninformatics.ucsd.edu/datazoo/catalogs/pallter/datasets/34</span>). The sea-ice area is sensed by microwave satellite. Areas are considered “iced” when they have more than 15% ice cover [
+    <a rid="pone.0214814.ref055" ref-type="bibr" href="#pone.0214814.ref055">55</a>] and a time series was created of the monthly average total iced area (in km
+    <span class="sup">2</span>). Initially, the satellite derived, unaltered time series of total sea-ice covered area (in km
+    <span class="sup">2</span>) for the Palmer LTER study area was incorporated in the model. However, that appeared to have little or no impact on model patterns of biomass (hereafter model results); model results did not fit the time-series data describing changes in biomass. A sea-ice index was made to identify “good ice years” and smooth some of this variability. Since winter sea ice is thought to affect Adélie penguin survivorship [
+    <a rid="pone.0214814.ref056" ref-type="bibr" href="#pone.0214814.ref056">56</a>, 
+    <a rid="pone.0214814.ref057" ref-type="bibr" href="#pone.0214814.ref057">57</a>] attempts were made to focus on winter ice conditions. However, the Palmer LTER sea-ice dataset does not exhibit sufficient variability in the maximum winter sea-ice area. For many years, the entire LTER study area was completely covered in ice, and thus this measure does not adequately distinguish between years. Instead, the annual summer sea-ice area minimum was used to construct the sea-ice index. The assumption that years with greater sea-ice in the summer also have greater annual ice coverage underlies our index. This may be a reasonable assumption as warmer summers are known to contribute to accelerating sea-ice loss through a positive feedback loop [
+    <a rid="pone.0214814.ref002" ref-type="bibr" href="#pone.0214814.ref002">2</a>, 
+    <a rid="pone.0214814.ref058" ref-type="bibr" href="#pone.0214814.ref058">58</a>, 
+    <a rid="pone.0214814.ref059" ref-type="bibr" href="#pone.0214814.ref059">59</a>], and therefore cooler icier summers would not cause ice to be lost as rapidly as warmer, less icy, summers. We used annual sea-ice minima, as documented in the Palmer LTER data, that were scaled by the average value to construct the index. Years where the minimum sea-ice area was greater than average had index values greater than one; those below average had index values less than one. The scaled dataset (
+    <a ref-type="fig" rid="pone.0214814.g002" href="#pone.0214814.g002">Fig 2</a>) was used as the sea-ice forcing function in the model. The annual value was repeated for each monthly time step of that year, and, during the calibration process, the forcing function was applied as a multiplier to impact specific predator-prey interactions.
+   </p>
+   <div id="pone.0214814.g002" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0214814.g002</span>
+    <span class="label">Fig 2</span>
+    <div class="caption">
+     <div class="title">Annual sea-ice index values.</div>
+    </div>
+    <div xlink:href="pone.0214814.g002" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Functional response curves were used to describe how the biomasses of krill and 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span> respond to changes in the sea-ice index. Curves were fitted for both species independently, after forcing alone failed to help the model fit the time-series data for these two species. While our understanding regarding how krill responds to sea ice conditions is still evolving [
+    <a rid="pone.0214814.ref014" ref-type="bibr" href="#pone.0214814.ref014">14</a>], previous studies have shown that krill exhibit declining abundance and may be replaced by salps in areas that have experienced significant ice loss [
+    <a rid="pone.0214814.ref016" ref-type="bibr" href="#pone.0214814.ref016">16</a>]. Krill recruitment is often higher following winters with greater sea-ice extent [
+    <a rid="pone.0214814.ref041" ref-type="bibr" href="#pone.0214814.ref041">41</a>, 
+    <a rid="pone.0214814.ref060" ref-type="bibr" href="#pone.0214814.ref060">60</a>, 
+    <a rid="pone.0214814.ref061" ref-type="bibr" href="#pone.0214814.ref061">61</a>]. Data provided in the literature were not sufficient to directly construct a response curve for large krill. To further explore the hypothesis that krill generally respond positively to increased sea-ice, two curves were evaluated (
+    <a ref-type="fig" rid="pone.0214814.g003" href="#pone.0214814.g003">Fig 3</a>), both of which caused krill biomass to increase with the sea-ice index: linear (Ecosim parameters: start = 0; end = 60) and sigmoidal (Ecosim curve parameters: Y
+    <sub>zero</sub> = 0; Y
+    <sub>base</sub> = 1.5; Y
+    <sub>end</sub> = 5; Steep = 3).
+   </p>
+   <div id="pone.0214814.g003" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0214814.g003</span>
+    <span class="label">Fig 3</span>
+    <div class="caption">
+     <div class="title">Evaluated functional responses curves.</div>
+     <p>Black lines are the linear curves, grey lines represent the sigmoidal (krill) and normal (
+      <span class="italic">G</span>. 
+      <span class="italic">gibberifrons</span>) curves.
+     </p>
+    </div>
+    <div xlink:href="pone.0214814.g003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">
+    <span class="italic">Gobionotothen gibberifrons</span> is a benthic fish that breeds in the winter, and releases pelagic eggs [
+    <a rid="pone.0214814.ref062" ref-type="bibr" href="#pone.0214814.ref062">62</a>]. Available time-series data indicate a large decline in the biomass of this species. This decline was first noted in 2001, but its cause is currently unknown [
+    <a rid="pone.0214814.ref018" ref-type="bibr" href="#pone.0214814.ref018">18</a>, 
+    <a rid="pone.0214814.ref063" ref-type="bibr" href="#pone.0214814.ref063">63</a>]. This fish species dwells in the northern part of the study area and is not considered ice dependent [
+    <a rid="pone.0214814.ref062" ref-type="bibr" href="#pone.0214814.ref062">62</a>]. However, this animal breeds in the winter and could possibly respond positively to sea ice, or oceanic conditions associated with sea ice. After applying forcing using the sea-ice index and the open water forcing function to predator-prey interactions both directly involving this species and more broadly to fit the model for the seven other species for which time series the model failed to recreate the decline as described in the biomass of 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span>. Instead the model predicted an increase in this species. In an attempt to help the model recreate the observed decline in this species, simulations were run with sea ice driving the biomass for 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span>. We note that the sea-ice index could be serving as a proxy for other unmodeled environmental conditions to which 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span> responds positively. However, using the sea-ice index as a driver of 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span> biomass resulted in the model recreating the documented decline. The simulations used curves drawn directly in Ecosim (
+    <a ref-type="fig" rid="pone.0214814.g003" href="#pone.0214814.g003">Fig 3</a>): linear curve (start = 0, end = 304) and normal curve (Ecosim curve parameters: SD left = 12; data width = 560; SD right = 100; mean = 24; max = 1).
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">While some Antarctic species thrive in icy conditions, other species have increased success in open water. Gentoo penguin populations have been increasing as the amount of sea ice in the region has declined [
+    <a rid="pone.0214814.ref017" ref-type="bibr" href="#pone.0214814.ref017">17</a>, 
+    <a rid="pone.0214814.ref057" ref-type="bibr" href="#pone.0214814.ref057">57</a>]. Similarly, Antarctic fur seals are pelagic predators that tend to aggregate at the ice edge or in open water to forage [
+    <a rid="pone.0214814.ref064" ref-type="bibr" href="#pone.0214814.ref064">64</a>, 
+    <a rid="pone.0214814.ref065" ref-type="bibr" href="#pone.0214814.ref065">65</a>]. The average monthly open water area as described in the Palmer LTER data [
+    <a rid="pone.0214814.ref055" ref-type="bibr" href="#pone.0214814.ref055">55</a>] was used as a multiplier to force foraging interactions for these pelagic species (
+    <a ref-type="fig" rid="pone.0214814.g004" href="#pone.0214814.g004">Fig 4</a>).
+   </p>
+   <div id="pone.0214814.g004" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0214814.g004</span>
+    <span class="label">Fig 4</span>
+    <div class="caption">
+     <div class="title">Open water area as documented by the Palmer LTER.</div>
+    </div>
+    <div xlink:href="pone.0214814.g004" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The Palmer Long Term Ecological Research (LTER) program has provided weekly measurements of chlorophyll 
+    <span class="italic">a</span> at Palmer Station since 1995 [
+    <a rid="pone.0214814.ref066" ref-type="bibr" href="#pone.0214814.ref066">66</a>]. This is the only year-round chlorophyll time series available for the region during the years 1996–2012; satellite imagery is obscured by clouds during the austral winter [
+    <a rid="pone.0214814.ref032" ref-type="bibr" href="#pone.0214814.ref032">32</a>]. Due to equipment failures, there are several months of missing data in the Palmer LTER chlorophyll 
+    <span class="italic">a</span> time-series. The long-term monthly average was used to approximate the missing months of data. The chlorophyll 
+    <span class="italic">a</span> forcing function (
+    <a ref-type="fig" rid="pone.0214814.g005" href="#pone.0214814.g005">Fig 5</a>) was applied to the primary producers, using the built-in Ecosim multiplier of production rate. This caused primary production in the model to cycle with empirical observations.
+   </p>
+   <div id="pone.0214814.g005" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0214814.g005</span>
+    <span class="label">Fig 5</span>
+    <div class="caption">
+     <div class="title">Monthly chlorophyll 
+      <span class="italic">a</span> concentration documented by the Palmer LTER.
+     </div>
+    </div>
+    <div xlink:href="pone.0214814.g005" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Goebel and Reiss [
+    <a rid="pone.0214814.ref053" ref-type="bibr" href="#pone.0214814.ref053">53</a>] provide a time series (
+    <a ref-type="fig" rid="pone.0214814.g006" href="#pone.0214814.g006">Fig 6</a>) of observed leopard seal predation on Antarctic fur seal pups. These data were used solely to force the trophic interaction between leopard seals and Antarctic fur seals. Goebel and Reiss [
+    <a rid="pone.0214814.ref053" ref-type="bibr" href="#pone.0214814.ref053">53</a>] estimate a single predation rate per Antarctic season. The annual value was repeated for October through May (the season when it was probable to have pups at Cape Shirreff) and zero was assigned to June through September (the months when pups were highly unlikely to be on the beach). Significant leopard seal predation on fur seal pups was first recorded in October of 2003. A value of zero was used from the start of the time series until 2003 [
+    <a rid="pone.0214814.ref053" ref-type="bibr" href="#pone.0214814.ref053">53</a>].
+   </p>
+   <div id="pone.0214814.g006" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0214814.g006</span>
+    <span class="label">Fig 6</span>
+    <div class="caption">
+     <div class="title">Observed leopard seal predation rate on Antarctic fur seal pups.</div>
+     <p>Figure recreated from Goebel and Reiss [
+      <a rid="pone.0214814.ref053" ref-type="bibr" href="#pone.0214814.ref053">53</a>].
+     </p>
+    </div>
+    <div xlink:href="pone.0214814.g006" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </sec>
+  <sec id="sec013" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Calibration of the model</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">To begin the calibration process, the model was initially run with only the chlorophyll 
+    <span class="italic">a</span> time series forcing primary producer groups. In this case, the model failed to recreate the documented trends of biomass for all species for which time series were available, except for 
+    <span class="italic">C</span>. 
+    <span class="italic">gunnari</span>. Forcing functions were then applied to specific predator-prey interactions to influence the prey’s vulnerability to predation, the predator’s search rate, or the size of the area where prey are vunerable to predation (i.e., the foraging arena). This type of forcing was applied in Ecosim without the use of response curves. Choices of which time series were applied as forcing functions to each predator-prey interaction were influenced by hunting strategies documented in the diet studies used to build the diet matrix. For example, gentoo penguins forage in near shore environments [
+    <a rid="pone.0214814.ref067" ref-type="bibr" href="#pone.0214814.ref067">67</a>] and have been increasing in abundance as seaice has declined [
+    <a rid="pone.0214814.ref017" ref-type="bibr" href="#pone.0214814.ref017">17</a>]. This suggests that gentoo penguins are more successful foragers in open water conditions. Thus we used the open water environmental driver to force predator-prey interactions between gentoo penguins and on-shelf fish and krill. This application made those prey items more vulnerable to gentoo predation where open water was more prevalent.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Model fit was measured by sums of the squared differences (SS) between simulation results and biomass time series for the eight monitored species, where a smaller SS indicates a better fit. If applying a forcing function to a specific predator prey interaction did not improve the fit, or otherwise help the model recreate trends documented in the time series, that function was no longer applied to that foraging interaction. To improve model fit for large krill and 
+    <span class="italic">G</span>. 
+    <span class="italic">gibberifrons</span>, we used our sea-ice index to directly drive the biomasses of both species. We evaluated two curves for each species and retained the curve that resulted in the lowest total sum of squares. Once the model was able to recreate the trends of biomass as documented in the time-series data, and each group-specifc SS had been minimized, the model was considered calibrated.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">We used the Monte Carlo (MC) routine provided within EwE [
+    <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>] to assess model sensitivity. The MC routine randomly selects initial values of the input parameters (Biomass, P/B, and EE) for all model groups using a coefficient of variation (C.V.) of 0.1 and computes the total sum of squares using these new input values. The degree of difference in the sum of squares between the user-specified model, and randomly selected runs is used to infer sensitivity to small changes in input parameters. We ran 200 MC simulation trials to assess sensitivity.
+   </p>
+  </sec>
+ </sec>
+</sec>

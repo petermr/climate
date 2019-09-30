@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pollen-based reconstructions</div>
+  <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">This study reconstructs quantitative changes of annual precipitation during the Holocene from a set of fossil pollen records. Our approach
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span> involves the development of a representative modern pollen–precipitation training-set, the set up and evaluation of pollen–precipitation transfer functions that model the relationship between modern pollen occurrences, the application of a transfer function to fossil pollen records to infer past precipitation levels, and the synthesis of spatiotemporal precipitation patterns. Such an approach involves a number of statistical and (paleo-)ecological assumptions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span> including that precipitation is the major determinant of vegetation and hence pollen composition.
+  </p>
+  <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">The modern pollen dataset (Source Data File 1) from China and Mongolia used to establish a transfer function between pollen composition and annual precipitation is derived from 2559 sampling sites (gradient: 35–2091 mm) and comprises 161 taxa each being present in at least 3 samples and making up at least 3% of the pollen in at least one sample
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+   </span>. The results of a canonical correspondence analysis suggest that, of all the climate variables tested, annual precipitation has the greatest influence on pollen composition within the dataset and this was therefore considered to be the best climate variable to use for reconstructions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span>. It may be that summer monsoon precipitation determines vegetation distribution and not annual precipitation, but our analyses revealed that summer precipitation and annual precipitation are highly correlated and that summer precipitation or precipitation of certain months do not explain better the modern pollen distribution, which instead may be explained by a memory effect of precipitation induced by rain-infiltrated soils (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> and Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). A canonical correspondence analysis with a subset of southern China indicated that precipitation is a significant variable for pollen composition also in southern China despite it being more humid (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). We selected a unique pollen–precipitation calibration set for each fossil pollen record from modern sites within a 1,000 km radius as Cao and co-workers
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+   </span> have shown that this will increase the reliability of the reconstruction. The geographic distance between each modern sampling site and each fossil pollen record was calculated using the 
+   <span class="italic">rdist.earth</span> function in the 
+   <span class="italic">fields</span> package (version 6.8) for R software
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>.
+  </p>
+  <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">We used weighted-averaging partial least squares regression (WA-PLS) to set up pollen–precipitation transfer functions. This commonly used method is able to model unimodal responses and it maximizes the information in the modern dataset used for prediction. Exploration of our modern pollen–precipitation dataset revealed that WA-PLS yields more reliable quantitative precipitation reconstructions that the modern analog technique (MAT)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span>—the other common method in paleoenvironmental reconstructions. A pollen–precipitation WA-PLS transfer function was established for each calibration set using the 
+   <span class="italic">WAPLS</span> function in the 
+   <span class="italic">rioja</span> package, version 0.7-3
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+   </span>, with leave-one-out cross-validation. The pollen percentages were square-root transformed. The number of WA-PLS components to be employed was selected using a randomization 
+   <span class="italic">t</span>-test
+   <span class="sup">
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>.
+  </p>
+  <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">A taxonomically harmonized fossil pollen dataset from eastern continental Asia
+   <span class="sup">
+    <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+   </span> was used to reconstruct past precipitation levels (Source Data File 2). To this dataset, we added 26 new records from areas that previously had poor data coverage. Reconstructions were only made for the period between 10 and 2 cal ka to ensure good spatial coverage and minimize the likelihood of a marked human impact on vegetation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span>. This period was covered by 101 of the available pollen records (details in Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). A statistical significance test was performed for the quantitative precipitation reconstructions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span> using the 
+   <span class="italic">randomTF</span> function in the 
+   <span class="italic">palaeoSig</span> package, version 1.1.2
+   <span class="sup">
+    <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+   </span>. We found that there was no change in the general results if non-significant reconstructions were excluded, and the dataset was therefore not reduced.
+  </p>
+  <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Unsupervised fuzzy competitive learning
+   <span class="sup">
+    <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+   </span> was used to cluster the precipitation reconstructions and to obtain a degree of membership to each cluster for each reconstruction. Precipitation time-series were smoothed in time (σ = 1000 yrs) and space (σ = 200 km) using a Gaussian kernel. Clustering of smoothed and Z-transformed precipitation reconstructions was implemented with the 
+   <span class="italic">cmeans</span> function (with default values) in the 
+   <span class="italic">e1071</span> package, version 1.6-3
+   <span class="sup">
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>. The Xie-Beni index
+   <span class="sup">
+    <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+   </span> was calculated to determine the optimal number of clusters in the precipitation reconstruction dataset and to evaluate the validity of clustering partitions, using the 
+   <span class="italic">fclustIndex</span> function in the 
+   <span class="italic">e1071</span> package, version 1.6-3
+   <span class="sup">
+    <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+   </span>. R code is available in Supplementary Note 
+   <a rid="MOESM2" ref-type="media" href="#MOESM2">1</a>.
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Minimal empirical model</div>
+  <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">We established a minimal model to simulate the annual precipitation in the area influenced by the EASM and in the EASM-westerly transition area (20–55°N and 80–130°E) over the period between 10 and 2 ka (Source Data File 3). The main driver of Holocene climate changes is change in incoming insolation. Simple empirical models between local daily insolation and local daily temperature have been shown to produce the main features of the Holocene temperature evolution, resembling simulations of state-of-the-art climate models
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span>. The jet stream is controlled by a large-scale temperature field
+   <span class="sup">
+    <a ref-type="bibr" rid="CR4" href="#CR4">4</a>
+   </span>, which is also mainly related to insolation. Accordingly, this model assumes that insolation is the first-order control of the jet-stream position and the jet stream position is a major factor in controlling the daily precipitation.
+  </p>
+  <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">Evidence for the relationship of local insolation and the jet stream position stems from the strong seasonal relationship between the jet-stream position and insolation at 35°N (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2b</a>) and this relationship is not sensitive to the choice of the latitude of insolation (the 
+   <span class="italic">R</span>
+   <span class="sup">2</span> of insolation and jet position is &gt;0.86 for any latitude between 20° and 50°N).
+  </p>
+  <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">The relationship between the jet stream and precipitation in modern climatology was proposed in several studies
+   <span class="sup">
+    <a ref-type="bibr" rid="CR4" href="#CR4">4</a>,
+    <a ref-type="bibr" rid="CR5" href="#CR5">5</a>,
+    <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+   </span> and confirmed by predicting the local climatological seasonal cycle in precipitation using the jet stream position (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">4</a>).
+  </p>
+  <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">Specifically, we used daily precipitation data from the APHRODITE project (1951–2007)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+   </span> to obtain a representation of the spatial precipitation patterns. We also used daily u-wind data (i.e., the east–west component of wind) at the 250 hPa pressure level (i.e., the atmospheric height at which the westerly jet stream occurs) from the NCEP reanalysis data (2.5° × 2.5° grid) for the same years as the precipitation data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+   </span>. The daily position of the westerly jet stream was estimated by taking the zonal mean of the u-wind field between 100°E and 120°E and choosing the latitude with the maximum daily windspeed. We parametrized the position of the westerly jet stream as a function of insolation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+   </span>. A second-order polynomial transfer function was fitted between the modern daily insolation at 35°N and the climatological position of the westerly jet stream, after including a time lag of 45 days (= the time lag that maximized the correlation) to take into account the thermal inertia. Our result is not sensitive to the choice of any insolation latitude inside our prediction area. The second-order polynomial resulted in a coefficient of determination (
+   <span class="italic">R</span>
+   <span class="sup">2</span>) of 0.88 (compared to an 
+   <span class="italic">R</span>
+   <span class="sup">2</span> of 0.78 in a linear model). Past positions of the westerly jet stream were estimated by applying this transfer function to the daily insolation values for the period between 10 and 2 ka
+   <span class="sup">
+    <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+   </span>. In order to preserve the fine-scale features and the absolute range of the wind positions, the jet-stream position anomalies between the observed and modeled modern jet climatology were added to the reconstructed historical jet-stream positions. The modeled position of the westerly jet stream for a particular day in the past was used to identify the past spatial precipitation pattern. For that purpose, all days (= analog days) in the modern dataset (1951–2007, ~20,000 days) with a westerly jet stream position within ± 5 degrees of latitude of the modeled jet stream position were chosen. We restricted our selection to days within the same season as the targeted historical day (i.e., to ± 60 days) in order to avoid a mixture of spring and autumn precipitation patterns. Finally, the precipitation patterns for the analog days in the modern dataset were then averaged to obtain an average precipitation pattern for each day, and annual means were calculated. To estimate the wind-field corresponding to the jet-stream position and precipitation patterns (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>), we averaged the analog days in the modern u-wind and v-wind datasets to obtain the average wind field for each day. R code is available in Supplementary Note 
+   <a rid="MOESM2" ref-type="media" href="#MOESM2">1</a>.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Correlation analyses</div>
+  <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">We performed correlation analyses between time-series of pollen-based precipitation reconstruction and simulated precipitation. In a first analysis (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>), the model results are linearly interpolated to the sample times of the reconstructed record. We account for the autocorrelation in the significance estimates by adjusting the effective degrees of freedom using the estimated lag-1 correlation of the reconstructed records. Second, the mean correlation of the spatially and temporally smoothed records was investigated. To account for the temporal autocorrelation, as well as the effect of kernel smoothing in space and time on the temporal and spatial correlation structure, we perform a Monte-Carlo experiment. We create a set of surrogate records by simulating a random annual time-series, following a power-law scaling with beta = 1 and block averaging the record to the sampling resolution of the true record. In analog to the observed records, this set of surrogate records is then smoothed in time and space using the Gaussian kernel and the (weighted) correlation to the model results is estimated. Repeating this 1000 times allows an empirical estimation of the 
+   <span class="italic">p</span>-value. R code is available in Supplementary Note 
+   <a rid="MOESM2" ref-type="media" href="#MOESM2">1</a>.
+  </p>
+ </sec>
+</sec>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">MATERIALS AND METHODS</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Glacier frontal positions data sources</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The baseline image on which our study is based is the Natural Resources Canada (NRCan) image mosaic of the CAA, compiled from Landsat 7 scenes between 1999 and 2002, and orthorectified using ground control and conjugate points (
+   <a rid="R40" ref-type="bibr" href="#R40">
+    <span class="italic">40</span>
+   </a>). The seamless mosaic is considered accurate to ~20 m, or less than one image pixel (30 m) (
+   <a rid="R40" ref-type="bibr" href="#R40">
+    <span class="italic">40</span>
+   </a>). We downloaded the image tiles for our region of interest from the Canadian Open Government portal (
+   <span ext-link-type="uri" xlink:href="https://open.canada.ca/data/en/dataset" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://open.canada.ca/data/en/dataset</span>). The glacier basin outlines were downloaded from the Global Land Ice Measurements from Space (GLIMS) database (
+   <a rid="R41" ref-type="bibr" href="#R41">
+    <span class="italic">41</span>
+   </a>), with manual checking and correction of gross errors (e.g., coregistration of the basin outlines to the NRCan Landsat 7 mosaic). The glacier frontal positions for the period 1999–2002 were digitized from the mosaic and joined to the glacier basin outlines to produce closed polygons, with relevant attributes (such as glacier length, type, and ID) from the GLIMS database. Marine-terminating glaciers were identified as those that terminated in the ocean at the time of the Landsat 7 mosaic (1999–2002). In many cases, it was not possible to identify from the images the extent to which the glacier descended below sea level, and so, we used the general term “marine-terminating” rather than “tidewater” glacier. In total, we mapped all 300 marine-terminating glaciers in the CAA with basin size greater than 2 km
+   <span class="sup">2</span> (in 1999–2002), excluding those on the northern coast of Ellesmere Island (
+   <a rid="F1" ref-type="fig" href="#F1">Fig. 1</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Glacier frontal positions were manually digitized, using Esri ArcGIS10.5 software from a range of sources (table S1). Aerial photographs, from survey missions between 1956 and 1961, were the first observations that covered the whole region. These were accessed from the NRCan National Air Photo Library. The glacier frontal positions were mapped from the aerial photographs by on-screen digitizing from scans of the photographs georeferenced to the Landsat 7 mosaic base image. Where original photographs were not available, the glacier fronts were digitized from scans of National Topographic System map sheets, which were compiled in the 1960s from the aerial photographs. An average of seven frontal positions, at approximately decadal intervals, were mapped per glacier. Post-1960, most glacier frontal positions were digitized from Landsat satellite images. These were accessed and downloaded using the U.S. Geological Survey Earth Explorer portal (
+   <span ext-link-type="uri" xlink:href="https://earthexplorer.usgs.gov" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://earthexplorer.usgs.gov</span>/). Image resolutions ranged from 5 m (aerial photographs) to 60 m (Landsat Multispectral Scanner), with all post-2000 images (Landsat Enhanced Thematic Mapper Plus and Landsat 8) at 15-m resolution. High relative positional accuracy was maintained by ensuring that the frontal positions were georegistered to the geospatially accurate Landsat 7 mosaic. The digitization methodology follows standard procedures when mapping glacier changes in previous work (
+   <a rid="R42" ref-type="bibr" href="#R42">
+    <span class="italic">42</span>
+   </a>). Uncertainties in the glacier change results stem from the reliability of the source material, measurement error, and methods used to calculate change, as documented in Cook 
+   <span class="italic">et al.</span> (
+   <a rid="R42" ref-type="bibr" href="#R42">
+    <span class="italic">42</span>
+   </a>). Similarly, in this study, it is estimated that the digitization uncertainties are less than the largest image pixel size (60 m). Uncertainty in the data analysis methods is described in the following section.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">All glacier frontal data were assigned the relevant source material attributes including date, year, and source ID. In total, 2039 frontal positions were digitized for 211 glaciers in the QEI and 89 in BBI (fig. S1).</p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Glacier frontal change analysis</div>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Change rate calculations</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">All frontal positions digitized for each basin were joined to the glacier basin outline, resulting in individual area polygons for each time period. Glacier area measurements take into account uneven changes along the ice front and offer a more precise assessment of change than can be obtained using along-flow sample lines that intersect the glacier fronts. Differencing of polygon areas from one epoch to another provides values of absolute area change. We used the established “box method” (
+    <a rid="R43" ref-type="bibr" href="#R43">
+     <span class="italic">43</span>
+    </a>), with some minor modifications. Using ArcMap, a box polygon was digitized for each glacier, intersecting the glacier front at its maximum width and extending upflow to an undefined distance, ensuring that all decadal positions were contained within the box (fig. S1). Each frontal position was then clipped to the box and projected into equal-area projection (WGS84 Lambert Azimuthal Equal Area). The area of each clipped polygon (in square kilometers) enabled area change calculations between time periods, and the mean changes in length were calculated by dividing the area changes by the width of the glacier box. The rates of change (in meters per year) were then calculated by dividing the changes in length by the number of years that elapsed between the frontal positions. The magnitude of absolute glacier retreat is related to glacier size (larger glaciers tend to change more in absolute terms), so to enable comparisons between basins, we normalized changes according to glacier length. The relative length changes (as percentage per year) were calculated relative to the glacier length in 1999–2002 (using the length attribute reported in GLIMS).
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Statistical analyses of regional and temporal glacier changes include mean absolute (meters per year) and relative (percentage per year) rates of frontal change for glaciers in the QEI and BBI over each time interval (
+    <a rid="F2" ref-type="fig" href="#F2">Fig. 2</a> and table S2) and relative rates of frontal changes over each time interval at 1° latitudes (fig. S2). For all statistical analyses, mean values are considered a suitable measure, with SE bars to show the uncertainty around the estimate of the mean, considered the most valuable measure based on the large sample size. The CAA were split into the two broad regions of QEI and BBI for the following reasons: (i) clarity in data analysis, (ii) the notably different glacier basin sizes and frontal widths between the two regions, and (iii) the differences in image availability, which results in differing start/end years for the time periods.
+   </p>
+  </sec>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Grounding line ice thickness</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Ice thickness at the grounding lines of tidewater glaciers in the QEI was calculated by Van Wychen 
+    <span class="italic">et al.</span> (
+    <a rid="R31" ref-type="bibr" href="#R31">
+     <span class="italic">31</span>
+    </a>) using data from a range of sources. Ice thickness values for the glaciers in the present study were obtained from Van Wychen 
+    <span class="italic">et al.</span> [Table S1 in (
+    <a rid="R31" ref-type="bibr" href="#R31">
+     <span class="italic">31</span>
+    </a>)].
+   </p>
+  </sec>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ocean temperature data and methods</div>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ocean temperature data</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">1) TOPAZ4 Arctic Ocean reanalysis data (
+    <span ext-link-type="uri" xlink:href="http://marine.copernicus.eu/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://marine.copernicus.eu/</span>). The TOPAZ4 Arctic Ocean Physics reanalysis data provide physical ocean variables for the time period 1991–2015. These data are available from the CMEMS (product identifier: ARCTIC_REANALYSIS_PHYS_002_003). The TOPAZ reanalysis system assimilates all available satellite and in situ temperature-salinity profile observations, resulting in modeled data as a 12.5-km resolution grid (
+    <a rid="R25" ref-type="bibr" href="#R25">
+     <span class="italic">25</span>
+    </a>). We downloaded the mean monthly temperature and salinity NetCDF files at the subsurface standard depths available: 50, 100, 200, 400, and 700 m. Mean annual temperatures were calculated from the grid values at each depth. The quality information document (
+    <span ext-link-type="uri" xlink:href="http://cmems-resources.cls.fr/documents/QUID/CMEMS-ARC-QUID-002-001a.pdf" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://cmems-resources.cls.fr/documents/QUID/CMEMS-ARC-QUID-002-001a.pdf</span>) gives the estimated accuracy for modeled temperatures as statistical values for bias and root mean square (RMS) differences. The forecast biases are −0.35°C at 5- to 100-m depth, −0.2°C at 100- to 300-m depth, and 0.5°C at 300- to 800-m depth. Forecast RMS differences are 0.6°C at 5- to 100-m depth, 0.8°C at 100- to 300-m depth, and 1.0°C at 300- to 800-m depth. These accuracy estimates are for the full domain, but there is variability in the system accuracy, e.g., in some regions with few temperature profile data, the reanalysis Root Mean Square error (RMSE) can be up to 1.0°C. Our statistical analysis does not include TOPAZ4 reanalysis data, and therefore, these errors do not affect our results. Rather, the data are used to illustrate the regional overview of mean annual ocean temperature at each depth (
+    <a rid="F3" ref-type="fig" href="#F3">Fig. 3</a>).
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">2) World Ocean Database in situ measurements (
+    <span ext-link-type="uri" xlink:href="https://www.nodc.noaa.gov/OC5/WOD13" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.nodc.noaa.gov/OC5/WOD13</span>). The World Ocean Database (WOD13) (
+    <a rid="R28" ref-type="bibr" href="#R28">
+     <span class="italic">28</span>
+    </a>) is a comprehensive set of historical ocean profile data collected between 1972 and 2015. Data are provided by the NOAA National Centers for Environmental Information. We selected in situ data from CTD profiles for the region surrounding the CAA. We downloaded temperatures at the following standard depths available: 50, 100, 150, 200, 300, 400, and 500 m. WOD13 water properties at standard depths were measured and reported either directly or by interpolation, as set out by commonly used criteria (
+    <a rid="R28" ref-type="bibr" href="#R28">
+     <span class="italic">28</span>
+    </a>). The data variables include the measurement station ID, latitude/longitude, date, and year, in addition to temperature and salinity values. To download the data for our region of interest, we used the Ocean Data View software provided by NOAA. Error estimates described in the WOD13 report (
+    <a rid="R28" ref-type="bibr" href="#R28">
+     <span class="italic">28</span>
+    </a>) state that the accuracy of CTD measurements varies with instrument design, typically from 0.005° to 0.001°C for temperature. The overall quality of CTD measurements are also affected by calibration drift (i.e., prolonged use of the CTD instrument in the sea), data streaming problems, varying speeds of the CTD, and rapid changes in the ocean environment. The measurements are assigned a flag in quality control checks and measurements that are considered to fail quality control are excluded from WOD13. Other flags range from good quality (1), to potentially bad quality but based on visual inspection found no reason not to be used in scientific research (4) (
+    <a rid="R28" ref-type="bibr" href="#R28">
+     <span class="italic">28</span>
+    </a>). For our study, we included all measurements available in WOD13, and our representation of error in the statistical analysis methods is SE, considered the most valuable owing to the large sample size.
+   </p>
+  </sec>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bathymetric data (
+    <span ext-link-type="uri" xlink:href="https://www.ngdc.noaa.gov/mgg/bathymetry/arctic/arctic.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ngdc.noaa.gov/mgg/bathymetry/arctic/arctic.html</span>)
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The standard depths at which the ocean temperature measurements were chosen were based on the range of depths close to the glacier fronts. These were established from the NOAA International Bathymetric Chart of the Arctic Ocean v3, 500-m grid (fig. S3). The grid is compiled from all available multibeam, dense single beam, and land data and built using a gridding algorithm at 500-m resolution (
+    <a rid="R44" ref-type="bibr" href="#R44">
+     <span class="italic">44</span>
+    </a>). It is currently recognized as the best Arctic Ocean Digital Bathymetric Model available. We downloaded and clipped the dataset to our region of interest and removed land data before undertaking statistical analysis of depths close to glacier fronts.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Buffers extending from the marine-terminating glacier fronts (at their positions ca. 2000) were created at 5- and 20-km radii (fig. S3). The mean bathymetry within the 20-km buffer for all 300 glaciers is 166 m of which 40 glaciers have mean bathymetry deeper than 400 m. Within 5 km of all glacier fronts, the mean bathymetry is 90 m, and 11 glaciers have a mean bathymetry deeper than 400 m within 5 km of their fronts. Of the 117 glaciers with ≥10 ocean temperature measurements within 20 km, 36 have a mean depth deeper than 400 m (mean, 477 m). When all glaciers are separated by 1° latitudes, the mean depths within 20 km are shallower than 400 m in all latitudinal degree bands, and within 5 km, mean depths are shallower than 200 m.</p>
+  </sec>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ocean temperature statistics</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Regional modeled mean ocean temperatures were mapped in ArcMap using TOPAZ4 gridded data for the region surrounding the CAA and west Greenland (
+    <a rid="F3" ref-type="fig" href="#F3">Fig 3</a>). Ocean temperature analysis close to glacier fronts was carried out using in situ data from the WOD13 within the buffers at 20- and 5-km radii from each glacier front (fig. S3). In total, 117 glaciers have ≥10 CTD measurements within 20 km of their fronts, and 19 glaciers have ≥5 CTD measurements within 5 km of their fronts. Measurements within both radii have similar mean temperatures at each depth (fig. S4). Glaciers with ocean measurements within 20 km provided a wide-ranging sample for statistical analysis. Our investigations of glacier front change and ocean temperature correlations include glacier relative change value bins and mean ocean temperatures at each depth (glacier counts are shown in table S3). Spatiotemporal trends are based on WOD13 ocean temperature data within the 100-km buffer zone (
+    <a rid="F5" ref-type="fig" href="#F5">Fig. 5</a>). The region size was broken down by 1° latitudinal bands for regional mean ocean temperature analysis (fig. S3).
+   </p>
+  </sec>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Atmospheric temperature data and methods</div>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">RACMO2.3 downscaled to 1-km data source</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">A detailed reconstruction of SMB between 1958 and 2015 is available from the RACMO2.3 statistically downscaled to 1 km. The model is a downscaled version of the 11-km RACMO2.3, corrected for biases in elevation and bare ice albedo, and provides regional SMB data at a scale suitable for measuring mean values within individual glacier basins in the CAA. The SMB output is in millimeter w.e. year
+    <span class="sup">−1</span>.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The methods used in producing the model, along with accuracy assessments based on in situ mass balance measurements, are reported in Noël 
+    <span class="italic">et al.</span> (
+    <a rid="R5" ref-type="bibr" href="#R5">
+     <span class="italic">5</span>
+    </a>). These are summarized as follows. The SMB values from both the 11- and 1-km versions of RACMO2.3 were assessed against 4356 stake measurements within the CAA. Correcting for elevation and bare ice albedo bias during the downscaling process significantly improved the accuracy. Assessment with observational data showed that, relative to the 11-km model, the 1-km downscaled version of RACMO2.3 has a much improved mean SMB bias (40 mm w.e.), RMSE (380 mm w.e.), and 
+    <span class="italic">R</span>
+    <span class="sup">2</span> (0.74). The product uncertainty for SMB was estimated at 11.0 and 4.5 Gt year
+    <span class="sup">−1</span> for Northern CAA (NCAA = QEI) and Southern CAA (SCAA = BBI), respectively. To obtain these estimates, the 4356 in situ SMB measurements from 1961 to 2016, e.g., from Sverdrup Glacier on Devon Island (yellow dots in fig. S5), were binned in 250 mm w.e. intervals for which the mean bias was estimated (i.e., modeled minus measured SMB), which was then applied to total ablation and accumulation areas across the region (
+    <a rid="R5" ref-type="bibr" href="#R5">
+     <span class="italic">5</span>
+    </a>). The RACMO2.3 product was further evaluated using independently derived mass changes from ICESat and CryoSat-2 altimetry measurements. The downscaled dataset shows good agreement with the altimetry records, and both winter accumulation and summer ablation are accurately resolved. In addition, the SMB product falls well within ICESat/CryoSat-2 measurement uncertainty. Ice mass loss estimates from the downscaled SMB product are similar to estimates from other mass loss studies (
+    <a rid="R3" ref-type="bibr" href="#R3">
+     <span class="italic">3</span>
+    </a>, 
+    <a rid="R6" ref-type="bibr" href="#R6">
+     <span class="italic">6</span>
+    </a>, 
+    <a rid="R32" ref-type="bibr" href="#R32">
+     <span class="italic">32</span>
+    </a>). Mass loss in 2004–2009 was estimated at 33.8 ± 11.5 Gt year
+    <span class="sup">−1</span> for the NCAA and 24 ± 4.5 Gt year
+    <span class="sup">−1</span> for the SCAA (
+    <a rid="R5" ref-type="bibr" href="#R5">
+     <span class="italic">5</span>
+    </a>). For comparison, a study by Gardner 
+    <span class="italic">et al.</span> (
+    <a rid="R3" ref-type="bibr" href="#R3">
+     <span class="italic">3</span>
+    </a>) estimated mass loss from GRACE (Gravity Recovery and Climate Experiment) to be 39 ± 9 and 24 ± 7 Gt year
+    <span class="sup">−1</span> for NCAA and SCAA, respectively.
+   </p>
+  </sec>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">SMB calculations per glacier basin</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">For our study, the SMB calculations per glacier basin were made from the downscaled RACMO2.3 by converting the gridded values to points for analysis in ArcGIS. The 1-km resolution data enabled statistical analysis of ablation components within each glacier basin (fig. S5).</p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The mean ablation rates per glacier basin were calculated from negative (i.e., &lt;0) SMB values, in mm w.e. year
+    <span class="sup">−1</span>. Net ablation occurs in the region of the glacier basin where ice loss through surface melt, sublimation, and runoff is greater than ice gain through precipitation and riming. The ablation area ratio (in percentage) was therefore calculated as the area where SMB &lt; 0 mm w.e. year
+    <span class="sup">−1</span>, divided by the glacier basin area. This is calculated from the gridded data, i.e., the number of negative SMB points divided by the total number of grid points that constitute each glacier basin. The ablation area ratio enables analysis of patterns of change across all glaciers by normalization of basin areas. Mean annual runoff (in mm w.e. year
+    <span class="sup">−1</span>) represents basin-wide nonrefrozen rain and meltwater induced by the surface energy balance, and we calculated this from the sum of the runoff component values divided by the number of grid points per basin. It should be noted that summer runoff consist partly of rainfall, which does not contribute to mass loss, but the flux is small [Figure 8 in (
+    <a rid="R5" ref-type="bibr" href="#R5">
+     <span class="italic">5</span>
+    </a>)].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">We calculated mean values of these components across the whole study period (1958–2015) and, for each time period, used in the glacier front change study. Mean runoff patterns show similar temporal trends for marine-terminating glaciers at all degrees latitude, with a statistically significant increase in recent time periods (fig. S6). This is reflected in the spatiotemporal patterns of runoff from ice masses throughout the CAA (fig. S7).</p>
+  </sec>
+  <sec disp-level="3" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Automatic weather station data</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Near-surface (2 m) air temperature data are available from weather stations operated by Environment Canada from 1948 to the present (
+    <span ext-link-type="uri" xlink:href="http://climate.weather.gc.ca" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://climate.weather.gc.ca</span>/). There are six weather stations located throughout the CAA (locations shown in 
+    <a rid="F1" ref-type="fig" href="#F1">Fig. 1</a>), and although some are situated at a considerable distance from the marine-terminating glaciers in this study, the records provide a useful indication of long-term temperature trends in the wider region. Temperature measurements are available at the following weather stations in the QEI: Eureka (1947–2014), Resolute (1947–2014), and Grise Fiord (1984–2007); and in BBI: Pond Inlet (1975–2007), Cape Hooper (1957–2007), and Cape Dyer (1959–1993). Mean summer air temperatures, for the months of June to August (JJA), were calculated from monthly mean temperatures derived from daily averages. Annual anomalies in mean summer temperatures were calculated relative to the mean temperature across the complete time period available for each weather station (fig. S8).
+   </p>
+  </sec>
+ </sec>
+</sec>

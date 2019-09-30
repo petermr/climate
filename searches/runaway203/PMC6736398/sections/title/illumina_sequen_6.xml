@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec2-4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Illumina sequencing and data processing</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Raw amplicon sequences were demultiplexed with the associated barcodes. Cutadapt (Martin 
+  <a rid="bib41" ref-type="bibr" href="#bib41">2011</a>) was used for adaptor and primer clipping. Forward and reverse reads longer than 240 bp were merged (98% ± 0.8%/sample) using FLASH (fast length adjustment of short reads) (Magoč and Salzberg 
+  <a rid="bib38" ref-type="bibr" href="#bib38">2011</a>) for a total of 20 million reads (∼50 000 ± 30 000 reads/sample) initially. Vsearch (Rognes 
+  <span class="italic">et al</span>. 
+  <a rid="bib52" ref-type="bibr" href="#bib52">2016</a>) was used for downstream analyses. Quality filtering was carried out with an expected error &lt;1.5. Dereplication was performed to identify unique sequences. A two-step chimera detection method was used, first by aligning against ChimeraSlayer Gold database provided with SILVA (Pruesse 
+  <span class="italic">et al</span>. 
+  <a rid="bib51" ref-type="bibr" href="#bib51">2007</a>), second by using the 
+  <span class="italic">de novo</span> detection module in vsearch. 
+  <span class="italic">De novo</span> operational taxonomic unit (OTU) calling was performed on high-quality trimmed sequences at 97% similarity level using the USEARCH (Edgar 
+  <a rid="bib18" ref-type="bibr" href="#bib18">2010</a>) algorithm for clustering implemented in vsearch to generate OTUs. Unique chimera filtered sequences were aligned using the Python Nearest Alignment Space Termination (PyNAST) (Caporaso 
+  <span class="italic">et al</span>. 
+  <a rid="bib7" ref-type="bibr" href="#bib7">2009</a>) tool with a relaxed neighbor-joining tree built using FastTree (Price, Dehal and Arkin 
+  <a rid="bib50" ref-type="bibr" href="#bib50">2010</a>). The taxonomy was determined using the Classification Resources for Environmental Sequence Tags (CREST) (Lanzén 
+  <span class="italic">et al</span>. 
+  <a rid="bib33" ref-type="bibr" href="#bib33">2012</a>) classifier with a confidence threshold of 0.80 against SILVA release 128 as a reference database.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Samples less than at least 2000 reads/sample were filtered from the OTU table in order to have sufficient reads as described in Caporaso 
+  <span class="italic">et al</span>. (
+  <a rid="bib8" ref-type="bibr" href="#bib8">2011</a>). After filtering, 386 samples were used for the statistical analyses, corresponding to 386 DNA extracts from 200 independent samples and ∼19.5 million reads (50 609 ± 26 700 reads/sample) assigned against 48 147 OTUs.
+ </p>
+</sec>

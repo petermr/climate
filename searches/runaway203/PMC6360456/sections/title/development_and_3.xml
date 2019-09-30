@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="jame20790-sec-0002" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Development and Traceability</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The development of HadGEM3 GC3.1 N96ORCA1 started by changing the ocean resolution of the N96ORCA025 configuration as maintained by the Met Office Hadley Centre. The NEMO ocean model (Madec and the NEMO Team, 
+  <a rid="jame20790-bib-0047" ref-type="ref" href="#jame20790-bib-0047">2016</a>) has a shared configuration at 1° resolution dubbed 
+  <span class="italic">shaconemo</span> (available from 
+  <span ext-link-type="uri" xlink:href="http://forge.ipsl.jussieu.fr/shaconemo" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://forge.ipsl.jussieu.fr/shaconemo</span>). This configuration, with minor variations, is employed by four other ESMs across Europe. In order to maintain comparability with these ESMs, we employed the grid size‐dependent settings of this ORCA1 configuration, as detailed in Table 
+  <a rid="jame20790-tbl-0001" ref-type="table" href="#jame20790-tbl-0001">1</a>, while fully making use of new and improved parameterizations (generally not grid size dependent) of the UK GO6 configuration of NEMO (Storkey et al., 
+  <a rid="jame20790-bib-0067" ref-type="ref" href="#jame20790-bib-0067">2018</a>). These include a prescribed field of turbulent kinetic energy (TKE) at the ocean bottom at a few choke points (e.g., the Indonesian throughflow) and an asymmetrical latitudinal profile for the ad hoc parameterization of the penetration of TKE below the mixed layer (based on Gaspar et al., 
+  <a rid="jame20790-bib-0023" ref-type="ref" href="#jame20790-bib-0023">1990</a>). We use climatological meltwater input from ice shelves throughout their depth and iceberg calving flux as described in Williams et al. (
+  <a rid="jame20790-bib-0075" ref-type="ref" href="#jame20790-bib-0075">2017</a>).
+ </p>
+ <div id="jame20790-tbl-0001" xml:lang="en" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="label">Table 1</span>
+  <div class="caption">
+   <p>Traceability Between the N96ORCA1 and N216ORCA025 Configurations of HadGEM3 GC3.1</p>
+  </div>
+  <table frame="hsides" rules="groups">
+   <col align="left" span="1"/>
+   <col align="center" span="1"/>
+   <col align="center" span="1"/>
+   <col align="left" span="1"/>
+   <thead valign="bottom">
+    <tr style="border-bottom:solid 1px #000000">
+     <th align="left" valign="bottom" rowspan="1" colspan="1">Model component: setting</th>
+     <th align="center" valign="bottom" rowspan="1" colspan="1">Value in N96ORCA1</th>
+     <th align="center" valign="bottom" rowspan="1" colspan="1">Value in N216ORCA025</th>
+     <th align="center" valign="bottom" rowspan="1" colspan="1">Comment</th>
+    </tr>
+   </thead>
+   <tbody valign="middle">
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">OASIS: coupling frequency</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">3 hr</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">1 hr</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1"/>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">NEMO: horizontal viscosity</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">Laplacian, 20,000 m
+      <span class="sup">2</span>/s
+     </td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">Bi‐Laplacian, −1.5 × 10
+      <span class="sup">−11</span> m
+      <span class="sup">4</span>/s
+     </td>
+     <td align="left" valign="middle" rowspan="1" colspan="1">Nominal value</td>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">NEMO: coefficient for horizontal viscosity</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">3‐D field</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">2‐D field</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1">3‐D field in ORCA1 to help resolving equatorial undercurrents</td>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">NEMO: parameterization of mesoscale eddies</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">Used (Held &amp; Larichev, 
+      <a rid="jame20790-bib-0029" ref-type="ref" href="#jame20790-bib-0029">1996</a>)
+     </td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">Not used</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1"/>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">NEMO: isopycnal diffusion coefficient</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">1,000 m
+      <span class="sup">2</span>/s
+     </td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">150 m
+      <span class="sup">2</span>/s
+     </td>
+     <td align="left" valign="middle" rowspan="1" colspan="1"/>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">NEMO: geothermal heat flux climatology</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">Goutorbe et al. (
+      <a rid="jame20790-bib-0027" ref-type="ref" href="#jame20790-bib-0027">2011</a>)
+     </td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">Stein and Stein (
+      <a rid="jame20790-bib-0063" ref-type="ref" href="#jame20790-bib-0063">1992</a>)
+     </td>
+     <td align="left" valign="middle" rowspan="1" colspan="1">Impact is discernible but small</td>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">NEMO grid: type of north fold</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">
+      <span class="italic">F</span> point (vorticity)
+     </td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">
+      <span class="italic">T</span> point (tracer)
+     </td>
+     <td align="left" valign="middle" rowspan="1" colspan="1"/>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">NEMO: time step</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">45 min</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">20 min</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1"/>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">CICE: albedo for snow on sea ice</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">albsnowv_cice = 0.96albsnowi_cice = 0.68</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">albsnowv_cice = 0.98albsnowi_cice = 0.70</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1">Compensation for deficient transport of warm Atlantic water into the Arctic in ORCA1.</td>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">UM: time step</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">20 min</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">15 min</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1"/>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">UM: us_am</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">1.45</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">1.4</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1">Multiplicative 
+      <span class="italic">u</span>* correction for dust aerosols affects the relationship between the amount of dust lifted from the land surface and the wind speed.
+     </td>
+    </tr>
+    <tr>
+     <td colspan="4" align="center" valign="middle" rowspan="1"/>
+    </tr>
+    <tr>
+     <td align="left" valign="middle" rowspan="1" colspan="1">UM: ussp_launch_factor</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">1.3</td>
+     <td align="center" valign="middle" rowspan="1" colspan="1">1.2</td>
+     <td align="left" valign="middle" rowspan="1" colspan="1">Gravity wave drag: factor enhancement for wave launch amplitude</td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="table-wrap-foot">
+   <fn id="jame20790-note-0001" class="fn" xmlns="">
+    <p xmlns="http://www.w3.org/1999/xhtml">
+     <span class="italic">Note</span>. NEMO = Nucleus for European Modeling of the Ocean; UM = Unified Model.
+    </p>
+   </fn>
+  </div>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">An overview of the differences between N96ORCA1 and N216ORCA025 is given in Table 
+  <a rid="jame20790-tbl-0001" ref-type="table" href="#jame20790-tbl-0001">1</a>. The bulk of the differences are considered best practice when changing the horizontal resolution in a coupled general circulation model (GCM). With the coarser resolution, a longer time step can be employed in both ocean and atmosphere. Concomitantly, the coupling frequency is reduced while still resolving the diurnal cycle. ORCA1's resolution is not eddy permitting. Hence, a parameterization for transport by mesoscale eddies is necessary (based on Gent et al., 
+  <a rid="jame20790-bib-0024" ref-type="ref" href="#jame20790-bib-0024">1995</a>, with a spatially varying coefficient following Held and Larichev, 
+  <a rid="jame20790-bib-0029" ref-type="ref" href="#jame20790-bib-0029">1996</a>), and the parameterization for isopycnal mixing (Redi, 
+  <a rid="jame20790-bib-0057" ref-type="ref" href="#jame20790-bib-0057">1982</a>) needs to use a larger coefficient than ORCA025. In addition, bi‐Laplacian viscosity to suppress small‐scale patterns is not needed, and Laplacian viscosity is used instead. The vertical resolution is the same for the two configurations, with 75 levels whose thickness increases with depth, from 1 m at the surface to about 200 m at the bottom.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The tripolar ORCA1 grid has its north fold (the line that connects the two grid poles in the Northern Hemisphere [NH]) on vorticity points, in contrast to ORCA025 where it is along tracer points. The ORCA025 configuration as part of GO6 uses an older climatology for the geothermal heat fluxes (Stein &amp; Stein, 
+  <a rid="jame20790-bib-0063" ref-type="ref" href="#jame20790-bib-0063">1992</a>) with values about twice as large as in the more recent one from 
+  <span class="italic">shaconemo</span> (Goutorbe et al., 
+  <a rid="jame20790-bib-0027" ref-type="ref" href="#jame20790-bib-0027">2011</a>). The only impact of note is a 5% decrease in the rate of globally volume‐averaged warming (not shown) in a PD control simulation when using the Goutorbe et al. (
+  <a rid="jame20790-bib-0027" ref-type="ref" href="#jame20790-bib-0027">2011</a>) climatology instead of the older one.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In the GO6 configurations it was found that in small inlets at the coast of Antarctica that have a size of only one grid point excessive sea ice can build up over time. This is a combined effect of meltwater input and lack of advection in single‐grid point areas, specifically on the grid employed by CICE (a different type of grid than NEMO). While the stability of the model is unaffected by this, we decided to smooth the coastline of Antarctica, closing these inlets, to avoid this effect altogether.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The only intentional change made to the physical setup of ORCA1, relative to ORCA025, is the use of a slightly lower albedo for snow on sea ice. As explained in detail in section 
+  <a rid="jame20790-sec-0008" ref-type="sec" href="#jame20790-sec-0008">3.3</a>, we introduced this change to compensate for too weak sea ice bottom melt in the Arctic, itself arising from deficient advection of warm Atlantic water through Fram Strait. In the development process we varied a number of NEMO parameters with the aim to decrease the sea surface temperature (SST) cold bias in the northwest Atlantic discussed below. These tests had little impact on the cold SST bias; a brief overview of them and their outcome is given in Appendix A.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Coming back to Table 
+  <a rid="jame20790-tbl-0001" ref-type="table" href="#jame20790-tbl-0001">1</a>, there are a small number of resolution‐dependent changes in the UM between the higher‐resolution N216 and the N96 used here. Apart from the longer time step mentioned above, the lower maximum wind speed in N96 means that the parameter that affects how much dust is picked up by the wind is increased slightly in N96 to compensate. In a similar vein, since at N96 fewer gravity waves are resolved, the parameter affecting the wave launch amplitude is increased slightly in N96 too.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In terms of computational performance, N96ORCA1 currently produces an output of about 2.3 model years per wall clock day (ypd) on the Met Office Cray using 13 nodes, or 6.5 ypd using 75 nodes (1 node has 36 cores). The UM alone requires about 85% of the nodes. Efforts to increase this performance are under way.</p>
+</sec>

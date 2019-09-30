@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data and Method</div>
+ <sec id="Sec3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Models</div>
+  <p id="Par7" xmlns="http://www.w3.org/1999/xhtml">CLSM, which was developed at NASA Goddard Space Flight Center, simulates water storage changes in the surface layer (0 to 2 cm below the surface), the root zone (0 to 100 cm), and the full soil profile, and in three snow layers
+   <span class="sup">
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+   </span>. Water transfers among these stores are governed by empirical parameters derived based on topography, soil properties and average moisture transfer rates within different profiles. Profile depths are determined by CLSM parameter, bedrock depth, which varies spatially from 3 to 6 m and has direct impacts on the dynamics of simulated TWS and groundwater storage, with deeper bedrock generally producing slower groundwater responses to atmospheric drivers (precipitation and ET)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+   </span>. The bedrock depth was increased worldwide by 2 m in this study to better simulate the full dynamic range of terrestrial water storage, particularly during severe drought, following previous studies
+   <span class="sup">
+    <a ref-type="bibr" rid="CR28" href="#CR28">28</a>–
+    <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+   </span>. No other parameters were adjusted or calibrated for this study. CLSM does not explicitly model water table variations but groundwater storage can be computed by subtracting root zone water storage from total soil profile storage.
+  </p>
+  <p id="Par8" xmlns="http://www.w3.org/1999/xhtml">CLSM accounts for sub-grid scale heterogeneity in soil wetness, including the fractions of the land surface where the soil is at or below the wilting point and transpiration has ceased, where the soil is unsaturated and above the wilting point and where it is saturated, to better simulate ET and runoff. Modeled state and flux updates occur at a 20 min time step to accommodate their highly non-linear relationships. CLSM simulated ET has been shown comparable with other land surface models in terms of capturing mean annual ET and its spatial patterns
+   <span class="sup">
+    <a ref-type="bibr" rid="CR31" href="#CR31">31</a>,
+    <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+   </span>. CLSM was run at 0.25° spatial resolution for this study.
+  </p>
+  <p id="Par9" xmlns="http://www.w3.org/1999/xhtml">The WaterGAP model (version 2), which was developed at the Centre for Environmental Systems Research of the University of Kassel, Germany, simulates water storage changes in the soil (with a single layer representing effective root depths depending on landcover type), groundwater, snow and surface water
+   <span class="sup">
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+   </span>. Water exchanges among these states and with the atmosphere are represented by simple empirical relations that facilitate model calibration and tuning. This version of WaterGAP was calibrated using mean annual streamflow data from more than 1,300 river basins covering more than 50% of the global land area. Outside of these basins, model parameters were estimated through regionalization. Benefiting from the simple (more linearized) model physics, the model was run on larger time steps (daily, compared to 20 min of CLSM) and coarser spatial resolution, 0.5°.
+  </p>
+  <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">WaterGAP includes options to simulate anthropogenic effects such as reservoir operation and withdrawals from surface waters and groundwater. Water demands from all sectors (irrigation, livestock, industry and households) and net withdrawals are calculated based on the water use efficiency of each country or county, population development, and industrial and energy output. These are then input to the underlying hydrological model, along with atmospheric forcing data (precipitation, temperature and potential ET). Return flows are calculated as the difference between water inputs and net withdrawals. Anthropogenic groundwater storage estimates used in this study are based on an assumption of 70% irrigation efficiency, which is the ratio of consumptive water use to abstractions
+   <span class="sup">
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+   </span>.
+  </p>
+  <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">PCR-GLOBWB has a model structure similar to that of WaterGAP. It also employs relatively simple empirical relationships to partition precipitation into surface runoff and infiltration and to simulate water transfers among different water stores, including surface water
+   <span class="sup">
+    <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+   </span>. The model was not calibrated but its parameterizations were evaluated using GRDC runoff data. Sub-grid heterogeneity on land cover is also considered for calculating fluxes. PCR-GLOBWB can simulate anthropogenic effects but takes a different approach to estimating consumptive irrigation water use. Irrigation water demand is simulated by wetting soils to their field capacity in irrigated cells (or fractions of cells) during growing seasons. The estimated water demand is then subtracted from surface waters or groundwater. As a result, its simulated irrigation water demands depend heavily on model physics such as those for ET. Similar to WaterGAP, groundwater recharge in PCR-GLOBWB can come from the upper soil (either natural recharge or irrigation return flow), or from river-beds. Output used in this study is based on model simulation at 5 arc minute spatial resolution and a daily time step.
+  </p>
+ </sec>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Meteorological forcing data</div>
+  <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">The CLSM simulation was driven by the Princeton forcing dataset which comprises time series of precipitation, short and long wave radiation, air temperature, relative humidity, surface pressure and wind speed. The dataset, which spans 1948 to 2014, was constructed by bias correcting the precipitation, solar radiation, and air temperature fields from the National Center for Environmental Prediction (NCEP)/National Center for Atmospheric Research (NCAR) re-analysis using 
+   <span class="italic">in situ</span> and satellite observations
+   <span class="sup">
+    <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+   </span>. The data are provided on a 1° global grid (excluding the Antarctica) with a 3-hourly timestep. The Princeton dataset has been used for a wide variety of applications including examining long-term trends of drought
+   <span class="sup">
+    <a ref-type="bibr" rid="CR34" href="#CR34">34</a>
+   </span>, runoff
+   <span class="sup">
+    <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+   </span>, and changes in the water cycle
+   <span class="sup">
+    <a ref-type="bibr" rid="CR36" href="#CR36">36</a>
+   </span>. CLSM was first spun up from uniform initial conditions over the period, 1948 to 2014. The first 10 years of that simulation were discarded and the temporal (1959–2014) mean of each variable at each grid pixel on December 31 was used to initialize the experimental simulation on January 1, 1948. Use of multi-year average initial conditions is optimal for reducing the impacts of climatological anomalies on an experimental model simulation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR37" href="#CR37">37</a>
+   </span>.
+  </p>
+  <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">WaterGAP simulations from 1960 to 2009 were driven by gridded time series of monthly precipitation and potential ET. Monthly precipitation obtained from Global Precipitation Climate Center
+   <span class="sup">
+    <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+   </span> (GPCC), Version 6, were downscaled by evenly distributing the monthly values to wet days of the month determined from Climate Research Unit (CRU) data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+   </span>, version TS 3.10. CRU temperature and cloud cover data were used to derive monthly potential ET based on the Priestley and Taylor equation
+   <span class="sup">
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>,
+    <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+   </span> which requires fewer atmospheric variable inputs than the Penman-Monteith method used by most land surface models including CLSM. Monthly time series of potential ET were further downscaled to daily values prior to model simulation.
+  </p>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">The forcing data used for PCR-GLOBWB simulations during 1958–2015 were based on monthly CRU (TS 3.21.2 for 1958–2010 and TS.3.24 for 2011–2015) precipitation, temperature and potential ET, which were spatially and temporally downscaled using ERA40 and ERA-Interim data
+   <span class="sup">
+    <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+   </span>. CRU data are provided at 5 arc minute resolution but the temperature data were further downscaled for better simulation of snow dynamics. Monthly CRU precipitation was proportionally distributed to ERA rainy days for a given threshold (0.1 mm day
+   <span class="sup">−1</span>) with daily values re-scaled to match monthly CRU precipitation. In areas with too few CRU stations, CRU precipitation was replaced by ERA precipitation, thus this precipitation dataset is referred to as CRU-ERA in this study. Monthly reference ET was estimated outside of the model simulation using CRU meteorological data and the Penman-Monteith method and was downscaled to daily values using a daily temperature-based ET product. PCR-GLOBWB was first repeatedly executed for 150 years using the mean atmospheric forcing conditions under the non-anthropogenic scenario from 1968–2000 to allow simulated groundwater to reach a steady state. The resulting conditions were then used to initialize the model under non-anthropogenic and anthropogenic simulation scenarios.
+  </p>
+ </sec>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="italic">In situ</span> and GRACE satellite data
+  </div>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="italic">In situ</span> groundwater observations were obtained for the four Mississippi sub-basins and four northeastern U.S. regions (see Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>) from the USGS web site. These 181 wells were selected because they are located in unconfined or semi-confined aquifers, are not directly affected by groundwater withdrawals or injections and have been continuously monitored for 10–30 years. These data have been used in previous studies for validating GRACE TWS
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>,
+    <a ref-type="bibr" rid="CR42" href="#CR42">42</a>–
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span> and investigating scale-dependency of groundwater storage
+   <span class="sup">
+    <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+   </span>. Depth-to-water measurements were converted to groundwater storage anomalies using individual estimates of specific yield for each well following published procedures
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>,
+    <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+   </span>.
+  </p>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">The GRACE satellites mapped Earth’s gravity field on a monthly basis from 2002 to 2017. The resulting time variable gravity observations were used to derive TWS anomalies which reflect changes in soil moisture, groundwater, snowpack, and surface water storage (lakes and rivers). GRACE also detected water storage changes associated with anthropogenic effects such as groundwater abstractions which, along with surface water, are not simulated by CLSM. The GRACE data used in this study were provided approximately monthly during the mission period on a 0.5° global grid. They were developed using a regularization method that eliminates the need for post-processing and thus better preserves TWS amplitudes and trends
+   <span class="sup">
+    <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+   </span>. Despite the grid resolution, the effective resolution of this GRACE product is still around 150,000 km
+   <span class="sup">2</span> due to the limitations of the method used
+   <span class="sup">
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>.
+  </p>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">For comparison with 
+   <span class="italic">in situ</span> data, modeled groundwater storage at the grid cell nearest each well was selected. Because this study focuses on large-scale interannual variability, monthly precipitation, ET, groundwater storage and TWS were averaged to 1° spatial resolution and monthly anomalies were calculated by removing the long-term mean of each calendar month. Anomalies were further standardized (thus unitless) so that they had zero mean and standard deviation of one. Annual anomalies are averages of the standardized monthly anomalies in each year. Unless otherwise noted, anomalies discussed in following sections refer to standardized anomalies.
+  </p>
+ </sec>
+ <sec id="Sec6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Regular Empirical Orthogonal Function (EOF) analysis
+   <span class="sup">
+    <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+   </span> was applied to annual anomalies (weighted by area) of Princeton forcing data, CLSM ET estimates, GPCC and CRU-ERA precipitation, and simulated groundwater storage to identify patterns of variability and their relationship with large-scale climate signals. The non-parametric Mann-Kendall method
+   <span class="sup">
+    <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+   </span> was used to calculate linear trend and quantify changes over the simulation periods.
+  </p>
+ </sec>
+</sec>

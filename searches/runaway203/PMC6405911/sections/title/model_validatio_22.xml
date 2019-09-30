@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec23" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model validation and selection</div>
+ <p id="Par39" xmlns="http://www.w3.org/1999/xhtml">Repeats were assessed according to the model’s ability to correctly reproduce the peaks found in the known historical deposition dataset (ANN1 training target). ANN1 training target is characterised by a continuous curve with peaks of varying magnitude, but the nature of the response is binary (i.e. sediment moves, or it does not). The size and magnitude of the model-derived peaks are therefore not significant, with the location of the peaks relative to the known dataset (Fig. 
+  <a rid="Fig9" ref-type="fig" href="#Fig9">9</a>) a good indication of overall model performance and ‘fit’. Given this, the mean squared error (MSE) of the model is not an appropriate method for determining overall model performance. In this study, we assessed the performance of the model based on the variation in location between the known and modelled peaks, with the best model identified as having the closest alignment of peaks across the six study sites. To identify the optimum models, we sum the differences between training and predicted peak positions for each model repeat across the six sites and select the models of best fit. The model identified a predicted peak which fell within a defined time window of the target peak and calculated the difference in location between the two peaks. If a target peak was not reproduced in the predicted dataset (i.e. a predicted peak does not occur within the peak window), a model penalty value (e.g. 1e6 used in this study) was assigned. Total peak location differences and penalties were summed across the identified peaks in each site, and across the six sites for each neural network repeat run. A moderate number of iterations (300) per repeat was used to prevent the model from attempting to improve the network to the optimum MSE, which is not necessarily the best peak-location-performing model. Maximum peak window size was defined as half the distance between the two closest known peaks in the target dataset (i.e. 13 in this study).
+  <div id="Fig9" class="fig">
+   <span class="label">Figure 9</span>
+   <div class="caption">
+    <p>Schematic diagram demonstrating that MSE caused by variation in magnitude of peaks between training and predicted datasets (left) is not useful because the event occurred at the same point in time. The difference in the location of the peak (right) in time is a more appropriate measure of model performance.</p>
+   </div>
+   <div xlink:href="41598_2019_40429_Fig9_HTML" id="d29e1070" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">Following 5,000 repeats, the mean and standard error associated with the repeats from the top 10% of models was calculated (model repeats for each timepoint were normally distributed). Increasing the percentage of models used to calculate the mean and standard error confidence intervals would reduce the overall uncertainty on the profile, but potentially includes the output from models that are poorly trained against the known datasets and are therefore more precise but less accurate (see Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">5</a>).
+ </p>
+</sec>

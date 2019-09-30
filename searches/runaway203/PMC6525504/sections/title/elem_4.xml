@@ -1,0 +1,733 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Climate Model Experiments.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We compare the Historical and Natural climate model simulations from the CMIP5 archive (
+   <a rid="r20" ref-type="bibr" href="#r20">20</a>). As in Burke et al. (
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>), we analyze the subselection of CMIP5 realizations analyzed by the Intergovernmental Panel on Climate Change (IPCC) (
+   <a rid="r31" ref-type="bibr" href="#r31">31</a>). For the Natural experiment, this includes one realization each from 21 of the participating global climate models, which are paired with the 21 corresponding Historical realizations. Note that although the socioeconomic data are available through 2010, the CMIP5 experimental protocol for the Historical and Natural experiments ends in 2005. Thus, as in Burke et al. (
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>), we use the IPCC’s 20-y historical baseline period (1986–2005) as the baseline period for climate model bias correction.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For each country, we create 21 counterfactual historical temperature timeseries 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>, which remove the influence of anthropogenic forcing simulated by each of the 21 climate models. Our approach to creating the counterfactual timeseries follows the widely applied “delta method” of climate model bias correction, in which the model-simulated change in the mean is applied to the observed timeseries. For each country 
+   <span class="italic">c</span>, we first calculate the observed country-level population-weighted mean annual temperature timeseries 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub> for the 1961–2010 time period covered by the socioeconomic data, following Burke et al. (
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>). Then, for each country 
+   <span class="italic">c</span> and climate model 
+   <span class="italic">m</span>, we calculate the difference in country-level population-weighted mean temperature between the Historical and Natural CMIP5 simulations, both for the 20-y period centered on the beginning of the socioeconomic data (1951–1970), and for the 20-y historical baseline period used by the IPCC (1986–2005). We then linearize the difference between the Historical and Natural simulations over the 1961–2010 period, such that the difference in 1961 is equal to the difference in the Historical and Natural means during the 20-y period centered on 1961 (1951–1970), and the difference in 2010 is equal to the difference in the Historical and Natural means during the IPCC’s 20-y baseline period (1986–2005). Finally, for each year 
+   <span class="italic">t</span> in the 1961–2010 observed temperature timeseries, we add the linearized 
+   <span class="italic">Natural</span> minus 
+   <span class="italic">Historical</span> difference ∆
+   <span class="italic">T</span> for that year:
+   <div id="uneq1" class="disp-formula">
+    <div id="me1" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">T</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">NoAnthro</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">T</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">Obs</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">+</span>
+      <span mathvariant="normal" class="mi">Δ</span>
+      <span class="mi">T</span>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">This process generates, for each country, an ensemble of 21 counterfactual timeseries 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>. This 21-member ensemble reflects a combination of uncertainty in the climate response to external forcings and uncertainty arising from internal climate system variability, but removes biases in the climate model simulation of the absolute temperature magnitude and of the interannual temperature variability. [The 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub> timeseries corresponds to the counterfactual timeseries used in Diffenbaugh et al. (
+   <a rid="r21" ref-type="bibr" href="#r21">21</a>) to calculate the contribution of the observed trend to the extreme event magnitude, except that in this case the magnitude of the counterfactual trend is calculated from the CMIP5 Natural forcing simulation.]
+  </p>
+ </sec>
+ <sec id="s6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Impact of Historical Temperature Change on Economic Growth.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Burke et al. (
+   <a rid="r4" ref-type="bibr" href="#r4">4</a>, 
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>) used historical data to quantify the empirical relationship between variations in country-level temperature and country-level annual growth in per capita GDP, allowing for the marginal effect of annual temperature deviations to vary nonlinearly as a function of country-level mean temperature. As described in detail in Burke et al. (
+   <a rid="r4" ref-type="bibr" href="#r4">4</a>, 
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>), the equation for the panel fixed-effects model is as follows:
+   <div id="uneq2" class="disp-formula">
+    <div id="me2" class="math">
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">Δ</span>
+      <span class="mtext">log</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">Y</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">t</span>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span class="mi">β</span>
+       <span class="mn">1</span>
+      </div>
+      <div class="msub">
+       <span class="mi">T</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">β</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="msubsup">
+       <span class="mi">T</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">t</span>
+       </div>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">λ</span>
+       <span class="mn">1</span>
+      </div>
+      <div class="msub">
+       <span class="mi">P</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">λ</span>
+       <span class="mn">2</span>
+      </div>
+      <div class="msubsup">
+       <span class="mi">P</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">t</span>
+       </div>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">μ</span>
+       <span class="mi">i</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">υ</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">θ</span>
+       <div class="mrow">
+        <span class="mn">1</span>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <span class="mi">t</span>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">θ</span>
+       <div class="mrow">
+        <span class="mn">2</span>
+        <span class="mi">i</span>
+       </div>
+      </div>
+      <div class="msup">
+       <span class="mi">t</span>
+       <span class="mn">2</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="msub">
+       <span class="mi">ε</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">Y</span>
+   <sub>
+    <span class="italic">it</span>
+   </sub> is per capita GDP in country 
+   <span class="italic">i</span> in year 
+   <span class="italic">t</span>, 
+   <span class="italic">T</span> is the average temperature in year 
+   <span class="italic">t</span>, 
+   <span class="italic">P</span> is the average precipitation in year 
+   <span class="italic">t</span>, 
+   <span class="italic">μ</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> are country-fixed effects, 
+   <span class="italic">υ</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> are year-fixed effects, and θ
+   <sub>1
+    <span class="italic">i</span>
+   </sub>
+   <span class="italic">t</span> + θ
+   <sub>2
+    <span class="italic">i</span>
+   </sub>
+   <span class="italic">t</span>
+   <span class="sup">2</span> are country-specific linear and quadratic time trends.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In the current study, we repeat the primary regression calculation described in Burke et al. (
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>), using historical data from 1961 to 2010, and bootstrapping with replacement to estimate a separate response function for each of 1,000 resamples, which we denote 
+   <span class="italic">f</span>
+   <sub>
+    <span class="italic">b</span>
+   </sub>. The uncertainty in the magnitude of the temperature optimum (
+   <a ref-type="fig" rid="fig01" href="#fig01">Fig. 1
+    <span class="italic">B</span>
+   </a>) creates uncertainty in exactly which countries are likely to benefit or be penalized at different levels of warming, and is the largest source of uncertainty in the response of GDP growth to elevated levels of global climate forcing (
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We quantify the uncertainty in economic damages arising from uncertainty in the temperature optimum (e.g., 
+   <a ref-type="fig" rid="fig02" href="#fig02">Figs. 2</a> and 
+   <a ref-type="fig" rid="fig04" href="#fig04">4</a> and 
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816020116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Table S1
+   </span>), as well as the uncertainty arising from lagged responses to temperature fluctuations (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816020116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Table S2
+   </span>). We also explore additional aspects of the relationship between temperature and GDP growth. For example, we find that historical temperature fluctuations explain on average 8.6% of the overall variation in country-level annual income growth fluctuations during our study period (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816020116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S2
+   </span>). Likewise, given the shape of the temperature–growth response function (
+   <a ref-type="fig" rid="fig01" href="#fig01">Fig. 1
+    <span class="italic">B</span>
+   </a>), temperature fluctuations around a stable mean will induce a negative trend in per capita GDP. However, we find that the magnitude of this effect is small compared with the impact of long-term warming (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816020116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S3
+   </span>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Whereas Burke et al. (
+   <a rid="r4" ref-type="bibr" href="#r4">4</a>, 
+   <a rid="r14" ref-type="bibr" href="#r14">14</a>) projected economic impacts under future emissions scenarios, we calculate the accumulated economic impacts of historical temperature change. For each country 
+   <span class="italic">c</span> in each year 
+   <span class="italic">t</span>, we compare economic growth under historical observed temperatures (
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub>) with predicted growth under counterfactual temperatures (
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>). We repeat this comparison for each climate model 
+   <span class="italic">m</span> and each bootstrap 
+   <span class="italic">j</span>, yielding more than 20,000 realizations of the impact of anthropogenic forcing on economic growth in each country.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We first initialize the analysis in each country with the observed per capita GDP from the starting year 
+   <span class="italic">t</span> = 0 of the socioeconomic data (e.g., 
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub>[1961]). Then, for each year 
+   <span class="italic">t</span> and using the temperature–growth response functions 
+   <span class="italic">f</span> estimated above, we calculate the difference in growth rate between the observed temperature and the counterfactual temperature (
+   <a ref-type="fig" rid="fig01" href="#fig01">Fig. 1 
+    <span class="italic">C</span> and 
+    <span class="italic">D</span>
+   </a>):
+   <div id="uneq3" class="disp-formula">
+    <div id="me3" class="math">
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">Δ</span>
+      <span mathvariant="italic" class="mi">Growth</span>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">f</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">T</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">NoAnthro</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">[</span>
+         <span class="mi">t</span>
+         <span class="mo">]</span>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">−</span>
+      <span class="mi">f</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">T</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">Obs</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">[</span>
+         <span class="mi">t</span>
+         <span class="mo">]</span>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">We then add that difference 
+   <span class="italic">∆Growth</span>[
+   <span class="italic">t</span>] to the actual observed growth rate 
+   <span class="italic">Growth</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub>[
+   <span class="italic">t</span>] to calculate the counterfactual growth rate 
+   <span class="italic">Growth</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>[
+   <span class="italic">t</span>]:
+   <div id="uneq4" class="disp-formula">
+    <div id="me4" class="math">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">Growt</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">h</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">NoAnthro</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="italic" class="mi">Growt</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">h</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">Obs</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">+</span>
+      <span mathvariant="normal" class="mi">Δ</span>
+      <span mathvariant="italic" class="mi">Growth</span>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">We then multiply this counterfactual growth 
+   <span class="italic">Growth</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>[
+   <span class="italic">t</span>] by the accumulated counterfactual per capita GDP in the previous year (
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>[
+   <span class="italic">t</span> − 1]) to calculate current-year counterfactual per capita GDP:
+   <div id="uneq5" class="disp-formula">
+    <div id="me5" class="math">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">GDPca</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">p</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">NoAnthro</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <span class="mi">t</span>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">=</span>
+      <span mathvariant="italic" class="mi">GDPca</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">p</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">NoAnthro</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">−</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">+</span>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">GDPca</span>
+        <div class="msub">
+         <span mathvariant="italic" class="mi">p</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">NoAnthro</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">[</span>
+         <div class="mrow">
+          <span class="mi">t</span>
+          <span class="mo">−</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mo">]</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">*</span>
+        </div>
+        <span mathvariant="italic" class="mi">Growt</span>
+        <div class="msub">
+         <span mathvariant="italic" class="mi">h</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">NoAnthro</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mo">[</span>
+         <span class="mi">t</span>
+         <span class="mo">]</span>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">We repeat this process through the last year of the socioeconomic data (2010), for each country in the GDP dataset.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Finally, we calculate the percent difference between the actual observed per capita GDP (
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub>) and the per capita GDP calculated for the counterfactual temperature timeseries (
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>) in the last year of the socioeconomic data (2010):
+   <div id="uneq6" class="disp-formula">
+    <div id="me6" class="math">
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">Δ</span>
+      <span mathvariant="italic" class="mi">GDPcap</span>
+      <span class="mo">=</span>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <div class="mrow">
+        <div class="mrow">
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">GDPca</span>
+            <div class="msub">
+             <span mathvariant="italic" class="mi">p</span>
+             <div class="mrow">
+              <span mathvariant="italic" class="mi">Obs</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">[</span>
+             <div class="mrow">
+              <span class="mn">2010</span>
+             </div>
+             <span class="mo">]</span>
+            </div>
+            <span class="mo">–</span>
+            <span mathvariant="italic" class="mi">GDPca</span>
+            <div class="msub">
+             <span mathvariant="italic" class="mi">p</span>
+             <div class="mrow">
+              <span mathvariant="italic" class="mi">NoAnthro</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">[</span>
+             <div class="mrow">
+              <span class="mn">2010</span>
+             </div>
+             <span class="mo">]</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+         <span class="mo">/</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">GDPca</span>
+          <div class="msub">
+           <span mathvariant="italic" class="mi">p</span>
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">NoAnthro</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mo">[</span>
+           <div class="mrow">
+            <span class="mn">2010</span>
+           </div>
+           <span class="mo">]</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">]</span>
+      </div>
+      <span class="mo">×</span>
+      <span class="mn">100</span>
+      <span class="mo">%</span>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </p>
+  <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">For each country 
+   <span class="italic">c</span>, we calculate 
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub> and 
+   <span class="italic">∆GDPcap</span> for each of the 1,000 bootstrapped response functions 
+   <span class="italic">f</span>
+   <sub>
+    <span class="italic">b</span>
+   </sub>, applied to the counterfactual temperature timeseries 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub> from each of the 21 global climate models (thus yielding more than 20,000 values of 
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub> and 
+   <span class="italic">∆GDPcap</span> for each country).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Our primary analysis is focused on quantifying the impacts that historical global warming has had during the full period for which socioeconomic data are available (1961–2010). However, because the socioeconomic data do not extend to 1961 for a large number of countries, we repeat our analysis for the 1991–2010 period. For all analyses that start in 1961, we analyze only those countries that have continuous socioeconomic data from 1961 through 2010 (
+   <span class="italic">n</span> = 86); for all analyses that start in 1991, we analyze only those countries that have continuous socioeconomic data from 1991 through 2010 (
+   <span class="italic">n</span> = 151). Observed and estimated counterfactual temperatures and growth rates are the same for the years that overlap between the two periods, but growth rates are cumulated over 30 more years in the longer period, yielding larger (in absolute value) impacts on economic outcomes by the end of the period (
+   <a ref-type="fig" rid="fig02" href="#fig02">Fig. 2</a>).
+  </p>
+ </sec>
+ <sec id="s7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Quantifying the Impact of Historical Global Warming on Economic Inequality.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A number of measures of economic inequality have been developed (
+   <a rid="r9" ref-type="bibr" href="#r9">9</a>). Given the limited availability of long timeseries of subnational economic data, investigations of changes in global inequality often rely on country-level metrics (e.g., refs. 
+   <a rid="r9" ref-type="bibr" href="#r9">9</a> and 
+   <a rid="r10" ref-type="bibr" href="#r10">10</a>). However, when using country-level metrics, weighting by country-level population is critical to accurately capture trends in global inequality (
+   <a rid="r9" ref-type="bibr" href="#r9">9</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We measure global economic inequality using the ratio of the top and bottom decile (“90:10 ratio”) and top and bottom quintile (“80:20 ratio”) of the population-weighted country-level per capita GDP distribution. Both metrics are included among “eight of the most popular” indexes of income inequality identified by Sala-i-Martin (
+   <a rid="r9" ref-type="bibr" href="#r9">9</a>). According to Sala-i-Martin (
+   <a rid="r9" ref-type="bibr" href="#r9">9</a>), “The top-20-percent-to-bottom-20-percent is the ratio of the income of the person located at the top twentieth centile divided by the income of the corresponding person at the bottom twentieth centile. A similar definition applies to the top-10-percent-to-bottom-10-percent ratio.” Because of the lack of availability of long timeseries of subnational economic data, we calculate these ratios using the respective percentiles of the population-weighted empirical CDF of country-level per capita GDP values (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816020116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S4
+   </span>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We first calculate the percent difference in per capita GDP for each decile of the population-weighted country-level GDP distribution. To do so, we calculate the deciles of country-level population-weighted per capita GDP, using the countries in the 1961–2010 dataset. For each year 
+   <span class="italic">t</span> in the observed country-level per capita GDP dataset (
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub>), we calculate the 
+   <span class="italic">p</span>th percentile population-weighted GDP as the country-level per capita GDP below which the sum of the country-level populations represents 
+   <span class="italic">p</span> percent of the total population of countries in the 1961–2010 dataset (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816020116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S4
+   </span>). For example, we calculate the 10th percentile population-weighted GDP as the country-level per capita GDP for which the total population of countries with lower per capita GDP is 10% of the total population of countries in the 1961–2010 dataset, and so on for each decile.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Next, we calculate the deciles of country-level population-weighted per capita GDP in each year 
+   <span class="italic">t</span> of each bootstrap 
+   <span class="italic">j</span> and climate model 
+   <span class="italic">m</span> of the counterfactual world without anthropogenic climate forcing (
+   <span class="italic">GDPcap</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>). Then, for the year 2010 in each bootstrap 
+   <span class="italic">j</span> and climate model 
+   <span class="italic">m</span>, we calculate the percent difference between the observed population-weighted decile value and the counterfactual population-weighted decile value (as described for 
+   <span class="italic">∆GDPcap</span> above). For the differences in each population-weighted decile, we calculate the density distribution across all 1,000 bootstrap regressions from all 21 climate models, as well as the median value across the 1,000 bootstrap regressions for each climate model.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Finally, we quantify the between-country population-weighted economic inequality 
+   <span class="italic">GDPcapHigh:Low</span> as the ratio between the higher percentile (e.g., 90th) and lower percentile (e.g., 10th) population-weighted per capita GDP. We first calculate 
+   <span class="italic">GDPcapHigh:Low</span> in each year 
+   <span class="italic">t</span> of the observations (
+   <span class="italic">GDPcapHigh:Low</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub>), and in each year 
+   <span class="italic">t</span> of the counterfactual world without anthropogenic climate forcing (
+   <span class="italic">GDPcapHigh:Low</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub>). Then, for each bootstrap 
+   <span class="italic">j</span> and climate model 
+   <span class="italic">m</span>, we calculate the percent difference between the observed population-weighted inequality 
+   <span class="italic">GDPcapHigh:Low</span>
+   <sub>
+    <span class="italic">Obs</span>
+   </sub> and the counterfactual population-weighted inequality 
+   <span class="italic">GDPcapHigh:Low</span>
+   <sub>
+    <span class="italic">NoAnthro</span>
+   </sub> in the year 2010:
+   <div id="uneq7" class="disp-formula">
+    <div id="me7" class="math">
+     <div class="mrow">
+      <span mathvariant="normal" class="mi">Δ</span>
+      <span mathvariant="italic" class="mi">GDPcapHigh</span>
+      <span class="mi">:</span>
+      <span mathvariant="italic" class="mi">Low</span>
+      <span class="mo">=</span>
+      <div class="mrow">
+       <span class="mo">[</span>
+       <div class="mrow">
+        <div class="mrow">
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">GDPcapHigh:Lo</span>
+            <div class="msub">
+             <span mathvariant="italic" class="mi">w</span>
+             <div class="mrow">
+              <span mathvariant="italic" class="mi">Obs</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">[</span>
+             <div class="mrow">
+              <span class="mn">2010</span>
+             </div>
+             <span class="mo">]</span>
+            </div>
+            <span class="mo">–</span>
+            <span mathvariant="italic" class="mi">GDPcapHigh:Lo</span>
+            <div class="msub">
+             <span mathvariant="italic" class="mi">w</span>
+             <div class="mrow">
+              <span mathvariant="italic" class="mi">NoAnthro</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mo">[</span>
+             <div class="mrow">
+              <span class="mn">2010</span>
+             </div>
+             <span class="mo">]</span>
+            </div>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+         <span class="mo">/</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">GDPcapHigh:Lo</span>
+          <div class="msub">
+           <span mathvariant="italic" class="mi">w</span>
+           <div class="mrow">
+            <span mathvariant="italic" class="mi">NoAnthro</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mo">[</span>
+           <div class="mrow">
+            <span class="mn">2010</span>
+           </div>
+           <span class="mo">]</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">]</span>
+      </div>
+      <span mathvariant="normal" class="mi">×</span>
+      <span class="mn">100</span>
+      <span class="mo">%</span>
+      <span class="mo">.</span>
+     </div>
+    </div>
+   </div>
+  </p>
+ </sec>
+</sec>

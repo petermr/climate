@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Law of total probability for non-exclusive events</div>
+ <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">We now discuss BMA and extend it to properly accounting for model dependence. BMA is a popular procedure to make probabilistic projections
+  <span class="sup">
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>–
+   <a ref-type="bibr" rid="CR16" href="#CR16">16</a>,
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>–
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span>. BMA is based on the law of total probability applied to a continuous random prediction variable of interest 
+  <span class="italic">A</span>, several exclusive hypotheses (models of reality) 
+  <span class="italic">H</span>
+  <sub>1</sub>, …, 
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">n</span>
+  </sub> ∈ 
+  <span class="italic">S</span>, and a sample space 
+  <span class="italic">S</span>. Here, an 
+  <span class="italic">i</span>th hypothesis refers to the event 
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> that the 
+  <span class="italic">i</span>th model is adequate for a particular modeling purpose. BMA states that
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p\left( {A|{\bf{Y}} \cap S} \right) = p\left( {A|{\bf{Y}}} \right) = \mathop {\sum}\limits_{i = 1}^n {p\left( {A|H_i \cap {\bf{Y}}} \right)} P(H_i|{\bf{Y}}),$$\end{document}</span>
+    <div id="M12" class="math">
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">A</span>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">Y </span>
+       <span class="mo">∩</span>
+       <span class="mi">S</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">A</span>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">Y </span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div accent="false" accentunder="false" class="munderover">
+      <div class="mrow">
+       <span class="mo"> ∑</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mo">=</span>
+       <span class="mn">1</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mi">p</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <span class="mi">A</span>
+       <span class="mo">∣</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">H</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">∩</span>
+       <span mathvariant="bold" class="mi">Y </span>
+      </div>
+     </div>
+     <span class="mi">P</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">H</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">Y </span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where lower-case 
+  <span class="italic">p</span> represents a probability density function (pdf), upper-case 
+  <span class="italic">P</span> is a probability, and all densities and probabilities are implicitly conditioned on 
+  <span class="italic">S</span>. With a slight abuse of the notation, 
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\mathop { \cap }\nolimits {\mathbf{Y}}$$\end{document}</span>
+    <div id="M14" class="math">
+     <span class="mo"> ∩</span>
+     <span mathvariant="bold" class="mi">Y </span>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> refers to intersection with the event that a certain value of 
+  <span class="bold">Y</span> has been observed. According to Eq. (
+  <a rid="Equ6" ref-type="" href="#Equ6">6</a>), the resulting final projection pdf is a weighted mean of pdfs given each model, with weights representing relative probabilities of each model. We define sample space as at least one hypothesis being correct, i.e., 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$S = \cup H_i$$\end{document}</span>
+    <div id="M16" class="math">
+     <span class="mi">S</span>
+     <span class="mo">=</span>
+     <span class="mo">∪</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">H</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. One important implicit assumption for BMA is that the events of individual hypotheses being correct are mutually exclusive, i.e., 
+  <div id="IEq3" class="inline-formula">
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$P \left( {H_i \cap H_j|{\bf{Y}}} \right) = 0\quad \forall i \ne j$$\end{document}</span>
+    <div id="M18" class="math">
+     <span class="mi">P</span>
+     <div close=")" open="(" separators="" class="mfenced">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">H</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">∩</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">H</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">Y </span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">0</span>
+     <span width="1.0em" class="mspace"/>
+     <span class="mo">∀</span>
+     <span class="mi">i</span>
+     <span class="mo">≠</span>
+     <span class="mi">j</span>
+    </div>
+    <span xlink:href="41467_2019_10561_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, and similarly for all higher-order model combinations. This is in fact a binding assumption and it will lead to too much weight assigned to similar predictions created by highly dependent (similar) models. As we present later, it is possible for several good models to jointly match observations, and to be simultaneously correct.
+ </p>
+ <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">We show that when the hypotheses are non-exclusive, the BMA is modified as follows (non-exclusive law of total probability):
+  <div id="Equ7" class="disp-formula">
+   <span class="label">7</span>
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\begin{array}{*{20}{l}} {p(A|{\bf{Y}})} \hfill &amp; \hskip-6pt = \hfill &amp; {\mathop {\sum}\limits_{i = 1}^n {p\left( {A|H_i \cap {\bf{Y}}} \right)P\left( {H_i|{\bf{Y}}} \right)} } \hfill \\ {} \hfill &amp; - \hfill &amp; {\mathop {\sum}\limits_{1 \le i &lt; j \le n} {p\left( {A|H_i \cap H_j \cap {\bf{Y}}} \right)P\left( {H_i \cap H_j|{\bf{Y}}} \right)} } \hfill \\ {} \hfill &amp; + \hfill &amp; {\mathop {\sum}\limits_{1 \le i &lt; j &lt; k \le n} {p\left( {A|H_i \cap H_j \cap H_k \cap {\mathbf{Y}}} \right)P\left( {H_i \cap H_j \cap H_k|{\bf{Y}}} \right) - \cdots } } \hfill \\ {} \hfill &amp; + \hfill &amp; {( - 1)^{n - 1}p\left( {A|H_1 \cap H_2 \cap \cdots \cap H_n \cap {\bf{Y}}} \right)P\left( {H_1 \cap H_2 \cap \cdots \cap H_n|{\bf{Y}}} \right).} \hfill \end{array}}$$\end{document}</span>
+    <div id="M20" class="math">
+     <div class="mtable">
+      <div class="mtr">
+       <div columnalign="left" class="mtd">
+        <span class="mi">p</span>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+       <div columnalign="left" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div accent="false" accentunder="false" class="munderover">
+         <div class="mrow">
+          <span class="mo">∑</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+        <span class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">-</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="munder">
+         <div class="mrow">
+          <span class="mo">∑</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">≤</span>
+          <span class="mi">i</span>
+          <span class="mo">&lt;</span>
+          <span class="mi">j</span>
+          <span class="mo">≤</span>
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+        <span class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">+</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="munder">
+         <div class="mrow">
+          <span class="mo">∑</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">≤</span>
+          <span class="mi">i</span>
+          <span class="mo">&lt;</span>
+          <span class="mi">j</span>
+          <span class="mo">&lt;</span>
+          <span class="mi">k</span>
+          <span class="mo">≤</span>
+          <span class="mi">n</span>
+         </div>
+        </div>
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">k</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+        <span class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">k</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+        <span class="mo">-</span>
+        <span class="mo">⋯</span>
+       </div>
+      </div>
+      <div class="mtr">
+       <div columnalign="left" class="mtd"/>
+       <div columnalign="left" class="mtd">
+        <span class="mo">+</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="msup">
+         <div class="mrow">
+          <div class="mrow">
+           <span class="mo">(</span>
+           <div class="mrow">
+            <span class="mo">-</span>
+            <span class="mn">1</span>
+           </div>
+           <span class="mo">)</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+          <span class="mo">-</span>
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mi">p</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <span class="mi">A</span>
+          <span class="mo">∣</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <span class="mo">⋯</span>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+        <span class="mi">P</span>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mn">2</span>
+           </div>
+          </div>
+          <span class="mo">∩</span>
+          <span class="mo">⋯</span>
+          <span class="mo">∩</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">H</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">n</span>
+           </div>
+          </div>
+          <span class="mo">∣</span>
+          <span mathvariant="bold" class="mi">Y </span>
+         </div>
+        </div>
+        <span class="mo">.</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">We prove this formula using the so-called inclusion-exclusion principle in Supplementary Note 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>. In the modified BMA the probability densities of future metric A given all model pairs are subtracted, weighted by the respective pair probabilities; conditional weighted densities given model triplets are added back again, and so forth. As Eq. (
+  <a rid="Equ4" ref-type="" href="#Equ4">4</a>) shows, the full law considers potential model dependencies up to order 
+  <span class="italic">n</span>. We propose to adopt a new term “model non-exclusivity”, which refers to the fact that more than one model can be jointly consistent with reality. Non-exclusive model probabilities incorporate both models’ skill at capturing observations, as well as inter-model dependencies (Eq. (
+  <a rid="Equ4" ref-type="" href="#Equ4">4</a>)).
+ </p>
+</sec>

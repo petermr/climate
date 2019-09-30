@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Pollen-based reconstructions</div>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">This study reconstructs quantitative changes of annual precipitation during the Holocene from a set of fossil pollen records. Our approach
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span> involves the development of a representative modern pollen–precipitation training-set, the set up and evaluation of pollen–precipitation transfer functions that model the relationship between modern pollen occurrences, the application of a transfer function to fossil pollen records to infer past precipitation levels, and the synthesis of spatiotemporal precipitation patterns. Such an approach involves a number of statistical and (paleo-)ecological assumptions
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span> including that precipitation is the major determinant of vegetation and hence pollen composition.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">The modern pollen dataset (Source Data File 1) from China and Mongolia used to establish a transfer function between pollen composition and annual precipitation is derived from 2559 sampling sites (gradient: 35–2091 mm) and comprises 161 taxa each being present in at least 3 samples and making up at least 3% of the pollen in at least one sample
+  <span class="sup">
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+  </span>. The results of a canonical correspondence analysis suggest that, of all the climate variables tested, annual precipitation has the greatest influence on pollen composition within the dataset and this was therefore considered to be the best climate variable to use for reconstructions
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span>. It may be that summer monsoon precipitation determines vegetation distribution and not annual precipitation, but our analyses revealed that summer precipitation and annual precipitation are highly correlated and that summer precipitation or precipitation of certain months do not explain better the modern pollen distribution, which instead may be explained by a memory effect of precipitation induced by rain-infiltrated soils (Supplementary Fig. 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a> and Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">1</a>). A canonical correspondence analysis with a subset of southern China indicated that precipitation is a significant variable for pollen composition also in southern China despite it being more humid (Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). We selected a unique pollen–precipitation calibration set for each fossil pollen record from modern sites within a 1,000 km radius as Cao and co-workers
+  <span class="sup">
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+  </span> have shown that this will increase the reliability of the reconstruction. The geographic distance between each modern sampling site and each fossil pollen record was calculated using the 
+  <span class="italic">rdist.earth</span> function in the 
+  <span class="italic">fields</span> package (version 6.8) for R software
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>.
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">We used weighted-averaging partial least squares regression (WA-PLS) to set up pollen–precipitation transfer functions. This commonly used method is able to model unimodal responses and it maximizes the information in the modern dataset used for prediction. Exploration of our modern pollen–precipitation dataset revealed that WA-PLS yields more reliable quantitative precipitation reconstructions that the modern analog technique (MAT)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span>—the other common method in paleoenvironmental reconstructions. A pollen–precipitation WA-PLS transfer function was established for each calibration set using the 
+  <span class="italic">WAPLS</span> function in the 
+  <span class="italic">rioja</span> package, version 0.7-3
+  <span class="sup">
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+  </span>, with leave-one-out cross-validation. The pollen percentages were square-root transformed. The number of WA-PLS components to be employed was selected using a randomization 
+  <span class="italic">t</span>-test
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>.
+ </p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">A taxonomically harmonized fossil pollen dataset from eastern continental Asia
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span> was used to reconstruct past precipitation levels (Source Data File 2). To this dataset, we added 26 new records from areas that previously had poor data coverage. Reconstructions were only made for the period between 10 and 2 cal ka to ensure good spatial coverage and minimize the likelihood of a marked human impact on vegetation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+  </span>. This period was covered by 101 of the available pollen records (details in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">2</a>). A statistical significance test was performed for the quantitative precipitation reconstructions
+  <span class="sup">
+   <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+  </span> using the 
+  <span class="italic">randomTF</span> function in the 
+  <span class="italic">palaeoSig</span> package, version 1.1.2
+  <span class="sup">
+   <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+  </span>. We found that there was no change in the general results if non-significant reconstructions were excluded, and the dataset was therefore not reduced.
+ </p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">Unsupervised fuzzy competitive learning
+  <span class="sup">
+   <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+  </span> was used to cluster the precipitation reconstructions and to obtain a degree of membership to each cluster for each reconstruction. Precipitation time-series were smoothed in time (σ = 1000 yrs) and space (σ = 200 km) using a Gaussian kernel. Clustering of smoothed and Z-transformed precipitation reconstructions was implemented with the 
+  <span class="italic">cmeans</span> function (with default values) in the 
+  <span class="italic">e1071</span> package, version 1.6-3
+  <span class="sup">
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span>. The Xie-Beni index
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span> was calculated to determine the optimal number of clusters in the precipitation reconstruction dataset and to evaluate the validity of clustering partitions, using the 
+  <span class="italic">fclustIndex</span> function in the 
+  <span class="italic">e1071</span> package, version 1.6-3
+  <span class="sup">
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span>. R code is available in Supplementary Note 
+  <a rid="MOESM2" ref-type="media" href="#MOESM2">1</a>.
+ </p>
+</sec>

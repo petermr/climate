@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s5" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <sec id="s6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Observations and Reanalyses.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Gridded annual mean time series of SLP are taken from the HadSLP2r (1900–2013) global historical reconstruction (
+   <a rid="r31" ref-type="bibr" href="#r31">31</a>); sea surface winds at 10 m over the period 1950–2011 are taken from the WASWind composite (
+   <a rid="r32" ref-type="bibr" href="#r32">32</a>). Global precipitation is taken from the GPCC v.7 (1950–2013) (
+   <a rid="r33" ref-type="bibr" href="#r33">33</a>) and the GPCP v.2.3 Combined Precipitation Dataset (1979–2013) (
+   <a rid="r34" ref-type="bibr" href="#r34">34</a>). We use the Kaplan SST (1950–2013) dataset (
+   <a rid="r35" ref-type="bibr" href="#r35">35</a>) and ocean subsurface temperatures (1950–2013) are taken from Met Office Hadley Centre EN Version 4.2.0 objective analysis (
+   <a rid="r36" ref-type="bibr" href="#r36">36</a>). We additionally make use of annual time series of AMIP, SLP, WVC, total precipitation, and zonal winds from three atmospheric reanalyses: (
+   <span class="italic">i</span>) the NOAA-CIRES 20th century reanalysis (1950–2011, Version 2c), (
+   <span class="italic">ii</span>) the ECMWF ERA-20C reanalysis (1950–2010), and (
+   <span class="italic">iii</span>) NCEP/NCAR (1950–2013).
+  </p>
+ </sec>
+ <sec id="s7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model Simulations.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We carry out model simulations with the middle atmosphere version of ECHAM5, as implemented in the Modular Earth Submodel System (MESSy) framework (
+   <a rid="r37" ref-type="bibr" href="#r37">37</a>), with and without interactive ocean coupling. An ensemble of six runs (AMIP) from 1940 to 2013 (10-y spin-up) with the atmosphere-only configuration of the model (AGCM) forced only at the lower boundary by the monthly mean AMIP2 SST and sea ice concentrations. All AMIP integrations have been carried out with constant solar irradiance and present-day GHGs, while neglecting volcanic aerosol forcing. Individual model runs branch off from a long control model simulation with climatological boundary. A twin AGCM ensemble of six members (AMIP-ZM) forced at the bottom boundary by zonally averaged AMIP2 SSTs is additionally carried out to isolate the zonally symmetric part of the SST contribution. The AMIP-ZM SSTs is constructed by adding to the monthly climatology (1950–2013) deseasonalized zonal mean SST anomalies. A third ensemble (SOLAR) of four realizations with ECHAM5 interactively coupled to the Max Planck Institute ocean model (MPIOM) is simulated to analyze surface responses to the SC variability specified following the ideal approach of repeating the SC22 (September 1986 to August 1996) 10 times (
+   <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1815060116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <span class="italic">SI Appendix</span>, Fig. S12
+   </span>). Total and spectral irradiances for the SC 22 are taken by the Naval Research Laboratory SSI model v1. Ozone is prescribed as a time-independent climatology, and no other external forcing is considered. SOLAR runs have been initiated from a long control coupled atmosphere–ocean simulation with constant forcings. The analysis covers 100 model years following a spin-up period of 25 y (125 y in total). ECHAM5 has a spectral dynamical core with a triangular truncation at wavenumber 42 (T42) and with 47 levels in the vertical up to 0.01 hPa. The MPIOM model is configured in a GR15 grid (∼1.5° horizontal resolution) with 40 depth levels.
+  </p>
+ </sec>
+ <sec id="s8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">MLR Model.</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We regress lagged solar cycle signals out of annual time series with an MLR model that isolates the linear contribution of four forcings (
+   <a rid="r18" ref-type="bibr" href="#r18">18</a>), namely (
+   <span class="italic">i</span>) 11-y solar cycle described by TSI variations filtered out of multidecadal changes, (
+   <span class="italic">ii</span>) GHG warming described by the CO
+   <sub>2</sub> equivalent concentration of all major GHGs, (
+   <span class="italic">iii</span>) major volcanic eruptions described by the aerosol optical depth at 550 nm, and (
+   <span class="italic">iv</span>) interannual effects of the ENSO phenomenon described by a high-pass filtered (using a Lanczos filter with 8-y cutoff) Niño-3.4 index to account for the ENSO preferred timescale. Time lags in SC signals are inferred by lagging the solar predictor backward/forward in time (−5 to 5 y, step 1 y) with respect to the fitted variable. Lag zero describes changes in phase with SC, whereas delayed signals are indicated in positive lags. The SC regression coefficients are scaled to a 1-W m
+   <span class="sup">−2</span> increase of TSI that is “typical” for solar cycles in the last 50 y (e.g., solar cycle 22). Residuals are tested for autocorrelation with a Durbin–Watson test postulating zero autocorrelation and when rejected, regression coefficients and SEs are modified following the Cochrane–Orcutt iterative method. The null hypothesis of zero regression coefficients is rejected with 
+   <span class="italic">P</span> value &lt; 0.1 using a two-tailed 
+   <span class="italic">t</span> test with degrees of freedom 
+   <span class="italic">N</span>-K-1, where 
+   <span class="italic">N</span> is the length of time series reduced by the K number of regressors plus the intercept. The 
+   <span class="italic">P</span> values have been adjusted for the false detection rate following the Benjamini–Hochberg procedure. Finally, the Ljung–Box test identifies insignificant correlations at higher lags in the areas of interest.
+  </p>
+ </sec>
+</sec>

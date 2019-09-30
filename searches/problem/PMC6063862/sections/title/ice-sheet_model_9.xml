@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ice-sheet model</div>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">GRISLI is a 3D-thermo-mechanical ice sheet - ice stream - ice shelf model, able to simulate both grounded and floating ice
+  <span class="sup">
+   <a ref-type="bibr" rid="CR40" href="#CR40">40</a>,
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+  </span>. The grounded part uses the Shallow Ice Approximation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR42" href="#CR42">42</a>
+  </span> (SIA) whereas ice shelves and ice streams are treated using the Shallow Shelf Approximation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR43" href="#CR43">43</a>
+  </span> (SSA). The ice shelf and ice stream formulation in GRISLI allows for a more realistic calculation of the growth of the ice sheet and ice shelves by allowing horizontal velocities to evolve freely and reach rapid basal sliding, particularly for the advance of ice onto the shallow continental shelves
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>,
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+  </span>. Isostasy is calculated by means of the Elastic-Lithosphere-Flexural-Asthenosphere model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+  </span> and seismic-based geothermal heat fluxes map is prescribed over the Antarctic domain
+  <span class="sup">
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>. To account for anisotropy in GRISLI, two enhancements factors are prescribed, one for grounded ice, handled with the SIA (
+  <span class="italic">E</span>
+  <sub>
+   <span class="italic">SIA</span>
+  </sub>), and one for ice shelves, handled with the SSA (
+  <span class="italic">E</span>
+  <sub>
+   <span class="italic">SSA</span>
+  </sub>). Usually, 
+  <span class="italic">E</span>
+  <sub>
+   <span class="italic">SIA</span>
+  </sub> is larger than 1, while 
+  <span class="italic">E</span>
+  <sub>
+   <span class="italic">SSA</span>
+  </sub> is lower than 1. In GRISLI, a simple basal hydrology scheme checks for the presence of both basal sediments and basal meltwater to trigger an acceleration of the ice flow by applying the SSA instead of the SIA approximation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>,
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+  </span>. Our standard simulations do not include this effect. To test the impact of a basal sediment on the AIS dynamics, a basal sediments thickness map
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span> is prescribed as a boundary condition on the subglacial topography in an additional set of simulations. Calving occurs at the ice shelf front at a prescribed thickness 
+  <span class="italic">H</span>
+  <sub>
+   <span class="italic">COUP</span>
+  </sub> if the upstream ice flux cannot maintain the ice shelf balance. Basal melting under the ice shelves takes a prescribed uniform value that can vary with depth or follow a quadratic depth-temperature relationship following
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>,
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+  </span>. Atmospheric forcing is downscaled on the ice-sheet model grid and corrected by means of a standard lapse rate (6.5 °C) and precipitation correction factor (0.07% C
+  <span class="sup">−1</span>). The ablation is calculated using the semi-empirical Positive Degree Day method
+  <span class="sup">
+   <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+  </span> (PDD) and up to 60% of the surface melt is able to refreeze. Surface mass balance is kept fixed for the entire simulations. The ice-sheet model is run on a 40-km horizontal cartesian rectangular regular grid using the polar stereographic projection (71°S as standard parallel). Unless otherwise stated, we use the default parameters listed in Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>.
+ </p>
+</sec>

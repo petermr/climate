@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><html xmlns:h="http://www.w3.org/1999/xhtml" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <div class="sec" title="sec">
+      <div xmlns="http://www.w3.org/1999/xhtml">The ANICE ice-sheet model</div>
+      <p xmlns="http://www.w3.org/1999/xhtml">The ANICE ice-sheet model is a 3-D thermo-mechanical finite difference ice-sheet model
+         and is part of the IMAU-ICE (Institute for Marine and Atmospheric Research Utrecht)
+         ice-sheet model package. The model we use here is the same version as has been used
+         in previous publications
+         <span><a>28</a>,
+            <a>61</a></span>. In ANICE, ice velocities are calculated on land with the SIA and uses the SSA for
+         sliding, i.e. ice streams and shelf velocities. A Mohr–Coulomb plastic law paramaterisation
+         is employed to derive basal stresses that are used to derive the SSA velocities on
+         land
+         <span><a>61</a>,
+            <a>62</a></span>.
+         
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The surface mass balance is determined with monthly fields of precipitation, temperature
+         and insolation at the top of the atmosphere. The precipitation is adjusted with surface
+         temperature. Surface melting is calculated with an insolation temperature melt model,
+         for which a linear relation is used for temperature combined with the net incoming
+         short-wave radiation, using an internally calculated albedo
+         <span><a>61</a></span>. Sub-shelf melting underneath the ice shelves is included as a heat-transfer equation
+         <span><a>63</a></span>:
+         
+         <div><span>4</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$M_{{\mathrm{shelf}}} = \rho _{\mathrm{w}}c_{{\mathrm{pO}}}\gamma
+                  _{\mathrm{T}}F_{{\mathrm{melt}}}\left( {T_{{\mathrm{oc}}} - T_{\mathrm{f}}} \right)^n/L\rho
+                  _{\mathrm{i}}.$$\end{document}</span><div>
+                  <div>
+                     <div><span>M</span></div>
+                     <div><span>shelf</span></div>
+                  </div><span>=</span><div>
+                     <div><span>ρ</span></div>
+                     <div><span>w</span></div>
+                  </div>
+                  <div>
+                     <div><span>c</span></div>
+                     <div><span>pO</span></div>
+                  </div>
+                  <div>
+                     <div><span>γ</span></div>
+                     <div><span>T</span></div>
+                  </div>
+                  <div>
+                     <div><span>F</span></div>
+                     <div><span>melt</span></div>
+                  </div>
+                  <div>
+                     <div>
+                        <div>
+                           <div>
+                              <div>
+                                 <div><span>T</span></div>
+                                 <div><span>oc</span></div>
+                              </div><span>-</span><div>
+                                 <div><span>T</span></div>
+                                 <div><span>f</span></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div><span>n</span></div>
+                  </div><span>∕</span><span>L</span><div>
+                     <div><span>ρ</span></div>
+                     <div><span>i</span></div>
+                  </div><span>.</span></div>
+               <div></div>
+            </div>
+         </div>
+      </p>
+      <p xmlns="http://www.w3.org/1999/xhtml">The different parameters are described in Supplementary Table 
+         <a>4</a>. For ANICE, 
+         <span>n</span> = 1. Here, 
+         <span>T</span><sub>oc</sub> is the ocean temperatures of each GCM that are vertically interpolated to the depth
+         of the ice shelves and 
+         <span>T</span><sub>f</sub> is the freezing temperature
+         <span><a>63</a></span>:
+         
+         <div><span>5</span><div><span>\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts}
+                  \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek}
+                  \setlength{\oddsidemargin}{-69pt} \begin{document}$$T_{\mathrm{f}} = 0.0939 - 0.057\cdot
+                  S_{\mathrm{O}} + 7.64 \times 10^{ - 4}z_{\mathrm{b}},$$\end{document}</span><div>
+                  <div>
+                     <div><span>T</span></div>
+                     <div><span>f</span></div>
+                  </div><span>=</span><span>0.0939</span><span>-</span><span>0.057</span><span>⋅</span><div>
+                     <div><span>S</span></div>
+                     <div><span>O</span></div>
+                  </div><span>+</span><span>7.64</span><span>×</span><span>1</span><div>
+                     <div><span>0</span></div>
+                     <div><span>-</span><span>4</span></div>
+                  </div>
+                  <div>
+                     <div><span>z</span></div>
+                     <div><span>b</span></div>
+                  </div><span>,</span></div>
+               <div></div>
+            </div>
+         </div>with 
+         <span>S</span><sub>O</sub> is the mean value for the salinity of the ocean and 
+         <span>z</span><sub>b</sub> is the bottom of the ice-shelf below sea level. The different parameters are described
+         in Supplementary Table 
+         <a>4</a>. For exposed ice-shelves and open ocean grid points, additional melt rates of 3 and
+         5 m year
+         <span>−1</span> are included, respectively. No additional calving law is applied.
+         
+      </p>
+   </div>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec011" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">2.5. Neural network training and optimum model structure</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The dataset assembled for training and validating the individual ANNs for BA and volume increment predictions consisted of 326,395 records of tree growth for each network; 220,657 records extracted from historical datasets (i.e., PSPs) as representative of present-day forest conditions, and 105,738 tree-growth records generated with JABOWA-3 for the three climate scenarios (B1, A1B, and A2). The dataset was then divided into a training sub-dataset (75% of the original dataset) and validation sub-dataset (25%). Both training and validation sub-datasets were normalised to a range from -1 to 1, due to widely varying ranges and magnitudes of inputs and outputs [
+  <a rid="pone.0132066.ref044" ref-type="bibr" href="#pone.0132066.ref044">44</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">During training, the ANNs predicting BA and volume increments were compared with their corresponding target values, differences calculated, and propagated back through the network for weight optimisation and error reduction [
+  <a rid="pone.0132066.ref045" ref-type="bibr" href="#pone.0132066.ref045">45</a>–
+  <a rid="pone.0132066.ref047" ref-type="bibr" href="#pone.0132066.ref047">47</a>]. Number of hidden-layer nodes is a sensitive structural parameter in ANNs, as too few can lead to under-fitting of the target data and too many can lead to over-fitting [
+  <a rid="pone.0132066.ref047" ref-type="bibr" href="#pone.0132066.ref047">47</a>]. An early-stop option was used to stop training in order to prevent over-fitting of the target data.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In this study, we examined ANN structures with four to ten hidden nodes and evaluated their prediction accuracy. In ANN training, mean squared error (MSE) describes the variance and bias of the predictor with respect to normalised observation values. Pearson’s correlation coefficient (R) and BIAS (eq (
+  <a rid="pone.0132066.e005" ref-type="disp-formula" href="#pone.0132066.e005">5</a>)) were used to evaluate training accuracy (predicted vs. observed); BIAS demonstrates the average difference between predicted and observed data. 
+  <div id="pone.0132066.e005" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0132066.e005.jpg" id="pone.0132066.e005g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M5" class="math">
+     <div class="mrow">
+      <span class="mi">B</span>
+      <span class="mi">I</span>
+      <span class="mi">A</span>
+      <span class="mi">S</span>
+      <span class="mo">=</span>
+      <span class="mo"> </span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mo">∑</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">n</span>
+        </div>
+        <div class="mrow">
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">O</span>
+           <span class="mi">i</span>
+          </div>
+          <span class="mo">−</span>
+          <div class="msub">
+           <span class="mi">S</span>
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">)</span>
+        </div>
+       </div>
+       <span class="mi">n</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(5)</span>
+  </div> where 
+  <span class="italic">O</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> denotes observed values of tree 
+  <span class="italic">i</span>, 
+  <span class="italic">S</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the associated predicted value, and 
+  <span class="italic">n</span> is the number of prediction-to-observation data-point comparisons.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Pearson’s correlation coefficient was calculated for normalised data, while BIAS was calculated from de-normalised data. The final ANNs for BA and volume increments were selected based on training accuracy indicated by R, MSE, and BIAS. The ANNs selected with optimised and set weights were validated against independent datasets.</p>
+</sec>

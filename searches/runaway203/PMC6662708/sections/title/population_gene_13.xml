@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec13" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Population genetic analyses</div>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Transcripts generated for the expression analyses were used in this analysis. Default parameters were used for all programmes unless specified.</p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Supertranscripts were generated from the assembled transcriptome using the script ‘Trinity_gene_splice_modeler.py’ provided with Trinity (version 2.5.0)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>. Trimmed and filtered reads were aligned to the supercontigs using STAR (version 2.5.2b)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR66" href="#CR66">66</a>
+  </span>. Potential PCR duplicates were marked using Picard tools MarkDuplicates. In accordance with GATK
+  <span class="sup">
+   <a ref-type="bibr" rid="CR67" href="#CR67">67</a>
+  </span> best practices, reads with split mappings were split into separate reads in the BAM files using GATK (version 3.7) tool SplitNCigarReads with parameters: -rf ReassignOneMappingQuality -RMQF 255 -RMQT 60 -U ALLOW_N_CIGAR_READS. Local realignment around indels was performed using GATK tools RealignerTargetCreator and IndelRealigner. A single pileup file was generated from the nine BAM files using samtools
+  <span class="sup">
+   <a ref-type="bibr" rid="CR68" href="#CR68">68</a>
+  </span> mpileup (version 1.3) with the parameters ‘-B -q 20-Q30’. These parameters result in bases with a base quality phred score of less than 30, and an alignment quality of less than 20, being discarded. A single ‘.sync’ file was generated from the pileup file using ‘mpileup2sync.jar’ from PoPoolation2 (ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR69" href="#CR69">69</a>
+  </span>) (version 1.201).
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Bayenv2 (ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+  </span>) was used to measure the extent to which the allele frequencies of each SNP correlate with temperature. Bayenv2 is designed to take into account the extra level of sampling error arising from pooled data from a small number of individuals. In accordance with recommendations for running Bayenv2, a set of SNPs were selected to generate a matrix of covariance between samples. Only SNPs covered by at least five reads in at least six samples, and with a minor allele supported by at least five reads in total across all samples, were selected, and only one SNP per transcript was included. The covariance matrix was generated using Bayenv2 with the following parameters: -p 9 -k 200000, and specifying specifies four diploid individuals per sample with the ‘-s’ flag. 
+  <span class="italic">Z</span>-scores for each SNP were calculated using Bayenv2 with the parameters: -p 9 k 200000 -r 8372 -n 1 -e standard_env.txt -x -m pool_matrix.txt –t. Where file ‘pool_matrix.txt’ contains the covariance matrix produced in the previous step, and ‘standard_env.txt’ contains standardised measures of temperature (in degrees centigrade).
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">Due to the various sources of noise in this dataset, we wanted to filter out SNPs that were most likely affected by sampling error. Before attempting to calculate FDRs or perform GSEA, the SNPs were filtered to remove low coverage SNPs. Specifically, we removed SNPs that were not covered by at least five reads in each sample, or which had a minor allele supported by less than 15 reads in total across the nine samples. Because Bayenv2 does not produce 
+  <span class="italic">P</span> values, we estimated the statistical significance of our results by reference to a null distribution of 
+  <span class="italic">Z</span>-scores. This was created by randomly permuting the labels in file ‘standard_env.txt’ 100 times and recalculating the 
+  <span class="italic">Z</span>-scores for each SNP. The null distribution of 
+  <span class="italic">Z</span>-scores allowed us to calculate the probability of a high 
+  <span class="italic">Z</span>-score arising by chance. The false discovery rate (FDR) for each SNP was then calculated as follows: FDR = 
+  <span class="italic">ip</span>/
+  <span class="italic">n</span>, where 
+  <span class="italic">i</span> = number of SNPs in the dataset that achieved an equal or greater 
+  <span class="italic">Z</span>-score, 
+  <span class="italic">n</span> = total number of SNPs in all null permutations that achieved an equal or greater than 
+  <span class="italic">Z</span>-score, and 
+  <span class="italic">p</span> = number of permutations.
+ </p>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">A score for each supertranscript was calculated by taking the mean 
+  <span class="italic">Z</span>-score of all SNPs from that supertranscript. FDRs for each supertranscript with more than five SNPs that passed the filter were calculated from the null distribution as follows: FDR = 
+  <span class="italic">ip</span>/
+  <span class="italic">n</span>, where 
+  <span class="italic">i</span> = number of supertranscripts in dataset that achieved an equal or greater mean 
+  <span class="italic">Z</span>-score, 
+  <span class="italic">n</span> = total number of supertranscripts with at least five SNPs passing the filter in all null permutations that achieved an equal or greater mean 
+  <span class="italic">Z</span>-score, and 
+  <span class="italic">p</span> = number of permutations. For each SNP, the minor allele frequency (MAF) was calculated for each of the three groups of samples. The MAF was calculated for each individual sample as follows: MAF = 
+  <span class="italic">m</span>/
+  <span class="italic">t</span>, where 
+  <span class="italic">m</span> = number of reads supporting minor allele and 
+  <span class="italic">t</span> = total number of reads covering site. The effective allele number was also calculated for each sample at each SNP, using the formula 
+  <span class="italic">e</span> = ((
+  <span class="italic">nc</span>)−1)/(
+  <span class="italic">n</span>+
+  <span class="italic">c</span>). MAF was calculated for each of the three groups by taking the average MAF for each sample weighted by the effective allele number for that sample. This allows varying the sampling error arising from the varying depths of coverage between samples to be accounted for.
+ </p>
+</sec>

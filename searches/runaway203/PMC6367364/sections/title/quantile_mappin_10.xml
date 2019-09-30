@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec10" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Quantile mapping</div>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">In this work, two univariate bias correction methods were tested. We primarily focus on results produced using an additive version of QDM
+  <span class="sup">
+   <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+  </span> by making use of R programming language code contained in the CRAN MBC package version 0.10–4
+  <span class="sup">
+   <a ref-type="bibr" rid="CR38" href="#CR38">38</a>
+  </span>. As reported in Appendix A of Cannon et al.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR29" href="#CR29">29</a>
+  </span>, the additive version of QDM is functionally very similar to the equidistant CDF matching algorithm of Li et al.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR39" href="#CR39">39</a>
+  </span>. The formulation of QDM aims to preserve relative changes in model-simulated climate variable quantiles. In other words, with respect to the quantiles, QDM guards against distorting the underlying climate model’s climate sensitivity. For comparison purposes, we also used a simpler and more standard quantile mapping approach called BCQM. The more commonly used standard BCQM method develops transfer equations solely from comparisons of observations and model data sets drawn from a common historical (baseline) period, which can yield results in which the relative trends in bias corrected output differ from those of the raw GCM results. Meanwhile, the QDM method also incorporates adjustments accounting for differences between the modeled distributions of the historical period and future projections. As is generally the case for statistical bias correction methods, QDM and BCQM both assume that the GCM biases present in the historical period are consistent with biases in the GCM’s future projections (i.e., a stationarity assumption).
+ </p>
+ <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">For both of these mappings, IBTrACS serves as the training dataset that 1990CTL data is nudged to because its observations have lower errors than ADT-HURSAT. ADT-HURSAT was also tested as the target distribution for the bias correction, but these results are excluded since the basic conclusions of the results remain the same. After establishing the transfer function for the bias correction using 1990CTL, the other control simulations are also bias-corrected.</p>
+</sec>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec8" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">CESM/IMPACT model</div>
+ <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">We used the Community Earth System Model (CESM) version 1.2.2 coupled with the University of Michigan IMPACT aerosol model with resolution of 1.9° × 2.5° to simulate SOA and five other externally mixed aerosol types. Fifteen aerosol species/types were simulated in the model, including sulfate in three modes (i.e., nucleation (&lt;5 nm), Aitken (5–50 nm), and accumulation (&gt;50 nm)), soot from biomass burning (bSoot, i.e., primary organic aerosol and black carbon from biomass burning), soot from fossil fuel and biofuel burning (fSoot, i.e., primary organic carbon and black carbon), and dust and sea salt, the latter two of which were each carried in four separate bins with varying radii. The basic model description and setup can be found in ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+  </span>. An explicit gas phase chemical mechanism for the formation of semi-volatile organic products, including the oxidation of isoprene, α-pinene, and aromatics, is included
+  <span class="sup">
+   <a ref-type="bibr" rid="CR42" href="#CR42">42</a>,
+   <a ref-type="bibr" rid="CR43" href="#CR43">43</a>
+  </span>. Lower volatility compounds like oligomers form when semi-volatile organics are incorporated into the aerosol phase. SOA formation from aqueous phase reactions of glyoxal and methylglyoxal and the kinetic uptake of IEPOX, glyoxal, and methylglyoxal were included
+  <span class="sup">
+   <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+  </span>. The mechanism of organic nitrate formation was updated based on ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR45" href="#CR45">45</a>
+  </span>. SOA formed by these gaseous and aqueous phase reactions are distributed to preexisting aerosol
+  <span class="sup">
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+  </span>, resulting in SOA being internally mixed with sulfate, bSoot, fSoot, dust, and sea salt.
+ </p>
+ <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">The above model was extended by adding the formation of extremely low volatility HOMs from α-pinene oxidation and their nucleation. Diacyl peroxide is suspected to be the one kind of HOM that is able to nucleate based on the experimental evidence
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>,
+   <a ref-type="bibr" rid="CR46" href="#CR46">46</a>
+  </span>. The oxidation product of pinanediol was observed in new particle formation experiments
+  <span class="sup">
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>
+  </span> and in field measurements of nucleation events
+  <span class="sup">
+   <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+  </span>. Pinic acid and pinanediol were showed to form new particles through quantum chemistry calculations
+  <span class="sup">
+   <a ref-type="bibr" rid="CR49" href="#CR49">49</a>
+  </span>. Therefore, we include diacyl peroxide, pinic acid, pinanediol, and some oxidation products of pinanediol as HOMs that are able to nucleate in the model. Diacyl peroxide and pinic acid were formed by the ozonization of α-pinene
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span>, while pinanediol was formed by the oxidation of the products of the reaction of α-pinene and hydroxyl radical
+  <span class="sup">
+   <a ref-type="bibr" rid="CR50" href="#CR50">50</a>
+  </span>. All HOMs were simulated through explicit gaseous and particle phase reactions according to experimental results
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>
+  </span> and the Master Chemical Mechanism (MCM)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+   <a ref-type="bibr" rid="CR20" href="#CR20">20</a>,
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>. The concentration of HOMs depends on the emissions of α-pinene, its atmospheric oxidation rate, and temperature. The detailed chemical reactions for the formation of HOMs that were added to the model are listed in the Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">3</a>. New particle formation by binary sulfuric acid–water nucleation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+  </span> was extended to include the HET, NON, and ION mechanisms. The rate of HET was parameterized following ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR52" href="#CR52">52</a>
+  </span>, while the rate of NON and ION were parameterized following ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR10" href="#CR10">10</a>
+  </span>. The ionization rate in the model was estimated using the method outlined in ref. 
+  <span class="sup">
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span>, which was used to calculate the rate of ION. The organic nucleation rates were adjusted from the temperature of the CLOUD experiments (278 K) to other temperatures by multiplying by exp(−(T-278)/10)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span>. The new particles formed from organic nucleation (newSOA) grew to the Aitken and accumulation mode by condensation of SVOC produced as described in the above references and by condensation of sulfuric acid. NewSOA also coagulated with each other as well as with other preexisting aerosols, at which point they were no longer counted as newSOA. Gas phase HOMs that did not nucleate new particles could condense on newSOA and other aerosols. The newSOA were also removed by dry and wet deposition based on their particle size and hygroscopicity.
+ </p>
+</sec>

@@ -1,0 +1,1140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec13" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model learning and optimization</div>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">Let us denote the model parameters entering in the functions 
+  <span class="italic">f</span>
+  <sub>1</sub>, 
+  <span class="italic">f</span>
+  <sub>2</sub> and 
+  <span class="italic">g</span> by 
+  <div id="IEq8" class="inline-formula">
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mu }_{{f}_{1}}$$\end{document}</span>
+    <div id="M10" class="math">
+     <div class="msub">
+      <span class="mi">μ</span>
+      <div class="msub">
+       <span class="mi">f</span>
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_43867_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\mu }_{{f}_{2}}$$\end{document}</span>
+    <div id="M12" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_43867_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <span class="italic">μ</span>
+  <sub>
+   <span class="italic">g</span>
+  </sub> respectively (each of these 
+  <span class="italic">μ</span> consists of corresponding ANN coefficients). To determine the parameters, we use a cost-function in a form of the Bayesian posterior probability density function (PDF):
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$P({\mu }_{{f}_{1}},{\mu }_{{f}_{2}},{\mu }_{g}|X,{\bf{q}})\propto P(X|{\mu }_{{f}_{1}},{\mu }_{{f}_{2}},{\mu }_{g},{\bf{q}})\times {P}_{pr}({\mu }_{{f}_{1}},{\mu }_{{f}_{2}},{\mu }_{g}\mathrm{).}$$\end{document}</span>
+    <div id="M14" display="block" class="math">
+     <span class="mi">P</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">|</span>
+     <span class="mi">X</span>
+     <span class="mo">,</span>
+     <span mathvariant="bold" class="mi">q</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">∝</span>
+     <span class="mi">P</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">X</span>
+     <span stretchy="false" class="mo">|</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <span mathvariant="bold" class="mi">q</span>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">×</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">P</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">p</span>
+       <span class="mi">r</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span class="mn">).</span>
+    </div>
+    <div xlink:href="41598_2019_43867_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">The first term in the right-hand side is the likelihood function – the PDF of obtaining data 
+  <span class="italic">X</span> = (
+  <span class="italic">X</span>
+  <sub>1</sub>, … 
+  <span class="italic">X</span>
+  <sub>
+   <span class="italic">N</span>
+  </sub>) of duration length 
+  <span class="italic">N</span> by the model with parameters 
+  <div id="IEq3" class="inline-formula">
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$({\mu }_{{f}_{1}},{\mu }_{{f}_{2}},{\mu }_{g})$$\end{document}</span>
+    <div id="M16" class="math">
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">μ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2019_43867_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> given the forcing time series 
+  <span class="bold">q</span> = (
+  <span class="bold">q</span>
+  <sub>1</sub>, … 
+  <span class="bold">q</span>
+  <sub>
+   <span class="italic">N</span>
+  </sub>). This function can be inferred directly from Eqs 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a> and 
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a> on the assumption that the random process 
+  <span class="italic">ζ</span> in Eq. 
+  <a rid="Equ1" ref-type="" href="#Equ1">1</a> is Gaussian and uncorrelated:
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}P(X|{\mu }_{{f}_{1}},{\mu }_{{f}_{2}},{\mu }_{g},{\bf{q}})=C{[\prod _{n=L+1}^{N}2\pi g{({x}_{n-1},\ldots {x}_{n-L},{\mu }_{g})}^{2}]}^{-\mathrm{1/2}}\\ \times \,\exp \{-\frac{1}{2}\sum _{n=L+1}^{N}\frac{{({x}_{n}-{f}_{1}({x}_{n-1},\ldots {x}_{n-L},{t}_{n},{\mu }_{{f}_{1}})-{f}_{2}({x}_{n-1},\ldots {x}_{n-L},{{\bf{q}}}_{n},{\mu }_{{f}_{2}}))}^{2}}{g{({x}_{n-1},\ldots {x}_{n-L},{\mu }_{g})}^{2}}\},\end{array}$$\end{document}</span>
+    <div id="M18" display="block" class="math">
+     <div columnalign="left" class="mtable">
+      <div columnalign="left" class="mtr">
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <span class="mi">P</span>
+         <span stretchy="false" class="mo">(</span>
+         <span class="mi">X</span>
+         <span stretchy="false" class="mo">|</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">f</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">f</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">g</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <span mathvariant="bold" class="mi">q</span>
+         <span stretchy="false" class="mo">)</span>
+         <span class="mo">=</span>
+         <span class="mi">C</span>
+         <div class="msup">
+          <div class="mrow">
+           <span stretchy="true" class="mo">[</span>
+           <div class="mrow">
+            <div class="munderover">
+             <span class="mo">∏</span>
+             <div class="mrow">
+              <span class="mi">n</span>
+              <span class="mo">=</span>
+              <span class="mi">L</span>
+              <span class="mo">+</span>
+              <span class="mn">1</span>
+             </div>
+             <span class="mi">N</span>
+            </div>
+            <span class="mn">2</span>
+            <span class="mi">π</span>
+            <span class="mi">g</span>
+            <div class="msup">
+             <div class="mrow">
+              <span stretchy="true" class="mo">(</span>
+              <div class="mrow">
+               <div class="msub">
+                <div class="mrow">
+                 <span class="mi">x</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">n</span>
+                 <span class="mo">−</span>
+                 <span class="mn">1</span>
+                </div>
+               </div>
+               <span class="mo">,</span>
+               <span class="mi">…</span>
+               <div class="msub">
+                <div class="mrow">
+                 <span class="mi">x</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">n</span>
+                 <span class="mo">−</span>
+                 <span class="mi">L</span>
+                </div>
+               </div>
+               <span class="mo">,</span>
+               <div class="msub">
+                <div class="mrow">
+                 <span class="mi">μ</span>
+                </div>
+                <div class="mrow">
+                 <span class="mi">g</span>
+                </div>
+               </div>
+              </div>
+              <span stretchy="true" class="mo">)</span>
+             </div>
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <span stretchy="true" class="mo">]</span>
+           <span width=".15em" class="mspace"/>
+          </div>
+          <div class="mrow">
+           <span class="mo">−</span>
+           <span width="-.15em" class="mspace"/>
+           <span class="mn">1/2</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div columnalign="left" class="mtr">
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <span class="mo">×</span>
+         <span width=".25em" class="mspace"/>
+         <span class="mi">exp</span>
+         <div class="mrow">
+          <span stretchy="true" class="mo">{</span>
+          <div class="mrow">
+           <span class="mo">−</span>
+           <div class="mfrac">
+            <span class="mn">1</span>
+            <span class="mn">2</span>
+           </div>
+           <div class="munderover">
+            <span class="mo">∑</span>
+            <div class="mrow">
+             <span class="mi">n</span>
+             <span class="mo">=</span>
+             <span class="mi">L</span>
+             <span class="mo">+</span>
+             <span class="mn">1</span>
+            </div>
+            <span class="mi">N</span>
+           </div>
+           <div class="mfrac">
+            <div class="mrow">
+             <div class="msup">
+              <div class="mrow">
+               <span stretchy="true" class="mo">(</span>
+               <div class="mrow">
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">x</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mi">n</span>
+                 </div>
+                </div>
+                <span class="mo">−</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">f</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mn">1</span>
+                 </div>
+                </div>
+                <div class="mrow">
+                 <span stretchy="true" class="mo">(</span>
+                 <div class="mrow">
+                  <div class="msub">
+                   <div class="mrow">
+                    <span class="mi">x</span>
+                   </div>
+                   <div class="mrow">
+                    <span class="mi">n</span>
+                    <span class="mo">−</span>
+                    <span class="mn">1</span>
+                   </div>
+                  </div>
+                  <span class="mo">,</span>
+                  <span class="mi">…</span>
+                  <div class="msub">
+                   <div class="mrow">
+                    <span class="mi">x</span>
+                   </div>
+                   <div class="mrow">
+                    <span class="mi">n</span>
+                    <span class="mo">−</span>
+                    <span class="mi">L</span>
+                   </div>
+                  </div>
+                  <span class="mo">,</span>
+                  <div class="msub">
+                   <div class="mrow">
+                    <span class="mi">t</span>
+                   </div>
+                   <div class="mrow">
+                    <span class="mi">n</span>
+                   </div>
+                  </div>
+                  <span class="mo">,</span>
+                  <div class="msub">
+                   <div class="mrow">
+                    <span class="mi">μ</span>
+                   </div>
+                   <div class="mrow">
+                    <div class="msub">
+                     <div class="mrow">
+                      <span class="mi">f</span>
+                     </div>
+                     <div class="mrow">
+                      <span class="mn">1</span>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <span stretchy="true" class="mo">)</span>
+                </div>
+                <span class="mo">−</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">f</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mn">2</span>
+                 </div>
+                </div>
+                <div class="mrow">
+                 <span stretchy="true" class="mo">(</span>
+                 <div class="mrow">
+                  <div class="msub">
+                   <div class="mrow">
+                    <span class="mi">x</span>
+                   </div>
+                   <div class="mrow">
+                    <span class="mi">n</span>
+                    <span class="mo">−</span>
+                    <span class="mn">1</span>
+                   </div>
+                  </div>
+                  <span class="mo">,</span>
+                  <span class="mi">…</span>
+                  <div class="msub">
+                   <div class="mrow">
+                    <span class="mi">x</span>
+                   </div>
+                   <div class="mrow">
+                    <span class="mi">n</span>
+                    <span class="mo">−</span>
+                    <span class="mi">L</span>
+                   </div>
+                  </div>
+                  <span class="mo">,</span>
+                  <div class="msub">
+                   <div class="mrow">
+                    <span mathvariant="bold" class="mi">q</span>
+                   </div>
+                   <div class="mrow">
+                    <span class="mi">n</span>
+                   </div>
+                  </div>
+                  <span class="mo">,</span>
+                  <div class="msub">
+                   <div class="mrow">
+                    <span class="mi">μ</span>
+                   </div>
+                   <div class="mrow">
+                    <div class="msub">
+                     <div class="mrow">
+                      <span class="mi">f</span>
+                     </div>
+                     <div class="mrow">
+                      <span class="mn">2</span>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                 <span stretchy="true" class="mo">)</span>
+                </div>
+               </div>
+               <span stretchy="true" class="mo">)</span>
+              </div>
+              <span class="mn">2</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mi">g</span>
+             <div class="msup">
+              <div class="mrow">
+               <span stretchy="true" class="mo">(</span>
+               <div class="mrow">
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">x</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mi">n</span>
+                  <span class="mo">−</span>
+                  <span class="mn">1</span>
+                 </div>
+                </div>
+                <span class="mo">,</span>
+                <span class="mi">…</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">x</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mi">n</span>
+                  <span class="mo">−</span>
+                  <span class="mi">L</span>
+                 </div>
+                </div>
+                <span class="mo">,</span>
+                <div class="msub">
+                 <div class="mrow">
+                  <span class="mi">μ</span>
+                 </div>
+                 <div class="mrow">
+                  <span class="mi">g</span>
+                 </div>
+                </div>
+               </div>
+               <span stretchy="true" class="mo">)</span>
+              </div>
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+          <span stretchy="true" class="mo">}</span>
+         </div>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_43867_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">C</span> is a constant depending on a starting fragment 
+  <span class="italic">X</span>
+  <sub>1</sub>, …
+  <span class="italic">X</span>
+  <sub>
+   <span class="italic">L</span>
+  </sub> of the time series 
+  <span class="italic">X</span> (see refs
+  <span class="sup">
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span>). The second term in Eq. 
+  <a rid="Equ5" ref-type="" href="#Equ5">5</a> is the prior PDF of the model parameters. This function restricts the domain of model learning in the space of parameters, thus compensating the degeneration of the ANN’s parameter space and simplifying the numerical analysis. Following refs
+  <span class="sup">
+   <a ref-type="bibr" rid="CR12" href="#CR12">12</a>–
+   <a ref-type="bibr" rid="CR14" href="#CR14">14</a>,
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>,
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>
+  </span>, we use a Gaussian prior PDF with different variances for different groups of ANN coefficients (
+  <span class="italic">α</span>, 
+  <span class="italic">ω</span>, and 
+  <span class="italic">γ</span>).
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">A crucial point in data-driven modeling is selecting the model structure of optimal complexity in the sense of its correspondence to the data. The Bayesian way for optimal model selection is finding the model that maximizes the marginal likelihood function characterizing the probability to produce the data 
+  <span class="italic">X</span> by the model:
+  <div id="Equ7" class="disp-formula">
+   <span class="label">7</span>
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$P(X|{{\bf{H}}}_{i})=\int \,P(X|\mu ,{{\bf{H}}}_{i})P(\mu |{{\bf{H}}}_{i})d\mu \mathop{\to }\limits^{{{\bf{H}}}_{i}}max\mathrm{.}$$\end{document}</span>
+    <div id="M20" display="block" class="math">
+     <span class="mi">P</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">X</span>
+     <span stretchy="false" class="mo">|</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">H</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">=</span>
+     <span class="mo">∫</span>
+     <span width=".25em" class="mspace"/>
+     <span class="mi">P</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">X</span>
+     <span stretchy="false" class="mo">|</span>
+     <span class="mi">μ</span>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">H</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mi">P</span>
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">μ</span>
+     <span stretchy="false" class="mo">|</span>
+     <div class="msub">
+      <div class="mrow">
+       <span mathvariant="bold" class="mi">H</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mi">d</span>
+     <span class="mi">μ</span>
+     <div class="mover">
+      <span class="mo">→</span>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span mathvariant="bold" class="mi">H</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mi">m</span>
+     <span class="mi">a</span>
+     <span class="mi">x</span>
+     <span class="mn">.</span>
+    </div>
+    <div xlink:href="41598_2019_43867_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>Here 
+  <span class="italic">μ</span> are the internal parameters of a particular model 
+  <span class="bold">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>, 
+  <span class="italic">P</span>(
+  <span class="italic">μ</span>|
+  <span class="bold">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) is a prior probability density for them, and 
+  <span class="italic">P</span>(
+  <span class="italic">X</span>|
+  <span class="italic">μ</span>, 
+  <span class="bold">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) is the likelihood for the i
+  <sub>
+   <span class="italic">th</span>
+  </sub> model’s parameters. The predefined set of models {
+  <span class="bold">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>} should be wide enough to incorporate as much as possible physically relevant evolution operators of the system. Using condition Eq. 
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a> as a criterion for best model selection prevents us from obtaining overfitted models that fit well the particular observations (and hence yield large values of the likelihood in Eq. 
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a>) but are useless for inferring robust dynamical laws underlying data.
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">The structural parameters determining our model complexity are the time lag 
+  <span class="italic">L</span> defining the model memory and the numbers of neurons 
+  <div id="IEq4" class="inline-formula">
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${m}_{{f}_{1}}$$\end{document}</span>
+    <div id="M22" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_43867_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, 
+  <div id="IEq5" class="inline-formula">
+   <div class="alternatives">
+    <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${m}_{{f}_{2}}$$\end{document}</span>
+    <div id="M24" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_43867_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <span class="italic">m</span>
+  <sub>
+   <span class="italic">g</span>
+  </sub> in the ANNs representing both the deterministic (
+  <span class="italic">f</span>
+  <sub>1</sub> and 
+  <span class="italic">f</span>
+  <sub>2</sub>) and stochastic (
+  <span class="italic">g</span>) parts of the model. Thus an ensemble of models used for the best model selection consists of the models with different structural parameter sets 
+  <div id="IEq6" class="inline-formula">
+   <div class="alternatives">
+    <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$(L,{m}_{{f}_{1}},{m}_{{f}_{2}},{m}_{g})$$\end{document}</span>
+    <div id="M26" class="math">
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">L</span>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2019_43867_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>. The procedure for the estimation of the integral in Eq. 
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a> we use here is the same as in refs
+  <span class="sup">
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span> for every model 
+  <span class="bold">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> from an ensemble of 
+  <div id="IEq7" class="inline-formula">
+   <div class="alternatives">
+    <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$(L,{m}_{{f}_{1}},{m}_{{f}_{2}},{m}_{g})$$\end{document}</span>
+    <div id="M28" class="math">
+     <span stretchy="false" class="mo">(</span>
+     <span class="mi">L</span>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">m</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+    </div>
+    <span xlink:href="41598_2019_43867_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> the following function derived by the Laplace integration method is calculated:
+  <div id="Equ8" class="disp-formula">
+   <span class="label">8</span>
+   <div class="alternatives">
+    <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{rcl}-\,\mathrm{ln}\,P(X|{{\bf{H}}}_{i}) &amp; \cong &amp; {\rm{\Psi }}({\mu }_{0})+\frac{1}{2}\,\mathrm{ln}\,|\frac{1}{2\pi }\nabla {\nabla }^{T}{\rm{\Psi }}({\mu }_{0})|,\\ {\rm{\Psi }}(\mu ) &amp; = &amp; -\mathrm{ln}[P(\mu |X,{\bf{q}},{{\bf{H}}}_{i})],\\ \mu &amp; = &amp; ({\mu }_{{f}_{1}},{\mu }_{{f}_{2}},{\mu }_{g}\mathrm{).}\end{array}$$\end{document}</span>
+    <div id="M30" display="block" class="math">
+     <div columnalign="left" class="mtable">
+      <div columnalign="left" class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <span class="mo">−</span>
+         <span width="-.10em" class="mspace"/>
+         <span class="mi">ln</span>
+         <span width=".10em" class="mspace"/>
+         <span class="mi">P</span>
+         <span stretchy="false" class="mo">(</span>
+         <span class="mi">X</span>
+         <span stretchy="false" class="mo">|</span>
+         <div class="msub">
+          <div class="mrow">
+           <span mathvariant="bold" class="mi">H</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span stretchy="false" class="mo">)</span>
+        </div>
+       </div>
+       <div columnalign="center" class="mtd">
+        <span class="mo">≅</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Ψ</span>
+         <span stretchy="false" class="mo">(</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+         </div>
+         <span stretchy="false" class="mo">)</span>
+         <span class="mo">+</span>
+         <div class="mfrac">
+          <span class="mn">1</span>
+          <span class="mn">2</span>
+         </div>
+         <span width=".25em" class="mspace"/>
+         <span class="mi">ln</span>
+         <span width=".10em" class="mspace"/>
+         <span stretchy="false" class="mo">|</span>
+         <div class="mfrac">
+          <span class="mn">1</span>
+          <div class="mrow">
+           <span class="mn">2</span>
+           <span class="mi">π</span>
+          </div>
+         </div>
+         <span class="mo">∇</span>
+         <div class="msup">
+          <div class="mrow">
+           <span class="mo">∇</span>
+          </div>
+          <span class="mi">T</span>
+         </div>
+         <span mathvariant="normal" class="mi">Ψ</span>
+         <span stretchy="false" class="mo">(</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">0</span>
+          </div>
+         </div>
+         <span stretchy="false" class="mo">)</span>
+         <span stretchy="false" class="mo">|</span>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+      <div columnalign="left" class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <span mathvariant="normal" class="mi">Ψ</span>
+         <span stretchy="false" class="mo">(</span>
+         <span class="mi">μ</span>
+         <span stretchy="false" class="mo">)</span>
+        </div>
+       </div>
+       <div columnalign="center" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <span class="mo">−</span>
+         <span class="mi">ln</span>
+         <div class="mrow">
+          <span stretchy="false" class="mo">[</span>
+          <div class="mrow">
+           <span class="mi">P</span>
+           <span stretchy="false" class="mo">(</span>
+           <span class="mi">μ</span>
+           <span stretchy="false" class="mo">|</span>
+           <span class="mi">X</span>
+           <span class="mo">,</span>
+           <span mathvariant="bold" class="mi">q</span>
+           <span class="mo">,</span>
+           <div class="msub">
+            <div class="mrow">
+             <span mathvariant="bold" class="mi">H</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">i</span>
+            </div>
+           </div>
+           <span stretchy="false" class="mo">)</span>
+          </div>
+          <span stretchy="false" class="mo">]</span>
+         </div>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+      <div columnalign="left" class="mtr">
+       <div columnalign="right" class="mtd">
+        <span class="mi">μ</span>
+       </div>
+       <div columnalign="center" class="mtd">
+        <span class="mo">=</span>
+       </div>
+       <div columnalign="left" class="mtd">
+        <div class="mrow">
+         <span stretchy="false" class="mo">(</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">f</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">f</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">μ</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">g</span>
+          </div>
+         </div>
+         <span class="mn">).</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_43867_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">Here 
+  <span class="italic">μ</span>
+  <sub>0</sub> is model parameters minimizing the function Ψ(
+  <span class="italic">μ</span>), i.e. the cost-function Eq. 
+  <a rid="Equ5" ref-type="" href="#Equ5">5</a>, ∇∇
+  <span class="sup">
+   <span class="italic">T</span>
+  </span>Ψ is the matrix of the second derivatives (Hessian matrix) of the function Ψ with respect to the parameters 
+  <span class="italic">μ</span> at the point of its minimum 
+  <span class="italic">μ</span>
+  <sub>0</sub>. While the value of the first term in the upper row of Eq. 
+  <a rid="Equ8" ref-type="" href="#Equ8">8</a> indicates how well the model outputs fit to the data, the second term penalizes the model for its complexity. Actually, the minimization of -ln 
+  <span class="italic">P</span>(
+  <span class="italic">X</span>|
+  <span class="bold">H</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) provides a balance between the fit accuracy and the model complexity.
+ </p>
+ <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">Eventually, to obtain the best model, we have to learn each model from the ensemble, which gives us the values of 
+  <span class="italic">μ</span>
+  <sub>0</sub>, calculate the optimality (Eq. 
+  <a rid="Equ8" ref-type="" href="#Equ8">8</a>), and select the model that minimizes the optimality.
+ </p>
+</sec>

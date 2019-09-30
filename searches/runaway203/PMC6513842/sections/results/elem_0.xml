@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec2" sec-type="results" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Results</div>
+ <p id="Par5" xmlns="http://www.w3.org/1999/xhtml">First, we describe the data we use and the dynamical model form we suggest. After that, we show how the model learned captures the main properties of the Pleistocene dynamics. Then we use the model for analyzing influences of different factors such as trends and forcings, as well as for studying the mechanism underlying the observed response. Finally, we present a prediction of climate cycles made by the model.</p>
+ <sec id="Sec3" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data and data-driven model</div>
+  <p id="Par6" xmlns="http://www.w3.org/1999/xhtml">For the purpose stated above we restrict our consideration by the widely used LR04 stack of benthic 
+   <span class="italic">δ</span>
+   <span class="sup">18</span>O records
+   <span class="sup">
+    <a ref-type="bibr" rid="CR11" href="#CR11">11</a>
+   </span>. This stack accumulates data from 57 sites scattered over the globe and reflects the global average of total climate changes. We took only the last part of the time series beginning form 2.6 Ma when the glacial-interglacial cycles became regular
+   <span class="sup">
+    <a ref-type="bibr" rid="CR2" href="#CR2">2</a>
+   </span>. Additionally, for technical reasons, we made this time series uniformly sampled with 2.5 kyr time step by means of applying the 5 kyr sliding window (see Methods). The latter smoothing does not disturb much the structure of the cycles, while just slightly decreases short-term noise in the data. The time series used for analysis together with its wavelet transform are shown in Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(A,B)</a>.
+  </p>
+  <p id="Par7" xmlns="http://www.w3.org/1999/xhtml">The data-driven model is constructed in the form of stochastic discrete dynamical system following the works refs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR12" href="#CR12">12</a>–
+    <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+   </span>.
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${X}_{n}=f({X}_{n-1},\,\cdots \,{X}_{n-L},{t}_{n},{{\bf{q}}}_{n})+g({X}_{n-1},\,\cdots {X}_{n-L}){\zeta }_{n}\mathrm{.}$$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">X</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">f</span>
+      <span stretchy="false" class="mo">(</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">X</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">n</span>
+        <span class="mo">−</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <span width=".25em" class="mspace"/>
+      <span class="mo">⋯</span>
+      <span width=".25em" class="mspace"/>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">X</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">n</span>
+        <span class="mo">−</span>
+        <span class="mi">L</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">t</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <div class="msub">
+       <div class="mrow">
+        <span mathvariant="bold" class="mi">q</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">+</span>
+      <span class="mi">g</span>
+      <div class="mrow">
+       <span stretchy="true" class="mo">(</span>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+          <span class="mo">−</span>
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">,</span>
+        <span width=".25em" class="mspace"/>
+        <span class="mo">⋯</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">X</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">n</span>
+          <span class="mo">−</span>
+          <span class="mi">L</span>
+         </div>
+        </div>
+       </div>
+       <span stretchy="true" class="mo">)</span>
+      </div>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">ζ</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span class="mn">.</span>
+     </div>
+     <div xlink:href="41598_2019_43867_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>
+   <div list-type="simple" class="list">
+    <div class="list-item">
+     <span class="label">(i)</span>
+     <p id="Par8">The first term here is the deterministic evolution operator (dynamical system) mapping some history of climate’s states of duration 
+      <span class="italic">L</span> (the model dimension) to the next state. This term describes the internal dynamical properties of the system. The second term parameterizes the stochastic forcing of the model, which is needed to account for processes with time scales under the time resolution of our data, e.g. the millennial and centennial dynamics. Such a “noise” was shown to play a crucial role in the ice ages (see e.g. refs
+      <span class="sup">
+       <a ref-type="bibr" rid="CR5" href="#CR5">5</a>,
+       <a ref-type="bibr" rid="CR7" href="#CR7">7</a>,
+       <a ref-type="bibr" rid="CR9" href="#CR9">9</a>
+      </span>), so the random perturbations are expected to be an essential part of the model. In the suggested model form such a noise can be state-dependent due to the product of the function 
+      <span class="italic">g</span> and uncorrelated Gaussian noise 
+      <span class="italic">ζ</span>. Both the functions 
+      <span class="italic">f</span> and 
+      <span class="italic">g</span> are unknown 
+      <span class="italic">a priori</span> and found by means of Bayesian machine learning techniques. In this work we define them via universal approximators (see Methods for details), that makes the form of the model Eq. 
+      <a rid="Equ1" ref-type="" href="#Equ1">1</a> quite general and able to describe a wide class of dynamical systems.
+     </p>
+    </div>
+    <div class="list-item">
+     <span class="label">(ii)</span>
+     <p id="Par9">Next, it was proposed by a number of theories of the MPT that the long-term Cenozoic cooling – e.g. a secular decrease in atmospheric pCO
+      <sub>2</sub>
+      <span class="sup">
+       <a ref-type="bibr" rid="CR15" href="#CR15">15</a>
+      </span>, global mean temperature
+      <span class="sup">
+       <a ref-type="bibr" rid="CR16" href="#CR16">16</a>
+      </span>, deep water temperature
+      <span class="sup">
+       <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+      </span> – have brought the climate system to some critical transition after which the nonlinear oscillations of ice sheets became feasible. To reflect possible changes of this type, we make the deterministic part 
+      <span class="italic">f</span> of the model depend explicitly on time 
+      <span class="italic">t</span>
+      <sub>
+       <span class="italic">n</span>
+      </sub> by some modification of standard functions used for its approximation (see Methods). Such a time-dependence allows us to study a slow evolution of the climate system in time and thus to reveal dynamical mechanisms underlying the observed transitions. Moreover, it gives us an opportunity to extrapolate the model beyond the observations and predict the dynamical regime over some time interval in future
+      <span class="sup">
+       <a ref-type="bibr" rid="CR12" href="#CR12">12</a>–
+       <a ref-type="bibr" rid="CR14" href="#CR14">14</a>
+      </span>.
+     </p>
+    </div>
+    <div class="list-item">
+     <span class="label">(iii)</span>
+     <p id="Par10">The last factor Eq. 
+      <a rid="Equ1" ref-type="" href="#Equ1">1</a> depends on is an orbital forcing 
+      <span class="bold">q</span> – the Earth’s insolation variations. This signal is affected primarily by three astronomical parameters: precession of both the Earth’s axis and orbit yielding together 19 and 23 kyr spectral peaks, obliquity oscillations with the 41 kyr dominating period, and less-powerful variations of the Earth’s orbit eccentricity contributing to time scales around 100 kyrs (see power spectra of the insolation in Fig. 
+      <a rid="MOESM1" ref-type="media" href="#MOESM1">S3</a>). Although the insolation signals have the same spectral components over the globe, the relationships between different harmonics are latitude-dependent: in particular, the obliquity peaks being strong far from the equator vanish in the tropics. We take into account such a dependence by using a two-dimensional forcing 
+      <span class="bold">q</span> taken from the dataset described in ref.
+      <span class="sup">
+       <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+      </span> consisting of July insolation time series at the tropical (15°N) and sub-polar (65°N) latitudes.
+     </p>
+    </div>
+   </div>
+  </p>
+  <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">The complexity of the model Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a> is determined by a set of the structural parameters – the dimension 
+   <span class="italic">L</span> and the numbers of nonlinear elements in the approximators of both functions 
+   <span class="italic">f</span> and 
+   <span class="italic">g</span> parameterizing the deterministic and stochastic parts respectively (see Methods and Supplementary Information (SI)). For the selection of the optimal model’s structure, we use Bayesian methodology: the optimal model is the one that maximizes the probability of generating the time series in hand; see the section Methods for details and practical implementation of the approach.
+  </p>
+  <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">Regarding the LR04 dataset analysis presented here, the model Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a> was trained with different sets of structural parameters. Then the different models were compared in accordance with the Bayesian criterion (see methods and SI) and the top-10 best models were considered further. All the models considered demonstrate qualitatively very similar results as well as the same mechanism of the MPT; therefore, hereinafter we illustrate the results using the best model only.
+  </p>
+ </sec>
+ <sec id="Sec4" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Dynamics of the model</div>
+  <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">The model Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a> is the stochastic dynamical system, hence its output depends on the random variable 
+   <span class="italic">ζ</span> and can differ from run to run. Figure 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(C)</a> shows the wavelet transform (WT) of the model averaged over an ensemble of 10,000 model runs with different noise realizations, as compared to the WT of the single LR04 data (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(B)</a>). Due to averaging effects, WT of the model looks more “homogeneous” than that of the data (and that of individual model time series; see an example in Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>) and allows a clear identification of the MPT onset in the model behavior. It is seen that the model reproduce the 41 kyr spectral line during the entire Pleistocene associated with the linear response to the obliquity signal as well as the moving of the substantial part of the spectral power to lower frequencies that culminates in the interval from 1.3 to 1 Ma – the main manifestation of the MPT. Beyond that, the model reproduces correctly the changing characteristic shape of the climate cycles, as shown in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2(A,B)</a>: close to sinusoidal symmetric oscillations during the pre-MPT epoch and sawtooth long-period and large-amplitude motions with the rapid deglaciations (
+   <span class="italic">δ</span>
+   <span class="sup">18</span>O decreases) after the MPT.
+   <div id="Fig2" class="fig">
+    <span class="label">Figure 2</span>
+    <div class="caption">
+     <p>Model’s glacial-interglacial cycles. (
+      <span class="bold">A</span>) 500 kyr fragment of a model trajectory for the early Pleistocene (2.4 Ma): a three-dimensional projection of the model’s phase space (left) and corresponding time series (right). (
+      <span class="bold">B</span>) The same but for the late Pleistocene (0.5 Ma). Gradual glaciations (increases of 
+      <span class="italic">δ</span>
+      <span class="sup">18</span>O) and rapid deglaciations are highlighted in black and red respectively. (
+      <span class="bold">C</span>) Statistics of the major deglaciations defined as in Fig. 
+      <a rid="Fig1" ref-type="fig" href="#Fig1">1(A)</a>: joint distribution density of deglaciation delay after the closest insolation gradient maximum and the time distance to the next deglaciation (measured in 41 kyr periods). The corresponding major deglaciations in the LR04 stack (see the yellow circles in Fig. 
+      <a rid="Fig1" ref-type="fig" href="#Fig1">1(A)</a>) are shown by circles.
+     </p>
+    </div>
+    <div xlink:href="41598_2019_43867_Fig2_HTML" id="d29e655" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+ </sec>
+ <sec id="Sec5" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">The impact of stochastic forcing</div>
+  <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">To study the role of the random fluctuations (noise) in the model, which represent the sub-grid millennial and centennial climate variability, we compare outputs of the model in three variants: (i) the full model containing all the forcings, (ii) the model without the insolation forcing, in which both forcing time series entering 
+   <span class="bold">q</span> are set to their mean values, and (iii) the noise-free model with 
+   <span class="italic">g</span> = 0. We find that the stochastic forcing is a crucial factor for the frequency-band change associated with the MPT: the transition to the 100 kyr scale occurs in the same way in the model without any insolation signal, whereas the model with insolation forcing only and no noise only exhibits a response to the obliquity 41 kyr oscillations through the entire Pleistocene (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(D,E)</a>). Thus, the model internal dynamical properties, short-scale climate fluctuations and the model nonstationarity induce together the frequency shift in the 
+   <span class="italic">δ</span>
+   <span class="sup">18</span>O variations; by contrast, the variability in insolation is not instrumental in the MPT.
+  </p>
+  <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">The resulting probability distribution of noise in the model Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a> is not constant in time due to the state-dependence of the noise amplitude 
+   <span class="italic">g</span>. The ratio of the “instantaneous” noise variance 
+   <span class="italic">g</span>
+   <span class="sup">2</span> to the variance of the LR04 time series is marked by color in Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3(A)</a>, where the time series from a single randomly chosen model run is plotted. The increase in the millennial variability in colder climate seen in Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3(A)</a> coincides well with findings of refs
+   <span class="sup">
+    <a ref-type="bibr" rid="CR19" href="#CR19">19</a>,
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+   </span> showing an amplification of the millennial-scale climate variability amplitude with an increasing of the continental ice mass. As shown below, such an increase in the sub-grid fluctuations may contribute to but does not play a central role in the MPT mechanism.
+   <div id="Fig3" class="fig">
+    <span class="label">Figure 3</span>
+    <div class="caption">
+     <p>Deterministic and stochastic model specifics. (
+      <span class="bold">A</span>) An example of model time series (the same time series is used in Fig. 
+      <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>) colored in accordance with the noise power: color represents the values of the “instantaneous” noise variance 
+      <span class="italic">g</span>
+      <span class="sup">2</span> in Eq. 
+      <a rid="Equ1" ref-type="" href="#Equ1">1</a> normalized to the variance of the LR04 stack. (
+      <span class="bold">B</span>) Deterministic model’s (see the text) steady states at different insolation gradient forcing levels (colors correspond to the insolation gradient values). The stable and unstable steady states are shown by thick and thin lines respectively.
+     </p>
+    </div>
+    <div xlink:href="41598_2019_43867_Fig3_HTML" id="d29e727" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+ </sec>
+ <sec id="Sec6" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">The impact of insolation forcing</div>
+  <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">Although the insolation signals 
+   <span class="bold">q</span> at the input of the model Eq. 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a> are comprised of two distinct time series, we found that the optimal models only depend on a particular combination of these factors that is close to the difference between the tropical and sub-polar insolation inputs (see SI). Thus, in accordance with our analysis, the only insolation forcing that matters in the Pleistocene climate is the meridional gradient of the insolation mainly affected by the obliquity oscillations (see Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S3</a>). All the harmonics related to the precession and eccentricity forcings nearly disappeared in the gradient and thereby cannot contribute to the observed dynamics. The insolation gradient was regarded as a main driver for the 41 kyr climate cycles in the pre-MPT epoch (from 3 Ma to 0.8 Ma), through its modulation of the atmospheric meridional heat and moisture fluxes
+   <span class="sup">
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+   </span>. Our results indeed provide further direct empirical evidence from the LR04 stack that such a forcing remains dominant through the rest of the Pleistocene too.
+  </p>
+  <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">In spite of the fact that the insolation forcing is not responsible for the MPT onset, it contributes significantly to post-MPT most powerful glacial-interglacial cycles via the phase-locking mechanism through which the origins of the major deglaciations follow the maxima of the insolation gradient time series. To illustrate this, we considered an ensemble of major deglaciations with 1 per mil 
+   <span class="italic">δ</span>
+   <span class="sup">18</span>O decrease per 20 kyr or faster in the model behavior, collected from 10,000 model time series over the considered time interval from 2.6 Ma to present. For each event from this ensemble we calculated the time to the closest insolation gradient maximum as well as the time to the next deglaciation from the ensemble. A joint distribution density of these values shown in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2(C)</a> indicates that the major deglaciations occur, on average, 10 kyr after the insolation gradient maxima and, consequently, the periods of glacial-interglacial cycles are close to multiples of the obliquity period 41 kyr. Moreover, most of the periods are distributed around the doubled and tripled obliquity period; this results in the near 100 kyr line in the mean model wavelet spectrum (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(C)</a>). The corresponding 10 major deglaciations from the LR04 stack are marked by circles in both 
+   <span class="italic">δ</span>
+   <span class="sup">18</span>O time series (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(A)</a>) and the density plot in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2(C)</a>: they fall well within the model statistics of deglaciation times.
+  </p>
+ </sec>
+ <sec id="Sec7" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Dynamical mechanism of the MPT</div>
+  <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">To identify a mechanism underlying the model’s behavior described above, let us first look at the steady states of the deterministic part of the model 
+   <span class="italic">X</span>
+   <sub>
+    <span class="italic">n</span>
+   </sub> = 
+   <span class="italic">f</span>(
+   <span class="italic">X</span>
+   <sub>
+    <span class="italic">n</span>−1
+   </sub>, … 
+   <span class="italic">X</span>
+   <sub>
+    <span class="italic">n</span>−
+    <span class="italic">L</span>
+   </sub>, 
+   <span class="italic">t</span>
+   <sub>
+    <span class="italic">n</span>
+   </sub>, 
+   <span class="bold">q</span>
+   <sub>
+    <span class="italic">n</span>
+   </sub>) at different constant values of the insolation forcing 
+   <span class="bold">q</span>. Figure 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3(B)</a> shows the time evolution of the steady states at different insolation gradient levels, representing a “skeleton” of the obtained model’s dynamics. While at the low insolation gradient values, corresponding to warmer climate, the model is stable, the stability of the steady state decreases with the insolation gradient, and eventually, it becomes unstable at high insolation gradient levels. Nevertheless, the deterministic model under the quasi-periodical insolation gradient always lives near the “warm” stable state: the relatively short period of the forcing prevents it from going far from it in spite of the epochs of the model’s instability. Instead, the model state just slightly moves along with the insolation gradient oscillations. This is why the model demonstrates the 41 kyr response plotted in Figs 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(E)</a> and 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2(A)</a> during the whole Pleistocene in the absence of the stochastic part.
+  </p>
+  <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">The behavior changes essentially if the millennial processes are switched on. Due to the trend in the model, the steady states corresponding to stable and unstable epochs of climate converge with time (as seen e.g. from Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3(B)</a>); simultaneously, the stability of the warm climate states decreases and the amplitude of the millennial noise increases (Fig. 
+   <a rid="Fig3" ref-type="fig" href="#Fig3">3(A)</a>). Eventually, starting from the middle Pleistocene, the noise is able to push out the model farther from the steady state to the area where the response of the model is essentially nonlinear: fast relaxations from the cold to warm climate and slower backward motions occur. The result is that in the full model with both millennial and insolation forcings we see the onset of the regime with noise-induced sawtooth oscillations (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2(B)</a>) associated with the MPT.
+  </p>
+  <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">In general, the insolation forcing is not necessary for the MPT: the decreased stability of the warm steady state allows the noise to provide the transition starting from the average insolation gradient level (see e.g. Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1(D)</a>). However, the insolation gradient paces the glacial-interglacial cycles in the following way. The fastest stages of the glacial-interglacial oscillations (i.e., the rapid deglaciations) tend to occur when the climate is cold enough (high 
+   <span class="italic">δ</span>
+   <span class="sup">18</span>O level) and, at the same time, the insolation gradient has passed the maximal phase approaching the average. Under such conditions, the glacial climate is forced to go rapidly toward the warm steady state which appears in the model at the average insolation gradient level. Both these conditions determine the phase locking of the major deglaciations and the obliquity signal, which we observe in the model dynamics as well as in the LR04 time series (Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2(C)</a>). This mechanism is further explained in SI (the text and Figs 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S4</a>–
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S6</a>).
+  </p>
+ </sec>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model prediction</div>
+  <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Finally, let us look what the obtained model predicts, being simply extrapolated into future, under the assumption that the detected trend stays the same. Note that this assumption may not be realistic, since there is no clear evidence of the ongoing long-term cooling even in the late Pleistocene
+   <span class="sup">
+    <a ref-type="bibr" rid="CR1" href="#CR1">1</a>
+   </span>. It is even more suspect today, when the anthropogenic warming contributes to shifting the climatic means. Still, if such a trend held steady in future, the large glaciations in the model would still occur, since warm and glacial states would continue to converge as Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S7</a> indicates. While the amplitude of “future” climate variability is almost unchanged in time, an additional short-scale (around 20 kyr period) cycle appears in the model time series independently of the insolation forcing (see WT for the model extrapolations with and without the insolation forcing in Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S7</a>).
+  </p>
+ </sec>
+</sec>

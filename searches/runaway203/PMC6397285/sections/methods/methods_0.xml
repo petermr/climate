@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec6" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">This study was based on monthly-mean data from reanalysis projects and the suite of CMIP5 climate models, and only the NH was considered. Owing to the different resolutions of the models and reanalysis data, a bilinear interpolation was used to convert the reanalysis and model datasets to a common resolution of 1° × 1° (latitude × longitude). Monthly precipitation data from the GPCC Full Data Product Version 4, monthly air temperature from the NCEP/NCAR reanalysis dataset and monthly soil moisture to a depth of 10 cm from the Global Land Data Assimilation System (GLDAS) Version 1 were used to estimate permafrost distribution under the present-day climate.</p>
+ <p id="Par18" xmlns="http://www.w3.org/1999/xhtml">Historical and future simulations from the coupled climate models were obtained from the CMIP5 archive (Table 
+  <a rid="Tab3" ref-type="table" href="#Tab3">3</a>). The historical simulations ran from 1850 or 1860 to the end of 2005. We refer to the definition provided by Assessment Report 5 published by the Intergovernmental Panel on Climate Change (IPCC AR5), which designates 1986 to 2005 as a reference period under the current climate
+  <span class="sup">
+   <a ref-type="bibr" rid="CR17" href="#CR17">17</a>
+  </span>. The future simulations used included three different RCPs (RCP2.6, RCP4.5 and RCP8.5), ranging from 2006 to 2100. The model variables include surface temperature, air temperature and precipitation, and the output from run1 of each model was used (e.g. r1i1p1).
+  <div id="Tab3" class="table-wrap">
+   <span class="label">Table 3</span>
+   <div class="caption">
+    <p>The information of CMIP5 model used in this study (Ensemble means multi-model mean).</p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <thead>
+     <tr>
+      <th>Model</th>
+      <th>Institution</th>
+      <th>Resolution</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td>BCC-CSM1.1</td>
+      <td>Beijing Climate Center, China</td>
+      <td>2.8° × 2.8°</td>
+     </tr>
+     <tr>
+      <td>BCC-CSM1.1(m)</td>
+      <td>Beijing Climate Center, China</td>
+      <td>1.3° × 1.1°</td>
+     </tr>
+     <tr>
+      <td>BNU-ESM</td>
+      <td>Beijing Normal University. China</td>
+      <td>2.8° × 2.8°</td>
+     </tr>
+     <tr>
+      <td>CanESM2</td>
+      <td>Canadian Center for Climate Modeling and Analysis, Canada</td>
+      <td>2.8° × 2.8°</td>
+     </tr>
+     <tr>
+      <td>CNRM-CM5</td>
+      <td>CNRM-CERFACS, France</td>
+      <td>1.4° × 1.4°</td>
+     </tr>
+     <tr>
+      <td>CSIRO-Mk3.6.0</td>
+      <td>CSIRO Atmospheric Research, Australia</td>
+      <td>1.875° × 1.875°</td>
+     </tr>
+     <tr>
+      <td>HadGEM2-ES</td>
+      <td>Met Office Hadley Centre, UK</td>
+      <td>1.875° × 1.25°</td>
+     </tr>
+     <tr>
+      <td>IPSL-CM5A-LR</td>
+      <td>Institut Pierre Simon Laplace, France</td>
+      <td>3.75° × 1.875°</td>
+     </tr>
+     <tr>
+      <td>IPSL-CM5A-MR</td>
+      <td>Institut Pierre Simon Laplace, France</td>
+      <td>2.5° × 1.25°</td>
+     </tr>
+     <tr>
+      <td>MIROC-ESM</td>
+      <td>Atmosphere and Ocean Research Institute, Japan</td>
+      <td>2.8° × 2.8°</td>
+     </tr>
+     <tr>
+      <td>MIROC-ESM
+       <span class="bold">-</span>CHEM
+      </td>
+      <td>Atmosphere and Ocean Research Institute, Japan</td>
+      <td>2.8° × 2.8°</td>
+     </tr>
+     <tr>
+      <td>MIROC5</td>
+      <td>Atmosphere and Ocean Research Institute, Japan</td>
+      <td>1.4° × 1.4°</td>
+     </tr>
+     <tr>
+      <td>GISS-E2-H</td>
+      <td>NASA Goddard Institute for Space Studies, USA</td>
+      <td>2.5° × 2°</td>
+     </tr>
+     <tr>
+      <td>CCSM4</td>
+      <td>National Center for Atmospheric Research, USA</td>
+      <td>1.25° × 0.94°</td>
+     </tr>
+     <tr>
+      <td>CESM1(CAM5)</td>
+      <td>NSF-DOE-NCAR, USA</td>
+      <td>1.25° × 0.94°</td>
+     </tr>
+     <tr>
+      <td>GFDL-CM3</td>
+      <td>Geophysical Fluid Dynamics Laboratory, USA</td>
+      <td>2.5° × 2.0°</td>
+     </tr>
+     <tr>
+      <td>NorESM1-M</td>
+      <td>Norwegian Climate Center, Norway</td>
+      <td>2.5° × 1.875°</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+ </p>
+ <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">The extent of the permafrost can be estimated with either indirect methods or direct methods. As indirect methods, we calculated the mean annual air temperature (MAAT), air frost index (F), surface frost index (SFI) and simplified permafrost models (e.g. Kudryavtsev). As direct methods, we diagnosed the temperature of soil layers (TSL) and mean annual ground temperature (MAGT). Although the simulated soil temperature from CMIP5 models or LSMs such as CLM4.5 can also be used in permafrost projection
+  <span class="sup">
+   <a ref-type="bibr" rid="CR27" href="#CR27">27</a>,
+   <a ref-type="bibr" rid="CR41" href="#CR41">41</a>
+  </span>, it should be noted that freeze–thaw parameterizations in LSMs might not be perfect. First, most current land surface models are isothermal models and do not consider the interactions between thermal and hydrological processes, thus degrading the simulation performance of the LSM over permafrost regions. This issue and the corresponding parameterization development have been addressed by Wang and Yang
+  <span class="sup">
+   <a ref-type="bibr" rid="CR53" href="#CR53">53</a>
+  </span> in a recent work. Second, the parameterizations of the occurrence of soil freeze or thaw in current LSMs are not complete
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span>, and cannot represent subgrid-scale permafrost distributions (e.g. sporadic and isolated permafrost)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>,
+   <a ref-type="bibr" rid="CR55" href="#CR55">55</a>
+  </span>. Our results
+  <span class="sup">
+   <a ref-type="bibr" rid="CR54" href="#CR54">54</a>
+  </span> also indicate that the simulations of the freezing–thawing process are not very consistent with observations and would greatly influence the calculation of permafrost extent. Third, since the soil layers in LSM are not uniform and the soil layers are different in different LSMs, it is difficult to directly compare the permafrost extent at the same depth. As a result, interpolation between the soil layers could cause uncertainty in the estimation of permafrost extent. Our preliminary numerical experiment based on CLM4.5 also indicates that CLM4.5 evidently underestimates the permafrost extent (not shown). The Kudryavtsev method is a classic and stable approach in permafrost simulation
+  <span class="sup">
+   <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+  </span>, which is mainly driven by climate variables (e.g. air temperature, soil moisture and snow depth) and considers the impacts of air temperature, vegetation, snow characteristics, soil texture and thermal properties on the permafrost rather than soil temperature only. Consequently, the Kudryavtsev method was used in this study.
+ </p>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Kudryavtsev’s method assumes that the annual variations of the air temperature can be described by a periodic function. Temperature and its variation amplitude at the soil surface can be expressed as the following three parts:
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{T}}_{s}={\bar{T}}_{a}+{\rm{\Delta }}{T}_{sn}+{\rm{\Delta }}{T}_{veg}$$\end{document}</span>
+    <div id="M2" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">a</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${A}_{s}={A}_{a}-{\rm{\Delta }}{A}_{sn}-{\rm{\Delta }}{A}_{veg},$$\end{document}</span>
+    <div id="M4" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">a</span>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{T}}_{a}$$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">a</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the MAAT, 
+  <span class="italic">A</span>
+  <sub>
+   <span class="italic">a</span>
+  </sub> is the annual amplitude of the air temperature and 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{T}_{sn}$$\end{document}</span>
+    <div id="M8" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, 
+  <div id="IEq3" class="inline-formula">
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{T}_{veg}$$\end{document}</span>
+    <div id="M10" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, 
+  <div id="IEq4" class="inline-formula">
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{A}_{sn}$$\end{document}</span>
+    <div id="M12" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq5" class="inline-formula">
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{A}_{veg}$$\end{document}</span>
+    <div id="M14" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are the adjustments for the thermal effects of snow and vegetation.
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">The empirical equation accounting for the insulation effect of snow cover has the following form
+  <span class="sup">
+   <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+  </span>:
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{T}_{sn}={A}_{a}\{1-\exp [-{Z}_{sn}\cdot {(\frac{\pi {C}_{sn}{\rho }_{sn}}{P\cdot {\lambda }_{sn}})}^{1/2}]\}$$\end{document}</span>
+    <div id="M16" display="block" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">a</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <span stretchy="true" class="mo">{</span>
+      <div class="mrow">
+       <span class="mn">1</span>
+       <span class="mo">−</span>
+       <span class="mi">exp</span>
+       <div class="mrow">
+        <span stretchy="true" class="mo">[</span>
+        <div class="mrow">
+         <span class="mo">−</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">Z</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">s</span>
+           <span class="mi">n</span>
+          </div>
+         </div>
+         <span class="mo">⋅</span>
+         <div class="msup">
+          <div class="mrow">
+           <span stretchy="true" class="mo">(</span>
+           <div class="mrow">
+            <div class="mfrac">
+             <div class="mrow">
+              <span class="mi">π</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">C</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">s</span>
+                <span class="mi">n</span>
+               </div>
+              </div>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">ρ</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">s</span>
+                <span class="mi">n</span>
+               </div>
+              </div>
+             </div>
+             <div class="mrow">
+              <span class="mi">P</span>
+              <span class="mo">⋅</span>
+              <div class="msub">
+               <div class="mrow">
+                <span class="mi">λ</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">s</span>
+                <span class="mi">n</span>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+           <span stretchy="true" class="mo">)</span>
+          </div>
+          <div class="mrow">
+           <span class="mn">1</span>
+           <span class="mo">/</span>
+           <span class="mn">2</span>
+          </div>
+         </div>
+        </div>
+        <span stretchy="true" class="mo">]</span>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">}</span>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{A}_{sn}=\frac{2}{\pi }{\rm{\Delta }}{T}_{sn},$$\end{document}</span>
+    <div id="M18" display="block" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <span class="mn">2</span>
+      <span class="mi">π</span>
+     </div>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">Z</span>
+  <sub>
+   <span class="italic">sn</span>
+  </sub> is the snow thickness (m), 
+  <span class="italic">λ</span>
+  <sub>
+   <span class="italic">sn</span>
+  </sub> is the snow’s thermal conductivity, 
+  <span class="italic">C</span>
+  <sub>
+   <span class="italic">sn</span>
+  </sub> is its specific heat capacity (J kg
+  <span class="sup">−1</span> °C
+  <span class="sup">−1</span>) and 
+  <div id="IEq6" class="inline-formula">
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rho }_{sn}$$\end{document}</span>
+    <div id="M20" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">ρ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the snow density (kg m
+  <span class="sup">−3</span>), which is assumed to be 250 kg m
+  <span class="sup">−3</span>. The equation for calculating snow depth can be found in Nelson and Outcalt
+  <span class="sup">
+   <a ref-type="bibr" rid="CR57" href="#CR57">57</a>
+  </span>.
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">The thermal effects of vegetation are represented in the following equations:
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${A}_{veg}={A}_{a}-{\rm{\Delta }}{A}_{sn}$$\end{document}</span>
+    <div id="M22" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">a</span>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{T}}_{veg}={\bar{T}}_{a}+{\rm{\Delta }}{T}_{sn}$$\end{document}</span>
+    <div id="M24" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">a</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+       <span class="mi">n</span>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ7" class="disp-formula">
+   <span class="label">7</span>
+   <div class="alternatives">
+    <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{A}_{veg}=\frac{{\rm{\Delta }}{A}_{1}\cdot {\tau }_{1}+{\rm{\Delta }}{A}_{2}\cdot {\tau }_{2}}{P}$$\end{document}</span>
+    <div id="M26" display="block" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">A</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">⋅</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">τ</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <span mathvariant="normal" class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">A</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">⋅</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">τ</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span class="mi">P</span>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ8" class="disp-formula">
+   <span class="label">8</span>
+   <div class="alternatives">
+    <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{T}_{veg}=\frac{{\rm{\Delta }}{A}_{1}\cdot {\tau }_{1}-{\rm{\Delta }}{A}_{2}\cdot {\tau }_{2}}{P}\cdot \frac{\pi }{2},$$\end{document}</span>
+    <div id="M28" display="block" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">v</span>
+       <span class="mi">e</span>
+       <span class="mi">g</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span mathvariant="normal" class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">A</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">⋅</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">τ</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+        </div>
+       </div>
+       <span class="mo">−</span>
+       <span mathvariant="normal" class="mi">Δ</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">A</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+       <span class="mo">⋅</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">τ</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span class="mi">P</span>
+     </div>
+     <span class="mo">⋅</span>
+     <div class="mfrac">
+      <span class="mi">π</span>
+      <span class="mn">2</span>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <div id="IEq7" class="inline-formula">
+   <div class="alternatives">
+    <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\tau }_{1}$$\end{document}</span>
+    <div id="M30" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">τ</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq8" class="inline-formula">
+   <div class="alternatives">
+    <span id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\tau }_{1}$$\end{document}</span>
+    <div id="M32" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">τ</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are the durations of the cold and warm periods, respectively, and 
+  <div id="IEq9" class="inline-formula">
+   <div class="alternatives">
+    <span id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{A}_{1}$$\end{document}</span>
+    <div id="M34" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">1</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq9.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq10" class="inline-formula">
+   <div class="alternatives">
+    <span id="M35" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\rm{\Delta }}{A}_{2}$$\end{document}</span>
+    <div id="M36" class="math">
+     <span mathvariant="normal" class="mi">Δ</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq10.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are the respective differences between the average temperature at the surface and vegetation during the cold and warm periods (°C).
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">The mean annual temperature at the depth of seasonal thaw 
+  <div id="IEq11" class="inline-formula">
+   <div class="alternatives">
+    <span id="M37" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{T}}_{z}$$\end{document}</span>
+    <div id="M38" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq11.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> was calculated using a semi-empirical equation:
+  <div id="Equ9" class="disp-formula">
+   <span class="label">9</span>
+   <div class="alternatives">
+    <span id="M39" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${T}_{num}=0.5\cdot {T}_{s}\cdot ({\lambda }_{f}+{\lambda }_{t})+{A}_{s}\frac{{\lambda }_{f}-{\lambda }_{t}}{\pi }[\frac{{\bar{T}}_{s}}{{A}_{s}}{\arcsin }\frac{{\bar{T}}_{s}}{{A}_{s}}+{(1-\frac{{\pi }^{2}}{{A}_{s}^{2}})}^{1/2}]$$\end{document}</span>
+    <div id="M40" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">n</span>
+       <span class="mi">u</span>
+       <span class="mi">m</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <span class="mn">0.5</span>
+     <span class="mo">⋅</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">T</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <span class="mo">⋅</span>
+     <span stretchy="false" class="mo">(</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">λ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">f</span>
+      </div>
+     </div>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">λ</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span stretchy="false" class="mo">)</span>
+     <span class="mo">+</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">s</span>
+      </div>
+     </div>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">λ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">f</span>
+        </div>
+       </div>
+       <span class="mo">−</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">λ</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+      <span class="mi">π</span>
+     </div>
+     <div class="mrow">
+      <span stretchy="true" class="mo">[</span>
+      <div class="mrow">
+       <div class="mfrac">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <div accent="true" class="mover">
+            <span class="mi">T</span>
+            <span class="mo">¯</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mi">s</span>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">A</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">s</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span mathvariant="italic" class="mi">arcsin</span>
+       <div class="mfrac">
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <div accent="true" class="mover">
+            <span class="mi">T</span>
+            <span class="mo">¯</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mi">s</span>
+          </div>
+         </div>
+        </div>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">A</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">s</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msup">
+        <div class="mrow">
+         <span stretchy="true" class="mo">(</span>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">−</span>
+          <div class="mfrac">
+           <div class="mrow">
+            <div class="msup">
+             <div class="mrow">
+              <span class="mi">π</span>
+             </div>
+             <span class="mn">2</span>
+            </div>
+           </div>
+           <div class="mrow">
+            <div class="msubsup">
+             <div class="mrow">
+              <span class="mi">A</span>
+             </div>
+             <div class="mrow">
+              <span class="mi">s</span>
+             </div>
+             <div class="mrow">
+              <span class="mn">2</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span stretchy="true" class="mo">)</span>
+        </div>
+        <div class="mrow">
+         <span class="mn">1</span>
+         <span class="mo">/</span>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+      <span stretchy="true" class="mo">]</span>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ10" class="disp-formula">
+   <span class="label">10</span>
+   <div class="alternatives">
+    <span id="M41" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{T}}_{z}=\frac{{T}_{num}}{{\lambda }^{\ast }}$$\end{document}</span>
+    <div id="M42" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">n</span>
+         <span class="mi">u</span>
+         <span class="mi">m</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="msup">
+        <div class="mrow">
+         <span class="mi">λ</span>
+        </div>
+        <span class="mo">⁎</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">Here, 
+  <div id="IEq12" class="inline-formula">
+   <div class="alternatives">
+    <span id="M43" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\lambda }^{\ast }=\{\begin{array}{c}{\lambda }_{f},{T}_{num} &lt; 0\\ {\lambda }_{t},{T}_{num} &gt; 0\end{array}$$\end{document}</span>
+    <div id="M44" class="math">
+     <div class="msup">
+      <div class="mrow">
+       <span class="mi">λ</span>
+      </div>
+      <span class="mo">⁎</span>
+     </div>
+     <span class="mo">=</span>
+     <div class="mrow">
+      <span stretchy="true" class="mo">{</span>
+      <div class="mrow">
+       <div class="mtable">
+        <div class="mtr">
+         <div class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">λ</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">f</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">n</span>
+             <span class="mi">u</span>
+             <span class="mi">m</span>
+            </div>
+           </div>
+           <span class="mo">&lt;</span>
+           <span class="mn">0</span>
+          </div>
+         </div>
+        </div>
+        <div class="mtr">
+         <div class="mtd">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">λ</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">t</span>
+            </div>
+           </div>
+           <span class="mo">,</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">T</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">n</span>
+             <span class="mi">u</span>
+             <span class="mi">m</span>
+            </div>
+           </div>
+           <span class="mo">&gt;</span>
+           <span class="mn">0</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq12.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, 
+  <span class="italic">λ</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> and 
+  <span class="italic">λ</span>
+  <sub>
+   <span class="italic">f</span>
+  </sub> are the thermal conductivities of the thawed and frozen soil, respectively (W m
+  <span class="sup">−1</span> °C
+  <span class="sup">−1</span>), and 
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">s</span>
+  </sub> and 
+  <span class="italic">A</span>
+  <sub>
+   <span class="italic">s</span>
+  </sub> are the temperature and temperature amplitude, respectively, at the soil surface. When 
+  <div id="IEq13" class="inline-formula">
+   <div class="alternatives">
+    <span id="M45" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{T}}_{z} &lt; 0$$\end{document}</span>
+    <div id="M46" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+     </div>
+     <span class="mo">&lt;</span>
+     <span class="mn">0</span>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq13.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, there are permafrost regions, and when 
+  <div id="IEq14" class="inline-formula">
+   <div class="alternatives">
+    <span id="M47" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{T}}_{z} &gt; 0$$\end{document}</span>
+    <div id="M48" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <div accent="true" class="mover">
+        <span class="mi">T</span>
+        <span class="mo">¯</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+     </div>
+     <span class="mo">&gt;</span>
+     <span class="mn">0</span>
+    </div>
+    <span xlink:href="41598_2019_39942_Article_IEq14.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, there are seasonal frozen soil or non-frozen soil regions.
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The following semi-empirical equation for the depth of seasonal thawing or freezing can be applied
+  <span class="sup">
+   <a ref-type="bibr" rid="CR51" href="#CR51">51</a>
+  </span>:
+  <div id="Equ11" class="disp-formula">
+   <span class="label">11</span>
+   <div class="alternatives">
+    <span id="M49" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$Z=\tfrac{2({A}_{s}-{\bar{T}}_{z})\cdot {(\tfrac{\lambda \cdot P\cdot C}{\pi })}^{1/2}+\tfrac{(2{A}_{z}C{Z}_{c}+{Q}_{L}{Z}_{c}){Q}_{L}{(\tfrac{\lambda P}{\pi c})}^{1/2}}{2{A}_{z}C{Z}_{c}+{Q}_{L}{Z}_{c}+(2{A}_{z}C+{Q}_{L}){(\tfrac{\lambda P}{\pi C})}^{1/2}}}{2{A}_{z}C+{Q}_{L}},$$\end{document}</span>
+    <div id="M50" display="block" class="math">
+     <span class="mi">Z</span>
+     <span class="mo">=</span>
+     <div displaystyle="false" class="mstyle">
+      <div class="mfrac">
+       <div class="mrow">
+        <span class="mn">2</span>
+        <span stretchy="false" class="mo">(</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">A</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">s</span>
+         </div>
+        </div>
+        <span class="mo">−</span>
+        <div class="msub">
+         <div class="mrow">
+          <div accent="true" class="mover">
+           <span class="mi">T</span>
+           <span class="mo">¯</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+        </div>
+        <span stretchy="false" class="mo">)</span>
+        <span class="mo">⋅</span>
+        <div class="msup">
+         <div class="mrow">
+          <span stretchy="true" class="mo">(</span>
+          <div class="mrow">
+           <div displaystyle="false" class="mstyle">
+            <div class="mfrac">
+             <div class="mrow">
+              <span class="mi">λ</span>
+              <span class="mo">⋅</span>
+              <span class="mi">P</span>
+              <span class="mo">⋅</span>
+              <span class="mi">C</span>
+             </div>
+             <span class="mi">π</span>
+            </div>
+           </div>
+          </div>
+          <span stretchy="true" class="mo">)</span>
+         </div>
+         <div class="mrow">
+          <span class="mn">1</span>
+          <span class="mo">/</span>
+          <span class="mn">2</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div displaystyle="false" class="mstyle">
+         <div class="mfrac">
+          <div class="mrow">
+           <span stretchy="false" class="mo">(</span>
+           <span class="mn">2</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">A</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">z</span>
+            </div>
+           </div>
+           <span class="mi">C</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Z</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Q</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">L</span>
+            </div>
+           </div>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Z</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+           </div>
+           <span stretchy="false" class="mo">)</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Q</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">L</span>
+            </div>
+           </div>
+           <div class="msup">
+            <div class="mrow">
+             <span stretchy="true" class="mo">(</span>
+             <div class="mrow">
+              <div class="mfrac">
+               <div class="mrow">
+                <span class="mi">λ</span>
+                <span class="mi">P</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">π</span>
+                <span class="mi">c</span>
+               </div>
+              </div>
+             </div>
+             <span stretchy="true" class="mo">)</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">/</span>
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mn">2</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">A</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">z</span>
+            </div>
+           </div>
+           <span class="mi">C</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Z</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Q</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">L</span>
+            </div>
+           </div>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Z</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">c</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <span stretchy="false" class="mo">(</span>
+           <span class="mn">2</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">A</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">z</span>
+            </div>
+           </div>
+           <span class="mi">C</span>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Q</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">L</span>
+            </div>
+           </div>
+           <span stretchy="false" class="mo">)</span>
+           <div class="msup">
+            <div class="mrow">
+             <span stretchy="true" class="mo">(</span>
+             <div class="mrow">
+              <div class="mfrac">
+               <div class="mrow">
+                <span class="mi">λ</span>
+                <span class="mi">P</span>
+               </div>
+               <div class="mrow">
+                <span class="mi">π</span>
+                <span class="mi">C</span>
+               </div>
+              </div>
+             </div>
+             <span stretchy="true" class="mo">)</span>
+            </div>
+            <div class="mrow">
+             <span class="mn">1</span>
+             <span class="mo">/</span>
+             <span class="mn">2</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">2</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">A</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">z</span>
+         </div>
+        </div>
+        <span class="mi">C</span>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">Q</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">L</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ11.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where
+  <div id="Equ12" class="disp-formula">
+   <span class="label">12</span>
+   <div class="alternatives">
+    <span id="M51" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${Z}_{c}=\frac{2({A}_{s}-{\bar{T}}_{z})\sqrt{\frac{\lambda PC}{\pi }}}{2{A}_{z}C+{Q}_{L}}$$\end{document}</span>
+    <div id="M52" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">Z</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">c</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mn">2</span>
+       <span stretchy="false" class="mo">(</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">A</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+       <span class="mo">−</span>
+       <div class="msub">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <span class="mi">T</span>
+          <span class="mo">¯</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+       </div>
+       <span stretchy="false" class="mo">)</span>
+       <div class="msqrt">
+        <div class="mrow">
+         <div class="mfrac">
+          <div class="mrow">
+           <span class="mi">λ</span>
+           <span class="mi">P</span>
+           <span class="mi">C</span>
+          </div>
+          <span class="mi">π</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">A</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+       </div>
+       <span class="mi">C</span>
+       <span class="mo">+</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">Q</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">L</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ12.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+  <div id="Equ13" class="disp-formula">
+   <span class="label">13</span>
+   <div class="alternatives">
+    <span id="M53" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${A}_{z}=\frac{{A}_{s}-{\bar{T}}_{z}}{\mathrm{ln}(\frac{{A}_{s}+{Q}_{L}\,/\,2C}{{\bar{T}}_{z}+{Q}_{L}\,/\,2C})}-\frac{{Q}_{L}}{2C},$$\end{document}</span>
+    <div id="M54" display="block" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">A</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">z</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">A</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">s</span>
+        </div>
+       </div>
+       <span class="mo">−</span>
+       <div class="msub">
+        <div class="mrow">
+         <div accent="true" class="mover">
+          <span class="mi">T</span>
+          <span class="mo">¯</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span class="mi">z</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">ln</span>
+       <div class="mrow">
+        <span stretchy="true" class="mo">(</span>
+        <div class="mrow">
+         <div class="mfrac">
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">A</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">s</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Q</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">L</span>
+            </div>
+           </div>
+           <span width="-.25em" class="mspace"/>
+           <span class="mo">/</span>
+           <span width="-.25em" class="mspace"/>
+           <span class="mn">2</span>
+           <span class="mi">C</span>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <div class="mrow">
+             <div accent="true" class="mover">
+              <span class="mi">T</span>
+              <span class="mo">¯</span>
+             </div>
+            </div>
+            <div class="mrow">
+             <span class="mi">z</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <div class="mrow">
+             <span class="mi">Q</span>
+            </div>
+            <div class="mrow">
+             <span class="mi">L</span>
+            </div>
+           </div>
+           <span width="-.25em" class="mspace"/>
+           <span class="mo">/</span>
+           <span width="-.25em" class="mspace"/>
+           <span class="mn">2</span>
+           <span class="mi">C</span>
+          </div>
+         </div>
+        </div>
+        <span stretchy="true" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">−</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">Q</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">L</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mn">2</span>
+       <span class="mi">C</span>
+      </div>
+     </div>
+     <span class="mo">,</span>
+    </div>
+    <div xlink:href="41598_2019_39942_Article_Equ13.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">λ</span> and 
+  <span class="italic">C</span> are, respectively, the thermal conductivity (W m
+  <span class="sup">−1</span> °C
+  <span class="sup">−1</span>) and volumetric heat capacity (W m
+  <span class="sup">−3</span> °C
+  <span class="sup">−1</span>) of the soil. 
+  <span class="italic">Q</span>
+  <sub>
+   <span class="italic">L</span>
+  </sub> is the latent heat of phase change (J m
+  <span class="sup">−3</span>). The volumetric heat capacity for soil can be found in de Vries
+  <span class="sup">
+   <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+  </span>.
+ </p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Soil type was classified into sand, clay or organic. The International Geosphere–Biosphere Programme (IGBP) soil dataset
+  <span class="sup">
+   <a ref-type="bibr" rid="CR59" href="#CR59">59</a>
+  </span> of 4931 soil mapping units and the associated sand and clay content for each soil layer were used to create a mineral soil texture dataset
+  <span class="sup">
+   <a ref-type="bibr" rid="CR60" href="#CR60">60</a>
+  </span>. The soil organic matter data were merged from two sources: the International Soil Reference and Information Centre (ISRIC-WISE)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR61" href="#CR61">61</a>
+  </span> and the Northern Circumpolar Soil Carbon Database (NCSCD)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR62" href="#CR62">62</a>
+  </span>. Both datasets report carbon down to 1 m depth. Carbon was partitioned across the top seven CLM4 layers (~1 m depth) as in Lawrence and Slater
+  <span class="sup">
+   <a ref-type="bibr" rid="CR63" href="#CR63">63</a>
+  </span>. The soil type and organic data were adapted from the land surface data of the Community Earth System Model (CESM). The soil column was subdivided into 10 layers, with the maximum depth of soil being 3.8019 m at a resolution of 0.23° × 0.31°. This selection implies that the permafrost areas and permafrost loss calculated in this study indicate permafrost extent at depths less than 3.8 m. Organic matter density was calculated based on the weights of the soil column at 10 soil layers. The layer of mineral soil and organic matter was considered to be a homogeneous medium with different thermal properties in the frozen and thawed states. The details of the parameter settings in Kudryavtsev’s method can be found in Animov 
+  <span class="italic">et al</span>.
+  <span class="sup">
+   <a ref-type="bibr" rid="CR64" href="#CR64">64</a>
+  </span>.
+ </p>
+</sec>

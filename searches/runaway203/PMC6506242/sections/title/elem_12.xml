@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">MATERIALS AND METHODS</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Study design</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Climate model data from the CMIP5 (
+   <a rid="R26" ref-type="bibr" href="#R26">
+    <span class="italic">26</span>
+   </a>) were obtained from the Earth System Grid Federation (ESGF) data distribution center. The years 1961–2005 were used to represent historical climate conditions, and the years 2061–2100 from the RCP8.5 (
+   <a rid="R28" ref-type="bibr" href="#R28">
+    <span class="italic">28</span>
+   </a>) simulation were used as an example of a warming business-as-usual scenario. The models (listed in table S1) were selected according to the availability of daily data of sea-ice thickness and sea-ice concentration at the time of the analysis. We also did not exclude models based on performances because our method works on empirical probability density functions and not on zonal or monthly averages; therefore, we sought to preserve any possible interannual or regional variability that each model can elicit. In assessing the projections for an ice-free Arctic, Liu 
+   <span class="italic">et al.</span> (
+   <a rid="R54" ref-type="bibr" href="#R54">
+    <span class="italic">54</span>
+   </a>) retained the models with the simulated September sea-ice extent falling within 20% of the observations. Twenty of the 30 models they examined satisfied that requirement, and 16 of the 18 models we considered are among these 20 [the additional two models we used were not available at the time of writing of Liu 
+   <span class="italic">et al.</span> (
+   <a rid="R54" ref-type="bibr" href="#R54">
+    <span class="italic">54</span>
+   </a>)]. All original observations and model data grids were preserved, and stored daily data were used when available without any further spatial or temporal averaging. The observations of sea-ice concentration for current climate conditions (1979–2005) were obtained from Nimbus-7 SMMR and DMSP SSM/I-SSMIS passive microwave remote sensing data (
+   <a rid="R32" ref-type="bibr" href="#R32">
+    <span class="italic">32</span>
+   </a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The indicators for the freeze-up and breakup dates as a function of latitude were obtained by computing the empirical probability density function of the days at which a chosen threshold of 15% sea-ice cover was passed, counting all model grid points in the interval of 2° latitude. A positive transition indicated a freeze-up event, while a negative transition indicated a breakup event. The method is robust to the choice of the sea-ice variable because it gives the same results if sea-ice thickness with a threshold of 0.1 m is used. It is also not sensitive to the subjective choice of the thresholds as long as they are considered representative of low sea-ice conditions; a variation of ±50% around the chosen values did not lead to substantial changes in the overall statistics. To avoid counting successive events of melting and refreezing, it was decided to only consider the last melting event before the first freezing of the next sea-ice season and the last freezing event before the seasonal melting. During data collection, the algorithm also collected the area of the ocean (within the latitudinal band) that was characterized by first-year ice. The same algorithm was applied to the historical climate and future scenario simulations, as well as to satellite data for validation. Not all variables were available for all the models in the ESGF servers because of the recent overhauling (table S1). Given the use of empirical probability density functions, the medians and other statistical descriptors were nevertheless computed over a large number of data points. The CMIP5 daily variables considered were near-surface atmospheric temperature and sea-ice thickness, while snow depth was available from CMIP5 models on a monthly basis. All values not corresponding to a sea-ice–covered ocean were masked. The analysis was performed for first-year ice only, with 2° latitudinal bands from 58°N to 84°N. The latitudinal empirical probability density functions and the relative statistical descriptors (10th, 50th, and 90th percentiles) were computed for freeze-up day, breakup day, maximum sea-ice thickness, day of maximum sea-ice thickness, maximum snow depth, month of maximum snow depth, minimum near-surface temperature, and day of minimum near-surface temperature (see fig. S4 for an example). If the corresponding first day of sea ice fell within the same (or previous) month of the snow season starting, then we used that day as the starting day of the snow season and the sea-ice season. Otherwise, we used the first day of the following month for the snow season. For ascribing the last day of snow cover, if the snow season showed to end within the same month when sea ice vanished, then we chose the first day of the corresponding month, otherwise, we used the 15th of the previous month. The day of maximum snow depth was instead assumed to be the midmonth day of the corresponding month.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The ensemble mean of the median values of the empirical probability density functions was used to construct an analytically idealized ice season (i.e., snow and sea-ice dynamics) for the historical and future climate at every band of latitudes as proposed by Tedesco and Vichi (
+   <a rid="R24" ref-type="bibr" href="#R24">
+    <span class="italic">24</span>
+   </a>). Sea-ice thickness was prescribed to grow with a cubic function from the first freezing event (i.e., below freezing temperature and the sea-ice thickness &gt;0.1 m) until the day when sea-ice thickness reached its seasonal maximum. This method takes into account the reduced growth due to sea-ice thickening and aging. After the seasonal maximum, sea ice was modeled to start melting with a cubic function. Snow was prescribed to accumulate linearly on sea ice from the first snow event (freezing temperature and snow depth of &gt;0 m) until its maximum and then to melt linearly until the last day of snow cover (snow depth of &gt;0 m). The surface temperature was modeled to decrease linearly from the freezing temperature to its minimum (dependent on latitude) and then to increase linearly until it reached the freezing point, which was then kept until all sea ice and snow were melted completely.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The ensemble means of the 10th and 90th percentiles of the single model distributions were used to analyze the impact of extreme case scenarios (
+   <a rid="F6" ref-type="fig" href="#F6">Fig. 6</a>). It is physically inconsistent to combine the extreme drivers to create a scenario case where, for instance, the freeze-up occurs very early in the year, the snow depth is minimal, and the minimum air temperature is the lowest. The adopted solution consisted of selecting one model realization that represented the combination of the driver values in the tails of the distributions in a physically consistent manner. We selected the model with the shortest duration of the sea-ice season because all the other drivers were then generally located around or beyond the ensemble mean of the percentiles (
+   <a rid="F6" ref-type="fig" href="#F6">Fig. 6A to D</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">At all latitudes, surface seawater salinity was fixed at 31 (practical salinity unit) and wind speed was fixed at 5 m/s, while sea-ice bulk salinity (
+   <span class="italic">S</span>
+   <sub>bu,fy</sub>) was computed according to the analytical function provided by (
+   <a rid="R55" ref-type="bibr" href="#R55">
+    <span class="italic">55</span>
+   </a>) for Arctic first-year ice, which is dependent only on the normalized ice depth (0 ≤ 
+   <span class="italic">z</span> ≤ 1) and is based on a fitted salinity profile derived from a complex parameterization of sea-ice bulk salinity
+   <div id="E1" class="disp-formula">
+    <div id="m1" class="math">
+     <div class="mrow">
+      <div class="mrow">
+       <div class="msub">
+        <span mathvariant="italic" class="mi">S</span>
+        <div class="mrow">
+         <span class="mtext">bu</span>
+         <span class="mo">,</span>
+         <span class="mtext">fy</span>
+        </div>
+       </div>
+       <span stretchy="false" class="mo">(</span>
+       <span mathvariant="italic" class="mi">z</span>
+       <span stretchy="false" class="mo">)</span>
+       <span class="mo">=</span>
+       <div class="mfrac">
+        <span mathvariant="italic" class="mi">z</span>
+        <div class="mrow">
+         <span mathvariant="italic" class="mi">a</span>
+         <span class="mo">+</span>
+         <span mathvariant="italic" class="mi">b</span>
+         <span mathvariant="italic" class="mi">z</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <span mathvariant="italic" class="mi">c</span>
+      </div>
+     </div>
+    </div>
+    <span class="label">(1)</span>
+   </div>where 
+   <span class="italic">a</span> = 1.0964, 
+   <span class="italic">b</span> = −1.0552, and 
+   <span class="italic">c</span> = 4.41272.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Incoming solar radiation was retrieved for both scenarios and at each considered latitude from the ERA-interim European Centre for Medium-Range Weather Forecasts climatological (1979–2010) downward surface solar radiation (
+   <a rid="R56" ref-type="bibr" href="#R56">
+    <span class="italic">56</span>
+   </a>). The incoming radiation was converted to visible wavelengths (400 to 700 nm) and then to photosynthetically active radiation (PAR) and, lastly, was corrected for surface albedo and light extinction through snow and sea ice with a Semtner-like sea-ice thermodynamic model (
+   <a rid="R57" ref-type="bibr" href="#R57">
+    <span class="italic">57</span>
+   </a>). Because of the lack of information from CMIP5 models on sea-ice halodynamics, we limited our investigation to the biological production of the bottom sea-ice habitable space, operationally defined as the sea-ice biologically active layer (BAL) (
+   <a rid="R57" ref-type="bibr" href="#R57">
+    <span class="italic">57</span>
+   </a>). This layer comprises the permeable part of sea ice that extends from the bottom-most sea ice upward until the brines volume reaches the 5% limit. The BAL fraction can be calculated given its boundaries. At the lower sea-ice interface with the ocean, seawater is assumed to be at freezing point, and brine volume is considered to be at 100%, i.e., all medium is liquid. At the upper interface, the BAL is delimited by the brines volume being 5% at the maximum. Given the computation of sea-ice bulk salinity after (
+   <a rid="R56" ref-type="bibr" href="#R56">
+    <span class="italic">56</span>
+   </a>), brine salinity and brine/sea-ice temperature were calculated from thermal equilibrium. Given the BAL sea-ice temperature, the dynamics of the BAL thickness were reconstructed with a cubic function, as done for sea-ice thickness. The computed physical variables needed by the ocean component of the biogeochemical model were seawater temperature, seawater salinity, wind speed, and PAR. The computed physical variables needed by the sea-ice component of the biogeochemical model were BAL thickness, temperature, bulk salinity, brine salinity, brine volume, and PAR.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">The biogeochemical model set-up</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The sea-ice biogeochemical model (
+   <a rid="R24" ref-type="bibr" href="#R24">
+    <span class="italic">24</span>
+   </a>) allowed flexible stoichiometry in the algal composition and physiological responses (
+   <a rid="R58" ref-type="bibr" href="#R58">
+    <span class="italic">58</span>
+   </a>); in this specific case, it also featured a nonlimiting amount of dissolved nitrogen and phosphorous and realistic historical concentrations of dissolved silicates (SiO
+   <sub>4</sub>), assuming no intracellular storage and a Monod-like uptake rate (
+   <a rid="R59" ref-type="bibr" href="#R59">
+    <span class="italic">59</span>
+   </a>) as modeled in phytoplankton. This choice was made (i) to limit the uncertainties due to the little available knowledge on sea-ice nutrient co-limitation; (ii) because of previous sensitivity studies on the role of nutrients on algal bloom timing (
+   <a rid="R24" ref-type="bibr" href="#R24">
+    <span class="italic">24</span>
+   </a>); (iii) because silica is an essential macronutrient for the generally dominant functional group of algae found in the Arctic bottom sea-ice habitat, which is pennate diatoms (
+   <a rid="R14" ref-type="bibr" href="#R14">
+    <span class="italic">14</span>
+   </a>, 
+   <a rid="R39" ref-type="bibr" href="#R39">
+    <span class="italic">39</span>
+   </a>). Pennate diatoms were characterized by three basic constituents: carbon, Chl-a, and silica. Note that the internal stoichiometric ratios were allowed to vary, particularly the Chl:C ratio, which is an emulator of light acclimation capability. Other functional groups included detritus and gases, for nine state variables in total. The simulated sea-ice biological processes were photosynthesis, respiration, mortality/excretion, and nutrient uptake. The sea-ice biogeochemical model was coupled to pelagic biogeochemistry in a simple slab ocean, representing an averaged mixed layer depth under sea ice (15 m for all latitudes and both scenarios). The ocean model was initialized in both scenarios with the zonal winter median (November to May) concentrations of dissolved silicates in the first 10 m of the Arctic Ocean between 1948 and 2000 (
+   <a rid="R44" ref-type="bibr" href="#R44">
+    <span class="italic">44</span>
+   </a>) for every latitudinal band. 1 mg C/m
+   <span class="sup">3</span> of diatoms in seawater for all latitudes and in both scenarios were used as the typical background winter value. The sea-ice model did not need initialization since the fluxes at the interface, which are a function of sea-ice growth/melt velocities and thickness of the BAL, controlled the exchanges of dissolved and particulate matter between sea ice and seawater (
+   <a rid="R58" ref-type="bibr" href="#R58">
+    <span class="italic">58</span>
+   </a>). With this setup, we investigated the relative changes in future GPP, which, assuming unchanged nutrient dynamics in the future, are independent on the background nutrient conditions used, which are highly uncertain (
+   <a rid="R6" ref-type="bibr" href="#R6">
+    <span class="italic">6</span>
+   </a>, 
+   <a rid="R7" ref-type="bibr" href="#R7">
+    <span class="italic">7</span>
+   </a>). This operative strategy thus removes the uncertainties associated with current and future nutrient dynamics, while it increases our confidence toward reliable estimates of future sea-ice GPP.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The biogeochemical prognostic variables presented are sea-ice algal Chl-a and GPP in the brine pockets and their vertical integral over the BAL, both temporally integrated over the duration of the sea-ice season. An indicator of phenology, the anomaly index of chlorophyll concentration in the brine volume has been developed (
+   <a rid="R24" ref-type="bibr" href="#R24">
+    <span class="italic">24</span>
+   </a>), where positive values represent the period of bloom activity in sea ice. This index was computed as the difference between the amplitude of the concentration and its SD over the production period.
+  </p>
+ </sec>
+</sec>

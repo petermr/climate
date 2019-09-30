@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec13" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Inundation modelling using SWMM</div>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">Several mathematical models are widely used to model the dynamics of rainfall-runoff and flood generation processes such as MIKE URBAN, HEC-HMS, SWMM, DRAINS, MOUSE, Infowork RS, HSPF, DR3M, STORM etc
+  <span class="sup">
+   <a ref-type="bibr" rid="CR18" href="#CR18">18</a>
+  </span>. These urban storm water flow models may prove to be immensely beneficial in ascertaining the effects of various storm water management strategies and evaluating the storm readiness and climate resilience of the cities. Storm Water Management Model (SWMM), developed by the US Environmental Protection Agency (EPA), is a comprehensive computer model for simulating hydrological and hydraulic processes of an urban watershed
+  <span class="sup">
+   <a ref-type="bibr" rid="CR19" href="#CR19">19</a>–
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>. It is widely used for modelling storm water quantity and quality in an urban environment
+  <span class="sup">
+   <a ref-type="bibr" rid="CR1" href="#CR1">1</a>,
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+  </span>. SWMM has been packaged along with user-friendly interfaces by commercial software developers such as XP-SWMM, MIKE-SWMM, MIKE-URBAN, PC SWMM, thereby resulting into its wider dissemination
+  <span class="sup">
+   <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+   <a ref-type="bibr" rid="CR23" href="#CR23">23</a>,
+   <a ref-type="bibr" rid="CR24" href="#CR24">24</a>
+  </span>. SWMM requires detailed information characterizing urban catchments and the underlying storm water drainage infrastructure. The input to the models comprises of various physical and hydrological parameters representing urban catchment
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>
+  </span>. The surface runoff in a sub-catchment is routed fully to enter the junction and transported through the storm sewer conduits to the area outlet, so there is only pipeline runoff flow and no surface runoff routing is considered. The model has been used for various urban catchments in India particularly for a single watershed under uncalibrated condition
+  <span class="sup">
+   <a ref-type="bibr" rid="CR6" href="#CR6">6</a>,
+   <a ref-type="bibr" rid="CR20" href="#CR20">20</a>,
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+  </span>.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">SWMM is a dynamic rainfall-runoff simulation model and can be used for either single event or long-term (continuous) simulation of runoff quantity from urban areas
+  <span class="sup">
+   <a ref-type="bibr" rid="CR6" href="#CR6">6</a>
+  </span>. The hydrological processes were set up with creating parameters such as rain gauge, sub-catchment, node, link and outfall. The sub-catchment delineation was done with ArcSWAT tool in ArcGIS using CartoDEM of 10 m resolution with the help of a base map prepared. The storm water drainage network was created by including the junction nodes and the conduits. Each sub-catchment was joined with corresponding nodes. The design parameters of the junctions include junction ID, invert level and diameter. The design parameters of the conduit include conduit ID, shape, inlet node, outlet node, length, maximum depth, roughness, and flow through pipe and loss coefficient. The nodes were linked by conduits and in a total of 238 nodes and 4 outfalls and 240 links were created. Links represent the channel and nodes indicate junction or change in direction (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>).
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The details of the drains such as size and length were collected from Corporation of Chennai Zonal office, Adyar. Pervious and impervious areas were digitized with Google Earth, then percentage imperviousness was calculated. Nearly 88.5% area is impervious. Normally the storm drains are rectangular concrete channels with rough forms, so the Manning’s roughness coefficient (n) was taken to be 0.015. Green-Ampt infiltration method was selected with suction head 8.27 mm, conductivity 0.04 mm/hr and an initial deficit of 0.2 mm/hr. Dynamic Wave Routing method was adopted to solve the Saint-Venant flow equations.</p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">The number of nodes flooded more than 20 hours were identified as vulnerable hot spots. To visualize the hotspots geo-spatially, vulnerability map was generated using the image procured from National Remote Sensing Centre (NRSC), Hyderabad Govt. of India as a base, the hot spots identified through modelling were then overlay using ArcGIS 10.1 software.</p>
+</sec>

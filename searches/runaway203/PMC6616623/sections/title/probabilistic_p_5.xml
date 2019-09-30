@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec5" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Probabilistic projections using the marginalization theorem</div>
+ <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">Evaluating the terms in the full BMA equation (Eq. (
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a>)) is non-trivial. However, if our hypotheses can be defined by some parameters 
+  <span class="bold">θ</span> belonging to regions in parameter space, the problem simplifies. Specifically, we can use the marginalization theorem to obtain
+  <div id="Equ8" class="disp-formula">
+   <span class="label">8</span>
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$p(A|{\bf{Y}}) = {\int} {p(A,{\mathbf{\theta}}|{\bf{Y}})d} \, {\mathbf{\theta }}.$$\end{document}</span>
+    <div id="M22" class="math">
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">A</span>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">Y </span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mo">=</span>
+     <span class="mo">∫</span>
+     <span class="mi">p</span>
+     <div class="mrow">
+      <span class="mo">(</span>
+      <div class="mrow">
+       <span class="mi">A</span>
+       <span class="mo">,</span>
+       <span mathvariant="bold" class="mi">θ</span>
+       <span class="mo">∣</span>
+       <span mathvariant="bold" class="mi">Y </span>
+      </div>
+      <span class="mo">)</span>
+     </div>
+     <span class="mi">d</span>
+     <span width="0.25em" class="mspace"/>
+     <span mathvariant="bold" class="mi">θ</span>
+     <span class="mo">.</span>
+    </div>
+    <div xlink:href="41467_2019_10561_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par15" xmlns="http://www.w3.org/1999/xhtml">The key idea is that if sample space is appropriately defined, this approach is equivalent to adding up all models interactions in Eq. (
+  <a rid="Equ7" ref-type="" href="#Equ7">7</a>). We stress that this also considers all model interactions of up to order 
+  <span class="italic">n</span> (Eq. (
+  <a rid="Equ4" ref-type="" href="#Equ4">4</a>)). As we will show later, this approach is tractable, and can be implemented with relative ease using MCMC
+  <span class="sup">
+   <a ref-type="bibr" rid="CR25" href="#CR25">25</a>,
+   <a ref-type="bibr" rid="CR26" href="#CR26">26</a>
+  </span>. MCMC is a method to sample from a joint distribution of parameters using Markov chains. The chain of the prediction variable A provides a way to estimate its probability density. The fraction of samples within an intersection of regions associated with any hypothesis combination naturally provides a tractable way to calculate the probability for that combination.
+ </p>
+</sec>

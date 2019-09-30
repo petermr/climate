@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Models</div>
+ <p id="Par7" xmlns="http://www.w3.org/1999/xhtml">CLSM, which was developed at NASA Goddard Space Flight Center, simulates water storage changes in the surface layer (0 to 2 cm below the surface), the root zone (0 to 100 cm), and the full soil profile, and in three snow layers
+  <span class="sup">
+   <a ref-type="bibr" rid="CR20" href="#CR20">20</a>
+  </span>. Water transfers among these stores are governed by empirical parameters derived based on topography, soil properties and average moisture transfer rates within different profiles. Profile depths are determined by CLSM parameter, bedrock depth, which varies spatially from 3 to 6 m and has direct impacts on the dynamics of simulated TWS and groundwater storage, with deeper bedrock generally producing slower groundwater responses to atmospheric drivers (precipitation and ET)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>
+  </span>. The bedrock depth was increased worldwide by 2 m in this study to better simulate the full dynamic range of terrestrial water storage, particularly during severe drought, following previous studies
+  <span class="sup">
+   <a ref-type="bibr" rid="CR28" href="#CR28">28</a>–
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. No other parameters were adjusted or calibrated for this study. CLSM does not explicitly model water table variations but groundwater storage can be computed by subtracting root zone water storage from total soil profile storage.
+ </p>
+ <p id="Par8" xmlns="http://www.w3.org/1999/xhtml">CLSM accounts for sub-grid scale heterogeneity in soil wetness, including the fractions of the land surface where the soil is at or below the wilting point and transpiration has ceased, where the soil is unsaturated and above the wilting point and where it is saturated, to better simulate ET and runoff. Modeled state and flux updates occur at a 20 min time step to accommodate their highly non-linear relationships. CLSM simulated ET has been shown comparable with other land surface models in terms of capturing mean annual ET and its spatial patterns
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>,
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+  </span>. CLSM was run at 0.25° spatial resolution for this study.
+ </p>
+ <p id="Par9" xmlns="http://www.w3.org/1999/xhtml">The WaterGAP model (version 2), which was developed at the Centre for Environmental Systems Research of the University of Kassel, Germany, simulates water storage changes in the soil (with a single layer representing effective root depths depending on landcover type), groundwater, snow and surface water
+  <span class="sup">
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>. Water exchanges among these states and with the atmosphere are represented by simple empirical relations that facilitate model calibration and tuning. This version of WaterGAP was calibrated using mean annual streamflow data from more than 1,300 river basins covering more than 50% of the global land area. Outside of these basins, model parameters were estimated through regionalization. Benefiting from the simple (more linearized) model physics, the model was run on larger time steps (daily, compared to 20 min of CLSM) and coarser spatial resolution, 0.5°.
+ </p>
+ <p id="Par10" xmlns="http://www.w3.org/1999/xhtml">WaterGAP includes options to simulate anthropogenic effects such as reservoir operation and withdrawals from surface waters and groundwater. Water demands from all sectors (irrigation, livestock, industry and households) and net withdrawals are calculated based on the water use efficiency of each country or county, population development, and industrial and energy output. These are then input to the underlying hydrological model, along with atmospheric forcing data (precipitation, temperature and potential ET). Return flows are calculated as the difference between water inputs and net withdrawals. Anthropogenic groundwater storage estimates used in this study are based on an assumption of 70% irrigation efficiency, which is the ratio of consumptive water use to abstractions
+  <span class="sup">
+   <a ref-type="bibr" rid="CR21" href="#CR21">21</a>
+  </span>.
+ </p>
+ <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">PCR-GLOBWB has a model structure similar to that of WaterGAP. It also employs relatively simple empirical relationships to partition precipitation into surface runoff and infiltration and to simulate water transfers among different water stores, including surface water
+  <span class="sup">
+   <a ref-type="bibr" rid="CR22" href="#CR22">22</a>
+  </span>. The model was not calibrated but its parameterizations were evaluated using GRDC runoff data. Sub-grid heterogeneity on land cover is also considered for calculating fluxes. PCR-GLOBWB can simulate anthropogenic effects but takes a different approach to estimating consumptive irrigation water use. Irrigation water demand is simulated by wetting soils to their field capacity in irrigated cells (or fractions of cells) during growing seasons. The estimated water demand is then subtracted from surface waters or groundwater. As a result, its simulated irrigation water demands depend heavily on model physics such as those for ET. Similar to WaterGAP, groundwater recharge in PCR-GLOBWB can come from the upper soil (either natural recharge or irrigation return flow), or from river-beds. Output used in this study is based on model simulation at 5 arc minute spatial resolution and a daily time step.
+ </p>
+</sec>
