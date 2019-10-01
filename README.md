@@ -13,7 +13,7 @@ See [Gen-R github](https://github.com/Gen-R/open-climate-knowledge)
 
 A [Narrative](Narrative.md) for this project.
 
-A short [presentation to Sidcot School](SidcotSchool201909.md) on the Keeling Curve.
+A short [presentation to Sidcot School](schools/SidcotSchool201909.md) on the Keeling Curve.
 
 
 ## dictionaries
