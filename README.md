@@ -9,6 +9,8 @@ Much of the code and processes are shared between the OpenNotebook projects, see
 Starting as a possible project for eLife sprint 20190904 in Cambridge and collaboration
 with Simon Worthington / [GenR](https://genr.eu/wp/open-science-and-climate-change-a-genr-theme/).
 
+See [Gen-R github](https://github.com/Gen-R/open-climate-knowledge)
+
 A [Narrative](Narrative.md) for this project.
 
 A short [presentation to Sidcot School](SidcotSchool201909.md) on the Keeling Curve.
