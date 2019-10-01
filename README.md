@@ -23,7 +23,7 @@ Follow the Issues on this site
 ### keep record of search and analyses
 
 ## browsing
-XML and SVG display in GitHub
-HTML does not display in GitHub - to view `fullDatatable.heml` need to download the file or `git clone`
+XML and SVG display in GitHub. 
+HTML does not display in GitHub - to view `fullDatatable.html` need to download the file or `git clone`
 (worth doing!)
 
