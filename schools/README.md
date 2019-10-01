@@ -10,7 +10,7 @@ The event was very well attended - ca 350 12-18 year-olds with some teachers and
 questions (we massively ran out of discussion time).
 
 Here's a ![photo of the Q and A](SidcotSchool20190925.jpg). Credit : Joanna Hodnett (Sidcot School) released under CC BY (Attribution, 4.0).
-(the speaker are L->R: Alana M-R, Hammond M-R and (far right, seated) Peter M-R). Note the Keeling curve in the background.
+(the speaker are L to R: Alan M-R, Hammond M-R and (far right, seated) Peter M-R). Note the Keeling curve in the background.
 
 ## conclusion and how to use the material
 The [Keeling Curve](https://en.wikipedia.org/wiki/Keeling_Curve) has a nice narrative. use Wikipedia to recount the history - stress the care he took (decimal points!), the timescale (50 years) and
