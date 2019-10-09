@@ -32,6 +32,12 @@ Gitter chat https://gitter.im/open-climate/community and use the hashtags on Twi
 
 TBC
 
+### Wikidata / Wikipedia
+
+- add Wikidata IDs to dictionaries
+- add Wikidata entries for missing terms
+- find / add Wikidata Ids to papers 
+
 ### Annotated Corpora
 
 TBC
