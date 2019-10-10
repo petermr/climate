@@ -63,6 +63,7 @@ Much of the code and processes are shared communal resources from different proj
  - For schools
    - A short presentation to [Sidcot School on the Keeling Curve](schools/SidcotSchool201909.md)
  - Articles
+   - [Open Climate Knowledge: 100% OA for Climate Change 📖 / 🌍](https://genr.eu/wp/open-climate-knowledge-100-oa-for-climate-change/) https://doi.org/10.25815/eqne-xc82
 
 ## About us
 
