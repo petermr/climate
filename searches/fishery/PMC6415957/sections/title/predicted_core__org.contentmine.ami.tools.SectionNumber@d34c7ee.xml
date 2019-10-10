@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Predicted core habitats</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We assessed overlap between AIS-observed fishing effort and the predicted core habitats of seven shark and tuna species electronically tagged in the TOPP program (
+  <a rid="R3" ref-type="bibr" href="#R3">
+   <span class="italic">3</span>
+  </a>). These species were Pacific bluefin tuna (
+  <span class="italic">Thunnus orientalis</span>), yellowfin tuna (
+  <span class="italic">Thunnus albacares</span>), albacore tuna (
+  <span class="italic">Thunnus alalunga</span>), white shark (
+  <span class="italic">Carcharodon carcharias</span>), shortfin mako shark (
+  <span class="italic">Isurus oxyrinchus</span>), salmon shark (
+  <span class="italic">Lamna ditropis</span>), and blue shark (
+  <span class="italic">Prionace glauca</span>). All species, except for the salmon shark, are currently listed as Threatened or Near Threatened on the IUCN’s Red List of Threatened Species, although the International Scientific Committee for Tuna and Tuna-like Species in the North Pacific Ocean (ISC) has determined that albacore and blue shark populations are above target population thresholds in the north Pacific region (
+  <a rid="R32" ref-type="bibr" href="#R32">
+   <span class="italic">32</span>
+  </a>). The animal movement dataset used for this study spans from October 2000 to September 2009 and consists of 876 tag events from which tracks were previously derived and modeled (table S3). Tracking data were produced from a combination of deployments that included Lotek 2310 and Wildlife Computer mk9 archival tags, Wildlife Computer pop-up satellite archival tags, and SPOT Argos satellite tags. Daily position estimates of tagged animals were obtained from a Bayesian state-space model that accounts for uncertainty and gaps in position estimates (
+  <a rid="R3" ref-type="bibr" href="#R3">
+   <span class="italic">3</span>
+  </a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">From this prior biologging dataset (
+  <a rid="R3" ref-type="bibr" href="#R3">
+   <span class="italic">3</span>
+  </a>), we predicted core habitats for 2015–2017 at a monthly 1° resolution throughout the northeast Pacific Ocean through temporal extrapolation of habitat suitability predictions generated using generalized additive models (GAMs) by Hazen 
+  <span class="italic">et al</span>. (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>). Because we used habitat models developed by Hazen 
+  <span class="italic">et al</span>. (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>), we matched their study region boundaries (10°N to 60°N, 110°W to 180°W) for our analyses. These boundaries were originally selected to ensure adequate spatial and temporal coverage of the TOPP tagging dataset within the study region (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>). The habitat models used a wide range of ocean conditions across years of species-environment relationships to align the time range of core habitats and fishing activity; the habitat models predict core habitats for the exact year of our fisheries dataset (2015–2017) (
+  <a rid="R3" ref-type="bibr" href="#R3">
+   <span class="italic">3</span>
+  </a>, 
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>). These single-species GAMs were fit using the tracking dataset generated from 876 satellite tags (table S3) and are used to predict animal space use as a function of sea surface temperature (SST), chlorophyll a (Chl-a), depth, latitude, and longitude at monthly temporal resolution. We downloaded monthly SST and Chl-a data from the National Oceanic and Atmospheric Administration (NOAA) Environmental Research Division’s Data Access Program (ERDDAP) server [0.01° Multiscale Ultrahigh Resolution (MUR) and 0.025° Moderate Resolution Imaging Spectroradiometer (MODIS) datasets, respectively] and regridded the data at a common 1° resolution using bilinear interpolation functions from the “raster” and “ncdf4” packages in R statistical software version 3.3.1. A spatial resolution of 1° was used to account for positional uncertainty in location estimates from electronic tagging data (
+  <a rid="R3" ref-type="bibr" href="#R3">
+   <span class="italic">3</span>
+  </a>, 
+  <a rid="R21" ref-type="bibr" href="#R21">
+   <span class="italic">21</span>
+  </a>). To avoid unrealistic spatial extrapolations beyond species’ observed movements (
+  <a rid="R44" ref-type="bibr" href="#R44">
+   <span class="italic">44</span>
+  </a>, 
+  <a rid="R45" ref-type="bibr" href="#R45">
+   <span class="italic">45</span>
+  </a>), we only generated model predictions within minimum convex polygons (MCPs) created from all electronic tagging data available for individual species (table S3). The deviance explained by these models ranges from 18.3 to 44.1% (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>). Core habitats were identified by selecting the top quartile of distribution values, as predicted by habitat models, for a given species and month to ensure that infrequently used habitats would not bias results (
+  <a rid="R30" ref-type="bibr" href="#R30">
+   <span class="italic">30</span>
+  </a>, 
+  <a rid="R31" ref-type="bibr" href="#R31">
+   <span class="italic">31</span>
+  </a>). This previously identified threshold is chosen to represent the most critical habitat while excluding transitory habitat and to provide a more conservative overlap metric.
+ </p>
+</sec>

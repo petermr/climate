@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec9" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Updating and fitting the new West coast of Scotland model</div>
+ <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">The model boundaries cover the continental shelf of the west coast of Scotland (WCS), an area of approximately 110,000 km
+  <span class="sup">2</span> within the International Council for the Exploration of the Sea (ICES) division VIa. The WCS model was updated in both Ecopath and Ecosim (details in Supplementary Methods Tables 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>–
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S6</a>). In this study, we used the new capability of EwE 6.5 (
+  <span ext-link-type="uri" xlink:href="http://www.ecopath.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ecopath.org</span>) to convert species optimum, minimum and maximum temperatures to species-specific normal probability distributions centred on the species optimum temperature and positive/negative standard deviations defined by the species tolerances (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1a,b</a> and Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S8</a>). The difference between sea temperature and the species thermal optimum distribution was used to scale the consumption rates of each predator: by a factor of 1 at the optimum and declining as the difference from the optimum increases according to Gaussian functions at a rate reflecting the species thermal tolerance range (expressed by the standard deviation of the function) (Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1a</a>).
+ </p>
+ <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">Fishbase
+  <span class="sup">
+   <a ref-type="bibr" rid="CR79" href="#CR79">79</a>
+  </span>, SeaLifeBase
+  <span class="sup">
+   <a ref-type="bibr" rid="CR80" href="#CR80">80</a>
+  </span> and AquaMaps
+  <span class="sup">
+   <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+  </span> websites provided the species optimum, minimum and maximum temperatures: optimum temperatures were estimated by averaging the 10
+  <span class="sup">th</span> and 90
+  <span class="sup">th</span> preferable temperature percentiles. For consistency we gathered species optimum temperatures and tolerances data from the same sources except for cod
+  <span class="sup">
+   <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+  </span> and kelp
+  <span class="sup">
+   <a ref-type="bibr" rid="CR82" href="#CR82">82</a>
+  </span> for which local data were used
+  <span class="sup">
+   <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+  </span>. For functional groups defined by multiple species, the temperature parameters were calculated as geometric means weighted by species biomass or catch composition. Optimum temperatures for juvenile gadoids were raised by 1 °C assuming a shallower distribution in warmer waters to facilitate the growth rates
+  <span class="sup">
+   <a ref-type="bibr" rid="CR83" href="#CR83">83</a>
+  </span>. No local temperature tolerance data were found for phytoplankton, small and large zooplankton; the average of depth-integrated temperature was used for these groups with wide tolerances ranges (Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S8</a>).
+ </p>
+ <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">The model was fitted using an automated stepwise fitting procedure
+  <span class="sup">
+   <a ref-type="bibr" rid="CR84" href="#CR84">84</a>
+  </span>. This procedure searched for different vulnerability parameters and/or numbers of spline points on a primary production anomaly, then calculated the weighted sum of squares (SS) differences between predicted and observed data (Supplementary Table 
+  <a rid="MOESM1" ref-type="media" href="#MOESM1">S6</a>) for each iteration. It used the SS and the number of parameters estimated to calculate the Akaike Information Criterion (AIC)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR85" href="#CR85">85</a>
+  </span>, and the corrected AICc
+  <span class="sup">
+   <a ref-type="bibr" rid="CR86" href="#CR86">86</a>
+  </span>. These AIC values were used to assess the model baseline (no ecosystem drivers such as fishing, no primary productivity forcing function and no trophic vulnerabilities applied) and to identify the vulnerability parameters and spline points that produced the lowest AIC. AIC values are also used to calculate Akaike weights which represent the probability that a given model is the best fitted model
+  <span class="sup">
+   <a ref-type="bibr" rid="CR87" href="#CR87">87</a>
+  </span>.
+ </p>
+ <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">Vulnerability parameters were assumed to be “by predator”, i.e. all iterations assumed the same top-down or bottom-up control of the predator on all of its prey
+  <span class="sup">
+   <a ref-type="bibr" rid="CR84" href="#CR84">84</a>
+  </span>. The PP_anomaly function could represent an environmental driver that can affect primary productivity and is therefore often related to climate variability indices
+  <span class="sup">
+   <a ref-type="bibr" rid="CR15" href="#CR15">15</a>,
+   <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+   <a ref-type="bibr" rid="CR88" href="#CR88">88</a>,
+   <a ref-type="bibr" rid="CR89" href="#CR89">89</a>
+  </span>. The fitting procedure was performed with and without temperature and output compared with previous versions of the model fitting
+  <span class="sup">
+   <a ref-type="bibr" rid="CR40" href="#CR40">40</a>,
+   <a ref-type="bibr" rid="CR84" href="#CR84">84</a>
+  </span>. The fitting procedure identified the best parameter values that improve the statistical fit of the model. However, as the observed data has its own inherent errors, it is important to analyse a range of model fits with the low AIC values and relevant Akaike weights to identify the best ecologically sensible parameters that best describe the predicted historical trends of the target species
+  <span class="sup">
+   <a ref-type="bibr" rid="CR84" href="#CR84">84</a>,
+   <a ref-type="bibr" rid="CR90" href="#CR90">90</a>
+  </span>.
+ </p>
+ <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">Spearman correlation tests were used to assess collinearity between the predicted primary production anomaly function and environmental temperature (SST) as well as other climate indices such as the smoothed and unsmoothed Atlantic Multi-decadal Oscillation (AMO), and North Atlantic Oscillation Index (NAOI).</p>
+</sec>

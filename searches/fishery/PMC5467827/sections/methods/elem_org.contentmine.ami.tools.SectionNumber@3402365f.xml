@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Connectivity across fisheries</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To measure the connectivity of fishers to different assemblages of fisheries we created an association network based on the state and federal licenses that fishers held in Maine during 2014. Data used in this study belong to the Maine Department of Marine Resources and the National Marine Fisheries Service. These data can be requested from the Maine Department of Marine Resources' Licensing Division (
+   <span ext-link-type="uri" xlink:href="http://www.maine.gov/dmr/commercial-fishing/licenses/index.html" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.maine.gov/dmr/commercial-fishing/licenses/index.html</span>). Federal permit data is available online and can be obtained through the National Marine Fisheries Service Greater Atlantic Region Permit Office (
+   <span ext-link-type="uri" xlink:href="https://www.greateratlantic.fisheries.noaa.gov/aps/permits/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://www.greateratlantic.fisheries.noaa.gov/aps/permits/</span>). This analysis excluded licenses for aquaculture leases, tribal fisheries, scientific sample collecting, transporting or distributing seafood, and recreational fishing. Edges in the network (i.e., links) represent linkages between pairs of fisheries in which a minimum of one fisher holds both licenses. Freeman’s degree centrality was calculated as a proxy for the relative importance of fisheries in the network [
+   <a rid="pone.0178266.ref022" ref-type="bibr" href="#pone.0178266.ref022">22</a>].
+  </p>
+ </sec>
+ <sec id="sec004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Types of fishers</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used a multiple correspondence analysis (MCA) to populate a matrix of Euclidean distances between license types. These data were used to conduct an agglomerative Hierarchical Cluster Analysis (HCA) using the R package FactoMineR. Using this approach, clusters were parsed apart to maximize the difference in the total variance within and between groups as described by Husson et al. [
+   <a rid="pone.0178266.ref023" ref-type="bibr" href="#pone.0178266.ref023">23</a>]. We first performed this analysis using all the licensing data to form first order clusters in the typology that provided the basis for a second HCA, which in turn resulted in second order clusters that were then used for third, fourth, and fifth order clusters. In taking this approach, we were able to create a set of nested clusters that became progressively more homogenous as they were further subdivided with each subsequent HCA.
+  </p>
+ </sec>
+ <sec id="sec005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Heterogeneity within the fishing fleet</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We developed an index to describe the adaptive capacity of the commercial fishing fleet in Maine based on six attributes associated with adaptability in fisheries (
+   <a ref-type="supplementary-material" rid="pone.0178266.s002" href="#pone.0178266.s002">S2 Table</a>). These attributes and the decision criteria for each of them were established based on input from 13 individuals with expertise in fisheries in Maine using a modified Delphi process. The interviews associated with this process were approved by the University of Maine’s Protection of Human Subjects Review Board (Project # 2016-03-20). The Delphi method is an approach used to facilitate structured communication about complex concepts among experts [
+   <a rid="pone.0178266.ref024" ref-type="bibr" href="#pone.0178266.ref024">24</a>]. This iterative process of triangulation involves individual feedback on a set of information followed by revisions and subsequent refinement with the aim of working towards consensus. The approach is predicated on the view that expert judgment needs to be calibrated because experts have different levels of training, research, and direct hands-on experience and these differences directly affect their understanding and orientation to ideas and information. Using this approach, experts were interviewed about the factors that make fishers adaptable, starting with an initial set of attributes that were based on a literature review of factors related to fishers’ adaptive capacity. Interviews were transcribed and coded thematically. The outcome of this first round of interviews was a preliminary set of attributes and associated criteria corresponding to a measure of adaptability (i.e., high–low). These preliminary attributes and criteria were shared back with interviewees and everyone was given an opportunity to respond. Based on this feedback, a final set of attributes and criteria were developed (
+   <a ref-type="table" rid="pone.0178266.t001" href="#pone.0178266.t001">Table 1</a>). The criteria were then used to assess all state and federal fisheries, such that each fishery or combination of fisheries associated with a license received a score. Each license or combination of licenses was then evaluated to calculate an index for the typology. We emphasize that the attributes and subsequent decision criteria developed through this process are not necessarily the only factors that can affect adaptability. Therefore, any interpretation of these results needs to be sensitive to our approach to defining adaptability.
+  </p>
+  <div id="pone.0178266.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0178266.t001</span>
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <div class="title">Adaptive capacity criteria.</div>
+   </div>
+   <div class="alternatives">
+    <div id="pone.0178266.t001g" xlink:href="pone.0178266.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <table frame="hsides" rules="groups">
+     <colgroup span="1">
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+     </colgroup>
+     <thead>
+      <tr>
+       <th align="left" rowspan="1" colspan="1">Attribute</th>
+       <th align="left" rowspan="1" colspan="1">Description</th>
+       <th align="left" rowspan="1" colspan="1">Metric</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">1. Market stability</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">Stable markets reduce fishers’ economic uncertainty in an otherwise dynamic and often unpredictable business environment.</td>
+       <td align="left" rowspan="1" colspan="1">We use the R
+        <span class="sup">2</span> value of the temporal trend in ex-vessel prices during the past 20 years (1995–2014) as a proxy for market stability. Price data ($) were provided by the Maine Department of Marine Resources.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">2. Status of fishery</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">Healthy fish stocks lead to fishing opportunities.</td>
+       <td align="left" rowspan="1" colspan="1">We use stock assessment data from agency documents to determine the status of fisheries. In instances where stock assessments are not available we refer to recent research. Where no stock assessment data are available, we use the direction (-/+) of the temporal trend in landings over the past 5 and 20 years as a proxy for the health of each fishery.</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">3. Potential to accumulate wealth</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">Savings create a buffer that allow people to withstand lean periods.</td>
+       <td align="left" rowspan="1" colspan="1">We use the average value ($) of the fishery over the past 5 years divided by the number of harvesters with access to the fishery. For fisheries that are harvested with state and federal licenses, this value was weighted by the percentage of landings per sector.</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">4. Existing local governance structure and industry organization(s)</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">Participatory governance structures and self-organized fisheries organizations increase marine harvesters' ability to influence the system.</td>
+       <td align="left" rowspan="1" colspan="1">We measure governance and industry organization as the presence/absence of (1) a regional management structure with local stakeholder engagement; and (2) fisheries-specific associations.</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">5. Geography</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">License portfolios that give harvesters access to a diverse set of geographies increase marine harvesters' flexibility.</td>
+       <td align="left" rowspan="1" colspan="1">We define geographic diversity of a portfolio as the number of general regions (intertidal, state, and/or federal) that a harvester can access with his/her license portfolio.</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">6. Gear type</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">Using different gear types allows harvesters to target a more diverse set of fisheries and increases marine harvesters' opportunities to take advantage of fisheries more consistently.</td>
+       <td align="left" rowspan="1" colspan="1">We define gear diversity of a portfolio as the number of general scales of operation (hand/rake/net, hook/trap/dive, trawl/dredge/seine) that a harvester uses to exploit a particular fishery.</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-wrap-foot">
+    <fn id="t001fn001" class="fn" xmlns="">
+     <p xmlns="http://www.w3.org/1999/xhtml">Attributes used to evaluate adaptive capacity of Maine’s commercial fishing fleet. See 
+      <a ref-type="supplementary-material" rid="pone.0178266.s002" href="#pone.0178266.s002">S2 Table</a> for further detail.
+     </p>
+    </fn>
+   </div>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The aim of the Delphi method is to establish a consensus opinion among experts. This is difficult to accomplish, however, given the diverse perspectives that experts bring to complex issues such as fisheries. Acknowledging this issue, the attributes used in the index are based on majority opinion and do not signify a complete consensus. These majority opinions are summarized in 
+   <a ref-type="table" rid="pone.0178266.t001" href="#pone.0178266.t001">Table 1</a> (See “Description”) and illustrated further by way of quotes from interviewees in 
+   <a ref-type="supplementary-material" rid="pone.0178266.s002" href="#pone.0178266.s002">S2 Table</a>. We also include quotes from interviewees that highlight dissenting views.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Attributes 1–4 were assessed for each of the state and federal species landed in Maine based on the metric defined in 
+   <a ref-type="table" rid="pone.0178266.t001" href="#pone.0178266.t001">Table 1</a>. These metrics provided a mechanism to systematically evaluate the attributes through a transparent and replicable process. Based on these metrics, each species was ranked 1 to 3 using the criteria defined in 
+   <a ref-type="supplementary-material" rid="pone.0178266.s002" href="#pone.0178266.s002">S2 Table</a>. Where no data were available for a particular attribute, the fishery did not receive a score. In instances when more than one fishery was associated with a particular license (e.g., the general category commercial fishing license), scores were weighted based on the relative proportion of species captured in the portfolio. Species that can be landed with either a state or federal license (e.g., spiny dogfish) were also weighted based on the relative percentage of landings per sector. These scores were then applied to each group identified in the typology using the following logic:
+  </p>
+  <div class="disp-quote" xmlns="http://www.w3.org/1999/xhtml">
+   <p>If the marine resource(s) associated with a license is present in Gulf of Maine, then sum scores from attributes 1–4 scores. If the marine resource(s) is not present, then score as 0. Each species receives 1 point for attribute 5 and 6. Individuals with licenses that are based in different places (attribute 5) and/or require different gear (attribute 6) can receive up to 2 additional points per attribute.</p>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Groups received scores for each license in their fishing portfolios. For example, a group with three unique licenses received three scores reflecting the sum of Attributes 1–4 for each license type. The highest possible score a single license type could receive was 12. Groups also were scored based on Attributes 5 and 6. The combined score for Attributes 5 and 6 ranged from 2 to 6. These scores were based on geographic and gear type diversity as described in 
+   <a ref-type="supplementary-material" rid="pone.0178266.s002" href="#pone.0178266.s002">S2 Table</a>. To create the Adaptability Index, the maximum score associated with each group in the typology was summed with the scores from Attributes 5 and 6. Taking the maximum score rather than an average ensured that marine harvesters that hold multiple licenses were not penalized for holding a license to a “lesser” fishery. Raw scores were then scaled to 100. We intentionally did not weight the attributes used in the evaluation of adaptability.
+  </p>
+ </sec>
+</sec>

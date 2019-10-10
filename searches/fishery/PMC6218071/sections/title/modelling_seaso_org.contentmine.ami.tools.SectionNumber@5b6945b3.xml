@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec007" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modelling seasonal changes in monkfish distributions</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The number of monkfish per tow was modeled in the R package “mgcv” (generalized additive model function “gam” with family = “Tweedie” and link = “log”) [
+  <a rid="pone.0206829.ref025" ref-type="bibr" href="#pone.0206829.ref025">25</a>–
+  <a rid="pone.0206829.ref026" ref-type="bibr" href="#pone.0206829.ref026">26</a>]. We used a model with a Tweedie distribution because the count data was over dispersed with a high proportion of zero values [
+  <a rid="pone.0206829.ref027" ref-type="bibr" href="#pone.0206829.ref027">27</a>–
+  <a rid="pone.0206829.ref028" ref-type="bibr" href="#pone.0206829.ref028">28</a>]. Fixed effects available for modeling the monkfish catch numbers included location (“easting” and “northing” with latitude and longitude coordinates projected into UTM space using the R package “rgdal”) [
+  <a rid="pone.0206829.ref029" ref-type="bibr" href="#pone.0206829.ref029">29</a>], bottom depth (in meters), bottom temperature (rounded to the nearest °C), area (CAI or CAII), and month (as categorical variables). Prior to running the mixed models, we looked for evidence of high collinearity between the fixed effect variables using variance inflation factors (VIFs) and examined the data for evidence of spatial auto-correlation with the spline correlogram function “spline.correlog” available in the R package “ncf” [
+  <a rid="pone.0206829.ref030" ref-type="bibr" href="#pone.0206829.ref030">30</a>–
+  <a rid="pone.0206829.ref031" ref-type="bibr" href="#pone.0206829.ref031">31</a>]. Scatter plots of location, depth, and bottom temperature versus monkfish catch by month were examined to determine if quadratic terms should be included.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Random effects for survey trip and survey station were added to the models to account for differences in monkfish numbers due to changes in survey vessels or survey protocol and any consistent differences between survey stations that might affect dredge operation. The final model was determined based on the Akaike Information Criterion (AIC) after backward elimination of variables and interaction terms [
+  <a rid="pone.0206829.ref032" ref-type="bibr" href="#pone.0206829.ref032">32</a>]. Models were evaluated using AIC weights from the function “akaike.weights” in R package “qpcR” [
+  <a rid="pone.0206829.ref033" ref-type="bibr" href="#pone.0206829.ref033">33</a>]. The significance of the fixed effects in the final model were assessed using the function "anova.gam" in the R package "mgcv", a function that uses a Type III ANOVA to assess model terms [
+  <a rid="pone.0206829.ref026" ref-type="bibr" href="#pone.0206829.ref026">26</a>]. To visualize model fit, the observed catch numbers per tow were averaged by station and used to create smoothed kernel density plots for each season with the spatial analyst tools in ArcGIS. The fitted values from the final model were sorted by season and plotted over the kernel density plots.
+ </p>
+</sec>

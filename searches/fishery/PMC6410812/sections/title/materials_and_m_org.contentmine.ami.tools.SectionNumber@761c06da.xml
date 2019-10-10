@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="s4" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Materials and Methods</div>
+ <p content-type="flushleft" xmlns="http://www.w3.org/1999/xhtml">We use confidential Alaska region commercial fishing data collected by the Alaska Department of Fish and Game. The dataset includes one record per landing for all commercial fishing trips made by catcher vessels in the Alaska region, about 500,000 records per year, from 1991 to 2015. The landings database is comprehensive for catcher vessels, but not for catcher processors that process their catch at sea; thus we focus only on catch-share programs that were implemented in fisheries with catcher vessels and remove all catcher processor records from the analysis. Each record in the landings database includes a vessel identifier and the permitted fishery in which harvesting took place. In total, there are 104 fisheries, defined as a unique area/species/gear combination (
+  <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816545116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <span class="italic">SI Appendix</span>
+  </span>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We test for a structural break in the time series of participation and the network metrics (node size, weighted degree, weighted out-degree, weighted centrality, and weighted out-centrality), thereby controlling for background trends stemming from changes in biological, economic, and other processes. We estimate a time-series regression model for a given fishery as
+  <div id="eq1" class="disp-formula">
+   <div id="me1" class="math">
+    <span class="mtext">ln</span>
+    <div class="mrow">
+     <span class="mo">(</span>
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">V</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">t</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">)</span>
+    </div>
+    <span class="mo">−</span>
+    <span class="mtext">ln</span>
+    <div class="mrow">
+     <span class="mo">(</span>
+     <div class="mrow">
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">V</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">−</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+     </div>
+     <span class="mo">)</span>
+    </div>
+    <span class="mo">=</span>
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">0</span>
+     </div>
+    </div>
+    <span class="mo">+</span>
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">1</span>
+     </div>
+    </div>
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">D</span>
+     </div>
+     <div class="mrow">
+      <span class="mi">t</span>
+     </div>
+    </div>
+    <span class="mo">+</span>
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">2</span>
+     </div>
+    </div>
+    <span class="mi">t</span>
+    <span class="mo">+</span>
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">3</span>
+     </div>
+    </div>
+    <div class="msup">
+     <div class="mrow">
+      <span class="mi">t</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">2</span>
+     </div>
+    </div>
+    <span class="mo">+</span>
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">e</span>
+     </div>
+     <div class="mrow">
+      <span class="mi">t</span>
+     </div>
+    </div>
+    <span class="mo">,</span>
+   </div>
+   <span class="label">[1]</span>
+  </div>where 
+  <div class="inline-formula">
+   <div id="i59" class="math">
+    <span class="mi">V</span>
+   </div>
+  </div> denotes the network statistic, 
+  <div class="inline-formula">
+   <div id="i60" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">D</span>
+     </div>
+     <div class="mrow">
+      <span class="mi">t</span>
+     </div>
+    </div>
+   </div>
+  </div> denotes an indicator variable equal to one for the year immediately after catch-share implementation and zero otherwise, 
+  <div class="inline-formula">
+   <div id="i61" class="math">
+    <span class="mi">t</span>
+   </div>
+  </div> represents year, and 
+  <div class="inline-formula">
+   <div id="i62" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">e</span>
+     </div>
+     <div class="mrow">
+      <span class="mi">t</span>
+     </div>
+    </div>
+   </div>
+  </div> represents an idiosyncratic error. Testing for a structural break immediately after catch shares were introduced is equivalent to testing the null hypothesis of 
+  <div class="inline-formula">
+   <div id="i63" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">1</span>
+     </div>
+    </div>
+    <span class="mo">=</span>
+    <span class="mn">0</span>
+   </div>
+  </div>. Note that this specification looks for a structural break in the flow of, or first difference in, the time series. Since the migration network is already the first difference in networks, metrics from the migration network are not first differenced when estimating 
+  <a ref-type="disp-formula" rid="eq1" href="#eq1">Eq. 
+   <span class="bold">1</span>
+  </a>. Standard errors are computed using the Newey–West variance estimator (
+  <a rid="r43" ref-type="bibr" href="#r43">43</a>). We also compare our estimates of 
+  <div class="inline-formula">
+   <div id="i64" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">1</span>
+     </div>
+    </div>
+   </div>
+  </div> to a reference distribution of placebo effects, which are generated by iteratively reassigning the catch-share intervention year and reestimating 
+  <a ref-type="disp-formula" rid="eq1" href="#eq1">Eq. 
+   <span class="bold">1</span>
+  </a>. If the original estimate of 
+  <div class="inline-formula">
+   <div id="i65" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">1</span>
+     </div>
+    </div>
+   </div>
+  </div> is small relative to the distribution of placebo effects, then we have less confidence that the effect is from catch-share implementation (
+  <a rid="r44" ref-type="bibr" href="#r44">44</a>, 
+  <a rid="r45" ref-type="bibr" href="#r45">45</a>). We also consider lagged impacts that take place in the first few years following catch-share implementation (see 
+  <span ext-link-type="uri" xlink:href="https://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1816545116/-/DCSupplemental" xlink:show="new" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <span class="italic">SI Appendix</span>
+  </span> for additional details).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To estimate the scope of leakage, we apply a cluster-detection algorithm to the net-migration network and to year-to-year changes in the cross-participation network. We assign fisheries to clusters for each of the catch-share programs for the year in which the program was introduced to maximize modularity, which measures the extent to which clusters, or densely connected groups of nodes with only sparse connections between groups, exist in the network (
+  <a rid="r46" ref-type="bibr" href="#r46">46</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Within each cluster, we test whether participation and network metrics exhibit a structural break at the time of catch-share implementation for the fisheries contained in the cluster to estimate the scale of leakage. To estimate a change in cluster participation, we follow 
+  <a ref-type="disp-formula" rid="eq1" href="#eq1">Eq. 
+   <span class="bold">1</span>
+  </a> but use the total number of participants that were active in at least one fishery in the migration cluster beyond that/those the catch share was implemented in. To test for changes in economic connectivity, we estimate a panel-regression model for a given cluster that is identical to 
+  <a ref-type="disp-formula" rid="eq1" href="#eq1">Eq. 
+   <span class="bold">1</span>
+  </a>, except that we exploit the longitudinal nature of the data and allow for fishery-specific fixed effects 
+  <div class="inline-formula">
+   <div id="i66" class="math">
+    <div class="msub">
+     <div class="mrow">
+      <span class="mi">β</span>
+     </div>
+     <div class="mrow">
+      <span class="mn">0</span>
+      <span class="mo">,</span>
+      <span class="mi">i</span>
+     </div>
+    </div>
+   </div>
+  </div>. To explore whether cluster-level structural breaks can be attributed to catch-share implementation, we identify the central node(s) within each cluster based on closeness centrality. Centrality of nodes is recognized as a means of identifying the optimal seeding nodes (
+  <a rid="r38" ref-type="bibr" href="#r38">38</a>), and we use it to identify the conceptual opposite—i.e., the origin of the network change. Therefore, to the extent the catch-share fishery has the highest centrality, we attribute the structural breaks within the cluster to the catch-share fishery.
+ </p>
+</sec>

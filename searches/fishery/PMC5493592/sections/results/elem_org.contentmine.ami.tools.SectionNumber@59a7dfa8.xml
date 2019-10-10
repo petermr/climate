@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Results</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modelling non-stationary productivity</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We develop a non-stationary analysis of the intrinsic productivity parameter 
+   <span class="italic">r</span> using fisheries time series for 276 stocks worldwide from the RAM Legacy Stock Assessment Database
+   <a ref-type="bibr" rid="b17" href="#b17">17</a> (note that a ‘stock’ is defined here as population unit under management and may represent one or more populations within a metapopulation). We base the analysis on the foundational Graham–Schaefer surplus production model
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq1" class="disp-formula">
+    <span id="d32e201" xlink:href="ncomms15325-m1.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">B</span> denotes stock biomass, 
+   <span class="italic">C</span> is the harvested biomass (the catch), with subscripts 
+   <span class="italic">t</span> denoting years, 
+   <span class="italic">r</span> is the intrinsic productivity of the stock, 
+   <span class="italic">K</span> is the carrying capacity and 
+   <div id="d32e220" class="inline-formula">
+    <span id="d32e221" xlink:href="ncomms15325-m2.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> is the annual biomass deviation due to unresolved processes and measurement error, statistically described by a Gaussian distribution with a mean of zero and variance 
+   <div id="d32e223" class="inline-formula">
+    <span id="d32e224" xlink:href="ncomms15325-m3.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>, or 
+   <div id="d32e226" class="inline-formula">
+    <span id="d32e227" xlink:href="ncomms15325-m4.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>. Labelled ‘the most fundamental of all ecological parameters’
+   <a ref-type="bibr" rid="b18" href="#b18">18</a>, the magnitude of 
+   <span class="italic">r</span> controls the growth trajectory of a population, maximum sustainable fishing mortality and the timeline to recovery. The carrying capacity 
+   <span class="italic">K</span>, in contrast, sets the long-term maximum attainable biomass and related reference targets such as 
+   <span class="italic">B</span>
+   <sub>MSY</sub>.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To investigate non-stationary dynamics in stock productivity and recovery in global stocks, we first extracted the annual biomass deviations from the static Graham–Schaefer model 
+   <div id="d32e245" class="inline-formula">
+    <span id="d32e246" xlink:href="ncomms15325-m5.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> and fit a first-order autoregressive time series model of the form 
+   <div id="d32e248" class="inline-formula">
+    <span id="d32e249" xlink:href="ncomms15325-m6.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>, where 
+   <div id="d32e251" class="inline-formula">
+    <span id="d32e252" xlink:href="ncomms15325-m7.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>. Under noninformative priors, we fit the model to all individual stocks and then classify a stock as non-stationary if the 95% posterior credible interval for the autoregressive coefficient 
+   <span class="italic">α</span> does not contain zero. This biological definition of stationarity differs from statistical stationarity in the following way: a statistical process is stationary if its probability distribution is invariant in time, that is, 
+   <div id="d32e257" class="inline-formula">
+    <span id="d32e258" xlink:href="ncomms15325-m8.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> is stationary if |
+   <span class="italic">α</span>|&lt;1 and 
+   <span class="italic">δ</span>=0, yielding E
+   <div id="d32e267" class="inline-formula">
+    <span id="d32e268" xlink:href="ncomms15325-m9.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>=0 and 
+   <div id="d32e270" class="inline-formula">
+    <span id="d32e271" xlink:href="ncomms15325-m10.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> for all 
+   <span class="italic">t</span>, with an autocovariance function that depends only on lag. Here we define biological nonstationarity as a stochastic process with temporal memory (autocorrelation) such that annual biomass deviations contain persistent regime-like behaviour, which is well-modelled by an autoregressive process with positive 
+   <span class="italic">α</span> (ref. 
+   <a ref-type="bibr" rid="b19" href="#b19">19</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For stocks characterized as biologically non-stationary, we capture variation in the autocorrelated deviations of annual biomass via a time-varying intrinsic productivity parameter modelled as a stochastic random walk with drift</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq11" class="disp-formula">
+    <span id="d32e287" xlink:href="ncomms15325-m11.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">r</span> is the intrinsic productivity state in years 
+   <span class="italic">t</span> and 
+   <span class="italic">t</span>+1, 
+   <span class="italic">δ</span> is the drift and 
+   <div id="d32e302" class="inline-formula">
+    <span id="d32e303" xlink:href="ncomms15325-m12.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> is the stochastic annual productivity forcing with distribution 
+   <div id="d32e306" class="inline-formula">
+    <span id="d32e307" xlink:href="ncomms15325-m13.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> that governs the variability in productivity from year to year. We formulate the non-stationary Graham–Schaefer as a hierarchical Bayesian model
+   <a ref-type="bibr" rid="b20" href="#b20">20</a>
+   <a ref-type="bibr" rid="b21" href="#b21">21</a> to reconstruct characteristic productivity variation for all depleted stocks and estimate the key parameter 
+   <div id="d32e311" class="inline-formula">
+    <span id="d32e312" xlink:href="ncomms15325-m14.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> for each stock, which quantitatively characterizes the response to biologically and environmentally driven productivity forcing. We fit the Bayesian model via Markov Chain Monte Carlo (MCMC) using the software Stan
+   <a ref-type="bibr" rid="b22" href="#b22">22</a>. Mathematical details of the model are given in the Methods.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To forecast the recovery time for depleted stocks under the assumption of non-stationary productivity, we computed posterior predictive ensemble forecasts for future biomass by simulating random walk trajectories for the intrinsic productivity 
+   <span class="italic">r</span> starting from the most recently estimated productivity state. In this way, the magnitude of historical variation in productivity 
+   <div id="d32e321" class="inline-formula">
+    <span id="d32e322" xlink:href="ncomms15325-m15.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> and the current productivity state are accounted for, while the direction of productivity change remains unknown. We assessed stock recovery 10 years into the future following the most recent observation since this is the default timescale for recovery planning in the US Magnuson–Stevens Fishery Conservation and Management Act
+   <a ref-type="bibr" rid="b7" href="#b7">7</a>. We note that general conclusions apply equally to other recovery timescales.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To investigate the effects of time-varying carrying capacity 
+   <span class="italic">K</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>, we also computed ensemble forecasts using the non-stationary Graham–Schaefer model where both 
+   <span class="italic">r</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> and 
+   <span class="italic">K</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> vary simultaneously as stochastic random walks. We performed forecast simulations where stochastic variation in 
+   <span class="italic">K</span>
+   <sub>t</sub> was assumed to be 5, 10 and 20% of the mean posterior 
+   <span class="italic">K</span> for each individual stock (
+   <div id="d32e355" class="inline-formula">
+    <span id="d32e356" xlink:href="ncomms15325-m16.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>), while 
+   <span class="italic">r</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> varied according to the estimates of 
+   <div id="d32e364" class="inline-formula">
+    <span id="d32e365" xlink:href="ncomms15325-m17.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> from the Bayesian inference. On the basis of initial simulation studies, we found that known (simulated) changes in the underlying carrying capacity and its variance 
+   <div id="d32e368" class="inline-formula">
+    <span id="d32e369" xlink:href="ncomms15325-m18.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> were more difficult to re-estimate relative to changes in 
+   <span class="italic">r</span>
+   <sub>t</sub> (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 1</a>) because of the weak dynamical connection between biomass and 
+   <span class="italic">K</span>
+   <sub>t</sub> when biomass is low. In contrast, 
+   <span class="italic">r</span>
+   <sub>t</sub> is directly proportional to the stock rate of change across a wide range of biomass levels, yielding more reliable estimation when averaging over possible biomass states. For these reasons we focused the formal time series estimation on 
+   <span class="italic">r</span>
+   <sub>t</sub> and present models of non-stationary 
+   <span class="italic">K</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> in sections of the paper on biomass forecasting and recovery timelines.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Patterns in stock productivity and their consequences</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The analysis and classification of annual biomass deviations with respect to the static Graham–Schaefer fit revealed that 68% of all stocks exhibited significant non-stationary behaviour (
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1a</a>), suggesting persistent regimes in stock productivity for global stocks. Of stocks that are depleted (
+   <span class="italic">B&lt;B</span>
+   <sub>MSY</sub>), 61% were classified as non-stationary (
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1b</a>). The mean autocorrelation parameter (indicating the persistence of productivity) across all stocks was 
+   <div id="d32e417" class="inline-formula">
+    <span id="d32e418" xlink:href="ncomms15325-m19.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>=0.45 (95% credible interval: 0.39, 0.49), and for depleted stocks 
+   <div id="d32e420" class="inline-formula">
+    <span id="d32e421" xlink:href="ncomms15325-m20.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>=0.41 (0.36, 0.47). While many individual stocks exhibited a long-term productivity trend (
+   <span class="italic">δ</span>), the overall mean was not appreciably different from zero, indicating no directed long-term change in globally averaged productivity over time (
+   <a ref-type="fig" rid="f1" href="#f1">Fig. 1c,d</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Examples of two iconic fish stocks highlight the practical consequences of productivity variation in a changing environment (
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>). The Gulf of St Lawrence Atlantic cod (
+   <span class="italic">Gadus morhua</span>) stock collapsed and was placed under moratorium in the early 1990s after realized surplus production had gone negative, but catches remained high
+   <a ref-type="bibr" rid="b23" href="#b23">23</a> (
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2a,c</a>). Similarly, bluefin tuna was proposed for a CITES trade ban in 2010, following a period of low realized productivity and rampant overfishing in the early 2000s (ref. 
+   <a ref-type="bibr" rid="b24" href="#b24">24</a>; 
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2b,d</a>). Inferred trends in surplus production and sustainable yield (dashed lines, 
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>) were observed as long-term directional changes in the case of cod (
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2a,c</a>) or as oscillating regimes in tuna (
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2b,d</a>). In both cases, the biomass available for harvest was at times systematically over- or underestimated in a static productivity framework and likely led to periods of unrecognized, or ‘silent’, over- and underfishing (red and grey shading in 
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>, respectively). Fixed harvest strategies effectively reproduce the long-term historical average productivity from non-stationary models (equal red and grey areas, 
+   <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>) and, therefore, poorly capture contemporary productivity over much of the observed period. These examples illustrate how changes in the underlying stock productivity are ignored by static models but can be tracked within a non-stationary framework.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For depleted populations, systematic productivity variation suggests that recovery should be forecast from recent observations that best characterize the current productivity state and its variability, rather than from observations back in time. Examples of non-stationary biomass forecasting are provided in 
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3</a>. Historical variation in 
+   <div id="d32e470" class="inline-formula">
+    <span id="d32e471" xlink:href="ncomms15325-m21.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>(characterized by 
+   <div id="d32e473" class="inline-formula">
+    <span id="d32e474" xlink:href="ncomms15325-m22.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>) is estimated from the observed time series such that the interannual changes in biomass are accurately predicted within measurement uncertainty (
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3a,b</a>). Ensemble forecasts based on realizations of the non-stationary productivity model are then propagated into the future with associated biomass predictions (
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3c,d</a>). Note that the positive contemporary productivity regimes for Gulf of Alaska Pacific cod results in upward trending biomass forecasts, while in contrast, biomass trajectories are trending downwards for North Sea herring, which occupies a negative productivity regime at the end of the observed period (
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3c,d</a>). The recovery probability for a stock after a period into the future is taken from the relative overlap in the histograms with respect to the posterior distributions of the forecasted biomass and the estimated rebuilding target (
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3e,f</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Under the assumption of no fishing (
+   <span class="italic">F</span>=0), posterior ensemble forecasts estimate that 57% of depleted stocks are predicted to recover within a 10-year time window (defined as having probability of recovery greater than half; 
+   <a ref-type="fig" rid="f4" href="#f4">Fig. 4a</a>); however, appreciable uncertainty exists in the ensemble and some proportion of all stocks’ trajectories do not recover because of a nonzero probability of low-productivity regimes in the future (
+   <a ref-type="fig" rid="f3" href="#f3">Fig. 3</a>). This contrasts with results from traditional static productivity model when the intrinsic productivity (
+   <span class="italic">r</span>) is assumed to be stationary (for example, ref. 
+   <a ref-type="bibr" rid="b7" href="#b7">7</a>). In this case, the mean recovery time is ∼3 years and recovery time probability is deterministic—either a stock recovers or it does not. The number of stocks recovering in the deterministic case is 78% (
+   <a ref-type="fig" rid="f4" href="#f4">Fig. 4a</a>). When we investigated the effect of non-stationary carrying capacity (
+   <span class="italic">K</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>), we generally found that variation in 
+   <span class="italic">K</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> had the effect of reducing the recovery time probabilities for all stocks (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 2</a>) relative to static 
+   <span class="italic">K.</span> This effect was positively related to the magnitude of 
+   <div id="d32e529" class="inline-formula">
+    <span id="d32e530" xlink:href="ncomms15325-m23.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> (
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Fig. 1c–h</a>). Recovery time probabilities were reduced by 3%, 5% and 11%, on average, for 
+   <div id="d32e535" class="inline-formula">
+    <span id="d32e536" xlink:href="ncomms15325-m24.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>=
+   <div id="d32e538" class="inline-formula">
+    <span id="d32e539" xlink:href="ncomms15325-m25.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <div id="d32e541" class="inline-formula">
+    <span id="d32e542" xlink:href="ncomms15325-m26.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <div id="d32e544" class="inline-formula">
+    <span id="d32e545" xlink:href="ncomms15325-m27.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>, respectively.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">When fishing a depleted stock at 90% of the maximum sustainable rate (
+   <span class="italic">F</span>=0.9
+   <span class="italic">F</span>
+   <sub>MSY</sub>), only 18% of stocks are predicted to recover within 10 years in our analysis (
+   <a ref-type="fig" rid="f4" href="#f4">Fig. 4b</a>); this contrasts with 66% predicted to recover over the same timeframe under assumed stationary (fixed) productivity (note that the effect of 
+   <span class="italic">K</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> was similar under both fishing scenarios). Interestingly, the mean biomass trajectories were not qualitatively different if 
+   <span class="italic">F</span>
+   <sub>MSY</sub> is fixed at a static mean value (
+   <span class="italic">F</span>=0.9
+   <span class="italic">F</span>
+   <sub>MSY</sub>) or allowed to vary according to 
+   <div id="d32e580" class="inline-formula">
+    <span id="d32e581" xlink:href="ncomms15325-m28.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>, which represents a crude adaptive fishing strategy that is updated according to the most recent estimate of time-varying productivity. The variance of biomass was, however, generally higher under the fixed fishing strategy with potentially important consequences for fisheries management. We emphasize that modelling optimal harvest strategies under non-stationary population dynamics should be a focus of future fisheries management research.
+  </p>
+ </sec>
+</sec>

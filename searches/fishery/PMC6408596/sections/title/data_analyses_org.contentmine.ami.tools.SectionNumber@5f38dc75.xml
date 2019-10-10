@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="s2c" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">(c)</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">All statistical analyses were conducted using R v. 3.3.2 [
+  <a rid="RSPB20182544C22" ref-type="bibr" href="#RSPB20182544C22">22</a>]. Statistical scripts and custom R package 
+  <span class="italic">ggBRT</span> are available on GitHub (
+  <span xlink:href="https://github.com/JBjouffray" class="uri" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/JBjouffray</span>). We used boosted regression trees (BRTs) [
+  <a rid="RSPB20182544C23" ref-type="bibr" href="#RSPB20182544C23">23</a>] to examine the occurrence of each regime in relation to anthropogenic and biophysical predictors. BRTs represent an advanced regression technique that combines large numbers of relatively simple trees by sequentially fitting each new tree to the residuals from the previous ones. It improves predictive performance over more traditional tree fitting techniques with the ability to fit non-linear relationships and account for complex interactions among predictors [
+  <a rid="RSPB20182544C23" ref-type="bibr" href="#RSPB20182544C23">23</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The classification of sites into different regimes was converted to presence-absence of each regime [
+  <a rid="RSPB20182544C8" ref-type="bibr" href="#RSPB20182544C8">8</a>] and modelled using a Bernoulli distribution following the 
+  <span class="italic">gbm.step</span> routine [
+  <a rid="RSPB20182544C23" ref-type="bibr" href="#RSPB20182544C23">23</a>] in the 
+  <span class="italic">dismo</span> package v. 1.1-4 [
+  <a rid="RSPB20182544C24" ref-type="bibr" href="#RSPB20182544C24">24</a>]. Trees were built with default parameters to make model outputs comparable among regimes: a tree complexity of 5, a learning rate of 0.001 and a bag fraction of 0.75. Tree complexity controls how many levels of interactions are fitted, learning rate determines the contribution of each new tree to the model and bag fraction specifies the proportion of data to be randomly selected while fitting each single decision tree [
+  <a rid="RSPB20182544C23" ref-type="bibr" href="#RSPB20182544C23">23</a>,
+  <a rid="RSPB20182544C25" ref-type="bibr" href="#RSPB20182544C25">25</a>]. Variation of these parameters by running all possible combinations of tree complexity (1–5), learning rate (0.01, 0.005, 0.001, 0.0001) and bag fraction (0.5, 0.7, 0.9) provided negligible improvements in predictive performance.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Model performance was evaluated by 10-fold cross-validation that allows to test the model against withheld portions of the data which are not used in model fitting [
+  <a rid="RSPB20182544C23" ref-type="bibr" href="#RSPB20182544C23">23</a>]. We looked at the cross-validated per cent deviance explained, calculated as (1 – (cross-validated deviance/mean total deviance)) and cross-validated area under the receiver operating characteristics curve (AUC) as measures of model performance. An AUC value of 0.5 corresponds to a predictive ability similar to what would be expected by chance alone. Values are considered ‘acceptable’ between 0.7–0.8, ‘excellent’ between 0.8–0.9 and ‘outstanding’ above 0.9 [
+  <a rid="RSPB20182544C26" ref-type="bibr" href="#RSPB20182544C26">26</a>]. Spatial autocorrelation was assessed by estimating Moran's 
+  <span class="italic">I</span> coefficients from the model residuals [
+  <a rid="RSPB20182544C27" ref-type="bibr" href="#RSPB20182544C27">27</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We calculated the relative importance of each predictor based on the number of times a variable was selected for splitting, weighted by the squared improvement to the model as a result of each split and averaged over all trees [
+  <a rid="RSPB20182544C23" ref-type="bibr" href="#RSPB20182544C23">23</a>,
+  <a rid="RSPB20182544C28" ref-type="bibr" href="#RSPB20182544C28">28</a>]. To assess the relative contribution of anthropogenic versus biophysical predictors for each regime, we considered only the variables with a relative influence above that expected by chance (100/number of variables, i.e. 5%) [
+  <a rid="RSPB20182544C29" ref-type="bibr" href="#RSPB20182544C29">29</a>] and rescaled their influence to 100%.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Partial dependency plots with 95% confidence intervals obtained from 1000 bootstrap replicates [
+  <a rid="RSPB20182544C25" ref-type="bibr" href="#RSPB20182544C25">25</a>] were used to visualize the relationships between the most influential predictor variables and the response (regime), while keeping all other predictors at their mean. We quantified relative interaction strength between predictors by measuring residual variation between pairwise model predictions with and without interactions [
+  <a rid="RSPB20182544C30" ref-type="bibr" href="#RSPB20182544C30">30</a>]. We used 100 bootstrap resampling to test the significance of the strongest interactions. For each bootstrap, we randomly resampled the occurrence of the regime before re-fitting the BRT model and then recorded the size of the interactions to generate a distribution under the null hypothesis of no interaction among predictors [
+  <a rid="RSPB20182544C30" ref-type="bibr" href="#RSPB20182544C30">30</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Input data for the predictor variables had different native spatial resolutions (
+  <a rid="RSPB20182544TB1" ref-type="table" href="#RSPB20182544TB1">table 1</a>). For instance, while many of the anthropogenic predictor rasters were available at a fine spatial grain (less than 500 m), most of the biophysical ones were generated at a coarser grain size (e.g. 4000 m). To control for the influence of different grain sizes on the outcome of the model, we extracted all predictor raster datasets at multiple standardized grain sizes (500, 1000, 1500, 2500 and 4000 m), before re-running the BRTs on regimes aggregated following a two-thirds majority within each cell resolution (electronic supplementary material, figure S3).
+ </p>
+</sec>
