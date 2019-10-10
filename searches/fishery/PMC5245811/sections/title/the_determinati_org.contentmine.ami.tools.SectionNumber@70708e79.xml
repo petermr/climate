@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec006" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">The determination of fishing effort</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Harvest depends upon fish biomass and the fishing effort. Here, we interpret effort as the combined inputs used in the fishing process [
+  <a rid="pone.0169763.ref035" ref-type="bibr" href="#pone.0169763.ref035">35</a>], essentially fuel, labour and the construction and maintenance of fishing fleets, and we express it in energy units of W m
+  <span class="sup">−2</span> (1 W = 1 J s
+  <span class="sup">−1</span>). This choice facilitates comparison with the global effort database of [
+  <a rid="pone.0169763.ref001" ref-type="bibr" href="#pone.0169763.ref001">1</a>, 
+  <a rid="pone.0169763.ref036" ref-type="bibr" href="#pone.0169763.ref036">36</a>]. Effort of this type is often described as ‘nominal effort’, and is defined here as being independent of fishing technology.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The allocation of fishing effort, that is, the dynamics of fleets of fishing vessels, involves biological, social, and economic aspects that depend on numerous variables that operate on a variety of timescales [
+  <a rid="pone.0169763.ref037" ref-type="bibr" href="#pone.0169763.ref037">37</a>, 
+  <a rid="pone.0169763.ref038" ref-type="bibr" href="#pone.0169763.ref038">38</a>]. In order to provide a first step in prognostic modeling of these interactions in a simple yet robust way, we couple the Gordon-Schaeffer open-access fisheries economics model [
+  <a rid="pone.0169763.ref039" ref-type="bibr" href="#pone.0169763.ref039">39</a>, 
+  <a rid="pone.0169763.ref040" ref-type="bibr" href="#pone.0169763.ref040">40</a>] to our ecological model [
+  <a rid="pone.0169763.ref024" ref-type="bibr" href="#pone.0169763.ref024">24</a>] in a discrete, temporally-resolved framework. This open-access model assumes an absence of regulation, so that fishermen tend to individually seek the greatest total harvest [
+  <a rid="pone.0169763.ref039" ref-type="bibr" href="#pone.0169763.ref039">39</a>, 
+  <a rid="pone.0169763.ref041" ref-type="bibr" href="#pone.0169763.ref041">41</a>], which ultimately leads to overharvest and to the tragedy of the commons [
+  <a rid="pone.0169763.ref042" ref-type="bibr" href="#pone.0169763.ref042">42</a>, 
+  <a rid="pone.0169763.ref043" ref-type="bibr" href="#pone.0169763.ref043">43</a>]. Although this is not an economically or biologically optimal outcome, it is common, given the difficulty in establishing property rights over living marine resources. Although management has made great advances in effectively counteracting this tendency in some fisheries, particularly since the 1990s [
+  <a rid="pone.0169763.ref044" ref-type="bibr" href="#pone.0169763.ref044">44</a>, 
+  <a rid="pone.0169763.ref045" ref-type="bibr" href="#pone.0169763.ref045">45</a>], the open-access result has historically dominated, and remains a cause of overfishing in many open-ocean and coastal fisheries [
+  <a rid="pone.0169763.ref046" ref-type="bibr" href="#pone.0169763.ref046">46</a>]. Subsidies can also shift behaviour from the open-access solution, although wherever subsidies are capacity-building they often exacerbate the open-access problem [
+  <a rid="pone.0169763.ref047" ref-type="bibr" href="#pone.0169763.ref047">47</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In open-access fisheries, fishermen seek to maximize their individual harvests, and so are driven by average instead of marginal profit [
+  <a rid="pone.0169763.ref039" ref-type="bibr" href="#pone.0169763.ref039">39</a>]. Effort in a fish group 
+  <span class="italic">k</span>, 
+  <span class="italic">E</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub>(
+  <span class="italic">t</span>) (W m
+  <span class="sup">−2</span>), therefore evolves in time as a linear function of the average profit (profit per unit effort), as 
+  <div id="pone.0169763.e007" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e007.jpg" id="pone.0169763.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M7" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="mfrac">
+          <span mathvariant="normal" class="mi">d</span>
+          <span class="mtext">dt</span>
+         </div>
+         <div class="msub">
+          <span class="mi">E</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <span class="mi">t</span>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">κ</span>
+          <span class="mi">e</span>
+         </div>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mo">[</span>
+           <span class="mtext">average</span>
+           <span width="0.166667em" class="mspace"/>
+           <span class="mtext">profit</span>
+           <span class="mo">]</span>
+          </div>
+          <span class="mi">k</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="mfrac">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">κ</span>
+            <span class="mi">e</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">[</span>
+            <div class="msub">
+             <span class="mtext">revenue</span>
+             <span class="mi">k</span>
+            </div>
+            <span class="mo">-</span>
+            <div class="msub">
+             <span class="mtext">cost</span>
+             <span class="mi">k</span>
+            </div>
+            <span class="mo">]</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">E</span>
+            <span class="mi">k</span>
+           </div>
+           <div class="mrow">
+            <span class="mo">(</span>
+            <span class="mi">t</span>
+            <span class="mo">)</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(6)</span>
+  </div> where 
+  <span class="italic">κ</span>
+  <sub>
+   <span class="italic">e</span>
+  </sub> (W
+  <span class="sup">2</span> m
+  <span class="sup">−2</span> $
+  <span class="sup">−1</span>) is the fleet dynamics parameter [
+  <a rid="pone.0169763.ref048" ref-type="bibr" href="#pone.0169763.ref048">48</a>] that determines the timescale at which a change in average profit affects effort, and revenue and cost are in units of $ m
+  <span class="sup">−2</span> s
+  <span class="sup">−1</span>. The fleet dynamics parameter 
+  <span class="italic">κ</span>
+  <sub>
+   <span class="italic">e</span>
+  </sub> is set so that the adjustment of effort to changes in profit is approximately 10 years, since fleets adjust to changes in biomass on roughly decadal timescales [
+  <a rid="pone.0169763.ref049" ref-type="bibr" href="#pone.0169763.ref049">49</a>–
+  <a rid="pone.0169763.ref051" ref-type="bibr" href="#pone.0169763.ref051">51</a>]. Although the entry of effort into fisheries often occurs at a faster rate than exit, particularly when subsidies are applied, for simplicity we assume here that both rates are the same.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We assume that harvest is linear in both biomass and effort, and so for a given level of harvesting technology, a fixed amount of effort always catches the same fraction of biomass [
+  <a rid="pone.0169763.ref040" ref-type="bibr" href="#pone.0169763.ref040">40</a>]. The ecological model discretizes biomass along a size spectrum, and so we define an analagous harvest spectrum. The harvest 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> (gwB m
+  <span class="sup">−2</span> s
+  <span class="sup">−1</span> g
+  <span class="sup">−1</span>) in the mass range d
+  <span class="italic">m</span> is that which results from effort 
+  <span class="italic">E</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> applied to group 
+  <span class="italic">k</span> during time interval d
+  <span class="italic">t</span>, which we define as 
+  <div id="pone.0169763.e008" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e008.jpg" id="pone.0169763.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M8" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">h</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <span width="0.166667em" class="mspace"/>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">m</span>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">q</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">σ</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">E</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">f</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <span width="0.166667em" class="mspace"/>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">m</span>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(7)</span>
+  </div> where 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> (m
+  <span class="sup">2</span> W
+  <span class="sup">−1</span> s
+  <span class="sup">−1</span>) is the catchability and 
+  <span class="italic">σ</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> (unitless) is the size-dependent selectivity of harvest on group 
+  <span class="italic">k</span> (discussed further in the following subsection).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The catchability 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> of fish in group 
+  <span class="italic">k</span> is the fraction of selectable biomass harvested for a unit amount of effort [
+  <a rid="pone.0169763.ref052" ref-type="bibr" href="#pone.0169763.ref052">52</a>]. The catchability encapsulates the ease with which fish can be harvested given the inherent characteristics of fish, and the level of applied technology, including both embodied and disembodied aspects of technology [
+  <a rid="pone.0169763.ref011" ref-type="bibr" href="#pone.0169763.ref011">11</a>, 
+  <a rid="pone.0169763.ref053" ref-type="bibr" href="#pone.0169763.ref053">53</a>]. Thus, the adoption of improved vessels and fishing gear, sonar, communications, and navigation technologies, as well as improved skipper knowledge and efficiency practices, would all cause an increase of 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub>. In contrast, 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> does not include technological gains that reduce the cost of fishing per unit effort. Nor does 
+  <span class="italic">q</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> include technological gains that might enhance the market value of fish or provide access to new markets, which would increase the ex-vessel price.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The revenue spectrum 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> ($ m
+  <span class="sup">−2</span> s
+  <span class="sup">−1</span> g
+  <span class="sup">−1</span>) is the ex-vessel price 
+  <span class="italic">p</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> ($ gwB
+  <span class="sup">−1</span>, the price that fishermen are paid at port) of the harvest multiplied by the harvest spectrum 
+  <span class="italic">h</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> of 
+  <a ref-type="disp-formula" rid="pone.0169763.e008" href="#pone.0169763.e008">Eq (7)</a>, and so 
+  <span class="italic">r</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> dtdm gives the revenue associated with the harvest of group 
+  <span class="italic">k</span> for fish of mass range d
+  <span class="italic">m</span> at time 
+  <span class="italic">t</span> during d
+  <span class="italic">t</span>, 
+  <div id="pone.0169763.e009" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e009.jpg" id="pone.0169763.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M9" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">r</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <span width="0.166667em" class="mspace"/>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">m</span>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">q</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">σ</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">E</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">f</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <span width="0.166667em" class="mspace"/>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">m</span>
+         <span class="mo">.</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(8)</span>
+  </div> Studies have shown that when numerous species are considered together, a scale that conceptually matches our approach, the price is not strongly related to the trophic level [
+  <a rid="pone.0169763.ref054" ref-type="bibr" href="#pone.0169763.ref054">54</a>]. Further, given the unpredictability of fish prices as a function of size, which relates to complex factors such as transportation, processing and societal preferences, we presently assume that the ex-vessel price is globally constant.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The revenue component of the change in effort expressed in 
+  <a ref-type="disp-formula" rid="pone.0169763.e007" href="#pone.0169763.e007">Eq (6)</a> is therefore calculated by integrating over mass, so that 
+  <div id="pone.0169763.e010" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e010.jpg" id="pone.0169763.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M10" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mtext">revenue</span>
+          <span class="mi">k</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="msubsup">
+          <span class="mo">∫</span>
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">m</span>
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <div class="msub">
+           <span class="mi">m</span>
+           <div class="mrow">
+            <span class="mi">∞</span>
+            <span class="mo">,</span>
+            <span class="mi">k</span>
+           </div>
+          </div>
+         </div>
+         <div class="msub">
+          <span class="mi">r</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">m</span>
+         <span width="0.166667em" class="mspace"/>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">q</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">E</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <div class="msubsup">
+          <span class="mo">∫</span>
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">m</span>
+            <span class="mn">0</span>
+           </div>
+          </div>
+          <div class="msub">
+           <span class="mi">m</span>
+           <div class="mrow">
+            <span class="mi">∞</span>
+            <span class="mo">,</span>
+            <span class="mi">k</span>
+           </div>
+          </div>
+         </div>
+         <div class="msub">
+          <span class="mi">p</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">σ</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">f</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">m</span>
+         <span class="mo">.</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(9)</span>
+  </div> Note that, although the harvest is resolved as a size spectrum, there is only a single scalar value of effort for a given fish group 
+  <span class="italic">k</span> at a given location and time, since it is assumed that the fishing effort does not discriminate among size within each group, other than as determined by the gear type through the selectivity function.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We assume that cost is proportional to effort [
+  <a rid="pone.0169763.ref037" ref-type="bibr" href="#pone.0169763.ref037">37</a>], such that 
+  <div id="pone.0169763.e011" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e011.jpg" id="pone.0169763.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M11" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">C</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">c</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">E</span>
+          <span class="mi">k</span>
+         </div>
+         <span mathvariant="normal" class="mi">d</span>
+         <span class="mi">t</span>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(10)</span>
+  </div> where 
+  <span class="italic">C</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> is the cost ($ m
+  <span class="sup">−2</span> s
+  <span class="sup">−1</span>) associated with the effort exerted on fishing group 
+  <span class="italic">k</span>, and 
+  <span class="italic">c</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> ($ W
+  <span class="sup">−1</span> s
+  <span class="sup">−1</span>) is the cost per unit effort. We estimate the global cost per unit effort forcing by assuming that the real world was close to an open-access equilibrium between 1990 and 2006, so that total global revenue was equal to the total global cost, which is a reasonable first-order assumption based on the fishing cost database of Lam et al., [
+  <a rid="pone.0169763.ref055" ref-type="bibr" href="#pone.0169763.ref055">55</a>] (see Table 5 of that article). Thus, we divide the global revenue from the SAUP harvest database by the global effort as reported in [
+  <a rid="pone.0169763.ref001" ref-type="bibr" href="#pone.0169763.ref001">1</a>]. We presently assume that cost has no spatial dependence, for simplicity. Although this ignores the potentially-important role of the transit distance between fishing grounds and ports, it avoids a great deal of complexity, and could be revisited in future work.
+ </p>
+</sec>

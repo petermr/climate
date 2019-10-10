@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">BRT and selection of critical parameters</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Long-term fluctuations in eastern bluefin tuna abundance and in hydroclimatic variability were analyzed with BRT (fig. S1, analysis 1) (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>). BRT models are an ensemble method for fitting statistical models that combine the strengths of regression trees and boosting, which enables the identification of nonlinear complex relationships and interactions between variables without the need for previous data transformation or any underlying assumptions (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>). The analyses were computed using R software and the 
+  <span class="italic">gbm</span> and 
+  <span class="italic">dismo</span> packages. Critical parameter values were first tested in an exploratory phase. Large numbers of trees (&gt;1000) are required to build reliable models (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>); therefore, the learning rate (lr; the contribution of each tree to the growing model) was set at a low value (lr = 0.001) to generate systematically more than 3000 trees. Using the 
+  <span class="italic">gbm.step</span> function, the exact number of trees was determined with a 10-fold cross-validation while increasing the model complexity. A total of 24 sets of models were built to test the two other critical parameters, tree complexity (tr; the number of nodes in a tree) and bagging fraction (bag; the proportion of data to be selected at each step). Tested values ranged from 1 to 12 for tr and from 0.4 to 0.95 for bag (randomness is removed when bag is set to 1). Model performance was assessed with the training data correlation (equivalent to 
+  <span class="italic">R</span>
+  <span class="sup">2</span>
+  <sub>adj</sub> in linear regression models) and the 10-fold cross-validation correlation mean deviance and coefficient (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>). The sets of models with tr = 9 and bag = 0.8 systematically led to both the highest 
+  <span class="italic">R</span>
+  <span class="sup">2</span>
+  <sub>adj</sub> and cross-validation correlation coefficient and the lowest cross-validation deviance (table S1), and so, this configuration was used to build the two final models.
+ </p>
+</sec>

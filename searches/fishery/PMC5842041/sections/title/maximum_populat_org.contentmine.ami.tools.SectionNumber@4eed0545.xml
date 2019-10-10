@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Maximum population growth rate</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">To generate a prior distribution of 
+  <span class="italic">r</span>
+  <sub>max</sub>, we use a predictor based on life histories and a stochastic approach that sampled input life histories from set distributions. The predictor of 
+  <span class="italic">r</span>
+  <sub>max</sub> was a value twice the population rebound potential calculated following Smith 
+  <span class="italic">et al</span>. (
+  <a rid="R50" ref-type="bibr" href="#R50">
+   <span class="italic">50</span>
+  </a>) and using 1.5 times the estimated natural mortality (
+  <a rid="R51" ref-type="bibr" href="#R51">
+   <span class="italic">51</span>
+  </a>). For this method, we needed natural mortality (
+  <span class="italic">M</span>), age at maturity (
+  <span class="italic">t</span>
+  <sub>mat</sub>), longevity (
+  <span class="italic">t</span>
+  <sub>max</sub>), fecundity (
+  <span class="italic">b</span>), and reproductive frequency (τ; that is, years between litters) of the species. For 
+  <span class="italic">M</span>, we used a life-history invariant method using 
+  <span class="italic">t</span>
+  <sub>max</sub> (life span), 
+  <div class="inline-formula">
+   <div id="m16" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">M</span>
+      <span class="mo">=</span>
+      <span class="mn">4.899</span>
+      <span class="mo">*</span>
+      <div class="msubsup">
+       <span mathvariant="italic" class="mi">t</span>
+       <span class="mtext">max</span>
+       <div class="mrow">
+        <span class="mo">−</span>
+        <span class="mn">0.916</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> (
+  <a rid="R52" ref-type="bibr" href="#R52">
+   <span class="italic">52</span>
+  </a>), a method shown to outperform all other mortality predictors based on life histories and to be robust for low-productive species, such as sharks (
+  <a rid="R52" ref-type="bibr" href="#R52">
+   <span class="italic">52</span>
+  </a>). Source life histories were taken from the literature and 
+  <span ext-link-type="uri" xlink:href="http://www.fishbase.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.fishbase.org</span> through the rfishbase package (tables S1 and S2). When not available, they were predicted from empirical relationships from other available life histories (hereby, we will use the notation 
+  <div class="inline-formula">
+   <div id="m17" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div accent="true" class="mover">
+       <span mathvariant="normal" class="mi">θ</span>
+       <span stretchy="true" class="mo">^</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> to indicate a predicted life history θ). We sampled input life histories as follows:
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">(1) Age at maturity (
+  <span class="italic">t</span>
+  <sub>mat</sub>) was sampled from a uniform distribution with limits equal to the range of the available values (table S1).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">(2) Fecundity (
+  <span class="italic">b</span>) was not available for the silvertip shark. Thus, we calculated it from published litter size (ls) and reproductive frequency (τ), 
+  <div class="inline-formula">
+   <div id="m18" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">b</span>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <span class="mtext">ls</span>
+       <div class="mrow">
+        <span class="mn">2</span>
+        <span mathvariant="normal" class="mi">τ</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>. From a set of published ls values, we used their mean and SD to generate 1000 random draws of ls from a normal distribution. Then, we used these draws to calculate a distribution of 
+  <span class="italic">b</span> values and the corresponding means and SD. For gray reef sharks, we generated 1000 
+  <span class="italic">b</span> values from a normal distribution with μ
+  <sub>
+   <span class="italic">b</span>
+  </sub> equal to the available published value and SD σ
+  <sub>
+   <span class="italic">b</span>
+  </sub> = 0.30 * μ
+  <sub>
+   <span class="italic">b</span>
+  </sub>. Cortés (
+  <a rid="R53" ref-type="bibr" href="#R53">
+   <span class="italic">53</span>
+  </a>) observed that the reported fecundity’s SDs range between 20 and 40% of their mean.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">(3) 
+  <span class="italic">t</span>
+  <sub>max</sub> was sampled from a triangular distribution with a mode equal to the maximum available value, a lower limit equal to our minimum available value, and an upper limit equal to 30% of the mode. This is a modification of the approach used by Cortés (
+  <a rid="R53" ref-type="bibr" href="#R53">
+   <span class="italic">53</span>
+  </a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Once we had all the source life-history distributions, we resampled them 1000 times, and for each draw, we calculated the corresponding 
+  <span class="italic">r</span>
+  <sub>max</sub>. Then, we built a lognormal prior of 
+  <span class="italic">r</span>
+  <sub>max</sub> by taking the log of the values and calculating the mean and SD.
+ </p>
+</sec>

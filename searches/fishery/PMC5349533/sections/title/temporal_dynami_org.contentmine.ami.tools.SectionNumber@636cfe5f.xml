@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Temporal dynamic modelling and model derived indicators</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">The dynamic module of the EwE software, Ecosim
+  <a ref-type="bibr" rid="b25" href="#b25">25</a>
+  <a ref-type="bibr" rid="b35" href="#b35">35</a>, uses a set of differential equations to estimate biomass fluxes for each species and/or functional group of the ecosystem as follows:
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div id="eq1" class="disp-formula">
+   <span id="d32e410" xlink:href="srep44491-m1.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">where dB
+  <sub>
+   <span class="italic">i</span>
+  </sub>/dt is the biomass growth rate of group (i) during the interval dt, g
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the net growth efficiency (production/consumption ratio), I
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the immigration rate, M
+  <sub>
+   <span class="italic">i</span>
+  </sub> and F
+  <sub>
+   <span class="italic">i</span>
+  </sub> are natural and fishing mortality rates of group (i), e
+  <sub>
+   <span class="italic">i</span>
+  </sub> is emigration rate and B
+  <sub>
+   <span class="italic">i</span>
+  </sub> the biomass
+  <a ref-type="bibr" rid="b25" href="#b25">25</a>. Calculations of consumption rates (Q
+  <sub>
+   <span class="italic">ij</span>
+  </sub>) are based on the “foraging arena” theory
+  <a ref-type="bibr" rid="b36" href="#b36">36</a> where the biomass of prey i is divided between a vulnerable and a non-vulnerable fraction. This is represented as:
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div id="eq2" class="disp-formula">
+   <span id="d32e452" xlink:href="srep44491-m2.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">where v
+  <sub>
+   <span class="italic">ij</span>
+  </sub> and v’
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is the vulnerability and expresses the rate with which prey move between being vulnerable and not vulnerable, respectively, a
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is the effective search rate for i (prey) by j (predator), T
+  <sub>
+   <span class="italic">i</span>
+  </sub> and T
+  <sub>
+   <span class="italic">j</span>
+  </sub> are the relative feeding time for prey and predator, S
+  <sub>
+   <span class="italic">ij</span>
+  </sub> are the seasonal or long term forcing effects, M
+  <sub>
+   <span class="italic">ij</span>
+  </sub> are the mediation forcing effects and D
+  <sub>
+   <span class="italic">j</span>
+  </sub> are the effects of handling time as a limit to consumption rate. One important feature in Ecosim is the use of a vulnerability term for each interaction between a predator and a prey. Low values of vulnerability (close to 1) indicate that prey production determines the predation mortality (phenomenon also known as ‘bottom-up’ control) and that the predator is close to carrying capacity, while high values of vulnerability (e.g., 100) indicate that predator biomass determines how much prey is consumed (top-down control) and that predators are far away from carrying capacity
+  <a ref-type="bibr" rid="b25" href="#b25">25</a>. Mixed effect (vulnerability = 2) is set as the default value in Ecosim.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The Ecosim approach was used here to fit the model to observed time-series of data using the sum of squares (SS) ratio between predicted and observed data as a metric for assessing model performance
+  <a ref-type="bibr" rid="b37" href="#b37">37</a>. We used survey biomasses and catches for those functional groups with available information to compare predicted and observed data (S1). In particular, biomass time series for sea turtles, pinnipeds, benthic invertebrates and deep sea fish were taken from scientific literature, whereas for demersal species (functional groups n° 12–14; 16–19 and 21 in 
+  <a ref-type="fig" rid="f2" href="#f2">Fig. 2</a>), European anchovy, European pilchard and large pelagic fishes, we used scientific surveys (e.g., MEDITS trawl survey and MEDIAS acoustic survey) and stock assessments data (
+  <a ref-type="supplementary-material" rid="S1" href="#S1">S2</a>). Catch data was taken from the United Nation’s Food and Agriculture Organization (FAO) database (FishStat: 
+  <span ext-link-type="uri" xlink:href="http://data.fao.org/database" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://data.fao.org/database</span>) available from 1950 to 2010. These time series were complemented with data (available per country) from the Sea Around Us Project (
+  <span ext-link-type="uri" xlink:href="http://www.searoundus.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.searoundus.org</span>) to assign species to fishing fleet.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">When applying the fitting procedure, we noticed that the baseline fishing mortality (Ecopath baseline in 1950 s) for the most commercially important target species (European pilchard, anchovy and hake) was relatively low (between 0.02 and 0.05) compared to the reference levels reported in the literature
+  <a ref-type="bibr" rid="b38" href="#b38">38</a>
+  <a ref-type="bibr" rid="b39" href="#b39">39</a>
+  <a ref-type="bibr" rid="b40" href="#b40">40</a>. This initially caused a very low reaction of these species to changes in historical fishing effort and primary productivity. To correct these estimates and reflect a more appropriate fishing mortality for these three species, we used the reconstruction of the catches of the Sea Around Us Project and, in particular, for each country of the Mediterranean Sea, we considered the proportion of catch of these species relative to the total catch and applied it respectively in each of our sub-areas.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To fit the temporal dynamic model accounting for data quality/reliability in available time series, we weighted the time series using a factor either of 0.5 or 1 (0 indicating that time series are not considered in the calculation of SS and 1 indicating that they are fully considered
+  <a ref-type="bibr" rid="b37" href="#b37">37</a>). For all catch time series and for European pilchards and anchovies in the Ionian and Eastern Mediterranean Seas, we used a weight of 0.5, while the rest of the time series were assigned a weight of 1. This was done to consider questionable catch statistics reporting (as identified in previous research studies
+  <a ref-type="bibr" rid="b41" href="#b41">41</a>
+  <a ref-type="bibr" rid="b42" href="#b42">42</a>
+  <a ref-type="bibr" rid="b43" href="#b43">43</a>
+  <a ref-type="bibr" rid="b44" href="#b44">44</a>), and to consider poor data availability for forage fish in the Ionian and Eastern Mediterranean Sea (i.e., long time series of European anchovies and pilchards were available only for the Aegean
+  <a ref-type="bibr" rid="b45" href="#b45">45</a> and the Strait of Sicily
+  <a ref-type="bibr" rid="b46" href="#b46">46</a>
+  <a ref-type="bibr" rid="b47" href="#b47">47</a>). The choice of using these weights (0.5 and 1, respectively) puts less/more emphasis on selected species/functional groups of the ecosystem; still, since there are different methods to determine weighting factors
+  <a ref-type="bibr" rid="b27" href="#b27">27</a>, further work should be developed to assess the outcome of the fit procedure using alternative weights.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Fishing effort (
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Figure S5-1</a>) and primary production (PP) anomaly (
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Figure S5-2a</a>) over time were used as main forcing time series to drive the model. The PP anomaly results from an Ecosim automated procedure that searches for time-series relative values of annual production (expressed as P/B ratio) of producer groups (in our case phytoplankton and seagrass). This routine considers that if primary production changes over time then the total amount of energy that enters in the ecosystem changes, causing a cascading-up effect that increases or decreases food availability through the ecosystem
+  <a ref-type="bibr" rid="b48" href="#b48">48</a>. Once estimated by Ecosim, the predicted relative PP anomaly was tested against the relative PP (from phytoplankton) time-series data (
+  <a ref-type="supplementary-material" rid="S1" href="#S1">Figure S5-2b</a>) obtained from a biogeochemical model GETM-MedERGOM
+  <a ref-type="bibr" rid="b49" href="#b49">49</a> for the same time period using the Spearman’s rank-order correlation test (suitable for non-parametric data). Seagrass productivity, since it was not assessed in the biogeochemical model
+  <a ref-type="bibr" rid="b49" href="#b49">49</a>, was excluded from the correlation test.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In addition, we re-run the Ecosim model using the relative PP time-series data from the biogeochemical model to compare and assess the model fit and results using the two different PP time series data (relative PP anomaly from Ecosim, and relative PP data from the biogeochemical model). As for fishing effort, since our reconstruction was done up to 2010, but the majority of our biomass time series were available until 2011, we decided to keep fishing efforts observed in 2010 constant until 2011.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The fitting procedure consisted of seven general steps (
+  <a ref-type="table" rid="t1" href="#t1">Table 1</a>) following the same approach as described and applied by Mackinson
+  <a ref-type="bibr" rid="b50" href="#b50">50</a>. This method uses the Akaike Information criterion (AIC)
+  <a ref-type="bibr" rid="b51" href="#b51">51</a>
+  <a ref-type="bibr" rid="b52" href="#b52">52</a>:
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div id="eq3" class="disp-formula">
+   <span id="d32e554" xlink:href="srep44491-m3.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">where n is number of observations, minSS is the minimum sum of squares resulting from the comparison of predicted with observed datasets, and k is the number of parameters, to test statistical hypotheses related to changes in predator-prey dynamics (also called vulnerabilities: Vs); changes in primary production (PP anomaly, considering the number of PP spline points (sPP) for smoothing the time series); impact of fishing and possible combinations of the above-mentioned factors (
+  <a ref-type="table" rid="t1" href="#t1">Table 1</a>). The AIC is a tool used for model selection that penalizes for fitting too many parameters, and which is used to choose the “best” model (the one yielding the lowest AIC) considering a good fit and the least number of estimated parameters to do so. In this study, we used the second-order Akaike Information Criterion (AICc) calculated as follow:
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">
+  <div id="eq4" class="disp-formula">
+   <span id="d32e562" xlink:href="srep44491-m4.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">to account for small sample sizes (n of observations) in the dataset.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In our case, the fitting procedure was conducted five times: individually for the four sub-models (Western, Adriatic, Ionian and Eastern Mediterranean) as the majority of the functional groups are restricted to one sub-area only, and one extra time for the model representing the whole basin to fit highly migratory species (‘large pelagics’ and ‘sea turtles’ groups) that are allowed to move and feed in all four areas.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Once the temporal dynamic fitting procedure was completed, we used the “best” fitted models to calculate model-based indicators in each sub-area and for the whole Mediterranean Sea. To be able to compare these indicators with available ones from other regional seas, model-based indicators were selected from a list of indicators previously tested and assessed by international initiatives, mainly IndiSeas (“Indicators for the Seas”; 
+  <span ext-link-type="uri" xlink:href="http://www.indiseas.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.indiseas.org</span>; see e.g. refs 
+  <a ref-type="bibr" rid="b10" href="#b10">10</a>,
+  <a ref-type="bibr" rid="b12" href="#b12">12</a>). The list of selected indicators is presented in 
+  <a ref-type="table" rid="t2" href="#t2">Table 2</a>. Once estimated, we used the Spearman’s rank correlation to assess the significance and correlation between our suite of ecological indicators and time.
+ </p>
+</sec>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Modeling species distributions</div>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">We used Hierarchical Bayesian spatial models (HBSMs) to estimate the vulnerable habitat of all the species that were selected by the ecological and economic criteria, meaning those that showed low resilience and high vulnerability, trophic level, or profitability. This resulted in vulnerable habitat estimates for 18 out of 26 species. The abundance index was defined as the catch-per-unit-effort (CPUE), calculated as the species total catch (Kg) divided by the fishing effort. Specifically, fishing effort was determined as the number of fishers multiplied by the number of fishing days.</p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">The spatial abundance data of these species have three main characteristics: strong spatial dependence, high proportions of zero, and a distribution highly skewed to the right. Therefore, we used a Bayesian hurdle spatial model, which is suitable for such situations. These models are carried out in two stages; one that models the presence/absence of the species using a binomial distribution, and the other that models the abundance with a gamma distribution. The use of a gamma distribution for species abundance proved to be effective to analyze skewed positive data
+  <span class="sup">
+   <a ref-type="bibr" rid="CR30" href="#CR30">30</a>
+  </span>. Finally, a spatial random effect was included in both stages to account for spatial autocorrelation.
+ </p>
+ <p id="Par27" xmlns="http://www.w3.org/1999/xhtml">In addition to the spatial effect, we considered seven environmental variables to be possible determinants of a species in a given habitat: Sea Surface Temperature (SST), Chlorophyll-a concentration (Chl-a), Sea Surface Salinity (SSS), depth, slope and rugosity of the seabed, and distance to the coast (
+  <span class="italic">see</span> Supplementary Information). These are variables that typically account for the occurrence of a species on a given site.
+ </p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">We used Vague Gaussian prior distributions (β ~ N (0,0.01)) for all the involved fixed parameters, while a prior Gaussian distribution with a zero-mean and covariance matrix of dependent hyperparameter was used for the spatial effect (see Muñoz
+  <span class="sup">
+   <a ref-type="bibr" rid="CR31" href="#CR31">31</a>
+  </span> for more detailed information about spatial effects). We carried out the Bayesian models using the 
+  <span class="italic">Integrated Nested Laplace Approximation</span> (INLA) methodology
+  <span class="sup">
+   <a ref-type="bibr" rid="CR32" href="#CR32">32</a>
+  </span> and package (
+  <span ext-link-type="uri" xlink:href="http://www.r-inla.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.r-inla.org</span>) implemented in the R software
+  <span class="sup">
+   <a ref-type="bibr" rid="CR33" href="#CR33">33</a>
+  </span>.
+ </p>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">We used the Deviance Information Criterion (DIC)
+  <span class="sup">
+   <a ref-type="bibr" rid="CR34" href="#CR34">34</a>
+  </span> and the cross-validated logarithmic score (LCPO) measure
+  <span class="sup">
+   <a ref-type="bibr" rid="CR35" href="#CR35">35</a>
+  </span> to manually select the variables, based on a forward stepwise method. DIC measured the goodness of fit while LCPO measured the predictive quality of the models. Both measures are inversely related to the compromise between fit, parsimony, and predictive quality.
+ </p>
+</sec>
