@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec004" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Implementing temperature impacts on krill growth</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We assessed the outcomes of rising temperatures on krill and krill-dependent predators over the 21
+  <span class="sup">st</span> century (2007–2100) based on changes in krill gross growth potential (GGP). We acknowledge that there are other avenues by which temperature change could influence krill predators, but we do not explore those processes here. Krill GGP is defined as the dry mass of an individual krill at the end of the summer growth period divided by its dry mass at the beginning of the season. It is an indicator of the habitat’s ability to support krill growth. Hill et al. [
+  <a rid="pone.0191011.ref010" ref-type="bibr" href="#pone.0191011.ref010">10</a>] used a statistical model to estimate changes in krill GGP in the Atlantic sector of the Southern Ocean based on sea surface temperature (SST), chlorophyll-a concentration, and the initial size of krill. Here, we used their estimates of krill GGP based on an initial length of 40mm (which corresponds with the mean mass of 0.46g assumed by Watters et al. [
+  <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>]), climatological chlorophyll-a data from SeaWiFS [
+  <a rid="pone.0191011.ref022" ref-type="bibr" href="#pone.0191011.ref022">22</a>], and projected SST output from Coupled Model Intercomparison Project Phase 5 (CMIP5) [
+  <a rid="pone.0191011.ref023" ref-type="bibr" href="#pone.0191011.ref023">23</a>] Representative Control Pathways (RCPs) 8.5 and 2.6 [
+  <a rid="pone.0191011.ref024" ref-type="bibr" href="#pone.0191011.ref024">24</a>]. RCP 8.5 represents a continuous increase in greenhouse gas concentrations resulting in radiative forcing (a key driver of climate change) reaching 8.5 W∙m
+  <span class="sup">-2</span> by 2100. RCP 2.6 represents peak radiative forcing of 3.1 W∙m
+  <span class="sup">-2</span> around 2045, after which it falls to ~2.6 W∙m
+  <span class="sup">-2</span> by 2100. Chlorophyll-a concentrations were kept constant, while SST varied based on the RCPs.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We derived annual, SSMU-scale krill GGP estimates for each RCP from the gridded (1° longitude by 0.5° latitude) estimates of Hill et al. [
+  <a rid="pone.0191011.ref010" ref-type="bibr" href="#pone.0191011.ref010">10</a>]. These SSMU-scale GGP estimates were calculated as weighted averages of the gridded GGP estimates, where the weighting was based on the area of each grid cell contained within each SSMU. For model input, we divided these SSMU-scale, annual GGP estimates by the value for the previous year, setting the initial quotient (for 2007) to 1, to give a SSMU-specific index, 
+  <span class="italic">δ</span>, of the relative change in mean mass of individual krill over each summer growth season. We set this index to 1 for each winter season, assuming no growth or shrinkage during winter. We then adapted the model of Watters et al. [
+  <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>] to vary the mean mass of krill, 
+  <span class="italic">wbar</span>, for each time step, 
+  <span class="italic">t</span>, in each area, 
+  <span class="italic">j</span>, as: 
+  <div id="pone.0191011.e001" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0191011.e001.jpg" id="pone.0191011.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M1" class="math">
+     <div class="mrow">
+      <span class="mi">w</span>
+      <span class="mi">b</span>
+      <span class="mi">a</span>
+      <div class="msub">
+       <span class="mi">r</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">+</span>
+        <span class="mn">1</span>
+        <span class="mo">,</span>
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <span width="1pt" class="mspace"/>
+      <span class="mo">=</span>
+      <span width="1pt" class="mspace"/>
+      <span class="mi">w</span>
+      <span class="mi">b</span>
+      <span class="mi">a</span>
+      <div class="msub">
+       <span class="mi">r</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">,</span>
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <span width="1pt" class="mspace"/>
+      <span class="mo">×</span>
+      <span width="1pt" class="mspace"/>
+      <div class="msub">
+       <span class="mo">δ</span>
+       <div class="mrow">
+        <span class="mi">t</span>
+        <span class="mo">,</span>
+        <span class="mi">j</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> where 
+  <span class="italic">wbar</span>
+  <sub>
+   <span class="italic">1</span>,
+   <span class="italic">j</span>
+  </sub> = 0.46g. Recall that 
+  <span class="italic">wbar</span> is used to convert krill abundance from numbers to biomass, and that any given 
+  <span class="italic">wbar</span>
+  <sub>
+   <span class="italic">t</span>,
+   <span class="italic">j</span>
+  </sub> is estimated as the mean mass of the final mixture of resident krill and any immigrant krill that arrived in the SSMU during the time step 
+  <span class="italic">t</span>-1. The updated 
+  <span class="italic">wbar</span>
+  <sub>
+   <span class="italic">t</span>,
+   <span class="italic">j</span>
+  </sub> is then subject to its current, SSMU-specific 
+  <span class="italic">δ</span>
+  <sub>
+   <span class="italic">t</span>,
+   <span class="italic">j</span>
+  </sub>. That is, the krill that arrive in an SSMU from other locations are converted to biomass via the 
+  <span class="italic">δ</span>
+  <sub>
+   <span class="italic">t</span>,
+   <span class="italic">j</span>
+  </sub> for the current SSMU at the beginning of the following time-step. Thus, the model preserves spatial effects of GGP on krill mass under krill-movement parameterizations.
+ </p>
+</sec>

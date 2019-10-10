@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec7" sec-type="materials|methods" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="Sec8" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecopath with Ecosim ecosystem modelling</div>
+  <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">The model was built in Ecopath with Ecosim (EwE) version 6.5 (July 2016). This framework consists of Ecopath, a mass balance model that creates a baseline snapshot of the ecosystem in a given year (1985 in this case), and Ecosim that models the temporal dynamics (1985-2013 in this case). Ecosim models use foraging arena theory
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span> where each predator/prey interaction is defined by vulnerability parameters that affect the predator consumption rate (Equation 
+   <a rid="Equ1" ref-type="" href="#Equ1">1</a>) to describe the top-down and bottom-up controls of the predator/prey interactions. Vulnerability parameters can range between 1 and infinity, with 2 as the default. Vulnerabilities greater than 2 describes top-down control of the predator-prey relationship, where the predator biomass drives the prey mortalities, whilst vulnerabilities between 1-2 define bottom-up control, where the biomass of the predator has little effect on the predation mortality of that prey. For each predator-prey interaction consumption rates, 
+   <span class="italic">Q</span>
+   <sub>
+    <span class="italic">ij</span>
+   </sub>, are calculated as:
+   <div id="Equ1" class="disp-formula">
+    <span class="label">1</span>
+    <div class="alternatives">
+     <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$Qij=\frac{{a}_{ij}\,\ast \,{v}_{ij}\,\ast \,{B}_{i}\,\ast \,{P}_{j}\,\ast \,{T}_{i}\,\ast \,{T}_{j}\,\ast \,{M}_{ij}/{D}_{j}}{{v}_{ij}+{v}_{ij}\,\ast \,{T}_{i}\,\ast \,{M}_{ij}+{a}_{ij}\,\ast \,{M}_{ij}\,\ast \,{P}_{i}\,\ast \,{T}_{j}/{D}_{j}}\,\ast \,f(En{v}_{function},\,t)$$\end{document}</span>
+     <div id="M2" display="block" class="math">
+      <span class="mi">Q</span>
+      <span class="mi">i</span>
+      <span class="mi">j</span>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">v</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">B</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">P</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">/</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">D</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">v</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">v</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">a</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">M</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">P</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <span width=".15em" class="mspace"/>
+        <span class="mo">∗</span>
+        <span width=".15em" class="mspace"/>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">T</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <span class="mo">/</span>
+        <div class="msub">
+         <div class="mrow">
+          <span class="mi">D</span>
+         </div>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+       </div>
+      </div>
+      <span width=".15em" class="mspace"/>
+      <span class="mo">∗</span>
+      <span width=".15em" class="mspace"/>
+      <span class="mi">f</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mi">E</span>
+      <span class="mi">n</span>
+      <div class="msub">
+       <div class="mrow">
+        <span class="mi">v</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">f</span>
+        <span class="mi">u</span>
+        <span class="mi">n</span>
+        <span class="mi">c</span>
+        <span class="mi">t</span>
+        <span class="mi">i</span>
+        <span class="mi">o</span>
+        <span class="mi">n</span>
+       </div>
+      </div>
+      <span class="mo">,</span>
+      <span width=".15em" class="mspace"/>
+      <span class="mi">t</span>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+     <div xlink:href="41598_2017_13220_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    </div>
+   </div>where 
+   <span class="italic">a</span>
+   <sub>
+    <span class="italic">ij</span>
+   </sub> is the effective search rate for predator 
+   <span class="italic">j</span> feeding on a prey 
+   <span class="italic">i</span>, 
+   <span class="italic">v</span>
+   <sub>
+    <span class="italic">ij</span>
+   </sub> is vulnerability expressing the rate with which prey 
+   <span class="italic">i</span> move between being vulnerable and not-vulnerable, 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> is prey biomass, 
+   <span class="italic">P</span>
+   <sub>
+    <span class="italic">j</span>
+   </sub> is predator biomass (or abundance for split groups), 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">i</span>
+   </sub> represents prey relative feeding time, 
+   <span class="italic">T</span>
+   <sub>
+    <span class="italic">j</span>
+   </sub> is predator relative feeding time, 
+   <span class="italic">M</span>
+   <sub>
+    <span class="italic">ij</span>
+   </sub> are the mediation forcing effects, and 
+   <span class="italic">D</span>
+   <sub>
+    <span class="italic">j</span>
+   </sub> represents handling time as a limit to consumption rate
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>,
+    <a ref-type="bibr" rid="CR78" href="#CR78">78</a>
+   </span>. [
+   <span class="italic">f(Env_function, t)</span>] is the environmental response function that restricts the size of the foraging arena
+   <span class="sup">
+    <a ref-type="bibr" rid="CR75" href="#CR75">75</a>
+   </span> to account for external environmental drivers changing over time, such as temperature and salinity.
+  </p>
+ </sec>
+ <sec id="Sec9" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Updating and fitting the new West coast of Scotland model</div>
+  <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">The model boundaries cover the continental shelf of the west coast of Scotland (WCS), an area of approximately 110,000 km
+   <span class="sup">2</span> within the International Council for the Exploration of the Sea (ICES) division VIa. The WCS model was updated in both Ecopath and Ecosim (details in Supplementary Methods Tables 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>–
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S6</a>). In this study, we used the new capability of EwE 6.5 (
+   <span ext-link-type="uri" xlink:href="http://www.ecopath.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ecopath.org</span>) to convert species optimum, minimum and maximum temperatures to species-specific normal probability distributions centred on the species optimum temperature and positive/negative standard deviations defined by the species tolerances (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1a,b</a> and Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S8</a>). The difference between sea temperature and the species thermal optimum distribution was used to scale the consumption rates of each predator: by a factor of 1 at the optimum and declining as the difference from the optimum increases according to Gaussian functions at a rate reflecting the species thermal tolerance range (expressed by the standard deviation of the function) (Fig. 
+   <a rid="Fig1" ref-type="fig" href="#Fig1">1a</a>).
+  </p>
+  <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">Fishbase
+   <span class="sup">
+    <a ref-type="bibr" rid="CR79" href="#CR79">79</a>
+   </span>, SeaLifeBase
+   <span class="sup">
+    <a ref-type="bibr" rid="CR80" href="#CR80">80</a>
+   </span> and AquaMaps
+   <span class="sup">
+    <a ref-type="bibr" rid="CR58" href="#CR58">58</a>
+   </span> websites provided the species optimum, minimum and maximum temperatures: optimum temperatures were estimated by averaging the 10
+   <span class="sup">th</span> and 90
+   <span class="sup">th</span> preferable temperature percentiles. For consistency we gathered species optimum temperatures and tolerances data from the same sources except for cod
+   <span class="sup">
+    <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+   </span> and kelp
+   <span class="sup">
+    <a ref-type="bibr" rid="CR82" href="#CR82">82</a>
+   </span> for which local data were used
+   <span class="sup">
+    <a ref-type="bibr" rid="CR81" href="#CR81">81</a>
+   </span>. For functional groups defined by multiple species, the temperature parameters were calculated as geometric means weighted by species biomass or catch composition. Optimum temperatures for juvenile gadoids were raised by 1 °C assuming a shallower distribution in warmer waters to facilitate the growth rates
+   <span class="sup">
+    <a ref-type="bibr" rid="CR83" href="#CR83">83</a>
+   </span>. No local temperature tolerance data were found for phytoplankton, small and large zooplankton; the average of depth-integrated temperature was used for these groups with wide tolerances ranges (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S8</a>).
+  </p>
+  <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">The model was fitted using an automated stepwise fitting procedure
+   <span class="sup">
+    <a ref-type="bibr" rid="CR84" href="#CR84">84</a>
+   </span>. This procedure searched for different vulnerability parameters and/or numbers of spline points on a primary production anomaly, then calculated the weighted sum of squares (SS) differences between predicted and observed data (Supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S6</a>) for each iteration. It used the SS and the number of parameters estimated to calculate the Akaike Information Criterion (AIC)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR85" href="#CR85">85</a>
+   </span>, and the corrected AICc
+   <span class="sup">
+    <a ref-type="bibr" rid="CR86" href="#CR86">86</a>
+   </span>. These AIC values were used to assess the model baseline (no ecosystem drivers such as fishing, no primary productivity forcing function and no trophic vulnerabilities applied) and to identify the vulnerability parameters and spline points that produced the lowest AIC. AIC values are also used to calculate Akaike weights which represent the probability that a given model is the best fitted model
+   <span class="sup">
+    <a ref-type="bibr" rid="CR87" href="#CR87">87</a>
+   </span>.
+  </p>
+  <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">Vulnerability parameters were assumed to be “by predator”, i.e. all iterations assumed the same top-down or bottom-up control of the predator on all of its prey
+   <span class="sup">
+    <a ref-type="bibr" rid="CR84" href="#CR84">84</a>
+   </span>. The PP_anomaly function could represent an environmental driver that can affect primary productivity and is therefore often related to climate variability indices
+   <span class="sup">
+    <a ref-type="bibr" rid="CR15" href="#CR15">15</a>,
+    <a ref-type="bibr" rid="CR47" href="#CR47">47</a>,
+    <a ref-type="bibr" rid="CR88" href="#CR88">88</a>,
+    <a ref-type="bibr" rid="CR89" href="#CR89">89</a>
+   </span>. The fitting procedure was performed with and without temperature and output compared with previous versions of the model fitting
+   <span class="sup">
+    <a ref-type="bibr" rid="CR40" href="#CR40">40</a>,
+    <a ref-type="bibr" rid="CR84" href="#CR84">84</a>
+   </span>. The fitting procedure identified the best parameter values that improve the statistical fit of the model. However, as the observed data has its own inherent errors, it is important to analyse a range of model fits with the low AIC values and relevant Akaike weights to identify the best ecologically sensible parameters that best describe the predicted historical trends of the target species
+   <span class="sup">
+    <a ref-type="bibr" rid="CR84" href="#CR84">84</a>,
+    <a ref-type="bibr" rid="CR90" href="#CR90">90</a>
+   </span>.
+  </p>
+  <p id="Par45" xmlns="http://www.w3.org/1999/xhtml">Spearman correlation tests were used to assess collinearity between the predicted primary production anomaly function and environmental temperature (SST) as well as other climate indices such as the smoothed and unsmoothed Atlantic Multi-decadal Oscillation (AMO), and North Atlantic Oscillation Index (NAOI).</p>
+ </sec>
+ <sec id="Sec10" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model uncertainties and validation</div>
+  <p id="Par46" xmlns="http://www.w3.org/1999/xhtml">Monte-Carlo simulations were performed to investigate the quality of the input data assessing the sensitivity of the best-fitted Ecosim output to uncertainty in the Ecopath basic inputs (B, P/B, Q/B and EE)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR78" href="#CR78">78</a>,
+    <a ref-type="bibr" rid="CR90" href="#CR90">90</a>
+   </span>, by assuming a change of 10% in each of these inputs, as well as by using the input pedigree
+   <span class="sup">
+    <a ref-type="bibr" rid="CR91" href="#CR91">91</a>
+   </span> to describe the uncertainty surrounding the input data for B, Q/B and EE (supplementary Table 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S4</a>)
+   <span class="sup">
+    <a ref-type="bibr" rid="CR90" href="#CR90">90</a>
+   </span>. In the pedigree-based Monte Carlo simulations the confidence interval of the production/biomass ratio (P/B) was kept at 10% as a cumulative effect of lower confidence intervals for both biomass and P/B determined a large amplification in uncertainty for the Monte Carlo simulations. 200 Monte-Carlo simulation trials for each target functional group in this study were carried out to determine the 5% and 95% confidence interval of the best fitted model (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S2</a>).
+  </p>
+  <p id="Par47" xmlns="http://www.w3.org/1999/xhtml">The model’s capability to predict future observations (model validation) was performed creating three validation datasets (A: 22 years for model fitting, 7-year validation set; B: 24 years for model fitting, 5 year validation set; C: 26 years for model fitting, 3 year validation set). The performances of these 3 models were assessed by comparing the root mean square deviations (RMSD) between predicted and observed values across three validation subsets (Table 
+   <a rid="Tab3" ref-type="table" href="#Tab3">3</a>). Over- and underestimation for the target species predictions were visually assessed by plotting predicted vs observed data for both biomasses and catches (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S1</a>).
+  </p>
+ </sec>
+ <sec id="Sec11" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Historical time series of temperature</div>
+  <p id="Par48" xmlns="http://www.w3.org/1999/xhtml">Spatial Sea Surface Temperatures (SST) from the Hadley Centre HadISST dataset (
+   <span ext-link-type="uri" xlink:href="http://www.metoffice.gov.uk/hadobs/hadisst/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.metoffice.gov.uk/hadobs/hadisst/</span>) between 1960–2013 were obtained and annual averages calculated. These results were cross validated using the Millport sea temperature time series previously used to describe the WCS ecosystem
+   <span class="sup">
+    <a ref-type="bibr" rid="CR44" href="#CR44">44</a>
+   </span>. Depth integrated temperature (DIT, black points in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>) was calculated by scaling the Hadley Centre time series to the difference between surface and near-bottom water obtained from Berx and Hughes
+   <span class="sup">
+    <a ref-type="bibr" rid="CR92" href="#CR92">92</a>
+   </span> (
+   <span ext-link-type="uri" xlink:href="http://ocean.ices.dk/Project/OCNWES/Default.aspx" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://ocean.ices.dk/Project/OCNWES/Default.aspx</span> extracted 15 June 2016). The differences between surface and near-bottom temperatures were homogeneous in space over the UK continental shelf (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S3</a>) and therefore an average scaling factor was calculated for the whole continental shelf of ICES VIa (0.61 °C).
+  </p>
+ </sec>
+ <sec id="Sec12" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Simulation scenarios</div>
+  <p id="Par49" xmlns="http://www.w3.org/1999/xhtml">Exploring the effect of future scenarios requires the Ecosim model to reproduce or hindcast the historical observations. Thus, the “status quo” scenario represented the future projections using the model drivers such as fishing mortalities (F
+   <sub>status_quo</sub>) and water temperature set to that of the last year of the historical observed data (2013). The effect of sustainable fishing for the target species was then assessed comparing biomasses and catches of the “status quo” scenario with that of a “maximum sustainable yields” (MSY) scenario which used single-species fishing mortalities at the maximum sustainable yields (F
+   <sub>MSY</sub>) determined by ICES (Table 
+   <a rid="Tab4" ref-type="table" href="#Tab4">4</a>). When not available for VIa, F
+   <sub>MSY</sub> values of neighbouring stocks were taken as best available estimates.
+  </p>
+  <p id="Par50" xmlns="http://www.w3.org/1999/xhtml">Subsequently we tested the impact of rising temperature under IPCC-RCP scenarios while keeping fishing pressure constant at rates consistent with MSY. Future SST projections were extracted from the Royal Netherlands Meteorological Institute Climate Explorer portal (
+   <span ext-link-type="uri" xlink:href="http://climexp.knmi.nl" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://climexp.knmi.nl</span>) within the study area rectangle from the climate changing multi-model global ensemble means for 2.6, 4.5, 6.5 and 8.5 greenhouse gas concentration scenarios (RCP2.6, RCP4.5, RCP6.5 and RCP8.5 scenarios). Thirty-two model outputs, sourced from the Coupled Model Intercomparison Project phase 5 (CMIP5), were extracted for the study area with temperatures fluctuating around the mean by 6–7 °C (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S4</a>). The mean projected rates of increase for all of the RCP scenarios (bold colour lines for 2006–2100 in Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S4</a>) were then applied as anomalies to the observed DIT to predict future temperature. As a calculated mean across thirty-two global model outputs, the SST rates extracted under the RCP scenarios (Supplementary Fig. 
+   <a rid="MOESM1" ref-type="media" href="#MOESM1">S4</a>) were de-trended from the impact of climate variability and showed a smaller variability than DIT (black points in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). A 3-year moving average of the historical standard deviation (STDEV) was applied to the anomalies to replicate the variability of the historical DIT trend.
+  </p>
+  <p id="Par51" xmlns="http://www.w3.org/1999/xhtml">The Atlantic Multidecadal Oscillation (AMO) is calculated as an anomaly of the SST and shows a stronger effect in the North Atlantic region
+   <span class="sup">
+    <a ref-type="bibr" rid="CR18" href="#CR18">18</a>,
+    <a ref-type="bibr" rid="CR20" href="#CR20">20</a>,
+    <a ref-type="bibr" rid="CR21" href="#CR21">21</a>,
+    <a ref-type="bibr" rid="CR48" href="#CR48">48</a>
+   </span>. The smoothed/unsmoothed AMO signal (Fig. 
+   <a rid="Fig6" ref-type="fig" href="#Fig6">6</a>; 
+   <span ext-link-type="uri" xlink:href="http://www.esrl.noaa.gov/psd/data/timeseries/AMO/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.esrl.noaa.gov/psd/data/timeseries/AMO/</span>) defined from de-trended patterns of SST variability in the North Atlantic, shows clear positive and negative phases with a frequency of 60–70 years
+   <span class="sup">
+    <a ref-type="bibr" rid="CR93" href="#CR93">93</a>
+   </span>. In 2012 the AMO reached the end of its positive ‘warming’ phase and approached the start of the “cooling phase” (Fig. 
+   <a rid="Fig6" ref-type="fig" href="#Fig6">6</a>). Thus, to predict the future AMO trend, the smoothed observed pattern was mirrored from 2007 to 2100 to allow the re-occurrences of historical phases at intervals of approximately 60–65 years (between the lowest values of the historical negative phases, Fig. 
+   <a rid="Fig6" ref-type="fig" href="#Fig6">6</a>). Finally, the AMO projections were added to the temperature projections (DIT + STDEV + AMO) to simulate the effect of this climate index on the future water temperature projections (2014-2100 in Fig. 
+   <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>).
+  </p>
+ </sec>
+</sec>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Tracking fishing vessels</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Vessels were remotely tracked using satellite and terrestrial detections of AIS vessel transmissions (
+  <a rid="R23" ref-type="bibr" href="#R23">
+   <span class="italic">23</span>
+  </a>–
+  <a rid="R25" ref-type="bibr" href="#R25">
+   <span class="italic">25</span>
+  </a>) provided by Global Fishing Watch. We accessed the raw detections used to analyze global fishing effort by Kroodsma 
+  <span class="italic">et al</span>. (
+  <a rid="R25" ref-type="bibr" href="#R25">
+   <span class="italic">25</span>
+  </a>). Likely fishing events were identified using the convolutional neural network published by Kroodsma 
+  <span class="italic">et al</span>. (
+  <a rid="R25" ref-type="bibr" href="#R25">
+   <span class="italic">25</span>
+  </a>) (code available at 
+  <span ext-link-type="uri" xlink:href="https://github.com/GlobalFishingWatch/vessel-classification" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/GlobalFishingWatch/vessel-classification</span>). This algorithm identifies fishing events with &gt;90% accuracy by comparing a vessel track’s characteristics (e.g., speed, course, and distance to shore) to a training database of labeled fishing events from 503 vessels (
+  <a rid="R25" ref-type="bibr" href="#R25">
+   <span class="italic">25</span>
+  </a>). The training dataset of labeled AIS tracks was originally produced through interviews with fishermen, former fisheries observers, and a literature review (
+  <a rid="R25" ref-type="bibr" href="#R25">
+   <span class="italic">25</span>
+  </a>). Each AIS position is classified as fishing or not fishing based on this convolutional neural network. We analyzed the tracks of all identified fishing vessels that entered our study region (10°N to 60°N, 110°W to 180°W) from 1 January 2015 to 31 December 2017. We summed fishing hours, defined as hours of all positions identified as fishing (
+  <a rid="R25" ref-type="bibr" href="#R25">
+   <span class="italic">25</span>
+  </a>), within 1° by 1° grid cells as this resolution is appropriate for longlines, which can span up to 100 km in length (nearly 1°) (
+  <a rid="R21" ref-type="bibr" href="#R21">
+   <span class="italic">21</span>
+  </a>) and are the largest gear type considered. We note that overlap metrics would decrease at higher resolutions of input data (
+  <a rid="R42" ref-type="bibr" href="#R42">
+   <span class="italic">42</span>
+  </a>, 
+  <a rid="R43" ref-type="bibr" href="#R43">
+   <span class="italic">43</span>
+  </a>). Our chosen resolution also matches our habitat models, which were limited by the accuracy of location estimates from light-based geolocation tags (
+  <a rid="R3" ref-type="bibr" href="#R3">
+   <span class="italic">3</span>
+  </a>, 
+  <a rid="R21" ref-type="bibr" href="#R21">
+   <span class="italic">21</span>
+  </a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">A second convolutional neural network was developed in (
+  <a rid="R25" ref-type="bibr" href="#R25">
+   <span class="italic">25</span>
+  </a>) to estimate the fishing gear classes of global fishing fleets. Those fishing gear classifications (including purse seiners, trawlers, drifting longliners, squid jiggers, and fixed gear) contain both vessels that catch pelagic fishes and those that do not (e.g., tuna-targeting purse seiners were not distinguishable from those targeting forage fish, vessels using set longlines were not separated from those setting crab pots, and maps of trollers were not available). As risks associated with different gear types vary in terms of potential catch and bycatch of pelagic sharks and tunas, we disaggregated these broader gear classifications and mapped fishing effort to the fishing gear type resolution needed to isolate effort relevant to our study species (table S1). Vessel gear types were primarily determined by matching identifying vessel information from AIS transmissions to official vessel registries (83% of identified vessels; table S2). For vessels that did not have gear type listed on a registry, we identified gear type using photographs from marine vessel websites (14% of identified vessels; table S2), and expert knowledge of fishery seasons was used to identify an additional 3% of vessels (i.e., coastal vessels fishing exclusively during crab season in the same region as other known crab vessels were labeled “pots and traps” vessels). We excluded vessels that could not be identified to gear type (12% of all vessels).
+ </p>
+</sec>

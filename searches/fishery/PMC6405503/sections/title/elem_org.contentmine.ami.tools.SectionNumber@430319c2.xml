@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece34963-sec-0002" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">METHODS AND RESULTS</div>
+ <sec id="ece34963-sec-0003" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.1</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analyses</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All statistical analyses were performed in R (version 3.5.0, R Core Team, 
+   <a rid="ece34963-bib-0054" ref-type="ref" href="#ece34963-bib-0054">2018</a>). For analyses testing linear relationships (correlations between cod and crab landings), the lm function in the 
+   <span class="italic">stats</span> library was used. Spatial patterns of kelp and sea urchin and sea urchin sizes, as well as sea urchin densities, were tested using generalized additive models (GAMs), which allow for nonlinear relationships where a nonparametric function is estimated for each predictor, to achieve the best prediction of the dependent variables. This was done using the library 
+   <span class="italic">mgcv</span> (Wood, 
+   <a rid="ece34963-bib-0082" ref-type="ref" href="#ece34963-bib-0082">2017</a>). For binomial responses (kelp and sea urchin probability), logit link functions were used. For count responses (sea urchin density), a Poisson distribution was assumed with a log link function. The remaining analyses assumed a normal (Gaussian) distribution; thus, an identity link function was used. When different candidate models were tested, the Akaike's Information Criterion corrected for small samples (AICc, Burnham, Anderson, &amp; Huyvaert, 
+   <a rid="ece34963-bib-0007" ref-type="ref" href="#ece34963-bib-0007">2010</a>) was used to select the best model. To relate crab abundance to the occurrence of urchin barrens, we tested the proportion of barren vs. kelp recovery sites within areas with and without crab landings, using Pearson's chi‐squared tests, applying the prop.test() function in the 
+   <span class="italic">stats</span> library.
+  </p>
+ </sec>
+ <sec id="ece34963-sec-0004" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.2</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Kelp forest and sea urchin distribution patterns</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A key pattern in the conceptual model of the large‐scale kelp recovery along the Norwegian coast (Figure 
+   <a rid="ece34963-fig-0002" ref-type="fig" href="#ece34963-fig-0002">2</a>) is that kelp recovery is occurring along the mid‐ and northern coasts of Norway. We hypothesize that this is due to reduced grazing by lowered densities of sea urchins, allowing kelp to recolonize the barrens (Figure 
+   <a rid="ece34963-fig-0002" ref-type="fig" href="#ece34963-fig-0002">2</a>; Sea urchin ↔kelp). To explore the distribution patterns of kelp forest and sea urchins, we used a spatially comprehensive dataset of kelp (
+   <span class="italic">L. hyperborea </span>and 
+   <span class="italic">S. latissima</span>) and green sea urchin (
+   <span class="italic">S. droebachiensis</span>) recordings from surveys performed between 2008 and 2012, from more than 1,500 km of the mid‐ and northern Norwegian coast (65–71°N, Figure 
+   <a rid="ece34963-fig-0003" ref-type="fig" href="#ece34963-fig-0003">3</a>). This part of the coast is morphologically complex with many islands and fjords. Kelp and sea urchin recordings were conducted at 11 sampling areas with 15–376 stations per area (average = 114, 
+   <span class="italic">SD</span> = 104), depending on boat time available, weather conditions, and presence of rocky habitat, totaling 1,249 stations, each with one replicate point observation (Figure 
+   <a rid="ece34963-fig-0003" ref-type="fig" href="#ece34963-fig-0003">3</a> and Appendix 
+   <a rid="ece34963-app-0001" ref-type="app" href="#ece34963-app-0001">A</a>). The depth range was between 0 and 28 m (average = 6.4, 
+   <span class="italic">SD</span> = 4.8). The survey covered the three counties, Nordland, Troms, and Finnmark, from the 2007 southern limit of kelp recovery around Vega in the Norwegian Sea (Norderhaug &amp; Christie, 
+   <a rid="ece34963-bib-0046" ref-type="ref" href="#ece34963-bib-0046">2009</a>) and northeast to the Russian border in the Barents Sea (Figure 
+   <a rid="ece34963-fig-0003" ref-type="fig" href="#ece34963-fig-0003">3</a>). All stations were situated on stable hard substrate, either bedrock or cobblestone/boulder (Wentworth, 
+   <a rid="ece34963-bib-0076" ref-type="ref" href="#ece34963-bib-0076">1922</a>, further called “cobblestone”), in areas that were previously grazed barren grounds with high densities of (visible) adult sea urchins (~20–50 individuals per m
+   <span class="sup">2</span>) (Sivertsen, 
+   <a rid="ece34963-bib-0064" ref-type="ref" href="#ece34963-bib-0064">1997</a>; Skadsheim et al., 
+   <a rid="ece34963-bib-0066" ref-type="ref" href="#ece34963-bib-0066">1995</a>). The stations were in sheltered and moderately wave‐exposed areas (exposure value swm &lt; 500,000, Bekkby, Rinde, Erikstad, &amp; Bakkestuen, 
+   <a rid="ece34963-bib-0003" ref-type="ref" href="#ece34963-bib-0003">2009</a>, Gundersen et al., 
+   <a rid="ece34963-bib-0023" ref-type="ref" href="#ece34963-bib-0023">2011</a>). More wave‐exposed areas are generally not subject to sea urchin grazing (Rinde et al., 
+   <a rid="ece34963-bib-0056" ref-type="ref" href="#ece34963-bib-0056">2014</a>). The three southernmost sampling areas, Vega, Arctic Circle, and Salten, represent “the southern recovery zone,” identified by Rinde et al. (
+   <a rid="ece34963-bib-0056" ref-type="ref" href="#ece34963-bib-0056">2014</a>). The “northern recovery zone” was defined by the bounds of Kirkenes area, which was the only location with kelp recovery this far north in the present study. The seven sampling areas in between the two recovery zones (Lofoten, Troms south, Troms mid, Hammerfest, Porsanger, Kongsfjord, and Varanger) represent “the barren zone.” To explore the relationship between kelp and sea urchins, we calculated Pearson's correlation coefficient between the two variables (available as presence and absence data for each study site), for both the whole data set, and for each of the three zones (the two recovery areas and the barren zone). The surveys were performed between 2008 and 2012. Note that this spatially extensive dataset was compiled from many different surveys and projects, and different areas were covered each year, so the data are not balanced in space and time (see time schedule for field recordings in Appendix 
+   <a rid="ece34963-app-0001" ref-type="app" href="#ece34963-app-0001">A</a>).
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0003" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 3</span>
+   <div class="caption">
+    <p>Map of northern Norway showing the distribution of the 11 sampling areas from Vega (~65.5
+     <span class="sup">o</span>N, 12.5
+     <span class="sup">o</span>E) to the Russian border in the northeast (and also north to ~71
+     <span class="sup">o</span>N, 27
+     <span class="sup">o</span>E) with relative abundance of sea urchins (
+     <span class="italic">Strongylocentrotus droebachiensis</span>, green columns) and kelps (
+     <span class="italic">Laminaria hyperborea</span> and 
+     <span class="italic">Saccharina latissima</span>, brown columns) based on a total of 1,249 stations. Presence of kelp and sea urchins is not mutually exclusive, and the total percentage might therefore exceed 100% in some areas. The number of stations in each sampling area is shown in brackets. The three climatic stations (Bud, Skrova, and Ingøy) are shown as light blue dots. Counties are shown as blue and violet sections along the coast. The borders between the barren ground area and the northern and southern kelp recovery area are indicated by dark red lines
+    </p>
+   </div>
+   <div id="nlm-graphic-7" xlink:href="ECE3-9-2847-g003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Kelp and sea urchin abundance data were recorded from small boats using geographic positioning system (GPS) and underwater cameras equipped with depth sensors, giving us a view of the seabed with the extent of 1–2 m
+   <span class="sup">2</span>. With few exceptions, the camera view either revealed pure dominance of kelp (i.e., kelp present, sea urchin absent) or pure dominance of sea urchins (i.e., sea urchin present, kelp absent). Only at a few stations, both species were present, possibly indicating a transitional state (i.e., hysteresis, Ling et al., 
+   <a rid="ece34963-bib-0038" ref-type="ref" href="#ece34963-bib-0038">2015</a>, Figure 
+   <a rid="ece34963-fig-0001" ref-type="fig" href="#ece34963-fig-0001">1</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">To create a single variable that captured the relative position of each station along the coastline (i.e., instead of using the two highly correlated variables latitude and longitude), we calculated the position at the coast as the linear distance from each station to a reference point around Troms mid (68.7°N, 20.4°E), with negative distances to sites south of this reference point and positive distances to sites east of it. We identified this reference point using a piecewise regression analysis using the 
+   <span class="italic">segmented</span> R library (Muggeo, 
+   <a rid="ece34963-bib-0045" ref-type="ref" href="#ece34963-bib-0045">2008</a>), correlating the station's latitude against longitude, which fits the coastline very well (single breakpoint = 20.44, 
+   <span class="italic">R</span>
+   <span class="sup">2</span>
+   <sub>adj</sub> = 0.98). This variable was then used to capture the spatial variation in the analyses of kelp and sea urchin presences, as well as sea urchin size distribution, along the coast.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Spatial patterns of kelp and sea urchin presences along the Norwegian coast were explored using mixed GAMs. Two binomial models related the presence of kelp and sea urchins to the position at the coast. Two candidate models were tested in each case, with and without year as a categorical covariable. A random factor was included to account for nonindependent observations within each sampling area.</p>
+ </sec>
+ <sec id="ece34963-sec-0005" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.3</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">The spatial pattern of kelp recovery</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Both sea urchins (
+   <span class="italic">S. droebachiensis</span>) and kelp (
+   <span class="italic">L. hyperborea</span> and 
+   <span class="italic">S. latissima</span>) were found in all 11 sampling areas along the coast, although kelp was at very low occurrences in Troms mid and Porsanger (Figure 
+   <a rid="ece34963-fig-0003" ref-type="fig" href="#ece34963-fig-0003">3</a>, Appendix 
+   <a rid="ece34963-app-0001" ref-type="app" href="#ece34963-app-0001">A</a>). This implies an increased kelp recovery since 2007 (reported by Norderhaug &amp; Christie, 
+   <a rid="ece34963-bib-0046" ref-type="ref" href="#ece34963-bib-0046">2009</a>), but persistence of the barren zone in Troms. In the southern recovery zone, kelp was observed at 51%, 86%, and 90% of the stations at Vega, Arctic Circle, and Salten, respectively (Appendix 
+   <a rid="ece34963-app-0001" ref-type="app" href="#ece34963-app-0001">A</a>). In the northern recovery zone (i.e., Kirkenes), kelp forests were observed at 71% and 68% of the stations visited in 2011 and 2012, respectively. The remaining sampling areas, representing more than 1,200 km of the coast, were still dominated by sea urchin barrens, even though 
+   <span class="italic">L. hyperborea</span> occurred at some of the most wave‐exposed shallow locations. Pearson's correlation coefficient between kelp and sea urchins for the whole study area, and for the southern, barren, and northern zone, respectively, was as follows: −0.82, −0.79, −0.85, and −0.72, indicating a negative correlation between the two in all areas.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The GAM showed that the probability of finding kelp strongly related to the position along the coast (
+   <span class="italic">F</span> = 5.66, 
+   <span class="italic">p</span> = 0.0002). The probability dropped from approximately one in the southern kelp recovery area to close to zero between −200 (Troms south) and 200 (Porsanger; Figure 
+   <a rid="ece34963-fig-0004" ref-type="fig" href="#ece34963-fig-0004">4</a>). From Porsanger toward the northern recovery area (Kirkenes), the probability of kelp increased sharply. The model with year included (
+   <span class="italic">R</span>
+   <span class="sup">2</span> = 0.25) was equally good as the one without (
+   <span class="italic">R</span>
+   <span class="sup">2</span> = 0.13, ΔAIC = 0.2). The opposite pattern was found for the sea urchins (Figure 
+   <a rid="ece34963-fig-0004" ref-type="fig" href="#ece34963-fig-0004">4</a>), but here, the model without year (
+   <span class="italic">R</span>
+   <span class="sup">2</span> = 0.18) was selected in favor of the one with year included (
+   <span class="italic">R</span>
+   <span class="sup">2</span> = 0.18), based on AIC values (ΔAIC = 10.7).
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0004" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 4</span>
+   <div class="caption">
+    <p>Predicted curves from the GAM models showing the opposite probability of occurrence of kelp (left) and sea urchins along the coast at cobble and bedrock bottoms. Sea urchin and kelp presence was mutually exclusive on all sampled stations. See Appendix 
+     <a rid="ece34963-app-0001" ref-type="app" href="#ece34963-app-0001">A</a> for how the distance along the coast relates to latitude and sampling areas
+    </p>
+   </div>
+   <div id="nlm-graphic-9" xlink:href="ECE3-9-2847-g004" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec id="ece34963-sec-0006" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.4</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Sea urchins use of predator refuge habitats in the recovery zones</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">During initial surveys in the kelp recovery zones, we noticed that kelp recovery was limited to bedrock and that nearby cobble substrate remained overgrazed by sea urchins. This pattern could be a result of kelp preferentially settling on bedrock and not on cobble bottoms. However, Scheibling and Hamm (
+   <a rid="ece34963-bib-0060" ref-type="ref" href="#ece34963-bib-0060">1991</a>) found in a caging experiment that cobblestone habitats create spatial refugia for urchins that decrease predation by crabs. Based on this, we explored the sea urchins’ use of bedrock and cobblestone, which provide different levels of predator refuge for sea urchins and thus may indicate the influence of predators (Clemente et al., 
+   <a rid="ece34963-bib-0010" ref-type="ref" href="#ece34963-bib-0010">2013</a>; Falk‐Petersen et al., 
+   <a rid="ece34963-bib-0019" ref-type="ref" href="#ece34963-bib-0019">2011</a>). This was done at 185 stations within the kelp recovery zones in the south (i.e., Vega in 2012 and the Arctic Circle in 2011) and in the north (i.e., Kirkenes in 2012; Appendix 
+   <a rid="ece34963-app-0001" ref-type="app" href="#ece34963-app-0001">A</a>). All three areas have high crab landings (cf. the analysis of temporal and spatial patterns of changes in predator abundances below).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Sea urchins were found on all cobblestone stations in each of the three areas (Figure 
+   <a rid="ece34963-fig-0005" ref-type="fig" href="#ece34963-fig-0005">5</a>). The frequencies of sea urchins on stations with open bedrock were 25% at Vega, 9% at the Arctic Circle, and 0% at Kirkenes. In Kirkenes, recovered kelp forests were found on 100% of the bedrock stations whereas 100% of nearby cobblestone stations were dominated by sea urchins in high densities (Figure 
+   <a rid="ece34963-fig-0005" ref-type="fig" href="#ece34963-fig-0005">5</a>).
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0005" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 5</span>
+   <div class="caption">
+    <p>Percentage of stations with presence of sea urchins (
+     <span class="italic">Strongylocentrotus droebachiensis</span>) within sampling areas in the southern (Vega, 
+     <span class="italic">n</span> = 41, and Arctic Circle, 
+     <span class="italic">n</span> = 16) and northern (Kirkenes, 
+     <span class="italic">n</span> = 33) recovery zones, on the two substrate types, bedrock and cobblestone bottoms, the latter serve as a predator refuge
+    </p>
+   </div>
+   <div id="nlm-graphic-11" xlink:href="ECE3-9-2847-g005" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Differences in occurrence of kelp and sea urchins between the sampling areas and between substrate types were tried tested in a binomial generalized linear model (GLM), but since there was no variation in the response in cobble substrate (sea urchin presence and kelp absence in all stations), the results are shown without any statistics.</p>
+ </sec>
+ <sec id="ece34963-sec-0007" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.5</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Patterns of sea urchin recruitment success</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Despite differences in temperature and nutrient supply, Fagerli et al., 
+   <a rid="ece34963-bib-0018" ref-type="ref" href="#ece34963-bib-0018">2015</a> found that growth parameters for sea urchin populations from sea urchin barrens and kelp forests in the southern kelp recovery zone (Vega, 54°N) and the northern barren zone (Hammerfest, 70°N) were similar. Based on this premise, we investigated the sea urchin population structure using density and test size frequency as proxies for recruitment success and survival at 55 stations within the kelp recovery and barren zones (see station list in Appendix 
+   <a rid="ece34963-app-0002" ref-type="app" href="#ece34963-app-0002">B</a>). Occurrence of small juveniles in cryptic habitats indicates recruitment, and the occurrence of adults indicates survival from juvenile to adult stage.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">All stations were at shallow depths (&lt;10 m) and were defined as one of four different habitat types: bedrock (
+   <span class="italic">n</span> = 24), cobblestone (
+   <span class="italic">n</span> = 15), maerl (
+   <span class="italic">n</span> = 10), and kelp holdfasts (
+   <span class="italic">n</span> = 6; see Appendix 
+   <a rid="ece34963-app-0002" ref-type="app" href="#ece34963-app-0002">B</a>), where sea urchins are known to recruit (NIVA, unpublished data). By SCUBA diving, sea urchin density was estimated at each station by counting the number of individuals within 10 replicate frames of 50 × 50 cm (for bedrock or cobblestone bottoms), 4 replicate 20 × 20 frames (for maerl), or within four haphazardly collected kelp holdfasts (in areas with kelp forests). Sea urchins on bedrock and cobblestone were counted in situ
+   <span class="italic">. </span>Sea urchins in maerl and holdfasts were collected while still within the substrate, then picked loose, counted, and size measured on land. For size frequency analysis of sea urchins at the bedrock and cobblestone stations, the first 200 individuals found within the frames were collected and the individual test diameter was measured with calipers on land. Sea urchins recruiting in kelp holdfasts were not converted to densities, as it is difficult to get exact data of area for this substrate.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Sea urchin size variation was also analyzed using mixed GAM at the level of individual sea urchins (
+   <span class="italic">n</span> = 5,505), using station ID as a random factor to correct for possible nonindependence between individuals sampled from the same station. Six candidate models included different combinations of position at the coast, substrate, and year, and the interaction between the two latter. As holdfast and maerl did not provide sufficient data at several intervals along the coast (Appendix 
+   <a rid="ece34963-app-0002" ref-type="app" href="#ece34963-app-0002">B</a>) and thus resulted in huge confidence intervals, these two substrate types were excluded from the analyses of sea urchin size along the coast, and only cobblestone and bedrock were used.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Sea urchin density (number of individuals per m
+   <span class="sup">2</span>) was tested for potential regional differences and substrate effects. Substrate types and zones (southern and northern recovery zone and barren zone) and their interaction were included in the model. Holdfast was excluded in this analysis, since density was not measured for this substrate type. Two candidate models were tested: one with additive effects, and one including an interaction between substrate and zone.
+  </p>
+ </sec>
+ <sec id="ece34963-sec-0008" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.6</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Spatial patterns of recruitment success</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Small sea urchins were present in maerl and kelp holdfast within all the 55 studied stations (Appendix 
+   <a rid="ece34963-app-0002" ref-type="app" href="#ece34963-app-0002">B</a>), indicating that successful recruitment of sea urchins occurred across the 1,500 km study area. On average, small sea urchins were found within kelp holdfasts (8.0 mm ± 0.60) and in maerl beds (8.0 mm ± 0.69), while larger specimens were among cobblestones (25.0 mm ± 0.61) and on bedrock (29.0 mm ± 0.37). Sea urchin size (i.e., test diameter) was highly variable across the study area and not well explained by our explanatory variables (position at the coast, substrate, sampling year) in our selected mixed GAM (
+   <span class="italic">R</span>
+   <span class="sup">2</span> = 0.033, Figure 
+   <a rid="ece34963-fig-0006" ref-type="fig" href="#ece34963-fig-0006">6</a>). However, sea urchin size was significantly higher on bedrock compared to the cobblestone substrate (
+   <span class="italic">p</span> &lt; 0.001), but not significantly influenced by position at the coast (
+   <span class="italic">p</span> = 0.069, Figure 
+   <a rid="ece34963-fig-0006" ref-type="fig" href="#ece34963-fig-0006">6</a>) or sampling year (
+   <span class="italic">p</span> = 0.399).
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0006" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 6</span>
+   <div class="caption">
+    <p>Average size (diameter ±2
+     <span class="italic">SE</span>) of sea urchins (
+     <span class="italic">Strongylocentrotus droebachiensis</span>) found on cobblestones (black) and bedrock (gray) along the coast. Neither maerl nor holdfast provided sufficient data to be included in the analyses. The dots show averages (±
+     <span class="italic">SE</span>) at each sampling station. See Appendix 
+     <a rid="ece34963-app-0001" ref-type="app" href="#ece34963-app-0001">A</a> for how the distance along the coast relates to latitude and sampling areas
+    </p>
+   </div>
+   <div id="nlm-graphic-13" xlink:href="ECE3-9-2847-g006" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Densities were generally much higher in maerl beds than on cobblestones or bedrock, particularly at barren grounds in Troms and Finnmark (
+   <span class="italic">χ</span>
+   <span class="sup">2</span> = 7,304, 
+   <span class="italic">p</span> &lt; 0.0001 for interaction between substrate and area, Figure 
+   <a rid="ece34963-fig-0007" ref-type="fig" href="#ece34963-fig-0007">7</a>) where the density of small (juvenile) sea urchins often exceeded several hundred per square meter (Appendix 
+   <a rid="ece34963-app-0002" ref-type="app" href="#ece34963-app-0002">B</a>). Average densities on maerl beds were 192 (
+   <span class="italic">SD </span>= 70, 
+   <span class="italic">n</span> = 2) in the southern recovery zone and 599 (
+   <span class="italic">SD </span>= 366, 
+   <span class="italic">n</span> = 7) in the barren ground zone. Average densities for cobblestones were 41 (
+   <span class="italic">SD </span>= 46, 
+   <span class="italic">n</span> = 4) for the southern recovery zone, 42 (
+   <span class="italic">SD </span>= 28, 
+   <span class="italic">n</span> = 7) for the barren zone, and 53 (
+   <span class="italic">SD </span>= 41, 
+   <span class="italic">n</span> = 4) in the northern recovery zone. Average densities for bedrock were 25 (
+   <span class="italic">SD </span>= 12, 
+   <span class="italic">n</span> = 8) in the southern recovery zone and 59 (
+   <span class="italic">SD </span>= 41, 
+   <span class="italic">n</span> = 10) in the barrens zone. Densities were not measured on maerl and bedrock in the northern recovery zone.
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0007" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 7</span>
+   <div class="caption">
+    <p>Average densities (predicted abundances per m
+     <span class="sup">2 </span>±2
+     <span class="italic">SE</span> from GAM) of sea urchins (
+     <span class="italic">Strongylocentrotus droebachiensis</span>) on three different substrate types (maerl beds, cobblestones, and bedrock) within the southern and northern recovery zones, and the barren zone (see map in Figure 
+     <a rid="ece34963-fig-0003" ref-type="fig" href="#ece34963-fig-0003">3</a>). The 
+     <span class="italic">y</span>‐axis is log‐transformed for illustrative purposes due to high sea urchin densities on maerl beds, particularly in the barren zone. The number of stations is shown at the column base
+    </p>
+   </div>
+   <div id="nlm-graphic-15" xlink:href="ECE3-9-2847-g007" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec id="ece34963-sec-0009" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.7</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Temporal and spatial patterns of changes in predator abundances</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">A hypothesized driver of sea urchin declines is the changing abundances of sea urchin predators (Figure 
+   <a rid="ece34963-fig-0002" ref-type="fig" href="#ece34963-fig-0002">2</a>; Crab → sea urchin; Cod → crab). Although a predator–prey interaction between crab and sea urchins (and between cod and crab) has been documented within the study area (Enoksen &amp; Reiss, 
+   <a rid="ece34963-bib-0013" ref-type="ref" href="#ece34963-bib-0013">2017</a>; Fagerli et al., 
+   <a rid="ece34963-bib-0017" ref-type="ref" href="#ece34963-bib-0017">2014</a>), it remains unclear whether crab predators exert top‐down control on sea urchin populations. We explored spatial and temporal patterns of changes in abundance of the edible crab (
+   <span class="italic">C. pagurus</span>) and red king crab (
+   <span class="italic">P. camtschaticus</span>) based on landings from the period 1990–2011 (made available by the Norwegian Directorate of Fisheries), for the fishery zones in our study area. Data on landings are influenced by fishery effort and quotas and do not represent exact quantitative stock sizes or catch per unit effort. Nevertheless, these data are the best available indication of the size of the crab populations within the study area, as earlier reported by Woll et al. (
+   <a rid="ece34963-bib-0081" ref-type="ref" href="#ece34963-bib-0081">2006</a>) for 
+   <span class="italic">C. pagurus</span> and Sundet and Berenboim (
+   <a rid="ece34963-bib-0072" ref-type="ref" href="#ece34963-bib-0072">2008</a>) for 
+   <span class="italic">P. camtschaticus</span>. Changes in the abundance of these predators may be an indicator for changes of the level of predation pressure on sea urchins in our study area. To explore the link between abundance of crab and the state of the system, we performed Pearson's chi‐squared test of the proportion of sites with barren vs. kelp recovery state, within the identified regions with and without crab landings. Thirty years of data on the abundance of the Norwegian coastal cod (
+   <span class="italic">G. morhua</span>) stock north of 62°N (Berg, 
+   <a rid="ece34963-bib-0004" ref-type="ref" href="#ece34963-bib-0004">2012</a>; ICES, 
+   <a rid="ece34963-bib-0026" ref-type="ref" href="#ece34963-bib-0026">2004</a>) were also available. Note that coastal cod and the NE Atlantic Arctic/pelagic cod are the same species but are from genetically distinct populations (Westgaard &amp; Fevolden, 
+   <a rid="ece34963-bib-0080" ref-type="ref" href="#ece34963-bib-0080">2007</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The landing statistics indicate that edible crab (
+   <span class="italic">C. pagurus</span>) abundances have increased since the early 1990s (Figure 
+   <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a>). Landings were highest in the southern fishing zone (red zone in Figure 
+   <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a>), which corresponds to the Arctic Circle and Vega areas in the southern kelp recovery zone. Landing data also suggest that edible crabs have expanded northward, appearing for the first time in the two northern adjacent fishing zones in 1994 (i.e., in the innermost green zone corresponding to the sampling area Salten in the southern recovery zone), and in 2002 (the offshore, adjacent purple zone, corresponding to the barren zone, as illustrated in Figure 
+   <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a>). There was a clear reduction in the landings of edible crab in 2009 (Figure 
+   <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a>) probably due to a cadmium contamination resulting in reduced fishing activity (Norwegian Fishery authorities). There is no landing statistics for edible crab for the two northernmost zones, most likely due to scarce occurrences of the species. Pearson's chi‐squared test revealed a high proportion of barren sites (95% confidence interval 0.74–1.0) in the barren zone region with low crab landings, and a low fraction (95% confidence intervals 0–0.32 and 0–0.35) in the recovery zone south and north, respectively, with high crab landings.
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0008" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 8</span>
+   <div class="caption">
+    <p>Landings of red king crabs (
+     <span class="italic">Paralithodes camtschaticus, </span>upper panel) and edible crab (
+     <span class="italic">Cancer pagurus</span>, lower panel) within different fisheries zones from the 1990s to 2011. The color codes of the curves match the fishery zones. Data are from the Norwegian Directorate of Fisheries. 
+     <span class="italic">Y</span>‐axis is log‐transformed to show temporal variation also at low catch levels
+    </p>
+   </div>
+   <div id="nlm-graphic-17" xlink:href="ECE3-9-2847-g008" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The catch of red king crabs (
+   <span class="italic">P. camtschaticus</span>) has increased in Norwegian waters through the same period, and as much as 5,000 tons per year has been landed in the fishery zone closest to Russia (the orange zone in Figure 
+   <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a>), which corresponds to the Kirkenes area in the northern kelp recovery zone. More recent landings in the region further west indicate a gradual expansion of the species’ distribution westward into the barren zone (the blue zone in Figure 
+   <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The Norwegian coastal cod (
+   <span class="italic">G. morhua</span>) stock north of 62°N has decreased by 2/3 from 1993 to 2008 (Figure 
+   <a rid="ece34963-fig-0009" ref-type="fig" href="#ece34963-fig-0009">9</a>, data from Berg, 
+   <a rid="ece34963-bib-0004" ref-type="ref" href="#ece34963-bib-0004">2012</a>), a decline that coincides with the increase in both edible crab (
+   <span class="italic">p</span> &lt; 0.0001, 
+   <span class="italic">R</span>
+   <span class="sup">2</span> = 0.75) and king crab (
+   <span class="italic">p</span> = 0.0015, 
+   <span class="italic">R</span>
+   <span class="sup">2</span> = 0.55) landings. The correlations between cod and edible and red king crab were calculated after log‐transforming crab data to achieve normally distributed residuals.
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0009" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 9</span>
+   <div class="caption">
+    <p>Temporal trends of coastal cod (
+     <span class="italic">Gadus morhua</span>) stocks north of 62
+     <span class="sup">o</span>N from 1984 to 2008 (Berg, 
+     <a rid="ece34963-bib-0004" ref-type="ref" href="#ece34963-bib-0004">2012</a>), and of king crab (
+     <span class="italic">Paralithodes camtschaticus</span>) landings in eastern Finnmark, and edible crab (
+     <span class="italic">Cancer pagurus</span>) landings in south Nordland. The color codes of the crab curves match the fishery zones in Figure 
+     <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a> and coastal cod north of 62
+     <span class="sup">o</span>N includes all fishery zones shown in Figure 
+     <a rid="ece34963-fig-0008" ref-type="fig" href="#ece34963-fig-0008">8</a>. Data are from the Norwegian Directorate of Fisheries
+    </p>
+   </div>
+   <div id="nlm-graphic-19" xlink:href="ECE3-9-2847-g009" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec id="ece34963-sec-0010" class="sec">
+  <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.8</span>
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Temporal and spatial trends of changes in sea temperature</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Temperature has been implicated in both recruitment failure of sea urchins and the expansion of cancer crabs (Figure 
+   <a rid="ece34963-fig-0002" ref-type="fig" href="#ece34963-fig-0002">2</a>; Temperature → crab, Temperature → sea urchin). To evaluate whether the documented range expansion of the crab 
+   <span class="italic">C. pagurus </span>(cf. Woll et al., 
+   <a rid="ece34963-bib-0081" ref-type="ref" href="#ece34963-bib-0081">2006</a>, Brattegard, 
+   <a rid="ece34963-bib-0006" ref-type="ref" href="#ece34963-bib-0006">2011</a>) and the collapse of 
+   <span class="italic">S. droebachiensis</span> populations are likely to be driven by temperature change (cf. Stephens, 
+   <a rid="ece34963-bib-0071" ref-type="ref" href="#ece34963-bib-0071">1972</a>), we explored time trends in the ocean climate along the south–north gradient within the study area over the last 38 years. We obtained temperature data from the three meteorological stations: Bud (63°N), Skrova (68°N), and Ingøy (71°N) (see Figure 
+   <a rid="ece34963-fig-0003" ref-type="fig" href="#ece34963-fig-0003">3</a> for the positions of the hydrographical stations and Figure 
+   <a rid="ece34963-fig-0010" ref-type="fig" href="#ece34963-fig-0010">10</a> for mean and maximum temperature). Monthly sea temperatures measured at 1 m depth from 1972 to 2010 were available from Albretsen, Aure, Sætre, and Danielssen (
+   <a rid="ece34963-bib-0001" ref-type="ref" href="#ece34963-bib-0001">2011</a>) for these three stations. Potential time trends in the climatic data were tested by the Mann‐Kendall trend tests for the Bud, Skrova, and Ingøy time series using the R library 
+   <span class="italic">Kendall</span> (McLeod, 
+   <a rid="ece34963-bib-0042" ref-type="ref" href="#ece34963-bib-0042">2011</a>).
+  </p>
+  <div fig-type="Figure" xml:lang="en" id="ece34963-fig-0010" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span class="label">Figure 10</span>
+   <div class="caption">
+    <p>Detrended seasonal averages (a) and yearly maximum (b) sea surface temperatures (SST, measured at 1 m depth) from climatic stations at Bud (63°N), Skrova (68°N), and Ingøy (71°N; see map in Figure 
+     <a rid="ece34963-fig-0003" ref-type="fig" href="#ece34963-fig-0003">3</a>)
+    </p>
+   </div>
+   <div id="nlm-graphic-21" xlink:href="ECE3-9-2847-g010" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Sea surface temperatures are generally lower at higher latitudes. There has been a significant increase in the temperature from 1972 to 2010 at all three climate stations (tau &gt; 0.154, 
+   <span class="italic">p</span> &lt; 0.0017, Figure 
+   <a rid="ece34963-fig-0010" ref-type="fig" href="#ece34963-fig-0010">10</a>). From 2000s, the Lofoten area (i.e., Skrova) has experienced temperatures like those observed in mid‐Norway (i.e., Bud) 20–30 years earlier (Figure 
+   <a rid="ece34963-fig-0010" ref-type="fig" href="#ece34963-fig-0010">10</a>a). During this time, the maximum sea surface temperature exceeded 15°C at the two stations in southern and middle part of the study coastline but remained below 11°C in the northernmost region (Figure 
+   <a rid="ece34963-fig-0010" ref-type="fig" href="#ece34963-fig-0010">10</a>b).
+  </p>
+ </sec>
+</sec>

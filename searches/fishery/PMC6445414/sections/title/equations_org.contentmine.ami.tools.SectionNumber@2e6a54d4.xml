@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec011" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Equations</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Ecosim allows for time dynamic simulations of the balanced model created in Ecopath. Ecosim employs coupled differential equations that are derived from the Ecopath Master Equation [
+  <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>] and are expressed as: 
+  <div id="pone.0214814.e003" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0214814.e003.jpg" id="pone.0214814.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M3" class="math">
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mi">d</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">B</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">d</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">g</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+      </div>
+     </div>
+     <div class="mrow">
+      <div class="msub">
+       <span stretchy="false" class="mo">∑</span>
+       <div class="mrow">
+        <span class="mi">j</span>
+       </div>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">Q</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">-</span>
+       <div class="mrow">
+        <div class="msub">
+         <span stretchy="false" class="mo">∑</span>
+         <div class="mrow">
+          <span class="mi">j</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">Q</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mi">j</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">I</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">-</span>
+         <span class="mo">(</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">M</span>
+            <span class="mi">O</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">F</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">+</span>
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">e</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">)</span>
+         <span class="mo">×</span>
+         <div class="msub">
+          <div class="mrow">
+           <span class="mi">B</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">i</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(3)</span>
+  </div> Where 
+  <div id="pone.0214814.e004" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0214814.e004.jpg" id="pone.0214814.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M4" class="math">
+     <div class="mfrac">
+      <div class="mrow">
+       <span class="mi">d</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">B</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <div class="mrow">
+       <span class="mi">d</span>
+       <span class="mi">t</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div> is the growth rate during time 
+  <span class="italic">t</span> of the biomass of group 
+  <span class="italic">i</span>; 
+  <span class="italic">g</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the net growth efficiency; 
+  <span class="italic">Q</span>
+  <sub>
+   <span class="italic">ji</span>
+  </sub> represents the total consumption by predator group 
+  <span class="italic">i</span> of prey from group 
+  <span class="italic">j</span> (
+  <span class="italic">Q</span>
+  <sub>
+   <span class="italic">ji</span>
+  </sub> is similar); 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the biomass immigration rate and is assumed constant over time; 
+  <span class="italic">MO</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the mortality rate that is not associated with predation; 
+  <span class="italic">F</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the fishing mortality rate; and 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the emigration rate. The net migration term is 
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> x 
+  <span class="italic">B</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>
+  <span class="italic">—I</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> and is composed of terms that are held constant over the simulation (
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) and those that vary over the course of the simulation (
+  <span class="italic">e</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> x 
+  <span class="italic">B</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub>) [
+  <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Consumption rates in Ecosim are based on a simple Lotka-Volterra predator-prey model that has been modified to include “foraging arena” characteristics [
+  <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. The foraging-arena concept recognizes that prey can occur in states that are vulnerable to predation and states that are not. Prey shift between these states as they seek to access resources like shelters that make them safer or seek food in areas that leave them more exposed. The different vulnerabilities of the prey can affect the consumption rate by predators. [
+  <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. Consumption rates, Q
+  <sub>ij</sub>, are calculated as follows: 
+  <div id="pone.0214814.e005" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0214814.e005.jpg" id="pone.0214814.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M5" class="math">
+     <div class="msub">
+      <div class="mrow">
+       <span class="mi">Q</span>
+      </div>
+      <div class="mrow">
+       <span class="mi">i</span>
+       <span class="mi">j</span>
+      </div>
+     </div>
+     <span class="mo">=</span>
+     <div class="mfrac">
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">a</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">v</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">B</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">B</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">S</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="mrow">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">M</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">i</span>
+            <span class="mi">j</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">/</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">D</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+      <div class="mrow">
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">v</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">v</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">T</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">M</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">+</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">a</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">M</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">B</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <div class="msub">
+        <div class="mrow">
+         <span class="mi">S</span>
+        </div>
+        <div class="mrow">
+         <span class="mi">i</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span class="mo">×</span>
+       <span class="mo">(</span>
+       <div class="mrow">
+        <div class="mrow">
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">T</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+         </div>
+         <span class="mo">/</span>
+         <div class="mrow">
+          <div class="msub">
+           <div class="mrow">
+            <span class="mi">D</span>
+           </div>
+           <div class="mrow">
+            <span class="mi">j</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <span class="mo">)</span>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(4)</span>
+  </div> Where 
+  <span class="italic">a</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is the effective search rate for prey 
+  <span class="italic">i</span> by predator 
+  <span class="italic">j</span>; 
+  <span class="italic">v</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is the vulnerability of the prey 
+  <span class="italic">i</span> to predator 
+  <span class="italic">j</span>; 
+  <span class="italic">B</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the biomass of group 
+  <span class="italic">i</span>; 
+  <span class="italic">T</span>
+  <sub>
+   <span class="italic">i</span>
+  </sub> is the relative feeding time of group 
+  <span class="italic">i</span>; 
+  <span class="italic">S</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> is a forcing function; 
+  <span class="italic">M</span>
+  <sub>
+   <span class="italic">ij</span>
+  </sub> represents mediation (which is not used in this model); and 
+  <span class="italic">D</span>
+  <sub>
+   <span class="italic">j</span>
+  </sub> describes how handling time limits consumption rates [
+  <a rid="pone.0214814.ref020" ref-type="bibr" href="#pone.0214814.ref020">20</a>]. Further information describing how forcing functions can be used to drive consumption dynamics is provided by Christensen et al. (see Equations 4 and 5 and Figure 1 in [
+  <a rid="pone.0214814.ref052" ref-type="bibr" href="#pone.0214814.ref052">52</a>]).
+ </p>
+</sec>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The time series analysed in this study were extracted from the RAM Legacy Stock Assessment Database
+   <a ref-type="bibr" rid="b17" href="#b17">17</a> (
+   <span ext-link-type="uri" xlink:href="http://file:///D:\preeditjobs\npg\natcomm\ncomms15325\www.ramlegacy.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ramlegacy.org</span>), which is a quality-controlled compilation of global fishery data. We extracted interannual time series for 276 stocks for which there was a direct estimate of total stock biomass (
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>) and catch (
+   <span class="italic">C</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>). Some stock assessment methodologies produce ‘retrospective analyses’ where estimates of stock biomass are provided prior to the period when biomass surveys were performed. We excluded retrospective periods from 31 individual time series on a stock by stock via visual inspection (retrospective periods are identified as being characteristically ‘smooth’). Individual time series length varied with a mean start year of 1971 and a mean end year of 2010. An overview of all stocks used in the analysis is given in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Table 1</a> along with its unique identifier in the RAM database and the most recent estimate of stock status 
+   <span class="italic">B</span>
+   <sub>0</sub>:
+   <span class="italic">B</span>
+   <sub>MSY</sub>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Static Graham–Schaefer analysis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To initially investigate and classify stocks based on the stationarity of biomass residuals, we fit the static Graham–Schaefer by maximizing the log posterior under noninformative priors for 
+   <span class="italic">r</span> and 
+   <span class="italic">K</span>, assuming Gaussian distributed model errors for stock biomass. The residuals of the static fit with respect to the maximum 
+   <span class="italic">a posteriori</span> parameter estimates were then extracted and analysed with the autoregressive model described in the main text.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bayesian formulation of the non-stationary Graham–Schaefer model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We extended the static Graham–Schaefer surplus production framework by formulating a time-varying intrinsic productivity state as a stochastic random walk with drift</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq29" class="disp-formula">
+    <span id="d32e747" xlink:href="ncomms15325-m29.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq30" class="disp-formula">
+    <span id="d32e750" xlink:href="ncomms15325-m30.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">B</span> is the biomass in year 
+   <span class="italic">t</span>, 
+   <span class="italic">r</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> is the non-stationary productivity with 
+   <div id="d32e765" class="inline-formula">
+    <span id="d32e766" xlink:href="ncomms15325-m31.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> and stochastic trend 
+   <span class="italic">δ</span>, 
+   <span class="italic">K</span> is the carrying capacity, 
+   <span class="italic">C</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub> is the observed catch. Assigning probability distributions to the unknown quantities, the non-stationary Graham–Schaefer model can be written as the following hierarchical Bayesian state space model
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq32" class="disp-formula">
+    <span id="d32e783" xlink:href="ncomms15325-m32.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq33" class="disp-formula">
+    <span id="d32e786" xlink:href="ncomms15325-m33.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq34" class="disp-formula">
+    <span id="d32e789" xlink:href="ncomms15325-m34.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq35" class="disp-formula">
+    <span id="d32e792" xlink:href="ncomms15325-m35.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq36" class="disp-formula">
+    <span id="d32e795" xlink:href="ncomms15325-m36.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <div id="d32e798" class="inline-formula">
+    <span id="d32e799" xlink:href="ncomms15325-m37.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>. The notation for the uniform densities represents equal 
+   <span class="italic">a priori</span> probability over the continuous interval (
+   <span class="italic">a,b</span>). Note that 
+   <span class="italic">N</span>
+   <sub>trunc</sub> specifies a truncated Gaussian where the random variable is numerically constrained to be non-negative. Also note that the weakly informative empirical priors are set to aid MCMC convergence as typical biomass varies by orders of magnitude across stocks, making it difficult to specify noninformative priors across all time series.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Recovery times</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Static and deterministic surplus production theory derives optimal harvesting by postulating a steady-state balance between harvest and production (
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">t</span>+1
+   </sub>−
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>=0) where the catch is equal to production 
+   <div id="d32e830" class="inline-formula">
+    <span id="d32e831" xlink:href="ncomms15325-m38.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> and yields the familiar expression where a biomass of half the carrying capacity produces maximum yield, 
+   <div id="d32e833" class="inline-formula">
+    <span id="d32e834" xlink:href="ncomms15325-m39.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>. For a stock that is depleted below 
+   <span class="italic">B</span>
+   <sub>MSY</sub>, the deterministic stock recovery time is found by solving the initial value problem for the static Graham–Schaefer model with the initial condition 
+   <span class="italic">B</span>=
+   <span class="italic">B</span>
+   <sub>0</sub>, where 
+   <span class="italic">B</span>
+   <sub>0</sub>&lt;
+   <span class="italic">B</span>
+   <sub>MSY</sub>, and setting the solution equal to 
+   <span class="italic">B</span>
+   <sub>MSY</sub>, yielding an expression for the number of years need to recover
+   <a ref-type="bibr" rid="b7" href="#b7">7</a>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq40" class="disp-formula">
+    <span id="d32e869" xlink:href="ncomms15325-m40.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <span class="italic">θ</span> is the ratio of fishing mortality to productivity 
+   <div id="d32e875" class="inline-formula">
+    <span id="d32e876" xlink:href="ncomms15325-m41.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>. Assuming that 
+   <span class="italic">r</span> and 
+   <span class="italic">K</span> are known and fixed, 
+   <div id="d32e884" class="inline-formula">
+    <span id="d32e885" xlink:href="ncomms15325-m42.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> predicts the expected number of years as a deterministic function of current biomass 
+   <span class="italic">B</span>
+   <sub>0</sub>, 
+   <span class="italic">B</span>
+   <sub>MSY</sub> and the level of fishing 
+   <span class="italic">F</span> (
+   <a ref-type="fig" rid="f4" href="#f4">Fig. 4</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Under non-stationary parameters, 
+   <div id="d32e906" class="inline-formula">
+    <span id="d32e907" xlink:href="ncomms15325-m43.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> is time-dependent and its probability distribution is strongly positively skewed, which provides a poor metric to characterize expected stock recovery. Under the more realistic assumption in which 
+   <span class="italic">r</span>
+   <sub>
+    <span class="italic">t</span>
+   </sub>, 
+   <span class="italic">K</span> and the system variance parameters are not known and must be estimated, the posterior predictive distribution for the recovery time requires sampling over the posterior-weighted predictive distribution
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">
+   <div id="eq44" class="disp-formula">
+    <span id="d32e920" xlink:href="ncomms15325-m44.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">where 
+   <div id="d32e923" class="inline-formula">
+    <span id="d32e924" xlink:href="ncomms15325-m45.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> is the is the recovery timescale and 
+   <div id="d32e926" class="inline-formula">
+    <span id="d32e927" xlink:href="ncomms15325-m46.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div> are the static parameters. Within the MCMC framework, we computed the posterior predictive density by Monte Carlo forward propagation of the random walk productivity process to generate sample realizations for 10 additional years beyond the scope of the observed time series. From this ensemble, we calculate the biomass trajectories and then compute the posterior estimate of (11) as the proportion of biomass trajectories that exceed 
+   <span class="italic">B</span>
+   <sub>MSY</sub> after 10 years.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All data analysed in this study are publicly available for download at 
+   <span ext-link-type="uri" xlink:href="http://file:///D:\preeditjobs\npg\natcomm\ncomms15325\www.ramlegacy.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ramlegacy.org</span>.
+  </p>
+ </sec>
+</sec>

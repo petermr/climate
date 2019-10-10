@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Random forest model predictions</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We used RF models to interpret the strength and nature of relationships between TP and prey availability, ecomorphology, and climate (
+  <a rid="R55" ref-type="bibr" href="#R55">
+   <span class="italic">55</span>
+  </a>). RF offers a modeling strategy that is robust while still amiable to interpretation similarly to more familiar parametric models. However, RF is resilient to large numbers of correlated predictors and nonlinear relationships (
+  <a rid="R56" ref-type="bibr" href="#R56">
+   <span class="italic">56</span>
+  </a>). In contrast to conventional parametric models, algorithmic models like RF do not require a priori assumption of the predictor-response relationship, but rather learn the form of those relationships (
+  <a rid="R57" ref-type="bibr" href="#R57">
+   <span class="italic">57</span>
+  </a>) through data splitting. RF constructs multiple regression trees that can identify irregular patterns, along with linear, curvilinear, or step-wise relationships (
+  <a rid="R57" ref-type="bibr" href="#R57">
+   <span class="italic">57</span>
+  </a>). Although individual regression trees may overfit data, RF overcomes this shortcoming by “averaging” an entire “forest” of regression trees that are trained on different subsets of predictors and response values. Each tree is generated through bootstrap samples, where one-third of the sample is left out for validation with out-of-bag prediction. Powerful trees can be extracted individually from a forest, although the resiliency of RF lies in interpreting the whole forest ensemble model output. To minimize overfitting concerns, we used a conservative hyperparameter parameterization, the number of trees in our model (ntree) was 2000, and the minimum terminal node size for individual trees was set at 5. The number of predictors available for splitting at each tree node (mtry) was set at the algorithm convention of the number of parameters divided by three rounded down (
+  <span class="italic">K</span>/3).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We interpreted RF regressions with partial dependence plots. These plots show predicted values of a response variable along a gradient of an explanatory variable while, importantly, conditioning for all other explanatory variables. In addition, because variable importance (
+  <a ref-type="fig" rid="F5" href="#F5">Fig. 5A</a> and fig. S13) metrics are useful at interpreting predictive power of independent variables, we used the reduction in MSE of a model when a predictor is randomly permuted. RMSE and explained variance (
+  <span class="italic">R</span>
+  <span class="sup">2</span>) evaluate overall model performance.
+ </p>
+</sec>

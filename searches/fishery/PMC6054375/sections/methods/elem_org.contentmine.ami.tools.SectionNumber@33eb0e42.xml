@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec005" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="sec006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Setting up a Baltic ecosystem end-to-end modelling and management strategy evaluation framework</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We present a new framework, with a Baltic implementation of the spatially-explicit end-to-end Atlantis ecosystem model linked to two external models, to explore the different pressures on the marine ecosystem (
+   <a ref-type="fig" rid="pone.0199168.g001" href="#pone.0199168.g001">Fig 1</a>). Atlantis is used as the main and central part of a 3 part linked model system.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The first link is between a biogeochemical-hydrodynamic model and Atlantis. Detailed input for the hydrographic part of the Baltic Atlantis model is provided by the HBM-ERGOM model system (
+   <a ref-type="fig" rid="pone.0199168.g001" href="#pone.0199168.g001">Fig 1</a>) consisting of the 3D ocean circulation Hiromb-BOOS model (HBM) coupled to the biogeochemical and plankton production ERGOM model [
+   <a rid="pone.0199168.ref055" ref-type="bibr" href="#pone.0199168.ref055">55</a>–
+   <a rid="pone.0199168.ref057" ref-type="bibr" href="#pone.0199168.ref057">57</a>]. This HBM-ERGOM model is in turn informed by the catchment models DK-QNP [
+   <a rid="pone.0199168.ref058" ref-type="bibr" href="#pone.0199168.ref058">58</a>] and HBV [
+   <a rid="pone.0199168.ref059" ref-type="bibr" href="#pone.0199168.ref059">59</a>] which deliver high spatial resolution information (1×1 km) on river discharge and nutrient loads. For the Danish areas, both the Atlantis model and the HBM-ERGOM model receive river data from the catchment model DK-QNP, for the other Baltic Sea rivers, the catchment model HBV or HELCOM data is used.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The second link is between Atlantis and a bio-economic fisheries model. The Atlantis output of the terminal projection year feeds into the FISHRENT model (
+   <a ref-type="fig" rid="pone.0199168.g001" href="#pone.0199168.g001">Fig 1</a>), which is a bio-economic multi-fish-stock-multi-fishing-fleet-model for Kattegat and the Western Baltic fishery (FISHRENT KWB henceforth; [
+   <a rid="pone.0199168.ref060" ref-type="bibr" href="#pone.0199168.ref060">60</a>]).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The way the three models (HBM-ERGOM–Atlantis–FISHRENT) are connected is based on a one-way offline linking. Information is fed from one model to another without accounting for any potential dynamic coupling or feedback processes. Information about hydrodynamics obtained from the HBM-ERGOM model is passed on as input to the Baltic Atlantis for the 2005 calibration year, and information about changes in biological production obtained from the Baltic Atlantis is, with respect to fish species biomasses, passed on as input to the FISHRENT KWB model, as illustrated in 
+   <a ref-type="fig" rid="pone.0199168.g001" href="#pone.0199168.g001">Fig 1</a>. A detailed explanation on how this is exactly done, can be found in sections A and C in 
+   <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>. The outcomes of the Baltic fish Stochastic Multispecies Model (SMS; [
+   <a rid="pone.0199168.ref061" ref-type="bibr" href="#pone.0199168.ref061">61</a>]) are also used to provide information on natural fish mortality levels and constrain dietary interactions between the fish species sprat, herring and cod. Furthermore, a couple of other models can be associated with the framework but are not currently used and described in 
+   <a ref-type="fig" rid="pone.0199168.g001" href="#pone.0199168.g001">Fig 1</a> (i.e., the DISPLACE [
+   <a rid="pone.0199168.ref062" ref-type="bibr" href="#pone.0199168.ref062">62</a>–
+   <a rid="pone.0199168.ref063" ref-type="bibr" href="#pone.0199168.ref063">63</a>] model, coupled to the SMS models [
+   <a rid="pone.0199168.ref064" ref-type="bibr" href="#pone.0199168.ref064">64</a>], and the broader socio-economic CBA model, an ecosystem services assessment tool [
+   <a rid="pone.0199168.ref065" ref-type="bibr" href="#pone.0199168.ref065">65</a>]).
+  </p>
+ </sec>
+ <sec id="sec007" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Initialization, forcing and parameterization of the Baltic Atlantis</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Year 2005 is chosen as the initial conditions year for the Baltic Atlantis calibration because it is the most recent year with the greatest overlap of available information between all the biological variables and parameters used in the Baltic Atlantis model. Furthermore, year 2005 is characterized by lack of extreme events, in either physical forcing (river discharge, Baltic inflow) or significant ecosystem changes. In absence of data or other model outputs from that period for a given variable or parameter, the temporal search radius is extended to one year before and after 2005 until the closest estimate in time is found. Spatially averaged data were then averaged per quarter whenever data was available at a seasonal resolution. The process of informing the large number of biological parameters in the Baltic Atlantis model was based on an extensive review of literature to minimize the number of poorly constrained parameters. In a majority of cases, previous estimates of equivalent model parameters were already reported (e.g. length at infinity, mortality rate, recruitment constants), or it was possible to derive first order approximations from available data (e.g. survival rates of juvenile mammals). However, there were also a few Atlantis-specific parameters which had to be provided. The process to find these is described further down.</p>
+  <sec id="sec008" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Input from HBM-ERGOM</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The HBM-ERGOM model (Figure A in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>) provides physical, chemical and hydrodynamic parameters to the Baltic Atlantis for the 2005 calibration year. It is a 3D ecosystem model coupling an ocean circulation model with a biogeochemical module describing the major pathways for carbon, nitrogen, phosphorous and silica. It is driven by atmospheric forcing and nutrient loads (N, P, Si), and simulates the responses to climate changes and changing nutrient loadings. The HBM drives the transport of physical and biogeochemical properties while the biogeochemical model ERGOM simulates primary production and cycling of nutrients (N, P, Si) through 3 phytoplankton groups, 2 zooplankton groups, detritus and the sediment [
+    <a rid="pone.0199168.ref056" ref-type="bibr" href="#pone.0199168.ref056">56</a>, 
+    <a rid="pone.0199168.ref066" ref-type="bibr" href="#pone.0199168.ref066">66</a>]. ERGOM has been described and validated in previous studies [
+    <a rid="pone.0199168.ref056" ref-type="bibr" href="#pone.0199168.ref056">56</a>–
+    <a rid="pone.0199168.ref057" ref-type="bibr" href="#pone.0199168.ref057">57</a>, 
+    <a rid="pone.0199168.ref060" ref-type="bibr" href="#pone.0199168.ref060">60</a>] based on the original formulations [
+    <a rid="pone.0199168.ref021" ref-type="bibr" href="#pone.0199168.ref021">21</a>, 
+    <a rid="pone.0199168.ref055" ref-type="bibr" href="#pone.0199168.ref055">55</a>]. More detailed information about the HBM-ERGOM model can be found in section A in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">The next parameters described are set values for a longer time period. A first group is the temperature, salinity, exchange volume (i.e. currents) and the external tracers for the dynamic boundary Box 0 (
+    <a ref-type="fig" rid="pone.0199168.g002" href="#pone.0199168.g002">Fig 2</a>)–representing the entire transport between Baltic Sea and North Sea. They are parameterized with 12h time steps for 2005, which is repeated for each projection year in Atlantis. Temperature and salinity values are fields which are calculated per box and per depth layer, while the currents are fluxes, calculated per box face. The second group consists of the tracers of atmospheric deposition fluxes and riverine inputs. These forced sources are annually averaged, but applied daily at even rates. Atmospheric deposition rate of nutrients is fixed in time and is a spatially-uniform estimate of 0.15 mmol-NH4/m
+    <span class="sup">2</span>/day following [
+    <a rid="pone.0199168.ref068" ref-type="bibr" href="#pone.0199168.ref068">68</a>], in line with atmospheric sources used in HBM-ERGOM. Even though these parameters are provided by the HBM-ERGOM model, there is no cyclic feedback between HBM-ERGOM and Atlantis in the projection. Accordingly, the biogeochemical cycling is explicitly modelled in the Baltic Atlantis, with nitrogen being the currency of the model while silicate and oxygen fields and fluxes are also tracked. Physical and geochemical parameters used to internally force the Baltic Atlantis model can be found in Table A in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>.
+   </p>
+   <div id="pone.0199168.g002" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0199168.g002</span>
+    <span class="label">Fig 2</span>
+    <div class="caption">
+     <div class="title">Baltic Atlantis spatial polygon structure.</div>
+    </div>
+    <div xlink:href="pone.0199168.g002" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Annual river run-off and nitrogen deposition flux estimates, derived from the Review of the Fifth Baltic Sea Pollution Load Compilation for the 2013 HELCOM Ministerial Meeting [
+    <a rid="pone.0199168.ref069" ref-type="bibr" href="#pone.0199168.ref069">69</a>], are used to calculate the annual rates of nitrogen riverine inputs. The fluxes are translated onto the Atlantis box model domain, combined with coastal retention and bioavailability factors estimated regionally in the Baltic Sea basin [
+    <a rid="pone.0199168.ref070" ref-type="bibr" href="#pone.0199168.ref070">70</a>–
+    <a rid="pone.0199168.ref072" ref-type="bibr" href="#pone.0199168.ref072">72</a>] to account for estuarine and near-coastal transformation and removal of nutrients. Parts of some of the fluxes have been put directly into the off-shore boxes to account for a lack of resolution of fine scale (and potentially complex) eddies and plumes that extend horizontal mixing of these tracers out beyond coastal waters. The estimates of per-box riverine inputs of nitrate and dissolved organic nitrogen used to force the model are summarized in Table B in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>. Additionally, there are two important nutrient sinks for nitrogen in the model: (i) explicitly modeled denitrification and (ii) implicitly considered decay and sediment burial. Details of how these processes are parameterized can be found in the 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a> (section B.1).
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Besides the hydrographic parameters, the HBM-ERGOM also provided the information about initial condition values, more specifically for the winter 2005 initial conditions of nutrients (nitrate (NO
+    <sub>3</sub>), ammonia (NH
+    <sub>4</sub>), silicate (SiO
+    <sub>4</sub>), dissolved oxygen (O
+    <sub>2</sub>), detrital material (dissolved organic nitrogen (DON) + detrital silica + particulate organic matter: labile and refractory detritus), primary (diatoms, autotrophic flagellates, cyanobacteria) and secondary pelagic producers (microzooplankton, mesozooplankton).
+   </p>
+  </sec>
+  <sec id="sec009" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Other initial condition values</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The annual average spatial distribution of mysids and gelatinous zooplankton was based on scarce and irregular data maintained in SMHI (Swedish Meteorological and Hydrographical Institute; 
+    <span ext-link-type="uri" xlink:href="http://www.smhi.se/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.smhi.se</span>) and ICES (International Council for Exploration of the Sea; 
+    <span ext-link-type="uri" xlink:href="http://www.ices.dk/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ices.dk</span>) databases, and supplemented by the results of an extensive literature review, covering a period from 2003 to 2007. Initial conditions for benthic deposit feeders, polychaetes, soft- and hard-substrate filter feeders came from the compilation of data obtained from SMHI, ICES, DCE (Danish National Center for Environment and Energy; 
+    <span ext-link-type="uri" xlink:href="http://www.dce.au.dk/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.dce.au.dk</span>) and HERTTA (Finnish Environmental Institute; 
+    <span ext-link-type="uri" xlink:href="http://www.p2.ymparisto.fi/scripts/oiva.asp" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.p2.ymparisto.fi/scripts/oiva.asp</span>) databases. The data used covered a period from 2003 to 2007. Literature information on coverage and/or biomass was obtained to estimate initial conditions for spatial distribution of macroalgae [
+    <a rid="pone.0199168.ref073" ref-type="bibr" href="#pone.0199168.ref073">73</a>–
+    <a rid="pone.0199168.ref075" ref-type="bibr" href="#pone.0199168.ref075">75</a>] and seagrass [
+    <a rid="pone.0199168.ref076" ref-type="bibr" href="#pone.0199168.ref076">76</a>].
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Table C in the 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a> provides a summary of the sources used to inform the model with the required biological fields, fluxes and parameters for the 2005 initial conditions year for all vertebrate and/or commercially important species (e.g. Nephrops). A distinct spatial distribution was specified for adults and juveniles, and by season (half year), if the data was available. Details of these calculations and considerations for vertebrates and invertebrates can be found in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a> section B.2. Because the input information is derived from observed or previously modeled mean annual concentration and biomass levels taken from the 2005 reference year, we can check whether the model is able to reproduce realistic biomass levels for those groups. We do not provide a similar comparison for invertebrates and the lower trophic levels for which we did not have accurate or equivalent data to start with. However, their values are set according to the best available knowledge. Initial values of detrital matter were purposefully set very low for the model initial conditions in order to avoid too strong grazing pressure and in general larger internal model error due to a choice of initial conditions.
+   </p>
+  </sec>
+  <sec id="sec010" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Unique Atlantis parameters</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">There is a group of parameters that are unique to Atlantis, e.g. the availability of prey parameter, which is conceptually difficult to derive from stomach content data (see detailed discussion in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a> section B.2). Such parameters were therefore initially constrained using qualitative information and often adjusted substantially during the calibration process. When no information about realistic ranges of parameters were found, the robustness of the final calibrated value was evaluated using the emergent model results (i.e. diet composition) or through sensitivity analysis by changing ranges of the parameters. Tables D-F in the 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a> provide a summary of the final calibrated values assigned to the key biological parameters describing the structure and function of the ecosystem in the Baltic Atlantis for vertebrate and invertebrate groups, respectively.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Other examples are the parameters for diffusive fluxes, which are calculated internally on top of advective fluxes. While we apply a constant vertical mixing rate across the majority of the model domain, these mixing rates needed to be adjusted in order to better simulate nutrient replenishment in the offshore surface waters. Other vertical transport processes occur across the water-sediment interface via bioirrigation and bioturbation of sediments, sediment resuspension and erosion; as well as in the water column via particle settling. Also horizontal and vertical light fields are calculated internally by the model. Daily and seasonal cycles of photosynthetically active radiation are obtained from calculations of the theoretical net incoming shortwave radiation at given longitude and latitude. The vertical extent of the light profile in the water column is an exponential decay function scaled by physical and biological light attenuation parameters (Table A in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>).
+   </p>
+  </sec>
+ </sec>
+ <sec id="sec011" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">The Baltic Atlantis model application: Structure and processes</div>
+  <sec id="sec012" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Biological functional group structure</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The Baltic Atlantis model has 30 biological functional groups. 
+    <a rid="pone.0199168.t001" ref-type="table" href="#pone.0199168.t001">Table 1</a> provides an overview of the biological structure of the model by indicating which and how many functional groups there are for each ecosystem level, and 
+    <a ref-type="fig" rid="pone.0199168.g003" href="#pone.0199168.g003">Fig 3</a> illustrates their habitats and the general interactions between the biological groups in the model. The key players of this system are cod, sprat and herring. All three of them are predated by the harbour porpoise, seals and seabirds. Sprat and herring are also the main prey species for adult cod, while the benthic invertebrate community is the main food source for juvenile cod. The majority of biological functional groups encompass multiple species, except when there is sufficient information to parameterize dynamics of individual species which are either of great economic value—e.g. the sprat, herring, and cod fish stocks—or have important and distinct ecosystem roles, e.g. harbour porpoise. For functional groups consisting of several species, the biological traits of the dominant species, or the species with a key ecosystem role, are chosen to be representative of the whole group. All biological functional groups, together with names of species aggregated within them and general model behavior parameters are listed in Tables G and H in the 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a> respectively. The reasons and criteria used to aggregate individual species into biological functional groups are described in section B.3 in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>.
+   </p>
+   <div id="pone.0199168.g003" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0199168.g003</span>
+    <span class="label">Fig 3</span>
+    <div class="caption">
+     <div class="title">Baltic Atlantis model–biological structure.</div>
+     <p>Detail list of species included in each group is found in Table G in 
+      <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>. The figure illustrates the main interactions focused upon in the current context, i.e. a comprehensive diagram of the full biological interactions between functional groups in the Baltic Atlantis model will be way too complex to overview in one diagram.
+     </p>
+    </div>
+    <div xlink:href="pone.0199168.g003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+   <div id="pone.0199168.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+    <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0199168.t001</span>
+    <span class="label">Table 1</span>
+    <div class="caption">
+     <div class="title">Summary of biological structure of the Baltic ATLANTIS model.</div>
+    </div>
+    <div class="alternatives">
+     <div id="pone.0199168.t001g" xlink:href="pone.0199168.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <table frame="hsides" rules="groups">
+      <colgroup span="1">
+       <col align="left" valign="middle" span="1"/>
+       <col align="left" valign="middle" span="1"/>
+       <col align="left" valign="middle" span="1"/>
+       <col align="left" valign="middle" span="1"/>
+      </colgroup>
+      <thead>
+       <tr>
+        <th align="left" rowspan="1" colspan="1">Ecosystem level</th>
+        <th align="center" rowspan="1" colspan="1"># functional groups</th>
+        <th align="center" rowspan="1" colspan="1">Population structure</th>
+        <th align="center" rowspan="1" colspan="1">Biological functional groups and model codes</th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Dead organic matter</td>
+        <td align="center" rowspan="1" colspan="1">3</td>
+        <td align="center" rowspan="1" colspan="1">Single biomass pool</td>
+        <td align="center" rowspan="1" colspan="1">DL (labile detritus), DR (refractory detritus), DC (carrion)</td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Bacteria</td>
+        <td align="center" rowspan="1" colspan="1">2</td>
+        <td align="center" rowspan="1" colspan="1">Single biomass pool</td>
+        <td align="center" rowspan="1" colspan="1">BP (pelagic bacteria), BB (sediment bacteria)</td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Pelagic primary producers</td>
+        <td align="center" rowspan="1" colspan="1">3</td>
+        <td align="center" rowspan="1" colspan="1">Single biomass pool</td>
+        <td align="center" rowspan="1" colspan="1">PS (small phytoplankton), PL (large phytoplankton), 
+         <span class="sup">a</span>PC (cyanobacteria)
+        </td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Benthic primary producers</td>
+        <td align="center" rowspan="1" colspan="1">3</td>
+        <td align="center" rowspan="1" colspan="1">Single biomass pool</td>
+        <td align="center" rowspan="1" colspan="1">MA (macroalgae), SG (seagrass), 
+         <span class="sup">a</span>PB (phytobenthos)
+        </td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Pelagic invertebrates</td>
+        <td align="center" rowspan="1" colspan="1">4</td>
+        <td align="center" rowspan="1" colspan="1">Single biomass pool</td>
+        <td align="center" rowspan="1" colspan="1">ZS (small zooplankton), ZM (mesozooplankton), MS (mysids), ZG (gelatinous zooplankton)</td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Benthic invertebrates</td>
+        <td align="center" rowspan="1" colspan="1">5</td>
+        <td align="center" rowspan="1" colspan="1">Single biomass pool</td>
+        <td align="center" rowspan="1" colspan="1">SF (soft-substrate filter feeders), HF (hard-substrate filter feeders), BF (benthic deposit feeders), NE (Nephrops), PO (polychaetes)</td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Fish</td>
+        <td align="center" rowspan="1" colspan="1">9</td>
+        <td align="center" rowspan="1" colspan="1">Age-structured</td>
+        <td align="center" rowspan="1" colspan="1">FSR (sprat), FHR (herring), FCD (cod), FWH (whiting), FFL (flat fish), FPR (perch), FCP (cyprinids), FSP (small pelagics), FSD (small demersals)</td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Seabirds</td>
+        <td align="center" rowspan="1" colspan="1">2</td>
+        <td align="center" rowspan="1" colspan="1">Age-structured</td>
+        <td align="center" rowspan="1" colspan="1">SBD (pursuit-diving seabirds), 
+         <span class="sup">a</span>SBS (surface-feeding seabirds)
+        </td>
+       </tr>
+       <tr>
+        <td align="left" rowspan="1" colspan="1">Marine mammals</td>
+        <td align="center" rowspan="1" colspan="1">2</td>
+        <td align="center" rowspan="1" colspan="1">Age-structured</td>
+        <td align="center" rowspan="1" colspan="1">MHP (harbour porpoise), SEA (seals)</td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+    <div class="table-wrap-foot">
+     <fn id="t001fn001" class="fn" xmlns="">
+      <p xmlns="http://www.w3.org/1999/xhtml">All vertebrate groups are age-structured in the model and include 5 or 10 age classes, depending on their life expectancy. All invertebrate groups are represented by a single biomass pool.</p>
+     </fn>
+     <fn id="t001fn002" class="fn" xmlns="">
+      <p xmlns="http://www.w3.org/1999/xhtml">aGroups currently set as inactive in the model, i.e. they will be excluded from the model. This allows to include them again more easily in future model improvements.</p>
+     </fn>
+    </div>
+   </div>
+   <p xmlns="http://www.w3.org/1999/xhtml">Mammals, seabirds and fish are age structured with a set amount of age groups (cohorts) (Table H in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>, section B.2 in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>–
+    <span class="underline">Demographic profiles, mortality rates &amp; reproduction functions</span>). Age structured functional groups mature at a set age, which is modelled as a hard transition point from a juvenile to adult stage—this distinguishes diets, habitat use, migration patterns etc; This does not assume the age of sexual maturation though, which is given by a spawning ogive which determines the proportional contribution to reproduction. This means that sexual maturity and contributions to the pool of new recruits can begin before or after the switch from juvenile to adult behavior. The number of recruits is modelled following the standard Beverton-Holt relationship [
+    <a rid="pone.0199168.ref077" ref-type="bibr" href="#pone.0199168.ref077">77</a>], where the recruitment is a function of the total species biomass and the amount of spawning produced, scaled by temperature, salinity and oxygen conditions (Table D in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>). Details on how this is done can be found in section B.2 in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>–Demographic profiles, mortality rates &amp; reproduction functions. Currently, the number of recruits for mammals and seabirds is also modelled following this approach to create a density dependence relationship with the environment they live in. The effects of temperature and salinity on the recruitment of harbour porpoises and seals are however not seen as an influential factor and are turned off for those two species accordingly. Besides recruitment processes, oxygen concentration conditions also affect all groups while living (for equations on the processes and detailed explanation see section B.2 in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>–Demographic profiles, mortality rates &amp; reproduction functions). Benthic invertebrates experience an increased mortality when oxygen drops below their minimum tolerance levels (Table F in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>) as they cannot escape the oxygen minima that easily, while fish and other vertebrates are assumed to swim away. Although, if no suitable habitat is found (i.e. if the entire area was to become anoxic), they would be completely lost from the model. A potential uncertainty lies in the precise formulation of the fish recruitment dynamics in the Baltic Atlantis. As there are large regional differences in recruitment parameters calculated for different important fish stocks in the Baltic, the selected values are not always equally representative of both the eastern and western stock components. The final values for the Beverton-Holt stock recruitment relationship were chosen based on the ability to reach a long-term equilibrium biomass.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">Age structured functional groups, i.e. all vertebrates (
+    <a rid="pone.0199168.t001" ref-type="table" href="#pone.0199168.t001">Table 1</a>), also have a maximum growth rate and clearance rate for each of the age groups, while biomass pool functional groups, i.e. all invertebrate groups (
+    <a rid="pone.0199168.t001" ref-type="table" href="#pone.0199168.t001">Table 1</a>), only have one specific value (Tables E and F in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>). Growth for primary producers is defined as a function of the maximum specific growth rate and by additional potentially limiting factors such as nutrient, light and space limitations. For consumers, growth is determined by the intake (grazing) and assimilation efficiency. Maintenance or respiration costs for age structured groups are implicitly represented in the assimilation efficiency, i.e. the rate is set lower to represent losses to respiration, as well as incomplete assimilation of food. Grazing is modelled using a modified Holling type II relation [
+    <a rid="pone.0199168.ref054" ref-type="bibr" href="#pone.0199168.ref054">54</a>], where the grazing is a function of the amount of biomass of a specific prey available and the time-invariant maximum growth (grazing) rate and clearance rate (the search volume of a predator). Limitations of the available prey biomass are the time-varying spatial overlap and predator condition, the available habitat for refuge and the gape size of the predator. This together will define the amount of prey consumed, which means that the diet is not a priori determined (as in other models such as EwE), rather an emergent property of the Atlantis model.
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">While the initial values of vertebrate growth and consumption rates per age class were fairly well constrained using field data on morphological characteristics and physiological rates, and size-based scaling laws of metabolic theory, up to an order of magnitude adjustments had to be made for some groups. The two criteria used to adjust these rates were: (i) obtaining a close to initial structural and reserve weight per age group, and (ii) obtaining a stable and ecologically-sound diet composition.</p>
+  </sec>
+  <sec id="sec013" class="sec">
+   <div class="title" xmlns="http://www.w3.org/1999/xhtml">Atlantis spatial domain structure</div>
+   <p xmlns="http://www.w3.org/1999/xhtml">The Baltic Atlantis model resolves horizontal processes based on 29 polygon-shaped boxes, including 26 dynamic and 3 boundary boxes, and a total of 100 faces (borders) between them (
+    <a ref-type="fig" rid="pone.0199168.g002" href="#pone.0199168.g002">Fig 2</a>), delineated using a Geographical Information System, following the standard procedure for all Atlantis implementations [
+    <a rid="pone.0199168.ref054" ref-type="bibr" href="#pone.0199168.ref054">54</a>]. The polygon structure is designed as a compromise between the need to account for spatial heterogeneity in bathymetric and hydrodynamic patterns, physical-chemical and biological habitats, biological composition and existing fisheries and spatial management units. In the vertical dimension there are eight water layers: 0-5m, 5-10m, 10-30m, 30-40m, 40-50m, 50-100m, 100-200m, &gt;200m; and one sediment layer of 0.5m depth. The depth of the vertical water layers is variable with a higher resolution for layers shallower than 50m depth. This higher resolution helps the model to resolve key vertical processes around the halocline in offshore areas of the Baltic. The last vertical layer is a sediment cell. Which types of abiotic habitat this sediment cell has, is specified based on the high resolution topographic map information from HELCOM (Table I in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>).
+   </p>
+   <p xmlns="http://www.w3.org/1999/xhtml">There are a few limitations when modelling the different functional groups in this spatial domain structure. Firstly, the spatial distribution of primary and secondary producers in the model is complementary where large and small phytoplankton rarely coexist in the same polygon, similarly for micro- and mesozooplankton. While this implementation allows for the effective representation of the total biomass of both groups, the biomass by individual polygon might be biased due to the model set up. Complementary groups are therefore aggregated over polygons when plotted spatially. Secondly, the spatial distribution of the vertebrates is forced seasonally for the species, based on survey data and literature and does not allow for free movement between polygons (see section B.2 in 
+    <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>–Quarterly abundance distribution of vertebrates). The distribution pattern is also limited by the single uniform fishing mortality imposed on all individuals of a given biological functional group. This current implementation potentially leads to approximate fishing mortalities per subareas.
+   </p>
+  </sec>
+ </sec>
+ <sec id="sec014" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Nutrient load reduction scenarios and fishing pressure change sensitivity</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">In the current study, four nutrient load reduction scenarios have been evaluated and five model sensitivity runs with changed fishing pressure for key fish species were conducted. This was done to test the model sensitivity and its capability to respond similarly to realistic situations. There was one “status quo” scenario to compare against which assumed no changes in nutrient loads or fishing pressure. The sensitivity tests of fishing pressure reduction was made for fishing mortality on cod as a major benthivorous and piscivorous predator fish and on sprat as a major planktivorous prey fish in the Baltic, which are both important target species in the Baltic international commercial fishery. All scenarios were run for a period of 60 years including a “spin-up period” of 35 years after which equilibrium is reached and at which point the nutrient loads are changed depending on the scenario. Like any simulation from the Atlantis model the results of these scenario runs do not represent an actual 25-year time series forecast of the response to nutrient change, rather, they represent a possible future time slice after the biological system had adjusted to the new forcing conditions and the bio-economic model had optimized its performance. Here we use five-year averages of the terminal projection period. The model adjustment time to new nutrient load and/or fishing pressure conditions is not uniform for all ecosystem components, therefore a complete equilibrium is not guaranteed (however, equilibrium was actually reached in all cases but one). Moreover, the change in forcing in the model occurs instantaneously instead of a more likely gradual shift, as this is how the model is set up for the moment. This adjustment or model spin-up time is longer than the 10-year time scale assumed in previous similar numerical experiments (e.g. [
+   <a rid="pone.0199168.ref021" ref-type="bibr" href="#pone.0199168.ref021">21</a>]) performed on much simpler ecosystems.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">There were four nutrient load scenarios and five fishing mortality scenarios set up and simulated within the Baltic Atlantis model and management evaluation framework. 
+   <a rid="pone.0199168.t002" ref-type="table" href="#pone.0199168.t002">Table 2</a> provides a summary of the different scenarios and the corresponding relative (%) reductions of total nitrogen river load assigned to each Baltic Atlantis polygon per nutrient load scenario and of the corresponding fishing mortalities used for each of the last five scenarios. The changes in fishing mortality were intentionally kept simple for testing purposes rather than trying to replicate complicated management options. The original fishing mortality of adult cod, applied in the Baltic Atlantis model, is 0.32 and the original, SMS-derived fishing mortality for adult sprat is 0.07. Minimum observed fishing mortality was not included in the scenarios as it was considered sufficient to look at the halved mortality rate (i.e. scenario #6 and #7). In the current settings of the Atlantis model, the fishing mortality is a constant mortality factor for the whole Baltic Sea, split into juvenile and adult. There is also no differentiation between different stocks in the current model, so there is only one fishing mortality for the juvenile and one for the adult group of the species for the whole area. In the evaluation of eutrophication scenarios with Atlantis, we keep fishing mortality constant to focus on nutrient load induced pressures and relative changes. In the subsequent FISHRENT evaluations, we accordingly evaluate relative fisheries consequences of the changed biomasses of key exploited fish stocks from the eutrophication scenarios only. We therefore have kept stock biomass and recruitment constant in the fisheries projections in FISHRENT to isolate the relative effects of the eutrophication scenarios.
+  </p>
+  <div id="pone.0199168.t002" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0199168.t002</span>
+   <span class="label">Table 2</span>
+   <div class="caption">
+    <div class="title">Relative (%) reduction of total nitrogen river load applied to certain Baltic Atlantis polygon according to the four nutrient load scenarios (#2–#5) and the changes in fishing mortality for the five fishing mortality scenarios (#6–#10).</div>
+    <p>Scenario 1 is the baseline to compare the results against.</p>
+   </div>
+   <div class="alternatives">
+    <div id="pone.0199168.t002g" xlink:href="pone.0199168.t002" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <table frame="hsides" rules="groups">
+     <colgroup span="1">
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+     </colgroup>
+     <tbody>
+      <tr>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #1</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #2</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #3</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #4</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #5</span>
+       </td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">'Status quo'</td>
+       <td align="left" rowspan="1" colspan="1">Nutrient load reduction</td>
+       <td align="left" rowspan="1" colspan="1">Nutrient load reduction</td>
+       <td align="left" rowspan="1" colspan="1">Nutrient load reduction matching BSAP2
+        <a ref-type="table-fn" rid="t002fn001" href="#t002fn001">*</a>
+       </td>
+       <td align="left" rowspan="1" colspan="1">Nutrient load reduction</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">Area</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">Denmark</td>
+       <td align="left" rowspan="1" colspan="1">Denmark, Sweden &amp; Germany</td>
+       <td align="left" rowspan="1" colspan="1">Selected coastal zones</td>
+       <td align="left" rowspan="1" colspan="1">pan-Baltic</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="5" colspan="1">
+        <span class="bold">Polygon # and amount of decrease for each polygon</span>
+       </td>
+       <td align="left" rowspan="5" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">12 %, 33%, 24%</td>
+       <td align="left" rowspan="1" colspan="1">33% for</td>
+       <td align="left" rowspan="1" colspan="1">9%, 20%, 15%, 32%</td>
+       <td align="left" rowspan="5" colspan="1">33%</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">for polygon 1, 2, 4</td>
+       <td align="left" rowspan="1" colspan="1">polygon 1, 2, 3, 4</td>
+       <td align="left" rowspan="1" colspan="1">for polygon 1, 2, 3, 4,</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">21.4%, 23% for #5 &amp; #9,</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">19% for #12 &amp; #13,</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">35%, 33% for #14 &amp; #17</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #6</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #7</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #8</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #9</span>
+       </td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="bold">Scenario #10</span>
+       </td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1"/>
+       <td align="left" rowspan="1" colspan="1">50% reduction of fishing pressure on cod</td>
+       <td align="left" rowspan="1" colspan="1">50% reduction of fishing pressure on sprat</td>
+       <td align="left" rowspan="1" colspan="1">50% increase of fishing pressure on cod</td>
+       <td align="left" rowspan="1" colspan="1">50% increase of fishing pressure on sprat</td>
+       <td align="left" rowspan="1" colspan="1">The maximum 2005–2012 observed fishing pressure on cod and sprat</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="bold">Area</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">pan-Baltic</td>
+       <td align="left" rowspan="1" colspan="1">pan-Baltic</td>
+       <td align="left" rowspan="1" colspan="1">pan-Baltic</td>
+       <td align="left" rowspan="1" colspan="1">pan-Baltic</td>
+       <td align="left" rowspan="1" colspan="1">pan-Baltic</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="2" colspan="1">
+        <span class="bold">Fishing mortality for adult fish
+         <a ref-type="table-fn" rid="t002fn002" href="#t002fn002">**</a>
+        </span>
+       </td>
+       <td align="left" rowspan="2" colspan="1">0.16</td>
+       <td align="left" rowspan="2" colspan="1">0.035</td>
+       <td align="left" rowspan="2" colspan="1">0.64</td>
+       <td align="left" rowspan="2" colspan="1">0.14</td>
+       <td align="left" rowspan="1" colspan="1">1.2 for cod,</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">0.6 for sprat</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+   <div class="table-wrap-foot">
+    <fn id="t002fn001" class="fn" xmlns="">
+     <p xmlns="http://www.w3.org/1999/xhtml">* This is a regional approach, agreed by the Baltic Sea countries, to share the burden of nutrient reductions and achieve the goal of a Baltic Sea, unaffected by eutrophication [
+      <a rid="pone.0199168.ref060" ref-type="bibr" href="#pone.0199168.ref060">60</a>, 
+      <span ext-link-type="uri" xlink:href="http://www.helcom.fi/baltic-sea-action-plan/nutrient-reduction-scheme/targets/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.helcom.fi/baltic-sea-action-plan/nutrient-reduction-scheme/targets/</span>].
+     </p>
+    </fn>
+    <fn id="t002fn002" class="fn" xmlns="">
+     <p xmlns="http://www.w3.org/1999/xhtml">** New juvenile fishing mortality was assumed half of the new adult mortality.</p>
+    </fn>
+    <fn id="t002fn003" class="fn" xmlns="">
+     <p xmlns="http://www.w3.org/1999/xhtml">Note: the corresponding polygons and their numbers can be found in 
+      <a ref-type="fig" rid="pone.0199168.g002" href="#pone.0199168.g002">Fig 2</a>.
+     </p>
+    </fn>
+   </div>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Analysis of these scenarios, and of the quality of the initial calibration, was based on a small set of criteria. First, the overall balance of all biological functional groups was evaluated after running the model for a 60 year projection period, to see whether equilibrium was reached. There is no guarantee that the model reaches irreversible global equilibria, it can be quasi-equilibria. However, the equilibria did generally not change when using 120 years projections compared to 60 years (Figure B in 
+   <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>). Next, the levels of the final biomasses were compared with the initial input biomasses, especially for those groups where external abundance estimates were available. Furthermore, we compared the diets versus data to check whether the realized model diets were realistic. Due to the emergent property of the diet in the Atlantis model, we can still use the calibration data to check the output against. Besides the dynamics of the total relative prey composition over the full simulation period, the diets of juvenile and adult predators were also checked separately, averaged over a timespan of the last five years of the projection period. Next, we also explored the population demography according to age frequencies, i.e. distribution of the number of individuals over the age groups. Additionally, the spatial distribution of the biomasses as well as the oxygen level in certain areas and vertical layers were checked against what is known from literature or field surveys. We finally investigate the results of the scenarios by comparing their biomass levels with those in the baseline run, in order to evaluate the sensitivity and realism of the model response to the change in drivers and pressures. These biomass oriented evaluations are augmented for the age structured groups—mammals, seabirds and fish functional groups—where a more detailed demographic evaluation of the model projections is possible.
+  </p>
+ </sec>
+ <sec id="sec015" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Economic analysis of the Atlantis output in Kattegat-Western Baltic</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The FISHRENT model [
+   <a rid="pone.0199168.ref060" ref-type="bibr" href="#pone.0199168.ref060">60</a>] was used to analyze the final year output of the Atlantis model. FISHRENT is a multi-stock multi-fleet bio-economic model which was developed from best practice knowledge on fisheries gained from similar models used in Europe over the past decade (e.g. [
+   <a rid="pone.0199168.ref078" ref-type="bibr" href="#pone.0199168.ref078">78</a>–
+   <a rid="pone.0199168.ref079" ref-type="bibr" href="#pone.0199168.ref079">79</a>]). FISHRENT enables consideration of a diverse array of policy aims, including Maximum Sustainable Yield (MSY) and Maximum Economic Yield (MEY) goals. The main outputs from FISHRENT describe the likely trajectories and status of the modelled fisheries and fleets over a predetermined time-period given the status of the main fish stocks exploited per area and the policy aims considered. The model contains five modules: biological, economic, market, behavior, and policy (Figure C in 
+   <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>). A key characteristic of FISHRENT is that the necessary fleet and economic data have been structured in the same way as the data collected on a national basis as part of the EU Data Collection Framework (EU DCF). This enables consistent analysis to be conducted across nations ensuring that best available national data is used. More detailed information about the FISHRENT model and its implementation in the Kattegat and the Western Baltic Sea can be found in section C, Tables J-R in 
+   <a ref-type="supplementary-material" rid="pone.0199168.s001" href="#pone.0199168.s001">S1 File</a>. The economic consequences of the nutrient load scenarios two to four are evaluated by the FISHRENT model.
+  </p>
+ </sec>
+</sec>

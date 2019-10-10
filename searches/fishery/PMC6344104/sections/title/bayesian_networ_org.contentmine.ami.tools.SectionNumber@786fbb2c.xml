@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec004" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Bayesian networks</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">A BN describes the joint distribution (which is a way of assigning probabilities to every possible outcome over a set of variables, 
+  <span class="italic">X</span>1 …
+  <span class="italic">XN</span>) by exploiting conditional independence relationships [
+  <a rid="pone.0209257.ref035" ref-type="bibr" href="#pone.0209257.ref035">35</a>]. These relationships are represented by a directed acyclic graph (DAG). The conditional probability distribution associated with each variable 
+  <span class="italic">X</span> encodes the probability of observing its values given the values of its parents, and can be described by a continuous or a discrete distribution. The DAG consists of nodes (or variables) and edges (or links) between the nodes. “Parent” nodes are those from which arrows originate and “child” nodes are those to which arrows are pointing. Edges between nodes represent dependence relationships. Here, the observed variable nodes in the network are Gaussian nodes, so we assume continuous distribution with mean 
+  <span class="italic">mu</span> and covariance 
+  <span class="italic">Sigma</span> [
+  <a rid="pone.0209257.ref036" ref-type="bibr" href="#pone.0209257.ref036">36</a>]. Suppose the continuous-valued node is 
+  <span class="italic">Y</span>, its continuous parents (if any) are 
+  <span class="italic">X</span>, and its discrete () parents (if any) are 
+  <span class="italic">Q</span>. The distribution on 
+  <span class="italic">Y</span> is defined as follows: 
+  <div id="pone.0209257.e001" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0209257.e001.jpg" id="pone.0209257.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M1" class="math">
+     <div class="mrow">
+      <span class="mi">Y</span>
+      <span class="mo">|</span>
+      <span class="mi">X</span>
+      <span class="mo">=</span>
+      <span class="mi">x</span>
+      <span class="mo">,</span>
+      <span class="mi">Q</span>
+      <span class="mo">=</span>
+      <span class="mi">i</span>
+      <span class="mo">∼</span>
+      <span class="mi">N</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mi">m</span>
+      <span class="mi">u</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mo">:</span>
+      <span class="mo">,</span>
+      <span class="mi">i</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">+</span>
+      <span class="mi">W</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mo">:</span>
+      <span class="mo">,</span>
+      <span class="mo">:</span>
+      <span class="mo">,</span>
+      <span class="mi">i</span>
+      <span stretchy="false" class="mo">)</span>
+      <span mathvariant="normal" class="mi">*</span>
+      <span class="mi">x</span>
+      <span class="mo">,</span>
+      <span class="mi">S</span>
+      <span class="mi">i</span>
+      <span class="mi">g</span>
+      <span class="mi">m</span>
+      <span class="mi">a</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mo">:</span>
+      <span class="mo">,</span>
+      <span class="mo">:</span>
+      <span class="mo">,</span>
+      <span class="mi">i</span>
+      <span stretchy="false" class="mo">)</span>
+      <span stretchy="false" class="mo">)</span>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div> where N(mu, Sigma) denotes a Normal distribution with mean 
+  <span class="italic">mu</span> and covariance 
+  <span class="italic">Sigma</span> and W is a |Y |*|X|*|Q| regression (weight) matrix [
+  <a rid="pone.0209257.ref036" ref-type="bibr" href="#pone.0209257.ref036">36</a>]. Let |X|, |Y| and |Q| denote the sizes (X and Y are scalars, Q is binary) of X, Y and Q respectively. If there are no discrete parents, |Q| = 1; if there is more than one, then |Q| = a vector of the sizes of each discrete parent. If there are no continuous parents, |X| = 0; if there is more than one, then |X| = the sum of their sizes. Then 
+  <span class="italic">mu</span> is a |Y|*|Q| vector, 
+  <span class="italic">Sigma</span> is a |Y|*|Y|*|Q| positive semi-definite matrix, and W is a |Y|*|X|*|Q| regression (weight) matrix. For more information, please refer to [
+  <a rid="pone.0209257.ref036" ref-type="bibr" href="#pone.0209257.ref036">36</a>]. Each node in the DAG is characterized by a state which can change depending on the state of other nodes and information about those states propagated through the DAG. By using this kind of inference, one can change the state or introduce new data or evidence (change a state or confront the DAG with new data) into the network, apply inference and inspect the posterior distribution (which represents the distributions of the variables given in the observed evidence). Given a graphical structure, BNs naturally perform prediction using inference. Modeling time series is achieved by using an extension of the BN known as the Dynamic Bayesian Network (DBN), where nodes represent variables at particular time slices [
+  <a rid="pone.0209257.ref037" ref-type="bibr" href="#pone.0209257.ref037">37</a>]. DBNs are graphical models of stochastic processes that allow for complex interdependencies between the acting variables [
+  <a rid="pone.0209257.ref037" ref-type="bibr" href="#pone.0209257.ref037">37</a>]. In this study, DBNs allow us to integrate heterogeneous data, specify conditional relationships between those data and make robust predictions of the temporal dynamics of the ecosystem components and their interactions with natural and anthropogenic stressors. DBNs can model the dynamics of a dataset through the use of a hidden variable (HV) that is a variable for which there are missing or unobserved data. When using dynamic state-space models, we can assume that there is an underlying hidden state that generates the observed data and that this hidden state evolves in time as a function of our inputs [
+  <a rid="pone.0209257.ref037" ref-type="bibr" href="#pone.0209257.ref037">37</a>]. A dynamic model represents the behavior of a system over time; however, many systems, including ecosystems, contain non-stationary dynamics. Hidden variables allow us to model these non-stationary system dynamics [
+  <a rid="pone.0209257.ref038" ref-type="bibr" href="#pone.0209257.ref038">38</a>–
+  <a rid="pone.0209257.ref040" ref-type="bibr" href="#pone.0209257.ref040">40</a>]. They are used to represent a change in the interactions of the observed ecosystem components over time. When the model is parameterized with data as in this case, the value of the hidden variable is set to maximize the fit of the model to the data (e.g. the log- likelihood). If the patterns of the observed ecosystem components change in the time series, e.g. the slope of a correlation between two components changes, the value of the hidden variables linked to these components changes. A hidden variable can be linked to one, multiple, or all, of the observed ecosystem components in the model. Then, the hidden variable value depends on all of the observed ecosystem components it is linked to, and a change in the pattern of the hidden variable indicates a change in the system interactions. This is highly useful in ecological analyses where non- stationary dynamics are common and complex ecological interactions change with time due to changing pressures e.g. global climate change [
+  <a rid="pone.0209257.ref014" ref-type="bibr" href="#pone.0209257.ref014">14</a>]; [
+  <a rid="pone.0209257.ref041" ref-type="bibr" href="#pone.0209257.ref041">41</a>].
+ </p>
+</sec>

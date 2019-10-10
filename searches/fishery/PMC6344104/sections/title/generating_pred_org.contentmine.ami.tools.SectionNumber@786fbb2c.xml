@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec007" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Generating predictions and modeling hidden variables</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Given a graphical structure, BNs naturally perform prediction using inference. The network structure varied with the model frameworks but the method of predicting the variables was universal. Given the probability distribution over 
+  <span class="bold">X</span>[
+  <span class="italic">t</span>] where 
+  <span class="bold">X</span> = X1 …X
+  <span class="italic">n</span> are the 
+  <span class="italic">n</span> variables observed along time 
+  <span class="italic">t</span>, to predict the future state of each variable, we inferred the state at time 
+  <span class="italic">t</span> by using the observed evidence (or available data) from 
+  <span class="italic">t-1</span>. Non-parametric bootstrap (re-sampling with replacement from the training set) was applied 250 times for each modeling approach to obtain statistical validation in the predictions and estimates of the standard deviation [
+  <a rid="pone.0209257.ref035" ref-type="bibr" href="#pone.0209257.ref035">35</a>]. Rather than repeatedly obtaining independent data sets from the population, we instead obtain distinct data sets by repeatedly sampling observations from the original data set with replacement. The bootstrapping technique allows obtaining an unknown characteristic of an unspecified distribution by drawing subsets from the observed data iteratively and computing a statistic (standard errors and confidence intervals) for each subset [
+  <a rid="pone.0209257.ref035" ref-type="bibr" href="#pone.0209257.ref035">35</a>]. Bootstrapping lets us obtain approximate distribution of our values and hence to asses bias of our estimate [
+  <a rid="pone.0209257.ref035" ref-type="bibr" href="#pone.0209257.ref035">35</a>]. The data were divided to give the same number of samples for training and a varying number of test pairs. To get the training indices, sampling with replacement (i.e. non- parametric bootstrap) was performed and to get the test indices, those values that are not sampled were used for validation. The process of bootstrapping was performed as follows. First, divide the data to perform training (learning the Bayesian network and applying Expectation Maximization (EM) algorithm [
+  <a rid="pone.0209257.ref042" ref-type="bibr" href="#pone.0209257.ref042">42</a>] for model parameterization), followed by the testing part (model validation). Then, repeat the process for 250 times to be able to identify statistical validation (calculate prediction accuracy) in the model predictions. Model performance, in terms of sum of squared error (SSE), was assessed for each model: 
+  <div id="pone.0209257.e002" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0209257.e002.jpg" id="pone.0209257.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M2" class="math">
+     <div class="mrow">
+      <div displaystyle="false" class="mstyle">
+       <span class="mo">∑</span>
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <span stretchy="false" class="mo">(</span>
+          <span class="mi">p</span>
+          <span class="mi">r</span>
+          <span class="mi">e</span>
+          <span class="mi">d</span>
+          <span class="mi">i</span>
+          <span class="mi">c</span>
+          <span class="mi">t</span>
+          <span class="mi">e</span>
+          <span class="mi">d</span>
+          <span class="mo">−</span>
+          <span class="mi">a</span>
+          <span class="mi">c</span>
+          <span class="mi">t</span>
+          <span class="mi">u</span>
+          <span class="mi">a</span>
+          <span class="mi">l</span>
+          <span stretchy="false" class="mo">)</span>
+         </div>
+         <span class="mn">2</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(2)</span>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Predictions from the three model variants (ARHMM, ARDBN and DDDBN) were calculated through 2015 and were compared on a year-to-year basis to the measured data. We model the hidden variables based on the values of the observed ecosystem components. We want to compute 
+  <span class="italic">P</span>(
+  <span class="italic">H</span>
+  <span class="sup">
+   <span class="italic">t</span>
+  </span>
+  <span class="italic">|X</span>
+  <span class="sup">
+   <span class="italic">t</span>
+  </span>, 
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">t−</span>1
+  </span>), where 
+  <span class="italic">H</span>
+  <span class="sup">
+   <span class="italic">t</span>
+  </span> represents the hidden variable and 
+  <span class="italic">X</span>
+  <span class="sup">
+   <span class="italic">t</span>
+  </span>
+  <span class="italic">represents</span> all observed ecosystem components at times 
+  <span class="italic">t</span>. We use the predicted variable states from time 
+  <span class="italic">t</span> to infer the hidden state at time 
+  <span class="italic">t</span>. The hidden variables were parameterized using the EM algorithm in a maximum likelihood sense [
+  <a rid="pone.0209257.ref042" ref-type="bibr" href="#pone.0209257.ref042">42</a>]. In this case, the log-likelihood is: 
+  <div id="pone.0209257.e003" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0209257.e003.jpg" id="pone.0209257.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M3" class="math">
+     <div class="mrow">
+      <span class="mi">L</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mi">θ</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">log</span>
+      <span class="mi">P</span>
+      <span stretchy="false" class="mo">(</span>
+      <span class="mi">X</span>
+      <span stretchy="false" class="mo">|</span>
+      <span class="mi">θ</span>
+      <span stretchy="false" class="mo">)</span>
+      <span class="mo">=</span>
+      <span mathvariant="normal" class="mi">log</span>
+      <div displaystyle="true" class="mstyle">
+       <div class="munder">
+        <span class="mo">∑</span>
+        <span class="mi">j</span>
+       </div>
+       <div class="mrow">
+        <span class="mi">P</span>
+        <span stretchy="false" class="mo">(</span>
+        <span class="mi">X</span>
+        <span class="mo">,</span>
+        <span class="mi">H</span>
+        <span class="mo">|</span>
+        <span class="mi">θ</span>
+        <span stretchy="false" class="mo">)</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(3)</span>
+  </div> where ∑
+  <sub>
+   <span class="italic">H</span>
+  </sub> is the sum over the set of hidden variables 
+  <span class="italic">H</span>, required to obtain the marginal probability of the data [
+  <a rid="pone.0209257.ref043" ref-type="bibr" href="#pone.0209257.ref043">43</a>]. Here, the EM algorithm is applied which alternates iteratively between two steps. In the first step of the EM, the hidden variable is inferred using the predicted ecosystem components, whilst in the second step the estimated likelihood function is maximized. When the algorithm converges to a local maximum, the parameters (
+  <span class="italic">θ</span>) are estimated.
+ </p>
+</sec>

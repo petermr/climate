@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec11" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">The analysis</div>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">The ridge regression conducted for this study included 6 core continuous feature variables (i.e. fuel cost (“realfuel”), climate (“SOI” and “NAO”), spatial effects (“SW”), fresh and frozen price of the core tuna species (“realfresp” and “realfrozp”)). Categorical variables (i.e. stock, species, and gear (stock/region specific – i.e. No ‘TRAP’ gears for any other region apart from East Atlantic bluefin)) are encoded as dummy variables 1 or 0. There were 1107 rows and 35 columns in the dataset including the response variable. These data were split into a separate datasets of regressor and response matrices and each randomly further split into training (2/3) and test sets (1/3). A ridge regression model was fit to the training set in order to determine a value of the tuning parameter 
+  <div id="IEq19" class="inline-formula">
+   <div class="alternatives">
+    <span id="M45" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\lambda $$\end{document}</span>
+    <div id="M46" class="math">
+     <div class="mrow">
+      <span class="mi">λ</span>
+     </div>
+    </div>
+    <span xlink:href="41598_2018_28805_Article_IEq19.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>.
+ </p>
+ <p id="Par29" xmlns="http://www.w3.org/1999/xhtml">The marginal effects were calculated on the continuous predictor variables in order to understand their effects on F/F
+  <sub>MSY</sub> i.e. a 25% change in 
+  <span class="italic">X</span> gives a % change in 
+  <span class="italic">Y</span>. while all other variables were held constant. Twenty five per cent seemed to represent a reasonable number given the year on year changes on the variables as presented in Fig. 
+  <a rid="Fig5" ref-type="fig" href="#Fig5">5</a>.
+  <div id="Fig5" class="fig">
+   <span class="label">Figure 5</span>
+   <div class="caption">
+    <p>Year-on-year % changes for the main feature variables.</p>
+   </div>
+   <div xlink:href="41598_2018_28805_Fig5_HTML" id="d29e2743" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par30" xmlns="http://www.w3.org/1999/xhtml">The glmnet packages were used to perform the ridge regression analysis in R
+  <span class="sup">
+   <a ref-type="bibr" rid="CR56" href="#CR56">56</a>
+  </span>.
+ </p>
+</sec>

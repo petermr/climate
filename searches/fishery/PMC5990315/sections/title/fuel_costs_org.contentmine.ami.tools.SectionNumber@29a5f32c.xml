@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Fuel costs</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">For each vessel (
+  <span class="italic">i</span>) and AIS/VMS position (
+  <span class="italic">j</span>), we calculated fuel cost (FC) for the main and auxiliary engines by multiplying the time in each position (
+  <span class="italic">T</span>) by an estimated fuel consumption (
+  <span class="italic">C</span>) and the global average quarterly price of fuel (
+  <span class="italic">p</span>).
+  <div class="disp-formula">
+   <div id="m1" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mtext">FC</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span class="mo">,</span>
+        <span mathvariant="italic" class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">T</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span class="mo">,</span>
+        <span mathvariant="italic" class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">C</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span class="mo">,</span>
+        <span mathvariant="italic" class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">×</span>
+      <span mathvariant="italic" class="mi">p</span>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The time associated to each position (
+  <span class="italic">T</span>) was estimated as the average between time to next position and time from last position.
+  <div class="disp-formula">
+   <div id="m2" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span mathvariant="italic" class="mi">T</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span class="mo">,</span>
+        <span mathvariant="italic" class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msub">
+         <span mathvariant="italic" class="mi">t</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">j</span>
+          <span class="mo">+</span>
+          <span class="mn">1</span>
+         </div>
+        </div>
+        <span class="mo">−</span>
+        <div class="msub">
+         <span mathvariant="italic" class="mi">t</span>
+         <div class="mrow">
+          <span mathvariant="italic" class="mi">j</span>
+          <span class="mo">−</span>
+          <span class="mn">1</span>
+         </div>
+        </div>
+       </div>
+       <span class="mn">2</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Fuel consumption (
+  <span class="italic">C</span>) was estimated on the basis of the methodology used by the European Environmental Agency (EEA) to estimate emissions from the shipping industry (
+  <a rid="R34" ref-type="bibr" href="#R34">
+   <span class="italic">34</span>
+  </a>). The general formula to estimate fuel consumption for the main and auxiliary engine is
+  <div class="disp-formula">
+   <div id="m3" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span mathvariant="italic" class="mi">C</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span class="mo">,</span>
+        <span mathvariant="italic" class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">P</span>
+       <span mathvariant="italic" class="mi">i</span>
+      </div>
+      <span class="mo">×</span>
+      <div class="msub">
+       <span class="mtext">SFC</span>
+       <span mathvariant="italic" class="mi">i</span>
+      </div>
+      <span class="mo">×</span>
+      <div class="msub">
+       <span class="mtext">LF</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span class="mo">,</span>
+        <span mathvariant="italic" class="mi">j</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>where 
+  <span class="italic">P</span> is engine power (in kilowatts), SFC is the specific fuel consumption (in grams per kilowatt-hour), and LF (in percentage) is known as the load factor, which represents the engine loading relative to its maximum continuous rate.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Main engine power was obtained from official vessel registries and inferred from the neural net. Data on the auxiliary engine power of 1156 European Union (EU) fishing vessels were used to train conditional inference random forests and fill in gaps for the remainder of the high-seas fleet.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The SFC parameter measures the efficiency of an engine and varies with engine type (for example, medium speed versus high speed), type of fuel [for example, marine diesel oil (MDO) versus bunker oil], engine age, vessel size, and type of activity (for example, maneuvering and cruising) (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>). It has been estimated that 96% of the world’s fishing fleet installed engine power uses MDO and 84% uses medium-speed diesel engines (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>). For this type of engine and fuel, SFC factors range from 203 to 280 g/kWh (
+  <a rid="R36" ref-type="bibr" href="#R36">
+   <span class="italic">36</span>
+  </a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Given this information, we estimated upper and lower bound estimates of fuel costs using (i) country-specific estimates of SFC when available and the size-specific SFC for remaining countries (high bound) and (ii) only the size-specific SFC (low bound). In both cases, we used a constant SFC of 217 for auxiliary engines and used the difference in SFC between cruising and maneuvering (9% higher SFC when maneuvering) as a proxy of SFC when fishing versus transiting (
+  <a rid="R35" ref-type="bibr" href="#R35">
+   <span class="italic">35</span>
+  </a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The load factor (LF) is calculated from the cubed ratio of a vessel’s instantaneous speed (
+  <span class="italic">v</span>) and its design speed (
+  <span class="italic">d</span>). This is bounded between a minimum load (20%) when engines are idling to a maximum load assumed when vessels operate at design speed (90%) (
+  <a rid="R37" ref-type="bibr" href="#R37">
+   <span class="italic">37</span>
+  </a>). For trawlers, we need to account for high LFs at relatively low speeds when vessels are towing gear in the water, so we used a LF of 0.75 to all trawlers during fishing activities as suggested by Coello 
+  <span class="italic">et al</span>. (
+  <a rid="R37" ref-type="bibr" href="#R37">
+   <span class="italic">37</span>
+  </a>).
+  <div class="disp-formula">
+   <div id="m4" class="math">
+    <div class="mrow">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mtext">LF</span>
+       <div class="mrow">
+        <span mathvariant="italic" class="mi">i</span>
+        <span class="mo">,</span>
+        <span mathvariant="italic" class="mi">j</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="msub">
+       <span mathvariant="italic" class="mi">L</span>
+       <span class="mtext">max</span>
+      </div>
+      <span class="mo">×</span>
+      <div class="mfrac">
+       <div class="mrow">
+        <div class="msup">
+         <div class="mrow">
+          <div class="mfrac">
+           <div class="mrow">
+            <div class="msub">
+             <span mathvariant="italic" class="mi">v</span>
+             <div class="mrow">
+              <span mathvariant="italic" class="mi">i</span>
+              <span class="mo">,</span>
+              <span mathvariant="italic" class="mi">j</span>
+             </div>
+            </div>
+           </div>
+           <div class="mrow">
+            <div class="msub">
+             <span mathvariant="italic" class="mi">d</span>
+             <span mathvariant="italic" class="mi">i</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mn">3</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msub">
+           <span mathvariant="italic" class="mi">L</span>
+           <span class="mtext">min</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <span mathvariant="italic" class="mi">L</span>
+           <span class="mtext">max</span>
+          </div>
+          <span class="mo">−</span>
+          <div class="msub">
+           <span mathvariant="italic" class="mi">L</span>
+           <span class="mtext">min</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mrow">
+        <span class="mn">1</span>
+        <span class="mo">+</span>
+        <div class="mfrac">
+         <div class="mrow">
+          <div class="msub">
+           <span mathvariant="italic" class="mi">L</span>
+           <span class="mtext">min</span>
+          </div>
+         </div>
+         <div class="mrow">
+          <div class="msub">
+           <span mathvariant="italic" class="mi">L</span>
+           <span class="mtext">max</span>
+          </div>
+          <span class="mo">−</span>
+          <div class="msub">
+           <span mathvariant="italic" class="mi">L</span>
+           <span class="mtext">min</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Instantaneous vessel speed (
+  <span class="italic">v</span>) was obtained from AIS/VMS messages and also inferred using time and distance from AIS/VMS data. The design speed of each vessel was estimated using a linear regression of engine power versus design speed using vessel characteristics of 23,000 fishing vessels from the IHS Fairplay database (N. Olmer, International Council on Clean Transportation, personal correspondence, April 2017; see eq. S1). For auxiliary engines, we used the average LF reported by the EEA for cruising (0.3) and maneuvering (0.5) (
+  <a rid="R34" ref-type="bibr" href="#R34">
+   <span class="italic">34</span>
+  </a>). Last, annual averages of global fuel prices were calculated with daily data of the price of MDO ($/metric ton) obtained from the Bunker Index for 2010–2016 (
+  <span ext-link-type="uri" xlink:href="http://www.bunkerindex.com/prices/bixfree.php?priceindex_id=5" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.bunkerindex.com/prices/bixfree.php?priceindex_id=5</span>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To account for gaps in AIS transmission, we applied the average fuel consumption per hour of each vessel to the total time it spends in the gaps. The costs associated with gaps represented ~16% of total fuel cost. This same methodology was used to estimate the fuel costs of reefers and bunkers that support the high-seas fishing fleet (table S6).</p>
+</sec>

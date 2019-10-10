@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec005" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecological module</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">BOATS resolves an arbitrary number of size spectra that are defined by their asymptotic sizes and, together, are defined as the sum of all consumers (including both finfish and invertebrates) that were commercially harvested before the year 2006. Here we discretize the commercial species among three spectra, which we refer to as small, medium, and large groups, referring to their asymptotic size.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The evolution of biomass in each group spectrum is represented using the McKendrick-von Foerster model [
+  <a rid="pone.0169763.ref030" ref-type="bibr" href="#pone.0169763.ref030">30</a>, 
+  <a rid="pone.0169763.ref031" ref-type="bibr" href="#pone.0169763.ref031">31</a>], 
+  <div id="pone.0169763.e001" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e001.jpg" id="pone.0169763.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M1" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="mfrac">
+          <span class="mi">∂</span>
+          <div class="mrow">
+           <span class="mi">∂</span>
+           <span class="mi">t</span>
+          </div>
+         </div>
+         <div class="msub">
+          <span class="mi">f</span>
+          <span class="mi">k</span>
+         </div>
+        </div>
+       </div>
+       <div class="mtd">
+        <div class="mrow">
+         <span class="mo">=</span>
+         <span class="mo">-</span>
+         <div class="mfrac">
+          <span class="mi">∂</span>
+          <div class="mrow">
+           <span class="mi">∂</span>
+           <span class="mi">m</span>
+          </div>
+         </div>
+         <div class="msub">
+          <span class="mi">γ</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">f</span>
+          <span class="mi">k</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="mfrac">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">γ</span>
+            <span class="mi">k</span>
+           </div>
+           <div class="msub">
+            <span class="mi">f</span>
+            <span class="mi">k</span>
+           </div>
+          </div>
+          <span class="mi">m</span>
+         </div>
+         <span class="mo">-</span>
+         <div class="msub">
+          <span class="mo">Λ</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="msub">
+          <span class="mi">f</span>
+          <span class="mi">k</span>
+         </div>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div> where 
+  <span class="italic">m</span> is the individual fish mass, 
+  <span class="italic">t</span> is time, 
+  <span class="italic">f</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> (gwB m
+  <span class="sup">−2</span> g
+  <span class="sup">−1</span>, where gwB are grams of wet biomass) is the biomass spectrum of group 
+  <span class="italic">k</span>, 
+  <span class="italic">γ</span>
+  <sub>
+   <span class="italic">k</span>
+  </sub> (g s
+  <span class="sup">−1</span>) the group growth rate, and Λ
+  <sub>
+   <span class="italic">k</span>
+  </sub> (s
+  <span class="sup">−1</span>) the group natural mortality rate.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Fish biomass growth rates are limited by a production spectrum that estimates the energy (here assumed to be equivalent to biomass) that can be provided to any given size through trophic transfer from primary production 
+  <span class="italic">ξ</span>
+  <sub>
+   <span class="italic">P</span>,
+   <span class="italic">k</span>
+  </sub> (g s
+  <span class="sup">−1</span>) [
+  <a rid="pone.0169763.ref018" ref-type="bibr" href="#pone.0169763.ref018">18</a>, 
+  <a rid="pone.0169763.ref025" ref-type="bibr" href="#pone.0169763.ref025">25</a>, 
+  <a rid="pone.0169763.ref032" ref-type="bibr" href="#pone.0169763.ref032">32</a>], and are also limited by allometric estimates of the rates at which individual fish can grow 
+  <span class="italic">ξ</span>
+  <sub>
+   <span class="italic">VB</span>,
+   <span class="italic">k</span>
+  </sub> (g s
+  <span class="sup">−1</span>) [
+  <a rid="pone.0169763.ref028" ref-type="bibr" href="#pone.0169763.ref028">28</a>, 
+  <a rid="pone.0169763.ref033" ref-type="bibr" href="#pone.0169763.ref033">33</a>, 
+  <a rid="pone.0169763.ref034" ref-type="bibr" href="#pone.0169763.ref034">34</a>]. Underlying the simulated biomass spectra are the calculated flows of biomass energy from photosynthesis to fish via the trophic transfer, which we express as 
+  <div id="pone.0169763.e002" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e002.jpg" id="pone.0169763.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M2" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">ξ</span>
+          <div class="mrow">
+           <span class="mi">P</span>
+           <span class="mo">,</span>
+           <span class="mi">k</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <div class="mfrac">
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">ϕ</span>
+            <div class="mrow">
+             <span class="mi">C</span>
+             <span class="mo">,</span>
+             <span class="mi">k</span>
+            </div>
+           </div>
+           <span class="mi">π</span>
+           <span class="mi">m</span>
+          </div>
+          <div class="msub">
+           <span class="mi">f</span>
+           <span class="mi">k</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(2)</span>
+  </div> where 
+  <span class="italic">π</span> (gwB m
+  <span class="sup">−2</span> g
+  <span class="sup">−1</span> s
+  <span class="sup">−1</span>) is the spectrum of energy from primary production available to each individual of size 
+  <span class="italic">m</span> that depends on the trophic scaling 
+  <span class="italic">τ</span> as the exponent of a power law dependence, and 
+  <span class="italic">ϕ</span>
+  <sub>
+   <span class="italic">C</span>,
+   <span class="italic">k</span>
+  </sub> is the fraction of primary production allocated to a commercial group 
+  <span class="italic">k</span> [
+  <a rid="pone.0169763.ref018" ref-type="bibr" href="#pone.0169763.ref018">18</a>, 
+  <a rid="pone.0169763.ref025" ref-type="bibr" href="#pone.0169763.ref025">25</a>, 
+  <a rid="pone.0169763.ref032" ref-type="bibr" href="#pone.0169763.ref032">32</a>]. Furthermore, we assume that the flow of biomass energy from small to large fish, which occurs as individuals grow according to empirical allometric rules, cannot exceed a maximum physiological rate 
+  <div id="pone.0169763.e003" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e003.jpg" id="pone.0169763.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M3" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">ξ</span>
+          <div class="mrow">
+           <span class="mi">V</span>
+           <span class="mi">B</span>
+           <span class="mo">,</span>
+           <span class="mi">k</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <span class="mi">A</span>
+         <div class="msup">
+          <span class="mi">m</span>
+          <span class="mi">b</span>
+         </div>
+         <span class="mo">-</span>
+         <div class="msub">
+          <span class="mi">k</span>
+          <span class="mi">a</span>
+         </div>
+         <span class="mi">m</span>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(3)</span>
+  </div> where 
+  <span class="italic">b</span> (unitless) is the allometric scaling constant, 
+  <span class="italic">A</span> (g s
+  <span class="sup">−1</span>) is the allometric growth rate, and 
+  <span class="italic">k</span>
+  <sub>
+   <span class="italic">a</span>
+  </sub> (s
+  <span class="sup">−1</span>) is the mass specific investment in activity [
+  <a rid="pone.0169763.ref028" ref-type="bibr" href="#pone.0169763.ref028">28</a>, 
+  <a rid="pone.0169763.ref033" ref-type="bibr" href="#pone.0169763.ref033">33</a>, 
+  <a rid="pone.0169763.ref034" ref-type="bibr" href="#pone.0169763.ref034">34</a>]. The allometric growth rate 
+  <span class="italic">A</span> is the product of a temperature-independent rate 
+  <span class="italic">A</span>
+  <sub>0</sub> (g
+  <span class="sup">1−b</span> s
+  <span class="sup">−1</span>) and a van’t Hoff–Arrhenius (exponential) temperature dependence 
+  <span class="italic">a</span>
+  <sub>
+   <span class="italic">A</span>
+  </sub>(
+  <span class="italic">T</span>) which is set by the growth activation energy of metabolism 
+  <span class="italic">ω</span>
+  <sub>
+   <span class="italic">a</span>,
+   <span class="italic">A</span>
+  </sub> (eV) parameter [
+  <a rid="pone.0169763.ref025" ref-type="bibr" href="#pone.0169763.ref025">25</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The realized input energy to growth and reproduction in each size class, 
+  <span class="italic">ξ</span>
+  <sub>
+   <span class="italic">I</span>
+  </sub> (g s
+  <span class="sup">−1</span>), is the minimum of 
+  <span class="italic">ξ</span>
+  <sub>
+   <span class="italic">P</span>
+  </sub> and 
+  <span class="italic">ξ</span>
+  <sub>
+   <span class="italic">VB</span>
+  </sub>. This implies that, given an excess of food, individual fish will grow as fast as biologically possible, given their temperature-dependent metabolism. If, instead, the production of food at a given location is insufficient to fully feed the existing biomass, this production will be equally partitioned among all individuals and will limit growth rates. When there is no harvest applied, primary production, and thus 
+  <span class="italic">ξ</span>
+  <sub>
+   <span class="italic">P</span>
+  </sub>, generally limits growth over the biomass spectrum.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The natural mortality rate Λ
+  <sub>
+   <span class="italic">k</span>
+  </sub> is based on an empirical relationship that depends on the individual and asymptotic mass, and is first order in fish biomass, according to 
+  <div id="pone.0169763.e004" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e004.jpg" id="pone.0169763.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M4" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mo">Λ</span>
+          <span class="mi">k</span>
+         </div>
+         <span class="mo">=</span>
+         <span class="mi">λ</span>
+         <div class="msup">
+          <span class="mi">m</span>
+          <div class="mrow">
+           <span class="mo">-</span>
+           <span class="mi">h</span>
+          </div>
+         </div>
+         <div class="msubsup">
+          <span class="mi">m</span>
+          <div class="mrow">
+           <span class="mi">∞</span>
+           <span class="mo">,</span>
+           <span class="mi">k</span>
+          </div>
+          <div class="mrow">
+           <span class="mi">h</span>
+           <span class="mo">+</span>
+           <span class="mi">b</span>
+           <span class="mo">-</span>
+           <span class="mn">1</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(4)</span>
+  </div> where 
+  <span class="italic">h</span> is the mortality allometric scaling and 
+  <span class="italic">m</span>
+  <sub>∞,
+   <span class="italic">k</span>
+  </sub> is the asymptotic mass of group 
+  <span class="italic">k</span> [
+  <a rid="pone.0169763.ref026" ref-type="bibr" href="#pone.0169763.ref026">26</a>, 
+  <a rid="pone.0169763.ref027" ref-type="bibr" href="#pone.0169763.ref027">27</a>]. The component of the mortality rate that is independent of mass, 
+  <span class="italic">λ</span>, is proportional to 
+  <div id="pone.0169763.e005" class="inline-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e005.jpg" id="pone.0169763.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M5" class="math">
+     <div class="mrow">
+      <div class="msup">
+       <span class="mi">e</span>
+       <div class="msub">
+        <span class="mi">ζ</span>
+        <span class="mn">1</span>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">A</span>
+       <span class="mn">0</span>
+      </div>
+      <div class="msub">
+       <span class="mi">a</span>
+       <span class="mi">λ</span>
+      </div>
+      <div class="mrow">
+       <span class="mo">(</span>
+       <span class="mi">T</span>
+       <span class="mo">)</span>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>, where 
+  <span class="italic">ζ</span>
+  <sub>1</sub> is the mortality rate parameter and 
+  <span class="italic">a</span>
+  <sub>
+   <span class="italic">λ</span>
+  </sub>(
+  <span class="italic">T</span>) the temperature dependence of mortality, which, as with growth, takes the van’t Hoff–Arrhenius functional form and is set by the mortality activation energy of metabolism parameter 
+  <span class="italic">ω</span>
+  <sub>
+   <span class="italic">a</span>,
+   <span class="italic">λ</span>
+  </sub> (eV).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Recruitment forms the bottom boundary condition to 
+  <a ref-type="disp-formula" rid="pone.0169763.e001" href="#pone.0169763.e001">Eq (1)</a>, and is written as 
+  <div id="pone.0169763.e006" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0169763.e006.jpg" id="pone.0169763.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M6" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">f</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="msub">
+           <span class="mi">m</span>
+           <span class="mn">0</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <div class="msub">
+          <span class="mi">γ</span>
+          <span class="mi">k</span>
+         </div>
+         <div class="mrow">
+          <span class="mo">(</span>
+          <div class="msub">
+           <span class="mi">m</span>
+           <span class="mn">0</span>
+          </div>
+          <span class="mo">)</span>
+         </div>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">R</span>
+          <div class="mrow">
+           <span class="mi">P</span>
+           <span class="mo">,</span>
+           <span class="mi">k</span>
+          </div>
+         </div>
+         <div class="mfrac">
+          <div class="msub">
+           <span class="mi">R</span>
+           <div class="mrow">
+            <span class="mi">e</span>
+            <span class="mo">,</span>
+            <span class="mi">k</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <div class="msub">
+            <span class="mi">R</span>
+            <div class="mrow">
+             <span class="mi">P</span>
+             <span class="mo">,</span>
+             <span class="mi">k</span>
+            </div>
+           </div>
+           <span class="mo">+</span>
+           <div class="msub">
+            <span class="mi">R</span>
+            <div class="mrow">
+             <span class="mi">e</span>
+             <span class="mo">,</span>
+             <span class="mi">k</span>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mo">.</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(5)</span>
+  </div> where 
+  <span class="italic">R</span>
+  <sub>
+   <span class="italic">e</span>,
+   <span class="italic">k</span>
+  </sub> is the potential generation of new recruits from egg production, itself a function of 1. the primary production and the fish biomass that is able to reproduce and 2. the fraction of larvae that survive to the recruit size 
+  <span class="italic">m</span>
+  <sub>0</sub> [
+  <a rid="pone.0169763.ref034" ref-type="bibr" href="#pone.0169763.ref034">34</a>], whereas 
+  <span class="italic">R</span>
+  <sub>
+   <span class="italic">P</span>,
+   <span class="italic">k</span>
+  </sub> is the potential flux of primary production input to juvenile fish.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The model is forced with two-dimensional, global, monthly climatological fields of net primary production and temperature (
+  <a ref-type="supplementary-material" rid="pone.0169763.s001" href="#pone.0169763.s001">S1</a> and 
+  <a ref-type="supplementary-material" rid="pone.0169763.s002" href="#pone.0169763.s002">S2</a> Figs). A schematic of BOATS, illustrating the main modules, components, and processes, is presented in 
+  <a ref-type="fig" rid="pone.0169763.g001" href="#pone.0169763.g001">Fig 1</a>, and the full set of biological model parameters are presented in 
+  <a ref-type="supplementary-material" rid="pone.0169763.s006" href="#pone.0169763.s006">S1 Table</a>.
+ </p>
+</sec>

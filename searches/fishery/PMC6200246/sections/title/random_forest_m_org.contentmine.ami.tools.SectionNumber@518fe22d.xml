@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec010" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Random forest modelling</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Random forest classification [
+  <a rid="pone.0205505.ref078" ref-type="bibr" href="#pone.0205505.ref078">78</a>] was used to predict the probability of occurrence and range distribution of 
+  <span class="italic">V</span>. 
+  <span class="italic">pourtalesi</span> based on the 215 presence and 2867 absence records and 35 predictor variables as described above (
+  <a rid="pone.0205505.t001" ref-type="table" href="#pone.0205505.t001">Table 1</a>). Random forest is a non-parametric machine learning technique where multiple trees are built using random subsets of the response data. Each tree is fit to a bootstrap sample of these data, and the best predictor at each node is that which splits the response data so that maximum homogeneity is reached in the child nodes. Models were fitted using the ‘randomForest’ package [
+  <a rid="pone.0205505.ref079" ref-type="bibr" href="#pone.0205505.ref079">79</a>] in the statistical computing software program R version 3.3.1 [
+  <a rid="pone.0205505.ref080" ref-type="bibr" href="#pone.0205505.ref080">80</a>]. Default values were used for RF parameters, and the default 500 trees were constructed.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Model performance was assessed in R using 10-fold cross validation. In this process the response data are split into 10 folds of equal size, and a model is trained on a combination of 9 folds and validated on the remaining fold. The process is repeated 10 times, giving 10 repetitions for which accuracy measures are derived. Sensitivity (i.e., the proportion of accurately predicted presences) and specificity (the proportion of accurately predicted absences) were derived by summing the predicted outcomes across the 2 x 2 confusion matrices generated for each of the 10 model folds. Low sensitivity represents high omission error (i.e., false negative rate), while low specificity indicates high commission error (i.e., false positive rate). The response dataset for 
+  <span class="italic">V</span>. 
+  <span class="italic">pourtalesi</span> is characterized by a higher number of absences relative to presences (i.e., unbalanced species prevalence, where prevalence is the proportion of presences in relation to the total dataset). Classification accuracy in random forest is prone to bias when the categorical response variable is highly imbalanced [
+  <a rid="pone.0205505.ref081" ref-type="bibr" href="#pone.0205505.ref081">81</a>]. This is due to over-representation of the majority class in the bootstrap sample leading to a higher frequency in which the majority class is drawn, therefore skewing predictions in that favour [
+  <a rid="pone.0205505.ref082" ref-type="bibr" href="#pone.0205505.ref082">82</a>]. Given the highly imbalanced nature of the response dataset, a threshold defining above which a class probability is considered a presence is often used to convert the class probabilities into predicted outcomes that are then summarized in the 2 x 2 confusion matrix. We used prevalence, or the probability of presences in the training dataset, as the threshold defining when a species is considered present [
+  <a rid="pone.0205505.ref083" ref-type="bibr" href="#pone.0205505.ref083">83</a>–
+  <a rid="pone.0205505.ref084" ref-type="bibr" href="#pone.0205505.ref084">84</a>]. The discrimination capacity of the training model was determined by calculating the average Area under the Receiver Operating Characteristic (ROC) Curve, or AUC, across all 10 model folds. The AUC is considered threshold-independent and is calculated from a combination of the true positive rate and false positive rate (1-specificity). AUC equals the probability that the model will rank a randomly-chosen presence instance higher than a randomly-chosen absence instance [
+  <a rid="pone.0205505.ref085" ref-type="bibr" href="#pone.0205505.ref085">85</a>], where values &gt; 0.9 indicate excellent model performance, 0.8–0.9 very good, 0.7–0.8 good, 0.6–0.7 fair, 0.6–0.5 poor, and &lt;0.5 no better than random.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Using R’s ‘predict’ function, a model trained on all of the data (215 presences and 2867 absences) was used to predict the probability of presence of 
+  <span class="italic">V</span>. 
+  <span class="italic">pourtalesi</span> across the entire study area, creating a 1 x 1 km raster grid surface of predicted presence probabilities. Additionally, the probabilistic map was converted into a discrete map showing areas of suitable and unsuitable habitat using the prevalence threshold, where cells with probabilities less than the threshold were considered unsuitable habitat, and those greater considered suitable. The true skill statistic (TSS), which maximizes the sum of sensitivity and specificity and is considered to have all the advantages of the kappa statistic but is independent of prevalence [
+  <a rid="pone.0205505.ref086" ref-type="bibr" href="#pone.0205505.ref086">86</a>], was also considered in this study. It was very similar to the prevalence threshold (0.11 versus 0.07 for prevalence) and resulted in only a slightly reduced area predicted as suitable habitat. For 
+  <span class="italic">V</span>. 
+  <span class="italic">pourtalesi</span>, a long-lived species vulnerable to fishing impacts, our goal was to reduce the omission error (where the model predicts an absence where a presence is located) as much as possible and therefore we applied the prevalence threshold in preference to the TSS.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Ecological context of the model was aided by predictor variable importance and response curves (partial dependence plots). The importance of the predictor variables in the classification model was assessed using the ‘importance’ function of package ‘randomForest’, which calculates the Mean Decrease in Gini index, or Gini impurity for each variable. When the response data are split into two child nodes based on a randomly-chosen variable, the data in the two descendent nodes are more homogeneous than that of the parent node. This difference in homogeneity between parent and child nodes is measured by the Gini index, where the increase in homogeneity equals a decrease in Gini value. The sum of all decreases in Gini index for each variable in each tree is averaged across all trees in the model. The variable with the highest mean decrease in Gini value is considered the most important variable in the model.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Response curves showing the partial dependence on the top six predictor variables were generated using the ‘partialPlot’ function in R. For classification random forest, these partial dependence plots show the marginal effect of a predictor variable on the class probability. The other predictor variables are held constant at their mean observed value. Partial dependence plots are useful in showing general trends in model accuracy’s dependence on the predictors [
+  <a rid="pone.0205505.ref087" ref-type="bibr" href="#pone.0205505.ref087">87</a>]. For classification models, the 
+  <span class="italic">y</span> axis ranges from -∞ to ∞ and quantifies the log-odds of a positive classification for the total range of values in 
+  <span class="italic">x</span>. Log-odds are logarithmic transformations of the probabilities for values in 
+  <span class="italic">x</span> [
+  <a rid="pone.0205505.ref088" ref-type="bibr" href="#pone.0205505.ref088">88</a>]. These values were transformed to the original presence probability scale using: 
+  <span class="italic">p</span> = 
+  <span class="italic">exp</span>(
+  <span class="italic">y</span>)/(1 + 
+  <span class="italic">exp</span>(
+  <span class="italic">y</span>)), where p = the probability of presence, and y is the log-odds of presence, the standard output from the partialPlot function.
+ </p>
+</sec>

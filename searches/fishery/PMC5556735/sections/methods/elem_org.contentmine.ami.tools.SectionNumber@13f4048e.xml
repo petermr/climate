@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="1" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model overview</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">At the foundation of the model is energy production by phytoplankton, which is transferred to multiple fish size-spectra according to an efficiency that depends on gross ecosystem metabolic rates
+   <a ref-type="bibr" rid="b16" href="#b16">16</a>
+   <a ref-type="bibr" rid="b44" href="#b44">44</a>
+   <a ref-type="bibr" rid="b45" href="#b45">45</a>. The fish spectra are defined as representing the entire range of finfish and invertebrates with individual mass greater than 10 g, commercially harvested before 2006. The spectra resolve basic life-history characteristics, including temperature-dependent growth, mortality and density-dependent recruitment. By including all commercial species within the spectra, we implicitly account for species range shifts
+   <a ref-type="bibr" rid="b46" href="#b46">46</a>
+   <a ref-type="bibr" rid="b47" href="#b47">47</a>, evolution
+   <a ref-type="bibr" rid="b48" href="#b48">48</a>, and changes in targeted species, all of which have been significant historically and could play important roles in the future.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">An economic model, coupled directly to the fish spectra at the grid scale, predicts fishing effort as a function of local profit, assuming open access to the available fish, following the classic work of ref. 
+   <a ref-type="bibr" rid="b49" href="#b49">49</a>. Fishing effort in each grid cell changes over time according to the difference between local revenues and costs, at a rate determined by the fleet adjustment timescale. The effectiveness of fishing effort at catching the locally available biomass is determined by a catchability parameter that encapsulates both embodied and disembodied technology. Although fisheries are not strictly open access, and approximately one third of fisheries currently has some form of reasonably effective management
+   <a ref-type="bibr" rid="b19" href="#b19">19</a>, the absence of effective management from most of the world’s fisheries throughout the 20th century makes it a good approximation at the global scale during the historical period
+   <a ref-type="bibr" rid="b21" href="#b21">21</a>
+   <a ref-type="bibr" rid="b22" href="#b22">22</a> as well as an illustrative example to consider the importance of management in future. The approximate global Maximum Sustainable Yield (MSY) is calculated by conducting transient simulations in which catchability is increased slowly, and summing the maximum harvest obtained in each grid cell. A more complete description of the model is given in ‘Model description’ in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Methods</a>.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Parameter selection</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We calibrate the most important 13 model parameters through a Monte Carlo method and comparison with observationally estimated fish catches and stock assessments at the LME scale (‘Parameter optimization’ in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Methods</a>). Because the LMEs span a very broad range of temperature and primary production, this strategy ensures a robust calibration to both these important variables. For the simulations shown here, we use an ensemble of five optimized models that span the uncertain parameter space as widely as possible, while producing a reasonably accurate simulation.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model forcing and simulations</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The model is forced with ocean temperature and net primary production, either from satellite-based observational estimates, or from the Institut Pierre Simon Laplace (IPSL) global climate model
+   <a ref-type="bibr" rid="b50" href="#b50">50</a>, using the historical hindcast followed by the Representative Concentration Pathway (RCP) 8.5 scenario. The factors at play during the historical transient, according to the model framework, include the increase of catchability due to technology
+   <a ref-type="bibr" rid="b24" href="#b24">24</a>
+   <a ref-type="bibr" rid="b26" href="#b26">26</a>, and an observational estimate of the global average ex-vessel fish price
+   <a ref-type="bibr" rid="b51" href="#b51">51</a>, which has varied remarkably little (‘Ex-vessel Price variations’ in the 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Methods</a>). Given that there is no currently available estimate of historical variations in cost per unit effort, we roughly approximate its potential role using its relationship with observed price, effort and harvest under open-access, and making a steady-state assumption (‘Historical global average cost per unit effort’ in 
+   <a ref-type="supplementary-material" rid="S1" href="#S1">Supplementary Methods</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">For the future projections, the OA model is integrated under four idealized scenarios, two of which assume a continuation of the same 5% per year exponential increase in fishing technology, while the other two simulate a gradual decrease in the rate of progress after 2006, reaching stabilized-technology after 2036. Given that technological progress is clearly continuing through advances such as improved fish tracking, the deployment of fish aggregating devices, and the increasing mechanization of fleets in developing nations, the technology-stabilization scenarios are included as baselines from which to estimate the long-term importance of future technological progress, rather than representing realistic future outcomes. For each of the technological scenarios, we address uncertainty in future market conditions by changing the ex-vessel price. Because the price of fish depends on the demand for fish products, which is difficult to predict given its dependence on societal preferences, available substitutes, and distribution networks
+   <a ref-type="bibr" rid="b52" href="#b52">52</a>, we apply two end-member scenarios for ex-vessel price: linearly increasing, and constant. These represent the outcomes that might come from a larger population and/or a greater preference for seafood (increasing price), or a ready availability of substitutes from terrestrial food production (constant price), and bracket a wide range of intermediate possibilities.
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Code availability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The model code was written in MATLAB version R2012a. The zero-dimensional version of the model (that is, for a single patch of ocean), which includes the model run script, required functions, and forcing data, is available for download at 
+   <span ext-link-type="uri" xlink:href="http://dx.doi.org/10.5281/zenodo.2770053" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://dx.doi.org/10.5281/zenodo.27700</span> (ref. 
+   <a ref-type="bibr" rid="b53" href="#b53">53</a>).
+  </p>
+ </sec>
+ <sec disp-level="2" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data availability</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The model output and observational data are available from the authors on request.</p>
+ </sec>
+</sec>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">The model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We used a spatially explicit ecosystem model developed in R [
+   <a rid="pone.0191011.ref019" ref-type="bibr" href="#pone.0191011.ref019">19</a>], described by Watters et al. [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>], and with a sensitivity analysis provided by Hill &amp; Matthews [
+   <a rid="pone.0191011.ref020" ref-type="bibr" href="#pone.0191011.ref020">20</a>]. Briefly, this minimally realistic model uses delay-difference equations to describe the dynamics of krill and four krill-dependent predator groups (penguins, seals, whales, and fishes). The model includes two time-steps (seasons) per year, and spatially represents 15 SSMUs in the Scotia Sea (
+   <a ref-type="fig" rid="pone.0191011.g001" href="#pone.0191011.g001">Fig 1</a>). We modeled the post-larval abundance of krill in each SSMU as a function of stochastic recruitment and area-specific mortality and movement. At the beginning of each time step, the numbers of krill in an SSMU are converted to biomass using an estimate of the mean mass per individual krill, 
+   <span class="italic">wbar</span>. In the case where krill have moved into an SSMU from other areas of the model, 
+   <span class="italic">wbar</span> is the abundance-weighted mean mass of the mixture.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Predators and the fishery consume from the area-specific krill biomass estimated at the beginning of each time step, and competition arises when biomass is insufficient to satisfy the combined demand. If the average mass of an individual krill changes because of rising temperatures (see below), this can alter the biomass of krill available.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Currently, the fishery for Antarctic krill operates almost exclusively in the area represented in the ecosystem model, which is divided into the 15 SSMUs (
+   <a ref-type="fig" rid="pone.0191011.g001" href="#pone.0191011.g001">Fig 1</a>; see [
+   <a rid="pone.0191011.ref017" ref-type="bibr" href="#pone.0191011.ref017">17</a>]). Following Watters et al. [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>], we treated each predator group breeding in an SSMU as an independent population. The model also includes three boundary areas that supply krill to the SSMUs from the Bellingshausen Sea, Weddell Sea, and northern Drake Passage (
+   <a ref-type="fig" rid="pone.0191011.g001" href="#pone.0191011.g001">Fig 1</a>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We employed most of the ecological parameters and model structures described by Watters et al. [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>] and their approach for addressing key uncertainties in our understanding of the ecosystem. This included the four parameterizations developed by Watters et al. [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>], which bracket plausible values for rates of krill movement between SSMUs (no movement and movement as passive drifters) and sensitivities of predators to krill availability (hyperstable and linear). Two elements of the model were revised. First, we updated the distributions and seasonality of foraging effort by penguins, whales, and seals using recent tracking data [
+   <a rid="pone.0191011.ref021" ref-type="bibr" href="#pone.0191011.ref021">21</a>]. Second, we adjusted the model to include time-series variation in the average mass of individual krill (see below).
+  </p>
+ </sec>
+ <sec id="sec004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Implementing temperature impacts on krill growth</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We assessed the outcomes of rising temperatures on krill and krill-dependent predators over the 21
+   <span class="sup">st</span> century (2007–2100) based on changes in krill gross growth potential (GGP). We acknowledge that there are other avenues by which temperature change could influence krill predators, but we do not explore those processes here. Krill GGP is defined as the dry mass of an individual krill at the end of the summer growth period divided by its dry mass at the beginning of the season. It is an indicator of the habitat’s ability to support krill growth. Hill et al. [
+   <a rid="pone.0191011.ref010" ref-type="bibr" href="#pone.0191011.ref010">10</a>] used a statistical model to estimate changes in krill GGP in the Atlantic sector of the Southern Ocean based on sea surface temperature (SST), chlorophyll-a concentration, and the initial size of krill. Here, we used their estimates of krill GGP based on an initial length of 40mm (which corresponds with the mean mass of 0.46g assumed by Watters et al. [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>]), climatological chlorophyll-a data from SeaWiFS [
+   <a rid="pone.0191011.ref022" ref-type="bibr" href="#pone.0191011.ref022">22</a>], and projected SST output from Coupled Model Intercomparison Project Phase 5 (CMIP5) [
+   <a rid="pone.0191011.ref023" ref-type="bibr" href="#pone.0191011.ref023">23</a>] Representative Control Pathways (RCPs) 8.5 and 2.6 [
+   <a rid="pone.0191011.ref024" ref-type="bibr" href="#pone.0191011.ref024">24</a>]. RCP 8.5 represents a continuous increase in greenhouse gas concentrations resulting in radiative forcing (a key driver of climate change) reaching 8.5 W∙m
+   <span class="sup">-2</span> by 2100. RCP 2.6 represents peak radiative forcing of 3.1 W∙m
+   <span class="sup">-2</span> around 2045, after which it falls to ~2.6 W∙m
+   <span class="sup">-2</span> by 2100. Chlorophyll-a concentrations were kept constant, while SST varied based on the RCPs.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We derived annual, SSMU-scale krill GGP estimates for each RCP from the gridded (1° longitude by 0.5° latitude) estimates of Hill et al. [
+   <a rid="pone.0191011.ref010" ref-type="bibr" href="#pone.0191011.ref010">10</a>]. These SSMU-scale GGP estimates were calculated as weighted averages of the gridded GGP estimates, where the weighting was based on the area of each grid cell contained within each SSMU. For model input, we divided these SSMU-scale, annual GGP estimates by the value for the previous year, setting the initial quotient (for 2007) to 1, to give a SSMU-specific index, 
+   <span class="italic">δ</span>, of the relative change in mean mass of individual krill over each summer growth season. We set this index to 1 for each winter season, assuming no growth or shrinkage during winter. We then adapted the model of Watters et al. [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>] to vary the mean mass of krill, 
+   <span class="italic">wbar</span>, for each time step, 
+   <span class="italic">t</span>, in each area, 
+   <span class="italic">j</span>, as: 
+   <div id="pone.0191011.e001" class="disp-formula">
+    <div class="alternatives">
+     <div xlink:href="pone.0191011.e001.jpg" id="pone.0191011.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+     <div id="M1" class="math">
+      <div class="mrow">
+       <span class="mi">w</span>
+       <span class="mi">b</span>
+       <span class="mi">a</span>
+       <div class="msub">
+        <span class="mi">r</span>
+        <div class="mrow">
+         <span class="mi">t</span>
+         <span class="mo">+</span>
+         <span class="mn">1</span>
+         <span class="mo">,</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span width="1pt" class="mspace"/>
+       <span class="mo">=</span>
+       <span width="1pt" class="mspace"/>
+       <span class="mi">w</span>
+       <span class="mi">b</span>
+       <span class="mi">a</span>
+       <div class="msub">
+        <span class="mi">r</span>
+        <div class="mrow">
+         <span class="mi">t</span>
+         <span class="mo">,</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+       <span width="1pt" class="mspace"/>
+       <span class="mo">×</span>
+       <span width="1pt" class="mspace"/>
+       <div class="msub">
+        <span class="mo">δ</span>
+        <div class="mrow">
+         <span class="mi">t</span>
+         <span class="mo">,</span>
+         <span class="mi">j</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div> where 
+   <span class="italic">wbar</span>
+   <sub>
+    <span class="italic">1</span>,
+    <span class="italic">j</span>
+   </sub> = 0.46g. Recall that 
+   <span class="italic">wbar</span> is used to convert krill abundance from numbers to biomass, and that any given 
+   <span class="italic">wbar</span>
+   <sub>
+    <span class="italic">t</span>,
+    <span class="italic">j</span>
+   </sub> is estimated as the mean mass of the final mixture of resident krill and any immigrant krill that arrived in the SSMU during the time step 
+   <span class="italic">t</span>-1. The updated 
+   <span class="italic">wbar</span>
+   <sub>
+    <span class="italic">t</span>,
+    <span class="italic">j</span>
+   </sub> is then subject to its current, SSMU-specific 
+   <span class="italic">δ</span>
+   <sub>
+    <span class="italic">t</span>,
+    <span class="italic">j</span>
+   </sub>. That is, the krill that arrive in an SSMU from other locations are converted to biomass via the 
+   <span class="italic">δ</span>
+   <sub>
+    <span class="italic">t</span>,
+    <span class="italic">j</span>
+   </sub> for the current SSMU at the beginning of the following time-step. Thus, the model preserves spatial effects of GGP on krill mass under krill-movement parameterizations.
+  </p>
+ </sec>
+ <sec id="sec005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Implementing fishing</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The model includes several “fishing options” that define candidate management strategies based on both the overall level of catch and the proportional distribution of catches among the SSMUs (see [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>]). We used the “historical fishing” option to define a management strategy based on current catch limits for the krill fishery. We specified an overall harvest rate throughout the model arena of 0.01, which represents the current catch limit of 620,000 t per year in the Scotia Sea [
+   <a rid="pone.0191011.ref016" ref-type="bibr" href="#pone.0191011.ref016">16</a>]. To represent the spatial subdivision of this catch limit into the three subareas currently used in management [
+   <a rid="pone.0191011.ref016" ref-type="bibr" href="#pone.0191011.ref016">16</a>], we specified that no more than a set proportion of the overall harvest could be removed from each of SSMUs 1–8 combined (25% limit), SSMUs 9–12 combined (45% limit), and SSMUs 13–15 combined (45% limit). We simulated the spatial distribution of catches among SSMUs based on the average distribution of actual catches between 2009 and 2015, first among SSMUs annually, and then within each SSMU seasonally (
+   <a ref-type="supplementary-material" rid="pone.0191011.s005" href="#pone.0191011.s005">S1 Table</a>).
+  </p>
+ </sec>
+ <sec id="sec006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Simulations, scenarios, and risk metrics</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Following Watters et al. [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>], we used a Monte Carlo approach to evaluate whether the effects of warming on krill growth might have consequent risks for krill-dependent predators, and if fishing has an additional influence. Throughout the remainder of this paper, we refer to individual runs of the model as simulations; each simulation was run with a random vector of annual krill recruitments over the 93-year period from 2007–2099, as per [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>]. We refer to sets of simulations as scenarios, which are defined by a specific combination of GGP estimates and fishing, and include all four of the model parameterizations described previously. Therefore, to bracket uncertainty, we ran 1001 simulations per model parameterization, resulting in a total of 4004 simulations per scenario.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We established a reference scenario (“Reference”, 
+   <a ref-type="table" rid="pone.0191011.t001" href="#pone.0191011.t001">Table 1</a>) that did not include the effects of warming or fishing. We used this reference scenario as the basis for estimating the mean marginal impacts (shortened to “marginal impacts” for brevity) of warming, fishing, and both combined. We computed these marginal impacts (see below) as ratios of average krill biomass or predator abundance over the last 30 years of each simulation (i.e., 2069–2099) relative to those from the reference scenario. If there was no marginal impact, this ratio equaled one. If there was a marginal impact, these ratios were greater or less than one, respectively, depending on whether impacts were positive (increased biomass or abundance relative to the reference scenario, &gt;1) or negative (decreased biomass or abundance, &lt;1). The ratios also provided a standardized index for comparing results across SSMUs, which vary greatly in area and the numbers of animals breeding and feeding within them.
+  </p>
+  <div id="pone.0191011.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0191011.t001</span>
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <div class="title">Summary of model scenarios.</div>
+   </div>
+   <div class="alternatives">
+    <div id="pone.0191011.t001g" xlink:href="pone.0191011.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <table frame="hsides" rules="groups">
+     <colgroup span="1">
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+     </colgroup>
+     <thead>
+      <tr>
+       <th align="center" rowspan="1" colspan="1">Assessment</th>
+       <th align="center" rowspan="1" colspan="1">Scenario</th>
+       <th align="center" rowspan="1" colspan="1">Climate-change pathway</th>
+       <th align="center" rowspan="1" colspan="1">Fishing?</th>
+       <th align="center" rowspan="1" colspan="1">Purpose</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">Reference</td>
+       <td align="center" style="background-color:#D9D9D9" rowspan="1" colspan="1">“Reference”</td>
+       <td align="center" style="background-color:#D9D9D9" rowspan="1" colspan="1">None</td>
+       <td align="center" style="background-color:#D9D9D9" rowspan="1" colspan="1">No</td>
+       <td align="left" style="background-color:#D9D9D9" rowspan="1" colspan="1">
+        <span class="italic">Model outcomes in an unimpacted ecosystem for use in calculating the marginal impacts of simulated warming and fishing</span>.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="2" colspan="1">Effects of rising temperature on krill growth (Q1)</td>
+       <td align="center" rowspan="1" colspan="1">“RCP26”</td>
+       <td align="center" rowspan="1" colspan="1">RCP 2.6</td>
+       <td align="center" rowspan="1" colspan="1">No</td>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">Model outcomes for the effects of warming on krill growth under RCP 2</span>.
+        <span class="italic">6</span>.
+       </td>
+      </tr>
+      <tr>
+       <td align="center" rowspan="1" colspan="1">“RCP85”</td>
+       <td align="center" rowspan="1" colspan="1">RCP 8.5</td>
+       <td align="center" rowspan="1" colspan="1">No</td>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">Model outcomes for the effects of warming on krill growth under RCP 8</span>.
+        <span class="italic">5</span>.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="3" style="background-color:#F2F2F2" colspan="1">Effect of fishing on impacts associated with rising temperature (Q2)</td>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">“Fish”</td>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">None</td>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">Yes, full simulation period</td>
+       <td align="left" style="background-color:#F2F2F2" rowspan="1" colspan="1">
+        <span class="italic">Assessment of the effects of fishing in the absence of warming impacts on krill growth</span>.
+       </td>
+      </tr>
+      <tr>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">“RCP26_Fish”</td>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">RCP 2.6</td>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">Yes, full simulation period</td>
+       <td align="left" style="background-color:#F2F2F2" rowspan="1" colspan="1">
+        <span class="italic">Assessment of cumulative impacts of warming and fishing</span>.
+       </td>
+      </tr>
+      <tr>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">“RCP85_Fish”</td>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">RCP 8.5</td>
+       <td align="center" style="background-color:#F2F2F2" rowspan="1" colspan="1">Yes, full simulation period</td>
+       <td align="left" style="background-color:#F2F2F2" rowspan="1" colspan="1">
+        <span class="italic">Assessment of cumulative impacts of warming and fishing</span>.
+       </td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="2" colspan="1">Potential to offset increased risks associated with warming by stopping krill fishing (Q3)</td>
+       <td align="center" rowspan="1" colspan="1">“RCP26_20” “RCP26_45” “RCP26_70”</td>
+       <td align="center" rowspan="1" colspan="1">RCP 2.6</td>
+       <td align="center" rowspan="1" colspan="1">Yes, stopped at year denoted in name of scenario</td>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">Assessment of mitigation via cessation of fishing under RCP 2</span>.
+        <span class="italic">6</span>.
+       </td>
+      </tr>
+      <tr>
+       <td align="center" rowspan="1" colspan="1">“RCP85_20” “RCP85_45” “RCP85_70”</td>
+       <td align="center" rowspan="1" colspan="1">RCP 8.5</td>
+       <td align="center" rowspan="1" colspan="1">Yes, stopped at year denoted in name of scenario</td>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">Assessment of mitigation via cessation of fishing under RCP 8</span>.
+        <span class="italic">5</span>.
+       </td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">We developed several scenarios to assess the marginal impacts associated with warming and fishing (summarized in 
+   <a ref-type="table" rid="pone.0191011.t001" href="#pone.0191011.t001">Table 1</a>). First, GGP estimates from RCP 2.6 and RCP 8.5 in an unfished system (“RCP26” and “RCP85”) were used to assess the marginal ecosystem impacts of warming on krill growth alone. To explore how these impacts might interact with those of fishing, we implemented three other scenarios: one with fishing alone (“Fish”), and two others including both fishing and warming (“RCP26_Fish” and “RCP85_Fish”). Finally, we evaluated whether the increased ecosystem risks associated with warming can be offset by ending krill fishing activity in the model after 20 years (“RCP26_20” and “RCP85_20”), 45 years (“RCP26_45” and “RCP85_45”), and 70 years (“RCP26_70” and “RCP85_70”).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">In addition to computing marginal impacts, we followed the convention used by previous work [
+   <a rid="pone.0191011.ref013" ref-type="bibr" href="#pone.0191011.ref013">13</a>, 
+   <a rid="pone.0191011.ref025" ref-type="bibr" href="#pone.0191011.ref025">25</a>] and computed marginal “depletion risks.” Within each scenario, we calculated the percentage of simulations in which krill biomass and predator abundances, averaged over the final 30 years, fell below a “depletion threshold.” This threshold was defined as 75% of the respective final biomass (krill) or abundances (predators) in reference simulations with the same model parameterization.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Results are therefore presented as these two metrics, marginal impacts and depletion risks, for each species group. Both are provided first as overall trends across all SSMUs (SSMUs were equally weighted within each species group), and then by SSMU. The two spatial scales are reported to assess whether overall trends were representative of those at smaller scales.</p>
+ </sec>
+</sec>

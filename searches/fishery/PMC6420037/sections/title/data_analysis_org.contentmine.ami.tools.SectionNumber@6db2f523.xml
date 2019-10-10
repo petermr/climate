@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec006" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data analysis</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">To examine patterns in species assemblages, we used redundancy analysis (RDA). RDA is related to principal components analyses and is based on Euclidean distance, implying that each species is on an axis orthogonal to all other species, and sites are points in this multidimensional space [
+  <a rid="pone.0206778.ref064" ref-type="bibr" href="#pone.0206778.ref064">64</a>]. Due to a number of schooling species occurring in high abundances, all species were Hellinger transformed before doing a forward stepwise model selection using a suite of explanatory factors (
+  <a rid="pone.0206778.t001" ref-type="table" href="#pone.0206778.t001">Table 1</a>) to select the factors that best explained the dissimilarity in the species assemblage. The function “ordiR2step” from the “Vegan” package in R was used to select the most parsimonious model [
+  <a rid="pone.0206778.ref065" ref-type="bibr" href="#pone.0206778.ref065">65</a>]. Permutation tests were used to test for the statistical significance of each marginal term. A triplot was used to visually determine and display the strength of the relationships between species assemblage and the explanatory factors that underpin the variation in species assemblage between stereo-BRUV deployments.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">To investigate the spatial distribution of the fish assemblage across shallow and mesophotic reefs we used generalised additive mixed models (GAMMs). These can incorporate the non-linear patterns and overdispersion often encountered with spatially structured ecological studies. A suite of response variables was chosen 
+  <span class="italic">a priori</span> and these included species richness, total relative abundance, the most speciose families (Labridae, Monocanthidae and Carangidae) and species that are either abundant (
+  <span class="italic">Pseudocaranx georgianus</span>, silver trevally and 
+  <span class="italic">Meuschenia scaber</span>, velvet leatherjacket) or of fishery interest (
+  <span class="italic">C</span>. 
+  <span class="italic">auratus</span> and 
+  <span class="italic">N</span>. 
+  <span class="italic">douglasii</span>,). We also modelled the relative abundance of all recreationally and commercially targeted species pooled together. Recreationally targeted species were determined from West et al. [
+  <a rid="pone.0206778.ref011" ref-type="bibr" href="#pone.0206778.ref011">11</a>], while commercially targeted species were selected from the assessment reports for the ocean trawl and trap &amp; line fishery assessment reports [
+  <a rid="pone.0206778.ref012" ref-type="bibr" href="#pone.0206778.ref012">12</a>]. Site, a cluster of four stereo-BRUV deployments, was used as the random factor.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Prior to any modelling, all data were explored using scatter and boxplots to assess for correlations between covariates and outliers in the response variables. To minimise the risk of overfitting any models, if two covariates had a Pearson’s correlation &gt;0.7, then the variable that made the least ‘ecological sense’, according to the authors, in explaining the distribution of fish or was less replicable in future studies were removed.</p>
+ <p xmlns="http://www.w3.org/1999/xhtml">A forward stepwise method was used to select the ‘best’ model based on Akaike information criterion (AIC). The first step ran models with individual predictor variables and the model with the lowest AIC was then selected. Step two ran models including the first predictor variable with all other variables and again selected the variable with the lowest AIC. This was repeated until the difference in the AIC was less than two. Models were limited to three predictor variables to minimise overfitting. Since GAMMs can account for data that are not normally distributed, models were fitted with untransformed data using a Poisson distribution. Once the final model had been decided, the model residuals were assessed for heterogeneity and overdispersion. If a model was considered overdispersed, the process was repeated but this time using the negative binomial distribution. Models with a negative binomial distribution were also assessed using a forward stepwise selection of the k value. All GAMM analyses were performed using the ‘GAMM4’ package in R [
+  <a rid="pone.0206778.ref066" ref-type="bibr" href="#pone.0206778.ref066">66</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The distribution of lengths for 
+  <span class="italic">C</span>. 
+  <span class="italic">auratus</span> and 
+  <span class="italic">N</span>. 
+  <span class="italic">douglassi</span> was investigated using boxplots and histograms. A Kolmogorov-Smirnoc two-sample test was used to compare the lengths distributions between shallow and mesophotic reef following the methods outlined in Langlois et al. [
+  <a rid="pone.0206778.ref067" ref-type="bibr" href="#pone.0206778.ref067">67</a>]. This procedure was done use the ‘ks.boot’ function in the ‘Matching’ package in R [
+  <a rid="pone.0206778.ref068" ref-type="bibr" href="#pone.0206778.ref068">68</a>]. We used 100,000 simulations to account for the small sample size.
+ </p>
+</sec>

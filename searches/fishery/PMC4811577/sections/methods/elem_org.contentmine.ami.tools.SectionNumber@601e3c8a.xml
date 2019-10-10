@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Atlantis ecosystem model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">The Atlantis ecosystem model is a deterministic spatially-explicit dynamic model that couples biophysical processes with human-use dynamics and is used as a policy exploration tool for EBM [
+   <a rid="pone.0152577.ref024" ref-type="bibr" href="#pone.0152577.ref024">24</a>]. The main dynamics and process equations are provided in Fulton 
+   <span class="italic">et al</span>. [
+   <a rid="pone.0152577.ref025" ref-type="bibr" href="#pone.0152577.ref025">25</a>] and briefly summarized in 
+   <a ref-type="supplementary-material" rid="pone.0152577.s007" href="#pone.0152577.s007">S1 Text</a>. In a companion paper [
+   <a rid="pone.0152577.ref026" ref-type="bibr" href="#pone.0152577.ref026">26</a>] we explored the interactive effect size of the three main drivers that influence the reef status in Guam: land-based sources of pollution (LBSP; sediments and nutrients), fishing, and climate change (ocean warming and acidification). In the supplemental materials of that paper we detail the validation of the different stressors by comparing modeled data with empirical data or expected patterns. Modeled effects of LBSP and fishing showed a good overlap with empirical data, although model skill assessment showed that the model was positively biased towards functional species groups with a high biomass, these groups were over-represented (especially the small-bodied parrotfish (scrapers)). Model sensitivity analyses indicated that the LBSP effects, in particular, were sensitive to productivity. Ocean acidification was not well resolved in the model, but the more imminent climate change threat to corals due to ocean warming showed a few bleaching events in the first decade in 2000, after which corals recovered to some extent. These results are in agreement with empirical studies. The model also showed that corals could not keep up when bleaching events were annual, as projected to happen under the current greenhouse gas emission trajectory (IPCC AR8.5). By around 2040 coral biomass had plummeted to very low levels both for branching and massive corals [
+   <a rid="pone.0152577.ref026" ref-type="bibr" href="#pone.0152577.ref026">26</a>]; a result also shown by other studies [
+   <a rid="pone.0152577.ref027" ref-type="bibr" href="#pone.0152577.ref027">27</a>–
+   <a rid="pone.0152577.ref029" ref-type="bibr" href="#pone.0152577.ref029">29</a>]. Despite the limitations of the model (bias, sensitive to productivity, effects of acidification not well resolved), the model was able to project plausible biomass data under the different stressors and was deemed robust for comparative studies [
+   <a rid="pone.0152577.ref026" ref-type="bibr" href="#pone.0152577.ref026">26</a>].
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Human-use dynamics can be incorporated in Atlantis through the fishing module, and the management and assessment module. For the purpose of our paper, we are only interested in the relative comparisons of the performance of alternative management scenarios. Fishing was simplified and represented by constant fishing mortality rates (% mortality per year) over the course of the simulation (with variations to represent the management scenarios). We did not include the monitoring and assessment module of the Atlantis model framework. To set our fixed fishing mortality, we first calibrated the model to spatially explicit historical landings of the shore-based fishery and to biomass trends [
+   <a rid="pone.0152577.ref030" ref-type="bibr" href="#pone.0152577.ref030">30</a>, 
+   <a rid="pone.0152577.ref031" ref-type="bibr" href="#pone.0152577.ref031">31</a>]. We calculated the fishing mortality for each functional species group by dividing the landings at year 1 with the standing stock biomass at year 1 to get a proxy for annual fishing mortality for that functional group. We then used those proxy values as the fixed fishing mortality per functional group.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The recently developed Guam Atlantis model [
+   <a rid="pone.0152577.ref026" ref-type="bibr" href="#pone.0152577.ref026">26</a>] encompasses the shallow (≤ 30 m) reefs around Guam, spanning approximately 110 km
+   <span class="sup">2</span> (
+   <a ref-type="fig" rid="pone.0152577.g001" href="#pone.0152577.g001">Fig 1</a>). This model domain incorporates 55 spatially-differentiated habitats (polygons) and 2 vertical water layers (0–6 m and 6–30 m) allowing for the representation of hydrodynamic and biological processes around Guam. These processes are forced with daily hydrodynamic flows, salinity, and temperature outputs from a 5-km resolution, regional ocean modeling system model (ROMS: 
+   <span ext-link-type="uri" xlink:href="http://www.myroms.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.myroms.org</span>) developed for the Coral Triangle region in the western Pacific Ocean [
+   <a rid="pone.0152577.ref032" ref-type="bibr" href="#pone.0152577.ref032">32</a>].
+  </p>
+  <div id="pone.0152577.g001" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0152577.g001</span>
+   <span class="label">Fig 1</span>
+   <div class="caption">
+    <div class="title">Spatial structure of the Guam Atlantis model based on homogeneous biophysical characteristics.</div>
+    <p>Polygons closest to shore have one depth layer (0–6 m) and the others two (0–6 m and 6–30 m for the middle ones and 0–6 m and 6–100 m for the 7 outer, boundary polygons). Blue polygons indicate marine preserves. The star in the inset map represents the location of Guam located in the Mariana Archipelago in the Pacific Ocean. Polygons with nutrient and/or sediment inputs are those numbered 3, 7, 8, 10, 16, 17, 22, 23, 24, 26, 30, 32, 48, 49, 52, and 53. (Figure taken with permission from [
+     <a rid="pone.0152577.ref026" ref-type="bibr" href="#pone.0152577.ref026">26</a>]).
+    </p>
+   </div>
+   <div xlink:href="pone.0152577.g001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Trophic dynamics are represented by 42 functional groups based on diet, life-history, ecological role, and habitat requirements (
+   <a ref-type="supplementary-material" rid="pone.0152577.s003" href="#pone.0152577.s003">S2 Table</a>). Where appropriate, functional groups were further divided into exploited and lightly-fished taxa based on inshore fishery creel surveys conducted by Guam’s Division of Aquatic and Wildlife Resources (DAWR). Initial conditions and data sources are described in Weijerman et al [
+   <a rid="pone.0152577.ref031" ref-type="bibr" href="#pone.0152577.ref031">31</a>] and Weijerman et al [
+   <a rid="pone.0152577.ref026" ref-type="bibr" href="#pone.0152577.ref026">26</a>].
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The model was considered robust after passing three calibration tests [
+   <a rid="pone.0152577.ref033" ref-type="bibr" href="#pone.0152577.ref033">33</a>–
+   <a rid="pone.0152577.ref035" ref-type="bibr" href="#pone.0152577.ref035">35</a>] (
+   <a ref-type="supplementary-material" rid="pone.0152577.s007" href="#pone.0152577.s007">S1 Text</a>): (1) the model was able to reproduce unfished biomasses, i.e., the model reached and stabilized at similar biomass levels to those observed in marine reserves in Guam and at unpopulated Northern Mariana Islands; (2) weight-at-age stayed stable and abundance of size classes decreased with increasing size classes (few large organisms and many small ones), and (3) the model was able to fit historical catch time series which were derived from DAWR inshore fishery creel surveys [
+   <a rid="pone.0152577.ref030" ref-type="bibr" href="#pone.0152577.ref030">30</a>]. The model was further validated by comparing model output data for key coral reef dynamics (effect of LBSP, mitigating effect of structural complexity on fish predation, coral-algal competition) with empirical data from Guam and published relationships [
+   <a rid="pone.0152577.ref026" ref-type="bibr" href="#pone.0152577.ref026">26</a>] (
+   <a ref-type="supplementary-material" rid="pone.0152577.s007" href="#pone.0152577.s007">S1 Text</a>).
+  </p>
+ </sec>
+ <sec id="sec004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Simulated management scenarios</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">In November 2012 the Coral Reef Conservation Program management liaison, Ms Valerie Brown, NOAA Pacific Islands Regional Office, facilitated an informal meeting. Invitations to attend an introductory presentation on integrated ecosystem modeling and how it could help managers were sent out to all local and federal managers and other stakeholders (staff of university of Guam, Marine Laboratory, US Navy, NGOs, fisheries Co-op) that are involved with coral reef ecosystems in Guam. Fifteen people representing 11 organizations attended and follow up meetings were organized with staff of organizations that could not attend, reaching out to another 11 people (
+   <a ref-type="supplementary-material" rid="pone.0152577.s002" href="#pone.0152577.s002">S1 Table</a>). Based on discussions of management goals and identified management scenarios of interest, we selected six scenarios. In June 2014, we presented those selected scenarios to the resource managers and stakeholders to make sure we captured their interest sufficiently. Apart from those six alternative management scenarios we also simulated a ‘no-change’ or ‘status quo’ scenario and a ‘no stressors’ (no fishing, no LBSP, no climate change) scenario. We identified appropriate ecosystem metrics based on the managers’ goals (
+   <a ref-type="supplementary-material" rid="pone.0152577.s008" href="#pone.0152577.s008">S2 Text</a>) and used the model outcome of the no-stressors scenario as the ‘best’ performance criteria, against which we evaluated the ecosystem response of alternative management scenarios of interest (
+   <a rid="pone.0152577.t001" ref-type="table" href="#pone.0152577.t001">Table 1</a>).
+  </p>
+  <div id="pone.0152577.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0152577.t001</span>
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <div class="title">Goals, ecosystem metrics and performance criteria.</div>
+    <p>Performance of the alternative strategies was based on reaching the criteria of conservation ecosystem metrics (#1–3) and extraction ecosystem metrics (#4a, b). Criteria were based on a simulation of no local (fishing and land-based sources of pollution) or global (climate change) stressors. The criteria for landings are the total catches from the status quo simulation.</p>
+   </div>
+   <div class="alternatives">
+    <div id="pone.0152577.t001g" xlink:href="pone.0152577.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <table frame="hsides" rules="groups">
+     <colgroup span="1">
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+     </colgroup>
+     <thead>
+      <tr>
+       <th align="left" rowspan="1" colspan="1">Goal</th>
+       <th align="left" rowspan="1" colspan="1">Ecosystem metric</th>
+       <th align="center" rowspan="1" colspan="1">Criteria</th>
+      </tr>
+      <tr>
+       <th align="center" rowspan="1" colspan="1"/>
+       <th align="center" rowspan="1" colspan="1"/>
+       <th align="center" rowspan="1" colspan="1">(45 year)</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">1. Improved water quality</td>
+       <td align="left" rowspan="1" colspan="1">Calcifiers:non-calcifiers ratio</td>
+       <td align="center" rowspan="1" colspan="1">1.15</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">2a. Increased reef resilience</td>
+       <td align="left" rowspan="1" colspan="1">Biomass of herbivores: browsers &amp; grazers &amp; detritivores</td>
+       <td align="center" rowspan="1" colspan="1">1,344 t</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">2b. Increased reef resilience</td>
+       <td align="left" rowspan="1" colspan="1">Biomass of herbivores: excavators &amp; scrapers</td>
+       <td align="center" rowspan="1" colspan="1">1,043 t</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">3. Enhanced fish biomass</td>
+       <td align="left" rowspan="1" colspan="1">Total reef-fish biomass</td>
+       <td align="center" rowspan="1" colspan="1">5,309 t</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">4a. Maintain or improved fishery landings</td>
+       <td align="left" rowspan="1" colspan="1">Number of fish groups not overexploited</td>
+       <td align="center" rowspan="1" colspan="1">20</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">4b. Maintain or improved fishery landings</td>
+       <td align="left" rowspan="1" colspan="1">Biomass of reef-fish landings caught by shore-based fishers</td>
+       <td align="center" rowspan="1" colspan="1">128 t</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">In total, seven policy scenarios were simulated with Guam Atlantis and one ‘no stressors’ scenario. The policy scenarios were:</p>
+  <div list-type="simple" class="list" xmlns="http://www.w3.org/1999/xhtml">
+   <div class="list-item">
+    <p>Scenario 1—Status quo (no change) represented by five MPAs and existing levels of land-based sources of pollution.</p>
+    <p>The status-quo simulation had constant fishing mortalities (F) per functional group (
+     <a ref-type="supplementary-material" rid="pone.0152577.s004" href="#pone.0152577.s004">S3 Table</a>) with no fishing (F = 0) in the MPAs and additional runoff of LBSP. LBSP was modeled as the addition of nutrients and sediments to the coastal polygons with riverine run-off and/or sewage outfall pipes (
+     <a ref-type="fig" rid="pone.0152577.g001" href="#pone.0152577.g001">Fig 1</a>), and estimated loads were based on flow data and the related sediment and nutrient inputs per river for each Atlantis polygon [
+     <a rid="pone.0152577.ref031" ref-type="bibr" href="#pone.0152577.ref031">31</a>].
+    </p>
+   </div>
+   <div class="list-item">
+    <p>Scenario 2—Remove existing MPAs and implement a weekly catch limit (further referred to as TAC) with existing levels of LBSP.</p>
+    <p>We estimated an annual catch limit as 75% of the average catches of the first five years of the status quo catches and then converted this value to a weekly TAC. We simulated the TAC scenario with the same fixed fishing mortality rates as in the status quo simulation but when the TAC was reached, fishing stopped for that week. Fishing was allowed in every polygon.</p>
+   </div>
+   <div class="list-item">
+    <p>Scenario 3—Remove existing MPAs and implement size limits with existing levels of LBSP.</p>
+    <p>For the size-limit-based fishery simulations, we assumed the same fixed fishing mortality rates as in the status quo simulation but no immature fishes were targeted. Since fishing mortality stayed the same under this scenario compared to the status quo scenario, older size classes get targeted more heavily. Based on the weight and age at first maturity, the age and size at first capture for each functional group differed (
+     <a ref-type="supplementary-material" rid="pone.0152577.s004" href="#pone.0152577.s004">S3 Table</a>). Fishing was allowed in every polygon.
+    </p>
+   </div>
+   <div class="list-item">
+    <p>Scenario 4—Remove existing MPAs and implement TAC and size limits with existing levels of LBSP.</p>
+    <p>In this scenario we combined the rules of scenarios 2 and 3.</p>
+   </div>
+   <div class="list-item">
+    <p>Scenario 5—Remove existing MPAs and implement TAC and size limits with no additional LBSP.</p>
+    <p>This scenario differed only from scenario 4 by not simulating the delivery of additional nutrients and sediments to the coastal areas.</p>
+   </div>
+   <div class="list-item">
+    <p>Scenario 6—Status quo with no LBSP.</p>
+    <p>In this scenario we used the same constant fishing mortalities as identified under scenario 1, but did not simulate any additional nutrients and sediments to the coastal areas.</p>
+   </div>
+   <div class="list-item">
+    <p>Scenario 7—Full regulations. In this scenario we kept existing MPAs in place and implemented both size limits and TAC with no LBSP. This scenario combines all management regulations.</p>
+    <p>Each of the scenarios was simulated for 45 years (1985–2030) without including climate change projections. We wanted to take a realistic no-regrets approach to management strategy selection, so the better performing scenarios with no climate change were also re-run for 45 years with climate drivers included. For this approach we selected the three scenarios where the performance evaluation with no climate change had the highest average across all four goals.</p>
+   </div>
+  </div>
+ </sec>
+ <sec id="sec005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Performance evaluation</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">Criteria to assess the performance of the scenarios were based on a model simulation with no stressors for ecosystem state conditions and for the fishery the current landings, hence, ecosystem metrics reaching these values were considered ‘best’ (
+   <a rid="pone.0152577.t001" ref-type="table" href="#pone.0152577.t001">Table 1</a>). Performance of each scenario was measured at the end of the simulation against criteria for six ecosystem metrics based on the four management goals (
+   <a rid="pone.0152577.t001" ref-type="table" href="#pone.0152577.t001">Table 1</a> and 
+   <a ref-type="supplementary-material" rid="pone.0152577.s008" href="#pone.0152577.s008">S2 Text</a>):
+  </p>
+  <div list-type="order" class="list" xmlns="http://www.w3.org/1999/xhtml">
+   <div class="list-item">
+    <p>
+     <span class="underline">Improved water quality (no additional LBSP)</span>. The metric used to assess the performance of this goal was the ratio of benthic calcifiers to non-calcifiers with calcifiers defined as corals and crustose-coralline algae (CCA) and non-calcifiers as turf and macroalgae.
+    </p>
+   </div>
+   <div class="list-item">
+    <p>
+     <span class="underline">Increased reef resilience</span>. Performance metrics for this goal were biomass of different ecologically important herbivorous fishes, as these groups are critical for maintaining coral-reef habitat and reversing macroalgal strands to cropped states [
+     <a rid="pone.0152577.ref036" ref-type="bibr" href="#pone.0152577.ref036">36</a>].
+    </p>
+   </div>
+   <div class="list-item">
+    <p>
+     <span class="underline">Enhanced fish biomass.</span> Modeled outcome of total fish biomass was used as the metric for the performance of this goal.
+    </p>
+   </div>
+   <div class="list-item">
+    <p>
+     <span class="underline">Maintenance of, or improved fishery landings</span>. Performance for this goal was measured by two fishery-related metrics: (a) the number of functional fish groups that are not overexploited, and (b) landings of reef fish.
+    </p>
+   </div>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To account for interannual variability, we took the mean of the last five simulated years. For ease of interpretation and visualization, the 5-year mean values were normalized over all strategies so that the best result of an ecosystem metric is assigned the value of 1 and all other values scaled accordingly.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Different weightings can be given to the ecosystem metrics in quantifying the overall performance of each management approach. Since managers identified four ecosystem goals and the identified ecosystem metrics are based on those goals, we weighted 1–4 equally and took the average of 2a and 2b for goal 2 and the average of 4a and 4b for goal 4. As the management goals can also be grouped into a conservation component, (goals 1–3) representing the functionality of the ecosystem, and a socio-economic component (goal 4), we also evaluated the cost and benefit tradeoffs between the metrics #1–3 (all weighted equally) and metric #4 by taking the overall average of these two components.</p>
+ </sec>
+</sec>

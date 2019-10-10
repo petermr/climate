@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec004" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Data and analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">In many coastal marine reserves, biological data are often collected via underwater visual censuses as part of a reserve’s monitoring program. Scientific divers record fish and invertebrate richness and abundances, as well as fish total length along belt transects. Ecological surveys are typically performed annually in each reserve and corresponding control site(s), before and after the implementation of the reserve, providing a sampling design that can be used to draw causal inference. Control sites are areas where habitat is similar to that of the reserve, but with presence of fishing activity; in principle these are areas that are otherwise observationally identical to the reserve site, but where, for presumably random reasons, a reserve was not implemented. While transect dimensions (
+  <span class="italic">i.e.</span> length and width) and sampling methods might vary from study to study, the general idea remains the same: richness, abundances, and sizes of organisms are recorded in a study–specific standardized way. For this reason, MAREA does not assume specific transect dimensions, and pertinent indicators are calculated per transect (
+  <a ref-type="table" rid="pone.0191821.t001" href="#pone.0191821.t001">Table 1</a>). More information on data collection and formatting is provided in a guidebook [
+  <a rid="pone.0191821.ref046" ref-type="bibr" href="#pone.0191821.ref046">46</a>], which is available in English and Spanish in MAREA’s interface.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">This sampling design for biological data allows us to use causal inference techniques [
+  <a rid="pone.0191821.ref021" ref-type="bibr" href="#pone.0191821.ref021">21</a>, 
+  <a rid="pone.0191821.ref047" ref-type="bibr" href="#pone.0191821.ref047">47</a>] to evaluate the effect of the reserve on biological indicators. The hypothesis that the indicators will respond to implementation of the reserve is tested by analyzing spatial and temporal changes in each numeric biological indicator (all but B5) using generalized linear models [
+  <a rid="pone.0191821.ref021" ref-type="bibr" href="#pone.0191821.ref021">21</a>]. To account for variations in the environment and survey conditions, covariates that are gathered during the underwater ecological surveys are included in the difference-in-differences model with form: 
+  <div id="pone.0191821.e001" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0191821.e001.jpg" id="pone.0191821.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M1" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">I</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">t</span>
+           <span class="mo">,</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+         <span class="mo">=</span>
+         <div class="msub">
+          <span class="mi">β</span>
+          <span class="mn">0</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="munderover">
+          <span class="mo">∑</span>
+          <div class="mrow">
+           <span class="mi">t</span>
+           <span class="mo">=</span>
+           <span class="mn">2</span>
+          </div>
+          <span class="mi">T</span>
+         </div>
+         <div class="msub">
+          <span class="mi">γ</span>
+          <span class="mi">t</span>
+         </div>
+         <div class="msub">
+          <span class="mi">Y</span>
+          <span class="mi">t</span>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">β</span>
+          <span class="mn">1</span>
+         </div>
+         <div class="msub">
+          <span class="mi">Z</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">β</span>
+          <span class="mn">2</span>
+         </div>
+         <div class="msub">
+          <span class="mi">P</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">t</span>
+          </div>
+         </div>
+         <span class="mo">×</span>
+         <div class="msub">
+          <span class="mi">Z</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">β</span>
+          <span class="mn">3</span>
+         </div>
+         <div class="msub">
+          <span class="mi">T</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">t</span>
+           <span class="mo">,</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">β</span>
+          <span class="mn">4</span>
+         </div>
+         <div class="msub">
+          <span class="mi">V</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">t</span>
+           <span class="mo">,</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">β</span>
+          <span class="mn">5</span>
+         </div>
+         <div class="msub">
+          <span class="mi">D</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">t</span>
+           <span class="mo">,</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+         <span class="mo">+</span>
+         <div class="msub">
+          <span class="mi">ϵ</span>
+          <div class="mrow">
+           <span class="mi">i</span>
+           <span class="mo">,</span>
+           <span class="mi">t</span>
+           <span class="mo">,</span>
+           <span class="mi">z</span>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(1)</span>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In this model, 
+  <span class="italic">i</span>, 
+  <span class="italic">t</span>, and 
+  <span class="italic">z</span> are indices for transect, time, and zone (control or reserve site), respectively. This model allows us to estimate the change in an indicator (
+  <span class="italic">I</span>) based on the year (
+  <span class="italic">Y</span>), a dummy variable that indicates treatment (
+  <span class="italic">Z</span>; 
+  <span class="italic">i.e.</span> control or reserve), an interaction between a dummy variable that indicates before or after implementation (
+  <span class="italic">P</span>) and treatment (
+  <span class="italic">Z</span>), and covariates such as bottom temperature (
+  <span class="italic">T</span>; in °C), horizontal visibility during the survey (
+  <span class="italic">V</span>; in m), and depth at which survey was performed (
+  <span class="italic">D</span>; in m). 
+  <span class="italic">ϵ</span> represents the error term associated to the regression. Here, years are modeled as factors, using the first year as the reference level. This does not impose a linear structure in the way an indicator changes through time (
+  <span class="italic">i.e.</span> the change in biomass between 2006 and 2007 does not have to be the same as the change between 2015 and 2016). The treatment and implementation variables, modeled as dummy variables, are coded as Control = 0 and Reserve = 1; and Before implementation = 0 and After implementation = 1, respectively.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Socioeconomic data are often collected by fishers, natural resource management agencies, or Civil Society Organizations (CSOs) by recording landings, income, and sometimes prices for each species. To control for inflation, income is adjusted with the country’s consumer price index [
+  <a rid="pone.0191821.ref048" ref-type="bibr" href="#pone.0191821.ref048">48</a>]: 
+  <div id="pone.0191821.e002" class="disp-formula">
+   <div class="alternatives">
+    <div xlink:href="pone.0191821.e002.jpg" id="pone.0191821.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <div id="M2" class="math">
+     <div displaystyle="true" class="mtable">
+      <div class="mtr">
+       <div columnalign="right" class="mtd">
+        <div class="mrow">
+         <div class="msub">
+          <span class="mi">I</span>
+          <span class="mi">t</span>
+         </div>
+         <span class="mo">=</span>
+         <span class="mi">R</span>
+         <span class="mi">I</span>
+         <span class="mo">×</span>
+         <div class="mfrac">
+          <div class="mrow">
+           <span class="mi">C</span>
+           <span class="mi">P</span>
+           <div class="msub">
+            <span class="mi">I</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mi">C</span>
+           <span class="mi">P</span>
+           <div class="msub">
+            <span class="mi">I</span>
+            <span class="mi">T</span>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <span class="label">(2)</span>
+  </div>
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Where 
+  <span class="italic">I</span>
+  <sub>
+   <span class="italic">t</span>
+  </sub> represents the adjusted income for year 
+  <span class="italic">t</span> as the product between the reported income for that year and the ratio between the consumer price index (
+  <span class="italic">CPI</span>) in that year to the most recent year’s (
+  <span class="italic">T</span>) CPI. Since no control sites are typically available for this data type, numeric socioeconomic indicators (S1 and S2) are evaluated with a simplified version of 
+  <a ref-type="disp-formula" rid="pone.0191821.e001" href="#pone.0191821.e001">Eq (1)</a>:
+ </p>
+ <div id="pone.0191821.e003" class="disp-formula" xmlns="http://www.w3.org/1999/xhtml">
+  <div class="alternatives">
+   <div xlink:href="pone.0191821.e003.jpg" id="pone.0191821.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <div id="M3" class="math">
+    <div displaystyle="true" class="mtable">
+     <div class="mtr">
+      <div columnalign="right" class="mtd">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">I</span>
+         <span class="mi">t</span>
+        </div>
+        <span class="mo">=</span>
+        <div class="msub">
+         <span class="mi">β</span>
+         <span class="mn">0</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <span class="mi">β</span>
+         <span class="mn">1</span>
+        </div>
+        <div class="msub">
+         <span class="mi">P</span>
+         <span class="mi">t</span>
+        </div>
+        <span class="mo">+</span>
+        <div class="msub">
+         <span class="mi">ϵ</span>
+         <span class="mi">t</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+  <span class="label">(3)</span>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">This model does not formally allow for causal inference, but we can still measure changes in mean landings and income before and after the implementation of the reserve and provide valuable input. For both models (Eqs 
+  <a ref-type="disp-formula" rid="pone.0191821.e001" href="#pone.0191821.e001">(1)</a> and 
+  <a ref-type="disp-formula" rid="pone.0191821.e003" href="#pone.0191821.e003">(3)</a>), we estimate the model coefficients with ordinary least squares, and calculate heteroskedastic–robust standard errors [
+  <a rid="pone.0191821.ref049" ref-type="bibr" href="#pone.0191821.ref049">49</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">While biological and some economic data are regularly collected, governance data are typically not available nor systematically collected by the community or other organizations. Therefore, we created a survey specifically designed to collect information needed for the proposed indicators (B5, S3, and G1–G15). The survey is included as supplementary material in English (
+  <a ref-type="supplementary-material" rid="pone.0191821.s001" href="#pone.0191821.s001">S1 Appendix</a>) and Spanish (
+  <a ref-type="supplementary-material" rid="pone.0191821.s002" href="#pone.0191821.s002">S2 Appendix</a>). To analyze governance information, we developed a framework based on a literature review of common governance structures and their relation to effectiveness in managing fisheries or marine reserves (
+  <a ref-type="supplementary-material" rid="pone.0191821.s003" href="#pone.0191821.s003">S1 Table</a>). This approach has been proven to successfully evaluate governance structures [
+  <a rid="pone.0191821.ref050" ref-type="bibr" href="#pone.0191821.ref050">50</a>]. Unlike with biological and socioeconomic objectives (see Eqs 
+  <a ref-type="disp-formula" rid="pone.0191821.e001" href="#pone.0191821.e001">(1)</a> and 
+  <a ref-type="disp-formula" rid="pone.0191821.e003" href="#pone.0191821.e003">(3)</a>), MAREA does not quantitatively analyze governance information. Rather, it is presented along with the biological and socioeconomic indicators to provide managers and users with a more complete description of the reserve.
+ </p>
+</sec>
