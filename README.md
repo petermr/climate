@@ -32,15 +32,18 @@ Much of the code and processes are shared communal resources from different proj
 
 ## Guides and documentation
 
- - OpenNotebook
- - Dictionaries
+ - [OpenNotebook](https://github.com/petermr/tigr2ess/blob/master/search/TUTORIAL.md)
+ - [Dictionaries](https://github.com/petermr/tigr2ess/blob/master/dictionaries/OVERVIEW.md)
 
 ## Saved researches and analyses
 
- - Climate Change
- - Runaway climate change
- - Fishing
- - Energy Modelling
+ 1. [Climate Change](searches/clim107)
+ 2. [Climate Change](searches/climatechange)
+ 3. [Energy Modelling](searches/energmod)
+ 4. [Fishery](searches/fishery)
+ 5. [Invasive plant](searches/invasiveplant)
+ 6. [Problem](searches/problem)
+ 7. [Runaway climate change](searches/runaway203)
 
 ## How to contribute
 
@@ -58,7 +61,7 @@ Much of the code and processes are shared communal resources from different proj
 
  - Presentations
  - For schools
-  - A short presentation to Sidcot School on the Keeling Curve
+   - A short presentation to [Sidcot School on the Keeling Curve](schools/SidcotSchool201909.md)
  - Articles
 
 ## About us
