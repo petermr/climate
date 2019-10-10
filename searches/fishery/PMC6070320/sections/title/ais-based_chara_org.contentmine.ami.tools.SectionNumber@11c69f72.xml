@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec disp-level="2" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">AIS-based characterization of fishing effort</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">To increase the transparency surrounding control over global fisheries and the benefits that can be derived from fishery resource sharing agreements, we used a big data approach to undertake a global fishery-independent assessment of industrial fishing effort by vessels flagged to higher- and lower-income countries. Use of AIS is required by the IMO for all passenger vessels, all cargo ships greater than 500 gross tonnage, and all vessels greater than 300 gross tonnage engaged in an international voyage. Many fishing vessels are, however, below the IMO’s 300 gross tonnage size threshold, and adoption (and enforcement) of these regulations into national legislation varies, with some nations modifying the regulations to be more or less strict as to the size of vessels required to carry AIS (
+  <a rid="R9" ref-type="bibr" href="#R9">
+   <span class="italic">9</span>
+  </a>). AIS receivers aboard a vessel transmit information about the vessel’s current speed, position, and course along with other vessel identification information (for example, vessel name, MMSI number).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Satellite and terrestrial processed AIS data from January 2015 to December 2016 were provided by Global Fishing Watch (
+  <span ext-link-type="uri" xlink:href="http://www.globalfishingwatch.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.globalfishingwatch.org</span>). The Global Fishing Watch data set makes use of convolutional neural networks to identify fishing effort in this global data repository (
+  <a rid="R10" ref-type="bibr" href="#R10">
+   <span class="italic">10</span>
+  </a>, 
+  <a rid="R43" ref-type="bibr" href="#R43">
+   <span class="italic">43</span>
+  </a>). To identify fishing vessels, a convolutional neural network model was trained on tracks of 45,000 marine fishing vessels that had been identified through registries as fishing vessels or nonfishing vessels. Using AIS tracks that have been labeled by experts as fishing or nonfishing for 500 vessels, another convolutional neural network model was trained to identify when a specific AIS point was most likely fishing.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Here, we summarize only the data for industrial fishing, defined here as all fishing effort from vessels &gt;24 m in length [lengths of vessels were compiled from registry records and when not available, estimated by the convolutional neural network, as described in Kroodsma 
+  <span class="italic">et al</span>. (
+  <a rid="R10" ref-type="bibr" href="#R10">
+   <span class="italic">10</span>
+  </a>)]. Although no absolute threshold exists for what defines an industrial fishing vessel with respect to length, by including only vessels &gt;24 m in length, most artisanal fishing vessels will be excluded (
+  <a rid="R11" ref-type="bibr" href="#R11">
+   <span class="italic">11</span>
+  </a>). By conservatively focusing on vessels &gt;24 m in length, we also confine this analysis to industrial fishing vessels for which AIS coverage is strong. A total of 30,469 vessels &gt;24 m in length were active during the study period and included in the analysis. To examine how the selection of this vessel size threshold affected the analysis, an additional 29,988 vessels that were between 12 and 24 m in length were also included in a separate analysis to examine patterns of fishing effort for vessels &gt;12 m in length for 2016. We used comparisons between AIS and VMS data from Indonesia to create corrections to adjust for any potential underreporting bias in AIS-only analyses of fishing effort in lower-income countries (all methods and results reported in Supplementary Materials). We do not differentiate in any of these analyses between different gear types of industrial fishing. The time between each consecutive AIS point labeled as fishing was calculated and included in the data set as fishing hours. All analyses in this report consider industrial fishing effort that can be detected using AIS and aggregated by fishing hours, referred to throughout as “fishing effort.” As an alternative measure of fishing effort, fishing days for each vessel were also calculated, where each fishing day is defined as any calendar day a vessel was determined to be engaged in fishing behavior. We contribute these algorithm-based identifications of fishing effort purely for research purposes and make no legal claims, expressed or implied, about the reported patterns.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">The MMSI assigned to each vessel was used to identify unique vessels. Each MMSI number was assumed to correspond to one vessel throughout the study period. The flag state for each vessel was determined using the registered flag state in vessel registries when available, alternatively by the first three digits of the MMSI (the marine identification digits, which correspond to a particular flag state), and finally by a manual review of vessels whose marine identification digits did not correspond to a flag state. Because of a lack of data tracking vessel ownership, vessels that may have had a flag of convenience or were otherwise registered to a flag state other than the vessel owner’s state were not identified and were considered part of the fleet of whatever state to which they were flagged. Further description of the methods used for processing the AIS data to determine fishing vessels and fishing effort can be found in Kroodsma 
+  <span class="italic">et al</span>. (
+  <a rid="R10" ref-type="bibr" href="#R10">
+   <span class="italic">10</span>
+  </a>).
+ </p>
+</sec>

@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec sec-type="materials|methods" id="sec002" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Methods</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Explicit incorporation of fisheries into food webs makes ecosystem modelling in a framework such as Ecopath with Ecosim (EwE) a useful tool for examining ecosystem impacts of management strategies [
+  <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>, 
+  <a rid="pone.0196307.ref044" ref-type="bibr" href="#pone.0196307.ref044">44</a>], as well as potential precautionary reference points and EBFM approaches [
+  <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>, 
+  <a rid="pone.0196307.ref018" ref-type="bibr" href="#pone.0196307.ref018">18</a>, 
+  <a rid="pone.0196307.ref045" ref-type="bibr" href="#pone.0196307.ref045">45</a>]. Ecosystem modelling places forage fish (e.g. Pacific herring) in the context of the entire food web, from their prey (zooplankton) to their predators (seabirds, marine mammals, larger fish) and fisheries [
+  <a rid="pone.0196307.ref001" ref-type="bibr" href="#pone.0196307.ref001">1</a>, 
+  <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>, 
+  <a rid="pone.0196307.ref005" ref-type="bibr" href="#pone.0196307.ref005">5</a>, 
+  <a rid="pone.0196307.ref008" ref-type="bibr" href="#pone.0196307.ref008">8</a>, 
+  <a rid="pone.0196307.ref046" ref-type="bibr" href="#pone.0196307.ref046">46</a>]. In EwE, Ecopath creates, using the principle of mass balance, a static food web model that forms the basis for the calculation of various ecological metrics and dynamic ecosystem simulations in Ecosim [
+  <a rid="pone.0196307.ref047" ref-type="bibr" href="#pone.0196307.ref047">47</a>]. The latter projects the Ecopath model forward to investigate effects of top-down and bottom-up forcing, as well as fishing pressure, on food web structure and function.
+ </p>
+ <sec id="sec003" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecopath model</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">All analyses were conducted using the Ecopath model of northern British Columbia waters described in [
+   <a rid="pone.0196307.ref022" ref-type="bibr" href="#pone.0196307.ref022">22</a>]. Three separate herring stocks, i.e., Haida Gwaii (HG), Prince Rupert (PRD) and Central Coast (CC), were covered together in this model. To better align our model outputs with those of the integrated statistical catch-at-age model (ISCAM) used for herring stock assessments in British Columbia [
+   <a rid="pone.0196307.ref014" ref-type="bibr" href="#pone.0196307.ref014">14</a>], our model’s total (adult + juvenile) herring biomass was slightly reduced to place it within the 95% confidence interval of the ISCAM total biomass estimate. Biomasses of humpback whales, dolphins and porpoises, seals and sea lions were therefore decreased to the highest values which satisfied Ecopath’s basic principle of mass balance given the reduced herring biomass, while remaining compatible with field survey results from northern British Columbia [
+   <a rid="pone.0196307.ref048" ref-type="bibr" href="#pone.0196307.ref048">48</a>, 
+   <a rid="pone.0196307.ref049" ref-type="bibr" href="#pone.0196307.ref049">49</a>] and southeast Alaska [
+   <a rid="pone.0196307.ref050" ref-type="bibr" href="#pone.0196307.ref050">50</a>]. The full parameters of this modified model are given in 
+   <a ref-type="supplementary-material" rid="pone.0196307.s002" href="#pone.0196307.s002">S2</a> and 
+   <a ref-type="supplementary-material" rid="pone.0196307.s003" href="#pone.0196307.s003">S3</a> Files.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Unlike many previous ecosystem models used to simulate effects of forage fish fisheries on predator populations [
+   <a rid="pone.0196307.ref051" ref-type="bibr" href="#pone.0196307.ref051">51</a>], our model contains separate functional groups for two large forage fish (herring and eulachon 
+   <span class="italic">Thaleichthys pacificus</span>), with only several smaller species (Pacific sandlance 
+   <span class="italic">Ammodytes hexapterus</span>, capelin 
+   <span class="italic">Mallotus villosus</span> and small smelts) aggregated in a single “forage fish” group [
+   <a rid="pone.0196307.ref022" ref-type="bibr" href="#pone.0196307.ref022">22</a>]. Furthermore, to account for the complex effects of trophic ontogeny and size-selective predation on forage fish trophodynamics [
+   <a rid="pone.0196307.ref051" ref-type="bibr" href="#pone.0196307.ref051">51</a>, 
+   <a rid="pone.0196307.ref052" ref-type="bibr" href="#pone.0196307.ref052">52</a>], we separately modelled two herring age/size classes (adult and juvenile), linked by a Beverton-Holt stock-recruitment relationship [
+   <a rid="pone.0196307.ref022" ref-type="bibr" href="#pone.0196307.ref022">22</a>] using the Ecopath multi-stanza representation of age structure [
+   <a rid="pone.0196307.ref047" ref-type="bibr" href="#pone.0196307.ref047">47</a>]. Most predators in our model consume more adult than juvenile herring biomass [
+   <a rid="pone.0196307.ref022" ref-type="bibr" href="#pone.0196307.ref022">22</a>], which restricts the effect that size-selective predation on juveniles has on interactions between herring and its predators.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The relative herring biomass flux to each predator, i.e., the proportion of total herring consumption by predators attributable to each predatory functional group, is shown in 
+   <a ref-type="fig" rid="pone.0196307.g003" href="#pone.0196307.g003">Fig 3</a>. A preliminary estimate of the dependence of each predator on herring compared to other forage fish and euphausiids can be obtained from the model diet composition matrix (
+   <a ref-type="fig" rid="pone.0196307.g004" href="#pone.0196307.g004">Fig 4</a>). We hypothesized that predators with diets including ≥ 20% herring (i.e., dolphins and porpoises, humpback whales, seals, and Pacific hake 
+   <span class="italic">Merluccius productus</span>) would be particularly vulnerable to herring biomass changes, and used this as one criterion to explore ecosystem impacts of herring fisheries.
+  </p>
+  <div id="pone.0196307.g003" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0196307.g003</span>
+   <span class="label">Fig 3</span>
+   <div class="caption">
+    <div class="title">Proportions of total herring consumption by predators attributable to each predator in the Ecopath model.</div>
+   </div>
+   <div xlink:href="pone.0196307.g003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <div id="pone.0196307.g004" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0196307.g004</span>
+   <span class="label">Fig 4</span>
+   <div class="caption">
+    <div class="title">Proportions of herring, other forage fish (except eulachon) and euphausiids in selected predator diets from the Ecopath model.</div>
+   </div>
+   <div xlink:href="pone.0196307.g004" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </sec>
+ <sec id="sec004" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Ecosim dynamic simulations</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">An Ecosim scenario with no herring fishery (
+   <span class="italic">F</span> = 0) for 100 years was used as a baseline to investigate fishing impacts. To simulate the effects of herring stock collapse on functional group biomasses and food web structure, we ran an Ecosim scenario applying an extreme, constant fishing mortality rate (
+   <span class="italic">F</span> = 2.4) to all herring fisheries for 100 years. 
+   <span class="italic">F</span> for all other fisheries remained at Ecopath baseline levels. To reproduce realistic patterns of potential ecosystem change, control for effects of top-down and bottom-up forcing and reproduce natural herring population fluctuations, as recommended in [
+   <a rid="pone.0196307.ref046" ref-type="bibr" href="#pone.0196307.ref046">46</a>], we employed time series (
+   <a ref-type="supplementary-material" rid="pone.0196307.s004" href="#pone.0196307.s004">S4 File</a>) based on those introduced in [
+   <a rid="pone.0196307.ref012" ref-type="bibr" href="#pone.0196307.ref012">12</a>]. Time series driving projected future whale recovery were deactivated in one of the two Ecosim runs per scenario to examine the effects of herring depletion on humpback, blue (
+   <span class="italic">Balaenoptera musculus</span>), fin (
+   <span class="italic">B</span>. 
+   <span class="italic">physalus</span>), sei (
+   <span class="italic">B</span>. 
+   <span class="italic">borealis</span>) and sperm (
+   <span class="italic">Physeter macrocephalus</span>) whale biomasses. Stochastic interannual variability in phytoplankton biomass was represented by Monte Carlo resampling of values for each simulated year from a time series stretching from 1950 to 2000 [
+   <a rid="pone.0196307.ref053" ref-type="bibr" href="#pone.0196307.ref053">53</a>].
+  </p>
+ </sec>
+ <sec id="sec005" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">EwE management strategy evaluation (MSE) simulations</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">EwE includes a management strategy evaluation (MSE) module designed to investigate effects of harvest-control-rule (HCR) types, defined by biomass limit (
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub>) and target fishing mortality rate (
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub>) reference points, on target fish stocks and entire food webs. A classical MSE analysis [
+   <a rid="pone.0196307.ref054" ref-type="bibr" href="#pone.0196307.ref054">54</a>, 
+   <a rid="pone.0196307.ref055" ref-type="bibr" href="#pone.0196307.ref055">55</a>] involves a closed-loop simulation of both human (i.e., assessment and management) and ecological subsystems affecting management strategy performance. Its objective, not pursued in most stock assessment models [
+   <a rid="pone.0196307.ref056" ref-type="bibr" href="#pone.0196307.ref056">56</a>], is to comparatively evaluate the performance of different strategies against a chosen set of quantitative metrics reflecting single-species, ecological and/or socioeconomic criteria.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Several studies have employed MSE simulations within food web models built in EwE [
+   <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>], Atlantis [
+   <a rid="pone.0196307.ref057" ref-type="bibr" href="#pone.0196307.ref057">57</a>], or OSMOSE [
+   <a rid="pone.0196307.ref058" ref-type="bibr" href="#pone.0196307.ref058">58</a>] to evaluate potential EBFM strategies. While the EwE MSE module was not intended to constitute a full MSE of the kind recommended [
+   <a rid="pone.0196307.ref018" ref-type="bibr" href="#pone.0196307.ref018">18</a>, 
+   <a rid="pone.0196307.ref055" ref-type="bibr" href="#pone.0196307.ref055">55</a>] for addressing EBFM (as it lacks full assessment and management subsystem simulations), it contains the essential elements of all subsystems and the entire MSE methodology. Furthermore, its direct link to a food web model and ability to emulate stochastic stock assessment error render it a promising tool for EBFM analysis. For instance, this module was employed by the Lenfest Forage Fish Task Force [
+   <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>] to search for precautionary EBFM strategies for forage fish fisheries in coastal food webs. The authors concluded that strategies based on low 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> and high 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> combined with a hockey-stick HCR had lowest impacts on predator biomasses and thus were most precautionary. MSE has also been applied to British Columbia herring fisheries within a single-species framework, largely supporting the current management strategy [
+   <a rid="pone.0196307.ref033" ref-type="bibr" href="#pone.0196307.ref033">33</a>, 
+   <a rid="pone.0196307.ref036" ref-type="bibr" href="#pone.0196307.ref036">36</a>, 
+   <a rid="pone.0196307.ref037" ref-type="bibr" href="#pone.0196307.ref037">37</a>]. In the latter [
+   <a rid="pone.0196307.ref014" ref-type="bibr" href="#pone.0196307.ref014">14</a>], 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> = 0.25
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub>, where 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> = unfished biomass. If stock biomass 
+   <span class="italic">B</span> &lt; 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub>, 
+   <span class="italic">F</span> = 0 (the fishery is closed). Typically if 
+   <span class="italic">B</span> ≥ 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub>, 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 0.2, but management officials may recommend 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 0.1 in response to requests for greater precaution from scientists or aboriginal groups. In our EwE MSE simulations, 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> = total herring biomass produced by an Ecosim run in which 
+   <span class="italic">F</span> = 0 for 1000 years (2.7 t/km
+   <span class="sup">2</span>).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The EwE MSE module allows users to specify whether each modelled fishery is managed using output (e.g., quotas) or input (e.g., limited entry) controls. All our scenarios used quotas to replicate current Northeast Pacific herring fisheries management, such that the modelled herring fishery each year is based on a simulated stock assessment which estimates biomass to set the quota. Stochastic stock assessment error for each target functional group (in this case, adult herring) was simulated within the EwE MSE by Monte Carlo resampling of biomass estimates from a normal distribution centered on the modelled biomass and characterized by a chosen coefficient of variation (CV). As a tradeoff between allowing realistic biomass uncertainties in stock assessments and avoiding software crashes, we set CV = 0.3 for adult herring and CV = 0 for all other groups. Each EwE MSE scenario run was repeated 100 times for this herring biomass resampling and lasted 100 simulated years.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The EwE MSE module permits researchers to investigate the ecological impacts of various management strategies, here defined by three HCR types (constant 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub>, step, and hockey-stick) and the values of three reference points for target fish stocks: 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub>, 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> and 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">Ftarget</span>
+   </sub>, the biomass at which 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> is reached (
+   <a ref-type="fig" rid="pone.0196307.g005" href="#pone.0196307.g005">Fig 5</a>). All EwE MSE scenarios investigated in this study are shown in 
+   <a ref-type="fig" rid="pone.0196307.g006" href="#pone.0196307.g006">Fig 6</a> and 
+   <a rid="pone.0196307.t001" ref-type="table" href="#pone.0196307.t001">Table 1</a>, classified by their HCR types and 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub>, 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> and 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">Ftarget</span>
+   </sub> values. We compared constant 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> with both the step HCR currently used in British Columbia herring management [
+   <a rid="pone.0196307.ref014" ref-type="bibr" href="#pone.0196307.ref014">14</a>] and the hockey-stick HCR found to be precautionary by the Lenfest Forage Fish Task Force [
+   <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>]. The complex step + hockey-stick HCR [
+   <a rid="pone.0196307.ref059" ref-type="bibr" href="#pone.0196307.ref059">59</a>] employed to manage herring fisheries in neighbouring southeast Alaska (
+   <a ref-type="fig" rid="pone.0196307.g001" href="#pone.0196307.g001">Fig 1</a>), cannot be simulated by the EwE MSE module.
+  </p>
+  <div id="pone.0196307.g005" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0196307.g005</span>
+   <span class="label">Fig 5</span>
+   <div class="caption">
+    <div class="title">Constant 
+     <span class="italic">F</span>
+     <sub>
+      <span class="italic">target</span>
+     </sub>, step and hockey-stick harvest-control rules for target fishing mortality rate 
+     <span class="italic">F</span>
+     <sub>
+      <span class="italic">target</span>
+     </sub> = 0.2.
+    </div>
+   </div>
+   <div xlink:href="pone.0196307.g005" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <div id="pone.0196307.g006" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0196307.g006</span>
+   <span class="label">Fig 6</span>
+   <div class="caption">
+    <div class="title">The management strategy evaluation scenarios classified by harvest-control-rule type, 
+     <span class="italic">F</span>
+     <sub>
+      <span class="italic">target</span>
+     </sub> and 
+     <span class="italic">B</span>
+     <sub>
+      <span class="italic">lim</span>
+     </sub>.
+    </div>
+   </div>
+   <div xlink:href="pone.0196307.g006" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <div id="pone.0196307.t001" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0196307.t001</span>
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <div class="title">EwE MSE scenarios and their parameter values.</div>
+    <p>Scenario codes are explained in the text.</p>
+   </div>
+   <div class="alternatives">
+    <div id="pone.0196307.t001g" xlink:href="pone.0196307.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <table frame="hsides" rules="groups">
+     <colgroup span="1">
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+      <col align="left" valign="middle" span="1"/>
+     </colgroup>
+     <thead>
+      <tr>
+       <th align="left" rowspan="1" colspan="1">Scenario</th>
+       <th align="left" rowspan="1" colspan="1">Fisheries</th>
+       <th align="left" rowspan="1" colspan="1">HCR</th>
+       <th align="left" rowspan="1" colspan="1">
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">lim</span>
+        </sub>
+       </th>
+       <th align="left" rowspan="1" colspan="1">
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">Ftarget</span>
+        </sub>
+       </th>
+       <th align="left" rowspan="1" colspan="1">
+        <span class="italic">F</span>
+        <sub>
+         <span class="italic">target</span>
+        </sub>
+       </th>
+       <th align="left" rowspan="1" colspan="1">PP years</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">Base</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">None</td>
+       <td align="left" rowspan="1" colspan="1">constant</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">SOK</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">SOK</td>
+       <td align="left" rowspan="1" colspan="1">constant</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">0.01</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">K</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">constant</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">0</td>
+       <td align="left" rowspan="1" colspan="1">0.1, 0.2</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">s</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">step</td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">s1</span>
+        </sub>)
+        <span class="break"/>0.40
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">s2</span>
+        </sub>)
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>,
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">s1</span>
+        </sub>)
+        <span class="break"/>0.40
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">s2</span>
+        </sub>)
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.4</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">e</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">step</td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">e1</span>
+        </sub>)
+        <span class="break"/>0.40
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">e2</span>
+        </sub>)
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">e2</span>
+        </sub>)
+        <span class="break"/>0.40
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+        <span class="break"/>(
+        <span class="italic">MSY</span>
+        <sub>
+         <span class="italic">e2</span>
+        </sub>)
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.6</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">LF1</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">step</td>
+       <td align="left" rowspan="1" colspan="1">0.40
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.40
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.1, 0.2</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">LF2</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">hockey</td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.95
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.1, 0.2</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">LF3</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">hockey</td>
+       <td align="left" rowspan="1" colspan="1">0.40
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.95
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.1, 0.2</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">BC</span>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">step</td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.1, 0.2</td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">BC</span>
+        <sub>
+         <span class="italic">0</span>.
+         <span class="italic">75</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">step</td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.2</td>
+       <td align="left" rowspan="1" colspan="1">No good</td>
+      </tr>
+      <tr>
+       <td align="left" rowspan="1" colspan="1">
+        <span class="italic">BC</span>
+        <sub>
+         <span class="italic">0</span>.
+         <span class="italic">25</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">All</td>
+       <td align="left" rowspan="1" colspan="1">step</td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.25
+        <span class="italic">B</span>
+        <sub>
+         <span class="italic">0</span>
+        </sub>
+       </td>
+       <td align="left" rowspan="1" colspan="1">0.2</td>
+       <td align="left" rowspan="1" colspan="1">Only bad</td>
+      </tr>
+     </tbody>
+    </table>
+   </div>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">EBFM requires setting precautionary values for reference points such as 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> and 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub>. Proposed precautionary strategies include setting 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> &lt; 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">MSY</span>
+   </sub>, the fishing mortality rate producing maximum sustainable yield [
+   <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>, 
+   <a rid="pone.0196307.ref003" ref-type="bibr" href="#pone.0196307.ref003">3</a>]. This is noteworthy given that according to both the reformed EU Common Fisheries Policy (CFP) of 2013 and the US Magnuson-Stevens Act (MSA), 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">MSY</span>
+   </sub>. However, individual European stocks (e.g. Norwegian spring-spawning herring) may be managed with precautionary hockey-stick HCRs in which 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">MSY</span>
+   </sub> is the maximum possible 
+   <span class="italic">F</span> [
+   <a rid="pone.0196307.ref060" ref-type="bibr" href="#pone.0196307.ref060">60</a>], while the US MSA prescribes 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> &lt; 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">MSY</span>
+   </sub> if ecological and/or socioeconomic concerns exist. Ecosystem modelling studies have also proposed setting forage fish 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> ≥ 0.4
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> [
+   <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>] or ≥ 0.25
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> [
+   <a rid="pone.0196307.ref003" ref-type="bibr" href="#pone.0196307.ref003">3</a>], while a global analysis of field data suggested seabird populations alone require 0.33
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> to prevent declines [
+   <a rid="pone.0196307.ref004" ref-type="bibr" href="#pone.0196307.ref004">4</a>].
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">We examined a set of EwE MSE scenarios based on constant 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub>, step or hockey-stick HCRs (
+   <a ref-type="fig" rid="pone.0196307.g006" href="#pone.0196307.g006">Fig 6</a>, 
+   <a rid="pone.0196307.t001" ref-type="table" href="#pone.0196307.t001">Table 1</a>). The constant 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> scenarios investigated were 
+   <span class="italic">K</span>, all commercial herring fisheries (i.e., roe, food and bait and spawn-on-kelp), and 
+   <span class="italic">SOK</span>, commercial spawn-on-kelp fishery only. Aboriginal SOK FSC fisheries were included in all scenarios. For 
+   <span class="italic">K</span>, 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 0.1 or 0.2 (minimum and maximum values used in British Columbia and Alaska), whereas for 
+   <span class="italic">SOK</span>, 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 0.01 (estimated maximum incidental mortality in SOK fisheries). The step scenarios were 
+   <span class="italic">BC</span> (
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> = 0.25
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub>), the strategy used in British Columbia herring fisheries [
+   <a rid="pone.0196307.ref014" ref-type="bibr" href="#pone.0196307.ref014">14</a>]; 
+   <span class="italic">LF1</span> (
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> = 0.40
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub>), recommended as precautionary by the Lenfest Forage Fish Task Force [
+   <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>]; and two maximum sustainable yield strategies, 
+   <span class="italic">MSY</span>
+   <sub>
+    <span class="italic">s</span>
+   </sub> and 
+   <span class="italic">MSY</span>
+   <sub>
+    <span class="italic">e</span>
+   </sub> (
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> = 0.25
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> or 0.40
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> and 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">MSY</span>
+   </sub>). 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">MSY</span>
+   </sub> ≈ 0.4 for single-species MSY (
+   <span class="italic">MSY</span>
+   <sub>
+    <span class="italic">s</span>
+   </sub>) and 0.6 for ecosystem-based MSY (
+   <span class="italic">MSY</span>
+   <sub>
+    <span class="italic">e</span>
+   </sub>), respectively [
+   <a rid="pone.0196307.ref044" ref-type="bibr" href="#pone.0196307.ref044">44</a>], are derived from the EwE MSY estimation tool (
+   <a ref-type="fig" rid="pone.0196307.g007" href="#pone.0196307.g007">Fig 7</a>). For two hockey-stick scenarios, 
+   <span class="italic">LF2</span> and 
+   <span class="italic">LF3</span>, also suggested as precautionary by the Task Force [
+   <a rid="pone.0196307.ref002" ref-type="bibr" href="#pone.0196307.ref002">2</a>], 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">lim</span>
+   </sub> = 0.25
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub> and 0.40
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub>, respectively, and 
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">Ftarget</span>
+   </sub> = 0.95
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub>. For the 
+   <span class="italic">BC</span> and 
+   <span class="italic">LF1-LF3</span> scenarios, 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 0.1 or 0.2, as in British Columbia and Alaska herring fisheries.
+  </p>
+  <div id="pone.0196307.g007" orientation="portrait" position="float" class="fig" xmlns="http://www.w3.org/1999/xhtml">
+   <span pub-id-type="doi" class="object-id">10.1371/journal.pone.0196307.g007</span>
+   <span class="label">Fig 7</span>
+   <div class="caption">
+    <div class="title">The two MSY estimates for adult herring derived from the EwE model.</div>
+    <p>Single-species MSY
+     <sub>s</sub> and ecosystem-based MSY
+     <sub>e</sub> alike were obtained from the EwE MSY estimation tool.
+    </p>
+   </div>
+   <div xlink:href="pone.0196307.g007" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+  <p xmlns="http://www.w3.org/1999/xhtml">To comparatively evaluate management strategy performance and resulting ecosystem states, we employed several metrics and indicators, including functional group biomasses of herring and its predators, prey and competitors; mean and maximum herring catches; probabilities of herring fishery closure (
+   <span class="italic">F</span> = 0) and stock collapse (
+   <span class="italic">B</span> &lt; 0.05
+   <span class="italic">B</span>
+   <sub>
+    <span class="italic">0</span>
+   </sub>); and the mean trophic level (
+   <span class="italic">MTL</span>) and Shannon-Wiener 
+   <span class="italic">H’</span> biodiversity index of the food web (functional groups replaced species in 
+   <span class="italic">MTL</span> and 
+   <span class="italic">H’</span> calculations).
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">These metrics were computed from functional group biomass and herring catch distributions generated by the EwE MSE module. Distribution grand means were evaluated for each management strategy relative to a baseline scenario (
+   <span class="italic">Base</span>, constant herring 
+   <span class="italic">F</span>
+   <sub>
+    <span class="italic">target</span>
+   </sub> = 0) by averaging over 100 Monte Carlo runs, each lasting 100 simulated years. Grand means minus 0.675 standard deviations (μ—0.675σ) were used to express risks associated with each scenario, i.e., the potential ecosystem impacts of low primary productivity combined with herring stock assessment error. Confidence intervals of twice the standard error (± 2SE) were employed to search for differences in group biomasses among scenarios as well as between the baseline scenario and each management strategy.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Time series driving primary productivity and whale recovery in Ecosim were used identically in all EwE MSE simulations described above. However, to investigate the potential performance of the 
+   <span class="italic">BC</span> management strategy under climate change or oceanographic regime shifts, two additional scenarios with associated phytoplankton biomass time series (
+   <span class="italic">BC</span>
+   <sub>
+    <span class="italic">0</span>.
+    <span class="italic">75</span>
+   </sub> and 
+   <span class="italic">BC</span>
+   <sub>
+    <span class="italic">0</span>.
+    <span class="italic">25</span>
+   </sub>) were prepared. 
+   <span class="italic">BC</span>
+   <sub>
+    <span class="italic">0</span>.
+    <span class="italic">75</span>
+   </sub> only resampled values from below the third quartile of the historical [
+   <a rid="pone.0196307.ref053" ref-type="bibr" href="#pone.0196307.ref053">53</a>] phytoplankton data distribution (“no good productivity years”), while 
+   <span class="italic">BC</span>
+   <sub>
+    <span class="italic">0</span>.
+    <span class="italic">25</span>
+   </sub> only included values from below the first quartile (“only bad productivity years”).
+  </p>
+ </sec>
+ <sec id="sec006" class="sec">
+  <div class="title" xmlns="http://www.w3.org/1999/xhtml">Model and parameter uncertainty</div>
+  <p xmlns="http://www.w3.org/1999/xhtml">While EwE MSE simulations incorporate uncertainty by representing stock assessment error and interannual variability in primary productivity through Monte Carlo resampling, our analyses, as with all complex simulations, suffer from both model and parameter uncertainty.</p>
+  <p xmlns="http://www.w3.org/1999/xhtml">The Ecopath model represents the relationship between functional group biomass and non-predation-related natural mortality linearly. For groups characterized by high density-dependent mortality, a quadratic representation may better capture control mechanisms in predator-prey interactions and propagation of bottom-up effects through the food web [
+   <a rid="pone.0196307.ref061" ref-type="bibr" href="#pone.0196307.ref061">61</a>], but the requisite empirical data are difficult to obtain. The current model also does not represent non-consumptive, fear-mediated [
+   <a rid="pone.0196307.ref062" ref-type="bibr" href="#pone.0196307.ref062">62</a>] top-down effects of top predators (e.g., large demersal sharks) on mesopredators (e.g., seals), with cascading positive effects on prey (e.g., herring). Such effects could be modelled using trophic mediation functions; however, the quantitative data needed for an accurate representation are not yet available. The lack of explicit age structure for most predatory fish (except Pacific halibut 
+   <span class="italic">Hippoglossus stenolepis</span>) in the present model precludes examining the effects of their trophic ontogeny on herring ecology [
+   <a rid="pone.0196307.ref009" ref-type="bibr" href="#pone.0196307.ref009">9</a>, 
+   <a rid="pone.0196307.ref051" ref-type="bibr" href="#pone.0196307.ref051">51</a>, 
+   <a rid="pone.0196307.ref052" ref-type="bibr" href="#pone.0196307.ref052">52</a>], but our moderately detailed model should be sufficient to meet the goals of this study.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Ecosim assumes stock-recruitment relationships for all forage fish, which has been questioned [
+   <a rid="pone.0196307.ref051" ref-type="bibr" href="#pone.0196307.ref051">51</a>]. However, the authors of this study admit that in the absence of such relationships, predators could still be affected by declines in forage fish standing stocks due to fishing. Another recent study [
+   <a rid="pone.0196307.ref052" ref-type="bibr" href="#pone.0196307.ref052">52</a>] suggests that an absence of stock-recruitment relationships in predatory fish (also assumed by Ecosim) could buffer them against forage fish depletion, but its authors concede that predator-prey recruitment covariation due to common bottom-up drivers in shared nursery areas could counteract this effect.
+  </p>
+  <p xmlns="http://www.w3.org/1999/xhtml">Uncertainty in base Ecopath parameter (
+   <span class="italic">B</span>, 
+   <span class="italic">P/B</span> and 
+   <span class="italic">Q/B</span>) values and the model diet composition matrix (
+   <a ref-type="supplementary-material" rid="pone.0196307.s001" href="#pone.0196307.s001">S1 File</a>) may affect simulation results, but could be remedied in future studies by Monte Carlo resampling of parameter values. Low functional group resolution (particularly for seabirds and zooplankton) in the current model may obscure important predator-prey interactions (
+   <a ref-type="supplementary-material" rid="pone.0196307.s001" href="#pone.0196307.s001">S1 File</a>), but will be enhanced in future model versions [
+   <a rid="pone.0196307.ref022" ref-type="bibr" href="#pone.0196307.ref022">22</a>]. Sensitivity analyses (
+   <a ref-type="supplementary-material" rid="pone.0196307.s001" href="#pone.0196307.s001">S1 File</a>) showed that Ecosim and EwE MSE results are quite robust to uncertainty in Ecosim vulnerability parameters.
+  </p>
+ </sec>
+</sec>

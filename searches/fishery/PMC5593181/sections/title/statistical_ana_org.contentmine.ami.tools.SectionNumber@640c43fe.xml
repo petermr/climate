@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="sec005" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Prior to any inference about abundance trends, the catch data were subject to a standardization procedure in order to account for potential biases, such as spatial and temporal dynamics in effort allocation, fishing behavior and tactics, and species composition [
+  <a rid="pone.0184776.ref015" ref-type="bibr" href="#pone.0184776.ref015">15</a>,
+  <a rid="pone.0184776.ref016" ref-type="bibr" href="#pone.0184776.ref016">16</a>]. Our standardization procedure primarily relied on Generalized Additive Models (GAMs) to standardize the catch and effort data reported by guides. GAMs have been used in various studies to standardize CPUE [
+  <a rid="pone.0184776.ref016" ref-type="bibr" href="#pone.0184776.ref016">16</a>,
+  <a rid="pone.0184776.ref046" ref-type="bibr" href="#pone.0184776.ref046">46</a>,
+  <a rid="pone.0184776.ref047" ref-type="bibr" href="#pone.0184776.ref047">47</a>], and are especially useful for incorporating multi-tactic spatial effects (e.g., changing fishing gear preference across space; [
+  <a rid="pone.0184776.ref016" ref-type="bibr" href="#pone.0184776.ref016">16</a>]), exploring non-linear relationships [
+  <a rid="pone.0184776.ref048" ref-type="bibr" href="#pone.0184776.ref048">48</a>] and identifying ecological thresholds [
+  <a rid="pone.0184776.ref049" ref-type="bibr" href="#pone.0184776.ref049">49</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">A GAM is a semi-parametric extension of the generalized linear model that includes a linear predictor involving the sum of smooth functions of covariates [
+  <a rid="pone.0184776.ref050" ref-type="bibr" href="#pone.0184776.ref050">50</a>]. The GAMs were performed following a two-stage approach on two key response variables: CATCH (monthly number of bonefish caught by guides) and PTRIPS or the proportion of positive trips with a bonefish catch. PTRIPS was then the calculated as the monthly proportion of trips with a bonefish catch out of all fishing trips reported by guides that month (i.e., number of trips that kept or release bonefish / total number of trips). PTRIPS was a metric of catch success based on all trips (i.e., species presence-absence), including trips that targeted bonefish and trips that targeted other species than bonefish, that allowed for the identification of mechanisms that determine the occurrence of species independently of abundance dynamics [
+  <a rid="pone.0184776.ref051" ref-type="bibr" href="#pone.0184776.ref051">51</a>]. The catch GAM (CATCH
+  <sub>gam</sub>) was fitted using a log link function and negative binomial error distribution, while the proportion of positive trips GAM (PTRIPS
+  <sub>gam</sub>) was fitted using a log link function and a binomial error distribution. GAMs were assessed for zero-inflation (i.e., positively skewed data) and overdispersion [
+  <a rid="pone.0184776.ref051" ref-type="bibr" href="#pone.0184776.ref051">51</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">We fitted several continuous and categorical variables as potential explanatory factors in both GAM models. The continuous and categorical variables considered have been used in other standardization studies, and have been shown to be useful in controlling for CPUE variation associated with both effort and fishing dynamics [
+  <a rid="pone.0184776.ref016" ref-type="bibr" href="#pone.0184776.ref016">16</a>,
+  <a rid="pone.0184776.ref018" ref-type="bibr" href="#pone.0184776.ref018">18</a>,
+  <a rid="pone.0184776.ref052" ref-type="bibr" href="#pone.0184776.ref052">52</a>,
+  <a rid="pone.0184776.ref053" ref-type="bibr" href="#pone.0184776.ref053">53</a>]. To assess potential temporal thresholds (i.e., break-points and non-linear changes) in catch and occurrence, ‘Year’ (YR), ‘Month’, ‘Hours fished’ (HRSF) and ‘Number of fishermen’ (NFMEN) were included as continuous variables. HRSF and NFMEN were multiplied and considered as an intercept offset, which provides an advantage over using densities or rates (i.e., CPUE) as response variables, by limiting fitted variables and confidence intervals within positive values, and allowing for heterogeneity (i.e., different spread of fitted values) within a negative binomial distribution [
+  <a rid="pone.0184776.ref054" ref-type="bibr" href="#pone.0184776.ref054">54</a>]. The categorical variables ‘Area’, and ‘Season’ were included to account for spatiotemporal patterns. ‘Area’ described fishing areas 1–3 of Florida Bay (
+  <a ref-type="fig" rid="pone.0184776.g001" href="#pone.0184776.g001">Fig 1</a>). The factor ‘Season’, fitted as a random variable, described seasonal rainfall patterns in South Florida: ‘wet’ = June-November, and ‘dry’ = December-May.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Following the approach of Winker et al. [
+  <a rid="pone.0184776.ref016" ref-type="bibr" href="#pone.0184776.ref016">16</a>], continuous principal coordinates derived from a series of Principal Coordinates Analysis (PCOs) performed on the composition of the catch were also used as explanatory variables in GAMs (i.e., ‘Direct Principal Component’ or DPC procedure). The inclusion of PCOs from the catch composition matrix can help adjust for the effect of temporal variation in fishing tactics, which is a very common characteristic of multispecies fisheries [
+  <a rid="pone.0184776.ref016" ref-type="bibr" href="#pone.0184776.ref016">16</a>,
+  <a rid="pone.0184776.ref052" ref-type="bibr" href="#pone.0184776.ref052">52</a>], such as the recreational catch-and-release fishery in Florida Bay. This procedure is based on the assumption that information on the direction and extent of the targeted effort can be found in the species composition of the catch [
+  <a rid="pone.0184776.ref052" ref-type="bibr" href="#pone.0184776.ref052">52</a>]. This procedure also allows for controlling for complex interactions among the response variables and the abundance and occurrence of sympatric or allopatric species, and for potential variation in fishing behavior when working with multispecies fisheries data [
+  <a rid="pone.0184776.ref016" ref-type="bibr" href="#pone.0184776.ref016">16</a>,
+  <a rid="pone.0184776.ref052" ref-type="bibr" href="#pone.0184776.ref052">52</a>]. PCOs were performed separately based on the species catch structure (i.e., species catch Bray-Curtis dissimilarity matrix) and the proportion of species (i.e., species occurrence Bray-Curtis dissimilarity matrix) associated with the bonefish catch to allow for different ecological and angler-behavior effects influencing the variability in fishing tactics. Only the first two coordinates of each PCO were included in the GAMs.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Forward and backward procedures were then used to add variables to the CATCH and PTRIPS full models, and to obtain the most parsimonious GAMs (
+  <a ref-type="supplementary-material" rid="pone.0184776.s001" href="#pone.0184776.s001">S1</a>–
+  <a ref-type="supplementary-material" rid="pone.0184776.s004" href="#pone.0184776.s004">S4</a> Tables). First, explanatory variables and interaction terms were included if the percent of deviance explained by adding the factor exceeded 5% and the χ
+  <span class="sup">2</span> test was significant (p ≤ 0.05; [
+  <a rid="pone.0184776.ref018" ref-type="bibr" href="#pone.0184776.ref018">18</a>]). Then, the resulting model from this first step was simplified further by dropping terms in a step-wise manner, as indicated by a drop in the Akaike information criterion (AIC) relative to the previous model using the delta-AIC of less than 2 units as a selection rule [
+  <a rid="pone.0184776.ref055" ref-type="bibr" href="#pone.0184776.ref055">55</a>]. Once the set of the fixed explanatory variables and interaction terms was identified, the influence of the ‘Seasonal’ factor as a random variable was examined (using Generalized Additive Mixed Models). The interactions effects included in the models considered the influence of YR x Covariates interactions (i.e., YR x HRSF, YR x NFMEN, and YR x PCO). Season was included as a random variable since we were not interested in the variation as a function of specific seasonal events, but instead in overall seasonal heterogeneity [
+  <a rid="pone.0184776.ref056" ref-type="bibr" href="#pone.0184776.ref056">56</a>] as a function of distinct patterns of temperature and precipitation that influence tourism and related fishing activities (i.e., tournaments, guided trips), as well as the distributional patterns of bonefish within Florida Bay. If a mixed model was selected as the appropriate model structure (i.e., including season as a random variable/effect), we followed Zuur et al. [
+  <a rid="pone.0184776.ref054" ref-type="bibr" href="#pone.0184776.ref054">54</a>] to further simplify the mixed model with a backward selection procedure using AIC (
+  <a ref-type="supplementary-material" rid="pone.0184776.s004" href="#pone.0184776.s004">S4 Table</a>).
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">GAMs were applied in R [
+  <a rid="pone.0184776.ref057" ref-type="bibr" href="#pone.0184776.ref057">57</a>] with the package ‘mgcv’ [
+  <a rid="pone.0184776.ref058" ref-type="bibr" href="#pone.0184776.ref058">58</a>]. Cubic regression splines were used as the penalized smoothing basis (R code: bs = “cr”), and a tensor product interaction was used to assess the contribution of two-way interaction effects of different covariates (R code = ti). Based on diagnostic tests in the mgcv package (gam.check), we selected a maximum of 5 dimensions of the bases (R code: k = 5) to represent the smooth terms within the GAMs. In addition, to control for any overfitting of the smoothing terms estimated by the unbiased risk estimator (UBRE) criterion, a gamma value of 1.4 (γ = 1.4) was also included in the GAMs [
+  <a rid="pone.0184776.ref058" ref-type="bibr" href="#pone.0184776.ref058">58</a>].
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">In addition to the CATCH and PTRIPS models, the temporal trends in catch species richness and the proportion of trips that caught bonefish when bonefish were targeted (i.e., targeted catching success) were also assessed with GAMs. For the first variable, we assessed the richness of the catch for all trips that included bonefish. For the second variable, we used data from 1990–2014 since data on species targeted were collected beginning in 1990. These additional analyses were used to complement and validate bonefish relative abundance trends derived from the catch data and to further reveal changes in bonefishing behavior and effort patterns. Last, a breakpoint analysis was performed using the annual average fitted values from the CATCH
+  <sub>gam</sub> and PTRIPS
+  <sub>gam</sub> to identify the presence of drastic changes in the temporal trends of the bonefish annual catch and the proportion of positive fishing trips (i.e., quantify structural changes in the time series—[
+  <a rid="pone.0184776.ref059" ref-type="bibr" href="#pone.0184776.ref059">59</a>]). We used the breakpoint analysis of strucchange package in R, which uses maximum likelihood to identify structural changes in parametric models [
+  <a rid="pone.0184776.ref059" ref-type="bibr" href="#pone.0184776.ref059">59</a>,
+  <a rid="pone.0184776.ref060" ref-type="bibr" href="#pone.0184776.ref060">60</a>]. The breakpoint analysis employed in this study tests the hypothesis that regression coefficients remain constant against the alternative that at least one coefficient varies over time using a series of F statistics for all potential change points in an interval and rejecting the null hypothesis if any of those statistics get too large [
+  <a rid="pone.0184776.ref060" ref-type="bibr" href="#pone.0184776.ref060">60</a>].
+ </p>
+</sec>

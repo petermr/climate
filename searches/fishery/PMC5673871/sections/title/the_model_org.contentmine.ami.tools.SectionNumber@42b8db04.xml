@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="Sec3" class="sec">
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">The model</div>
+ <p id="Par11" xmlns="http://www.w3.org/1999/xhtml">The study makes use of a cellular automata model (
+  <span class="italic">CAb</span>: Cellular Automata biological model) covering biological growth and spatial and temporal distribution of the cod stock. This model is run together with an agent-based model (
+  <span class="italic">ABe</span>: Agent-Based economic model) defined within the same lattice, covering the economic exploitation of the stock. The flow chart of the combined 
+  <span class="italic">CAb</span>-
+  <span class="italic">ABe</span>-model and the connected 
+  <span class="italic">SinMod</span> model is shown in Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>. While the 
+  <span class="italic">SinMod</span> model (Slagstad et al. 
+  <a ref-type="bibr" rid="CR25" href="#CR25">2015</a>) is a 3D model with a temporal resolution of 6 h (or less), the 
+  <span class="italic">CAb</span> module is a 2D spatial model with time unit 1 month.
+  <div id="Fig1" class="fig">
+   <span class="label">Fig. 1</span>
+   <div class="caption">
+    <p>Model flow chart also indicating the one-way direction from the 
+     <span class="italic">SinMod</span> model to the 
+     <span class="italic">CAb</span>-
+     <span class="italic">ABe</span> model. The automatised management module processes information about the state of the fish stock (the grey arrow) and set quotas based on given exploitation rates
+    </p>
+   </div>
+   <div xlink:href="13280_2017_955_Fig1_HTML" id="MO1" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par12" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="italic">CAb</span> follows a normal set up with a uniform lattice of squared cells (80 × 80 km) with rules based on a Moore neighbourhood of range two. Each cell is defined in terms of geographical coordinates and the state variable of the cell is the cod biomass in the water column at the geographical position of the cell. Hence, the spatial distribution of the cod biomass at one point in time is given by the matrix of state variables in the lattice. According to the definition of Moore neighbourhoods (Hogeweg 
+  <a ref-type="bibr" rid="CR15" href="#CR15">1988</a>) the rules are given as the percentwise distribution of the mid cell of a 5 × 5 cells matrix into all the 25 cells (at range = 2). With a time unit of 1 month, the cod distribution is recalculated monthly on basis of the current state variables, month-specific rules and the cell-specific growth properties. Biomass within each cell grows linearly towards the environmental carrying capacity level at which local stock collapse occurs so that only the fractional part of the biomass is left (while standardising the carrying capacity level to one). The natural mortality in the model is mainly covered by these local collapses, depending on monthly variation in carrying capacity levels and biomass levels in each cell after redistribution of biomass and biomass growth.
+ </p>
+ <p id="Par13" xmlns="http://www.w3.org/1999/xhtml">In Fig. 
+  <a rid="Fig1" ref-type="fig" href="#Fig1">1</a>, two arrows from 
+  <span class="italic">SinMod</span> point into the fish stock box in the 
+  <span class="italic">CAb</span>-
+  <span class="italic">ABe</span>-module, representing the two datasets of monthly average ocean temperatures of each cell at 50-metre depth and the monthly biomass of small zooplankton species contained in each cell’s water column. In addition to these two datasets, 
+  <span class="italic">SinMod</span> also provides bathymetric data which by nature are fixed for the considered time period. The 
+  <span class="italic">SinMod</span> time series utilised in this study covers the 45-year period 2012–2057 aggregated to monthly intervals. 
+  <span class="italic">SinMod</span> data have in this study been converted from its original grid resolution of 20 km times 20 km to the 
+  <span class="italic">CAb</span>-
+  <span class="italic">ABe</span> model resolution of 80 km times 80 km (see Eide 
+  <a ref-type="bibr" rid="CR9" href="#CR9">2014</a> for further details).
+ </p>
+ <p id="Par14" xmlns="http://www.w3.org/1999/xhtml">Information on spatial distribution of NEA cod for the period 2004–2010 has been provided through the 
+  <span class="italic">FishExChange</span> project
+  <a ref-type="fn" rid="Fn1" href="#Fn1">1</a> by courtesy of the project staff. Catches in the database are registered on a quarterly basis while two surveys are carried out each year, 
+  <span class="italic">winter</span> survey (during April/May) and 
+  <span class="italic">ecosystem</span> survey (during August/September). Age-structured data from these data sources have been aggregated for the purpose of parameterising the 
+  <span class="italic">CAb</span>-
+  <span class="italic">ABe</span> model. Registered catches and survey data have been spatially interpolated by Radial Basis Function interpolation (Myers 
+  <a ref-type="bibr" rid="CR19" href="#CR19">1994</a>) followed by integration of the interpolated biomass surface. The integration has been performed over a geographic grid drawn as an equal size Lambert Azimuthal projection (corresponding to the projection used in the 
+  <span class="italic">SinMod</span> model with origin coordinates in 60°N, 58°E).
+ </p>
+ <p id="Par16" xmlns="http://www.w3.org/1999/xhtml">The data sample from the period 2004 to 2010 was considered to represent the current environmental situation, rather than reflecting ongoing changes in climate. There are several reasons for this. The period is rather short and the datasets, although displaying significant variations in the distributional patterns, do not show any significant trends or systematic changes. The seasonal variations are extreme but the seasonal biomass centres of gravity are almost identical each year during the period. In terms of weighted biomass distances for each quarter during the time period from a given geographical point (in the calculations the coordinates of Tromsø was chosen), cluster analyses did not reveal any systematic changes and different years constituted the main cluster for each of the four quarters.</p>
+ <p id="Par17" xmlns="http://www.w3.org/1999/xhtml">Based on this, the data sample was considered as a representative distribution related to the current climatic conditions. The average monthly spatial distributions of NEA cod stock biomasses during the period 2004–2010 were found by merging the different sources of information relevant for each month as explained in Eide (
+  <a ref-type="bibr" rid="CR9" href="#CR9">2014</a>). Resulting distributional maps for each month are shown in Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>. All modifications made on the raw data received from 
+  <span class="italic">SinMod</span> and 
+  <span class="italic">FishExchanges</span> are made publicly available through UiT Open Research Data.
+  <a ref-type="fn" rid="Fn2" href="#Fn2">2</a>
+  <div id="Fig2" class="fig">
+   <span class="label">Fig. 2</span>
+   <div class="caption">
+    <p>Monthly NEA cod distribution charts and cells of gravitation centres of biomasses, blue cells from the integrated biomass data from 2004 to 2010 and red cells corresponding model outputs. The two charts to the right provide the annual sample of monthly gravitation centres for the empirical observations (blue) and the model representation</p>
+   </div>
+   <div xlink:href="13280_2017_955_Fig2_HTML" id="MO2" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par19" xmlns="http://www.w3.org/1999/xhtml">Spatial and temporal distributions of the NEA cod environmental carrying capacity levels for each scenario have been estimated on the basis of constraining physical and biological factors in addition to the observed distributional patterns (Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>). The NEA cod distribution as assumed to be constrained to ocean depths less than thousand metres and ocean temperatures higher than −1.5 °C (the monthly average at 50 m depths) (Eide 
+  <a ref-type="bibr" rid="CR9" href="#CR9">2014</a>). In addition, a cell’s environmental carrying capacity is reduced by 80 % when small zooplankton densities fall below 2 g carbon per square metre, considering the density of small zooplankton being a proxy for food availability in the area.
+ </p>
+ <p id="Par20" xmlns="http://www.w3.org/1999/xhtml">Monthly estimated current carrying capacities are then modified according to 
+  <span class="italic">SinMod</span> datasets of bathymetry, temperatures and zooplankton biomasses over the simulation period, representing the changes in environmental carrying capacities corresponding to the A1B scenario. As stochastic element is added to estimated environmental carrying capacities. As the mean deviation of the carrying capacity of each cell varies between 20 and 30 % (following the seasonal pattern of cod availability) during the period of observations (2004–2010), a normally distributed stochastic element with a mean value of one and a standard deviation of 10 % is assumed. The stochastic element also serves to establish the zero scenario monthly carrying capacities, repeating the current climate with the minor perturbations caused by the stochastic process.
+ </p>
+ <p id="Par21" xmlns="http://www.w3.org/1999/xhtml">Figure 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3</a> displays the total NEA cod environmental carrying capacity anomalies of the two scenarios throughout the simulation period. The A1B scenario is essentially as presented in Eide (
+  <a ref-type="bibr" rid="CR9" href="#CR9">2014</a>) while the zero scenario is defined as repeated sequences of the first 6 years of the A1B scenario which is presented in Eide (
+  <a ref-type="bibr" rid="CR9" href="#CR9">2014</a>, 
+  <a ref-type="bibr" rid="CR10" href="#CR10">2016</a>). Both the zero and the A1B scenario show ±10 % fluctuations related to the base year (2012), while the A1B scenario (upper panel in Fig. 
+  <a rid="Fig3" ref-type="fig" href="#Fig3">3</a>) in the mid 2030s displays a shift upwards, resulting in almost a 10 % increase in carrying capacity compared with the base year.
+  <div id="Fig3" class="fig">
+   <span class="label">Fig. 3</span>
+   <div class="caption">
+    <p>Monthly aggregates of normalised (base year 2012) carrying capacities for NEA cod based on initial distribution data from the 
+     <span class="italic">FishExChange</span> project (2004–2010). The upper panel shows the carrying capacity development over the period when utilising data from the 
+     <span class="italic">SinMod</span> A1B simulations while the lower panel shows the corresponding zero scenario, repeating the environmental conditions of the first 6 years throughout the simulation period
+    </p>
+   </div>
+   <div xlink:href="13280_2017_955_Fig3_HTML" id="MO3" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par22" xmlns="http://www.w3.org/1999/xhtml">When having established the cellular automata lattice with cell-specific carrying capacities, which develop according to environmental variables and observed distributional pattern in the cod population, the next step is to establish cellular automata distributional rules. Essentially, the rules describe how individual cod moves in terms of directions and distances within the time frame of 1 month. According to Rose et al. (
+  <a ref-type="bibr" rid="CR22" href="#CR22">1995</a>), NEA cod may have a range between 210 and 720 km over a period of 30 days, indicating that three cells in all direction from a given cell in a 80 × 80 km grid represent a reasonable range (range = 2, assuming Moore neighbourhood).
+ </p>
+ <p id="Par23" xmlns="http://www.w3.org/1999/xhtml">The rules should in principle be able to move the cod biomasses over time according to previous observations. This boils down to a straight forward statistical problem minimising the sum of squared distances between the observed centres of gravity in the observed cod biomass and the centres of gravity in the by rule distributed cod biomass (described in detail in Eide 
+  <a ref-type="bibr" rid="CR10" href="#CR10">2016</a>). The best model fit is indicated by the red cells in Fig. 
+  <a rid="Fig2" ref-type="fig" href="#Fig2">2</a>, while the observed centres of gravity (based on surveys and catch information) are shown as blue cells in the same figure. The minimised sum of squares of the 12 observations equals 6.62 (measured in square units) within a distribution of monthly centres of gravity spanning over 8 (horizontally) times 2 (vertically) cells (Eide 
+  <a ref-type="bibr" rid="CR9" href="#CR9">2014</a>). This means that the rules perform sufficiently well in replicating observed migratory pattern in the NEA cod stock. The rules are month specific and identical for all cells for each month.
+ </p>
+ <p id="Par24" xmlns="http://www.w3.org/1999/xhtml">The shifting carrying capacity distributions constitute the model environment and mimic the changes both in the physical and biological environment in which the cod stock lives, defining rich areas allowing the cod stock to expand and poor areas in which saturation levels are reached at low biomass levels. By affecting the distribution of biomasses also the migration pattern is affected, even though the cellular automata distribution rules are fixed for the whole simulation period (Eide 
+  <a ref-type="bibr" rid="CR9" href="#CR9">2014</a>).
+ </p>
+ <p id="Par25" xmlns="http://www.w3.org/1999/xhtml">The 
+  <span class="italic">ABe</span> model includes four North-Norwegian fishing ports (Svolvær, Tromsø, Hammerfest and Vardø) and two fleet types (small and large vessels) placed in each of these ports (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>). The small vessels represent coastal fishing vessels with an assumed monthly range of four cells, while the large vessels may operate in the high sea, having a monthly range of eight cells.
+  <div id="Fig4" class="fig">
+   <span class="label">Fig. 4</span>
+   <div class="caption">
+    <p>The map illustrates the geographical areas covered by each of the eight fleet in the model. The ranges of the high sea vessels are indicated by solid circles while ranges of the small-scale coastal vessels are indicated with dashed circles. The two vessel types are placed in four different ports along the North-Norwegian coast (Svolvær, Tromsø, Hammerfest and Vardø)</p>
+   </div>
+   <div xlink:href="13280_2017_955_Fig4_HTML" id="MO4" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </div>
+ </p>
+ <p id="Par26" xmlns="http://www.w3.org/1999/xhtml">Hannesson (
+  <a ref-type="bibr" rid="CR13" href="#CR13">1983</a>) and Eide et al. (
+  <a ref-type="bibr" rid="CR11" href="#CR11">2003</a>) suggest that the stock-output elasticities in harvest production differ significantly between fleet groups in the NEA cod fishery. In order to accommodate different stock-output elasticities for coastal and high sea fishing vessels, a Cobb–Douglas product equation is used to express the monthly fleet harvest (
+  <div id="IEq1" class="inline-formula">
+   <div class="alternatives">
+    <span id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ h_{i} $$\end{document}</span>
+    <div id="M2" class="math">
+     <div class="msub">
+      <span class="mi">h</span>
+      <span class="mi">i</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>) in cell 
+  <span class="italic">i</span> when fishing effort is 
+  <div id="IEq2" class="inline-formula">
+   <div class="alternatives">
+    <span id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ e_{i} $$\end{document}</span>
+    <div id="M4" class="math">
+     <div class="msub">
+      <span class="mi">e</span>
+      <span class="mi">i</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and stock biomass 
+  <div id="IEq3" class="inline-formula">
+   <div class="alternatives">
+    <span id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ x_{i} $$\end{document}</span>
+    <div id="M6" class="math">
+     <div class="msub">
+      <span class="mi">x</span>
+      <span class="mi">i</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>,
+  <div id="Equ1" class="disp-formula">
+   <span class="label">1</span>
+   <div class="alternatives">
+    <span id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ h_{i} \left( {e_{i} ,x_{i} } \right) = q e_{i} x_{i}^{\beta } , $$\end{document}</span>
+    <div id="M8" display="block" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">h</span>
+       <span class="mi">i</span>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">e</span>
+         <span class="mi">i</span>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">q</span>
+      <div class="msub">
+       <span class="mi">e</span>
+       <span class="mi">i</span>
+      </div>
+      <div class="msubsup">
+       <span class="mi">x</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+       </div>
+       <span mathvariant="italic" class="mi">β</span>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where 
+  <span class="italic">q</span> is the catchability coefficient and 
+  <span class="italic">β</span> is the stock-output elasticity of the fleet, 
+  <div id="IEq4" class="inline-formula">
+   <div class="alternatives">
+    <span id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ 0 \le \beta \le 1 $$\end{document}</span>
+    <div id="M10" class="math">
+     <div class="mrow">
+      <span class="mn">0</span>
+      <span class="mo">≤</span>
+      <span mathvariant="italic" class="mi">β</span>
+      <span class="mo">≤</span>
+      <span class="mn">1</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>.
+ </p>
+ <p id="Par28" xmlns="http://www.w3.org/1999/xhtml">Similarly to Heen and Flaaten (
+  <a ref-type="bibr" rid="CR14" href="#CR14">2007</a>), Hannesson (
+  <a ref-type="bibr" rid="CR12" href="#CR12">1975</a>), and Eide (
+  <a ref-type="bibr" rid="CR7" href="#CR7">2007</a>, 
+  <a ref-type="bibr" rid="CR8" href="#CR8">2008</a>, 
+  <a ref-type="bibr" rid="CR10" href="#CR10">2016</a>), we assume the cod fleets to be price takers. Following this approach, this study assumes a fixed price (
+  <span class="italic">p</span>) per unit of harvest. The fleet revenue (
+  <span class="italic">re</span>) obtained in cell 
+  <span class="italic">i</span> is
+  <div id="Equ2" class="disp-formula">
+   <span class="label">2</span>
+   <div class="alternatives">
+    <span id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ re_{i} \left( {e_{i} ,x_{i} } \right) = p h_{i} \left( {e_{i} ,x_{i} } \right) $$\end{document}</span>
+    <div id="M12" display="block" class="math">
+     <div class="mrow">
+      <span class="mi">r</span>
+      <div class="msub">
+       <span class="mi">e</span>
+       <span class="mi">i</span>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">e</span>
+         <span class="mi">i</span>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">p</span>
+      <div class="msub">
+       <span class="mi">h</span>
+       <span class="mi">i</span>
+      </div>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="msub">
+         <span class="mi">e</span>
+         <span class="mi">i</span>
+        </div>
+        <span class="mo">,</span>
+        <div class="msub">
+         <span class="mi">x</span>
+         <span class="mi">i</span>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>and corresponding variable cost (
+  <span class="italic">vc</span>) of the fishing operation is
+  <div id="Equ3" class="disp-formula">
+   <span class="label">3</span>
+   <div class="alternatives">
+    <span id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ vc_{i} (e_{i} ,d_{i} ) = (c_{\text{e}} + c_{\text{d}} d_{i} ) e_{i}, $$\end{document}</span>
+    <div id="M14" display="block" class="math">
+     <div class="mrow">
+      <span class="mi">v</span>
+      <div class="msub">
+       <span class="mi">c</span>
+       <span class="mi">i</span>
+      </div>
+      <div class="mrow">
+       <span stretchy="false" class="mo">(</span>
+       <div class="msub">
+        <span class="mi">e</span>
+        <span class="mi">i</span>
+       </div>
+       <span class="mo">,</span>
+       <div class="msub">
+        <span class="mi">d</span>
+        <span class="mi">i</span>
+       </div>
+       <span stretchy="false" class="mo">)</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="mrow">
+       <span stretchy="false" class="mo">(</span>
+       <div class="msub">
+        <span class="mi">c</span>
+        <span class="mtext">e</span>
+       </div>
+       <span class="mo">+</span>
+       <div class="msub">
+        <span class="mi">c</span>
+        <span class="mtext">d</span>
+       </div>
+       <div class="msub">
+        <span class="mi">d</span>
+        <span class="mi">i</span>
+       </div>
+       <span stretchy="false" class="mo">)</span>
+      </div>
+      <div class="msub">
+       <span class="mi">e</span>
+       <span class="mi">i</span>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where the variable 
+  <div id="IEq5" class="inline-formula">
+   <div class="alternatives">
+    <span id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ d_{i} $$\end{document}</span>
+    <div id="M16" class="math">
+     <div class="msub">
+      <span class="mi">d</span>
+      <span class="mi">i</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> is the distance from homeport to cell 
+  <span class="italic">i.</span>
+  <div id="IEq6" class="inline-formula">
+   <div class="alternatives">
+    <span id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ c_{\text{e}} $$\end{document}</span>
+    <div id="M18" class="math">
+     <div class="msub">
+      <span class="mi">c</span>
+      <span class="mtext">e</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> and 
+  <div id="IEq7" class="inline-formula">
+   <div class="alternatives">
+    <span id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ c_{\text{d}} $$\end{document}</span>
+    <div id="M20" class="math">
+     <div class="msub">
+      <span class="mi">c</span>
+      <span class="mtext">d</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div> are post parameters, unit cost of effort and per unit of effort unit cost of distance, respectively. Apart from being operated from four different ports (causing differences in variable costs due to different distances to home ports), each of the two types of vessels (small-scale and high sea vessels) is assumed to be homogeneous in terms of technology and economy. However, the two types of vessels differ from each other in both of these dimensions.
+ </p>
+ <p id="Par31" xmlns="http://www.w3.org/1999/xhtml">The fleet contribution margin of all cells are found by Eqs. (
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a>) and (
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) when summing revenues and cost for all cells. Negative contribution margin will cause the fleet not to fish since the revenue is not sufficient to cover running cost. After adjusting fishing effort accordingly, total annual fleet contribution margin (
+  <span class="italic">cm</span>) of all cells is
+  <div id="Equ4" class="disp-formula">
+   <span class="label">4</span>
+   <div class="alternatives">
+    <span id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ cm\left( {\varvec{e}, \varvec{x}} \right) = \mathop \sum \limits_{m = 1}^{12} \mathop \sum \limits_{i = 1}^{n} \left\{ {re_{m,i} \left( {e_{m,i} ,x_{m,i} } \right) - vc_{m,i} (e_{m,i} ,d_{i} )} \right\}. $$\end{document}</span>
+    <div id="M22" display="block" class="math">
+     <div class="mrow">
+      <span class="mi">c</span>
+      <span class="mi">m</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mrow">
+         <span mathvariant="bold-italic" class="mi">e</span>
+        </div>
+        <span class="mo">,</span>
+        <div class="mrow">
+         <span mathvariant="bold-italic" class="mi">x</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="munderover">
+       <span movablelimits="false" class="mo">∑</span>
+       <div class="mrow">
+        <span class="mi">m</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mn">12</span>
+      </div>
+      <div class="munderover">
+       <span movablelimits="false" class="mo">∑</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mi">n</span>
+      </div>
+      <div close="}" open="{" separators="" class="mfenced">
+       <div class="mrow">
+        <span class="mi">r</span>
+        <div class="msub">
+         <span class="mi">e</span>
+         <div class="mrow">
+          <span class="mi">m</span>
+          <span class="mo">,</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mrow">
+          <div class="msub">
+           <span class="mi">e</span>
+           <div class="mrow">
+            <span class="mi">m</span>
+            <span class="mo">,</span>
+            <span class="mi">i</span>
+           </div>
+          </div>
+          <span class="mo">,</span>
+          <div class="msub">
+           <span class="mi">x</span>
+           <div class="mrow">
+            <span class="mi">m</span>
+            <span class="mo">,</span>
+            <span class="mi">i</span>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mo">-</span>
+        <span class="mi">v</span>
+        <div class="msub">
+         <span class="mi">c</span>
+         <div class="mrow">
+          <span class="mi">m</span>
+          <span class="mo">,</span>
+          <span class="mi">i</span>
+         </div>
+        </div>
+        <div class="mrow">
+         <span stretchy="false" class="mo">(</span>
+         <div class="msub">
+          <span class="mi">e</span>
+          <div class="mrow">
+           <span class="mi">m</span>
+           <span class="mo">,</span>
+           <span class="mi">i</span>
+          </div>
+         </div>
+         <span class="mo">,</span>
+         <div class="msub">
+          <span class="mi">d</span>
+          <span class="mi">i</span>
+         </div>
+         <span stretchy="false" class="mo">)</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par32" xmlns="http://www.w3.org/1999/xhtml">The matrices 
+  <span class="bold">
+   <span class="italic">e</span>
+  </span> and 
+  <span class="bold">
+   <span class="italic">x</span>
+  </span> give the fishing effort of the fleet and stock biomasses distributed on cells and months. Index 
+  <span class="italic">m</span> indicates month number and 
+  <span class="italic">n</span> is the total number of cells available for the given fleet. Number of available cells depends both on the physical range of the vessel (Fig. 
+  <a rid="Fig4" ref-type="fig" href="#Fig4">4</a>) and the regulatory divisions of sea areas. In Norway, the high sea vessels are not allowed to fish inside four nautical miles from the baseline.
+ </p>
+ <p id="Par33" xmlns="http://www.w3.org/1999/xhtml">Annual profit is found by withdrawing the fixed cost (fc) from the contribution margin described in Eq. (
+  <a rid="Equ4" ref-type="" href="#Equ4">4</a>):
+  <div id="Equ5" class="disp-formula">
+   <span class="label">5</span>
+   <div class="alternatives">
+    <span id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \pi \left( {\varvec{e}, \varvec{x}} \right) = cm\left( {\varvec{e}, \varvec{x}} \right) - {\text{fc}}. $$\end{document}</span>
+    <div id="M24" display="block" class="math">
+     <div class="mrow">
+      <span mathvariant="italic" class="mi">π</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mrow">
+         <span mathvariant="bold-italic" class="mi">e</span>
+        </div>
+        <span class="mo">,</span>
+        <div class="mrow">
+         <span mathvariant="bold-italic" class="mi">x</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <span class="mi">c</span>
+      <span class="mi">m</span>
+      <div close=")" open="(" separators="" class="mfenced">
+       <div class="mrow">
+        <div class="mrow">
+         <span mathvariant="bold-italic" class="mi">e</span>
+        </div>
+        <span class="mo">,</span>
+        <div class="mrow">
+         <span mathvariant="bold-italic" class="mi">x</span>
+        </div>
+       </div>
+      </div>
+      <span class="mo">-</span>
+      <span class="mtext">fc</span>
+      <span class="mo">.</span>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par34" xmlns="http://www.w3.org/1999/xhtml">Total fleet fishing effort at time 
+  <span class="italic">t</span> (a given month in a given year) is the sum of the fishing effort distributed on all available cells:
+  <div id="Equ6" class="disp-formula">
+   <span class="label">6</span>
+   <div class="alternatives">
+    <span id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ E_{t} = \mathop \sum \limits_{i = 1}^{n} e_{i,t}. $$\end{document}</span>
+    <div id="M26" display="block" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">E</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">=</span>
+      <div class="munderover">
+       <span movablelimits="false" class="mo">∑</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">=</span>
+        <span class="mn">1</span>
+       </div>
+       <span class="mi">n</span>
+      </div>
+      <div class="msub">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <span class="mi">i</span>
+        <span class="mo">,</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par35" xmlns="http://www.w3.org/1999/xhtml">The fleet capacity in terms of maximum fishing effort which may be produced during a single month is 
+  <span class="italic">V</span>. The relation between absolute fleet size, 
+  <span class="italic">V</span>, and utilised fishing effort, 
+  <span class="italic">E</span>, is
+  <div id="Equ7" class="disp-formula">
+   <span class="label">7</span>
+   <div class="alternatives">
+    <span id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ 0 \le E_{t} \le V_{t}. $$\end{document}</span>
+    <div id="M28" display="block" class="math">
+     <div class="mrow">
+      <span class="mn">0</span>
+      <span class="mo">≤</span>
+      <div class="msub">
+       <span class="mi">E</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">≤</span>
+      <div class="msub">
+       <span class="mi">V</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">.</span>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par36" xmlns="http://www.w3.org/1999/xhtml">This study assumes a pure or quota-regulated, open access fishery. Entry to and exit from the fishery are driven by profits beyond the normal level or negative profits, respectively. While Vernon Smith in his seminal paper (Smith 
+  <a ref-type="bibr" rid="CR26" href="#CR26">1968</a>) assumed flow of capital into a fishery to be proportional to profit, this study assumes fixed entry and exit rates of vessels. The varying degree of fleet utilisation (
+  <span class="italic">E/V</span>) may, however, bring the resulting dynamics closer to the dynamics assumed by Smith, since also fleet utilisation varies in space and time (e.g. negative contribution margins keep vessels in harbour). After introducing the entry (fg) and exit (fd) rates, the fleet dynamics are given by
+  <div id="Equ8" class="disp-formula">
+   <span class="label">8</span>
+   <div class="alternatives">
+    <span id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \begin{array}{*{20}c} {{\text{If}}\quad \pi_{t} \left( {\varvec{e}, \varvec{x}} \right) &lt; 0\quad {\text{then}}\quad V_{t + 1} = (1 - {\text{fd}})V_{t} } \\ {{\text{If}}\quad \pi_{t} \left( {\varvec{e}, \varvec{x}} \right) &gt; 0\quad {\text{then}}\quad V_{t + 1} = (1 + {\text{fg}})V_{t} }. \\ \end{array} $$\end{document}</span>
+    <div id="M30" display="block" class="math">
+     <div class="mrow">
+      <div class="mtable">
+       <div class="mtr">
+        <div class="mtd">
+         <div class="mrow">
+          <span class="mtext">If</span>
+          <span width="1em" class="mspace"/>
+          <div class="msub">
+           <span mathvariant="italic" class="mi">π</span>
+           <span class="mi">t</span>
+          </div>
+          <div close=")" open="(" separators="" class="mfenced">
+           <div class="mrow">
+            <div class="mrow">
+             <span mathvariant="bold-italic" class="mi">e</span>
+            </div>
+            <span class="mo">,</span>
+            <div class="mrow">
+             <span mathvariant="bold-italic" class="mi">x</span>
+            </div>
+           </div>
+          </div>
+          <span class="mo">&lt;</span>
+          <span class="mn">0</span>
+          <span width="1em" class="mspace"/>
+          <span class="mtext">then</span>
+          <span width="1em" class="mspace"/>
+          <div class="msub">
+           <span class="mi">V</span>
+           <div class="mrow">
+            <span class="mi">t</span>
+            <span class="mo">+</span>
+            <span class="mn">1</span>
+           </div>
+          </div>
+          <span class="mo">=</span>
+          <div class="mrow">
+           <span stretchy="false" class="mo">(</span>
+           <span class="mn">1</span>
+           <span class="mo">-</span>
+           <span class="mtext">fd</span>
+           <span stretchy="false" class="mo">)</span>
+          </div>
+          <div class="msub">
+           <span class="mi">V</span>
+           <span class="mi">t</span>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="mtr">
+        <div class="mtd">
+         <div class="mrow">
+          <div class="mrow"/>
+          <div class="mrow">
+           <span class="mtext">If</span>
+           <span width="1em" class="mspace"/>
+           <div class="msub">
+            <span mathvariant="italic" class="mi">π</span>
+            <span class="mi">t</span>
+           </div>
+           <div close=")" open="(" separators="" class="mfenced">
+            <div class="mrow">
+             <div class="mrow">
+              <span mathvariant="bold-italic" class="mi">e</span>
+             </div>
+             <span class="mo">,</span>
+             <div class="mrow">
+              <span mathvariant="bold-italic" class="mi">x</span>
+             </div>
+            </div>
+           </div>
+           <span class="mo">&gt;</span>
+           <span class="mn">0</span>
+           <span width="1em" class="mspace"/>
+           <span class="mtext">then</span>
+           <span width="1em" class="mspace"/>
+           <div class="msub">
+            <span class="mi">V</span>
+            <div class="mrow">
+             <span class="mi">t</span>
+             <span class="mo">+</span>
+             <span class="mn">1</span>
+            </div>
+           </div>
+           <span class="mo">=</span>
+           <div class="mrow">
+            <span stretchy="false" class="mo">(</span>
+            <span class="mn">1</span>
+            <span class="mo">+</span>
+            <span class="mtext">fg</span>
+            <span stretchy="false" class="mo">)</span>
+           </div>
+           <div class="msub">
+            <span class="mi">V</span>
+            <span class="mi">t</span>
+           </div>
+          </div>
+          <span class="mo">.</span>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>
+ </p>
+ <p id="Par37" xmlns="http://www.w3.org/1999/xhtml">Entry rates are often expected to be higher than exit rates as in Eide (
+  <a ref-type="bibr" rid="CR7" href="#CR7">2007</a>).
+ </p>
+ <p id="Par38" xmlns="http://www.w3.org/1999/xhtml">A reasonable assumption is that the fishers attempt to maximise their economic performance by fishing at the most profitable areas (e.g. within the most profitable cells). The problem is however to identify where the most profitable cells are positioned. The fishers search to solve this problem through the use of their best knowledge, experience and skills, including the use of fish finding technology, the information that may be obtained within the fishing community and from other sources, attitude towards risk and the economic factors constraining their activity. How successful the fishers are in identifying the most profitable areas depends in this model on the value of a single parameter, the smartness parameter 
+  <span class="italic">s</span>. The core expression for each vessel group in the model is given by
+  <div id="Equ9" class="disp-formula">
+   <span class="label">9</span>
+   <div class="alternatives">
+    <span id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ e_{j,t} = \frac{{\left( {\frac{{re_{j,t} }}{{vc_{j,t} }}} \right)^{s} }}{{\mathop \sum \nolimits_{i = 1}^{n} \left( {\frac{{re_{i,t} }}{{vc_{i,t} }}} \right)^{s} }} E_{t}, $$\end{document}</span>
+    <div id="M32" display="block" class="math">
+     <div class="mrow">
+      <div class="msub">
+       <span class="mi">e</span>
+       <div class="mrow">
+        <span class="mi">j</span>
+        <span class="mo">,</span>
+        <span class="mi">t</span>
+       </div>
+      </div>
+      <span class="mo">=</span>
+      <div class="mfrac">
+       <div class="msup">
+        <div close=")" open="(" separators="" class="mfenced">
+         <div class="mfrac">
+          <div class="mrow">
+           <span class="mi">r</span>
+           <div class="msub">
+            <span class="mi">e</span>
+            <div class="mrow">
+             <span class="mi">j</span>
+             <span class="mo">,</span>
+             <span class="mi">t</span>
+            </div>
+           </div>
+          </div>
+          <div class="mrow">
+           <span class="mi">v</span>
+           <div class="msub">
+            <span class="mi">c</span>
+            <div class="mrow">
+             <span class="mi">j</span>
+             <span class="mo">,</span>
+             <span class="mi">t</span>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <span class="mi">s</span>
+       </div>
+       <div class="mrow">
+        <div class="msubsup">
+         <span class="mo">∑</span>
+         <div class="mrow">
+          <span class="mi">i</span>
+          <span class="mo">=</span>
+          <span class="mn">1</span>
+         </div>
+         <span class="mi">n</span>
+        </div>
+        <div class="msup">
+         <div close=")" open="(" separators="" class="mfenced">
+          <div class="mfrac">
+           <div class="mrow">
+            <span class="mi">r</span>
+            <div class="msub">
+             <span class="mi">e</span>
+             <div class="mrow">
+              <span class="mi">i</span>
+              <span class="mo">,</span>
+              <span class="mi">t</span>
+             </div>
+            </div>
+           </div>
+           <div class="mrow">
+            <span class="mi">v</span>
+            <div class="msub">
+             <span class="mi">c</span>
+             <div class="mrow">
+              <span class="mi">i</span>
+              <span class="mo">,</span>
+              <span class="mi">t</span>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+         <span class="mi">s</span>
+        </div>
+       </div>
+      </div>
+      <div class="msub">
+       <span class="mi">E</span>
+       <span class="mi">t</span>
+      </div>
+      <span class="mo">,</span>
+     </div>
+    </div>
+    <div xlink:href="13280_2017_955_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>where the distribution of fishing effort is determined by the ratios of Eqs. (
+  <a rid="Equ2" ref-type="" href="#Equ2">2</a>) and (
+  <a rid="Equ3" ref-type="" href="#Equ3">3</a>) and the value of smartness parameter 
+  <span class="italic">s</span>, reflecting the fleets aptitude of identifying the most profitable (in terms of the revenue/cost ratio) fishing grounds. The smartness parameter (
+  <span class="italic">s</span>) is a lump-based parameter where a number of features are reduced down to the value of this single parameter. The two extremes (
+  <span class="italic">s</span> = 0 and 
+  <span class="italic">s</span> = ∞) go from a uniform distribution of fishing activities in the area available for the fleet (
+  <span class="italic">s</span> = 0, representing total ignorance) to placing all fishing activities into one single cell (
+  <span class="italic">s</span> = ∞, perfect knowledge). For the special situation s = 1, the distribution of fishing activities exactly follows the distribution of profit opportunities (expressed by revenue/cost ratios).
+ </p>
+ <p id="Par40" xmlns="http://www.w3.org/1999/xhtml">In the following, 
+  <span class="italic">s</span> = 1 is regarded to be the lowest smartness level of interest, while a possibly unrealistically high level of 
+  <span class="italic">s</span> = 10 is the highest smartness level included in the study. The range 
+  <div id="IEq8" class="inline-formula">
+   <div class="alternatives">
+    <span id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ s \in \{ 1, 10\} $$\end{document}</span>
+    <div id="M34" class="math">
+     <div class="mrow">
+      <span class="mi">s</span>
+      <span class="mo">∈</span>
+      <span stretchy="false" class="mo">{</span>
+      <span class="mn">1</span>
+      <span class="mo">,</span>
+      <span class="mn">10</span>
+      <span stretchy="false" class="mo">}</span>
+     </div>
+    </div>
+    <span xlink:href="13280_2017_955_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   </div>
+  </div>, which spans out a large variety of distributional patterns and the range are considered to cover actual levels of knowledge and insight in possible distributional patterns forming the base of rational decisions on where to fish. A smartness parameter value equal one clearly is far below the expected smartness levels of today’s fisheries, while a smartness value equal 10 appears to be too optimistic with respect of level of insight and fishing aptitude. A qualified guess is that the most realistic smartness value is somewhere in the range of 2–3, depending on individual experience, knowledge, technical measures as well as social factors. In this study, a global smartness value is assumed to be global within each simulation. The model parameter setting is presented in Table 
+  <a rid="Tab1" ref-type="table" href="#Tab1">1</a>.
+  <div id="Tab1" class="table-wrap">
+   <span class="label">Table 1</span>
+   <div class="caption">
+    <p>Values used for fleet parameters and variables between model simulations [from Eide (
+     <a ref-type="bibr" rid="CR10" href="#CR10">2016</a>)]
+    </p>
+   </div>
+   <table frame="hsides" rules="groups">
+    <thead>
+     <tr>
+      <th align="left">Parameters and variables</th>
+      <th align="left">Symbol</th>
+      <th align="left">Small vessels</th>
+      <th align="left">Large vessels</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr>
+      <td align="left">Unit price of harvest (NOK/kg)</td>
+      <td align="left">
+       <span class="italic">p</span>
+      </td>
+      <td align="left">13.00</td>
+      <td align="left">13.00</td>
+     </tr>
+     <tr>
+      <td align="left">Stock-output elasticity</td>
+      <td align="left">
+       <span class="italic">β</span>
+      </td>
+      <td align="left">0.70</td>
+      <td align="left">0.50</td>
+     </tr>
+     <tr>
+      <td align="left">Catchability coefficient</td>
+      <td align="left">
+       <span class="italic">q</span>
+      </td>
+      <td align="left">0.66</td>
+      <td align="left">0.24</td>
+     </tr>
+     <tr>
+      <td align="left">Unit cost of effort (mill. NOK/standardised effort)</td>
+      <td align="left">
+       <span class="italic">c</span>
+       <sub>e</sub>
+      </td>
+      <td align="left">0.00035</td>
+      <td align="left">0.00055</td>
+     </tr>
+     <tr>
+      <td align="left">Unit cost of distance (mill. NOK/80 km)</td>
+      <td align="left">
+       <span class="italic">c</span>
+       <sub>d</sub>
+      </td>
+      <td align="left">0.00025</td>
+      <td align="left">0.00035</td>
+     </tr>
+     <tr>
+      <td align="left">Fixed cost per year (mill. NOK/year)</td>
+      <td align="left">fc</td>
+      <td align="left">30</td>
+      <td align="left">60</td>
+     </tr>
+     <tr>
+      <td align="left">Annual fleet entry rate (%)</td>
+      <td align="left">fg</td>
+      <td align="left">10</td>
+      <td align="left">7</td>
+     </tr>
+     <tr>
+      <td align="left">Annual fleet exit rate (%)</td>
+      <td align="left">fd</td>
+      <td align="left">8</td>
+      <td align="left">5</td>
+     </tr>
+     <tr>
+      <td align="left">Monthly fleet range (cells, 80 × 80 km)</td>
+      <td align="left">–</td>
+      <td align="left">4</td>
+      <td align="left">8</td>
+     </tr>
+     <tr>
+      <td align="left">Quota share (%)</td>
+      <td align="left">–</td>
+      <td align="left">60</td>
+      <td align="left">40</td>
+     </tr>
+     <tr>
+      <td align="left">Fishing effort
+       <span class="sup">a</span>
+      </td>
+      <td align="left">
+       <span class="italic">E</span>
+      </td>
+      <td align="left" colspan="2">≤ 
+       <span class="italic">V</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left">Fleet capacity (in terms of possible fishing effort)
+       <span class="sup">a</span>
+      </td>
+      <td align="left">
+       <span class="italic">V</span>
+      </td>
+      <td align="left" colspan="2">≥ 
+       <span class="italic">E</span>
+      </td>
+     </tr>
+     <tr>
+      <td align="left">Smartness coefficient
+       <span class="sup">b</span>
+      </td>
+      <td align="left">
+       <span class="italic">s</span>
+      </td>
+      <td align="left" colspan="2">1–10</td>
+     </tr>
+     <tr>
+      <td align="left">Fishing mortality rate used in quota setting
+       <span class="sup">b</span>
+      </td>
+      <td align="left">
+       <span class="italic">F</span>
+      </td>
+      <td align="left" colspan="2">0.1–0.4</td>
+     </tr>
+    </tbody>
+   </table>
+   <div class="table-wrap-foot">
+    <p>
+     <span class="sup">a</span>Dynamic variable within simulations
+    </p>
+    <p>
+     <span class="sup">b</span>Variable between simulations
+    </p>
+   </div>
+  </div>
+ </p>
+ <p id="Par41" xmlns="http://www.w3.org/1999/xhtml">The study includes different governmental constraints represented by four different management regimes of which one is no management (open access). The other three management regimes are all in principle structured similarly to the current management system, assuming different exploitation rates and perfect management control. A total allowable catch (TAC) is set according to a given target levels of the fishing mortality rate (
+  <span class="italic">F</span>), assuming perfect stock information.
+ </p>
+ <p id="Par42" xmlns="http://www.w3.org/1999/xhtml">The NEA cod stock is equally shared between Norway and Russia, and a Russian catch of the same quantity as the Norwegian catch is included without defining specifically a Russian fleet. The Russian capture is assumed to be high sea catches following the distribution of cod biomasses in areas available for Russian vessels.</p>
+ <p id="Par43" xmlns="http://www.w3.org/1999/xhtml">The total Norwegian quota is shared between coastal (small) vessels and high sea (large) vessel in a fixed ratio (60/40), which is a slight simplification of the current quota allocation system. The high sea vessels are not allowed to fish inside four nautical miles from the baseline, which is implemented by limited access (25 % of total area) to cells along the coast.</p>
+ <p id="Par44" xmlns="http://www.w3.org/1999/xhtml">This study investigates and compares distribution and variability in the two scenarios, in particular emphasising fleet diversity and spatial distribution of the fishing activity. While previous studies (Eide 
+  <a ref-type="bibr" rid="CR7" href="#CR7">2007</a>, 
+  <a ref-type="bibr" rid="CR8" href="#CR8">2008</a>) suggest that fisheries management may have a greater impact than climate change on the biological development and economic performance of Arctic groundfish fisheries, these studies did however not include spatial distributions of biomasses and fishing effort.
+ </p>
+</sec>

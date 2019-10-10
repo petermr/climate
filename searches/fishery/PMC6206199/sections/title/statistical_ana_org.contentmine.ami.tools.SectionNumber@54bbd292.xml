@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sec id="ece34501-sec-0004" class="sec">
+ <span class="label" xmlns="http://www.w3.org/1999/xhtml">2.2</span>
+ <div class="title" xmlns="http://www.w3.org/1999/xhtml">Statistical analyses</div>
+ <p xmlns="http://www.w3.org/1999/xhtml">We started with an exploratory analysis of the data to (a) identify potential relationships between 
+  <span class="italic">B. muricatum</span> and 
+  <span class="italic">C. undulatus</span> abundance and the predictors (i.e., reef strata, fishing pressure, latitude, longitude) and (b) assess collinearity in the predictors. The exploratory analysis included numerical summaries of fish abundance, fish abundance within reef strata, and fish abundance by fishing pressure, as well as plots showing the relationship between them. We also used the generalized variance inflation factor (GVIF; Fox &amp; Monette, 
+  <a rid="ece34501-bib-0017" ref-type="ref" href="#ece34501-bib-0017">1992</a>) to assess collinearity in the predictors.
+ </p>
+ <p xmlns="http://www.w3.org/1999/xhtml">Generalized linear models (GLMs; McCullagh &amp; Nelder, 
+  <a rid="ece34501-bib-0031" ref-type="ref" href="#ece34501-bib-0031">1989</a>) were used to quantify the effect of fishing pressure and reef strata on adult 
+  <span class="italic">C. undulatus</span> and 
+  <span class="italic">B. muricatum</span> abundance. We chose GLMs with a negative binomial distribution and a log link because they are specifically designed for use with overdispersed count data containing a relatively high proportion of zeros (Dobson &amp; Barnett, 
+  <a rid="ece34501-bib-0012" ref-type="ref" href="#ece34501-bib-0012">2008</a>). Subsequently, we identified the subset of predictor variables with the most support in the data from the full set of predictors (i.e., fishing pressure, reef strata, and mean‐centered latitude and longitude) using backward‐stepwise regression. The model with the smallest Akaike Information Criterion (AIC; Akaike, 
+  <a rid="ece34501-bib-0001" ref-type="ref" href="#ece34501-bib-0001">1974</a>) and root‐mean‐squared prediction error (RMSPE; Potts and Elith, 
+  <a rid="ece34501-bib-0035" ref-type="ref" href="#ece34501-bib-0035">2006</a>) based on the observations and the leave‐one‐out cross‐validation (LOOCV) was deemed the “best” model (Burnham &amp; Anderson, 
+  <a rid="ece34501-bib-0006" ref-type="ref" href="#ece34501-bib-0006">2004</a>). The transect area varied across the 146 survey sites and so we also tested the need for transect area as an offset in the model (Table 
+  <a rid="ece34501-tbl-0001" ref-type="table" href="#ece34501-tbl-0001">1</a>). An offset was included if the term's coefficient was significant at 
+  <span class="italic">α</span> = 0.05 or approximately equal to 1 in the full model. We assessed the goodness‐of‐fit for the final 
+  <span class="italic">C. undulatus</span> and 
+  <span class="italic">B. muricatum</span> models using half‐normal plots with simulated 95% confidence envelopes (Viera, Hinde, &amp; Demetrio, 
+  <a rid="ece34501-bib-0043" ref-type="ref" href="#ece34501-bib-0043">2000</a>). We also calculated empirical semivariograms on the residuals from the two final models to check for spatial autocorrelation.
+ </p>
+ <div id="ece34501-tbl-0001" xml:lang="en" orientation="portrait" position="float" class="table-wrap" xmlns="http://www.w3.org/1999/xhtml">
+  <span class="label">Table 1</span>
+  <div class="caption">
+   <p>Summary of 
+    <span class="italic">C. undulatus</span> and 
+    <span class="italic">B. muricatum</span> counts by reef strata and fishing pressure. Total survey area and number of surveys are also presented
+   </p>
+  </div>
+  <table frame="hsides" rules="groups">
+   <col style="border-right:solid 1px #000000" span="1"/>
+   <col style="border-right:solid 1px #000000" span="1"/>
+   <col style="border-right:solid 1px #000000" span="1"/>
+   <col style="border-right:solid 1px #000000" span="1"/>
+   <col style="border-right:solid 1px #000000" span="1"/>
+   <col style="border-right:solid 1px #000000" span="1"/>
+   <thead valign="top">
+    <tr style="border-bottom:solid 1px #000000">
+     <th align="left" rowspan="2" valign="top" colspan="1">Reef type</th>
+     <th align="left" rowspan="2" valign="top" colspan="1">Fishing pressure</th>
+     <th align="center" rowspan="2" valign="top" colspan="1">Survey area (m
+      <span class="sup">2</span>)
+     </th>
+     <th align="center" rowspan="2" valign="top" colspan="1">Number of transects</th>
+     <th align="center" colspan="2" style="border-bottom:solid 1px #000000" valign="top" rowspan="1">Counts</th>
+    </tr>
+    <tr style="border-bottom:solid 1px #000000">
+     <th valign="top" rowspan="1" colspan="1">
+      <span class="italic">B. muricatum</span>
+     </th>
+     <th valign="top" rowspan="1" colspan="1">
+      <span class="italic">C. undulatus</span>
+     </th>
+    </tr>
+   </thead>
+   <tbody>
+    <tr>
+     <td align="left" rowspan="2" colspan="1">Back reef</td>
+     <td align="left" rowspan="1" colspan="1">High</td>
+     <td align="char" char="." rowspan="1" colspan="1">136,488</td>
+     <td align="char" char="." rowspan="1" colspan="1">16</td>
+     <td align="char" char="." rowspan="1" colspan="1">7</td>
+     <td align="char" char="." rowspan="1" colspan="1">17</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="1" colspan="1">Low</td>
+     <td align="char" char="." rowspan="1" colspan="1">25,500</td>
+     <td align="char" char="." rowspan="1" colspan="1">3</td>
+     <td align="char" char="." rowspan="1" colspan="1">3</td>
+     <td align="char" char="." rowspan="1" colspan="1">2</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="2" colspan="1">Fore reef</td>
+     <td align="left" rowspan="1" colspan="1">High</td>
+     <td align="char" char="." rowspan="1" colspan="1">96,980</td>
+     <td align="char" char="." rowspan="1" colspan="1">12</td>
+     <td align="char" char="." rowspan="1" colspan="1">16</td>
+     <td align="char" char="." rowspan="1" colspan="1">19</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="1" colspan="1">Low</td>
+     <td align="char" char="." rowspan="1" colspan="1">77,840</td>
+     <td align="char" char="." rowspan="1" colspan="1">9</td>
+     <td align="char" char="." rowspan="1" colspan="1">28</td>
+     <td align="char" char="." rowspan="1" colspan="1">22</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="2" colspan="1">Fringing reef</td>
+     <td align="left" rowspan="1" colspan="1">High</td>
+     <td align="char" char="." rowspan="1" colspan="1">79,072</td>
+     <td align="char" char="." rowspan="1" colspan="1">14</td>
+     <td align="char" char="." rowspan="1" colspan="1">3</td>
+     <td align="char" char="." rowspan="1" colspan="1">6</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="1" colspan="1">Low</td>
+     <td align="char" char="." rowspan="1" colspan="1">89,878</td>
+     <td align="char" char="." rowspan="1" colspan="1">14</td>
+     <td align="char" char="." rowspan="1" colspan="1">10</td>
+     <td align="char" char="." rowspan="1" colspan="1">9</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="2" colspan="1">Patch reef</td>
+     <td align="left" rowspan="1" colspan="1">High</td>
+     <td align="char" char="." rowspan="1" colspan="1">40,614</td>
+     <td align="char" char="." rowspan="1" colspan="1">6</td>
+     <td align="char" char="." rowspan="1" colspan="1">1</td>
+     <td align="char" char="." rowspan="1" colspan="1">11</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="1" colspan="1">Low</td>
+     <td align="char" char="." rowspan="1" colspan="1">270,250</td>
+     <td align="char" char="." rowspan="1" colspan="1">35</td>
+     <td align="char" char="." rowspan="1" colspan="1">40</td>
+     <td align="char" char="." rowspan="1" colspan="1">43</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="2" colspan="1">Subtidal reef flat</td>
+     <td align="left" rowspan="1" colspan="1">High</td>
+     <td align="char" char="." rowspan="1" colspan="1">6,660</td>
+     <td align="char" char="." rowspan="1" colspan="1">1</td>
+     <td align="char" char="." rowspan="1" colspan="1">0</td>
+     <td align="char" char="." rowspan="1" colspan="1">0</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="1" colspan="1">Low</td>
+     <td align="char" char="." rowspan="1" colspan="1">341,060</td>
+     <td align="char" char="." rowspan="1" colspan="1">36</td>
+     <td align="char" char="." rowspan="1" colspan="1">211</td>
+     <td align="char" char="." rowspan="1" colspan="1">59</td>
+    </tr>
+    <tr>
+     <td align="left" rowspan="1" colspan="1">Total</td>
+     <td align="left" rowspan="1" colspan="1"/>
+     <td align="left" rowspan="1" colspan="1"/>
+     <td align="char" char="." rowspan="1" colspan="1">146</td>
+     <td align="char" char="." rowspan="1" colspan="1">319</td>
+     <td align="char" char="." rowspan="1" colspan="1">188</td>
+    </tr>
+   </tbody>
+  </table>
+  <div class="permissions">
+   <span class="copyright-holder">John Wiley &amp; Sons, Ltd</span>
+  </div>
+ </div>
+ <p xmlns="http://www.w3.org/1999/xhtml">Spatial data were handled in R statistical software (R Core Team, 
+  <a rid="ece34501-bib-0036" ref-type="ref" href="#ece34501-bib-0036">2016</a>) using the raster (Hijmans, 
+  <a rid="ece34501-bib-0063" ref-type="ref" href="#ece34501-bib-0063">2016</a>), rgdal (Bivand, Keitt &amp; Rowlingson, 
+  <a rid="ece34501-bib-0061" ref-type="ref" href="#ece34501-bib-0061">2016</a>) and sp (Pebesma and Bivand, 
+  <a rid="ece34501-bib-0067" ref-type="ref" href="#ece34501-bib-0067">2005</a>; Bivand, Pebesma &amp; Gomez‐Rubio, 
+  <a rid="ece34501-bib-0062" ref-type="ref" href="#ece34501-bib-0062">2013</a>) packages and statistical analyses with the MASS (Venables &amp; Ripley, 
+  <a rid="ece34501-bib-0042" ref-type="ref" href="#ece34501-bib-0042">2002</a>) and gstat (Pebesma, 
+  <a rid="ece34501-bib-0032" ref-type="ref" href="#ece34501-bib-0032">2004</a>) packages.
+ </p>
+</sec>
