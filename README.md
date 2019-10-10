@@ -68,7 +68,7 @@ Much of the code and processes are shared communal resources from different proj
 
 OCK started as part of the eLife Sprint, September 2019,  in Cambridge, UK.
 
-The project maintainers are Peter Murray-Rust chemist and open access advocate and Simon Worthington editor-in-chief [*Generation Research*](https://genr.eu/), with coordination from the Open Science Lab: TIB &ndash; German National Library of Science and Technology.  
+The project maintainers are [Peter Murray-Rust](https://en.wikipedia.org/wiki/Peter_Murray-Rust) chemist and open access advocate and Simon Worthington editor-in-chief [*Generation Research*](https://genr.eu/), with coordination from the [Open Science Lab](https://www.tib.eu/en/research-development/open-science/): TIB &ndash; German National Library of Science and Technology.  
 
  - Roadmap
  - Code of Conduct
