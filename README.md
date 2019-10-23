@@ -60,6 +60,7 @@ Much of the code and processes are shared communal resources from different proj
 ## Resources
 
  - Presentations
+   - 100% open collaborative research for climate change knowledge - Twenty-First International Conference on Grey Literature, Hannover, 22-23 October 2019 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3517114.svg)](https://doi.org/10.5281/zenodo.3517114)
  - For schools
    - A short presentation to [Sidcot School on the Keeling Curve](schools/SidcotSchool201909.md)
  - Articles
