@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We adapted the 
+ <xref rid="zow109-B48" ref-type="bibr" class="xref">Royle (2004)</xref> HM to the case where temporal (among-years) instead of spatial replicates were drawn so that species’ abundance estimates at 1 site were obtained. Due to the short lifespans of the studied species and to the large time intervals between 
+ <italic class="italic">trapping campaigns</italic> we assumed that the within-species temporal correlation among population sizes was negligibly small. For this analysis, we did not use data collected during the 1986–1987 
+ <italic class="italic">trapping campaign</italic> because for that period we only knew the number of captures for each species per 1,000 traps/days-of-sampling. Due to the small number of captures for some species, we could analyze data from only 3 species: 
+ <italic class="italic">M. spretus</italic>, 
+ <italic class="italic">A. sylvaticus</italic>, and 
+ <italic class="italic">E. quercinus</italic> (this species at San Agustin only). HM analyses were run in R (
+ <xref rid="zow109-B47" ref-type="bibr" class="xref">R Core Team 2013</xref>) using the function “
+ <italic class="italic">pcount</italic>” from the “
+ <italic class="italic">unmarked</italic>” package (
+ <xref rid="zow109-B14" ref-type="bibr" class="xref">Fiske and Chandler 2011</xref>). A separate analysis was run for each area and species (R code in 
+ <xref ref-type="supplementary-material" rid="sup1" class="xref">Supplementary Appendix S1</xref>). 
+ <boxed-text id="zow109-BOX1" position="float" orientation="portrait" class="boxed-text">
+  <caption class="caption">
+   <p class="p">Box 1. HMs in a nutshell</p>
+  </caption>
+  <p class="p">According to the definition that 
+   <xref rid="zow109-B23" ref-type="bibr" class="xref">Kery and Royle (2016)</xref> propose in their book, an HM is a sequence of models ordered by their conditional probability structure. Typically, an HM involves at least one model (or level of the HM model) that refers to a latent (unobserved) variable. The latent variable can consist of: (i) a random effect, where an ecological measurement like presence/absence or count replicates are more similar within than among groups (e.g., site) or (ii) a state variable like the site-specific (real) presence or absence of a species or its population size. The first example resembles the classical random effects models (also called multi-level, or mixed models) with an unobservable latent variable which accounts for non-independence and similarity of sampling replicates within groups. Here, we focus on HMs as that described in the second example where the latent variable is the outcome of natural processes and therefore consists of a real quantity as the occupancy state or the population abundance at a certain site. 
+   <xref rid="zow109-B48" ref-type="bibr" class="xref">Royle (2004)</xref> proposed an HM for count replicates collected at a number of sites through a period short enough to assume that population sizes do not vary over the study period. This 2-level HM considers the observed counts as a function of an observation process which in turn depends on the population size at each site. In mathematical terms it is: 
+   <disp-formula id="E1" class="disp-formula">
+    <math id="M1" class="math">
+     <mrow class="mrow">
+      <msub class="msub">
+       <mi class="mi">y</mi>
+       <mrow class="mrow">
+        <mi class="mi">i</mi>
+        <mi class="mi">j</mi>
+       </mrow>
+      </msub>
+      <mo class="mo">|</mo>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">i</mi>
+      </msub>
+      <mo class="mo">∼</mo>
+      <mtext class="mtext">Binomial</mtext>
+      <mo stretchy="false" class="mo">(</mo>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">i</mi>
+      </msub>
+      <mo class="mo">,</mo>
+      <mi class="mi">p</mi>
+      <mo stretchy="false" class="mo">)</mo>
+      <mo class="mo">,</mo>
+     </mrow>
+    </math>
+   </disp-formula>
+  </p>
+  <p class="p">where 
+   <italic class="italic">y
+    <sub class="sub">ij</sub>
+   </italic>, that is the counts at site 
+   <italic class="italic">i</italic> at the 
+   <italic class="italic">j</italic>th occasion is conditional on the local population size (
+   <italic class="italic">N
+    <sub class="sub">i</sub>
+   </italic>) and follows a binomial distribution where 
+   <italic class="italic">p</italic> is the individual-level probability of detection. The local population size follows a distribution such as: 
+   <disp-formula id="E2" class="disp-formula">
+    <math id="M2" class="math">
+     <mrow class="mrow">
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">i</mi>
+      </msub>
+      <mo class="mo">∼</mo>
+      <mtext class="mtext">Poisson</mtext>
+      <mo stretchy="false" class="mo">(</mo>
+      <mi class="mi">λ</mi>
+      <mo stretchy="false" class="mo">)</mo>
+     </mrow>
+     <mo class="mo">.</mo>
+    </math>
+   </disp-formula>
+  </p>
+  <p class="p">Notably, N-mixture models like that illustrated allow for the direct estimation and hypotheses-testing of the factors that affect the spatial structure of abundance (
+   <italic class="italic">λ</italic>) and/or the detection probability (
+   <italic class="italic">p</italic>).
+  </p>
+ </boxed-text>
+</p>

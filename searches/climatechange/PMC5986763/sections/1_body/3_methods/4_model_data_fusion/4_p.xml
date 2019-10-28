@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par52" class="p">In brief, the M–H algorithm consists of iterations of two steps: a proposing step and a moving step. In the proposing step, a new parameter set 
+ <italic class="italic">θ</italic>
+ <sup class="sup">new</sup> is proposed based on the previously accepted parameter set 
+ <italic class="italic">θ</italic>
+ <sup class="sup">old</sup> and a proposal distribution, which was uniform in our study:
+ <disp-formula id="Equ23" class="disp-formula">
+  <label class="label">23</label>
+  <alternatives class="alternatives">
+   <tex-math id="M77" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\theta ^{{\mathrm{new}}} = \theta ^{{\mathrm{old}}} + r \times \left( {\theta _{{\mathrm{max}}} - \theta _{{\mathrm{min}}}} \right)/D,$$\end{document}</tex-math>
+   <math id="M78" display="block" class="math">
+    <msup class="msup">
+     <mrow class="mrow">
+      <mi class="mi">θ</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">new</mi>
+     </mrow>
+    </msup>
+    <mo class="mo">=</mo>
+    <msup class="msup">
+     <mrow class="mrow">
+      <mi class="mi">θ</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">old</mi>
+     </mrow>
+    </msup>
+    <mo class="mo">+</mo>
+    <mi class="mi">r</mi>
+    <mo class="mo">×</mo>
+    <mfenced close=")" open="(" separators="" class="mfenced">
+     <mrow class="mrow">
+      <msub class="msub">
+       <mrow class="mrow">
+        <mi class="mi">θ</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mi mathvariant="normal" class="mi">max</mi>
+       </mrow>
+      </msub>
+      <mo class="mo">-</mo>
+      <msub class="msub">
+       <mrow class="mrow">
+        <mi class="mi">θ</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mi mathvariant="normal" class="mi">min</mi>
+       </mrow>
+      </msub>
+     </mrow>
+    </mfenced>
+    <mo class="mo">∕</mo>
+    <mi class="mi">D</mi>
+    <mo class="mo">,</mo>
+   </math>
+   <graphic xlink:href="41467_2018_4526_Article_Equ23.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic class="italic">θ</italic>
+ <sub class="sub">max</sub> and 
+ <italic class="italic">θ</italic>
+ <sub class="sub">min</sub> are the maximum and minimum values of parameters, 
+ <italic class="italic">r</italic> is a random variable between −0.5 and 0.5, and 
+ <italic class="italic">D</italic> is used to control the proposing step size and was set to 5 as is Xu et al.
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR42" class="xref">42</xref>
+ </sup>. In each moving step, 
+ <italic class="italic">θ</italic>
+ <sup class="sup">new</sup> was tested against the Metropolis criterion to examine if the new parameter set should be accepted or rejected. The first 2500 accepted samples were discarded (burn-in period) and the rest were used to generate posterior parameter distributions. In total, there are 50,000 accepted samples to construct the posterior distribution.
+</p>

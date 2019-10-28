@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The consequences of drought for PFGs depend both on the pixel 
+ <italic class="italic">Din</italic> value, but also on the PFG’s tolerance to drought conditions. Because the 24 PFGs represent a wide variety of plant species and several life forms, for many of which drought response traits are largely unknown, a trait-based parametrisation of PFG drought tolerance was impossible. Hence, parameters were statistically-derived, by comparing projected pixel 
+ <italic class="italic">Din</italic> values against PFG-specific historical 
+ <italic class="italic">Din</italic> values between 1961–1990 (i.e. distribution of 
+ <italic class="italic">Din</italic> values from locations where the PFG was present during this period, 
+ <italic class="italic">Din</italic>
+ <sub class="sub">
+  <italic class="italic">1961-1990</italic>
+ </sub> distribution). We assume that the lower a simulated pixel 
+ <italic class="italic">Din</italic> value is with respect to a PFG’s 
+ <italic class="italic">Din</italic>
+ <sub class="sub">
+  <italic class="italic">1961-1990</italic>
+ </sub> distribution, the more negatively drought affects that PFG. For each PFG two drought thresholds were calculated from its 
+ <italic class="italic">Din</italic>
+ <sub class="sub">
+  <italic class="italic">1961-1990</italic>
+ </sub> distribution to determine whether drought effects are moderate (pixel 
+ <italic class="italic">Din &lt;</italic>
+ <inline-formula id="pone.0206138.e001" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0206138.e001.jpg" id="pone.0206138.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mover accent="true" class="mover">
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">x</mi>
+     </mrow>
+     <mo class="mo">¯</mo>
+    </mover>
+   </math>
+  </alternatives>
+ </inline-formula> - 1.5SD of PFG’s 
+ <italic class="italic">Din</italic>
+ <sub class="sub">
+  <italic class="italic">1961-1990</italic>
+ </sub>) or severe (pixel 
+ <italic class="italic">Din &lt;</italic>
+ <inline-formula id="pone.0206138.e002" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0206138.e002.jpg" id="pone.0206138.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M2" class="math">
+    <mover accent="true" class="mover">
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">x</mi>
+     </mrow>
+     <mo class="mo">¯</mo>
+    </mover>
+   </math>
+  </alternatives>
+ </inline-formula> - 2.0SD of PFG’s 
+ <italic class="italic">Din</italic>
+ <sub class="sub">
+  <italic class="italic">1961-1990</italic>
+ </sub>)–this means that the same pixel 
+ <italic class="italic">Din</italic> value can affect some PFGs more than others. Hence, at each time-step and in each pixel, FATE-HD compares the simulated pixel 
+ <italic class="italic">Din</italic> value against the drought thresholds of the PFGs present in that pixel. Moderate drought effects decrease PFG recruitment and fertility, while severe effects also reduce survival. It has been shown that even if drought is not extreme, repeated or prolonged drought conditions can ultimately reduce survival for drought sensitive species [
+ <xref rid="pone.0206138.ref029" ref-type="bibr" class="xref">29</xref>–
+ <xref rid="pone.0206138.ref031" ref-type="bibr" class="xref">31</xref>]. Also, extreme drought can continue to affect growth and survival throughout subsequent non-drought years [
+ <xref rid="pone.0206138.ref029" ref-type="bibr" class="xref">29</xref>,
+ <xref rid="pone.0206138.ref030" ref-type="bibr" class="xref">30</xref>,
+ <xref rid="pone.0206138.ref032" ref-type="bibr" class="xref">32</xref>]. Thus, FATE-HD includes two memory effects that aim to simulate the consequences of repeated drought events and post-drought effects: PFGs suffer severe drought effects when subjected to successive drought events, and tree and shrub PFGs suffer post-drought effects (higher mortality, lower recruitment and fertility) if they suffered severe drought effects during the previous year (herbaceous PFGs were assumed to fully recover in non-drought years [
+ <xref rid="pone.0206138.ref033" ref-type="bibr" class="xref">33</xref>,
+ <xref rid="pone.0206138.ref034" ref-type="bibr" class="xref">34</xref>]). PFG drought responses are further refined by conditioning them to the PFG’s life form, soil moisture requirements and age. Herbaceous PFGs are the most sensitive group, but also recover faster [
+ <xref rid="pone.0206138.ref033" ref-type="bibr" class="xref">33</xref>,
+ <xref rid="pone.0206138.ref034" ref-type="bibr" class="xref">34</xref>], while shrubs (C4 group) and phanerophyte PFGs are less sensitive to drought, but recover slower once affected by drought [
+ <xref rid="pone.0206138.ref035" ref-type="bibr" class="xref">35</xref>,
+ <xref rid="pone.0206138.ref036" ref-type="bibr" class="xref">36</xref>]. Younger and older PFGs, the extremes of the size gradient, are known to be more negatively affected by drought [
+ <xref rid="pone.0206138.ref029" ref-type="bibr" class="xref">29</xref>,
+ <xref rid="pone.0206138.ref037" ref-type="bibr" class="xref">37</xref>] and thus have higher drought-related mortality rates. Similarly, PFGs with higher soil moisture requirements should be less adapted to drought [
+ <xref rid="pone.0206138.ref035" ref-type="bibr" class="xref">35</xref>], and suffer higher reductions in recruitment, fertility and survival when affected by drought. Finally, the presence of an established canopy is known to exert a protective effect against drought conditions [
+ <xref rid="pone.0206138.ref038" ref-type="bibr" class="xref">38</xref>,
+ <xref rid="pone.0206138.ref039" ref-type="bibr" class="xref">39</xref>]. This is reproduced in FATE-HD by increasing a pixel’s 
+ <italic class="italic">Din</italic> value by 25% when tree cover is &gt;40%. All these refinements of drought responses were developed and described in Barros 
+ <italic class="italic">et al</italic>. [
+ <xref rid="pone.0206138.ref015" ref-type="bibr" class="xref">15</xref>], based on literature information and expert knowledge.
+</p>

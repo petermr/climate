@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Models built for 
+ <italic class="italic">E. trinacris</italic> were parametrized as follows: Generalized Linear Models (GLM): type = “quadratic”, interaction level = 3; Multiple Adaptive Regression Splines (MARS): type = “quadratic”, interaction level = 3; Generalized Boosting Model, also known as Boosted Regression Trees (BRT): number of trees = 5,000, interaction depth = 3, cross-validation folds = 10; maxent (MAXENT.Phillips): maximum iterations = 5,000, betamultiplier = 2 (in order to obtain smoother model responses, 
+ <xref rid="ref-28" ref-type="bibr" class="xref">Elith et al. (2011)</xref>). The choice of these techniques permitted to explore responses from different classes of models, ranging from more classical statistical techniques (GLMs) to machine learning-oriented approaches (BRT and Maxent). GLMs and MARS are based on parametric and piecewise linear functions, respectively (
+ <xref rid="ref-50" ref-type="bibr" class="xref">Leathwick et al., 2005</xref>; 
+ <xref rid="ref-24" ref-type="bibr" class="xref">Elith et al., 2006</xref>); we set for both algorithms the type parameter to “quadratic” to produce smoother response functions and lower the risk of extreme extrapolation, with respect to polynomial formula, when projecting to future climate beyond the limits of current climate conditions on which models were calibrated. BRT combines the regression-tree and boosting algorithms to optimize predictive performance from an ensemble of trees sequentially fitted focusing on residuals from the previous iterations (
+ <xref rid="ref-26" ref-type="bibr" class="xref">Elith, Leathwick &amp; Hastie, 2008</xref>); this technique has been shown to be good at selecting relevant variables and model interactions among them, and it generally results in high discrimination performance and fit of accurate functions (
+ <xref rid="ref-24" ref-type="bibr" class="xref">Elith et al., 2006</xref>; 
+ <xref rid="ref-26" ref-type="bibr" class="xref">Elith, Leathwick &amp; Hastie, 2008</xref>; 
+ <xref rid="ref-23" ref-type="bibr" class="xref">Elith &amp; Graham, 2009</xref>; 
+ <xref rid="ref-14" ref-type="bibr" class="xref">Cerasoli et al., 2017</xref>), even though some overfitting problems were also shown, especially when data do not extensively cover the available environmental space (
+ <xref rid="ref-23" ref-type="bibr" class="xref">Elith &amp; Graham, 2009</xref>; 
+ <xref rid="ref-14" ref-type="bibr" class="xref">Cerasoli et al., 2017</xref>). Maxent, instead, represents a pure machine learning technique searching for the distribution of maximum entropy conditional to constraints on the difference between the expected values of the predictors under such distribution and their observed values (
+ <xref rid="ref-24" ref-type="bibr" class="xref">Elith et al., 2006</xref>; 
+ <xref rid="ref-69" ref-type="bibr" class="xref">Phillips, Anderson &amp; Schapire, 2006</xref>); even though it has often been acknowledged as one of the best performing modeling algorithms (
+ <xref rid="ref-24" ref-type="bibr" class="xref">Elith et al., 2006</xref>; 
+ <xref rid="ref-67" ref-type="bibr" class="xref">Pearson et al., 2007</xref>), recent studies showed that its outputs and performance strongly depend on the chosen parameterization (
+ <xref rid="ref-61" ref-type="bibr" class="xref">Merow, Smith &amp; Silander, 2013</xref>; 
+ <xref rid="ref-71" ref-type="bibr" class="xref">Radosavljevic &amp; Anderson, 2014</xref>). Finally, the Ensemble Modelling approach we implemented, based on weighted-averaging of the single ENMs’ predictions (see below), allows to obtain robust predictions (
+ <xref rid="ref-4" ref-type="bibr" class="xref">Araujo &amp; New, 2007</xref>; 
+ <xref rid="ref-57" ref-type="bibr" class="xref">Marmion et al., 2009</xref>) combining the strengths of the single algorithms and mitigating the respective weaknesses.
+</p>

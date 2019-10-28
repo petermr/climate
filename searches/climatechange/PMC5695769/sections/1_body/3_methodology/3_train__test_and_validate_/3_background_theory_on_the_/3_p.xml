@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Since the algorithm used in developing our predictive models is non-parametric, variable ranking and partial dependence plots (PDP) were generated to facilitate model inference. The variable importance ranking was computed based on ‘variable inclusion proportion’ that indicates the fraction of times a given predictor was used in constructing a decision-tree. PDPs are generally used for conducting variable inference for non-parametric statistical models. They help establish the individual effects of the predictor variables 
+ <italic class="italic">x</italic>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub> in a ceteris paribus condition (i.e., controlling for all the other predictors). Mathematically, the estimated PDP is given as shown in Eq (
+ <xref ref-type="disp-formula" rid="pone.0188033.e002" class="xref">2</xref>) below: 
+ <disp-formula id="pone.0188033.e002" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0188033.e002.jpg" id="pone.0188033.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M2" class="math">
+    <mover accent="true" class="mover">
+     <mrow class="mrow">
+      <msub class="msub">
+       <mrow class="mrow">
+        <mi mathvariant="normal" class="mi">f</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mi mathvariant="normal" class="mi">j</mi>
+       </mrow>
+      </msub>
+     </mrow>
+     <mo class="mo">^</mo>
+    </mover>
+    <mo class="mo">(</mo>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mrow class="mrow">
+       <mi mathvariant="normal" class="mi">x</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mi mathvariant="normal" class="mi">j</mi>
+      </mrow>
+     </msub>
+    </mrow>
+    <mo class="mo">)</mo>
+    <mo class="mo">=</mo>
+    <mfrac bevelled="true" class="mfrac">
+     <mrow class="mrow">
+      <mn class="mn">1</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">n</mi>
+     </mrow>
+    </mfrac>
+    <mrow class="mrow">
+     <msubsup class="msubsup">
+      <mstyle displaystyle="false" class="mstyle">
+       <mo class="mo">∑</mo>
+      </mstyle>
+      <mrow class="mrow">
+       <mi mathvariant="normal" class="mi">i</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+      <mrow class="mrow">
+       <mi mathvariant="normal" class="mi">n</mi>
+      </mrow>
+     </msubsup>
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi mathvariant="normal" class="mi">f</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi mathvariant="normal" class="mi">j</mi>
+         </mrow>
+        </msub>
+       </mrow>
+       <mo class="mo">^</mo>
+      </mover>
+      <mo class="mo">(</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">x</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">j</mi>
+        </mrow>
+       </msub>
+       <mo class="mo">,</mo>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">x</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">−</mo>
+         <mi mathvariant="normal" class="mi">j</mi>
+         <mo class="mo">,</mo>
+         <mi mathvariant="normal" class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+      <mo class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(2)</label>
+ </disp-formula>
+</p>

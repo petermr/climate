@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We determined how little auks balanced the cost of their daily energy requirements with the benefits of searching for 
+ <italic class="italic">C. finmarchicus</italic> for each winter month (November to February). We used RSFs [
+ <xref rid="RSOS171883C37" ref-type="bibr" class="xref">37</xref>] that assessed whether a given habitat feature is used disproportionately relative to availability (i.e. selection or avoidance). RSFs compared the daily energy requirements of little auks and the density of 
+ <italic class="italic">C. finmarchicus</italic> at GLS locations with those expected at an equal set of random locations generated within the 95% kernel density of observed locations for each month (
+ <xref ref-type="fig" rid="RSOS171883F1" class="xref">figure 1</xref>). This kernel density contour was chosen to represent available locations (both favourable and less favourable wintering locations). RSFs were fitted using generalized linear mixed models with a binomial distribution for errors and a logit link. We added a random intercept to account for the unbalanced number of locations collected across individuals [
+ <xref rid="RSOS171883C38" ref-type="bibr" class="xref">38</xref>]. We assessed empirical standard errors that are robust to both among- and within-individual correlations (i.e. serial correlation) and that provide robust estimates of significance [
+ <xref rid="RSOS171883C39" ref-type="bibr" class="xref">39</xref>]. The RSF took the form 
+ <inline-formula class="inline-formula">
+  <math id="IM1" class="math">
+   <mi class="mi">w</mi>
+   <mo stretchy="false" class="mo">(</mo>
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mrow class="mrow">
+       <mrow class="mrow">
+        <mtext mathvariant="bold" class="mtext">x</mtext>
+       </mrow>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">i</mi>
+       <mi class="mi">j</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mrow>
+   <mo stretchy="false" class="mo">)</mo>
+   <mo class="mo">=</mo>
+   <mi class="mi">exp</mi>
+   <mo class="mo">⁡</mo>
+   <mo stretchy="false" class="mo">(</mo>
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">β</mi>
+      <mn class="mn">0</mn>
+     </msub>
+    </mrow>
+    <mo class="mo">+</mo>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">β</mi>
+      <mn class="mn">1</mn>
+     </msub>
+    </mrow>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">x</mi>
+      <mrow class="mrow">
+       <mn class="mn">1</mn>
+       <mi class="mi">i</mi>
+       <mi class="mi">j</mi>
+      </mrow>
+     </msub>
+    </mrow>
+    <mo class="mo">+</mo>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">β</mi>
+      <mn class="mn">2</mn>
+     </msub>
+    </mrow>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">x</mi>
+      <mrow class="mrow">
+       <mn class="mn">2</mn>
+       <mi class="mi">i</mi>
+       <mi class="mi">j</mi>
+      </mrow>
+     </msub>
+    </mrow>
+    <mo class="mo">+</mo>
+    <mo class="mo">⋯</mo>
+    <mo class="mo">+</mo>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">β</mi>
+      <mi class="mi">n</mi>
+     </msub>
+    </mrow>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">x</mi>
+      <mrow class="mrow">
+       <mi class="mi">n</mi>
+       <mi class="mi">i</mi>
+       <mi class="mi">j</mi>
+      </mrow>
+     </msub>
+    </mrow>
+    <mo class="mo">+</mo>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">γ</mi>
+      <mrow class="mrow">
+       <mn class="mn">0</mn>
+       <mi class="mi">j</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mrow>
+   <mo stretchy="false" class="mo">)</mo>
+  </math>
+ </inline-formula>, where 
+ <inline-formula class="inline-formula">
+  <math id="IM2" class="math">
+   <mi class="mi">w</mi>
+   <mo stretchy="false" class="mo">(</mo>
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mrow class="mrow">
+       <mrow class="mrow">
+        <mtext mathvariant="bold" class="mtext">x</mtext>
+       </mrow>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">i</mi>
+       <mi class="mi">j</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </mrow>
+   <mo stretchy="false" class="mo">)</mo>
+  </math>
+ </inline-formula> is the relative probability of selection for little auk, 
+ <bold class="bold">x</bold> is a vector, 
+ <italic class="italic">β
+  <sub class="sub">0</sub>
+ </italic> is the mean intercept, 
+ <italic class="italic">β</italic> is the estimated fixed regression coefficient for continuous covariate 
+ <italic class="italic">x</italic>, 
+ <italic class="italic">i</italic> represents the 
+ <italic class="italic">i</italic>th observation, 
+ <italic class="italic">j</italic> represents the 
+ <italic class="italic">j</italic>th individual and 
+ <italic class="italic">γ</italic>
+ <sub class="sub">0
+  <italic class="italic">j</italic>
+ </sub> is the random effect on the intercept 
+ <italic class="italic">β
+  <sub class="sub">0</sub>
+ </italic> for animal 
+ <italic class="italic">j</italic>. We included the squared energy requirements and the squared density of 
+ <italic class="italic">C. finmarchicus</italic> to allow for quadratic effects, and an interaction term between prey density and energy requirements. Both the daily energy requirements and density of 
+ <italic class="italic">C. finmarchicus</italic> were centred to avoid collinearity issue and multicollinearity was low in all RSFs (variance inflation factors ≤6.6 in all models, [
+ <xref rid="RSOS171883C40" ref-type="bibr" class="xref">40</xref>]). We evaluated model robustness using k-fold cross-validation, by developing RSFs with 80% of the locations (training set), and then by testing the predictive power of these RSFs with the 20% withheld locations (testing set) [
+ <xref rid="RSOS171883C39" ref-type="bibr" class="xref">39</xref>,
+ <xref rid="RSOS171883C41" ref-type="bibr" class="xref">41</xref>]. RSFs were performed with the GLIMMIX procedure of SAS v. 9.2 software (SAS Inst.). 
+</p>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Discrimination performance of the single models was assessed through two different evaluation metrics, namely the area under the curve (AUC) of the receiver operating characteristic curve (
+ <xref rid="ref-69" ref-type="bibr" class="xref">Phillips, Anderson &amp; Schapire, 2006</xref>) and the True Skill Statistics (TSS) (
+ <xref rid="ref-2" ref-type="bibr" class="xref">Allouche, Tsoar &amp; Kadmon, 2006</xref>), this latter also providing information on model calibration (
+ <xref rid="ref-48" ref-type="bibr" class="xref">Jiménez-Valverde et al., 2013</xref>), with the 80% of the initial dataset used to build the models, and the remaining 20% used for the validation. For each of the 10 sets of pseudo-absences and each of the four modeling algorithms chosen, five iterations were performed, so that 200 models were finally generated. The EMs were built considering only the single ENMs exceeding both the thresholds, TSS &gt; 0.8 and AUC &gt; 0.7. The algorithms used to build the EMs were the “weighted mean of probabilities” (wmean), which permits to average the single models by weighting them on the basis of their AUC or TSS scores, the “median of probabilities” (median), and the “coefficient of variation of probabilities” (cv), which permits to map discrepancies among the single ENMs used to generate the EM (
+ <xref rid="ref-83" ref-type="bibr" class="xref">Thuiller et al., 2016</xref>). Moreover, the contribution of each predictor within the EMs was assessed by means of the algorithm-independent randomization procedure implemented in biomod2 (
+ <xref rid="ref-84" ref-type="bibr" class="xref">Thuiller et al., 2009</xref>; 
+ <xref rid="ref-12" ref-type="bibr" class="xref">Bucklin et al., 2015</xref>). Special consideration was given to model extrapolation (i.e., environmental conditions within the projection scenarios falling outside the range of environmental conditions used to calibrate the models, see 
+ <xref rid="ref-25" ref-type="bibr" class="xref">Elith &amp; Leathwick (2009)</xref> for further details), quantifying it through the Multivariate Environmental Surface Similarity (
+ <xref rid="ref-27" ref-type="bibr" class="xref">Elith, Kearney &amp; Phillips, 2010</xref>), computed through the function “mess” of the “dismo” package (
+ <xref rid="ref-46" ref-type="bibr" class="xref">Hijmans &amp; Elith, 2016</xref>) in R (
+ <xref rid="ref-70" ref-type="bibr" class="xref">R Core Team, 2016</xref>). The degree of extrapolation calculated for each 
+ <italic class="italic">GCM</italic> × 
+ <italic class="italic">RCP</italic> × 
+ <italic class="italic">year</italic> combination was included in the modeling framework by processing the EMs’ projections to each year × RCP scenario through the MEDI algorithm, a form of weighted average which down-weights extrapolation (
+ <xref rid="ref-47" ref-type="bibr" class="xref">Iannella, Cerasoli &amp; Biondi, 2017</xref>).
+</p>

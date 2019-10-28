@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To trace the dynamics governing 
+ <bold class="bold">
+  <italic class="italic">p</italic>
+ </bold>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub>, we employ degree 3 B-spline basis [
+ <xref rid="pone.0213300.ref014" ref-type="bibr" class="xref">14</xref>], also known as cubic splines, which produce a smooth curve for each element of 
+ <bold class="bold">
+  <italic class="italic">η</italic>
+ </bold>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub>; cubic splines are the standard choice in the literature as they are twice continuously differentiable and thus allow for a reasonable amount of smoothness [
+ <xref rid="pone.0213300.ref015" ref-type="bibr" class="xref">15</xref>]. We assume that the B–spline basis functions have 
+ <italic class="italic">K</italic>+ 1 equally spaced knots, 
+ <italic class="italic">t</italic>
+ <sub class="sub">min</sub> = 
+ <italic class="italic">t</italic>
+ <sub class="sub">0</sub> &lt; 
+ <italic class="italic">t</italic>
+ <sub class="sub">1</sub> &lt; ⋯ &lt; 
+ <italic class="italic">t</italic>
+ <sub class="sub">
+  <italic class="italic">K</italic>−1
+ </sub> &lt; 
+ <italic class="italic">t</italic>
+ <sub class="sub">
+  <italic class="italic">K</italic>
+ </sub> = 
+ <italic class="italic">t</italic>
+ <sub class="sub">max</sub> over the entire observation period, and thus the smooth curve 
+ <italic class="italic">η</italic>
+ <sub class="sub">
+  <italic class="italic">d</italic>,
+  <italic class="italic">t</italic>
+ </sub> can be expressed by the following linear combination of B–splines, 
+ <disp-formula id="pone.0213300.e006" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0213300.e006.jpg" id="pone.0213300.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M6" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">η</mi>
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mo class="mo">,</mo>
+          <mi class="mi">t</mi>
+         </mrow>
+        </msub>
+        <mo class="mo">=</mo>
+        <munderover class="munderover">
+         <mo class="mo">∑</mo>
+         <mrow class="mrow">
+          <mi class="mi">k</mi>
+          <mo class="mo">=</mo>
+          <mn class="mn">1</mn>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">K</mi>
+          <mo class="mo">+</mo>
+          <mn class="mn">3</mn>
+         </mrow>
+        </munderover>
+        <msub class="msub">
+         <mi class="mi">β</mi>
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mo class="mo">,</mo>
+          <mi class="mi">k</mi>
+         </mrow>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">B</mi>
+         <mi class="mi">k</mi>
+        </msub>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">t</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">,</mo>
+        <mspace width="1.em" class="mspace"/>
+        <mi class="mi">d</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+        <mo class="mo">,</mo>
+        <mo class="mo">…</mo>
+        <mo class="mo">,</mo>
+        <mn class="mn">8</mn>
+        <mo class="mo">.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(4)</label>
+ </disp-formula>
+</p>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Pooled sequences from the 20 sampled treatments were used (10 for each coral) to assemble the 
+ <italic class="italic">S. pistillata</italic> and the 
+ <italic class="italic">B. europaea</italic> transcriptomes. Trim Galore software (
+ <ext-link ext-link-type="uri" xlink:href="http://www.bioinformatics.babraham.ac.uk/projects/trim_galore/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.bioinformatics.babraham.ac.uk/projects/trim_galore/</ext-link>) was used for trimmed off sequencing adapters, low quality reads and for quality control. The reads were submitted to Trinity software (version r20131110)
+ <xref ref-type="bibr" rid="b38" class="xref">38</xref> for 
+ <italic class="italic">de novo</italic> assembly using the default parameters. 
+ <italic class="italic">S. pistillata</italic> and 
+ <italic class="italic">B. europaea</italic> library assemblies resulted with 470,497 and 961,667 contigs (transcripts), respectively. Each set of reads from each sample was then aligned to the assembled transcriptome using Bowtie, and RSEM
+ <xref ref-type="bibr" rid="b39" class="xref">39</xref> was next applied in order to get sample-specific abundance estimates. The last two steps were done using the “run_RSEM_align_n_estimate.pl“ script from the Trinity software package using the default parameters. In order to minimize false positive isoforms, all transcripts having FPKM value &lt;1 or isoform percentage values (IsoPct%) &lt;1 were filtered out, and were not included in downstream analysis. 162,784 contigs (N50 = 2088, median contig length = 687) and 546,169 contigs (N50 = 1246, median contig length = 424)) were left after filtering in 
+ <italic class="italic">S. pistillata and B. europaea</italic> assemblies respectively. Putative coding regions were extracted from the transcriptome assemblies using TransDecoder software (
+ <ext-link ext-link-type="uri" xlink:href="http://www.transdecoder.sourceforge.net" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.transdecoder.sourceforge.net</ext-link>), providing all the CDS and proteins from the assembly. The 
+ <italic class="italic">S. pistillata</italic> library contained 159,679 open reading frame (ORF)-encoding contigs and the 
+ <italic class="italic">B. euorpaea,</italic> 313,813. From which 71,096 and 213,664 protein coding genes are for 
+ <italic class="italic">S. pistillata</italic> and 
+ <italic class="italic">B. europaea</italic>, respectively. Bowtie (v2.1.0) was again used to map each set of reads from each sample against CDS, FPKM was calculated for expression values.
+</p>

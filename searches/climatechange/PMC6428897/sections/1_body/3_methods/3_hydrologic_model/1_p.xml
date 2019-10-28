@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par39" class="p">A monthly water balance model, ABCD was prepared to simulate the long-term hydrological responses of the 61 study watersheds to projected climate changes
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR60" class="xref">60</xref>
+ </sup>. The ABCD model has a parsimonious structure requiring only five parameters and allowing computationally affordable long-term simulation of hydrological components of interest. The modeling capacity of ABCD satisfied our needs for the monthly simulation of hydrological components including direct runoff, soil water, evapotranspiration, and groundwater and their water balance partitioning. The model has been successful in hydrological analyses for various climate zones
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR37" class="xref">37</xref>,
+  <xref ref-type="bibr" rid="CR66" class="xref">66</xref>,
+  <xref ref-type="bibr" rid="CR96" class="xref">96</xref>–
+  <xref ref-type="bibr" rid="CR100" class="xref">100</xref>
+ </sup>. In the ABCD model, available water (
+ <italic class="italic">WW</italic>, mm) of the current month is defined as a summation of precipitation (
+ <italic class="italic">PP</italic>, mm) of the current month (
+ <italic class="italic">t</italic>) and soil water content (
+ <italic class="italic">SS</italic>, mm) of the previous month (
+ <italic class="italic">t</italic> − 1) (Eq. 
+ <xref rid="Equ2" ref-type="" class="xref">2</xref>), while the evapotranspiration opportunity of the current month (
+ <italic class="italic">YY</italic>, mm) is determined by a summation of actual evapotranspiration and soil water content of the current month (Eq. 
+ <xref rid="Equ3" ref-type="" class="xref">3</xref>):
+ <disp-formula id="Equ2" class="disp-formula">
+  <label class="label">2</label>
+  <alternatives class="alternatives">
+   <tex-math id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$W{W}_{t}=P{P}_{t}+S{S}_{t-1}$$\end{document}</tex-math>
+   <math id="M4" display="block" class="math">
+    <mi class="mi">W</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">W</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mi class="mi">P</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">P</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">+</mo>
+    <mi class="mi">S</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">S</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+      <mo class="mo">−</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+    </msub>
+   </math>
+   <graphic xlink:href="41598_2019_41334_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>and
+ <disp-formula id="Equ3" class="disp-formula">
+  <label class="label">3</label>
+  <alternatives class="alternatives">
+   <tex-math id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$Y{Y}_{t}=PE{T}_{t}+S{S}_{t}=\frac{W{W}_{t}+b}{2a}-\sqrt{{(\frac{W{W}_{t}+b}{2a})}^{2}-\frac{W{W}_{t}b}{2a}}$$\end{document}</tex-math>
+   <math id="M6" display="block" class="math">
+    <mi class="mi">Y</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">Y</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mi class="mi">P</mi>
+    <mi class="mi">E</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">T</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">+</mo>
+    <mi class="mi">S</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">S</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <mi class="mi">W</mi>
+      <msub class="msub">
+       <mrow class="mrow">
+        <mi class="mi">W</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mi class="mi">t</mi>
+       </mrow>
+      </msub>
+      <mo class="mo">+</mo>
+      <mi class="mi">b</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">2</mn>
+      <mi class="mi">a</mi>
+     </mrow>
+    </mfrac>
+    <mo class="mo">−</mo>
+    <msqrt class="msqrt">
+     <mrow class="mrow">
+      <msup class="msup">
+       <mrow class="mrow">
+        <mo stretchy="true" class="mo">(</mo>
+        <mrow class="mrow">
+         <mfrac class="mfrac">
+          <mrow class="mrow">
+           <mi class="mi">W</mi>
+           <msub class="msub">
+            <mrow class="mrow">
+             <mi class="mi">W</mi>
+            </mrow>
+            <mrow class="mrow">
+             <mi class="mi">t</mi>
+            </mrow>
+           </msub>
+           <mo class="mo">+</mo>
+           <mi class="mi">b</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+           <mi class="mi">a</mi>
+          </mrow>
+         </mfrac>
+        </mrow>
+        <mo stretchy="true" class="mo">)</mo>
+       </mrow>
+       <mn class="mn">2</mn>
+      </msup>
+      <mo class="mo">−</mo>
+      <mfrac class="mfrac">
+       <mrow class="mrow">
+        <mi class="mi">W</mi>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">W</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">t</mi>
+         </mrow>
+        </msub>
+        <mi class="mi">b</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mn class="mn">2</mn>
+        <mi class="mi">a</mi>
+       </mrow>
+      </mfrac>
+     </mrow>
+    </msqrt>
+   </math>
+   <graphic xlink:href="41598_2019_41334_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where the 
+ <italic class="italic">a</italic> and 
+ <italic class="italic">b</italic> parameters represent “propensity for runoff to occur well before the soil is saturated to capacity” (0 ≤ 
+ <italic class="italic">a</italic> ≤ 1) and “upper limit of storage in the unsaturated zone above the groundwater level,” or “upper bound of the summation of actual evapotranspiration and soil moisture storage,” respectively
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR60" class="xref">60</xref>
+ </sup>. 
+ <italic class="italic">PET</italic> represents the potential evapotranspiration (mm) that is calculated using Eq. 
+ <xref rid="Equ4" ref-type="" class="xref">4</xref>:
+ <disp-formula id="Equ4" class="disp-formula">
+  <label class="label">4</label>
+  <alternatives class="alternatives">
+   <tex-math id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$PET=e\cdot PE{T}_{EQ},$$\end{document}</tex-math>
+   <math id="M8" display="block" class="math">
+    <mi class="mi">P</mi>
+    <mi class="mi">E</mi>
+    <mi class="mi">T</mi>
+    <mo class="mo">=</mo>
+    <mi class="mi">e</mi>
+    <mo class="mo">⋅</mo>
+    <mi class="mi">P</mi>
+    <mi class="mi">E</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">T</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">E</mi>
+      <mi class="mi">Q</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">,</mo>
+   </math>
+   <graphic xlink:href="41598_2019_41334_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic class="italic">e</italic> is a calibration parameter that is newly introduced to the original ABCD model, and 
+ <italic class="italic">PET</italic>
+ <sub class="sub">
+  <italic class="italic">EQ</italic>
+ </sub> is the potential evapotranspiration estimation provided by the 
+ <italic class="italic">PET</italic> equation. The Hargreaves equation was selected for the calculation of the monthly 
+ <italic class="italic">PET</italic> in this study (Eq. 
+ <xref rid="Equ5" ref-type="" class="xref">5</xref>):
+ <disp-formula id="Equ5" class="disp-formula">
+  <label class="label">5</label>
+  <alternatives class="alternatives">
+   <tex-math id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$PE{T}_{EQ}=0.000938(TAV+17.8){(TMX-TMN)}^{0.5}{R}_{a},$$\end{document}</tex-math>
+   <math id="M10" display="block" class="math">
+    <mi class="mi">P</mi>
+    <mi class="mi">E</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">T</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">E</mi>
+      <mi class="mi">Q</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mn class="mn">0.000938</mn>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mi class="mi">T</mi>
+      <mi class="mi">A</mi>
+      <mi class="mi">V</mi>
+      <mo class="mo">+</mo>
+      <mn class="mn">17.8</mn>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+    <msup class="msup">
+     <mrow class="mrow">
+      <mo stretchy="true" class="mo">(</mo>
+      <mrow class="mrow">
+       <mi class="mi">T</mi>
+       <mi class="mi">M</mi>
+       <mi class="mi">X</mi>
+       <mo class="mo">−</mo>
+       <mi class="mi">T</mi>
+       <mi class="mi">M</mi>
+       <mi class="mi">N</mi>
+      </mrow>
+      <mo stretchy="true" class="mo">)</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">0.5</mn>
+     </mrow>
+    </msup>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">R</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">a</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">,</mo>
+   </math>
+   <graphic xlink:href="41598_2019_41334_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic class="italic">TAV</italic> is average monthly temperature (°C), 
+ <italic class="italic">TMX</italic> is maximum monthly temperature (°C), 
+ <italic class="italic">TMN</italic> is minimum monthly temperature (°C), and 
+ <italic class="italic">R</italic>
+ <sub class="sub">
+  <italic class="italic">a</italic>
+ </sub> is extraterrestrial radiation (
+ <italic class="italic">MJm</italic>
+ <sup class="sup">−2</sup>
+ <italic class="italic">month</italic>
+ <sup class="sup">−1</sup>). In the ABCD model, soil water content is proportional to the evapotranspiration opportunity, and it exponentially decreases with the increases of the potential evapotranspiration rate (Eq. 
+ <xref rid="Equ6" ref-type="" class="xref">6</xref>):
+ <disp-formula id="Equ6" class="disp-formula">
+  <label class="label">6</label>
+  <alternatives class="alternatives">
+   <tex-math id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$S{S}_{t}=Y{Y}_{t}\,exp(\frac{-PE{T}_{t}}{b})$$\end{document}</tex-math>
+   <math id="M12" display="block" class="math">
+    <mi class="mi">S</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">S</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mi class="mi">Y</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">Y</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mspace width=".25em" class="mspace"/>
+    <mi class="mi">e</mi>
+    <mi class="mi">x</mi>
+    <mi class="mi">p</mi>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mfrac class="mfrac">
+       <mrow class="mrow">
+        <mo class="mo">−</mo>
+        <mi class="mi">P</mi>
+        <mi class="mi">E</mi>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">T</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">t</mi>
+         </mrow>
+        </msub>
+       </mrow>
+       <mi class="mi">b</mi>
+      </mfrac>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+   </math>
+   <graphic xlink:href="41598_2019_41334_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

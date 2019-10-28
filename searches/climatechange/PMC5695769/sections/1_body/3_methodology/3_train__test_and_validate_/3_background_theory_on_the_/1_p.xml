@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Bayesian, additive regression-trees (BART) [
+ <xref rid="pone.0188033.ref042" ref-type="bibr" class="xref">42</xref>–
+ <xref rid="pone.0188033.ref044" ref-type="bibr" class="xref">44</xref>] is a sum-of-trees model where the response function is approximated by aggregating the estimates from 
+ <italic class="italic">m</italic> ‘small’ decision trees. Mathematically, BART can be represented as: 
+ <disp-formula id="pone.0188033.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0188033.e001.jpg" id="pone.0188033.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mrow class="mrow">
+     <mi class="mi">Y</mi>
+     <mo class="mo">=</mo>
+     <mo stretchy="false" class="mo">[</mo>
+     <msubsup class="msubsup">
+      <mstyle displaystyle="false" class="mstyle">
+       <mo class="mo">∑</mo>
+      </mstyle>
+      <mrow class="mrow">
+       <mi class="mi">j</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+      <mi class="mi">m</mi>
+     </msubsup>
+     <mi class="mi">g</mi>
+     <mo stretchy="false" class="mo">(</mo>
+     <mi mathvariant="bold-italic" class="mi">X</mi>
+     <mo class="mo">;</mo>
+     <msub class="msub">
+      <mi class="mi">T</mi>
+      <mi class="mi">j</mi>
+     </msub>
+     <mo class="mo">,</mo>
+     <msub class="msub">
+      <mi class="mi">M</mi>
+      <mi class="mi">j</mi>
+     </msub>
+     <mo stretchy="false" class="mo">)</mo>
+     <mo stretchy="false" class="mo">]</mo>
+     <mo class="mo">+</mo>
+     <mi class="mi">ϵ</mi>
+     <mo class="mo">,</mo>
+     <mspace width="0.25em" class="mspace"/>
+     <mi mathvariant="normal" class="mi">where</mi>
+     <mspace width="0.25em" class="mspace"/>
+     <mi class="mi">ϵ</mi>
+     <mo class="mo">∼</mo>
+     <mi class="mi">N</mi>
+     <mo stretchy="false" class="mo">(</mo>
+     <mn class="mn">0</mn>
+     <mo class="mo">,</mo>
+     <msup class="msup">
+      <mi class="mi">σ</mi>
+      <mn class="mn">2</mn>
+     </msup>
+     <mo stretchy="false" class="mo">)</mo>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula>
+</p>

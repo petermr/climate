@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Ensemble models are used commonly in forecasting climate change effects, seeking to generate a consensus estimate that reduces individual model uncertainty by reflecting the central tendency of multiple models [
+ <xref rid="pntd.0006021.ref011" ref-type="bibr" class="xref">11</xref>,
+ <xref rid="pntd.0006021.ref012" ref-type="bibr" class="xref">12</xref>,
+ <xref rid="pntd.0006021.ref041" ref-type="bibr" class="xref">41</xref>]. Here, outputs from six modelling algorithms, including generalized additive models (GAM), generalized boosted models (GBM), generalized linear models (GLM), random forests (RF), genetic algorithms (GARP), and the 
+ <italic class="italic">f</italic>Maxent model described above were included in ensembles. Individual GAM, GBM, GLM, and RF models were developed using BIOMOD2 [
+ <xref rid="pntd.0006021.ref042" ref-type="bibr" class="xref">42</xref>], as implemented in R [
+ <xref rid="pntd.0006021.ref043" ref-type="bibr" class="xref">43</xref>]; GARP models were developed in desktopGARP [
+ <xref rid="pntd.0006021.ref044" ref-type="bibr" class="xref">44</xref>]. Details of implementation of each algorithm are provided in the supporting information (
+ <xref ref-type="supplementary-material" rid="pntd.0006021.s002" class="xref">S2 Table</xref>). Model ensembles typically use a weighted averaging approach, in which models are weighted according to their interpolative performance (e.g. [
+ <xref rid="pntd.0006021.ref030" ref-type="bibr" class="xref">30</xref>]). However, a recent assessment pointed to the challenge of balancing model interpolative accuracy against transferability [
+ <xref rid="pntd.0006021.ref029" ref-type="bibr" class="xref">29</xref>,
+ <xref rid="pntd.0006021.ref045" ref-type="bibr" class="xref">45</xref>]. Therefore, rather than using weighted averages, we used the PCA (median) method to identify the “central tendency” of individual model predictions [
+ <xref rid="pntd.0006021.ref008" ref-type="bibr" class="xref">8</xref>,
+ <xref rid="pntd.0006021.ref011" ref-type="bibr" class="xref">11</xref>]. The PCA measures, for each model, its ability to follow the general trend of predictions of the six models. This method calculates the median of the four individual models that had higher factor values among the six models [
+ <xref rid="pntd.0006021.ref008" ref-type="bibr" class="xref">8</xref>,
+ <xref rid="pntd.0006021.ref011" ref-type="bibr" class="xref">11</xref>,
+ <xref rid="pntd.0006021.ref012" ref-type="bibr" class="xref">12</xref>].
+</p>

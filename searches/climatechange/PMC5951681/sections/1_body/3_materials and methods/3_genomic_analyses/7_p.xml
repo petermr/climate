@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To project the final GDM model onto the current environmental landscape, we first delineated the geographic extent of the analysis by defining an 
+ <italic class="italic">E. melliodora</italic> distribution polygon. We downloaded 14,977 
+ <italic class="italic">E. melliodora</italic> occurrence records from the Atlas of Living Australia (
+ <xref rid="bib3" ref-type="bibr" class="xref">ALA, 2016</xref>), of which we removed 189 because they were well outside the expected distribution or were sparse records on the distribution margin. We generated the polygon using 
+ <italic class="italic">ahull</italic> (R alphahull v2.1, [
+ <xref rid="bib47" ref-type="bibr" class="xref">Pateiro-López and Rodríguez-Casal, 2010</xref>]), with alpha = 15 and 
+ <italic class="italic">gBuffer</italic> (R rgeos v0.3–21, [
+ <xref rid="bib9" ref-type="bibr" class="xref">Bivand and Rundel, 2016</xref>]), with a 20 km buffer. We then transformed the environmental rasters based on the model splines (
+ <italic class="italic">gdm.transform</italic>), performed a PCA of the transformed layers (
+ <italic class="italic">prcomp</italic> R stats v3.1.2, [
+ <xref rid="bib50" ref-type="bibr" class="xref">R Core Team, 2015</xref>]), and predicted across space (
+ <italic class="italic">predict</italic>). We visualized the result by graphing the first three components of a PCA using a red-green-blue plot (
+ <xref rid="bib25" ref-type="bibr" class="xref">Fitzpatrick and Keller, 2015</xref>). We also projected the model onto a predicted future environmental landscape with the same procedure, except we replaced the current bioclimatic rasters with the future ones for 2070 that were predicted under a high CO2 emission scenario. We calculated ‘genomic vulnerability’ (
+ <xref rid="bib8" ref-type="bibr" class="xref">Bay et al., 2018</xref>), which is the amount genomic change required to track environmental change over time, using the 
+ <italic class="italic">predict</italic> function with time = TRUE.
+</p>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Unitary linear regression analysis can simulate the variation trend of each grid. In this method, the average annual slope of NPP is fitted by least squares pixel by pixel over a certain period to comprehensively reflect the spatial–temporal evolution characteristics of NPP [
+ <xref rid="B35-ijerph-16-01497" ref-type="bibr" class="xref">35</xref>]. 
+ <disp-formula id="FD4-ijerph-16-01497" class="disp-formula">
+  <label class="label">(4)</label>
+  <math id="mm13" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <mi class="mi">Slope</mi>
+     <mo class="mo">=</mo>
+     <mfrac class="mfrac">
+      <mrow class="mrow">
+       <mi mathvariant="normal" class="mi">n</mi>
+       <mo class="mo">×</mo>
+       <msubsup class="msubsup">
+        <mstyle mathsize="100%" displaystyle="true" class="mstyle">
+         <mo class="mo">∑</mo>
+        </mstyle>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mi class="mi">n</mi>
+       </msubsup>
+       <mi class="mi">i</mi>
+       <mo class="mo">×</mo>
+       <msub class="msub">
+        <mi class="mi">P</mi>
+        <mi class="mi">i</mi>
+       </msub>
+       <mo class="mo">−</mo>
+       <msubsup class="msubsup">
+        <mstyle mathsize="100%" displaystyle="true" class="mstyle">
+         <mo class="mo">∑</mo>
+        </mstyle>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mi class="mi">n</mi>
+       </msubsup>
+       <mi class="mi">i</mi>
+       <msubsup class="msubsup">
+        <mstyle mathsize="100%" displaystyle="true" class="mstyle">
+         <mo class="mo">∑</mo>
+        </mstyle>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mi class="mi">n</mi>
+       </msubsup>
+       <msub class="msub">
+        <mi class="mi">p</mi>
+        <mi class="mi">i</mi>
+       </msub>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">n</mi>
+       <mo class="mo">×</mo>
+       <msubsup class="msubsup">
+        <mstyle mathsize="100%" displaystyle="true" class="mstyle">
+         <mo class="mo">∑</mo>
+        </mstyle>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mi class="mi">n</mi>
+       </msubsup>
+       <msup class="msup">
+        <mi class="mi">i</mi>
+        <mn class="mn">2</mn>
+       </msup>
+       <mo class="mo">−</mo>
+       <msup class="msup">
+        <mrow class="mrow">
+         <mrow class="mrow">
+          <mo class="mo">(</mo>
+          <mrow class="mrow">
+           <msubsup class="msubsup">
+            <mstyle mathsize="100%" displaystyle="true" class="mstyle">
+             <mo class="mo">∑</mo>
+            </mstyle>
+            <mrow class="mrow">
+             <mi class="mi">i</mi>
+             <mo class="mo">=</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+            <mi class="mi">n</mi>
+           </msubsup>
+           <mi class="mi">i</mi>
+          </mrow>
+          <mo class="mo">)</mo>
+         </mrow>
+        </mrow>
+        <mn class="mn">2</mn>
+       </msup>
+      </mrow>
+     </mfrac>
+    </mrow>
+   </mrow>
+  </math>
+ </disp-formula> where Slope is the change in the trend, 
+ <inline-formula class="inline-formula">
+  <math id="mm14" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">P</mi>
+      <mi class="mi">i</mi>
+     </msub>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula> is the NPP for the ith year, and 
+ <italic class="italic">n</italic> is the length of the time series. If Slope &gt; 0, then NPP has an upward trend. Conversely, NPP has a downward trend if Slope &lt; 0. The significance of the interannual change in NPP is determined by the F test:
+ <disp-formula id="FD5-ijerph-16-01497" class="disp-formula">
+  <label class="label">(5)</label>
+  <math id="mm15" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <mi class="mi">F</mi>
+     <mo class="mo">=</mo>
+     <mfrac class="mfrac">
+      <mrow class="mrow">
+       <msup class="msup">
+        <mi class="mi">R</mi>
+        <mn class="mn">2</mn>
+       </msup>
+      </mrow>
+      <mrow class="mrow">
+       <mn class="mn">1</mn>
+       <mo class="mo">−</mo>
+       <msup class="msup">
+        <mi class="mi">R</mi>
+        <mn class="mn">2</mn>
+       </msup>
+      </mrow>
+     </mfrac>
+     <mo class="mo">×</mo>
+     <mfrac class="mfrac">
+      <mrow class="mrow">
+       <mi class="mi">t</mi>
+       <mo class="mo">−</mo>
+       <mi class="mi">k</mi>
+       <mo class="mo">−</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+      <mi class="mi">k</mi>
+     </mfrac>
+    </mrow>
+   </mrow>
+  </math>
+ </disp-formula> where 
+ <italic class="italic">R</italic> is the slope, 
+ <italic class="italic">t</italic> is the sample number, and 
+ <italic class="italic">k</italic> is the number of independent variables. The following formula is introduced in this study in order to evaluate the overall change in NPP over a long time series. It is expressed as the relative inter-annual rate of change (RARC
+ <sub class="sub">c</sub>) in NPP and obtained by the following formula:
+ <disp-formula id="FD6-ijerph-16-01497" class="disp-formula">
+  <label class="label">(6)</label>
+  <math id="mm16" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <mi class="mi">R</mi>
+     <mi class="mi">A</mi>
+     <mi class="mi">R</mi>
+     <msub class="msub">
+      <mi class="mi">C</mi>
+      <mi class="mi">c</mi>
+     </msub>
+     <mo class="mo">=</mo>
+     <mfrac class="mfrac">
+      <mrow class="mrow">
+       <mi class="mi">S</mi>
+       <mi class="mi">l</mi>
+       <mi class="mi">o</mi>
+       <mi class="mi">p</mi>
+       <mi class="mi">e</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mover accent="true" class="mover">
+        <mrow class="mrow">
+         <mi class="mi">N</mi>
+         <mi class="mi">P</mi>
+         <mi class="mi">P</mi>
+        </mrow>
+        <mo stretchy="true" class="mo">¯</mo>
+       </mover>
+      </mrow>
+     </mfrac>
+     <mo class="mo">×</mo>
+     <mn class="mn">100</mn>
+     <mo class="mo">%</mo>
+    </mrow>
+   </mrow>
+  </math>
+ </disp-formula>
+</p>

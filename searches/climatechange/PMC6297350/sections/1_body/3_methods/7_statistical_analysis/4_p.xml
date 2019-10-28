@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par31" class="p">We conducted an additional analysis that evaluated possible drivers of growth variability per species across the full dataset (i.e. not a local comparison). We used a linear mixed-effects regression approach that modeled variation in the SD of detrended ring-width time series as a function of age (mean cumulative ring count during the 1930–1995 period), database (i.e. ITRDB vs. FIA), and geographic as well as climatic parameters:
+ <disp-formula id="Equ3" class="disp-formula">
+  <label class="label">3</label>
+  <alternatives class="alternatives">
+   <tex-math id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{l}\mathrm{SD}\sim {\mathrm {database}} + {\mathrm{ln}}({\mathrm {age}}) + {\mathrm {latitude}} + {\mathrm {longitude}} + {\mathrm {elevation}} + \\ {\mathrm {mean}}\;{\mathrm {cool}}\;{\mathrm {season}}\;{\mathrm {precipitation}} + {\mathrm {mean}}\;{\mathrm {dry}}\;{\mathrm {season}}\;{\mathrm {mean}}\;{\mathrm {maximum}}\;{\mathrm {temperature}}\end{array}.$$\end{document}</tex-math>
+   <math id="M8" display="block" class="math">
+    <mtable class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd">
+       <mi mathvariant="normal" class="mi">SD</mi>
+       <mo class="mo">~</mo>
+       <mi mathvariant="normal" class="mi">database</mi>
+       <mo class="mo">+</mo>
+       <mi mathvariant="normal" class="mi">ln</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">age</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mo class="mo">+</mo>
+       <mi mathvariant="normal" class="mi">latitude</mi>
+       <mo class="mo">+</mo>
+       <mi mathvariant="normal" class="mi">longitude</mi>
+       <mo class="mo">+</mo>
+       <mi mathvariant="normal" class="mi">elevation</mi>
+       <mo class="mo">+</mo>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd">
+       <mi mathvariant="normal" class="mi">mean</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">cool</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">season</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">precipitation</mi>
+       <mo class="mo">+</mo>
+       <mi mathvariant="normal" class="mi">mean</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">dry</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">season</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">mean</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">maximum</mi>
+       <mspace width="2.77626pt" class="mspace"/>
+       <mi mathvariant="normal" class="mi">temperature</mi>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo class="mo">.</mo>
+   </math>
+   <graphic xlink:href="41467_2018_7800_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>The mean climate parameters cool season precipitation (previous November to current year March), and dry season mean maximum temperatures (mean of previous year (August to October), and summer of the current year (May to July)) were calculated over the 1930–1995 period. The model included all possible two-way interactions and accounted for repeated values per site via site random effects (modifying the intercept). Model comparison and selection was performed using the dredge function in the R package MuMIn
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR44" class="xref">44</xref>
+ </sup>. We selected the best model based on the Akaike Information Criterion (AIC). If multiple models were within two units of AIC, we chose the model with the lowest number of parameters. This analysis was repeated using a negative exponential, a 30-year spline, and a 100-year spline to detrend the time series—each with and without prewhitening—to test whether differences in detrending method or temporal autocorrelation influenced the results of the analysis. We also analyzed variation in the three partial regression slopes (
+ <italic class="italic">β</italic>’s) and explained variance (
+ <italic class="italic">R</italic>
+ <sup class="sup">2</sup>) of the regressions predicting relative tree growth as a function of climate, using the same model shown in Eq. 
+ <xref rid="Equ1" ref-type="" class="xref">1</xref> (Supplementary Figure 
+ <xref rid="MOESM1" ref-type="media" class="xref">3</xref>). We report results from this analysis only based on time series detrended with a negative exponential curve, as there was no notable effect of the choice of detrending on predicting SD. All statistical analysis was carried out in R using the packages dplR
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR45" class="xref">45</xref>
+ </sup> and lme4 
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR46" class="xref">46</xref>
+ </sup>.
+</p>

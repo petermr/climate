@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Permafrost distribution was simulated using the Surface Frost Number model, developed from the Air Frost Number model of Nelson and Outcalt
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR33" class="xref">33</xref>
+ </sup>. To make simulation results more reliable, air temperature in the Air Frost Number model was replaced by soil temperature at 20 cm depth in the LPJ model to consider the effects of snow cover, soil moisture and other variables on temperature conductivity. All soil temperatures used in the analysis are for a depth of 20 cm and all temperatures are expressed in degrees Celcius. The Surface Frost Number 
+ <italic class="italic">F</italic>
+ <sub class="sub">+</sub>, where the subscript (+) represents an adjustment of air temperatures for the effects of snow cover, is defined as:
+ <disp-formula id="Equ1" class="disp-formula">
+  <label class="label">1</label>
+  <alternatives class="alternatives">
+   <tex-math id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${F}_{+}=\frac{\sqrt{{DD}{F}_{+}}}{\sqrt{{DD}{F}_{+}}+\sqrt{DDT}}$$\end{document}</tex-math>
+   <math id="M2" display="block" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">F</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">+</mo>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <msqrt class="msqrt">
+       <mrow class="mrow">
+        <mi mathvariant="italic" class="mi">DD</mi>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">F</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mo class="mo">+</mo>
+         </mrow>
+        </msub>
+       </mrow>
+      </msqrt>
+     </mrow>
+     <mrow class="mrow">
+      <msqrt class="msqrt">
+       <mrow class="mrow">
+        <mi mathvariant="italic" class="mi">DD</mi>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">F</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mo class="mo">+</mo>
+         </mrow>
+        </msub>
+       </mrow>
+      </msqrt>
+      <mo class="mo">+</mo>
+      <msqrt class="msqrt">
+       <mrow class="mrow">
+        <mi class="mi">D</mi>
+        <mi class="mi">D</mi>
+        <mi class="mi">T</mi>
+       </mrow>
+      </msqrt>
+     </mrow>
+    </mfrac>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic class="italic">DDF</italic> and 
+ <italic class="italic">DDT</italic> are freezing and thawing indices (degree days) that denote seasonal degree-day sums above and below 0 °C, respectively. Since these parameters are often not readily available, changing surface temperature curves are taken to approximate cosine functions. These functions are used to acquire the following freezing and thawing indices:
+ <disp-formula id="Equ2" class="disp-formula">
+  <label class="label">21</label>
+  <alternatives class="alternatives">
+   <tex-math id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar{{T}}=({\bar{{T}}}_{{h}}+{\bar{{T}}}_{{c}})/2$$\end{document}</tex-math>
+   <math id="M4" display="block" class="math">
+    <mover accent="true" class="mover">
+     <mi mathvariant="italic" class="mi">T</mi>
+     <mo mathvariant="italic" class="mo">¯</mo>
+    </mover>
+    <mo class="mo">=</mo>
+    <mo stretchy="false" class="mo">(</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">h</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">+</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">c</mi>
+     </mrow>
+    </msub>
+    <mo stretchy="false" class="mo">)</mo>
+    <mo class="mo">/</mo>
+    <mn class="mn">2</mn>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ3" class="disp-formula">
+  <label class="label">22</label>
+  <alternatives class="alternatives">
+   <tex-math id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$A=({\bar{T}}_{h}-{\bar{T}}_{c})/2$$\end{document}</tex-math>
+   <math id="M6" display="block" class="math">
+    <mrow class="mrow">
+     <mrow class="mrow">
+      <mi class="mi">A</mi>
+     </mrow>
+    </mrow>
+    <mo class="mo">=</mo>
+    <mo stretchy="false" class="mo">(</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mrow class="mrow">
+       <mover class="mover">
+        <mrow class="mrow">
+         <mi class="mi">T</mi>
+        </mrow>
+        <mo stretchy="true" class="mo">¯</mo>
+       </mover>
+      </mrow>
+     </mrow>
+     <mrow class="mrow">
+      <mrow class="mrow">
+       <mi class="mi">h</mi>
+      </mrow>
+     </mrow>
+    </msub>
+    <mo class="mo">−</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mrow class="mrow">
+       <mover class="mover">
+        <mrow class="mrow">
+         <mi class="mi">T</mi>
+        </mrow>
+        <mo stretchy="true" class="mo">¯</mo>
+       </mover>
+      </mrow>
+     </mrow>
+     <mrow class="mrow">
+      <mrow class="mrow">
+       <mi class="mi">c</mi>
+      </mrow>
+     </mrow>
+    </msub>
+    <mo stretchy="false" class="mo">)</mo>
+    <mrow class="mrow">
+     <mo class="mo">/</mo>
+    </mrow>
+    <mn class="mn">2</mn>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ4" class="disp-formula">
+  <label class="label">23</label>
+  <alternatives class="alternatives">
+   <tex-math id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\beta ={\cos }^{-1}(-\bar{{T}}/{A})$$\end{document}</tex-math>
+   <math id="M8" display="block" class="math">
+    <mi class="mi">β</mi>
+    <mo class="mo">=</mo>
+    <msup class="msup">
+     <mrow class="mrow">
+      <mi class="mi">cos</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">-</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+    </msup>
+    <mo stretchy="false" class="mo">(</mo>
+    <mspace width="-0.25em" class="mspace"/>
+    <mo class="mo">−</mo>
+    <mspace width="-0.15em" class="mspace"/>
+    <mover accent="true" class="mover">
+     <mi mathvariant="italic" class="mi">T</mi>
+     <mo mathvariant="italic" class="mo">¯</mo>
+    </mover>
+    <mo class="mo">/</mo>
+    <mi mathvariant="italic" class="mi">A</mi>
+    <mo stretchy="false" class="mo">)</mo>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ5" class="disp-formula">
+  <label class="label">24</label>
+  <alternatives class="alternatives">
+   <tex-math id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{{T}}}_{{s}}=\bar{{T}}+{A}(\sin \,\beta /\beta )$$\end{document}</tex-math>
+   <math id="M10" display="block" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">s</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mover accent="true" class="mover">
+     <mi mathvariant="italic" class="mi">T</mi>
+     <mo mathvariant="italic" class="mo">¯</mo>
+    </mover>
+    <mo class="mo">+</mo>
+    <mi mathvariant="italic" class="mi">A</mi>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mi class="mi">sin</mi>
+      <mspace width=".10em" class="mspace"/>
+      <mi class="mi">β</mi>
+      <mo class="mo">/</mo>
+      <mi class="mi">β</mi>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ5.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ6" class="disp-formula">
+  <label class="label">25</label>
+  <alternatives class="alternatives">
+   <tex-math id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{{T}}}_{{w}}=\bar{{T}}-{\rm{A}}[\sin \,\beta /(\pi -\beta )]$$\end{document}</tex-math>
+   <math id="M12" display="block" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">w</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mover accent="true" class="mover">
+     <mi mathvariant="italic" class="mi">T</mi>
+     <mo mathvariant="italic" class="mo">¯</mo>
+    </mover>
+    <mo class="mo">−</mo>
+    <mi mathvariant="normal" class="mi">A</mi>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">[</mo>
+     <mrow class="mrow">
+      <mi class="mi">sin</mi>
+      <mspace width=".10em" class="mspace"/>
+      <mi class="mi">β</mi>
+      <mo class="mo">/</mo>
+      <mrow class="mrow">
+       <mo stretchy="true" class="mo">(</mo>
+       <mrow class="mrow">
+        <mi class="mi">π</mi>
+        <mo class="mo">−</mo>
+        <mi class="mi">β</mi>
+       </mrow>
+       <mo stretchy="true" class="mo">)</mo>
+      </mrow>
+     </mrow>
+     <mo stretchy="true" class="mo">]</mo>
+    </mrow>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ6.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ7" class="disp-formula">
+  <label class="label">26</label>
+  <alternatives class="alternatives">
+   <tex-math id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${L}_{s}={\rm{365}}(\beta /\pi )$$\end{document}</tex-math>
+   <math id="M14" display="block" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">L</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">s</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mn mathvariant="normal" class="mn">365</mn>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mi class="mi">β</mi>
+      <mo class="mo">/</mo>
+      <mi class="mi">π</mi>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ8" class="disp-formula">
+  <label class="label">27</label>
+  <alternatives class="alternatives">
+   <tex-math id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${L}_{w}=365-{L}_{s}$$\end{document}</tex-math>
+   <math id="M16" display="block" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">L</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">w</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mn class="mn">365</mn>
+    <mo class="mo">−</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">L</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">s</mi>
+     </mrow>
+    </msub>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ9" class="disp-formula">
+  <label class="label">28</label>
+  <alternatives class="alternatives">
+   <tex-math id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${DDT}={\bar{{T}}}_{s}\cdot {L}_{s}$$\end{document}</tex-math>
+   <math id="M18" display="block" class="math">
+    <mi mathvariant="italic" class="mi">DDT</mi>
+    <mo class="mo">=</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">s</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">⋅</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">L</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">s</mi>
+     </mrow>
+    </msub>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ10" class="disp-formula">
+  <label class="label">29</label>
+  <alternatives class="alternatives">
+   <tex-math id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${DD}{F}_{+}=-{\bar{{T}}}_{w}\cdot {L}_{w}$$\end{document}</tex-math>
+   <math id="M20" display="block" class="math">
+    <mi mathvariant="italic" class="mi">DD</mi>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">F</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">+</mo>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mo class="mo">−</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">w</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">⋅</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">L</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">w</mi>
+     </mrow>
+    </msub>
+   </math>
+   <graphic xlink:href="41598_2017_4140_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <inline-formula id="IEq1" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar{{T}}$$\end{document}</tex-math>
+   <math id="M22" class="math">
+    <mover accent="true" class="mover">
+     <mi mathvariant="italic" class="mi">T</mi>
+     <mo mathvariant="italic" class="mo">¯</mo>
+    </mover>
+   </math>
+   <inline-graphic xlink:href="41598_2017_4140_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> is the mean annual soil temperature, 
+ <italic class="italic">A</italic> represents the annual soil temperature amplitude, 
+ <inline-formula id="IEq2" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{{T}}}_{{h}}$$\end{document}</tex-math>
+   <math id="M24" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">h</mi>
+     </mrow>
+    </msub>
+   </math>
+   <inline-graphic xlink:href="41598_2017_4140_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> and 
+ <inline-formula id="IEq3" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{{T}}}_{{c}}$$\end{document}</tex-math>
+   <math id="M26" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">c</mi>
+     </mrow>
+    </msub>
+   </math>
+   <inline-graphic xlink:href="41598_2017_4140_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> are mean annual soil temperatures in the warmest and coldest months, 
+ <italic class="italic">β</italic> is the “frost angle” or point on the time axis where the soil temperature curve crosses 0 °C and 
+ <inline-formula id="IEq4" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{{T}}}_{{s}}$$\end{document}</tex-math>
+   <math id="M28" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">s</mi>
+     </mrow>
+    </msub>
+   </math>
+   <inline-graphic xlink:href="41598_2017_4140_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> and 
+ <inline-formula id="IEq5" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\bar{{T}}}_{{w}}$$\end{document}</tex-math>
+   <math id="M30" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mi mathvariant="italic" class="mi">T</mi>
+       <mo mathvariant="italic" class="mo">¯</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">w</mi>
+     </mrow>
+    </msub>
+   </math>
+   <inline-graphic xlink:href="41598_2017_4140_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> are the mean summer and winter soil temperature.
+</p>

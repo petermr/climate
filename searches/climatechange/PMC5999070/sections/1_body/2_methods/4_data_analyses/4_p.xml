@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To avoid overfitting the models, we decided to use a two-step approach. In the first step, we determined the most influential variables for each question in the survey using the 
+ <italic class="italic">VSURF</italic> package [
+ <xref rid="pone.0197689.ref032" ref-type="bibr" class="xref">32</xref>]. Random forests provide an importance estimate for each predictor (variable importance, “VI”), and this package implements an algorithm that ranks the variables in an iterative fashion based on their VI, removing the least important ones and only retaining those variables truly related to the response variable [
+ <xref rid="pone.0197689.ref032" ref-type="bibr" class="xref">32</xref>,
+ <xref rid="pone.0197689.ref033" ref-type="bibr" class="xref">33</xref>]. In the second step, we used the function 
+ <italic class="italic">ctree</italic> in the 
+ <italic class="italic">party</italic> package [
+ <xref rid="pone.0197689.ref025" ref-type="bibr" class="xref">25</xref>] to construct a single conditional inference tree for each survey statement based on the explanatory variables previously retained in step 1, as suggested by Lee et al. [
+ <xref rid="pone.0197689.ref026" ref-type="bibr" class="xref">26</xref>]. This function recursively performs univariate splits of the dependent variable based on values of a set of covariates. We fixed the threshold to drop a variable at 
+ <italic class="italic">p</italic>-value = 0.05. Conditional inference trees allow for any type of response variable, including ordinal and categorical variables, as in our case. We calculated the classification accuracy for each conditional tree, understood as the proportion of correct predictions in a validation subset of the dataset. By conducting this two-step approach we were able to use as much data and predictors as possible since there are no constraints in terms of missing data, and to identify the most important variables without the limitations of more traditional approaches and the risks of overfitting the conditional trees.
+</p>

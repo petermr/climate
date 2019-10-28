@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To determine the genomic distances between sampling sites for the GDM, we scaled the F
+ <sub class="sub">st</sub> matrix to between 0 and 1 by subtracting the minimum value and then dividing by the maximum value. We generated the GDM model using 
+ <italic class="italic">gdm</italic> (R gdm v1.2.3, [
+ <xref rid="bib38" ref-type="bibr" class="xref">Manion et al., 2016</xref>]) with the scaled F
+ <sub class="sub">st</sub> matrix, geographic distances between sites, and environmental distances for the 28 variables for the current time period. Initially, we generated a GDM model for each environmental variable separately and excluded variables from further analysis if the deviance explained by the model was less than 5%. For the remaining variables, we calculated Pearson's correlation for site values between pairwise sets of variables. If a pair of variables had a correlation greater than 60%, we excluded the variable with the lowest explanatory power from subsequent analysis. We conducted permutation testing using 
+ <italic class="italic">gdm.varImp</italic> (R gdm v1.2.3, [
+ <xref rid="bib38" ref-type="bibr" class="xref">Manion et al., 2016</xref>]) with 1000 permutations to determine the explanatory power and statistical significance of the remaining variables and to excluded additional inconsequential variables. We generated a final GDM model with the remaining environmental variables.
+</p>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">In order to compare the CMIP5 and the EURO-CORDEX data, we test whether the 
+ <italic class="italic">f</italic>-parameter derived using the coarse ERA-Interim reanalysis data [
+ <xref rid="pone.0201457.ref023" ref-type="bibr" class="xref">23</xref>] is capable to reproduce the characteristics of German low-wind generation periods as determined from the downscaled ERA-Interim dataset [
+ <xref rid="pone.0201457.ref048" ref-type="bibr" class="xref">48</xref>]. We classify days with below-average wind power generation (scarcity) for each CWT by a low value of the 
+ <italic class="italic">f</italic>-parameter, 
+ <italic class="italic">f</italic>(
+ <italic class="italic">t</italic>) ≤ 
+ <italic class="italic">f</italic>
+ <sub class="sub">th</sub>. Thus, for each day, we can analyze whether the classifier (
+ <italic class="italic">f</italic>(
+ <italic class="italic">t</italic>) ≤ 
+ <italic class="italic">f</italic>
+ <sub class="sub">th</sub>) correctly predicts that the wind power generation is below average (
+ <italic class="italic">R</italic>(
+ <italic class="italic">t</italic>) &lt; 〈
+ <italic class="italic">R</italic>〉) or erroneously predicts that the wind power generation is above average (
+ <italic class="italic">R</italic>(
+ <italic class="italic">t</italic>) ≥ 〈
+ <italic class="italic">R</italic>〉). The quality of this classification is quantified by the fraction of true predictions, called sensitivity 
+ <disp-formula id="pone.0201457.e014" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e014.jpg" id="pone.0201457.e014g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M14" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mtext class="mtext">SEN</mtext>
+        <mo class="mo">=</mo>
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <mi class="mi">n</mi>
+          <mo class="mo">[</mo>
+          <mrow class="mrow">
+           <mi class="mi">R</mi>
+           <mo class="mo">&lt;</mo>
+           <mrow class="mrow">
+            <mo class="mo">⟨</mo>
+            <mi class="mi">R</mi>
+            <mo class="mo">⟩</mo>
+           </mrow>
+           <mspace width="0.166667em" class="mspace"/>
+           <mo class="mo">&amp;</mo>
+           <mspace width="0.166667em" class="mspace"/>
+           <mi class="mi">f</mi>
+           <mo class="mo">≤</mo>
+           <msub class="msub">
+            <mi class="mi">f</mi>
+            <mtext class="mtext">th</mtext>
+           </msub>
+          </mrow>
+          <mo class="mo">]</mo>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">n</mi>
+          <mrow class="mrow">
+           <mo class="mo">[</mo>
+           <mrow class="mrow">
+            <mi class="mi">R</mi>
+            <mo class="mo">&lt;</mo>
+            <mrow class="mrow">
+             <mo class="mo">⟨</mo>
+             <mi class="mi">R</mi>
+             <mo class="mo">⟩</mo>
+            </mrow>
+            <mspace width="0.166667em" class="mspace"/>
+            <mo class="mo">&amp;</mo>
+            <mspace width="0.166667em" class="mspace"/>
+            <mi class="mi">f</mi>
+            <mo class="mo">≤</mo>
+            <msub class="msub">
+             <mi class="mi">f</mi>
+             <mtext class="mtext">th</mtext>
+            </msub>
+           </mrow>
+           <mo class="mo">]</mo>
+          </mrow>
+          <mo class="mo">+</mo>
+          <mi class="mi">n</mi>
+          <mrow class="mrow">
+           <mo class="mo">[</mo>
+           <mrow class="mrow">
+            <mi class="mi">R</mi>
+            <mo class="mo">&lt;</mo>
+            <mrow class="mrow">
+             <mo class="mo">⟨</mo>
+             <mi class="mi">R</mi>
+             <mo class="mo">⟩</mo>
+            </mrow>
+            <mspace width="0.166667em" class="mspace"/>
+            <mo class="mo">&amp;</mo>
+            <mspace width="0.166667em" class="mspace"/>
+            <mi class="mi">f</mi>
+            <mo class="mo">&gt;</mo>
+            <msub class="msub">
+             <mi class="mi">f</mi>
+             <mtext class="mtext">th</mtext>
+            </msub>
+           </mrow>
+           <mo class="mo">]</mo>
+          </mrow>
+         </mrow>
+        </mfrac>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(12)</label>
+ </disp-formula> and the fraction of false predictions 
+ <disp-formula id="pone.0201457.e015" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e015.jpg" id="pone.0201457.e015g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M15" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mtext class="mtext">FFP</mtext>
+        <mo class="mo">=</mo>
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <mi class="mi">n</mi>
+          <mo class="mo">[</mo>
+          <mrow class="mrow">
+           <mi class="mi">R</mi>
+           <mo class="mo">≥</mo>
+           <mrow class="mrow">
+            <mo class="mo">⟨</mo>
+            <mi class="mi">R</mi>
+            <mo class="mo">⟩</mo>
+           </mrow>
+           <mspace width="0.166667em" class="mspace"/>
+           <mo class="mo">&amp;</mo>
+           <mspace width="0.166667em" class="mspace"/>
+           <mi class="mi">f</mi>
+           <mo class="mo">≤</mo>
+           <msub class="msub">
+            <mi class="mi">f</mi>
+            <mtext class="mtext">th</mtext>
+           </msub>
+          </mrow>
+          <mo class="mo">]</mo>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">n</mi>
+          <mrow class="mrow">
+           <mo class="mo">[</mo>
+           <mrow class="mrow">
+            <mi class="mi">R</mi>
+            <mo class="mo">≥</mo>
+            <mrow class="mrow">
+             <mo class="mo">⟨</mo>
+             <mi class="mi">R</mi>
+             <mo class="mo">⟩</mo>
+            </mrow>
+            <mspace width="0.166667em" class="mspace"/>
+            <mo class="mo">&amp;</mo>
+            <mspace width="0.166667em" class="mspace"/>
+            <mi class="mi">f</mi>
+            <mo class="mo">≤</mo>
+            <msub class="msub">
+             <mi class="mi">f</mi>
+             <mtext class="mtext">th</mtext>
+            </msub>
+           </mrow>
+           <mo class="mo">]</mo>
+          </mrow>
+          <mo class="mo">+</mo>
+          <mi class="mi">n</mi>
+          <mrow class="mrow">
+           <mo class="mo">[</mo>
+           <mrow class="mrow">
+            <mi class="mi">R</mi>
+            <mo class="mo">≥</mo>
+            <mrow class="mrow">
+             <mo class="mo">⟨</mo>
+             <mi class="mi">R</mi>
+             <mo class="mo">⟩</mo>
+            </mrow>
+            <mspace width="0.166667em" class="mspace"/>
+            <mo class="mo">&amp;</mo>
+            <mspace width="0.166667em" class="mspace"/>
+            <mi class="mi">f</mi>
+            <mo class="mo">&gt;</mo>
+            <msub class="msub">
+             <mi class="mi">f</mi>
+             <mtext class="mtext">th</mtext>
+            </msub>
+           </mrow>
+           <mo class="mo">]</mo>
+          </mrow>
+         </mrow>
+        </mfrac>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(13)</label>
+ </disp-formula> where 
+ <italic class="italic">n</italic> denotes the number of days where the conditions are satisfied [
+ <xref rid="pone.0201457.ref057" ref-type="bibr" class="xref">57</xref>]. A compromise must be found between a maximum sensitivity for high values of 
+ <italic class="italic">f</italic>
+ <sub class="sub">th</sub> and a minimum fraction of false predictions for low values of 
+ <italic class="italic">f</italic>
+ <sub class="sub">th</sub>. A common choice is to choose the value 
+ <italic class="italic">f</italic>
+ <sub class="sub">th</sub> which minimizes (1 − SEN)
+ <sup class="sup">2</sup> + FFP
+ <sup class="sup">2</sup> [
+ <xref rid="pone.0201457.ref057" ref-type="bibr" class="xref">57</xref>] (see also Fig C in 
+ <xref ref-type="supplementary-material" rid="pone.0201457.s001" class="xref">S1 Appendix</xref> (ROC-curve)). Under the assumption that the meaning of the 
+ <italic class="italic">f</italic>-parameter does not depend on GCM and time frame, we use the derived 
+ <italic class="italic">f</italic>
+ <sub class="sub">th</sub> to estimate the duration of low wind periods as described in above.
+</p>

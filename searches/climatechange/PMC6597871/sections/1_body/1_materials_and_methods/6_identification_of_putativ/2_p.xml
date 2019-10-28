@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To identify genomic signatures of adaptations to local environmental conditions, we employed environmental association tests. To this end, we used our original dataset filtered by quality and depth only (as described above), but not for LD or HWE. We first ran a principal component analysis using all 19 WorldClim bioclimatic variables plus altitude and forest cover (all scaled), to select a set of orthogonal variables explaining most environmental variation across our study area. Since the first four principal components accounted for 92.08% of total variance, we selected the four variables that were most strongly correlated with these axes. The selected variables (mean temperature of coldest quarter, forest cover, temperature annual range, and precipitation of driest quarter) were then used to run latent factor mixed models (LFMMs), aiming to identify possible associations between SNPs and environmental variables, while accounting for the underlying population structure (De Kort et al., 
+ <xref rid="eva12794-bib-0020" ref-type="ref" class="xref">2014</xref>; Frichot, Schoville, Bouchard, &amp; François, 
+ <xref rid="eva12794-bib-0033" ref-type="ref" class="xref">2013</xref>; Rellstab, Gugerli, Eckert, Hancock, &amp; Holderegger, 
+ <xref rid="eva12794-bib-0067" ref-type="ref" class="xref">2015</xref>). LFMMs have been used extensively and are currently one of the most commonly used environmental association analysis approaches (Ahrens et al., 
+ <xref rid="eva12794-bib-0001" ref-type="ref" class="xref">2018</xref>), given they provide a good compromise between detection power and error rates, and are robust to a variety of sampling designs and underlying demographic models (Rellstab et al., 
+ <xref rid="eva12794-bib-0067" ref-type="ref" class="xref">2015</xref>). LFMM were implemented in R through the LEA package, using 1,000 iterations, a burn‐in of 5,000, and five runs per environmental variable (Frichot &amp; François, 
+ <xref rid="eva12794-bib-0031" ref-type="ref" class="xref">2015</xref>). The 
+ <italic class="italic">p</italic>‐values were adjusted using the genomic inflation factor (
+ <italic class="italic">λ</italic> = 1), and false discovery rates were set using the Benjamini–Hochberg algorithm at a rate of 
+ <italic class="italic">q</italic> = 0.05 (Benjamini &amp; Hochberg, 
+ <xref rid="eva12794-bib-0009" ref-type="ref" class="xref">1995</xref>). Since incorrect assumptions about underlying demographic structure can increase both type I and type II errors (Cushman &amp; Landguth, 
+ <xref rid="eva12794-bib-0017" ref-type="ref" class="xref">2010</xref>; Storfer et al., 
+ <xref rid="eva12794-bib-0076" ref-type="ref" class="xref">2018</xref>), we ran LFMM using 
+ <italic class="italic">k</italic> ± 1 latent factors (where 
+ <italic class="italic">k</italic> was the optimum number of ancestral populations detected) and only considered as candidate loci those shared between all runs for each environmental variable. Full R scripts of LFMM can be found in the LEA website (
+ <ext-link ext-link-type="uri" xlink:href="http://membres-timc.imag.fr/Olivier.Francois/LEA/index.htm" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://membres-timc.imag.fr/Olivier.Francois/LEA/index.htm</ext-link>). In order to map adaptive genetic variability, we used the 
+ <italic class="italic">adegenet</italic> package (Jombart, 
+ <xref rid="eva12794-bib-0047" ref-type="ref" class="xref">2008</xref>) to run a spatial principal component analysis (sPCA) on all identified candidate SNPs and interpolated the first two principal components on a grid covering our study area.
+</p>

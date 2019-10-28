@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par38" class="p">For downstream analyses, we normalised expression data in edgeR v. 3.10.0
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR66" class="xref">66</xref>
+ </sup> using trimmed methods of means (TMM), transformed to counts per million (CPM) and subsequently log
+ <sub class="sub">10</sub> transformed (for cluster analysis and PCA) or Z transformed (for reaction norm analyses and cross-environment genetic correlations). Cluster analyses were performed by constructing a neighbour joining tree from the Euclidian distance matrix computed from the normalised expression data using the R package “ape”
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR70" class="xref">70</xref>
+ </sup>. PCA were calculated by single-value decomposition using the R function prcomp. To assess the association between Principal Components (PCs) and experimental factors, two-way ANOVAs were performed on the scores of each PC separately, with seasonal environment, family and their interaction as fixed factors. We computed family-specific reaction norms for each gene by fitting, for each family separately, the normalised expression data for that gene in a general linear model with season as the sole predictor. This yielded, for each family separately, the intercept and slope of this model, which was then used to calculate coefficient of variance across the seven full-sib families for both the intercept and slope. Differences in the transcriptome-wide distribution of these coefficients of variance were tested with two-sample Wilcoxon signed-rank tests (two-sided, using the function wilcoxsign-test from R package “coin”). We calculated cross-environment genetic correlations in normalised expression for each gene by averaging gene expression per family within each seasonal environment (
+ <italic class="italic">N</italic> = 4–6 females per tissue per family per season) and calculating Pearson’s correlation coefficient using the expression of each of seven families in the wet season and in the dry season. Differences in log
+ <sub class="sub">2</sub> fold change values for the same genes but due to different experimental factors were tested with two-sided two-sample Wilcoxon signed-rank tests, testing whether log
+ <sub class="sub">2</sub> fold change values differed significantly from zero was done using one-sample Wilcoxon signed-rank tests, and testing whether absolute expression differed between gene repertoires were tested using two-sided Mann–Whitney 
+ <italic class="italic">U</italic>-tests. We generally preferred non-parametric tests as these are more robust to heteroscedasticity and differences in sample sizes. Log
+ <sub class="sub">2</sub> fold changes were calculated in edgeR, and those involving family (as main effect or in interaction with another factor) were calculated using all six mutually orthogonal contrasts between the seven families, and averaged across contrasts. Using maximum log
+ <sub class="sub">2</sub> fold change across contrasts rather than mean yielded similar results.
+</p>

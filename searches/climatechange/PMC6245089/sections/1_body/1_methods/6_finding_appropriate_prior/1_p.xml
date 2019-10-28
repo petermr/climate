@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par16" class="p">To find the appropriate spatial covariance function, we ran short chains of 5000 iterations of the MCMC sampler, with 500 burn-in iterations and thinning rate of 15 with the exponential and spiked exponential covariance functions. The chains were run with a range of priors and number of neighbouring cells to compute the covariance function. When the MCMC chains appeared to be well mixed, with lower values of autocorrelation and no rejected samples during the 
+ <italic class="italic">run</italic> phase, we ran the full MCMC chains. The final size of the full-length chains was chosen based upon the behaviour of the 
+ <italic class="italic">h</italic> parameter. For runs with 
+ <italic class="italic">h</italic> ≈ 0.3, we used 5 M iterations, but in cases where 
+ <italic class="italic">h</italic> decreased, the number of iterations was increased up to 20 M. Parameter priors that resulted in 
+ <italic class="italic">h</italic> &lt; 0.1 at the end of the 5 K iteration chain were rejected. The burn-in phase of the full-length chains included 10% of the number of iterations and the thinning rate was set up to keep 1% of the posterior samples (Taylor et al. 
+ <xref ref-type="bibr" rid="CR67" class="xref">2015</xref>). To have a model that represents the underlying risk, regardless of the underlying population at risk, we corrected for the effect of horse population on spillover intensity per unit area. This was done by using a horse population density model as a Poisson offset. In the absence of more data regarding horse densities than the 2007 horse census (Moloney 
+ <xref ref-type="bibr" rid="CR38" class="xref">2011</xref>), a critical assumption in the approach is that the horse population of 2007 is still correlated and broadly representative of the horse population during the time when HeV spillover events have occurred, from 1994 to 2016 at the spatial scale of the model. Further justification for this approach is that we aimed to represent the underlying risk for spillover regardless of the density of the spillover host. This is partly because we do not have a reliable model for future horse densities. Hence the Poisson component of the model with population offset and spatial covariance results in the following Bayesian model: Poisson component:
+ <disp-formula id="Equa" class="disp-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \begin{array}{*{20}c} {\mu (s) = \exp \left( {\beta Z(s) + Y(s)} \right)} \\ {R(s) = C_{A} \lambda (s)\mu (s)} \\ {X(s)\sim{\text{poisson}}(R(s))} \\ \end{array} $$\end{document}</tex-math>
+   <math id="M2" display="block" class="math">
+    <mrow class="mrow">
+     <mtable class="mtable">
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mi class="mi">μ</mi>
+         <mrow class="mrow">
+          <mo stretchy="false" class="mo">(</mo>
+          <mi class="mi">s</mi>
+          <mo stretchy="false" class="mo">)</mo>
+         </mrow>
+         <mo class="mo">=</mo>
+         <mo class="mo">exp</mo>
+         <mfenced close=")" open="(" separators="" class="mfenced">
+          <mrow class="mrow">
+           <mi class="mi">β</mi>
+           <mi class="mi">Z</mi>
+           <mo stretchy="false" class="mo">(</mo>
+           <mi class="mi">s</mi>
+           <mo stretchy="false" class="mo">)</mo>
+           <mo class="mo">+</mo>
+           <mi class="mi">Y</mi>
+           <mo stretchy="false" class="mo">(</mo>
+           <mi class="mi">s</mi>
+           <mo stretchy="false" class="mo">)</mo>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mrow class="mrow"/>
+         <mrow class="mrow">
+          <mi class="mi">R</mi>
+          <mrow class="mrow">
+           <mo stretchy="false" class="mo">(</mo>
+           <mi class="mi">s</mi>
+           <mo stretchy="false" class="mo">)</mo>
+          </mrow>
+          <mo class="mo">=</mo>
+          <msub class="msub">
+           <mi class="mi">C</mi>
+           <mi class="mi">A</mi>
+          </msub>
+          <mi class="mi">λ</mi>
+          <mrow class="mrow">
+           <mo stretchy="false" class="mo">(</mo>
+           <mi class="mi">s</mi>
+           <mo stretchy="false" class="mo">)</mo>
+          </mrow>
+          <mi class="mi">μ</mi>
+          <mrow class="mrow">
+           <mo stretchy="false" class="mo">(</mo>
+           <mi class="mi">s</mi>
+           <mo stretchy="false" class="mo">)</mo>
+          </mrow>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mrow class="mrow"/>
+         <mrow class="mrow">
+          <mi class="mi">X</mi>
+          <mo stretchy="false" class="mo">(</mo>
+          <mi class="mi">s</mi>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo class="mo">∼</mo>
+          <mtext class="mtext">poisson</mtext>
+          <mo stretchy="false" class="mo">(</mo>
+          <mi class="mi">R</mi>
+          <mo stretchy="false" class="mo">(</mo>
+          <mi class="mi">s</mi>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo stretchy="false" class="mo">)</mo>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </mrow>
+   </math>
+   <graphic xlink:href="10393_2018_1322_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>Spatial covariance function:
+ <disp-formula id="Equ1" class="disp-formula">
+  <label class="label">1</label>
+  <alternatives class="alternatives">
+   <tex-math id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \begin{array}{*{20}c} {\text{cov} \left[ {Y\left( {s_{1} } \right),Y\left( {s_{2} } \right)} \right] = \sigma^{2} r\left( {s_{2} - s_{1} ,\varphi } \right)} \\ {r(s) = \exp \left( { - s/\varphi } \right)} \\ {s = {\text{euclidean}}\left( {s_{2} ,s_{1} } \right)} \\ \end{array} $$\end{document}</tex-math>
+   <math id="M4" display="block" class="math">
+    <mrow class="mrow">
+     <mtable class="mtable">
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mtext class="mtext">cov</mtext>
+         <mfenced close="]" open="[" separators="" class="mfenced">
+          <mrow class="mrow">
+           <mi class="mi">Y</mi>
+           <mfenced close=")" open="(" separators="" class="mfenced">
+            <msub class="msub">
+             <mi class="mi">s</mi>
+             <mn class="mn">1</mn>
+            </msub>
+           </mfenced>
+           <mo class="mo">,</mo>
+           <mi class="mi">Y</mi>
+           <mfenced close=")" open="(" separators="" class="mfenced">
+            <msub class="msub">
+             <mi class="mi">s</mi>
+             <mn class="mn">2</mn>
+            </msub>
+           </mfenced>
+          </mrow>
+         </mfenced>
+         <mo class="mo">=</mo>
+         <msup class="msup">
+          <mi class="mi">σ</mi>
+          <mn class="mn">2</mn>
+         </msup>
+         <mi class="mi">r</mi>
+         <mfenced close=")" open="(" separators="" class="mfenced">
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">s</mi>
+            <mn class="mn">2</mn>
+           </msub>
+           <mo class="mo">-</mo>
+           <msub class="msub">
+            <mi class="mi">s</mi>
+            <mn class="mn">1</mn>
+           </msub>
+           <mo class="mo">,</mo>
+           <mi class="mi">φ</mi>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mrow class="mrow"/>
+         <mrow class="mrow">
+          <mi class="mi">r</mi>
+          <mrow class="mrow">
+           <mo stretchy="false" class="mo">(</mo>
+           <mi class="mi">s</mi>
+           <mo stretchy="false" class="mo">)</mo>
+          </mrow>
+          <mo class="mo">=</mo>
+          <mo class="mo">exp</mo>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mrow class="mrow">
+            <mo class="mo">-</mo>
+            <mi class="mi">s</mi>
+            <mo stretchy="false" class="mo">/</mo>
+            <mi class="mi">φ</mi>
+           </mrow>
+          </mfenced>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mrow class="mrow"/>
+         <mrow class="mrow">
+          <mi class="mi">s</mi>
+          <mo class="mo">=</mo>
+          <mtext class="mtext">euclidean</mtext>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mrow class="mrow">
+            <msub class="msub">
+             <mi class="mi">s</mi>
+             <mn class="mn">2</mn>
+            </msub>
+            <mo class="mo">,</mo>
+            <msub class="msub">
+             <mi class="mi">s</mi>
+             <mn class="mn">1</mn>
+            </msub>
+           </mrow>
+          </mfenced>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </mrow>
+   </math>
+   <graphic xlink:href="10393_2018_1322_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>Parameter priors:
+ <disp-formula id="Equb" class="disp-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \begin{array}{*{20}c} {\beta \sim {\text{normal}}\left( {0,10^{6} } \right)} \\ {\log \left( \varphi \right) \sim {\text{normal}}\left( {\log (500),2} \right)} \\ {\log \left( \sigma \right) \sim {\text{normal}}\left( {\log (1),0.15} \right)} \\ \end{array} $$\end{document}</tex-math>
+   <math id="M6" display="block" class="math">
+    <mrow class="mrow">
+     <mtable class="mtable">
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mi class="mi">β</mi>
+         <mo class="mo">∼</mo>
+         <mtext class="mtext">normal</mtext>
+         <mfenced close=")" open="(" separators="" class="mfenced">
+          <mrow class="mrow">
+           <mn class="mn">0</mn>
+           <mo class="mo">,</mo>
+           <msup class="msup">
+            <mn class="mn">10</mn>
+            <mn class="mn">6</mn>
+           </msup>
+          </mrow>
+         </mfenced>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mrow class="mrow"/>
+         <mrow class="mrow">
+          <mo class="mo">log</mo>
+          <mfenced close=")" open="(" class="mfenced">
+           <mi class="mi">φ</mi>
+          </mfenced>
+          <mo class="mo">∼</mo>
+          <mtext class="mtext">normal</mtext>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mrow class="mrow">
+            <mo class="mo">log</mo>
+            <mo stretchy="false" class="mo">(</mo>
+            <mn class="mn">500</mn>
+            <mo stretchy="false" class="mo">)</mo>
+            <mo class="mo">,</mo>
+            <mn class="mn">2</mn>
+           </mrow>
+          </mfenced>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mrow class="mrow"/>
+         <mrow class="mrow">
+          <mo class="mo">log</mo>
+          <mfenced close=")" open="(" class="mfenced">
+           <mi class="mi">σ</mi>
+          </mfenced>
+          <mo class="mo">∼</mo>
+          <mtext class="mtext">normal</mtext>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mrow class="mrow">
+            <mo class="mo">log</mo>
+            <mo stretchy="false" class="mo">(</mo>
+            <mn class="mn">1</mn>
+            <mo stretchy="false" class="mo">)</mo>
+            <mo class="mo">,</mo>
+            <mn class="mn">0.15</mn>
+           </mrow>
+          </mfenced>
+         </mrow>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </mrow>
+   </math>
+   <graphic xlink:href="10393_2018_1322_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where β is the vector of effects of environmental covariates 
+ <italic class="italic">Z</italic>(
+ <italic class="italic">s</italic>); 
+ <italic class="italic">Y</italic>(
+ <italic class="italic">s</italic>) is the bivariate (
+ <italic class="italic">s</italic>
+ <sub class="sub">1</sub>, 
+ <italic class="italic">s</italic>
+ <sub class="sub">2</sub>) covariance function, 
+ <italic class="italic">C</italic>
+ <sub class="sub">
+  <italic class="italic">A</italic>
+ </sub> is the spatial grid cell size, 
+ <italic class="italic">λ</italic>(
+ <italic class="italic">s</italic>) is the horse population density, 
+ <italic class="italic">X</italic>(
+ <italic class="italic">s</italic>) is the point intensity data, and 
+ <italic class="italic">σ</italic> and φ are the exponential covariance function 
+ <italic class="italic">r</italic>(
+ <italic class="italic">s</italic>) parameters in Eq. (
+ <xref rid="Equ1" ref-type="" class="xref">1</xref>) (Diggle et al. 
+ <xref ref-type="bibr" rid="CR11" class="xref">2013</xref>; Taylor et al. 
+ <xref ref-type="bibr" rid="CR66" class="xref">2013</xref>).
+</p>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The climate data for the year 2007, 2008, 2009, 2010, 2011, 2015 and 2016 were downloaded from the 
+ <italic class="italic">National Environment Satellite, Data and Information</italic> Service website (
+ <uri xlink:href="https://www7.ncdc.noaa.gov/CDO/cdo" class="uri" xmlns:xlink="http://www.w3.org/1999/xlink">https://www7.ncdc.noaa.gov/CDO/cdo</uri>). Here, we selected the closest meteorological stations from the areas with the historical pest occurrence records. This data contains the daily means of temperature, minimum temperature and maximum temperature, wind speed, dew points, sea level pressure, station pressure, visibility, maximum sustained wind speed and total daily precipitation. In technical terms, the dew point is the temperature at which the water vapor in a sample of air at constant barometric pressure condenses into liquid water at the same rate at which it evaporates. The data was used to predict the difference in climate factors for all the infested locations for each year using the inverse distance weighted interpolation method in ArcMap. Then, the ordinary least squares (OLS) regression method was used to examine the global relationship and the geographic weight regression (GWR) was used to find the local spatial relationship between the infestation and the different climate factors for each year. The GWR statistical model considers the spatial variance of the variables and estimates the strength of their topographic relationships (Refer to 
+ <xref rid="ref-28" ref-type="bibr" class="xref">Fotheringham, Crespo &amp; Yao, 2015</xref>). The GWR model formulation is: 
+ <disp-formula id="eqn-1" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="peerj-06-5545-e001.jpg" mimetype="image" mime-subtype="png" position="float" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <tex-math id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{upgreek} \usepackage{mathrsfs} \setlength{\oddsidemargin}{-69pt} \begin{document} }{}$${{\rm{y}}_i}={{\rm{\beta }}_{\rm{0}}}{\rm{(}}{u_i}{\rm{, }}{v_i}{\rm)} + \Sigma {{\rm{\beta }}_{\rm{1}}}{\rm{(}}{u_i}{\rm{, }}{v_i}{\rm{) }}{x_{ik}}+{{\rm{\varepsilon }}_i}$$\end{document}</tex-math>
+   <math id="mml-eqn-1" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mtext class="mtext">y</mtext>
+      <mi class="mi">i</mi>
+     </msub>
+     <msub class="msub">
+      <mrow class="mrow">
+       <mtext class="mtext">= β</mtext>
+      </mrow>
+      <mtext class="mtext">0</mtext>
+     </msub>
+     <mtext class="mtext">(</mtext>
+     <msub class="msub">
+      <mi class="mi">u</mi>
+      <mi class="mi">i</mi>
+     </msub>
+     <mtext class="mtext">, </mtext>
+     <msub class="msub">
+      <mi class="mi">v</mi>
+      <mi class="mi">i</mi>
+     </msub>
+     <msub class="msub">
+      <mrow class="mrow">
+       <mtext class="mtext">) + Σβ</mtext>
+      </mrow>
+      <mtext class="mtext">1</mtext>
+     </msub>
+     <mtext class="mtext">(</mtext>
+     <msub class="msub">
+      <mi class="mi">u</mi>
+      <mi class="mi">i</mi>
+     </msub>
+     <mtext class="mtext">, </mtext>
+     <msub class="msub">
+      <mi class="mi">v</mi>
+      <mi class="mi">i</mi>
+     </msub>
+     <mtext class="mtext">) </mtext>
+     <msub class="msub">
+      <mi class="mi">x</mi>
+      <mrow class="mrow">
+       <mi class="mi">i</mi>
+       <mi class="mi">k</mi>
+      </mrow>
+     </msub>
+     <msub class="msub">
+      <mrow class="mrow">
+       <mtext class="mtext">+ ε</mtext>
+      </mrow>
+      <mi class="mi">i</mi>
+     </msub>
+    </mrow>
+   </math>
+  </alternatives>
+ </disp-formula> where 
+ <italic class="italic">i</italic> is the spatial point with coordinates (
+ <italic class="italic">u
+  <sub class="sub">i</sub>
+ </italic>, 
+ <italic class="italic">v
+  <sub class="sub">i</sub>
+ </italic>). Accordingly, 
+ <italic class="italic">y
+  <sub class="sub">i</sub>
+ </italic> is the dependent variable, 
+ <italic class="italic">x
+  <sub class="sub">ik</sub>
+ </italic> is the 
+ <italic class="italic">k</italic>th independent variable, 
+ <italic class="italic">ε
+  <sub class="sub">i</sub>
+ </italic> is an error term for the 
+ <italic class="italic">i</italic>th point.
+</p>
