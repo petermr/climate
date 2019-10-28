@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">As suggested by Lee et al. [
+ <xref rid="pone.0215511.ref036" ref-type="bibr" class="xref">36</xref>], we used a two-step approach during data analyses in order to avoid an excessive number of explanatory variables in each tree model (one for each question/statement of the survey). First, we determined the most influential variable(s) using a random forests permutation-based procedure, as implemented in the R package 
+ <italic class="italic">VSURF</italic> [
+ <xref rid="pone.0215511.ref051" ref-type="bibr" class="xref">51</xref>]. This process ranks the predictors iteratively based on an importance metric, and returns a small subset of variables with minimal redundancy between them. Second, a single conditional inference tree was produced for each question of the survey, using as input only the variables selected during the first step. For this procedure, we used the R function 
+ <italic class="italic">ctree</italic>, as implemented in the 
+ <italic class="italic">partykit</italic> package [
+ <xref rid="pone.0215511.ref052" ref-type="bibr" class="xref">52</xref>]. In summary, this recursive function performs univariate divisions of the response variable based on the values of a set of covariates. For this step, we used a random training subset consisting of 80% of the respondents. A default threshold of 
+ <italic class="italic">p</italic> = 0.05 was used to determine if variables were dropped from the model. Finally, for each question/statement of the survey, we calculated the classification accuracy (CA; [
+ <xref rid="pone.0215511.ref036" ref-type="bibr" class="xref">36</xref>]) of each conditional tree by calculating the proportion of correct predictions using the remaining 20% of the dataset.
+</p>

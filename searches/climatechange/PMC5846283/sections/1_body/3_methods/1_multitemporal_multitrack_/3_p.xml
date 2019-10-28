@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Assume that 
+ <inline-formula class="inline-formula">
+  <math id="m1" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msup class="msup">
+      <mrow class="mrow">
+       <mo stretchy="false" class="mo">{</mo>
+       <msub class="msub">
+        <mi mathvariant="italic" class="mi">d</mi>
+        <mn class="mn">0</mn>
+       </msub>
+       <mo class="mo">,</mo>
+       <mo class="mo">…</mo>
+       <mo class="mo">,</mo>
+       <msub class="msub">
+        <mi mathvariant="italic" class="mi">d</mi>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">N</mi>
+          <mi mathvariant="italic" class="mi">i</mi>
+         </msub>
+        </mrow>
+       </msub>
+       <mo stretchy="false" class="mo">}</mo>
+      </mrow>
+      <mrow class="mrow">
+       <mi mathvariant="italic" class="mi">i</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">2</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">3</mn>
+      </mrow>
+     </msup>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula> and 
+ <inline-formula class="inline-formula">
+  <math id="m2" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msup class="msup">
+      <mrow class="mrow">
+       <mo stretchy="false" class="mo">{</mo>
+       <msub class="msub">
+        <mrow class="mrow">
+         <msup class="msup">
+          <mi mathvariant="normal" class="mi">σ</mi>
+          <mn class="mn">2</mn>
+         </msup>
+        </mrow>
+        <mn class="mn">0</mn>
+       </msub>
+       <mo class="mo">,</mo>
+       <mo class="mo">…</mo>
+       <mo class="mo">,</mo>
+       <msub class="msub">
+        <mrow class="mrow">
+         <msup class="msup">
+          <mi mathvariant="normal" class="mi">σ</mi>
+          <mn class="mn">2</mn>
+         </msup>
+        </mrow>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">N</mi>
+          <mi mathvariant="italic" class="mi">i</mi>
+         </msub>
+        </mrow>
+       </msub>
+       <mo stretchy="false" class="mo">}</mo>
+      </mrow>
+      <mrow class="mrow">
+       <mi mathvariant="italic" class="mi">i</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">2</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">3</mn>
+      </mrow>
+     </msup>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula> are the displacement time series and the associated variances for the data sets, where 
+ <italic class="italic">N</italic> is the number of acquisitions in each data set and 
+ <italic class="italic">i</italic> = 1,2,3 refers to Envisat descending, Envisat ascending, and ALOS ascending data sets, respectively. In the space domain and using a nearest neighbor algorithm, we oversampled data sets 2 and 3 over data set 1. In the time domain, the displacement and noise time series of one track were interpolated on the other. Assuming that, at time 
+ <italic class="italic">t</italic>
+ <sub class="sub">a</sub>, 
+ <italic class="italic">d</italic>
+ <sub class="sub">a</sub> and 
+ <inline-formula class="inline-formula">
+  <math id="m3" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msubsup class="msubsup">
+      <mi mathvariant="normal" class="mi">σ</mi>
+      <mi mathvariant="normal" class="mi">a</mi>
+      <mn class="mn">2</mn>
+     </msubsup>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula> are the displacement and associated SD, respectively, and that the respective values at time 
+ <italic class="italic">t</italic>
+ <sub class="sub">b</sub> are 
+ <italic class="italic">d</italic>
+ <sub class="sub">b</sub> and 
+ <inline-formula class="inline-formula">
+  <math id="m4" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <msubsup class="msubsup">
+      <mi mathvariant="normal" class="mi">σ</mi>
+      <mi mathvariant="normal" class="mi">b</mi>
+      <mn class="mn">2</mn>
+     </msubsup>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula>, then, at time step 
+ <italic class="italic">t</italic>
+ <sub class="sub">c</sub>, the interpolated displacement and variance are given as
+ <disp-formula id="E1" class="disp-formula">
+  <math id="m5" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <mtable columnalign="center" class="mtable">
+      <mtr columnalign="center" class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">d</mi>
+          <mi mathvariant="normal" class="mi">c</mi>
+         </msub>
+         <mo class="mo">=</mo>
+         <mfrac class="mfrac">
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi mathvariant="italic" class="mi">t</mi>
+            <mi mathvariant="normal" class="mi">c</mi>
+           </msub>
+           <mo class="mo">−</mo>
+           <msub class="msub">
+            <mi mathvariant="italic" class="mi">t</mi>
+            <mi mathvariant="normal" class="mi">a</mi>
+           </msub>
+          </mrow>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi mathvariant="italic" class="mi">t</mi>
+            <mi mathvariant="normal" class="mi">b</mi>
+           </msub>
+           <mo class="mo">−</mo>
+           <msub class="msub">
+            <mi mathvariant="italic" class="mi">t</mi>
+            <mi mathvariant="normal" class="mi">a</mi>
+           </msub>
+          </mrow>
+         </mfrac>
+         <mo stretchy="false" class="mo">(</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">d</mi>
+          <mi mathvariant="normal" class="mi">b</mi>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">d</mi>
+          <mi mathvariant="normal" class="mi">a</mi>
+         </msub>
+         <mo stretchy="false" class="mo">)</mo>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">d</mi>
+          <mi mathvariant="normal" class="mi">a</mi>
+         </msub>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr columnalign="center" class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <msubsup class="msubsup">
+          <mi mathvariant="normal" class="mi">σ</mi>
+          <mi mathvariant="normal" class="mi">c</mi>
+          <mn class="mn">2</mn>
+         </msubsup>
+         <mo class="mo">=</mo>
+         <msup class="msup">
+          <mrow class="mrow">
+           <mo stretchy="true" class="mo">(</mo>
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">c</mi>
+             </msub>
+             <mo class="mo">−</mo>
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">a</mi>
+             </msub>
+            </mrow>
+            <mrow class="mrow">
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">b</mi>
+             </msub>
+             <mo class="mo">−</mo>
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">a</mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <msub class="msub">
+            <mi mathvariant="normal" class="mi">σ</mi>
+            <mi mathvariant="normal" class="mi">b</mi>
+           </msub>
+           <mo stretchy="true" class="mo">)</mo>
+          </mrow>
+          <mn class="mn">2</mn>
+         </msup>
+         <mo class="mo">+</mo>
+         <msup class="msup">
+          <mrow class="mrow">
+           <mo stretchy="true" class="mo">(</mo>
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">c</mi>
+             </msub>
+             <mo class="mo">−</mo>
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">a</mi>
+             </msub>
+            </mrow>
+            <mrow class="mrow">
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">b</mi>
+             </msub>
+             <mo class="mo">−</mo>
+             <msub class="msub">
+              <mi mathvariant="italic" class="mi">t</mi>
+              <mi mathvariant="normal" class="mi">a</mi>
+             </msub>
+            </mrow>
+           </mfrac>
+           <msub class="msub">
+            <mi mathvariant="normal" class="mi">σ</mi>
+            <mi mathvariant="normal" class="mi">a</mi>
+           </msub>
+           <mo stretchy="true" class="mo">)</mo>
+          </mrow>
+          <mn class="mn">2</mn>
+         </msup>
+         <mo class="mo">+</mo>
+         <msubsup class="msubsup">
+          <mi mathvariant="normal" class="mi">σ</mi>
+          <mi mathvariant="normal" class="mi">a</mi>
+          <mn class="mn">2</mn>
+         </msubsup>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </mrow>
+   </mrow>
+  </math>
+  <label class="label">(1)</label>
+ </disp-formula>
+</p>

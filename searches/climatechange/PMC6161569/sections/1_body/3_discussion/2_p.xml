@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Gene network computation based on large datasets of expression data represents an interesting approach to unveil the complex interactions between transcripts inside the cell. Here we present the application of a PC-based algorithm NES
+ <sup class="sup">2</sup>RA (
+ <xref rid="B6" ref-type="bibr" class="xref">Asnicar et al., 2016</xref>) to the grapevine transcriptomic compendium Vespucci (
+ <xref rid="B32" ref-type="bibr" class="xref">Moretto et al., 2016</xref>) in order to expand LGNs (
+ <bold class="bold">Figure 
+  <xref ref-type="fig" rid="F2" class="xref">2</xref>
+ </bold>). NES
+ <sup class="sup">2</sup>RA was initially set up to analyze model organisms transcriptomic data, such as 
+ <italic class="italic">E. coli</italic> and 
+ <italic class="italic">A. thaliana</italic>, where a large number of experimental conditions are available. However, considering NES
+ <sup class="sup">2</sup>RA ability to scale to lower data dimensions, we were interested in testing its performance on a non-model species such as 
+ <italic class="italic">V. vinifera</italic>. Compared to simple correlation approaches, NES
+ <sup class="sup">2</sup>RA applies a statistical criterion of conditional independence which, starting from a fully connected network, eliminates spurious and/or redundant relationships (
+ <bold class="bold">Figure 
+  <xref ref-type="fig" rid="F1" class="xref">1</xref>
+ </bold>). This simplifies the network and highlights significant relationships between genes, named interactions. The same challenge has been addressed in other works by calculating a co-expression index [based on highest reciprocal ranks (HRR) and mutual ranks (MR)] within the VTCdb (
+ <xref rid="B51" ref-type="bibr" class="xref">Wong et al., 2013</xref>) and 
+ <italic class="italic">ad-hoc</italic> datasets in specific studies, also including promoter 
+ <italic class="italic">cis</italic>-regulatory elements analysis (
+ <xref rid="B50" ref-type="bibr" class="xref">Wong et al., 2016</xref>, 
+ <xref rid="B49" ref-type="bibr" class="xref">2017</xref>; 
+ <xref rid="B45" ref-type="bibr" class="xref">Vannozzi et al., 2018</xref>). While expanding a single gene produces similar results with all the approaches, the power of NES
+ <sup class="sup">2</sup>RA becomes more evident when expanding LGNs (
+ <bold class="bold">Figure 
+  <xref ref-type="fig" rid="F3" class="xref">3</xref>
+ </bold>). Moreover, the expansions obtained with NES
+ <sup class="sup">2</sup>RA strictly depend on the nature of the LGN for two reasons: firstly, the input genes define the separation set during the PC-algorithm run, secondly, the post-processing pipeline top-ranks genes with the largest number of connections to the whole LGN. Therefore NES
+ <sup class="sup">2</sup>RA preferentially identifies highly connected central nodes rather than one-to-one direct gene interactions, such as the case of a transcription factor and its target. The comparison of NES
+ <sup class="sup">2</sup>RA expansions with experimental datasets found in literature confirmed that the top-ranking genes were modulated upon ABA stimulus or 
+ <italic class="italic">VvMYBA1</italic> over-expression supporting they belong to these networks (
+ <bold class="bold">Supplementary Figure 
+  <xref ref-type="supplementary-material" rid="SM7" class="xref">S1</xref>
+ </bold>). The Gene Ontology enrichment highlighted for all the networks functional categories related to the LGNs (
+ <bold class="bold">Supplementary Table 
+  <xref ref-type="supplementary-material" rid="SM5" class="xref">S5</xref>
+ </bold>). Conversely, promoter motif enrichment analysis produced more case-specific results (
+ <bold class="bold">Supplementary Table 
+  <xref ref-type="supplementary-material" rid="SM6" class="xref">S6</xref>
+ </bold>): the “Anthocyanins” and “ABA” expansions genes were enriched in motifs, uncharacterized in the former case and recognized by ABA responsive transcription factors in the latter; “Stilbenoids” and “ERFs” expansions genes didn’t show any significant co-regulation, despite the fact that the second network included exclusively transcription factors. We can speculate that this result might be ascribed to the heterogeneity of the input network and/or to the amplification of the signaling cascade in the expansion network.
+</p>

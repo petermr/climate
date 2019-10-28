@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Social learning is implemented as follows. Each individual samples other members of the population at a fixed rate 
+ <italic class="italic">κ</italic>. If ‘individual A’ samples ‘individual B’ and B’s strategy has a higher payoff that of A, then A will switch to B’s strategy with a probability proportional to the difference in payoffs. Thus if there are 
+ <italic class="italic">x</italic> mitigators in the population, the rate at which a non-mitigator encounters a mitigator is 
+ <italic class="italic">κx</italic>. Should there be a utility gain in switching (
+ <italic class="italic">e</italic>
+ <sub class="sub">
+  <italic class="italic">M</italic>
+ </sub> &gt; 
+ <italic class="italic">e</italic>
+ <sub class="sub">
+  <italic class="italic">N</italic>
+ </sub>), the non-mitigator will switch their strategy with a probability proportional to the payoff difference, 
+ <italic class="italic">e</italic>
+ <sub class="sub">
+  <italic class="italic">M</italic>
+ </sub> − 
+ <italic class="italic">e</italic>
+ <sub class="sub">
+  <italic class="italic">N</italic>
+ </sub>. Since there are a total of 1 − 
+ <italic class="italic">x</italic> non-mitigators in the population, the total rate at which non-mitigators switch to being mitigators is 
+ <disp-formula id="pcbi.1007000.e004" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pcbi.1007000.e004.jpg" id="pcbi.1007000.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M4" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">r</mi>
+         <mrow class="mrow">
+          <mi class="mi">N</mi>
+          <mo class="mo">→</mo>
+          <mi class="mi">M</mi>
+         </mrow>
+        </msub>
+        <mo class="mo">=</mo>
+        <mi class="mi">κ</mi>
+        <mi class="mi">x</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">−</mo>
+         <mi class="mi">x</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mspace width="2pt" class="mspace"/>
+        <mtext class="mtext">max</mtext>
+        <mrow class="mrow">
+         <mo class="mo">{</mo>
+         <msub class="msub">
+          <mi class="mi">e</mi>
+          <mi class="mi">M</mi>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi class="mi">e</mi>
+          <mi class="mi">N</mi>
+         </msub>
+         <mo class="mo">,</mo>
+         <mn class="mn">0</mn>
+         <mo class="mo">}</mo>
+        </mrow>
+        <mo class="mo">.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(3)</label>
+ </disp-formula> Using similar arguments, one can show 
+ <disp-formula id="pcbi.1007000.e005" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pcbi.1007000.e005.jpg" id="pcbi.1007000.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M5" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">r</mi>
+         <mrow class="mrow">
+          <mi class="mi">M</mi>
+          <mo class="mo">→</mo>
+          <mi class="mi">N</mi>
+         </mrow>
+        </msub>
+        <mo class="mo">=</mo>
+        <mi class="mi">κ</mi>
+        <mi class="mi">x</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">−</mo>
+         <mi class="mi">x</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mspace width="2pt" class="mspace"/>
+        <mtext class="mtext">max</mtext>
+        <mrow class="mrow">
+         <mo class="mo">{</mo>
+         <msub class="msub">
+          <mi class="mi">e</mi>
+          <mi class="mi">N</mi>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi class="mi">e</mi>
+          <mi class="mi">M</mi>
+         </msub>
+         <mo class="mo">,</mo>
+         <mn class="mn">0</mn>
+         <mo class="mo">}</mo>
+        </mrow>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(4)</label>
+ </disp-formula> and so the net rate of change in mitigators is 
+ <disp-formula id="pcbi.1007000.e006" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pcbi.1007000.e006.jpg" id="pcbi.1007000.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M6" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mi class="mi">x</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mi class="mi">t</mi>
+         </mrow>
+        </mfrac>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">r</mi>
+         <mrow class="mrow">
+          <mi class="mi">N</mi>
+          <mo class="mo">→</mo>
+          <mi class="mi">M</mi>
+         </mrow>
+        </msub>
+        <mo class="mo">−</mo>
+        <msub class="msub">
+         <mi class="mi">r</mi>
+         <mrow class="mrow">
+          <mi class="mi">M</mi>
+          <mo class="mo">→</mo>
+          <mi class="mi">N</mi>
+         </mrow>
+        </msub>
+        <mo class="mo">=</mo>
+        <mi class="mi">κ</mi>
+        <mi class="mi">x</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">−</mo>
+         <mi class="mi">x</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">e</mi>
+          <mi class="mi">M</mi>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi class="mi">e</mi>
+          <mi class="mi">N</mi>
+         </msub>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(5)</label>
+ </disp-formula> which has an equivalent form to the replicator equations of evolutionary game theory [
+ <xref rid="pcbi.1007000.ref032" ref-type="bibr" class="xref">32</xref>]. Writing the payoff functions explicitly gives 
+ <disp-formula id="pcbi.1007000.e007" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pcbi.1007000.e007.jpg" id="pcbi.1007000.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M7" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mi class="mi">x</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mi class="mi">t</mi>
+         </mrow>
+        </mfrac>
+        <mo class="mo">=</mo>
+        <mi class="mi">κ</mi>
+        <mi class="mi">x</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">−</mo>
+         <mi class="mi">x</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">[</mo>
+        <mi class="mi">γ</mi>
+        <mo class="mo">−</mo>
+        <mi class="mi">α</mi>
+        <mo class="mo">+</mo>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">c</mi>
+         <mo class="mo">+</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mover accent="true" class="mover">
+         <mi class="mi">f</mi>
+         <mo class="mo">˜</mo>
+        </mover>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">T</mi>
+          <mi class="mi">f</mi>
+         </msub>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">+</mo>
+        <mi class="mi">δ</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">2</mn>
+         <mi class="mi">x</mi>
+         <mo class="mo">−</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">]</mo>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(6)</label>
+ </disp-formula> which can be reduced to 
+ <disp-formula id="pcbi.1007000.e008" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pcbi.1007000.e008.jpg" id="pcbi.1007000.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M8" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mi class="mi">x</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mi class="mi">t</mi>
+         </mrow>
+        </mfrac>
+        <mo class="mo">=</mo>
+        <mi class="mi">κ</mi>
+        <mi class="mi">x</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">−</mo>
+         <mi class="mi">x</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">[</mo>
+        <mo class="mo">−</mo>
+        <mi class="mi">β</mi>
+        <mo class="mo">+</mo>
+        <mi class="mi">f</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">T</mi>
+          <mi class="mi">f</mi>
+         </msub>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">+</mo>
+        <mi class="mi">δ</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">2</mn>
+         <mi class="mi">x</mi>
+         <mo class="mo">−</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">]</mo>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(7)</label>
+ </disp-formula> by introducing the new parameter 
+ <italic class="italic">β</italic> = 
+ <italic class="italic">α</italic> − 
+ <italic class="italic">γ</italic> (the net cost to mitigate) scaled function 
+ <inline-formula id="pcbi.1007000.e009" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pcbi.1007000.e009.jpg" id="pcbi.1007000.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M9" class="math">
+    <mrow class="mrow">
+     <mi class="mi">f</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">T</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+     <mo class="mo">=</mo>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">c</mi>
+      <mo class="mo">+</mo>
+      <mn class="mn">1</mn>
+      <mo class="mo">)</mo>
+     </mrow>
+     <mover accent="true" class="mover">
+      <mi class="mi">f</mi>
+      <mo class="mo">˜</mo>
+     </mover>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">T</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+ </inline-formula> (the net temperature associated gain to mitigate).
+</p>

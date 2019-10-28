@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The wind generation is derived using a standardized power curve with a cut-in wind speed of 
+ <italic class="italic">v</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> = 3.5 m/s, a rated wind speed of 
+ <italic class="italic">v</italic>
+ <sub class="sub">
+  <italic class="italic">r</italic>
+ </sub> = 12 m/s and a cut-out wind speed of 
+ <italic class="italic">v</italic>
+ <sub class="sub">
+  <italic class="italic">o</italic>
+ </sub> = 25 m/s as in [
+ <xref rid="pone.0201457.ref022" ref-type="bibr" class="xref">22</xref>]. The capacity factor 
+ <italic class="italic">CF</italic>(
+ <italic class="italic">t</italic>) (i.e. the generation normalized to the rated capacity) then reads 
+ <disp-formula id="pone.0201457.e003" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e003.jpg" id="pone.0201457.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M3" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mi class="mi">C</mi>
+        <mi class="mi">F</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">t</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <mo class="mo">{</mo>
+        <mtable class="mtable">
+         <mtr class="mtr">
+          <mtd columnalign="center" class="mtd">
+           <mn class="mn">0</mn>
+          </mtd>
+          <mtd columnalign="left" class="mtd">
+           <mrow class="mrow">
+            <mtext class="mtext">if</mtext>
+            <mspace width="1pt" class="mspace"/>
+            <msub class="msub">
+             <mi class="mi">v</mi>
+             <mi class="mi">z</mi>
+            </msub>
+            <mrow class="mrow">
+             <mo class="mo">(</mo>
+             <mi class="mi">t</mi>
+             <mo class="mo">)</mo>
+            </mrow>
+            <mo class="mo">&lt;</mo>
+            <msub class="msub">
+             <mi class="mi">v</mi>
+             <mi class="mi">i</mi>
+            </msub>
+            <mspace width="4pt" class="mspace"/>
+            <mtext class="mtext">or</mtext>
+            <mspace width="4pt" class="mspace"/>
+            <msub class="msub">
+             <mi class="mi">v</mi>
+             <mi class="mi">z</mi>
+            </msub>
+            <mrow class="mrow">
+             <mo class="mo">(</mo>
+             <mi class="mi">t</mi>
+             <mo class="mo">)</mo>
+            </mrow>
+            <mo class="mo">≥</mo>
+            <msub class="msub">
+             <mi class="mi">v</mi>
+             <mi class="mi">o</mi>
+            </msub>
+            <mo class="mo">.</mo>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr class="mtr">
+          <mtd columnalign="center" class="mtd">
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <msubsup class="msubsup">
+              <mi class="mi">v</mi>
+              <mi class="mi">z</mi>
+              <mn class="mn">3</mn>
+             </msubsup>
+             <mrow class="mrow">
+              <mo class="mo">(</mo>
+              <mi class="mi">t</mi>
+              <mo class="mo">)</mo>
+             </mrow>
+             <mo class="mo">-</mo>
+             <msubsup class="msubsup">
+              <mi class="mi">v</mi>
+              <mi class="mi">i</mi>
+              <mn class="mn">3</mn>
+             </msubsup>
+            </mrow>
+            <mrow class="mrow">
+             <msubsup class="msubsup">
+              <mi class="mi">v</mi>
+              <mi class="mi">r</mi>
+              <mn class="mn">3</mn>
+             </msubsup>
+             <mo class="mo">-</mo>
+             <msubsup class="msubsup">
+              <mi class="mi">v</mi>
+              <mi class="mi">i</mi>
+              <mn class="mn">3</mn>
+             </msubsup>
+            </mrow>
+           </mfrac>
+          </mtd>
+          <mtd columnalign="left" class="mtd">
+           <mrow class="mrow">
+            <mtext class="mtext">if</mtext>
+            <mspace width="1pt" class="mspace"/>
+            <msub class="msub">
+             <mi class="mi">v</mi>
+             <mi class="mi">i</mi>
+            </msub>
+            <mo class="mo">≤</mo>
+            <msub class="msub">
+             <mi class="mi">v</mi>
+             <mi class="mi">z</mi>
+            </msub>
+            <mrow class="mrow">
+             <mo class="mo">(</mo>
+             <mi class="mi">t</mi>
+             <mo class="mo">)</mo>
+            </mrow>
+            <mo class="mo">≤</mo>
+            <msub class="msub">
+             <mi class="mi">v</mi>
+             <mi class="mi">r</mi>
+            </msub>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr class="mtr">
+          <mtd columnalign="center" class="mtd">
+           <mn class="mn">1</mn>
+          </mtd>
+          <mtd columnalign="left" class="mtd">
+           <mrow class="mrow">
+            <mtext class="mtext">else</mtext>
+            <mo class="mo">.</mo>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+        <mo class="mo"/>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula> In order to account for wind farms and regional (or sub-cell) velocitiy variations, the power curve is smoothed using a gaussian kernel (see Fig A in 
+ <xref ref-type="supplementary-material" rid="pone.0201457.s001" class="xref">S1 Appendix</xref>) 
+ <disp-formula id="pone.0201457.e004" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e004.jpg" id="pone.0201457.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M4" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mtext class="mtext">Ker</mtext>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">v</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <mfrac class="mfrac">
+         <mn class="mn">1</mn>
+         <msqrt class="msqrt">
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+           <mi class="mi">π</mi>
+           <msup class="msup">
+            <mi class="mi">σ</mi>
+            <mn class="mn">2</mn>
+           </msup>
+          </mrow>
+         </msqrt>
+        </mfrac>
+        <mo form="prefix" class="mo">exp</mo>
+        <mo class="mo">[</mo>
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <mo class="mo">-</mo>
+          <mo class="mo">(</mo>
+          <msub class="msub">
+           <mi class="mi">v</mi>
+           <mn class="mn">0</mn>
+          </msub>
+          <msup class="msup">
+           <mrow class="mrow">
+            <mo class="mo">-</mo>
+            <mi class="mi">v</mi>
+            <mo class="mo">)</mo>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msup>
+          <mo class="mo">)</mo>
+         </mrow>
+         <mrow class="mrow">
+          <mn class="mn">2</mn>
+          <msup class="msup">
+           <mi class="mi">σ</mi>
+           <mn class="mn">2</mn>
+          </msup>
+         </mrow>
+        </mfrac>
+        <mo class="mo">]</mo>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(2)</label>
+ </disp-formula> where we chose 
+ <italic class="italic">v</italic>
+ <sub class="sub">0</sub> = 
+ <italic class="italic">v</italic>
+ <sub class="sub">max</sub>/2 + 0.3 m/s and 
+ <italic class="italic">σ</italic> = 1 m/s with 
+ <italic class="italic">v</italic>
+ <sub class="sub">max</sub> being the maximum of the occurring wind velocities 
+ <italic class="italic">v</italic> at hub height. The parameters were chosen such that the rated wind power output is reached for wind speeds which are a little bit higher than the chosen rated wind speed [
+ <xref rid="pone.0201457.ref043" ref-type="bibr" class="xref">43</xref>, 
+ <xref rid="pone.0201457.ref046" ref-type="bibr" class="xref">46</xref>].
+</p>

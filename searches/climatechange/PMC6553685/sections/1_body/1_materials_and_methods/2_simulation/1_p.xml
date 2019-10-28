@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Over the period from 1800 to 2014, the socio-climate model is simulated with a fixed social component, forced with historical anthropogenic carbon emissions. Initial conditions for all climate variables are zero since they represent deviations from pre-industrial values. Social dynamics are initiated in 2014 with an initial proportion of mitigators 
+ <italic class="italic">x</italic>
+ <sub class="sub">0</sub> = 0.05. The ensuing dynamics of 
+ <italic class="italic">ϵ</italic>(
+ <italic class="italic">t</italic>) follow an increasing but saturating trend corresponding to the world’s increasing but saturating population size and energy demands. Specifically 
+ <disp-formula id="pcbi.1007000.e018" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pcbi.1007000.e018.jpg" id="pcbi.1007000.e018g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M18" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mi class="mi">ϵ</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">t</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <mo class="mo">{</mo>
+        <mtable class="mtable">
+         <mtr class="mtr">
+          <mtd columnalign="left" class="mtd">
+           <mrow class="mrow">
+            <mtext class="mtext">linear</mtext>
+            <mspace width="4.pt" class="mspace"/>
+            <mtext class="mtext">interpolation</mtext>
+            <mspace width="4.pt" class="mspace"/>
+            <mtext class="mtext">of</mtext>
+            <mspace width="4.pt" class="mspace"/>
+            <mtext class="mtext">historical</mtext>
+            <mspace width="4.pt" class="mspace"/>
+            <mtext class="mtext">emissions</mtext>
+           </mrow>
+          </mtd>
+          <mtd columnalign="left" class="mtd">
+           <mrow class="mrow">
+            <mi class="mi">t</mi>
+            <mo class="mo">≤</mo>
+            <mn class="mn">2014</mn>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr class="mtr">
+          <mtd columnalign="left" class="mtd">
+           <mrow class="mrow">
+            <msub class="msub">
+             <mi class="mi">ϵ</mi>
+             <mn class="mn">2014</mn>
+            </msub>
+            <mo class="mo">+</mo>
+            <mfrac class="mfrac">
+             <mrow class="mrow">
+              <mrow class="mrow">
+               <mo class="mo">(</mo>
+               <mi class="mi">t</mi>
+               <mo class="mo">−</mo>
+               <mn class="mn">2014</mn>
+               <mo class="mo">)</mo>
+              </mrow>
+              <msub class="msub">
+               <mi class="mi">ϵ</mi>
+               <mtext class="mtext">max</mtext>
+              </msub>
+             </mrow>
+             <mrow class="mrow">
+              <mi class="mi">t</mi>
+              <mo class="mo">−</mo>
+              <mn class="mn">2014</mn>
+              <mo class="mo">+</mo>
+              <mi class="mi">s</mi>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </mtd>
+          <mtd columnalign="left" class="mtd">
+           <mrow class="mrow">
+            <mi class="mi">t</mi>
+            <mo class="mo">≥</mo>
+            <mn class="mn">2014</mn>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+        <mo class="mo"/>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(14)</label>
+ </disp-formula> where 
+ <italic class="italic">ϵ</italic>
+ <sub class="sub">max</sub> is the saturating value, and 
+ <italic class="italic">s</italic> the half-saturation constant, of 
+ <italic class="italic">ϵ</italic>(
+ <italic class="italic">t</italic>). This expression is shown graphically in 
+ <xref ref-type="supplementary-material" rid="pcbi.1007000.s010" class="xref">S7 Fig</xref>. The system of (delay) ordinary differential equations is simulated using the NDSolve package in Wolfram Mathematica. Historical CO
+ <sub class="sub">2</sub> emissions were obtained from the CDIAC data repository [
+ <xref rid="pcbi.1007000.ref035" ref-type="bibr" class="xref">35</xref>].
+</p>

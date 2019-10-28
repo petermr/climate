@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Ring‐width indices were calculated from the raw ring‐width series. The series were restricted to start in 1850 to match with the climate data; data going longer back in time were not considered. The series were detrended using a 32‐year spline to remove the low‐frequency components of the data and amplify interannual variability, resulting in annual ring‐width indices (RWI
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub>
+ <sup class="sup">sp</sup>). Most previous studies on climate–growth relationships have used correlations between climate variables and tree‐ring chronologies representing the whole population (e.g., Carrer et al., 
+ <xref rid="ece33290-bib-0024" ref-type="ref" class="xref">1998</xref>; Oberhuber et al., 
+ <xref rid="ece33290-bib-0076" ref-type="ref" class="xref">2008</xref>), which do not account for among‐tree variability. In our study, we used ring‐width indices derived from individual trees and as predictors standardized monthly mean temperature variables of the current and previous year of ring formation (Equation 
+ <xref rid="ece33290-disp-0001" ref-type="disp-formula" class="xref">(1)</xref>) to fit linear mixed‐effects models (LMMs; Pinheiro &amp; Bates, 
+ <xref rid="ece33290-bib-0079" ref-type="ref" class="xref">2004</xref>) for each tree species and study site. Seasonal mean temperatures were avoided, as previous studies suggest that shorter time periods better account for growth variability (Kirdyanov et al., 
+ <xref rid="ece33290-bib-0057" ref-type="ref" class="xref">2003</xref>; Lenz et al., 
+ <xref rid="ece33290-bib-0062" ref-type="ref" class="xref">2013</xref>). The initial LMMs were calculated in the following form:
+ <disp-formula id="ece33290-disp-0001" class="disp-formula">
+  <label class="label">(1)</label>
+  <math id="nlm-math-1" class="math">
+   <mrow class="mrow">
+    <msubsup class="msubsup">
+     <mtext class="mtext">RWI</mtext>
+     <mi class="mi">t</mi>
+     <mi mathvariant="normal" class="mi">sp</mi>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <msub class="msub">
+     <mi mathvariant="normal" class="mi">β</mi>
+     <mn class="mn">0</mn>
+    </msub>
+    <mo class="mo">+</mo>
+    <munderover class="munderover">
+     <mo movablelimits="false" class="mo">∑</mo>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+      <mo class="mo">=</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mi class="mi">k</mi>
+    </munderover>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi mathvariant="normal" class="mi">β</mi>
+      <mi class="mi">i</mi>
+     </msub>
+     <mo class="mo">×</mo>
+     <msubsup class="msubsup">
+      <mi class="mi">T</mi>
+      <mrow class="mrow">
+       <mi class="mi">t</mi>
+      </mrow>
+      <mi class="mi">M</mi>
+     </msubsup>
+    </mrow>
+    <mo class="mo">+</mo>
+    <munderover class="munderover">
+     <mo movablelimits="false" class="mo">∑</mo>
+     <mrow class="mrow">
+      <mi class="mi">j</mi>
+      <mo class="mo">=</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mi class="mi">l</mi>
+    </munderover>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi mathvariant="normal" class="mi">β</mi>
+      <mi class="mi">j</mi>
+     </msub>
+     <mo class="mo">×</mo>
+     <msubsup class="msubsup">
+      <mi class="mi">T</mi>
+      <mrow class="mrow">
+       <mi class="mi">t</mi>
+       <mo class="mo">−</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+      <mi class="mi">m</mi>
+     </msubsup>
+    </mrow>
+    <mo class="mo">+</mo>
+    <msub class="msub">
+     <mi class="mi">b</mi>
+     <mn class="mn">0</mn>
+    </msub>
+    <mo class="mo">+</mo>
+    <msub class="msub">
+     <mi mathvariant="normal" class="mi">ε</mi>
+     <mi class="mi">t</mi>
+    </msub>
+   </mrow>
+  </math>
+ </disp-formula>with RWI
+ <sub class="sub">t</sub>
+ <sup class="sup">sp</sup> being a spline‐detrended RWI in the year 
+ <italic class="italic">t</italic>, β
+ <sub class="sub">i</sub> being the coefficients of the fixed effects, 
+ <italic class="italic">T</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub>
+ <sup class="sup">
+  <italic class="italic">M</italic>
+ </sup> being monthly mean temperatures from current January until current October, 
+ <italic class="italic">T</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>−1
+ </sub>
+ <sup class="sup">m</sup> from previous August until previous December, 
+ <italic class="italic">b</italic>
+ <sub class="sub">0</sub> being a random intercept with 
+ <math id="nlm-math-2" class="math">
+  <mrow class="mrow">
+   <msub class="msub">
+    <mi class="mi">b</mi>
+    <mn class="mn">0</mn>
+   </msub>
+   <mo class="mo">∼</mo>
+   <mi class="mi">N</mi>
+   <mfenced close=")" open="(" separators="" class="mfenced">
+    <mrow class="mrow">
+     <mn class="mn">0</mn>
+     <mo class="mo">,</mo>
+     <mspace width="0.166667em" class="mspace"/>
+     <msubsup class="msubsup">
+      <mi mathvariant="normal" class="mi">σ</mi>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">b</mi>
+        <mn class="mn">0</mn>
+       </msub>
+      </mrow>
+      <mn class="mn">2</mn>
+     </msubsup>
+    </mrow>
+   </mfenced>
+  </mrow>
+ </math> , and 
+ <math id="nlm-math-3" class="math">
+  <msub class="msub">
+   <mi mathvariant="normal" class="mi">ε</mi>
+   <mi class="mi">t</mi>
+  </msub>
+ </math> being the residual error in year 
+ <italic class="italic">t</italic> with 
+ <math id="nlm-math-4" class="math">
+  <mrow class="mrow">
+   <msub class="msub">
+    <mi mathvariant="normal" class="mi">ε</mi>
+    <mi class="mi">t</mi>
+   </msub>
+   <mo class="mo">∼</mo>
+   <mi class="mi">N</mi>
+   <mfenced close=")" open="(" separators="" class="mfenced">
+    <mrow class="mrow">
+     <mn class="mn">0</mn>
+     <mo class="mo">,</mo>
+     <mspace width="0.166667em" class="mspace"/>
+     <msup class="msup">
+      <mi mathvariant="normal" class="mi">σ</mi>
+      <mn class="mn">2</mn>
+     </msup>
+    </mrow>
+   </mfenced>
+  </mrow>
+ </math>. All monthly mean temperatures were centered and scaled. Temporal autocorrelation of 
+ <math id="nlm-math-5" class="math">
+  <msubsup class="msubsup">
+   <mi mathvariant="normal" class="mi">RWI</mi>
+   <mi class="mi">t</mi>
+   <mi mathvariant="normal" class="mi">sp</mi>
+  </msubsup>
+ </math> was accounted for by adding an autoregressive parameter 
+ <math id="nlm-math-6" class="math">
+  <mi mathvariant="normal" class="mi">φ</mi>
+ </math> of order 1 (Pinheiro &amp; Bates, 
+ <xref rid="ece33290-bib-0079" ref-type="ref" class="xref">2004</xref>) to the model (Equation 
+ <xref rid="ece33290-disp-0002" ref-type="disp-formula" class="xref">(2)</xref>):
+ <disp-formula id="ece33290-disp-0002" class="disp-formula">
+  <label class="label">(2)</label>
+  <math id="nlm-math-7" class="math">
+   <mrow class="mrow">
+    <msub class="msub">
+     <mi mathvariant="normal" class="mi">ε</mi>
+     <mi class="mi">t</mi>
+    </msub>
+    <mo class="mo">=</mo>
+    <mi mathvariant="normal" class="mi">φ</mi>
+    <mo class="mo">×</mo>
+    <msub class="msub">
+     <mi mathvariant="normal" class="mi">ε</mi>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+      <mo class="mo">−</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+    </msub>
+    <mo class="mo">+</mo>
+    <msub class="msub">
+     <mi mathvariant="normal" class="mi">η</mi>
+     <mi class="mi">t</mi>
+    </msub>
+   </mrow>
+  </math>
+ </disp-formula>where 
+ <math id="nlm-math-8" class="math">
+  <msub class="msub">
+   <mi mathvariant="normal" class="mi">ε</mi>
+   <mrow class="mrow">
+    <mi class="mi">t</mi>
+    <mo class="mo">−</mo>
+    <mn class="mn">1</mn>
+   </mrow>
+  </msub>
+ </math> is the residual error in the previous year, and 
+ <math id="nlm-math-9" class="math">
+  <msub class="msub">
+   <mi mathvariant="normal" class="mi">η</mi>
+   <mi class="mi">t</mi>
+  </msub>
+ </math> is a noise term with zero mean.
+</p>

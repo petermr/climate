@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We follow a Bayesian version of the penalised spline approach [
+ <xref rid="pone.0213300.ref016" ref-type="bibr" class="xref">16</xref>, 
+ <xref rid="pone.0213300.ref017" ref-type="bibr" class="xref">17</xref>] so as to learn about the first-digit probability 
+ <italic class="italic">
+  <bold class="bold">p</bold>
+  <sub class="sub">t</sub>
+ </italic>. We assign a first-order random walk prior to the regression coefficients 
+ <bold class="bold">
+  <italic class="italic">β</italic>
+ </bold>
+ <sub class="sub">
+  <italic class="italic">d</italic>
+ </sub> = (
+ <italic class="italic">β</italic>
+ <sub class="sub">1,
+  <italic class="italic">d</italic>
+ </sub>, …, 
+ <italic class="italic">β</italic>
+ <sub class="sub">
+  <italic class="italic">K</italic>+3,
+  <italic class="italic">d</italic>
+ </sub>)
+ <sup class="sup">T</sup>, which relate an independent and identical Gaussian error 
+ <italic class="italic">ε</italic>
+ <sub class="sub">
+  <italic class="italic">d</italic>
+ </sub> with mean zero and variance 
+ <inline-formula id="pone.0213300.e008" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0213300.e008.jpg" id="pone.0213300.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M8" class="math">
+    <msubsup class="msubsup">
+     <mi class="mi">τ</mi>
+     <mi class="mi">d</mi>
+     <mn class="mn">2</mn>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula>, that is, 
+ <disp-formula id="pone.0213300.e009" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0213300.e009.jpg" id="pone.0213300.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M9" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">β</mi>
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mo class="mo">,</mo>
+          <mi class="mi">k</mi>
+         </mrow>
+        </msub>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">β</mi>
+         <mrow class="mrow">
+          <mi class="mi">d</mi>
+          <mo class="mo">,</mo>
+          <mi class="mi">k</mi>
+          <mo class="mo">-</mo>
+          <mn class="mn">1</mn>
+         </mrow>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">ε</mi>
+         <mi class="mi">d</mi>
+        </msub>
+        <mo class="mo">,</mo>
+        <mspace width="1.em" class="mspace"/>
+        <msub class="msub">
+         <mi class="mi">ε</mi>
+         <mi class="mi">d</mi>
+        </msub>
+        <mo class="mo">∼</mo>
+        <mi class="mi">N</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">0</mn>
+         <mo class="mo">,</mo>
+         <msubsup class="msubsup">
+          <mi class="mi">τ</mi>
+          <mi class="mi">d</mi>
+          <mn class="mn">2</mn>
+         </msubsup>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">,</mo>
+        <mspace width="1.em" class="mspace"/>
+        <mi class="mi">k</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">2</mn>
+        <mo class="mo">,</mo>
+        <mo class="mo">…</mo>
+        <mo class="mo">,</mo>
+        <mi class="mi">K</mi>
+        <mo class="mo">+</mo>
+        <mn class="mn">3</mn>
+        <mo class="mo">;</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(6)</label>
+ </disp-formula> a flat (uniform) prior is set for the initial coefficient 
+ <italic class="italic">β</italic>
+ <sub class="sub">
+  <italic class="italic">d</italic>,1
+ </sub>. The first order random walk prior can be represented in a matrix form, 
+ <bold class="bold">
+  <italic class="italic">Fβ</italic>
+ </bold>
+ <sub class="sub">
+  <italic class="italic">d</italic>
+ </sub> = 
+ <italic class="italic">ε</italic>
+ <sub class="sub">
+  <italic class="italic">d</italic>
+ </sub>, where 
+ <italic class="italic">ε</italic>
+ <sub class="sub">
+  <italic class="italic">d</italic>
+ </sub> is a (
+ <italic class="italic">K</italic> + 2)-vector of 
+ <italic class="italic">ε</italic>
+ <sub class="sub">
+  <italic class="italic">d</italic>
+ </sub>’s and 
+ <bold class="bold">
+  <italic class="italic">F</italic>
+ </bold> is a difference matrix of dimension (
+ <italic class="italic">K</italic> + 2, 
+ <italic class="italic">K</italic> + 3). The 
+ <bold class="bold">
+  <italic class="italic">F</italic>
+ </bold> has a diagonal of 1’s (
+ <italic class="italic">i</italic> = 
+ <italic class="italic">j</italic>), −1’s for the next elements to the diagonal (
+ <italic class="italic">i</italic> = 
+ <italic class="italic">j</italic> + 1), and zero otherwise for the (
+ <italic class="italic">i</italic>, 
+ <italic class="italic">j</italic>)th element with 
+ <italic class="italic">i</italic> ∈ {1, …, 
+ <italic class="italic">K</italic> + 2} and 
+ <italic class="italic">j</italic> ∈ {1, …, 
+ <italic class="italic">K</italic> + 3}.
+</p>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We selected three factor types including climate, topography, and soil as environmental variables. A total of 19 bioclimatic variables were obtained from Worldclim (
+ <ext-link ext-link-type="uri" xlink:href="http://www.worldclim.com" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.worldclim.com</ext-link>; Hijmans et al., 
+ <xref rid="ece35129-bib-0030" ref-type="ref" class="xref">2005</xref>). Bioclimatic data include two groups, one of which is 19 bioclimatic under current conditions and the other is 19 bioclimatic variables of future climatic conditions (RCP 8.5: A scenario of comparatively high greenhouse gas emissions, Riahi et al., 
+ <xref rid="ece35129-bib-0060" ref-type="ref" class="xref">2011</xref>). Considering the collinearity among bioclimatic variables may lead to overfitting, we used the following measures to reduce the number of variables. Firstly, using Spearman rank correlation coefficients, we eliminated bioclimatic variables with the highest and most significant correlation coefficients (
+ <bold class="bold">
+  <italic class="italic">|</italic>
+ </bold>
+ <italic class="italic">r</italic>
+ <bold class="bold">
+  <italic class="italic">| </italic>
+ </bold>&gt; 0.8 and 
+ <italic class="italic">p</italic> &lt; 0.001) (Supporting information Figure 
+ <xref rid="ece35129-sup-0001" ref-type="supplementary-material" class="xref">S1</xref>). Then, Boruta, a wrapper built around the random forest classification algorithm implemented in the R, was used to select variables according to the relative importance of bioclimatic variables (Supporting information Figure 
+ <xref rid="ece35129-sup-0001" ref-type="supplementary-material" class="xref">S2</xref>) (Kursa, Jankowski, &amp; Rudnicki, 
+ <xref rid="ece35129-bib-0039" ref-type="ref" class="xref">2010</xref>). Finally, six bioclimatic variables (Mean Diurnal Range, Isothermality, Mean Temperature of Wettest Quarter, Mean Temperature of Warmest Quarter, Precipitation of Wettest Quarter, Precipitation of Coldest Quarter) were determined as climatic variables. Topography variable was represented by elevation data at 30 arc‐second‐cell resolution was downloaded from IIASA (
+ <ext-link ext-link-type="uri" xlink:href="http://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://webarchive.iiasa.ac.at/Research/LUC/External-World-soil-database/HTML/</ext-link>). Furthermore, we obtained the global mean sea level when the sea level rises by 1 meter from CReSIS (
+ <ext-link ext-link-type="uri" xlink:href="https://www.cresis.ku.edu/content/research/maps" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://www.cresis.ku.edu/content/research/maps</ext-link>). Seven soil variables (Soil electrical conductivity, Soil organic carbon, Soil pH, Percentage sand, Volume percentage gravel, Soil unit symbol, and Soil drainage class) were derived from the Harmonized World Soil Database (HWSD) version 1.2.1 with a spatial resolution of 1 km.
+</p>

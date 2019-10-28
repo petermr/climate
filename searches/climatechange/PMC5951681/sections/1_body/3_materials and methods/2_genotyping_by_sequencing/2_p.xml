@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We checked the quality of the raw sequencing reads with FastQC (v0.10.1, [
+ <xref rid="bib5" ref-type="bibr" class="xref">Andrews, 2012</xref>]). We used AXE (v0.2.6, [
+ <xref rid="bib41" ref-type="bibr" class="xref">Murray and Borevitz, 2017a</xref>)) to demultiplex the sequencing reads according to each sample's unique combinatorial barcode and were unable to assign 11% of read pairs to a sample. We used 
+ <italic class="italic">trimit</italic> from libqcpp (v0.2.5, [
+ <xref rid="bib42" ref-type="bibr" class="xref">Murray and Borevitz, 2017b</xref>]) to clean the reads for each sample, using default parameters, except q = 20. This involved removing adapter contamination due to read-through of small fragments (20% of read pairs) and merging overlapping pairs (49% of read pairs), with both steps using algorithms based on a global alignment of the read pair. We also used 
+ <italic class="italic">trimit</italic> for sliding window quality trimming (11% of reads). We then used a custom script to remove sequencing reads that did not begin with the expected restriction site sequence (16% of reads). We aligned sequencing reads to the 
+ <italic class="italic">E. grandis</italic> reference genome (v2.0, [
+ <xref rid="bib6" ref-type="bibr" class="xref">Bartholomé et al., 2015</xref>; 
+ <xref rid="bib31" ref-type="bibr" class="xref">JGI, 2015</xref>; 
+ <xref rid="bib43" ref-type="bibr" class="xref">Myburg et al., 2014</xref>]), including all nuclear, chloroplast, mitochondrial, and ribosomal scaffolds, but used only nuclear scaffolds for downstream analyses. We aligned reads using bwa-mem (v0.7.5a-r405, [
+ <xref rid="bib35" ref-type="bibr" class="xref">Li, 2013</xref>]), as paired reads (-p) and treating shorter split hits as secondary alignments (-M), with 88% of reads successfully mapped. We used GATK's 
+ <italic class="italic">HaplotypeCaller</italic> in GVCF mode (v3.6–0-g89b7209, [
+ <xref rid="bib39" ref-type="bibr" class="xref">McKenna et al., 2010</xref>]) to call variants for each sample with heterozygosity (-hets) increased to 0.005, indel heterozygosity (-indelHeterozygosity) increased to 0.0005, and the minimum number of reads sharing the same alignment start (-minReadsPerAlignStart) decreased to 4.
+</p>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To model the potential distribution of argali, we used the following statistical methods: generalized linear model (GLM), Random Forest (RF) (Breiman, 
+ <xref rid="ece34103-bib-0013" ref-type="ref" class="xref">2001</xref>; Liaw &amp; Wiener, 
+ <xref rid="ece34103-bib-0052" ref-type="ref" class="xref">2002</xref>), boosted regression tree (BRT) (Elith, Leathwick, &amp; Hastie, 
+ <xref rid="ece34103-bib-0025" ref-type="ref" class="xref">2008</xref>), Maxent (Phillips, Anderson, &amp; Schapire, 
+ <xref rid="ece34103-bib-0071" ref-type="ref" class="xref">2006</xref>; Phillips &amp; Dudík, 
+ <xref rid="ece34103-bib-0072" ref-type="ref" class="xref">2008</xref>), and multivariate adaptive regression splines (MARS) (Leathwick, Elith, &amp; Hastie, 
+ <xref rid="ece34103-bib-0051" ref-type="ref" class="xref">2006</xref>). We selected ENMs based on their performance with presence‐only data (Elith et al., 
+ <xref rid="ece34103-bib-0023" ref-type="ref" class="xref">2006</xref>). GLM, MARS, and BRT could be used for count data under the assumption that a count response could be modeled as Poisson (Talbert, 
+ <xref rid="ece34103-bib-0100" ref-type="ref" class="xref">2012</xref>). The GLM is a linear regression adapted to binary count data. The method uses stepwise procedure to select covariates in the model. The MARS nonparametric algorithm builds flexible models by fitting piecewise logistic regressions. Although it has similarities with GLM, MARS is better in accommodating nonlinear responses to predictors and at the same time lessens the effects of outlying observations. The model RF uses decision trees through random grouping of the covariates. Random Forest models both interactions of the variables and their nonlinear relationships, and does not split the data into training and testing as RF utilizes bootstrapping to fit individual trees (Breiman, 
+ <xref rid="ece34103-bib-0013" ref-type="ref" class="xref">2001</xref>). Like the Random Forest, BRT also uses decision trees, but the method is robust to missing observations. BRT uses cross‐validation by choosing models based on model comparisons of evaluation metrics (Elith et al., 
+ <xref rid="ece34103-bib-0025" ref-type="ref" class="xref">2008</xref>). Maxent is best for presence‐only modeling. While observed absence is valuable in modeling, data are often not available and hence using only presence data are unavoidable (Talbert, 
+ <xref rid="ece34103-bib-0100" ref-type="ref" class="xref">2012</xref>). Models were implemented in the modeling tool Software for Assisted Habitat Modeling (SAHM) run within VisTrails (Morisette et al., 
+ <xref rid="ece34103-bib-0062" ref-type="ref" class="xref">2013</xref>; Talbert, 
+ <xref rid="ece34103-bib-0100" ref-type="ref" class="xref">2012</xref>). The tool creates a workflow of the selected ENMs and develops models for present‐day conditions. As species lacked absence data, the tool randomly generated background points (i.e., pseudo‐absences [Phillips &amp; Dudík, 
+ <xref rid="ece34103-bib-0072" ref-type="ref" class="xref">2008</xref>]) within a 95% minimum convex polygon defined by the presence data.
+</p>

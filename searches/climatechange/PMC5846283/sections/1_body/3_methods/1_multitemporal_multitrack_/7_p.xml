@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The dynamic model is used to integrate GNSS and InSAR data and applies a statistical smoothing in time (
+ <xref rid="R40" ref-type="bibr" class="xref">
+  <italic class="italic">40</italic>
+ </xref>) and is given as
+ <disp-formula id="E3" class="disp-formula">
+  <math id="m7" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <mtable columnalign="center" class="mtable">
+      <mtr columnalign="center" class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">E</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi mathvariant="normal" class="mi">t</mi>
+            <mrow class="mrow">
+             <mi mathvariant="normal" class="mi">k</mi>
+             <mo class="mo">+</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </msub>
+          </mrow>
+         </msub>
+         <mo class="mo">=</mo>
+         <mo stretchy="false" class="mo">(</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">t</mi>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">k</mi>
+           <mo class="mo">+</mo>
+           <mn class="mn">1</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">t</mi>
+          <mi mathvariant="normal" class="mi">k</mi>
+         </msub>
+         <mo stretchy="false" class="mo">)</mo>
+         <mo class="mo">×</mo>
+         <msubsup class="msubsup">
+          <mi mathvariant="italic" class="mi">V</mi>
+          <mi mathvariant="normal" class="mi">e</mi>
+          <mi mathvariant="normal" class="mi">G</mi>
+         </msubsup>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">E</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi mathvariant="normal" class="mi">t</mi>
+            <mi mathvariant="normal" class="mi">k</mi>
+           </msub>
+          </mrow>
+         </msub>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mi mathvariant="normal" class="mi">ε</mi>
+          <mi mathvariant="normal" class="mi">e</mi>
+         </msub>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr columnalign="center" class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">N</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi mathvariant="normal" class="mi">t</mi>
+            <mrow class="mrow">
+             <mi mathvariant="normal" class="mi">k</mi>
+             <mo class="mo">+</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </msub>
+          </mrow>
+         </msub>
+         <mo class="mo">=</mo>
+         <mo stretchy="false" class="mo">(</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">t</mi>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">k</mi>
+           <mo class="mo">+</mo>
+           <mn class="mn">1</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">t</mi>
+          <mi mathvariant="normal" class="mi">k</mi>
+         </msub>
+         <mo stretchy="false" class="mo">)</mo>
+         <mo class="mo">×</mo>
+         <msubsup class="msubsup">
+          <mi mathvariant="italic" class="mi">V</mi>
+          <mi mathvariant="normal" class="mi">n</mi>
+          <mi mathvariant="normal" class="mi">G</mi>
+         </msubsup>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mi mathvariant="italic" class="mi">N</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi mathvariant="normal" class="mi">t</mi>
+            <mi mathvariant="normal" class="mi">k</mi>
+           </msub>
+          </mrow>
+         </msub>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mi mathvariant="normal" class="mi">ε</mi>
+          <mi mathvariant="normal" class="mi">n</mi>
+         </msub>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </mrow>
+   </mrow>
+  </math>
+  <label class="label">(3)</label>
+ </disp-formula>where 
+ <italic class="italic">V</italic> represents the interpolated 
+ <italic class="italic">E</italic> or 
+ <italic class="italic">N</italic> velocities of the GNSS tie points and ε is the system dynamic noise estimated via 
+ <xref ref-type="disp-formula" rid="E2" class="xref">Eq. 2</xref>. Grewal and Andrews (
+ <xref rid="R40" ref-type="bibr" class="xref">
+  <italic class="italic">40</italic>
+ </xref>) have provided a recursive solution to 
+ <xref ref-type="disp-formula" rid="E2" class="xref">Eqs. 2</xref> and 
+ <xref ref-type="disp-formula" rid="E3" class="xref">3</xref>. Because this approach is an extension to an existing InSAR time series algorithm (that is, WabInSAR), hereafter, we shall call it WabInSAR-3D.
+</p>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table-wrap id="Tab1" class="table-wrap">
+ <label class="label">Table 1</label>
+ <caption class="caption">
+  <p class="p">To assess survival, we hypothesized that: 1) adult survival is reduced by lack of water during active non-breeding season (H1) because of potential for physiological stress (Bartelt 
+   <italic class="italic">et al</italic>. 2004), lower food availability (Williams 1951) and general habitat degradation (pond drying, Amburgey 
+   <italic class="italic">et al</italic>. 2012, Hossack 
+   <italic class="italic">et al</italic>.
+   <sup class="sup">
+    <xref ref-type="bibr" rid="CR37" class="xref">37</xref>
+   </sup>, Pilliod and Scherer 2015); 2) Unusually high temperatures can influence survival negatively due to desiccation and related lack of water (Rittenhouse 
+   <italic class="italic">et al</italic>. 2015) (H2); 3) Longer winters decrease time available for an individual to be active and reduce survival (e.g., emerging from long hibernation in weakened state; or reduced opportunities for foraging) (Carey 
+   <italic class="italic">et al</italic>. 2005,) (H3); 4) In montane habitats, exposure to cold temperatures reduce survival (H4). However, cold experienced by hibernating animals is buffered by snowpack; in low snowpack years, cold temperatures may have greater impact. Thus, snowpack (as represented by a measure of snow water equivalent [SWE]) was accounted for in developing covariate H4 (O’Connor and Rittenhouse 2016); 5) Bouts of unseasonably warm temperatures during hibernation (i.e., winter) cause physiological arousal (Sinclair 
+   <italic class="italic">et al</italic>.
+   <sup class="sup">
+    <xref ref-type="bibr" rid="CR40" class="xref">40</xref>
+   </sup>), interrupt hibernation, waste energy, and reduce survival (H5). Snowpack also buffers against warm temperatures so we accounted for the effect of snowpack during the bouts of warm weather in winter. To assess recruitment we hypothesized that: 1) Recruitment is reduced by lack of water due to increased desiccation risk to small bodied juveniles, and reduced food and habitat (H6); 2) Longer and colder winters decrease the amount of time available for an individual to be active and will reduce survival and thus recruitment (H7); 3) Cold temperatures in spring that result in damage or destruction of eggs will reduce recruitment (Håkansson and Loman 2004) (H8); and 4) Freezing events in the autumn before metamorphic animals have successfully left the breeding site will reduce recruitment; in other words, if the onset of winter (i.e., freezing events) is later, recruitment will be influenced positively (H9).
+  </p>
+ </caption>
+ <table frame="hsides" rules="groups" class="table">
+  <thead class="thead">
+   <tr class="tr">
+    <th class="th"/>
+    <th class="th">Hypothesis</th>
+    <th class="th">Species</th>
+    <th class="th">Prediction</th>
+    <th class="th">Season</th>
+    <th class="th">Covariate and Formulation*</th>
+    <th class="th">Mechanism</th>
+    <th class="th">Mathematical model</th>
+   </tr>
+  </thead>
+  <tbody class="tbody">
+   <tr class="tr">
+    <td rowspan="5" class="td">Survival</td>
+    <td class="td">H1</td>
+    <td class="td">All</td>
+    <td class="td">Survival decreases in drier conditions</td>
+    <td class="td">Active non-breeding season - breeding activity in spring through the onset of hibernation</td>
+    <td class="td">DROUGHT: Number of drought days (i.e., no precipitation) during the active, non-breeding season in a given year. Drought “events” were categorized as groups of days interspersed by days with rain. Drought days were counted after a site-specific threshold number of consecutive drought days was reached for each “event”. Thresholds were defined relative to the mean climate at the site and were chosen such that the coefficient of variation was &gt;0.95 for that covariate.</td>
+    <td class="td">Desiccation, less food, fewer hibernacula</td>
+    <td class="td">logit(survival) = B0 + B1 * CovH1</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">H2</td>
+    <td class="td">All</td>
+    <td class="td">Survival decreases as the number of unusual warm days increase</td>
+    <td class="td">Active season - emergence from hibernation to the onset of hibernation.</td>
+    <td class="td">UNUSUAL WARM DAYS: Number of warm days during the active season. Warm is defined as a day with a maximum temperature at least 2 SD above the average 30-year maximum temperature.</td>
+    <td class="td">Heat Stress</td>
+    <td class="td">logit(survival) = B0 + B2 * CovH2</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">H3</td>
+    <td class="td">All</td>
+    <td class="td">Survival decreases as the length of winter increases</td>
+    <td class="td">Winter</td>
+    <td class="td">LENGTH OF WINTER: The ratio of winter length relative to length of (previous) active (breeding and non-breeding) season. Winter is defined as the period between the first and last killing frost (−4.44 °C or 0 °C for warm regions).</td>
+    <td class="td">Energy expenditure during hibernation</td>
+    <td class="td">logit(survival) = B0 + B3 * CovH3</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">H4</td>
+    <td class="td">Terrstrial hibernators</td>
+    <td class="td">Survival decreases as winter severity increases</td>
+    <td class="td">Winter</td>
+    <td class="td">WINTER SEVERITY: Number of cold days during winter. Cold defined as minimum temperature at least 2 SD below the 30 year average minimum temperature. Cold “events” categorized as groups of cold days interspersed by warmer days. Cold days counted after a site-specific threshold number of consecutive cold days was reached for each “event”. Thresholds for cold events defined relative to the mean climate at the site and chosen such that the coefficient of variation was &gt;0.95 for that covariate.</td>
+    <td class="td">Freezing (when exposed to cold temperatures)</td>
+    <td class="td">logit(survival) = B0 + B4 * CovH4</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">H5</td>
+    <td class="td">All</td>
+    <td class="td">Survival decreases as warm days during hibernation increase</td>
+    <td class="td">Middle winter: Defined as the period between the 10 and 90% quantile of winter length.</td>
+    <td class="td">WARM DAYS DURING HIBERNATION: Number of unusually warm days during middle of winter. Warm is defined as mean maximum temperature at least 2 SD above the 30 year mean maximum temperature. Warm “events” categorized as groups of warm days interspersed by cooler days. Warm days counted after a site-specific threshold number of consecutive warm days was reached for each “event”. Thresholds for warm events defined relative to the mean climate at the site and chosen such that the coefficient of variation was &gt;0.95 for that covariate.</td>
+    <td class="td">Inappropriate Rousing - Waste of energy</td>
+    <td class="td">logit(survival) = B0 + B5 * Cov-H5</td>
+   </tr>
+   <tr class="tr">
+    <td rowspan="4" class="td">Recruitment</td>
+    <td class="td">H6</td>
+    <td class="td">All</td>
+    <td class="td">Recruitment decreases with the increase in drought conditions</td>
+    <td class="td">Active non-breeding season from year t-LAG to year t</td>
+    <td class="td">DROUGHT: Number of drought days (i.e., no precipitation) during the active, non-breeding season cumulated from year t-LAG to year t.</td>
+    <td class="td">Desiccation, less food, fewer hibernacula during juvenile years</td>
+    <td class="td">log(recruitment) = B0 + B6 * CovH6</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">H7</td>
+    <td class="td">All</td>
+    <td class="td">Recruitment decreases with longer winters over juvenile years</td>
+    <td class="td">Winter</td>
+    <td class="td">LENGTH OF WINTER: Ratio of winter length relative to length of (previous) active season, cumulated from year t-LAG to year t. Winter defined as the period between first and last killing frost (−4.44 °C).</td>
+    <td class="td">Hibernation energy expenditure, energy storage &amp; hypoxia</td>
+    <td class="td">log(recruitment) = B0 + B7 * CovH7</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">H8</td>
+    <td class="td">All</td>
+    <td class="td">Recruitment decreases with increased freezing events during egg laying</td>
+    <td class="td">Egg laying period (2 wks before - 2 wks after the approximate date of egg-laying (
+     <xref rid="MOESM1" ref-type="media" class="xref">S1</xref>).
+    </td>
+    <td class="td">COLD TEMPERATURES: Number of cold days during the egg laying period in year t-LAG. Cold is defined as a day with an average minimum temperature at least 2 SD below the 30 year average minimum temperature.</td>
+    <td class="td">Freezing of eggs</td>
+    <td class="td">log(recruitment) = B0 + B8 * CovH8</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">H9</td>
+    <td class="td">All</td>
+    <td class="td">Recruitment increases with later winter onset</td>
+    <td class="td">Autumn</td>
+    <td class="td">DATE OF WINTER ONSET: Date of first sustained killing frost in year of metamorphosis. Killing frost defined as temperature &lt;−4.44 °C or &lt;0 °C for warm regions; sustained defined as ≥3 consecutive days.</td>
+    <td class="td">Freezing before metmorphosis</td>
+    <td class="td">log(recruitment) = B0 + B1 * CovH9</td>
+   </tr>
+  </tbody>
+ </table>
+ <table-wrap-foot class="table-wrap-foot">
+  <p class="p">*Refer to Supporting information (S7) for covariate values and sources.</p>
+ </table-wrap-foot>
+</table-wrap>

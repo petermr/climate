@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Environmental variables used to construct huemul distribution models were taken from Worldclim database (
+ <xref rid="ref-23" ref-type="bibr" class="xref">Hijmans et al., 2005</xref>), which contains information of 19 bioclimatic layers and altitude, in raster format, with an approximate resolution of one pixel per 1 km
+ <sup class="sup">2</sup>. To avoid multicollinearity among variables, highly correlated ones were removed to reduce models error rates (
+ <xref rid="ref-22" ref-type="bibr" class="xref">Heikkinen et al., 2006</xref>). Multicollinearity was estimated through Pearson correlation coefficient (
+ <italic class="italic">r</italic>
+ <sub class="sub">xy</sub>), using the “VIRTUALSPECIES” package (
+ <xref rid="ref-29" ref-type="bibr" class="xref">Leroy et al., 2016</xref>) in R 3.4.0 (
+ <xref rid="ref-54" ref-type="bibr" class="xref">R Core Development Team, 2016</xref>). Those variables with a correlation coefficient 
+ <italic class="italic">r</italic>
+ <sub class="sub">xy</sub> ≥ 0.85 were removed. Variables kept after multicollinearity analysis were: altitude (ALT), annual mean temperature (BIO1), isothermality (BIO3), temperature seasonality (BIO4), minimum temperature of the coldest month (BIO6), annual temperature range (BIO7), mean temperature of the wettest quarter (BIO8), mean temperature of the driest quarter (BIO9), annual precipitation (BIO12), seasonality of precipitation (BIO15), and precipitation of coldest quarter (BIO19).
+</p>

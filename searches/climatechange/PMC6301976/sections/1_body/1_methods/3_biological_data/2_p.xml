@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par9" class="p">We could not, however, with any degree of certainty, simultaneously fit all the unknown parameters in Equation 
+ <xref rid="Equ1" ref-type="" class="xref">1a</xref> and also predict coral cover into the future. Therefore, we used a two-step process. First, we estimated 
+ <italic class="italic">r</italic>, 
+ <italic class="italic">K</italic> and γ as inverse problems using a Bayesian platform. The values from the Bayesian posterior distributions were then fitted to parametric distributions. Second, we used these best-fit distributions to predict the response of coral populations to likely thermal-stress scenarios (see below) through to the year 2100. We estimated 
+ <italic class="italic">r</italic> and 
+ <italic class="italic">K</italic> values (Equation 
+ <xref rid="Equ1" ref-type="" class="xref">1a</xref>) at each study locality as an inverse problem using the logistic growth function within a Bayesian framework using a lag-1 temporal auto-regressive error structure on the residuals (after ref.
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR34" class="xref">34</xref>
+ </sup>). The successive 
+ <italic class="italic">r</italic>-values for the different localities were derived from a sample size of 50,000 from the posterior distribution, estimated using OpenBUGS. These 
+ <italic class="italic">r-</italic>values, from the posterior distribution, were low, &lt;0.4, and were therefore fitted to Beta distributions using the R package ‘
+ <italic class="italic">fitdistrplus</italic>’
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR35" class="xref">35</xref>
+ </sup>. Random samples were taken from these estimated Beta distributions for every time step in the predictive model. We used a similar process to estimate γ-values using Equation 
+ <xref rid="Equ4" ref-type="" class="xref">3</xref> below. Although temperatures change through the seasons, in the tropics they only range about 3 °C, which we assumed was small enough to fix T, and thereby use mean temperature and the solution of Equation 
+ <xref rid="Equ1" ref-type="" class="xref">1a</xref> (i.e., Equation 
+ <xref rid="Equ4" ref-type="" class="xref">3</xref>) to estimate γ-values. Therefore, to derive a meaningful estimate of γ, we treated temperature,
+ <italic class="italic">T</italic>, and 
+ <italic class="italic">K</italic> as constants, and treated 
+ <italic class="italic">r</italic> as a stochastic parameter, using the following:
+ <disp-formula id="Equ4" class="disp-formula">
+  <label class="label">3</label>
+  <alternatives class="alternatives">
+   <tex-math id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$P(t)=\frac{(r-\gamma T){P}_{o}}{\frac{r}{K}\,{P}_{o}(1-ex{p}^{-(r-\gamma T)t})+(r-\gamma T)\,ex{p}^{-(r-\gamma T)t}}.$$\end{document}</tex-math>
+   <math id="M8" display="block" class="math">
+    <mi class="mi">P</mi>
+    <mo stretchy="false" class="mo">(</mo>
+    <mi class="mi">t</mi>
+    <mo stretchy="false" class="mo">)</mo>
+    <mo class="mo">=</mo>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <mo stretchy="false" class="mo">(</mo>
+      <mi class="mi">r</mi>
+      <mo class="mo">−</mo>
+      <mi class="mi">γ</mi>
+      <mi class="mi">T</mi>
+      <mo stretchy="false" class="mo">)</mo>
+      <msub class="msub">
+       <mrow class="mrow">
+        <mi class="mi">P</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mi class="mi">o</mi>
+       </mrow>
+      </msub>
+     </mrow>
+     <mrow class="mrow">
+      <mfrac class="mfrac">
+       <mi class="mi">r</mi>
+       <mi class="mi">K</mi>
+      </mfrac>
+      <mspace width=".25em" class="mspace"/>
+      <msub class="msub">
+       <mrow class="mrow">
+        <mi class="mi">P</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mi class="mi">o</mi>
+        <mspace width=".25em" class="mspace"/>
+       </mrow>
+      </msub>
+      <mo stretchy="false" class="mo">(</mo>
+      <mn class="mn">1</mn>
+      <mo class="mo">−</mo>
+      <mi class="mi">e</mi>
+      <mi class="mi">x</mi>
+      <msup class="msup">
+       <mrow class="mrow">
+        <mi class="mi">p</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mo class="mo">−</mo>
+        <mo stretchy="false" class="mo">(</mo>
+        <mi class="mi">r</mi>
+        <mo class="mo">−</mo>
+        <mi class="mi">γ</mi>
+        <mi class="mi">T</mi>
+        <mo stretchy="false" class="mo">)</mo>
+        <mi class="mi">t</mi>
+       </mrow>
+      </msup>
+      <mo stretchy="false" class="mo">)</mo>
+      <mo class="mo">+</mo>
+      <mo stretchy="false" class="mo">(</mo>
+      <mi class="mi">r</mi>
+      <mo class="mo">−</mo>
+      <mi class="mi">γ</mi>
+      <mi class="mi">T</mi>
+      <mo stretchy="false" class="mo">)</mo>
+      <mspace width=".25em" class="mspace"/>
+      <mi class="mi">e</mi>
+      <mi class="mi">x</mi>
+      <msup class="msup">
+       <mrow class="mrow">
+        <mi class="mi">p</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mo class="mo">−</mo>
+        <mrow class="mrow">
+         <mo stretchy="true" class="mo">(</mo>
+         <mrow class="mrow">
+          <mi class="mi">r</mi>
+          <mo class="mo">−</mo>
+          <mi class="mi">γ</mi>
+          <mi class="mi">T</mi>
+         </mrow>
+         <mo stretchy="true" class="mo">)</mo>
+        </mrow>
+        <mi class="mi">t</mi>
+       </mrow>
+      </msup>
+     </mrow>
+    </mfrac>
+    <mo class="mo">.</mo>
+   </math>
+   <graphic xlink:href="41598_2018_36169_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

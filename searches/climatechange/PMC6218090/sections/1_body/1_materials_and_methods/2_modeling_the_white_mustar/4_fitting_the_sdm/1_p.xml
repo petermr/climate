@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The 521 localities were divided into training and validation datasets. The training dataset consisted of 2/3 of the localities extracted randomly using ArcMap ArcGIS 9.3, and the remaining localities served as validation data. The SDM was fitted to the training dataset by generalized linear models (hereafter GLM) [
+ <xref rid="pone.0207124.ref053" ref-type="bibr" class="xref">53</xref>] with a binary response variable (presence/absence) and logit link-function, using Pearson’s chi-square to control for overdispersion, in Wolfram Mathematica 10.0. The GLM was a 2
+ <sup class="sup">nd</sup> degree polynomial regression incorporating the linear and quadratic terms of the climatic variables and the slope of the terrain. Compared with more complex modeling techniques (e.g., neural networks, generalized additive models, random forests, or multivariate adaptive regression splines; [
+ <xref rid="pone.0207124.ref054" ref-type="bibr" class="xref">54</xref>–
+ <xref rid="pone.0207124.ref055" ref-type="bibr" class="xref">55</xref>]), models with low complexity (such as 2
+ <sup class="sup">nd</sup> degree polynomial regression models) tend to provide a lower fit to the training data but tend to have better transferability in space [
+ <xref rid="pone.0207124.ref056" ref-type="bibr" class="xref">56</xref>] and likely in time ([
+ <xref rid="pone.0207124.ref057" ref-type="bibr" class="xref">57</xref>]; but see [
+ <xref rid="pone.0207124.ref058" ref-type="bibr" class="xref">58</xref>]); accordingly, they are better suited for the objectives of the present study. To assess model performance and allow comparisons with other studies, following [
+ <xref rid="pone.0207124.ref059" ref-type="bibr" class="xref">59</xref>], the validation dataset was used to calculate two performance statistics: TSS (true skills statistic) and AUC (area under the receiver-operating characteristic curve). TSS considers both omission and commission errors and success as a result of random guessing; it ranges from -1 to 1, where 1 indicates perfect agreement and values of zero or less indicate a performance no better than random [
+ <xref rid="pone.0207124.ref059" ref-type="bibr" class="xref">59</xref>]. AUC represents the expected proportion of positives ranked before a uniformly drawn random negative; it varies from 0 to 1, whereby a model whose predictions are 100% incorrect has an AUC of 0 and one whose predictions are 100% correct has an AUC of 1 [
+ <xref rid="pone.0207124.ref056" ref-type="bibr" class="xref">56</xref>, 
+ <xref rid="pone.0207124.ref060" ref-type="bibr" class="xref">60</xref>–
+ <xref rid="pone.0207124.ref061" ref-type="bibr" class="xref">61</xref>].
+</p>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Bioinformatic processing of exon capture data followed our previous protocols [
+ <xref rid="pgen.1008119.ref009" ref-type="bibr" class="xref">9</xref>, 
+ <xref rid="pgen.1008119.ref070" ref-type="bibr" class="xref">70</xref>]. All raw sequencing reads were treated to remove adapters, exact duplicates, low complexity (i.e., runs of ambiguous or mononucleotide sequence), and reads sourced from bacteria and human contamination. Overlapping paired reads were merged to avoid inflated estimates of coverage and biased genotype likelihoods. We used filtered sequencing reads (28.9 Gb) from 48 modern YNP 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">alpinus</italic> samples to generate 
+ <italic class="italic">de novo</italic> assemblies with ABySS [
+ <xref rid="pgen.1008119.ref073" ref-type="bibr" class="xref">73</xref>] that were then merged using Blat [
+ <xref rid="pgen.1008119.ref074" ref-type="bibr" class="xref">74</xref>], CD-HIT [
+ <xref rid="pgen.1008119.ref075" ref-type="bibr" class="xref">75</xref>], and CAP3 [
+ <xref rid="pgen.1008119.ref076" ref-type="bibr" class="xref">76</xref>] to remove redundancies. This total assembly was then compared to the original targets to construct a non-redundant target reference of 21,128 assembled contiguous sequences (contigs) totaling 20.8 Mb, and error-corrected following Bi and colleagues [
+ <xref rid="pgen.1008119.ref009" ref-type="bibr" class="xref">9</xref>]. We then aligned cleaned reads from 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">alpinus</italic>, 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">speciosus</italic>, and 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">minimus</italic> samples to the 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">alpinus</italic> reference using Novoalign (
+ <ext-link ext-link-type="uri" xlink:href="http://www.novocraft.com/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.novocraft.com</ext-link>). Nucleotide positions were filtered at individual, contiguous sequence, and position levels of quality control following our previously described methods [
+ <xref rid="pgen.1008119.ref009" ref-type="bibr" class="xref">9</xref>] (
+ <xref ref-type="supplementary-material" rid="pgen.1008119.s013" class="xref">S3 Table</xref>) using the script snpCleaner (
+ <ext-link ext-link-type="uri" xlink:href="https://github.com/tplinderoth/ngsQC/tree/master/snpCleaner" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/tplinderoth/ngsQC/tree/master/snpCleaner</ext-link>). For each of the three temporal transects, we retained the intersection of filtered contigs between all historic and modern populations. As a result, 2,569, 2,451, and 2,738 contigs (11.6–13% of the total) were eliminated from YNP 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">speciosus</italic>, YNP 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">alpinus</italic>, and SS 
+ <italic class="italic">T</italic>. 
+ <italic class="italic">alpinus</italic> datasets, respectively. At the site level, we removed sites showing unusually high or low coverage, excessive strand bias, end distance bias, base quality bias, and map quality bias. We also filtered out sites with extensive missing data among samples within each population.
+</p>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We generated models of potential distribution based on the four variables selected during calibration and z-standardized (i.e., mean = 0 and standard deviation = 1) all bioclimatic variables, current and future; i.e. for the projected value of each variable we subtracted the mean and then divided it by the standard deviation of the current data subset. Subsequently, in each of the 500 iterations of the final process we randomly selected 65% of the records for training and the remaining 35% for cross validation. The formula used to generate models of potential distribution was: 
+ <disp-formula id="pone.0164178.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0164178.e001.jpg" id="pone.0164178.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mtable columnalign="left" class="mtable">
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <mtext class="mtext">maxlike</mtext>
+       <mo class="mo">(:</mo>
+       <mtext class="mtext">DD5</mtext>
+       <mo class="mo">+</mo>
+       <mtext class="mtext">I</mtext>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mtext class="mtext">DD5</mtext>
+          </mrow>
+          <mtext class="mtext">2</mtext>
+         </msup>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mo class="mo">+</mo>
+       <mtext class="mtext">MMIN</mtext>
+       <mo class="mo">+</mo>
+       <mtext class="mtext">I</mtext>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mtext class="mtext">MMIN</mtext>
+          </mrow>
+          <mtext class="mtext">2</mtext>
+         </msup>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mo class="mo">+</mo>
+       <mtext class="mtext">MINDD0</mtext>
+       <mo class="mo">+</mo>
+       <mtext class="mtext">I</mtext>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mtext class="mtext">MINDD0</mtext>
+          </mrow>
+          <mtext class="mtext">2</mtext>
+         </msup>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mo class="mo">+</mo>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <mtext class="mtext">MTWM</mtext>
+       <mo class="mo">+</mo>
+       <mtext class="mtext">I</mtext>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mtext class="mtext">MTWM</mtext>
+          </mrow>
+          <mtext class="mtext">2</mtext>
+         </msup>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mo class="mo">,</mo>
+       <mtext class="mtext"> MOD</mtext>
+       <mo class="mo">_</mo>
+       <mtext class="mtext">ACT</mtext>
+       <mo class="mo">,</mo>
+       <mtext class="mtext"> PTOS</mtext>
+       <mo class="mo">_</mo>
+       <mtext class="mtext">MOD</mtext>
+       <mo class="mo">,</mo>
+       <mtext class="mtext"> method</mtext>
+       <mo class="mo">="</mo>
+       <mtext class="mtext">BFGS</mtext>
+       <mo class="mo">"</mo>
+       <mo class="mo">,</mo>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <mtext class="mtext">removeDuplicates</mtext>
+       <mo class="mo">=</mo>
+       <mtext class="mtext">TRUE</mtext>
+       <mo class="mo">,</mo>
+       <mtext class="mtext"> savedata</mtext>
+       <mo class="mo">=</mo>
+       <mtext class="mtext">TRUE</mtext>
+       <mo class="mo">)</mo>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+ </disp-formula> Where “MOD_ACT” is a “raster stack” with all the variables under current conditions and “PTOS_MOD” is a “data frame” with the X and Y coordinates of the presence locations. For more details about the formula see the “maxlike” package.
+</p>

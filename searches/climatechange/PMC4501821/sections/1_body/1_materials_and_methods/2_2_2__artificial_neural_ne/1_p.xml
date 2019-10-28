@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Artificial neural networks (ANNs) are system-constructs of emerging artificial intelligence technology. They are information-processing systems that are inspired by the functioning of the human brain and have been used to model complex, non-linear interactions in natural systems [
+ <xref rid="pone.0132066.ref032" ref-type="bibr" class="xref">32</xref>]. A typical ANN consist of inputs (input-layer nodes) and computational units (hidden-layer nodes) connected by weighted links influencing the output calculation [
+ <xref rid="pone.0132066.ref032" ref-type="bibr" class="xref">32</xref>]. A common form of the three-layer feedforward back-propagation network was used to create independent individual-tree BA and volume increment sub-models. Multi-layer feedforward networks with nonlinear transfer functions were used in this study, because of their ability to discover nonlinear relations between input and output attributes [
+ <xref rid="pone.0132066.ref033" ref-type="bibr" class="xref">33</xref>]. Thirteen normalised inputs were entered into the network and passed on to the hidden-layer nodes, where a weighted sum of inputs was calculated according to eq (
+ <xref rid="pone.0132066.e001" ref-type="disp-formula" class="xref">1</xref>). The product of this calculation was then passed on to a hyperbolic tangent-sigmoidal transfer function (via eq (
+ <xref rid="pone.0132066.e002" ref-type="disp-formula" class="xref">2</xref>)). Calculations by the hidden-layer nodes were passed forward as input to the output node, with intermediate processing steps described by eqs (
+ <xref rid="pone.0132066.e003" ref-type="disp-formula" class="xref">3</xref>) and (
+ <xref rid="pone.0132066.e004" ref-type="disp-formula" class="xref">4</xref>). 
+ <disp-formula id="pone.0132066.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0132066.e001.jpg" id="pone.0132066.e001g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">a</mi>
+      <mi class="mi">j</mi>
+     </msub>
+     <mo class="mo">=</mo>
+     <munder class="munder">
+      <mo class="mo">∑</mo>
+      <mrow class="mrow">
+       <mi class="mi">i</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+     </munder>
+     <mo stretchy="false" class="mo">(</mo>
+     <msub class="msub">
+      <mi class="mi">X</mi>
+      <mi class="mi">i</mi>
+     </msub>
+     <mo class="mo"> </mo>
+     <msub class="msub">
+      <mi class="mi">W</mi>
+      <mrow class="mrow">
+       <mi class="mi">i</mi>
+       <mi class="mi">j</mi>
+      </mrow>
+     </msub>
+     <mo stretchy="false" class="mo">)</mo>
+     <mo class="mo">+</mo>
+     <msub class="msub">
+      <mi class="mi">b</mi>
+      <mi class="mi">j</mi>
+     </msub>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula>
+ <disp-formula id="pone.0132066.e002" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0132066.e002.jpg" id="pone.0132066.e002g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M2" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">c</mi>
+      <mi class="mi">j</mi>
+     </msub>
+     <mo class="mo">=</mo>
+     <mi class="mi">t</mi>
+     <mi class="mi">a</mi>
+     <mi class="mi">n</mi>
+     <mi class="mi">s</mi>
+     <mi class="mi">i</mi>
+     <mi class="mi">g</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">a</mi>
+        <mi class="mi">j</mi>
+       </msub>
+      </mrow>
+      <mo class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(2)</label>
+ </disp-formula>
+ <disp-formula id="pone.0132066.e003" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0132066.e003.jpg" id="pone.0132066.e003g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M3" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">d</mi>
+      <mi class="mi">k</mi>
+     </msub>
+     <mo class="mo">=</mo>
+     <munder class="munder">
+      <mo class="mo">∑</mo>
+      <mrow class="mrow">
+       <mi class="mi">j</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+     </munder>
+     <mo stretchy="false" class="mo">(</mo>
+     <msub class="msub">
+      <mi class="mi">c</mi>
+      <mi class="mi">j</mi>
+     </msub>
+     <mo class="mo"> </mo>
+     <msub class="msub">
+      <mi class="mi">W</mi>
+      <mrow class="mrow">
+       <mi class="mi">j</mi>
+       <mi class="mi">k</mi>
+      </mrow>
+     </msub>
+     <mo stretchy="false" class="mo">)</mo>
+     <mo class="mo">+</mo>
+     <msub class="msub">
+      <mi class="mi">b</mi>
+      <mi class="mi">k</mi>
+     </msub>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(3)</label>
+ </disp-formula>
+ <disp-formula id="pone.0132066.e004" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0132066.e004.jpg" id="pone.0132066.e004g" position="anchor" mimetype="image" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M4" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">y</mi>
+      <mi class="mi">k</mi>
+     </msub>
+     <mo class="mo">=</mo>
+     <mi class="mi">t</mi>
+     <mi class="mi">a</mi>
+     <mi class="mi">n</mi>
+     <mi class="mi">s</mi>
+     <mi class="mi">i</mi>
+     <mi class="mi">g</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">d</mi>
+        <mi class="mi">k</mi>
+       </msub>
+      </mrow>
+      <mo class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(4)</label>
+ </disp-formula> where 
+ <italic class="italic">X</italic> is the input, 
+ <italic class="italic">Y</italic> the output, 
+ <italic class="italic">W</italic> the connection weight, and 
+ <italic class="italic">b</italic> the bias for a given ANN of 
+ <italic class="italic">i</italic> input, 
+ <italic class="italic">j</italic> hidden, and 
+ <italic class="italic">k</italic> output nodes. Variables 
+ <italic class="italic">a</italic>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub>, 
+ <italic class="italic">c</italic>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub>, 
+ <italic class="italic">d</italic>
+ <sub class="sub">
+  <italic class="italic">k</italic>
+ </sub>, and 
+ <italic class="italic">y</italic>
+ <sub class="sub">
+  <italic class="italic">k</italic>
+ </sub> are intermediate calculation products. The information flow and structure of ANNs formulated in this study are illustrated in 
+ <xref rid="pone.0132066.g001" ref-type="fig" class="xref">Fig 1</xref>Development of ANN models was carried out using MATLAB software (The MathWorks, Inc, USA). MATLAB tools and add-on modules facilitate neural-network-model development and statistical analysis [
+ <xref rid="pone.0132066.ref033" ref-type="bibr" class="xref">33</xref>]. Computer programme script was developed in default MATLAB editor and files are available from the authors upon request.
+</p>

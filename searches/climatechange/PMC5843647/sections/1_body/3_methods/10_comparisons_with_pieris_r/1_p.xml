@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par40" class="p">In order to identify 
+ <italic class="italic">B. anynana</italic> orthologs in 
+ <italic class="italic">P</italic>. 
+ <italic class="italic">rapae</italic>, we used blastx with 
+ <italic class="italic">B. anynana</italic> transcripts as a query against the 
+ <italic class="italic">P</italic>. 
+ <italic class="italic">rapae</italic> proteins as database, based on the recently sequenced 
+ <italic class="italic">P</italic>. 
+ <italic class="italic">rapae</italic> genome
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR72" class="xref">72</xref>
+ </sup>, and retained only hits with bitscore &gt;100 and evalue &lt;10
+ <sup class="sup">−</sup>
+ <sup class="sup">5</sup>. Of the 15,049 
+ <italic class="italic">B. anynana</italic> transcripts expressed in abdomen, 10,466 showed a significant hit to 
+ <italic class="italic">P</italic>. 
+ <italic class="italic">rapae</italic>. To estimate Tajima’s D and 
+ <italic class="italic">π</italic> in 
+ <italic class="italic">P</italic>. 
+ <italic class="italic">rapae</italic> coding sequence, we used whole genome Pool-Seq data from a single population (24 individuals). Briefly, adult 
+ <italic class="italic">P</italic>. 
+ <italic class="italic">rapae</italic> butterflies were collected during the summer of 2014, just south of Barcelona, Spain (Delta del Llobregat). DNA was extracted from thorax material using a modified version of a salt-extraction protocol. Library construction (PCR-free, paired end, 500 bp insert size), and sequencing (Illumina HiSeq 4000, 100 bp PE reads) was performed at BGI. Fastq data were quality-filtered to a minimum PHRED score of Q10, with ends trimmed of adapters and low-quality bases, and screened for common contaminants using bbduk2 (BBMap v35.69, 
+ <ext-link ext-link-type="uri" xlink:href="http://sourceforge.net/projects/bbmap/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://sourceforge.net/projects/bbmap/</ext-link>). The Pool-seq data were mapped to the genome using Next-Gen Mapper v0.4.10 with an identity cutoff of 90% to minimise mapping bias
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR64" class="xref">64</xref>
+ </sup>. SAMtools v1.2 was used to filter the mapped data for only correctly mapped paired-ends reads, after which a mpileup file was created for further analysis
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR63" class="xref">63</xref>
+ </sup>. Using Popoolation v1.2.2, Tajima’s D and nucleotide diversity (
+ <italic class="italic">π</italic>) were calculated per gene using the variance-at-position.pl script
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR73" class="xref">73</xref>
+ </sup> and a gtf annotation file. Annotation using the 
+ <italic class="italic">B. anyana</italic> evigene protein set was conducted with SPALN v2.1.2, an exon boundary-aware protein to genome alignment program
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR74" class="xref">74</xref>
+ </sup>. The resulting gff file was converted to gtf using an in-house script.
+</p>

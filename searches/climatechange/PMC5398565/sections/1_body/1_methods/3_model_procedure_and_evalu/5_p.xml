@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To explore further the strength of pattern predicted for the 
+ <italic class="italic">Sphagnum</italic>-peatland distribution, we generated consensus models for current climate and each GCM for the all-species and peatland data sets. The consensus models were generated based on four modelling algorithms: flexible discriminant analysis [
+ <xref rid="pone.0175978.ref054" ref-type="bibr" class="xref">54</xref>], multivariate adaptive regression splines (MARS; [
+ <xref rid="pone.0175978.ref055" ref-type="bibr" class="xref">55</xref>]), random forest (RF; [
+ <xref rid="pone.0175978.ref056" ref-type="bibr" class="xref">56</xref>] and classification tree analysis (CTA; [
+ <xref rid="pone.0175978.ref057" ref-type="bibr" class="xref">57</xref>]. The models were implemented in the BIOMOD modelling platform [
+ <xref rid="pone.0175978.ref058" ref-type="bibr" class="xref">58</xref>] in R. Because these algorithms require presence-absence records, we randomly generated pseudo-absences that equalled half the size of each data set [
+ <xref rid="pone.0175978.ref059" ref-type="bibr" class="xref">59</xref>]. We implemented data splitting, where 70% of the records were used for training the models and 30% for testing, and each model was run twice. A model was included in the consensus model if it had AUC &gt; 0.75 and true skill statistics (TSS) &gt; 0.4; these are considered minimum evaluation scores for a useful model (e.g. [
+ <xref rid="pone.0175978.ref060" ref-type="bibr" class="xref">60</xref>]). Because variable importance for this modelling approach is not standardized across model algorithms, and given that there is no option for applying a standardized threshold, the consensus models were not quantitatively compared with the Maxent models and were displayed as binary maps, where locations with values ranging from 0 to 0.5 were deemed unsuitable and locations with values &gt; 0.5 were considered suitable.
+</p>

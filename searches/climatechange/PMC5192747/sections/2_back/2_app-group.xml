@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app-group class="app-group">
+ <app id="ece32573-app-0001" content-type="Appendix" class="app">
+  <label class="label">Appendix A</label>
+  <title class="title">MARK Models</title>
+  <sec id="ece32573-sec-0010" class="sec">
+   <label class="label">A.1</label>
+   <sec id="ece32573-sec-0011" class="sec">
+    <label class="label">A.1.1</label>
+    <p class="p">Robust design population models use primary seasons (e.g., the autumn and spring seasons in our study) and secondary occasions (e.g., the survey occasions within seasons) to estimate abundance, apparent survival, detection, and temporary emigration (Kendall et al., 
+     <xref rid="ece32573-bib-0037" ref-type="ref" class="xref">1997</xref>; Pollock, 
+     <xref rid="ece32573-bib-0060" ref-type="ref" class="xref">1982</xref>). Within each season, populations are assumed to be closed. Probability of capture, 
+     <italic class="italic">p</italic>, and probability of recapture, 
+     <italic class="italic">c</italic>, are estimated and used to derive abundance. Between seasons, populations are open. During these intervals, the probability of moving outside the study area, γ″, the probability of staying outside the study area, γ′, and the apparent survival rate, Φ, are estimated. Bailey et al. (
+     <xref rid="ece32573-bib-0002" ref-type="ref" class="xref">2004</xref>) showed that robust design models are best for estimating Plethodontidae demographic parameters.
+    </p>
+    <p class="p">Before testing predictions, we needed to account for some of the structure in the robust design models. First, what type of temporary emigration (γ′ and γ″ parameters) is most likely (Table 
+     <xref rid="ece32573-tbl-0010" ref-type="table-wrap" class="xref">A1</xref>)? For detection probabilities, is there a behavioral response to being trapped (trap happy or trap averse; 
+     <italic class="italic">p, c</italic> parameters; Table 
+     <xref rid="ece32573-tbl-0011" ref-type="table-wrap" class="xref">A2</xref>)? Lastly, how do we best account for temporal variation? Are parameters constant across time, additive, or interactive (Tables 
+     <xref rid="ece32573-tbl-0012" ref-type="table-wrap" class="xref">A3</xref> and 
+     <xref rid="ece32573-tbl-0013" ref-type="table-wrap" class="xref">A4</xref>)? Below, we show the results from Akaike's information criteria (AIC
+     <sub class="sub">c</sub>) model selection that determined the final structure of our models. Using the best‐supported structure for the nuisance parameters, we then generated five models to test predictions regarding differences in surface use and survival between the color morphs. This was carried out by examining support for an interaction between color morph and our driver of interest. This resulted in five models, each testing a different climate–morph prediction (predictions 1–3, 5, and 6; Table 
+     <xref rid="ece32573-tbl-0002" ref-type="table-wrap" class="xref">2</xref>).
+    </p>
+   </sec>
+  </sec>
+ </app>
+ <app id="ece32573-app-0002" content-type="Appendix" class="app">
+  <label class="label">Appendix B</label>
+  <title class="title">Model Used to Run SCR0 Bayesian Analysis with Color Morph Predictor in JAGS</title>
+  <sec id="ece32573-sec-0012" class="sec">
+   <label class="label">B.1</label>
+   <sec id="ece32573-sec-0013" class="sec">
+    <label class="label">B.1.1</label>
+    <p class="p">The most basic spatial capture–recapture model is referred to as SCR
+     <sub class="sub">0</sub> by Royle et al. (
+     <xref rid="ece32573-bib-0066" ref-type="ref" class="xref">2014</xref>)
+     <sub class="sub">.</sub> SCR
+     <sub class="sub">0</sub> is a single season closed‐population model for estimating density, and it can be used to estimate four parameters: abundance, density, detection probability, and breadth of movement. To estimate abundance, a homogenous binomial point process is used, where abundance, 
+     <italic class="italic">N</italic>, is a function of both all possible individuals, 
+     <italic class="italic">M</italic>, within the study area and animal density, ψ, so 
+     <italic class="italic">N </italic>~ Binomial (
+     <italic class="italic">M</italic>, ψ). From the data, the model estimates the probability an unobserved individual belongs to the population (ψ), so SCR
+     <sub class="sub">0</sub> thins 
+     <italic class="italic">M</italic> possible individuals down to an estimate of abundance by 
+     <math id="nlm-math-5" class="math">
+      <mover accent="true" class="mover">
+       <mi class="mi">N</mi>
+       <mo stretchy="false" class="mo">^</mo>
+      </mover>
+     </math> = 
+     <italic class="italic">M</italic>ψ. Density is simply 
+     <math id="nlm-math-6" class="math">
+      <mover accent="true" class="mover">
+       <mi class="mi">N</mi>
+       <mo stretchy="false" class="mo">^</mo>
+      </mover>
+     </math> divided by the area of the study area.
+    </p>
+    <p class="p">The probability an individual will be captured at a given trap declines with distance from the animal's activity center, often specified using a half‐normal encounter probability,
+     <disp-formula id="ece32573-disp-0001" class="disp-formula">
+      <label class="label">(A1)</label>
+      <math id="nlm-math-7" class="math">
+       <mrow class="mrow">
+        <mi class="mi">p</mi>
+        <mrow class="mrow">
+         <mo stretchy="false" class="mo">(</mo>
+         <mi class="mi">x</mi>
+         <mo class="mo">,</mo>
+         <mi class="mi">s</mi>
+         <mo stretchy="false" class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">p</mi>
+         <mn class="mn">0</mn>
+        </msub>
+        <mo class="mo">exp</mo>
+        <mfenced close=")" open="(" separators="" class="mfenced">
+         <mrow class="mrow">
+          <mo class="mo">−</mo>
+          <mfrac class="mfrac">
+           <mn class="mn">1</mn>
+           <mrow class="mrow">
+            <mn class="mn">2</mn>
+            <msup class="msup">
+             <mi mathvariant="normal" class="mi">σ</mi>
+             <mn class="mn">2</mn>
+            </msup>
+           </mrow>
+          </mfrac>
+          <mrow class="mrow">
+           <mo stretchy="false" class="mo">|</mo>
+           <mrow class="mrow">
+            <mrow class="mrow">
+             <mo stretchy="false" class="mo">|</mo>
+            </mrow>
+            <mrow class="mrow">
+             <msub class="msub">
+              <mi class="mi">x</mi>
+              <mi class="mi">j</mi>
+             </msub>
+             <mo class="mo">−</mo>
+             <msub class="msub">
+              <mi class="mi">s</mi>
+              <mi class="mi">i</mi>
+             </msub>
+            </mrow>
+            <mrow class="mrow">
+             <mo stretchy="false" class="mo">|</mo>
+            </mrow>
+           </mrow>
+           <mo stretchy="false" class="mo">|</mo>
+          </mrow>
+         </mrow>
+        </mfenced>
+        <mo class="mo">,</mo>
+       </mrow>
+      </math>
+     </disp-formula>where the probability of encountering an individual at location 
+     <italic class="italic">x</italic> with activity center 
+     <italic class="italic">s</italic> is a function of 
+     <italic class="italic">p</italic>
+     <sub class="sub">0</sub> the baseline detection probability, σ the breadth of the detection kernel, and ||
+     <italic class="italic">x</italic>
+     <sub class="sub">
+      <italic class="italic">j</italic>
+     </sub> − 
+     <italic class="italic">s</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub>|| the Euclidean distance between the location of trap 
+     <italic class="italic">j</italic> and the activity center of individual 
+     <italic class="italic">i</italic>. The spatial encounter histories (the data), 
+     <italic class="italic">y</italic>
+     <sub class="sub">
+      <italic class="italic">ijk</italic>
+     </sub>, are then evaluated. The probability that individual 
+     <italic class="italic">i</italic> is caught (
+     <italic class="italic">y</italic>
+     <sub class="sub">
+      <italic class="italic">ijk</italic>
+     </sub> = 1) or not caught (
+     <italic class="italic">y</italic>
+     <sub class="sub">
+      <italic class="italic">ijk</italic>
+     </sub> = 0) in trap 
+     <italic class="italic">j</italic> on occasion 
+     <italic class="italic">k</italic> follows a Bernoulli trial where 
+     <italic class="italic">y</italic>
+     <sub class="sub">
+      <italic class="italic">ijk</italic>
+     </sub> ~ Bernoulli(
+     <italic class="italic">p</italic>
+     <sub class="sub">
+      <italic class="italic">ijk</italic>
+     </sub>), and 
+     <italic class="italic">p</italic>
+     <sub class="sub">
+      <italic class="italic">ijk</italic>
+     </sub> comes from equation 
+     <xref rid="ece32573-disp-0001" ref-type="disp-formula" class="xref">(A1)</xref>. In SCR
+     <sub class="sub">0</sub>, detection is constant across the study period, so it is possible to “flatten” the encounter history so that captures (
+     <italic class="italic">y</italic>
+     <sub class="sub">
+      <italic class="italic">ij</italic>
+     </sub> = 1, 2, 3, …, 
+     <italic class="italic">n</italic>) or noncaptures (
+     <italic class="italic">y</italic>
+     <sub class="sub">
+      <italic class="italic">ij</italic>
+     </sub> = 0) represent the number of times an individual was caught in trap 
+     <italic class="italic">j</italic>, so 
+     <italic class="italic">y</italic>
+     <sub class="sub">
+      <italic class="italic">ij</italic>
+     </sub>
+     <italic class="italic"> </italic>~ Binomial (
+     <italic class="italic">K, p</italic>
+     <sub class="sub">
+      <italic class="italic">ij,</italic>
+     </sub>) where 
+     <italic class="italic">K</italic> is the number of survey occasions, and 
+     <italic class="italic">p</italic>
+     <sub class="sub">
+      <italic class="italic">ij</italic>
+     </sub> is from equation 
+     <xref rid="ece32573-disp-0001" ref-type="disp-formula" class="xref">(A1)</xref>. Using logistic regression, we can reformulate equation 
+     <xref rid="ece32573-disp-0001" ref-type="disp-formula" class="xref">(A1)</xref> into a new form that is convenient to add covariates of interest:
+     <disp-formula id="ece32573-disp-0002" class="disp-formula">
+      <label class="label">(A2)</label>
+      <math id="nlm-math-8" class="math">
+       <mrow class="mrow">
+        <mo class="mo">log</mo>
+        <mtext class="mtext">it</mtext>
+        <mrow class="mrow">
+         <mo stretchy="false" class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">p</mi>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+           <mi class="mi">j</mi>
+          </mrow>
+         </msub>
+         <mo stretchy="false" class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi mathvariant="normal" class="mi">α</mi>
+         <mn class="mn">0</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi mathvariant="normal" class="mi">α</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <mrow class="mrow">
+         <mo stretchy="false" class="mo">|</mo>
+         <mo stretchy="false" class="mo">|</mo>
+        </mrow>
+        <msub class="msub">
+         <mi class="mi">x</mi>
+         <mi class="mi">j</mi>
+        </msub>
+        <mo class="mo">−</mo>
+        <msub class="msub">
+         <mi class="mi">s</mi>
+         <mi class="mi">i</mi>
+        </msub>
+        <mrow class="mrow">
+         <mo stretchy="false" class="mo">|</mo>
+         <mo stretchy="false" class="mo">|</mo>
+        </mrow>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi mathvariant="normal" class="mi">β</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">v</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <mo class="mo">⋯</mo>
+        <msub class="msub">
+         <mi mathvariant="normal" class="mi">β</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">v</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">,</mo>
+       </mrow>
+      </math>
+     </disp-formula>where α
+     <sub class="sub">0</sub> is our baseline detection rate and α
+     <sub class="sub">1</sub> represents the coefficient for how fast detection decreases with distance. If we wanted to model detection or space use as a function of biological or environmental data, it is possible to estimate the effects (β
+     <sub class="sub">1</sub>,
+     <italic class="italic"> …</italic>,
+     <italic class="italic"> </italic>β
+     <sub class="sub">
+      <italic class="italic">t</italic>
+     </sub>) of 
+     <italic class="italic">t</italic> covariates (
+     <italic class="italic">v</italic>
+     <sub class="sub">1</sub>,
+     <italic class="italic"> …</italic>,
+     <italic class="italic"> v</italic>
+     <sub class="sub">
+      <italic class="italic">t</italic>
+     </sub>) on detection.
+    </p>
+    <p class="p">As with other closed‐population abundance models, model SCR
+     <sub class="sub">0</sub> assumes demographic closure and some degree of geographic closure. However, SCR relaxes the assumptions of equal detectability among individuals. For instance, it is not necessary to ensure all individuals have a trap within their home range (“no holes”). Activity centers are assumed to be randomly distributed throughout the state space and are independent of each other. Given that this is rarely true in real animal populations, SCR models are fortunately robust to violations of the uniform distribution assumption. Third, detection is assumed to decline as distance increases from an animal's activity center. Lastly, encounters are assumed to be independent, meaning animals do not exclude one another and that individuals do not become adverse to traps.
+    </p>
+    <p class="p">We adapted equations 
+     <xref rid="ece32573-disp-0001" ref-type="disp-formula" class="xref">(A1)</xref> and 
+     <xref rid="ece32573-disp-0002" ref-type="disp-formula" class="xref">(A2)</xref> to a model in BUGS language to estimate parameters in a Bayesian framework. For the purposes of this study, we focused only on the estimation of σ, the spatial scaling parameter. We used vague priors for all parameters, and we took 36,000 total samples from the three Markov Chain Monte Carlo posterior distributions: 24,000 iterations with 1,000 burn‐in and thinning of 2. The three MCMC chains were visually assessed for convergence and accepted if the Gelman–Rubin statistic was &lt;1.05 (Gelman &amp; Rubin, 
+     <xref rid="ece32573-bib-0016" ref-type="ref" class="xref">1992</xref>). Data were structured in a three‐dimensional matrix with axes individual 
+     <italic class="italic">i,</italic> trap location 
+     <italic class="italic">j</italic>, and survey occasion 
+     <italic class="italic">K</italic>. For more information on spatial capture–recapture models, see Muñoz et al. (
+     <xref rid="ece32573-bib-0502" ref-type="ref" class="xref">in press</xref>).
+    </p>
+    <p class="p">
+     <preformat class="preformat"> #BUGS code to run SCR0 model in JAGS model { #Priors psi ~ dunif(0,1) #proportion of data augmented individuals psi.morph ~ dunif(0,1) #proportion of striped morphs for(t in 1:2){ #loop over regression terms for each morph alpha0[t] ~ dnorm(0,.1) logit(p0[t]) &lt;- alpha0[t] alpha1[t] &lt;- 1/(2*sigma[t]*sigma[t]) #distance coefficient for logit function sigma[t] ~ dunif(0, 15) } #Likelihood model for(i in 1:M){ z[i] ~ dbern(psi) #probability z individuals are unobserved members of pop Morph[i] ~ dbern(psi.morph) #Probability of being striped Morph.cat[i] &lt;- Morph[i] + 1 #Convert to categorical variable s[i,1] ~ dunif(xlim[1],xlim[2]) #distribution of activity centers s[i,2] ~ dunif(ylim[1],ylim[2]) for(j in 1:J){ d[i,j] &lt;- pow(pow(s[i,1]-X[j,1],2) + pow(s[i,2]-X[j,2],2),0.5) #distance term Y[i,j] ~ dbin(p[i,j],K) #probability of encounter history of indy i at trap J at trap K p[i,j] &lt;- z[i]*p0[Morph.cat[i]]*exp(- alpha1[Morph.cat[i]]*d[i,j]*d[i,j]) #logistic regression probability } } #Derived Parameters N &lt;- sum(z[]) #abundance fxn of all probable individuals in state space N.stripe &lt;- N*psi.morph N.unstripe &lt;- N-N.stripe D &lt;- N/900 # 30*30 area #Calculate density for the 30x30m state space } </preformat>
+    </p>
+   </sec>
+  </sec>
+ </app>
+ <app id="ece32573-app-0003" content-type="Appendix" class="app">
+  <label class="label">Appendix C</label>
+  <title class="title">Growth Analyses and Models Used to Run von Bertalanffy Growth Bayesian Analysis in Program JAGS</title>
+  <sec id="ece32573-sec-0014" class="sec">
+   <label class="label">C.1</label>
+   <sec id="ece32573-sec-0015" class="sec">
+    <label class="label">C.1.1</label>
+    <p class="p">To estimate growth rates for each color morph, we modified the Faben's capture–recapture (
+     <xref rid="ece32573-bib-0501" ref-type="ref" class="xref">1965</xref>) formulation of the von Bertalanffy growth model to estimate separate growth coefficients and asymptotic size for each color morph.
+     <disp-formula id="ece32573-disp-0003" class="disp-formula">
+      <label class="label">(A3)</label>
+      <math id="nlm-math-9" class="math">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mover accent="true" class="mover">
+          <mi class="mi">L</mi>
+          <mo stretchy="false" class="mo">^</mo>
+         </mover>
+         <msub class="msub">
+          <mi mathvariant="normal" class="mi">r</mi>
+          <mi class="mi">i</mi>
+         </msub>
+        </msub>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">L</mi>
+         <msub class="msub">
+          <mi mathvariant="normal" class="mi">m</mi>
+          <mi class="mi">i</mi>
+         </msub>
+        </msub>
+        <mo class="mo">+</mo>
+        <mrow class="mrow">
+         <mo stretchy="false" class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">L</mi>
+          <msub class="msub">
+           <mi mathvariant="normal" class="mi">inf</mi>
+           <mi class="mi">i</mi>
+          </msub>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi class="mi">L</mi>
+          <msub class="msub">
+           <mi mathvariant="normal" class="mi">m</mi>
+           <mi class="mi">i</mi>
+          </msub>
+         </msub>
+         <mo stretchy="false" class="mo">)</mo>
+        </mrow>
+        <mo class="mo">×</mo>
+        <mfenced close=")" open="(" separators="" class="mfenced">
+         <mrow class="mrow">
+          <mn class="mn">1</mn>
+          <mo class="mo">−</mo>
+          <mo class="mo">exp</mo>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mrow class="mrow">
+            <mo class="mo">−</mo>
+            <msub class="msub">
+             <mi class="mi">K</mi>
+             <mi class="mi">i</mi>
+            </msub>
+            <mo class="mo">×</mo>
+            <mfenced close=")" open="(" separators="" class="mfenced">
+             <mfrac class="mfrac">
+              <msub class="msub">
+               <mi mathvariant="normal" class="mi">Δ</mi>
+               <mi class="mi">i</mi>
+              </msub>
+              <mn class="mn">365</mn>
+             </mfrac>
+            </mfenced>
+           </mrow>
+          </mfenced>
+         </mrow>
+        </mfenced>
+        <mo class="mo">,</mo>
+       </mrow>
+      </math>
+     </disp-formula>where 
+     <italic class="italic">i</italic> is the interval between marking and recapture, 
+     <math id="nlm-math-10" class="math">
+      <msub class="msub">
+       <mover accent="true" class="mover">
+        <mi class="mi">L</mi>
+        <mo stretchy="false" class="mo">^</mo>
+       </mover>
+       <msub class="msub">
+        <mi mathvariant="normal" class="mi">r</mi>
+        <mi class="mi">i</mi>
+       </msub>
+      </msub>
+     </math> is the estimated size at recapture, 
+     <math id="nlm-math-11" class="math">
+      <msub class="msub">
+       <mi class="mi">L</mi>
+       <msub class="msub">
+        <mi mathvariant="normal" class="mi">m</mi>
+        <mi class="mi">i</mi>
+       </msub>
+      </msub>
+     </math> is the size when an individual was marked, 
+     <italic class="italic">L</italic>
+     <sub class="sub">inf</sub> is the maximum size an individual can reach, 
+     <italic class="italic">K</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub> is the growth coefficient, and Δ
+     <italic class="italic">i</italic> is the duration of the interval in days (scaled to year by dividing by 365). Only individuals captured more than once were used in this analysis, and SVL measurements were used for size.
+    </p>
+    <p class="p">To test the predictions regarding growth, we first modeled the growth coefficient as a function of four seasons to address prediction seven.
+     <disp-formula id="ece32573-disp-0004" class="disp-formula">
+      <label class="label">(A4)</label>
+      <math id="nlm-math-12" class="math">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mover accent="true" class="mover">
+          <mi class="mi">L</mi>
+          <mo stretchy="false" class="mo">^</mo>
+         </mover>
+         <msub class="msub">
+          <mi mathvariant="normal" class="mi">r</mi>
+          <mi class="mi">i</mi>
+         </msub>
+        </msub>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">L</mi>
+         <msub class="msub">
+          <mi mathvariant="normal" class="mi">m</mi>
+          <mi class="mi">i</mi>
+         </msub>
+        </msub>
+        <mo class="mo">+</mo>
+        <mrow class="mrow">
+         <mo stretchy="false" class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">L</mi>
+          <msub class="msub">
+           <mi mathvariant="normal" class="mi">inf</mi>
+           <mi class="mi">i</mi>
+          </msub>
+         </msub>
+         <mo class="mo">−</mo>
+         <msub class="msub">
+          <mi class="mi">L</mi>
+          <msub class="msub">
+           <mi mathvariant="normal" class="mi">m</mi>
+           <mi class="mi">i</mi>
+          </msub>
+         </msub>
+         <mo stretchy="false" class="mo">)</mo>
+        </mrow>
+        <mo class="mo">×</mo>
+        <mfenced close=")" open="(" separators="" class="mfenced">
+         <mn class="mn">1</mn>
+         <mo class="mo">−</mo>
+         <mo class="mo">exp</mo>
+         <mfenced close=")" open="(" separators="" class="mfenced">
+          <mo class="mo">−</mo>
+          <mi class="mi">K</mi>
+          <msub class="msub">
+           <mi class="mi">f</mi>
+           <mi class="mi">i</mi>
+          </msub>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <mi mathvariant="normal" class="mi">Δ</mi>
+             <msub class="msub">
+              <mi class="mi">f</mi>
+              <mi class="mi">i</mi>
+             </msub>
+            </mrow>
+            <mn class="mn">365</mn>
+           </mfrac>
+          </mfenced>
+          <mo class="mo">−</mo>
+          <mi class="mi">K</mi>
+          <msub class="msub">
+           <mi class="mi">w</mi>
+           <mi class="mi">i</mi>
+          </msub>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <mi mathvariant="normal" class="mi">Δ</mi>
+             <msub class="msub">
+              <mi class="mi">w</mi>
+              <mi class="mi">i</mi>
+             </msub>
+            </mrow>
+            <mn class="mn">365</mn>
+           </mfrac>
+          </mfenced>
+          <mo class="mo">−</mo>
+          <mi class="mi">K</mi>
+          <mi class="mi">s</mi>
+          <msub class="msub">
+           <mi class="mi">p</mi>
+           <mi class="mi">i</mi>
+          </msub>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <mi mathvariant="normal" class="mi">Δ</mi>
+             <mi class="mi">s</mi>
+             <msub class="msub">
+              <mi class="mi">p</mi>
+              <mi class="mi">i</mi>
+             </msub>
+            </mrow>
+            <mn class="mn">365</mn>
+           </mfrac>
+          </mfenced>
+          <mo class="mo">−</mo>
+          <mi class="mi">K</mi>
+          <mi class="mi">s</mi>
+          <msub class="msub">
+           <mi class="mi">m</mi>
+           <mi class="mi">i</mi>
+          </msub>
+          <mfenced close=")" open="(" separators="" class="mfenced">
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <mi mathvariant="normal" class="mi">Δ</mi>
+             <mi class="mi">s</mi>
+             <msub class="msub">
+              <mi class="mi">m</mi>
+              <mi class="mi">i</mi>
+             </msub>
+            </mrow>
+            <mn class="mn">365</mn>
+           </mfrac>
+          </mfenced>
+         </mfenced>
+        </mfenced>
+        <mo class="mo">,</mo>
+       </mrow>
+      </math>
+     </disp-formula>where each of the growth coefficients represents the autumn, winter, spring, and summer, respectively. For each growth coefficient, the number of autumn season days, Δ
+     <italic class="italic">f</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub>, winter days, Δ
+     <italic class="italic">w</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub>, spring days, Δ
+     <italic class="italic">sp</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub>, and summer days, Δ
+     <italic class="italic">sm</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub>, were used for each capture interval. Seasons were defined the same across all 4 years, where the spring (March 2–May 16) and autumn (September 6–December 4) always contained all field surveys, and summer and winter were the periods between these surveys.
+    </p>
+    <p class="p">To test prediction eight, we modeled the growth as a function of mean season temperature. To evaluate the impacts of extreme heat and extreme cold, we modeled the surface‐active seasons (autumn and spring) as a function of previous summer and previous winter temperatures. Because the growth coefficient must always be positive to avoid estimation errors, the log of the growth coefficients was modeled as,
+     <disp-formula id="ece32573-disp-0005" class="disp-formula">
+      <label class="label">(A5)</label>
+      <math id="nlm-math-13" class="math">
+       <mrow class="mrow">
+        <mo class="mo">log</mo>
+        <mrow class="mrow">
+         <mo stretchy="false" class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">K</mi>
+          <mi class="mi">i</mi>
+         </msub>
+         <mo stretchy="false" class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi mathvariant="normal" class="mi">β</mi>
+         <mn class="mn">0</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi mathvariant="normal" class="mi">β</mi>
+         <mi mathvariant="normal" class="mi">temp</mi>
+        </msub>
+        <mo class="mo">×</mo>
+        <msub class="msub">
+         <mi class="mi">T</mi>
+         <mi class="mi">i</mi>
+        </msub>
+        <mo class="mo">,</mo>
+       </mrow>
+      </math>
+     </disp-formula>where β
+     <sub class="sub">0</sub> is the mean growth rate in each season, β
+     <sub class="sub">temp</sub> is the coefficient for how growth changes with temperature, and 
+     <italic class="italic">T</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub> is the mean of the season's low temperature in interval 
+     <italic class="italic">i</italic>. Temperature effects were ran separately for each of the four seasons. The temperature coefficients will determine whether morphs exhibit differential demography in regard to heat or cool stress.
+    </p>
+    <p class="p">This model assumes that the growth models start from age zero and that growth rates are conditional on the maximum asymptotic size an animal can reach. We used vague priors for all parameters and kept 3,000 iterations from each of three chains after an initial burn‐in of 1,000 iterations. We visually assessed chains for convergence and that the Gelman–Rubin statistic was &lt;1.05 (Gelman &amp; Rubin, 
+     <xref rid="ece32573-bib-0016" ref-type="ref" class="xref">1992</xref>). 
+     <preformat class="preformat"> #BUGS model for testing prediction 7, the effect of seasonal growth. model{ model{ for(i in 1:n){ #Fabens mark–recapture formulation Lr[i]~dnorm(Lr.hat[i], tau.Lr) Lr.hat[i] &lt;- Lm[i] + (L.inf[m[i]]-Lm[i])*(1-exp(-Ksp[m[i]]*(dSp[i]/365) + -Ksm[m[i]]*(dSm[i]/365) + -Kf[m[i]]*(dF[i]/365) + -Kw[m[i]]*(dW[i]/365))) } for(j in 1:J){ L.inf[j]~dnorm(0,.001) Ksp[j]~dunif(0,5) Kf[j]~dunif(0,5) Ksm[j]~dunif(0,5) Kw[j]~dunif(0,5) } #Priors tau.Lr &lt;- pow(sigma.Lr,-2) sigma.Lr ~ dunif(0,5) } </preformat>
+     <preformat class="preformat"> #BUGS model for testing prediction 8, the effect of temperature on seasonal growth model{ model{ #Priors for(j in 1:J){ L.inf[j] ~ dnorm(0,.001) B0sp[j] ~ dnorm(0, 0.01) Btsp[j] ~ dnorm(0, 0.01) B0sm[j] ~ dnorm(0, 0.01) Btsm[j] ~ dnorm(0, 0.01) B0f[j] ~ dnorm(0, 0.01) Btf[j] ~ dnorm(0, 0.01) B0w[j] ~ dnorm(0, 0.01) Btw[j] ~ dnorm(0, 0.01) } tau.Lr &lt;- pow(sigma.Lr,-2) sigma.Lr ~ dunif(0,5) #Model Fabens mark–recapture formulation for(i in 1:n){ Lr[i] ~ dnorm(Lr.hat[i], tau.Lr) Lr.hat[i] &lt;- Lm[i] + (L.inf[m[i]]-Lm[i])*(1-exp(-Ksp[i]*(dSp[i]/365) + -Ksm[i]*(dSm[i]/365) + -Kf[i]*(dF[i]/365) + -Kw[i]*(dW[i]/365))) log(Ksp[i]) &lt;- B0sp[m[i]] + Btsp[m[i]]*tempSp[i] log(Ksm[i]) &lt;- B0sm[m[i]] + Btsm[m[i]]*tempSm[i] log(Kf[i]) &lt;- B0f[m[i]] + Btf[m[i]]*tempF[i] log(Kw[i]) &lt;- B0w[m[i]] + Btw[m[i]]*tempW[i] } } </preformat>
+    </p>
+   </sec>
+  </sec>
+ </app>
+ <app id="ece32573-app-0004" content-type="Appendix" class="app">
+  <label class="label">Appendix D</label>
+  <title class="title">Final Eight Models to Test Climate–Morph Predictions</title>
+  <sec id="ece32573-sec-0016" class="sec">
+   <label class="label">D.1</label>
+   <sec id="ece32573-sec-0017" class="sec">
+    <label class="label">D.1.1</label>
+    <p class="p">Predictions 1–3 and 5–6 were analyzed in program MARK (White &amp; Burnham, 
+     <xref rid="ece32573-bib-0085" ref-type="ref" class="xref">1999</xref>). The remaining predictions were analyzed in a Bayesian framework using program R (R Core Team 
+     <xref rid="ece32573-bib-0061" ref-type="ref" class="xref">2014</xref>), R package “runjags” (Denwood, 
+     <xref rid="ece32573-bib-0011" ref-type="ref" class="xref">2016</xref>), and program JAGS (Plummer, 
+     <xref rid="ece32573-bib-0059" ref-type="ref" class="xref">2003</xref>).
+    </p>
+   </sec>
+  </sec>
+ </app>
+</app-group>

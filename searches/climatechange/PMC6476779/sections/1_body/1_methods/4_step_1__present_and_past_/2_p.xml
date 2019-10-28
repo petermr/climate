@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">There are few published occurrence records of forest populations of 
+ <italic class="italic">R. flavipes</italic> with confirmed species‐level identifications and adequate geospatial precision for SDM. Accordingly, in addition to the 46 sites that contributed to genetic analyses (above), the presence of 
+ <italic class="italic">R. flavipes</italic> at an additional 45 locations (surveyed from 2015 to 2016) was confirmed using Garrick et al.'s (
+ <xref rid="ece35065-bib-0033" ref-type="ref" class="xref">2015</xref>) molecular assay, resulting in a total of 91 occurrence points (Supporting Information Table 
+ <xref rid="ece35065-sup-0001" ref-type="supplementary-material" class="xref">S1.1</xref>). To construct SDMs, we used the “biomod2” package (Thuiller, Georges, Engler, &amp; Breiner, 
+ <xref rid="ece35065-bib-0100" ref-type="ref" class="xref">2016</xref>) in R (R Core Team, 
+ <xref rid="ece35065-bib-0082" ref-type="ref" class="xref">2018</xref>). Full details about SDM construction are given in Supporting Information Appendix 
+ <xref rid="ece35065-sup-0001" ref-type="supplementary-material" class="xref">S3</xref>. Briefly, we used four machine learning algorithms to model distributions based on climatological data, presence records, and 20 independent sets of 100 pseudo‐absence points (Figure 
+ <xref rid="ece35065-fig-0002" ref-type="fig" class="xref">2</xref>). The latter choice was based on work by Barbet‐Massin, Jiguet, Albert, and Thuiller (
+ <xref rid="ece35065-bib-0004" ref-type="ref" class="xref">2012</xref>), who showed that for machine learning methods it is better to use multiple replicates of pseudo‐absence points, with the number of pseudo‐absences in each replicate close to the number of occurrence points. We used environmental variables at a 1‐km resolution for SDM construction. Present‐day SDMs were based on mean climatological data spanning 1960–1990, and historical distributions were modeled for the Mid‐Holocene (MH; ~6 kya), the Last Glacial Maximum (LGM, ~22 kya), and the Last Interglacial (LIG, ~120–140 kya). For each period, 19 bioclimatic variables (Hijmans, Cameron, Parra, Jones, &amp; Jarvis, 
+ <xref rid="ece35065-bib-0047" ref-type="ref" class="xref">2005</xref>) were obtained from the WorldClim database v.1.4 (
+ <ext-link ext-link-type="uri" xlink:href="http://www.worldclim.org" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://www.worldclim.org</ext-link>; Supporting Information Table 
+ <xref rid="ece35065-sup-0001" ref-type="supplementary-material" class="xref">S3.4</xref>), and then factor analysis was used in order to retain maximum variation contained in the 19 bioclimatic variables while simultaneously: (a) reducing the number of predictors, to avoid overfitting, and (b) dealing with nonindependence of predictors (i.e., collinearity), which represents a serious challenge to most correlative modeling methods (Dormann et al., 
+ <xref rid="ece35065-bib-0023" ref-type="ref" class="xref">2013</xref>).
+</p>

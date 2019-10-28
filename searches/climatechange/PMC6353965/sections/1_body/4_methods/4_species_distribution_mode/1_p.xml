@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par30" class="p">We adopted ensemble SDMs with the weighted average consensus approach that accounts for model-based uncertainty
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR108" class="xref">108</xref>,
+  <xref ref-type="bibr" rid="CR109" class="xref">109</xref>
+ </sup> to delineate the contemporary and future distribution ranges. The ensembles consisted of four different SDM algorithms: MaxEnt
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR110" class="xref">110</xref>
+ </sup>, Random Forest (RF)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR111" class="xref">111</xref>
+ </sup>, Generalized Boosted Model (GBM)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR112" class="xref">112</xref>
+ </sup>, and Generalized Linear Model (GLM)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR113" class="xref">113</xref>
+ </sup>, available within the “biomod2” R package
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR114" class="xref">114</xref>
+ </sup>. However, for each species, the selection of SDM algorithms was based on the number of species occurrences and species specialisation following the framework developed by Soultan and Safi
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR27" class="xref">27</xref>,
+  <xref ref-type="bibr" rid="CR63" class="xref">63</xref>
+ </sup>. To minimise the model complexity and avoid model over-fitting
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR82" class="xref">82</xref>,
+  <xref ref-type="bibr" rid="CR83" class="xref">83</xref>
+ </sup>, we calibrated an initial model for each species using the filtered species occurrences and the uncorrelated current environmental predictors. Subsequently, for each species, we calculated the variable importance of each predictor to model gain, retaining those with a relative contribution greater than 5% for the final model calibration (Supplementary Table 
+ <xref rid="MOESM1" ref-type="media" class="xref">S7</xref>)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR115" class="xref">115</xref>–
+  <xref ref-type="bibr" rid="CR117" class="xref">117</xref>
+ </sup>. To avoid geographical over-prediction, we used a species-specific study area
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR118" class="xref">118</xref>
+ </sup>. Specifically, we restricted the model calibration to the buffered minimum convex polygon (MCP) of the species occurrences, where the buffer distance was equal to the mean distance between the occurrence points of the focal species
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR83" class="xref">83</xref>,
+  <xref ref-type="bibr" rid="CR84" class="xref">84</xref>,
+  <xref ref-type="bibr" rid="CR119" class="xref">119</xref>
+ </sup>. This was done to avoid model over-fitting when the environmental conditions in species occurrences were different from those in background locations
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR120" class="xref">120</xref>–
+  <xref ref-type="bibr" rid="CR122" class="xref">122</xref>
+ </sup>. We thus randomly sampled 10’000 background points, constrained to within the buffered area, to characterise the environmental background
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR122" class="xref">122</xref>
+ </sup>.
+</p>

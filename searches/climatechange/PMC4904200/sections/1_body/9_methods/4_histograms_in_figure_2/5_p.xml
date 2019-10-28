@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The simulation is performed as follows. First 
+ <italic class="italic">r</italic>
+ <sub class="sub">0</sub> takes a value. The system is allowed to run for 10,000 iterations. The last 1000 values are taken and FFT is performed over them, which produces the time period for these values. The maximum of the FFT is considered to be the dominant frequency and the corresponding time period is stored as an array element. If the FFT happens to be flat, the value is discarded. Sometimes the last 1000 values in the time series may not have any recurring point and hence the time period returned would be 999; this is also discarded. 
+ <italic class="italic">r</italic>
+ <sub class="sub">0</sub> is incremented and again a similar procedure follows. Finally an array containing, say, 
+ <italic class="italic">N</italic> entries of the time periods is produced. A time period of 
+ <italic class="italic">N</italic> ± 0.5 is assigned to Nth bin (years). The histograms are constructed by plotting the relative frequency 
+ <italic class="italic">R</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> (defined as 
+ <inline-formula id="d33e1055" class="inline-formula">
+  <inline-graphic id="d33e1056" xlink:href="srep27845-m33.jpg" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+ </inline-formula> where 
+ <italic class="italic">n</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> be the total number of occurances of N years), as a function of the years.
+</p>

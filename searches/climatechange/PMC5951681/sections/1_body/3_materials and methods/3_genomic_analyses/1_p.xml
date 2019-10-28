@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To examine the genomic structure of 
+ <italic class="italic">E. melliodora</italic> and how it is influenced by geography, we conducted individual-based analyses. For these analyses, we converted the final genotypic data (a vcf file) to a sample-by-SNP matrix and imported it into a 
+ <italic class="italic">genind</italic> object (R adegenet v2.0.1, [
+ <xref rid="bib32" ref-type="bibr" class="xref">Jombart, 2008</xref>]). We calculated the pairwise genomic distances between individuals using a euclidean distance in 
+ <italic class="italic">dist</italic> (R stats v3.1.2, [
+ <xref rid="bib50" ref-type="bibr" class="xref">R Core Team, 2015</xref>]). To visualize the genomic distance among samples, we ran a PCoA using 
+ <italic class="italic">dudi.pco</italic> (R ade4 v1.7–4, [
+ <xref rid="bib21" ref-type="bibr" class="xref">Dray and Dufour, 2007</xref>]). We plotted the first two PCoA axes, with samples colored in a rainbow gradient based on sample latitude. We calculated the linear regression and correlation between latitude and the first PCoA axis using 
+ <italic class="italic">lm</italic> (R stats 3.1.2, [
+ <xref rid="bib50" ref-type="bibr" class="xref">R Core Team, 2015</xref>]). We calculated the geographic distance between samples based on their GPS coordinates using 
+ <italic class="italic">earth.dist</italic> (R fossil v0.3.7, [
+ <xref rid="bib59" ref-type="bibr" class="xref">Vavrek, 2011</xref>]). We used a 
+ <italic class="italic">mantel</italic> test (R vegan v2.4–0, [
+ <xref rid="bib45" ref-type="bibr" class="xref">Oksanen et al., 2016</xref>]), which examines the correlation between two distance matrices, to quantify the linear relationship between the genomic distance between individuals and the natural logarithm of the geographic distance.
+</p>

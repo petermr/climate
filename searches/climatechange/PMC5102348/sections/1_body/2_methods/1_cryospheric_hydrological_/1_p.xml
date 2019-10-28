@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We use the high resolution, raster-based, fully distributed Spatial Processes in Hydrology (SPHY) cryospheric-hydrological model (open source, version 2.0) [
+ <xref rid="pone.0165630.ref051" ref-type="bibr" class="xref">51</xref>], which was applied in a river basin-scale study on climate change impacts for water availability in five major Asian river basins before [
+ <xref rid="pone.0165630.ref003" ref-type="bibr" class="xref">3</xref>]. The model runs at 1 km
+ <sup class="sup">2</sup> spatial resolution with a daily time step. The actual runoff which is calculated for each grid cell consists of four possible contributing factors: rainfall-runoff, snow melt, glacier melt, and baseflow. For each grid cell the total runoff generated per time step (Q
+ <sub class="sub">TOT</sub>) is calculated: 
+ <disp-formula id="pone.0165630.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0165630.e001.jpg" id="pone.0165630.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">Q</mi>
+      <mrow class="mrow">
+       <mi class="mi">T</mi>
+       <mi class="mi">O</mi>
+       <mi class="mi">T</mi>
+      </mrow>
+     </msub>
+     <mo class="mo">=</mo>
+     <msub class="msub">
+      <mi class="mi">Q</mi>
+      <mrow class="mrow">
+       <mi class="mi">G</mi>
+       <mi class="mi">M</mi>
+      </mrow>
+     </msub>
+     <mo class="mo">+</mo>
+     <msub class="msub">
+      <mi class="mi">Q</mi>
+      <mrow class="mrow">
+       <mi class="mi">S</mi>
+       <mi class="mi">M</mi>
+      </mrow>
+     </msub>
+     <mo class="mo">+</mo>
+     <msub class="msub">
+      <mi class="mi">Q</mi>
+      <mrow class="mrow">
+       <mi class="mi">R</mi>
+       <mi class="mi">R</mi>
+      </mrow>
+     </msub>
+     <mo class="mo">+</mo>
+     <msub class="msub">
+      <mi class="mi">Q</mi>
+      <mrow class="mrow">
+       <mi class="mi">B</mi>
+       <mi class="mi">F</mi>
+      </mrow>
+     </msub>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula> where Q
+ <sub class="sub">GM</sub> is runoff from glacier melt, Q
+ <sub class="sub">SM</sub> is runoff from snow melt, Q
+ <sub class="sub">RR</sub> is rainfall-runoff and Q
+ <sub class="sub">BF</sub> is baseflow. To determine the contribution of each of the four components to the total runoff within a grid cell, a subgrid parameterization is used in which for each cell the fractional ice cover (G
+ <sub class="sub">F</sub>), ranging from 0 (no ice cover) to 1 (complete ice cover), is determined. Glacier melt is simulated using a degree-day modelling approach [
+ <xref rid="pone.0165630.ref059" ref-type="bibr" class="xref">59</xref>]. A differentiation in debris-covered and debris-free glaciers is made based on thresholds for elevation and terrain slope [
+ <xref rid="pone.0165630.ref060" ref-type="bibr" class="xref">60</xref>], and different degree day factors are used for both glacier types (
+ <xref rid="pone.0165630.t001" ref-type="table" class="xref">Table 1</xref>). For the remaining fraction of the grid cell, the model maintains a dynamic snow and soil water storage. The glacier fraction per grid cell is adapted dynamically in time. A variable groundwater storage is maintained for the entire grid cell. A part of the glacier melt generated in the glacierized cell fraction is treated as surface runoff and the remaining part is treated as groundwater recharge. Runoff from snow melt consists of the snow melt released from the snow storage, which is simulated using a degree-day modelling approach. Besides accumulation and melt, refreezing of snow melt and rain water within the snow storage is included in the model. Gravitational snow transport between grid cells is simulated with the SnowSlide routine [
+ <xref rid="pone.0165630.ref061" ref-type="bibr" class="xref">61</xref>]. Snow sublimation is estimated using an elevation-dependent potential sublimation function. We assume that the majority of sublimation comes from snowblown sublimation with highest wind speeds prevailing at higher elevations, and therefore potential sublimation is assumed to increase linearly with elevation above 3000 m a.s.l. by a calibrated factor. The actual sublimation is the potential sublimation limited by the snow storage present in the grid cell. Rainfall-runoff consists of the surface runoff from rainfall and lateral flow released from the soil water storage. Soil water processes are simulated for a topsoil and subsoil layer and processes simulated include evapotranspiration, infiltration, percolation, capillary rise, surface runoff and lateral flow. Baseflow is released from the groundwater storage. Each of these four runoff types is routed downstream using a digital elevation model (DEM) and a routing recession function. A detailed description of the model has been published before [
+ <xref rid="pone.0165630.ref051" ref-type="bibr" class="xref">51</xref>].
+</p>
