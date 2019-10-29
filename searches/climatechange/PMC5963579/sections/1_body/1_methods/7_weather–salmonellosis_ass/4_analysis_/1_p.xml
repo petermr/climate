@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We fitted a Poisson regression model for daily salmonellosis cases with distributed lags of 21 d for daily mean temperature and rainfall using natural splines with 3 degrees of freedom and a 
+ <inline-formula class="inline-formula">
+  <math id="M30" class="math">
+   <mrow class="mrow">
+    <mtext class="mtext">lag</mtext>
+    <mo class="mo">−</mo>
+    <mn class="mn">1</mn>
+   </mrow>
+  </math>
+ </inline-formula> autoregressive term as predictors. We used a lag of 21 d because this was a plausible time frame in which 
+ <italic class="italic">Salmonella</italic> could be transmitted to humans through food chains involving animal products or produce. We controlled for upward trends in cases over time caused by increasing population and other factors unrelated to weather by including quadratic and linear terms for time. We also identified that notifications were influenced by day of the week and public holidays; therefore, we modeled these using categorical variables and added a binary variable for days after 1 August 2013 to account for the new pathology test. The model was as follows: 
+ <disp-formula id="e1" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="EHP1370_e1.jpg" position="float" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M31" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">s</mi>
+      <mi class="mi">t</mi>
+     </msub>
+     <mtext class="mtext"> </mtext>
+     <mo class="mo">∼</mo>
+     <mo class="mo"> </mo>
+     <mtext class="mtext">Poisson</mtext>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <msub class="msub">
+       <mi mathvariant="normal" class="mi">μ</mi>
+       <mi class="mi">t</mi>
+      </msub>
+      <mo class="mo">)</mo>
+     </mrow>
+     <msub class="msub">
+      <mi mathvariant="normal" class="mi">log</mi>
+      <mi mathvariant="normal" class="mi">e</mi>
+     </msub>
+     <mtext class="mtext"> </mtext>
+     <mrow class="mrow">
+      <mrow class="mrow">
+       <mo class="mo">(</mo>
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi mathvariant="normal" class="mi">μ</mi>
+         <mi class="mi">t</mi>
+        </msub>
+       </mrow>
+       <mo class="mo">)</mo>
+      </mrow>
+     </mrow>
+     <mo class="mo">=</mo>
+     <mi mathvariant="normal" class="mi">ρ</mi>
+     <msub class="msub">
+      <mi class="mi">s</mi>
+      <mrow class="mrow">
+       <mi class="mi">t</mi>
+       <mo class="mo">–</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+     </msub>
+     <mo class="mo">+</mo>
+     <mo class="mo"> </mo>
+     <mi mathvariant="normal" class="mi">α</mi>
+     <msub class="msub">
+      <mtext class="mtext">X</mtext>
+      <mi class="mi">t</mi>
+     </msub>
+     <mo class="mo">+</mo>
+     <mi mathvariant="normal" class="mi">β</mi>
+     <msub class="msub">
+      <mrow class="mrow">
+       <mtext class="mtext">temperature</mtext>
+      </mrow>
+      <mi class="mi">t</mi>
+     </msub>
+     <mo class="mo">+</mo>
+     <mi mathvariant="normal" class="mi">γ</mi>
+     <msub class="msub">
+      <mrow class="mrow">
+       <mtext class="mtext">rainfall</mtext>
+      </mrow>
+      <mi class="mi">t</mi>
+     </msub>
+     <mtext class="mtext">,</mtext>
+    </mrow>
+   </math>
+  </alternatives>
+ </disp-formula>where 
+ <inline-formula class="inline-formula">
+  <math id="M32" class="math">
+   <mrow class="mrow">
+    <msub class="msub">
+     <mi class="mi">s</mi>
+     <mi class="mi">t</mi>
+    </msub>
+   </mrow>
+  </math>
+ </inline-formula> is the number of cases on day t, and 
+ <bold class="bold">X</bold> is a design matrix that fits the intercept, day of the week, public holiday, trend, and change in pathology test.
+</p>

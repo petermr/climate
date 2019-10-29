@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The cAUC values of the sub-models were used to determine the appropriate weights (range between lowest 0 to highest 1) for the ensemble model [
+ <xref rid="pone.0163916.ref038" ref-type="bibr" class="xref">38</xref>]. A second calibration was applied where modelling algorithms with weights &gt;0.05 were retained. The second calibration use 10 internal test runs and 4-fold cross-validations resulting in final weights for the selected algorithms, which were used to produce the final ensemble output. The tuning process in the software explored how differences in weights of the sub-models resulted in changes in the cAUC of the ensemble model, and selected the weights that result in the greatest accuracy of the ensemble model [
+ <xref rid="pone.0163916.ref045" ref-type="bibr" class="xref">45</xref>]. For each focal crop, calibration was repeated multiple times, resulting in conclusive average weights for modelling algorithms. The ensemble model (
+ <italic class="italic">P</italic>
+ <sub class="sub">
+  <italic class="italic">ensemble</italic>
+ </sub>) was calculated using the following formula described in Ranjitkar et al [
+ <xref rid="pone.0163916.ref050" ref-type="bibr" class="xref">50</xref>]: 
+ <disp-formula id="pone.0163916.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0163916.e001.jpg" id="pone.0163916.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">P</mi>
+      <mrow class="mrow">
+       <mi class="mi">e</mi>
+       <mi class="mi">n</mi>
+       <mi class="mi">s</mi>
+       <mi class="mi">e</mi>
+       <mi class="mi">m</mi>
+       <mi class="mi">b</mi>
+       <mi class="mi">l</mi>
+       <mi class="mi">e</mi>
+      </mrow>
+     </msub>
+     <mo class="mo">=</mo>
+     <mtext class="mtext"> </mtext>
+     <mfrac class="mfrac">
+      <mrow class="mrow">
+       <mo class="mo">∑</mo>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi class="mi">w</mi>
+          <mrow class="mrow">
+           <mi class="mi">m</mi>
+           <mi class="mi">o</mi>
+           <mi class="mi">d</mi>
+          </mrow>
+         </msub>
+         <msub class="msub">
+          <mi class="mi">P</mi>
+          <mrow class="mrow">
+           <mi class="mi">m</mi>
+           <mi class="mi">o</mi>
+           <mi class="mi">d</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+      </mrow>
+      <mrow class="mrow">
+       <mo class="mo">∑</mo>
+       <msub class="msub">
+        <mi class="mi">w</mi>
+        <mrow class="mrow">
+         <mi class="mi">m</mi>
+         <mi class="mi">o</mi>
+         <mi class="mi">d</mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </mfrac>
+    </mrow>
+   </math>
+  </alternatives>
+ </disp-formula> where, 
+ <italic class="italic">w</italic>
+ <sub class="sub">
+  <italic class="italic">mod</italic>
+ </sub> = weighted averages of sub-models (
+ <italic class="italic">P</italic>
+ <sub class="sub">
+  <italic class="italic">mod</italic>
+ </sub>)
+</p>

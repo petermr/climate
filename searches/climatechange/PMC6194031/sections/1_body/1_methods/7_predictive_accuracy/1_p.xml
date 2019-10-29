@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par16" class="p">We used two measures of model evaluation. Common methods include the Area Under the Receiver Operator Characteristic Curve (AUC)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR55" class="xref">55</xref>
+ </sup>, and the True Skill Statistic (TSS)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR56" class="xref">56</xref>
+ </sup>. The threshold independent AUC is calculated by default in Maxent models. If AUC &lt; 0.75, model predictions are not significant and cannot be interpreted
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR57" class="xref">57</xref>
+ </sup>. When AUC ≥ 0.75, models were considered to successfully explain present distribution
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR58" class="xref">58</xref>
+ </sup>. TSS is threshold dependent, as it is based on binary presence-absence maps. The threshold that yields the highest TSS was selected to produce binary maps
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR56" class="xref">56</xref>
+ </sup>. The formula to calculate TSS is:
+ <disp-formula id="Equa" class="disp-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$({\rm{TSS}}={\rm{sensitivity}}+{\rm{specificity}}-1),$$\end{document}</tex-math>
+   <math id="M2" display="block" class="math">
+    <mo stretchy="false" class="mo">(</mo>
+    <mi mathvariant="normal" class="mi">TSS</mi>
+    <mo class="mo">=</mo>
+    <mi mathvariant="normal" class="mi">sensitivity</mi>
+    <mo class="mo">+</mo>
+    <mi mathvariant="normal" class="mi">specificity</mi>
+    <mo class="mo">−</mo>
+    <mn class="mn">1</mn>
+    <mo stretchy="false" class="mo">)</mo>
+    <mo class="mo">,</mo>
+   </math>
+   <graphic xlink:href="41598_2018_32665_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where sensitivity corresponds to the true positive rate and specificity is the true negative function
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR59" class="xref">59</xref>
+ </sup>, considering that Maxent models the absences. If TSS ≥ 0.4, models perform better than random predictions
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR60" class="xref">60</xref>
+ </sup>. TSS was shown to be a reliable measure of predictive ability
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR56" class="xref">56</xref>
+ </sup> since it does not depend on the size of the validation dataset like other statistics
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR61" class="xref">61</xref>
+ </sup>.
+</p>

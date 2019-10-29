@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par55" class="p">We used Gelman–Rubin (G–R) diagnostic method to determine convergence of MCMC simulations
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR46" class="xref">46</xref>
+ </sup>. The idea of G–R test is that if the simulated Markov chain has reached convergence, the within-run variation within each chain should be roughly equal to the between-run variation among chains. Specifically, denoting each model parameter as 
+ <italic class="italic">c</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>, the parameter samples from 
+ <italic class="italic">K</italic> (
+ <italic class="italic">K</italic> = 5) parallel M–H runs of length 
+ <italic class="italic">N</italic> (
+ <italic class="italic">N</italic> = 10,000), the between (
+ <italic class="italic">B</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>) and within-run (
+ <italic class="italic">W</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>) variances are defined as:
+ <disp-formula id="Equ24" class="disp-formula">
+  <label class="label">24</label>
+  <alternatives class="alternatives">
+   <tex-math id="M79" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\mathop {B}\nolimits_i = \frac{N}{{K - 1}}\mathop {\sum}\limits_{k = 1}^K {\left( {\bar c_i^k - \bar c_i} \right)} ^2$$\end{document}</tex-math>
+   <math id="M80" display="block" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mo class="mo">B</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <mi class="mi">N</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">K</mi>
+      <mo class="mo">-</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+    </mfrac>
+    <munderover accent="false" accentunder="false" class="munderover">
+     <mrow class="mrow">
+      <mo class="mo">∑</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">k</mi>
+      <mo class="mo">=</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">K</mi>
+     </mrow>
+    </munderover>
+    <msup class="msup">
+     <mrow class="mrow">
+      <mfenced close=")" open="(" separators="" class="mfenced">
+       <mrow class="mrow">
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mover accent="true" class="mover">
+           <mrow class="mrow">
+            <mi class="mi">c</mi>
+           </mrow>
+           <mo class="mo">¯</mo>
+          </mover>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">i</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">k</mi>
+         </mrow>
+        </msubsup>
+        <mo class="mo">-</mo>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mover accent="true" class="mover">
+           <mrow class="mrow">
+            <mi class="mi">c</mi>
+           </mrow>
+           <mo class="mo">¯</mo>
+          </mover>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">i</mi>
+         </mrow>
+        </msub>
+       </mrow>
+      </mfenced>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">2</mn>
+     </mrow>
+    </msup>
+   </math>
+   <graphic xlink:href="41467_2018_4526_Article_Equ24.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ25" class="disp-formula">
+  <label class="label">25</label>
+  <alternatives class="alternatives">
+   <tex-math id="M81" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\mathop {W}\nolimits_i = \frac{1}{{K(N - 1)}}\mathop {\sum}\limits_{k = 1}^K {\mathop {\sum}\limits_{n = 1}^N {\left( {\bar c_i^{n,k} - \bar c_i^k} \right)} } ^2.$$\end{document}</tex-math>
+   <math id="M82" display="block" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mo class="mo">W</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <mn class="mn">1</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">K</mi>
+      <mrow class="mrow">
+       <mo class="mo">(</mo>
+       <mrow class="mrow">
+        <mi class="mi">N</mi>
+        <mo class="mo">-</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <mo class="mo">)</mo>
+      </mrow>
+     </mrow>
+    </mfrac>
+    <munderover accent="false" accentunder="false" class="munderover">
+     <mrow class="mrow">
+      <mo class="mo">∑</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">k</mi>
+      <mo class="mo">=</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">K</mi>
+     </mrow>
+    </munderover>
+    <msup class="msup">
+     <mrow class="mrow">
+      <munderover accent="false" accentunder="false" class="munderover">
+       <mrow class="mrow">
+        <mo class="mo">∑</mo>
+       </mrow>
+       <mrow class="mrow">
+        <mi class="mi">n</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <mrow class="mrow">
+        <mi class="mi">N</mi>
+       </mrow>
+      </munderover>
+      <mfenced close=")" open="(" separators="" class="mfenced">
+       <mrow class="mrow">
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mover accent="true" class="mover">
+           <mrow class="mrow">
+            <mi class="mi">c</mi>
+           </mrow>
+           <mo class="mo">¯</mo>
+          </mover>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">i</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">n</mi>
+          <mo class="mo">,</mo>
+          <mi class="mi">k</mi>
+         </mrow>
+        </msubsup>
+        <mo class="mo">-</mo>
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mover accent="true" class="mover">
+           <mrow class="mrow">
+            <mi class="mi">c</mi>
+           </mrow>
+           <mo class="mo">¯</mo>
+          </mover>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">i</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">k</mi>
+         </mrow>
+        </msubsup>
+       </mrow>
+      </mfenced>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">2</mn>
+     </mrow>
+    </msup>
+    <mo class="mo">.</mo>
+   </math>
+   <graphic xlink:href="41467_2018_4526_Article_Equ25.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

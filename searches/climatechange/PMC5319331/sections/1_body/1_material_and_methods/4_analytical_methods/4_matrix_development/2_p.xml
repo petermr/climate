@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">GLMMs were used to develop functions for all demographic processes required to create population projection matrices that could be used in both deterministic and stochastic simulations. The 
+ <italic class="italic">Cypripedium</italic> matrix models were ‘historical’ matrices, i.e. two-dimensional matrices of status across 3 years, with ‘stages’ for columns and rows corresponding to each pair of possible life-history stages in years 
+ <italic class="italic">t</italic> − 1 and 
+ <italic class="italic">t</italic>, and years 
+ <italic class="italic">t</italic> and 
+ <italic class="italic">t </italic>+ 1, respectively [
+ <xref rid="RSOS160647C48" ref-type="bibr" class="xref">48</xref>]. These models incorporate the historical life-history costs observed in our best-fit demographic GLMMs, which often opposed relationships between vital rates across 2 years. They also allowed the modelling of unique costs such as costs of growth (e.g. the cost to survival between years 
+ <italic class="italic">t</italic> and 
+ <italic class="italic">t </italic>+ 1 of high growth between years 
+ <italic class="italic">t</italic> − 1 and 
+ <italic class="italic">t</italic>), which have been noted both in this genus and in other herbaceous perennials [
+ <xref rid="RSOS160647C28" ref-type="bibr" class="xref">28</xref>,
+ <xref rid="RSOS160647C49" ref-type="bibr" class="xref">49</xref>]. In a given year, each plant occupied one of 19 mature states with anything from one to nine sprouts, either all vegetative or at least one of which was flowering, or it was completely dormant (electronic supplementary material, figure S1
+ <italic class="italic">a</italic>). Transition probability values between life stages were given as 
+ <disp-formula id="RSOS160647M2.1" class="disp-formula">
+  <label class="label">2.1</label>
+  <math id="DM1" class="math">
+   <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em" class="mtable">
+    <mtr class="mtr">
+     <mtd class="mtd">
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">a</mi>
+        <mrow class="mrow">
+         <mrow class="mrow">
+          <mi mathvariant="normal" class="mi">D</mi>
+         </mrow>
+         <mo class="mo">,</mo>
+         <mi class="mi">j</mi>
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </mtd>
+     <mtd class="mtd">
+      <mo class="mo">=</mo>
+      <msub class="msub">
+       <mi class="mi">S</mi>
+       <mrow class="mrow">
+        <mi class="mi">j</mi>
+        <mi class="mi">i</mi>
+       </mrow>
+      </msub>
+      <mo class="mo">×</mo>
+      <mo stretchy="false" class="mo">(</mo>
+      <mn class="mn">1</mn>
+      <mo class="mo">−</mo>
+      <msub class="msub">
+       <mi class="mi">P</mi>
+       <mrow class="mrow">
+        <mi class="mi">j</mi>
+        <mi class="mi">i</mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false" class="mo">)</mo>
+      <mo class="mo">,</mo>
+     </mtd>
+    </mtr>
+   </mtable>
+  </math>
+ </disp-formula>
+ <disp-formula id="RSOS160647M2.2" class="disp-formula">
+  <label class="label">2.2</label>
+  <math id="DM2" class="math">
+   <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em" class="mtable">
+    <mtr class="mtr">
+     <mtd class="mtd">
+      <msub class="msub">
+       <mi class="mi">a</mi>
+       <mrow class="mrow">
+        <mi class="mi">k</mi>
+        <mo stretchy="false" class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">V</mi>
+        </mrow>
+        <mo stretchy="false" class="mo">)</mo>
+        <mo class="mo">,</mo>
+        <mi class="mi">j</mi>
+        <mi class="mi">i</mi>
+       </mrow>
+      </msub>
+     </mtd>
+     <mtd class="mtd">
+      <mo class="mo">=</mo>
+      <msub class="msub">
+       <mi class="mi">S</mi>
+       <mrow class="mrow">
+        <mi class="mi">j</mi>
+        <mi class="mi">i</mi>
+       </mrow>
+      </msub>
+      <mo class="mo">×</mo>
+      <msub class="msub">
+       <mi class="mi">P</mi>
+       <mrow class="mrow">
+        <mi class="mi">j</mi>
+        <mi class="mi">i</mi>
+       </mrow>
+      </msub>
+      <mo class="mo">×</mo>
+      <msub class="msub">
+       <mi class="mi">g</mi>
+       <mrow class="mrow">
+        <mi class="mi">k</mi>
+        <mo class="mo">,</mo>
+        <mi class="mi">j</mi>
+        <mi class="mi">i</mi>
+       </mrow>
+      </msub>
+      <mo class="mo">×</mo>
+      <mo stretchy="false" class="mo">(</mo>
+      <mn class="mn">1</mn>
+      <mo class="mo">−</mo>
+      <msub class="msub">
+       <mi class="mi">F</mi>
+       <mrow class="mrow">
+        <mi class="mi">k</mi>
+        <mo class="mo">,</mo>
+        <mi class="mi">j</mi>
+        <mi class="mi">i</mi>
+       </mrow>
+      </msub>
+      <mo stretchy="false" class="mo">)</mo>
+     </mtd>
+    </mtr>
+   </mtable>
+  </math>
+ </disp-formula>
+ <disp-formula id="RSOS160647M2.3" class="disp-formula">
+  <label class="label">2.3</label>
+  <math id="DM3" class="math">
+   <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em" class="mtable">
+    <mtr class="mtr">
+     <mtd class="mtd">
+      <mtext class="mtext">and</mtext>
+      <mspace width="2em" class="mspace"/>
+      <mspace width="1em" class="mspace"/>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">a</mi>
+        <mrow class="mrow">
+         <mi class="mi">k</mi>
+         <mo stretchy="false" class="mo">(</mo>
+         <mrow class="mrow">
+          <mi mathvariant="normal" class="mi">F</mi>
+         </mrow>
+         <mo stretchy="false" class="mo">)</mo>
+         <mo class="mo">,</mo>
+         <mi class="mi">j</mi>
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+     </mtd>
+     <mtd class="mtd">
+      <mo class="mo">=</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">S</mi>
+        <mrow class="mrow">
+         <mi class="mi">j</mi>
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+      <mo class="mo">×</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">P</mi>
+        <mrow class="mrow">
+         <mi class="mi">j</mi>
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+      <mo class="mo">×</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">g</mi>
+        <mrow class="mrow">
+         <mi class="mi">k</mi>
+         <mo class="mo">,</mo>
+         <mi class="mi">j</mi>
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+      <mo class="mo">×</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">F</mi>
+        <mrow class="mrow">
+         <mi class="mi">k</mi>
+         <mo class="mo">,</mo>
+         <mi class="mi">j</mi>
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+      <mo class="mo">,</mo>
+     </mtd>
+    </mtr>
+   </mtable>
+  </math>
+ </disp-formula> where 
+ <italic class="italic">a
+  <sub class="sub">k,ji</sub>
+ </italic> is the probability of transitioning to stage 
+ <italic class="italic">k</italic> in year 
+ <italic class="italic">t </italic>+ 1, given state 
+ <italic class="italic">j</italic> in year 
+ <italic class="italic">t</italic> and state 
+ <italic class="italic">i</italic> in year 
+ <italic class="italic">t</italic> − 1; 
+ <italic class="italic">S
+  <sub class="sub">ji</sub>
+ </italic> is the probability of surviving from year 
+ <italic class="italic">t</italic> to year 
+ <italic class="italic">t </italic>+ 1, given state 
+ <italic class="italic">j</italic> in year 
+ <italic class="italic">t</italic> and state 
+ <italic class="italic">i</italic> in year 
+ <italic class="italic">t</italic> − 1; 
+ <italic class="italic">P
+  <sub class="sub">ji</sub>
+ </italic> is the probability of sprouting in year 
+ <italic class="italic">t </italic>+ 1, given survival from year 
+ <italic class="italic">t</italic> and state 
+ <italic class="italic">j</italic> in year 
+ <italic class="italic">t</italic> and state 
+ <italic class="italic">i</italic> in year 
+ <italic class="italic">t</italic> − 1; 
+ <italic class="italic">g
+  <sub class="sub">k,ji</sub>
+ </italic> is the probability of growth to state 
+ <italic class="italic">k</italic> in year 
+ <italic class="italic">t </italic>+ 1, conditional upon survival to that time and given state 
+ <italic class="italic">j</italic> in year 
+ <italic class="italic">t</italic> and state 
+ <italic class="italic">i</italic> in year 
+ <italic class="italic">t</italic> − 1; and 
+ <italic class="italic">F
+  <sub class="sub">k,ji</sub>
+ </italic> is the probability of flowering in year 
+ <italic class="italic">t </italic>+ 1, conditional upon survival to that point and sprouting in that year, and given state 
+ <italic class="italic">k</italic> in year 
+ <italic class="italic">t</italic> + 1, state 
+ <italic class="italic">j</italic> in year 
+ <italic class="italic">t</italic> and state 
+ <italic class="italic">i</italic> in year 
+ <italic class="italic">t</italic> − 1. 
+ <italic class="italic">D</italic>, 
+ <italic class="italic">V</italic> and 
+ <italic class="italic">F</italic> refer to vegetative dormancy, vegetative (i.e. non-flowering) sprouting and flowering, respectively. 
+ <italic class="italic">S
+  <sub class="sub">ji</sub>
+ </italic>, 
+ <italic class="italic">P
+  <sub class="sub">ji</sub>
+ </italic>, 
+ <italic class="italic">g
+  <sub class="sub">k,ji</sub>
+ </italic> and 
+ <italic class="italic">F
+  <sub class="sub">k,ji</sub>
+ </italic> were typically functions of climate in addition to state in previous years, as given in the best-fit GLMM models of vital rates (electronic supplementary material, tables S1 and S2). For example, the probability of sprouting in 
+ <italic class="italic">C. parviflorum</italic> in year 
+ <italic class="italic">t </italic>+ 1 was given as 
+ <disp-formula id="RSOS160647M2.4" class="disp-formula">
+  <label class="label">2.4</label>
+  <math id="DM4" class="math">
+   <mtable columnalign="right left right left right left right left right left right left" rowspacing="3pt" columnspacing="0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em 2em 0.278em" class="mtable">
+    <mtr class="mtr">
+     <mtd class="mtd">
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">P</mi>
+        <mrow class="mrow">
+         <mi class="mi">j</mi>
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+      <mo class="mo">=</mo>
+      <mtext class="mtext">logit</mtext>
+      <mrow class="mrow">
+       <mo class="mo">(</mo>
+       <mtable columnalign="left" rowspacing="4pt" columnspacing="1em" class="mtable">
+        <mtr class="mtr">
+         <mtd class="mtd">
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">x</mi>
+            <mn class="mn">0</mn>
+           </msub>
+          </mrow>
+          <mo class="mo">+</mo>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">d</mi>
+            <mrow class="mrow">
+             <mi class="mi">s</mi>
+             <mi class="mi">p</mi>
+             <mi class="mi">r</mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo class="mo">+</mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">x</mi>
+            <mrow class="mrow">
+             <mi class="mi">d</mi>
+             <mi class="mi">t</mi>
+             <mn class="mn">32</mn>
+             <mo class="mo">,</mo>
+             <mi class="mi">t</mi>
+             <mo class="mo">+</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">d</mi>
+          <mi class="mi">t</mi>
+          <msub class="msub">
+           <mn class="mn">32</mn>
+           <mrow class="mrow">
+            <mi class="mi">t</mi>
+            <mo class="mo">+</mo>
+            <mn class="mn">1</mn>
+           </mrow>
+          </msub>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo class="mo">+</mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">x</mi>
+            <mrow class="mrow">
+             <mi class="mi">t</mi>
+             <mi class="mi">p</mi>
+             <mi class="mi">c</mi>
+             <mi class="mi">p</mi>
+             <mo class="mo">,</mo>
+             <mi class="mi">t</mi>
+             <mo class="mo">+</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">t</mi>
+          <mi class="mi">p</mi>
+          <mi class="mi">c</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">p</mi>
+            <mrow class="mrow">
+             <mi class="mi">t</mi>
+             <mo class="mo">+</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo class="mo">+</mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">x</mi>
+            <mrow class="mrow">
+             <mi class="mi">s</mi>
+             <mi class="mi">i</mi>
+             <mi class="mi">z</mi>
+             <mo class="mo">,</mo>
+             <mi class="mi">t</mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">s</mi>
+          <mi class="mi">i</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">z</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo class="mo">+</mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">x</mi>
+            <mrow class="mrow">
+             <mi class="mi">f</mi>
+             <mi class="mi">l</mi>
+             <mi class="mi">w</mi>
+             <mi class="mi">y</mi>
+             <mi class="mi">n</mi>
+             <mo class="mo">,</mo>
+             <mi class="mi">t</mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">f</mi>
+          <mi class="mi">l</mi>
+          <mi class="mi">w</mi>
+          <mi class="mi">y</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">n</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+         </mtd>
+        </mtr>
+        <mtr class="mtr">
+         <mtd class="mtd">
+          <mspace width="1em" class="mspace"/>
+          <mo class="mo">+</mo>
+          <mo class="mo"> </mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">x</mi>
+            <mrow class="mrow">
+             <mi class="mi">g</mi>
+             <mi class="mi">r</mi>
+             <mi class="mi">w</mi>
+             <mo class="mo">,</mo>
+             <mi class="mi">t</mi>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">g</mi>
+          <mi class="mi">r</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">w</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo class="mo">+</mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <msub class="msub">
+           <mi class="mi">x</mi>
+           <mrow class="mrow">
+            <mi class="mi">s</mi>
+            <mi class="mi">i</mi>
+            <mi class="mi">z</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+            <mo class="mo">×</mo>
+            <mi class="mi">g</mi>
+            <mi class="mi">r</mi>
+            <mi class="mi">w</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+           </mrow>
+          </msub>
+          <mo class="mo">×</mo>
+          <mi class="mi">s</mi>
+          <mi class="mi">i</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">z</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">g</mi>
+          <mi class="mi">r</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">w</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo class="mo">+</mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <msub class="msub">
+           <mi class="mi">x</mi>
+           <mrow class="mrow">
+            <mi class="mi">s</mi>
+            <mi class="mi">i</mi>
+            <mi class="mi">z</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+            <mo class="mo">×</mo>
+            <mi class="mi">f</mi>
+            <mi class="mi">l</mi>
+            <mi class="mi">w</mi>
+            <mi class="mi">y</mi>
+            <mi class="mi">n</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+           </mrow>
+          </msub>
+          <mo class="mo">×</mo>
+          <mi class="mi">s</mi>
+          <mi class="mi">i</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">z</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">f</mi>
+          <mi class="mi">l</mi>
+          <mi class="mi">w</mi>
+          <mi class="mi">y</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">n</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+         </mtd>
+        </mtr>
+        <mtr class="mtr">
+         <mtd class="mtd">
+          <mspace width="1em" class="mspace"/>
+          <mo class="mo">+</mo>
+          <mo class="mo"> </mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <msub class="msub">
+           <mi class="mi">x</mi>
+           <mrow class="mrow">
+            <mi class="mi">g</mi>
+            <mi class="mi">r</mi>
+            <mi class="mi">w</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+            <mo class="mo">×</mo>
+            <mi class="mi">d</mi>
+            <mi class="mi">t</mi>
+            <mn class="mn">32</mn>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+            <mo class="mo">−</mo>
+            <mn class="mn">1</mn>
+           </mrow>
+          </msub>
+          <mo class="mo">×</mo>
+          <mi class="mi">g</mi>
+          <mi class="mi">r</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">w</mi>
+            <mi class="mi">t</mi>
+           </msub>
+          </mrow>
+          <mo class="mo">×</mo>
+          <mi class="mi">d</mi>
+          <mi class="mi">t</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mn class="mn">32</mn>
+            <mrow class="mrow">
+             <mi class="mi">t</mi>
+             <mo class="mo">−</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+          <mo class="mo">+</mo>
+          <mo stretchy="false" class="mo">(</mo>
+          <msub class="msub">
+           <mi class="mi">x</mi>
+           <mrow class="mrow">
+            <mi class="mi">g</mi>
+            <mi class="mi">r</mi>
+            <mi class="mi">w</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+            <mo class="mo">×</mo>
+            <mi class="mi">t</mi>
+            <mi class="mi">p</mi>
+            <mi class="mi">c</mi>
+            <mi class="mi">p</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">t</mi>
+            <mo class="mo">−</mo>
+            <mn class="mn">1</mn>
+           </mrow>
+          </msub>
+          <mo class="mo">×</mo>
+          <mi class="mi">g</mi>
+          <mi class="mi">r</mi>
+          <msub class="msub">
+           <mi class="mi">w</mi>
+           <mi class="mi">t</mi>
+          </msub>
+          <mo class="mo">×</mo>
+          <mi class="mi">t</mi>
+          <mi class="mi">p</mi>
+          <mi class="mi">c</mi>
+          <mrow class="mrow">
+           <msub class="msub">
+            <mi class="mi">p</mi>
+            <mrow class="mrow">
+             <mi class="mi">t</mi>
+             <mo class="mo">−</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </msub>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+         </mtd>
+        </mtr>
+       </mtable>
+       <mo class="mo">)</mo>
+      </mrow>
+      <mo class="mo">,</mo>
+     </mtd>
+    </mtr>
+   </mtable>
+  </math>
+ </disp-formula> where all 
+ <italic class="italic">x</italic>s refer to estimated coefficients from the model, including 
+ <italic class="italic">x</italic>
+ <sub class="sub">0</sub>, the 
+ <italic class="italic">y</italic>-intercept; 
+ <italic class="italic">d
+  <sub class="sub">spr</sub>
+ </italic> refers to the deviation from the 
+ <italic class="italic">y</italic>-intercept used in adaptive dynamics simulations and is set to 0 otherwise (see Adaptive dynamics); 
+ <italic class="italic">dt32
+  <sub class="sub">t</sub>
+ </italic>
+ <sub class="sub">+1</sub> is the number of days with minimum temperatures less than or equal to 0°C in year 
+ <italic class="italic">t </italic>+ 1; 
+ <italic class="italic">tpcp
+  <sub class="sub">t+1</sub>
+ </italic> is the total annual precipitation in year 
+ <italic class="italic">t</italic>; 
+ <italic class="italic">siz
+  <sub class="sub">t</sub>
+ </italic> is size in year 
+ <italic class="italic">t</italic>; 
+ <italic class="italic">flwyn
+  <sub class="sub">t</sub>
+ </italic> refers to whether or not the individual flowered in year 
+ <italic class="italic">t</italic> (binomial) and 
+ <italic class="italic">grw
+  <sub class="sub">t</sub>
+ </italic> is the change in size between years 
+ <italic class="italic">t</italic> − 1 and 
+ <italic class="italic">t</italic> (electronic supplementary material, table S1).
+</p>

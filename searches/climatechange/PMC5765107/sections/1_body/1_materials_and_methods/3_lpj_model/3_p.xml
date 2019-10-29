@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par15" class="p">The original method for calculating AED adds substantially to the uncertainty that is already associated with the climate change signal between GCMs
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR50" class="xref">50</xref>
+ </sup>. McVicar 
+ <italic class="italic">et al</italic>.
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR51" class="xref">51</xref>
+ </sup> advocated that all four primary meteorological variables, i.e., wind speed, atmospheric humidity, radiation, and air temperature, should be considered when assessing trends in AED. However, temperature-based methods, such as the Thornthwaite empirical equation, tend to underestimate AED
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR52" class="xref">52</xref>,
+  <xref ref-type="bibr" rid="CR53" class="xref">53</xref>
+ </sup>. The Penman–Monteith model recommended by the Food and Agricultural Organization (FAO56-PM model) reference crop evapotranspiration method gave good estimations of spatial and seasonal variability in AED across Great Britain
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR54" class="xref">54</xref>
+ </sup>. We therefore modified the original method for calculating AED in the evapotranspiration sub-model of the LPJ
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR55" class="xref">55</xref>
+ </sup> and used the physically-based FAO56-PM model
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR56" class="xref">56</xref>
+ </sup>, which had been previously calibrated for the study area
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR57" class="xref">57</xref>
+ </sup>. The original fire module in the LPJ assumed only a minimum fuel load for fire spread
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR58" class="xref">58</xref>
+ </sup>. The model has been modified to include a maximum fuel load based on the linear relationship between the fuel load and the fire occurrence probability
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR59" class="xref">59</xref>
+ </sup>, so that the influence of fuel availability on fire occurrence is better reflected. Li 
+ <italic class="italic">et al</italic>.
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR60" class="xref">60</xref>
+ </sup> obtained good results when they applied a similar approach to the fire module of CLM-DGVM (Community Land Model with the Dynamic Global Vegetation Model). We expressed the probability of fire based on the available fuel as:
+ <disp-formula id="Equ4" class="disp-formula">
+  <label class="label">4</label>
+  <alternatives class="alternatives">
+   <tex-math id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$P=max[0,min(1,\frac{{L}_{{\rm{ag}}}-{L}_{{\rm{low}}}}{{L}_{{\rm{up}}}-{L}_{{\rm{low}}}})]$$\end{document}</tex-math>
+   <math id="M12" display="block" class="math">
+    <mi class="mi">P</mi>
+    <mo class="mo">=</mo>
+    <mi class="mi">m</mi>
+    <mi class="mi">a</mi>
+    <mi class="mi">x</mi>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">[</mo>
+     <mrow class="mrow">
+      <mn class="mn">0</mn>
+      <mo class="mo">,</mo>
+      <mi class="mi">m</mi>
+      <mi class="mi">i</mi>
+      <mi class="mi">n</mi>
+      <mrow class="mrow">
+       <mo stretchy="true" class="mo">(</mo>
+       <mrow class="mrow">
+        <mn class="mn">1</mn>
+        <mo class="mo">,</mo>
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <msub class="msub">
+           <mrow class="mrow">
+            <mi class="mi">L</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi mathvariant="normal" class="mi">ag</mi>
+           </mrow>
+          </msub>
+          <mo class="mo">−</mo>
+          <msub class="msub">
+           <mrow class="mrow">
+            <mi class="mi">L</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi mathvariant="normal" class="mi">low</mi>
+           </mrow>
+          </msub>
+         </mrow>
+         <mrow class="mrow">
+          <msub class="msub">
+           <mrow class="mrow">
+            <mi class="mi">L</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi mathvariant="normal" class="mi">up</mi>
+           </mrow>
+          </msub>
+          <mo class="mo">−</mo>
+          <msub class="msub">
+           <mrow class="mrow">
+            <mi class="mi">L</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi mathvariant="normal" class="mi">low</mi>
+           </mrow>
+          </msub>
+         </mrow>
+        </mfrac>
+       </mrow>
+       <mo stretchy="true" class="mo">)</mo>
+      </mrow>
+     </mrow>
+     <mo stretchy="true" class="mo">]</mo>
+    </mrow>
+   </math>
+   <graphic xlink:href="41598_2017_18798_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic class="italic">L</italic>
+ <sub class="sub">ag</sub> (g C m
+ <sup class="sup">−2</sup>) is the fuel load (namely, the above-ground litter), and 
+ <italic class="italic">L</italic>
+ <sub class="sub">low</sub> (
+ <italic class="italic">L</italic>
+ <sub class="sub">low</sub> = 200) and 
+ <italic class="italic">L</italic>
+ <sub class="sub">up</sub> (
+ <italic class="italic">L</italic>
+ <sub class="sub">up</sub> = 1000) are the lower and upper fuel thresholds, respectively. Fire does not occur when 
+ <italic class="italic">L</italic>
+ <sub class="sub">ag</sub> &lt; 
+ <italic class="italic">L</italic>
+ <sub class="sub">low</sub>, and becomes more likely to occur as the fuel increases when 
+ <italic class="italic">L</italic>
+ <sub class="sub">low</sub> ≤ 
+ <italic class="italic">L</italic>
+ <sub class="sub">ag</sub> ≤ 
+ <italic class="italic">L</italic>
+ <sub class="sub">up</sub>. The fuel load no longer limits the fire spread when 
+ <italic class="italic">L</italic>
+ <sub class="sub">ag</sub> &gt; 
+ <italic class="italic">L</italic>
+ <sub class="sub">low</sub> when the other conditions are satisfied.
+</p>

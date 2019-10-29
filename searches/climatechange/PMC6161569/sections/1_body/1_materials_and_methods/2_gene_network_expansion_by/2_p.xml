@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The PC-algorithm is based on a systematic test for conditional independence to retain significant relations between pairs of genes. It starts from a fully connected network and removes interactions between genes, if it finds a set of genes that supports that interaction (i.e., separation set). From a mathematical point of view, the test for statistical independence between the genes 
+ <sub class="sub">a,b</sub> conditioned by a set of genes 
+ <sub class="sub">S</sub> is driven by the estimation of the partial correlation 
+ <sub class="sub">ρ(a,b∖S)</sub>. The example reported in 
+ <bold class="bold">Figure 
+  <xref ref-type="fig" rid="F1" class="xref">1</xref>
+ </bold> shows how the estimated partial-correlation allows the identification of spurious interactions, with respect to the simple correlation. On the other hand, the exhaustive exploration of all the subsets of conditioning genes is computational impossible, therefore the PC-algorithm takes into consideration only a limited number of those sets, as described in Algorithm 3 in 
+ <xref rid="B6" ref-type="bibr" class="xref">Asnicar et al. (2016)</xref>. At the same time, the NES
+ <sup class="sup">2</sup>RA algorithm, developed to cope with this computational complexity, randomly divides the Vespucci dataset into 
+ <italic class="italic">tiles</italic> of equal number of genes (subsetting), where each tile always includes all the genes of the LGN, to be then processed by the PC-algorithm. The random subsettings of all the genes in the genome are repeated for a given numbers of 
+ <italic class="italic">iterations.</italic> The NES
+ <sup class="sup">2</sup>RA algorithm currently runs as part of the 
+ <italic class="italic">gene@home</italic> project which aims to systematically expand gene regulatory networks based on available public gene expression data. The 
+ <italic class="italic">gene@home</italic> project relies on thousands of volunteers’ computers by means of the BOINC system (
+ <xref rid="B5" ref-type="bibr" class="xref">Anderson, 2004</xref>) within the TN-Grid platform (
+ <xref rid="B7" ref-type="bibr" class="xref">Asnicar et al., 2015</xref>).
+</p>

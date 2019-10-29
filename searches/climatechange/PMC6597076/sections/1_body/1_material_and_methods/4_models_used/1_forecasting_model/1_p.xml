@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The forecasting model used in the current modelling chain is a simplified version of the AFLA-maize model developed by Battilani et al. [
+ <xref rid="pone.0218956.ref010" ref-type="bibr" class="xref">10</xref>] and the aflatoxin simulation model by Chauhan et al. [
+ <xref rid="pone.0218956.ref017" ref-type="bibr" class="xref">17</xref>]. The AFLA-maize model [
+ <xref rid="pone.0218956.ref010" ref-type="bibr" class="xref">10</xref>] was used as the basis. The full model structure, parameter coefficients and validation are detailed in the original publication [
+ <xref rid="pone.0218956.ref010" ref-type="bibr" class="xref">10</xref>]. The global accuracy of AFLA-maize model is 68% [
+ <xref rid="pone.0218956.ref010" ref-type="bibr" class="xref">10</xref>]. AFLA-maize is a mechanistic model that simulates complexed fate of fungus and eventually their mycotoxin production. An Aflatoxin Risk Index (ARI) is calculated from silk emergence to crop harvest by the process of fungal sporulation, spore dispersal, germination, colony growth and aflatoxin production. Each step is an equation resulting from intensive experiments. These equations are calculated with inputs including temperature, precipitation, relative humidity, leaf wetness, available water, water activity or maize growth stage. In their aflatoxin simulation model, Chauhan et al. [
+ <xref rid="pone.0218956.ref017" ref-type="bibr" class="xref">17</xref>] assumed that 
+ <italic class="italic">A</italic>. 
+ <italic class="italic">flavus</italic> fungal inoculum was always available for infection and hence sporulation and germination were considered non-limiting factors in the forecasting model. Therefore, in this study, ARI was computed only with dispersal, growth and aflatoxin production processes. Aflatoxin concentrations were then estimated from ARI by a linear regression equation. A set of local data (anonymised AfB1 data published in FigShare) on AfB1 concentrations in maize were used to calculate the parameter coefficient. The following equation was obtained, which was consequently applied to translate ARI into AfB1 concentrations in the predictive model: 
+ <disp-formula id="pone.0218956.e003" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0218956.e003.jpg" id="pone.0218956.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M3" class="math">
+    <mi class="mi">A</mi>
+    <mi class="mi">f</mi>
+    <mi class="mi">l</mi>
+    <mi class="mi">a</mi>
+    <mi class="mi">t</mi>
+    <mi class="mi">o</mi>
+    <mi class="mi">x</mi>
+    <mi class="mi">i</mi>
+    <mi class="mi">n</mi>
+    <mo class="mo">=</mo>
+    <msup class="msup">
+     <mrow class="mrow">
+      <mn class="mn">10</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">0</mn>
+      <mo class="mo">.</mo>
+      <mn class="mn">047765</mn>
+      <mo class="mo">×</mo>
+      <mi class="mi">A</mi>
+      <mi class="mi">R</mi>
+      <mi class="mi">I</mi>
+     </mrow>
+    </msup>
+    <mo class="mo">-</mo>
+    <mn class="mn">1</mn>
+   </math>
+  </alternatives>
+  <label class="label">(3)</label>
+ </disp-formula>
+</p>

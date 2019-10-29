@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Using Maximum entropy algorithm (MaxEnt) model version 3.3.3k [
+ <xref rid="pone.0218523.ref062" ref-type="bibr" class="xref">62</xref>], model operation was performed following the procedures in our previous study [
+ <xref rid="pone.0218523.ref038" ref-type="bibr" class="xref">38</xref>]. As a general-purpose machine learning technique of ecological niche modelling, MaxEnt estimates potential species distribution using species presence-only records and environmental layers [
+ <xref rid="pone.0218523.ref042" ref-type="bibr" class="xref">42</xref>,
+ <xref rid="pone.0218523.ref063" ref-type="bibr" class="xref">63</xref>]. In order to predict future occurrence and distribution of the 
+ <italic class="italic">Anopheles</italic> species, projected bioclimatic / environmental variables representing 2041–2060 (2050s) and 2061–2080 (2070) were added to projection directory in MaxEnt. Using all available data without having an independent dataset under sub-sample replicated run type, occurrence data for each species was split twenty-one times into training (75%) and testing (25%) subsets; performed to test the predictiveness / performance of the MaxEnt model specified by Area Under the Receiver Operating Characteristic (ROC) Curve (AUC) [
+ <xref rid="pone.0218523.ref038" ref-type="bibr" class="xref">38</xref>]. The AUC measures the ability of the model to discriminate between sites where a species is present (
+ <bold class="bold">
+  <italic class="italic">y = 1</italic>
+ </bold>) against where it is absent (
+ <bold class="bold">
+  <italic class="italic">y = 0</italic>
+ </bold>), given as a plot of sensitivity against specificity [
+ <xref rid="pone.0218523.ref038" ref-type="bibr" class="xref">38</xref>,
+ <xref rid="pone.0218523.ref064" ref-type="bibr" class="xref">64</xref>–
+ <xref rid="pone.0218523.ref066" ref-type="bibr" class="xref">66</xref>]. The AUC was considered more in terms of model’s predictiveness, which according to Lobo 
+ <italic class="italic">et al</italic>. [
+ <xref rid="pone.0218523.ref067" ref-type="bibr" class="xref">67</xref>], the value of AUC tells of the degree to which a species is restricted along the range of predictor conditions in the study area, in order that presences can be told apart from absences [
+ <xref rid="pone.0218523.ref043" ref-type="bibr" class="xref">43</xref>]. To guard against bias in datasets, following large ranges of the documented species [
+ <xref rid="pone.0218523.ref064" ref-type="bibr" class="xref">64</xref>] relative to the study area (especially in the North Eastern part of the country) (
+ <xref ref-type="fig" rid="pone.0218523.g001" class="xref">Fig 1</xref>) [
+ <xref rid="pone.0218523.ref038" ref-type="bibr" class="xref">38</xref>], a bias layer was created to provide MaxEnt with background samples (pseudo-absences) [
+ <xref rid="pone.0218523.ref043" ref-type="bibr" class="xref">43</xref>,
+ <xref rid="pone.0218523.ref068" ref-type="bibr" class="xref">68</xref>–
+ <xref rid="pone.0218523.ref070" ref-type="bibr" class="xref">70</xref>]; defining locations with documented 
+ <italic class="italic">Anopheles</italic> species as 1, and “no data” in the grid of unsampled pixels [
+ <xref rid="pone.0218523.ref071" ref-type="bibr" class="xref">71</xref>]. More environmentally distant pseudo-absences from the presences (as applied in this study) increases the rate of well-predicted absences and the AUC scores [
+ <xref rid="pone.0218523.ref067" ref-type="bibr" class="xref">67</xref>]. Over-prediction / under-prediction of the relationships by the model was controlled by increasing maximum iterations from 500 (default) to 5000, allowing the model to have adequate time for convergence; and regularization was left at 1 (default) to minimise model over-fitting [
+ <xref rid="pone.0218523.ref038" ref-type="bibr" class="xref">38</xref>,
+ <xref rid="pone.0218523.ref043" ref-type="bibr" class="xref">43</xref>,
+ <xref rid="pone.0218523.ref065" ref-type="bibr" class="xref">65</xref>].
+</p>

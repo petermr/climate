@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Four distinct features of the regression models are considered: (1) To remove out non-weather effects such as technological improvements, the linear trend of time series were removed based the least squares method (note: the obtained results are similar using the other widely used approach, i.e. deriving the difference from one year to the next). That is, the empirical relations are constructed between the anomalies of yield and climate; (2) another important step when analyzing sources of yield variation is to account for any autocorrelation present in crop yields. As shown in the Supplementary Figure 
+ <xref rid="MOESM1" ref-type="media" class="xref">S1</xref>, in 89.6% of investigated counties (gray colors), the autocorrelation assumption of corn yields does not hold at the at the 5% significance level. In those areas where autocorrelation exist (10.4% of investigated counties, yellow colors), an autoregressive model was fit and the number of years of previous yields to include was determined through Akaike Information Criteria (AIC) to find the model with the best balance between yield prediction and simplicity following the approach by Lobell 
+ <italic class="italic">et al</italic>.
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR56" class="xref">56</xref>
+ </sup>; (3) Since the linear relations may not hold under all conditions due to the nonlinear response of crop growth to climate, we consider the quandary terms for each selected climate variable to account for the nonlinear effects; (4) To estimate the uncertainty associated with the crop models, a bootstrap resampling technique was used. Specifically, the 30-year time series of datasets (i.e. 30 points) are resampled to create 1000 different datasets of 30 points, and the statistical model is fitted for each data set. Bootstrap sampling is well adopted in statistical models linking climate and crop yields
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR1" class="xref">1</xref>, 
+  <xref ref-type="bibr" rid="CR20" class="xref">20</xref>, 
+  <xref ref-type="bibr" rid="CR35" class="xref">35</xref>
+ </sup>. The MATLAB code for bootstrap sampling technique can be found at: https://www.mathworks.com/help/stats/bootstrp.html. The standard deviation of the results based on these samples are used to indicate the crop model uncertainty ranges.
+</p>

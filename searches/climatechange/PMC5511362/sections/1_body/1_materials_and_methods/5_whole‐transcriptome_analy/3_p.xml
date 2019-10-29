@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Each library was sequenced using TruSeq SBS Kit v3‐HS (Illumina Inc.) in paired‐end mode with a read length of 2 × 76 bp. On average, 40 million templates were generated in a fraction of a sequencing lane on HiSeq2000. Image analysis, base calling and quality scoring of the run were processed using the manufacturer's software Real Time Analysis (RTA 1.13.48, HCS 1.5.15.1) and followed by generation of FASTQ sequence files by CASAVA. RNA‐seq reads were aligned with the GEMtools RNA‐seq pipeline v1.7 (
+ <ext-link ext-link-type="uri" xlink:href="http://gemtools.github.io" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">http://gemtools.github.io</ext-link>), which is based on the GEM mapper (Marco‐Sola, Sammeth, Guigo, &amp; Ribeca, 
+ <xref rid="eva12487-bib-0047" ref-type="ref" class="xref">2012</xref>). The mapping is exhaustive, which means that the mapper searches for all possible mappings up to a certain number of mismatches. The pipeline aligned the reads in a sample through three phases, mapping against the 
+ <italic class="italic">G. aculeatus</italic> reference genome (ENSEMBL, release 82), against a reference transcriptome and against a de novo transcriptome, which was generated from the input data to detect new junction sites. By default, the mapping parameters were set as: “mismatch”
+ <italic class="italic"> </italic>= 0.06, “maximum edit distance”
+ <italic class="italic"> </italic>= 0.2 and “quality threshold”
+ <italic class="italic"> </italic>= 26. The transcriptome was generated using the 
+ <italic class="italic">G. aculeatus</italic> annotation. After mapping, all alignments were filtered to increase the number of uniquely mapped reads. The filter criteria contained a minimum intron length of 20 bp, a maximum exon overlap of 5 bp and a filter step against a reference annotation checking for consistent pairs and junctions were both sites align to the same annotated gene. Mapping statistics and expression quantification at the gene level were calculated by the GEMtools “gtfcount” tool. To normalize gene expression and identify differently expressed (DE) genes between the control and warm‐treated male sticklebacks, we fit a negative binomial generalized linear model for each tissue using the DESeq2 package (Love, Huber, &amp; Anders, 
+ <xref rid="eva12487-bib-0043" ref-type="ref" class="xref">2014</xref>) in R v.3.2.2. The normalized quantity 
+ <italic class="italic">q</italic>
+ <sub class="sub">
+  <italic class="italic">ij</italic>
+ </sub> was estimated based on a negative binomial distribution proportional to the concentration of cDNA fragments from the gene 
+ <italic class="italic">i</italic> in the sample 
+ <italic class="italic">j</italic> and scaled by a normalization factor accounting for differences in sequencing depth between samples. A general linear model was fitted with a logarithmic link as: log
+ <sub class="sub">2</sub>(
+ <italic class="italic">q</italic>
+ <sub class="sub">
+  <italic class="italic">ij</italic>
+ </sub>)
+ <italic class="italic"> </italic>= 
+ <italic class="italic">x</italic>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub>.β
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub>
+ <italic class="italic">,</italic> where 
+ <italic class="italic">x</italic>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub> represents the comparison between the warm and control samples and the coefficients β
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub> give the log2 fold changes for gene 
+ <italic class="italic">i</italic> (Love et al., 
+ <xref rid="eva12487-bib-0043" ref-type="ref" class="xref">2014</xref>). We performed Gene Ontology (GO) and enrichment analyses using the g:GOSt tool from g:Profiler (Reimand et al., 
+ <xref rid="eva12487-bib-0065" ref-type="ref" class="xref">2016</xref>) to interpret the DE gene list. Only the expressed genes (nonzero total read) in each tissue were used as the background gene set in each enrichment analysis to avoid sampling bias (Timmons, Szkop, &amp; Gallagher, 
+ <xref rid="eva12487-bib-0077" ref-type="ref" class="xref">2015</xref>).
+</p>

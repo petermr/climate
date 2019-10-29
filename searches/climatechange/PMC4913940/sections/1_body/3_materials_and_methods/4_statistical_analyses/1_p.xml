@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To evaluate the contribution of each variable (or factor) to a network measure, we conducted regression analyses using R software. The OLS regression was first considered, for which we constructed full models encompassing all explanatory variables (
+ <italic class="italic">T</italic>
+ <sub class="sub">mean</sub>, 
+ <italic class="italic">T</italic>
+ <sub class="sub">seasonality</sub>, 
+ <italic class="italic">P</italic>
+ <sub class="sub">ann</sub>, 
+ <italic class="italic">P</italic>
+ <sub class="sub">seasonality</sub>, elevation, human impact (HF score), 
+ <italic class="italic">T</italic>
+ <sub class="sub">velocity</sub>, and 
+ <italic class="italic">P</italic>
+ <sub class="sub">velocity</sub>), and selected the best model based on the sample-size-corrected version of Akaike information criterion (AICc) values, using the R package 
+ <italic class="italic">MuMIn</italic> version 1.15.6. In accordance with previous studies [
+ <xref rid="pone.0157929.ref031" ref-type="bibr" class="xref">31</xref>,
+ <xref rid="pone.0157929.ref032" ref-type="bibr" class="xref">32</xref>], we also considered species richness, or the number of species 
+ <italic class="italic">S</italic> (i.e., the number of nodes in ecological networks), for two reasons: first, species richness may affect network measures, and second we intended to identify network patterns beyond species richness. 
+ <italic class="italic">T</italic>
+ <sub class="sub">velocity</sub> and 
+ <italic class="italic">P</italic>
+ <sub class="sub">velocity</sub> were log-transformed for all analyses. We estimated the relative importance of each explanatory variable by summing the weights of AIC across all models that consisted of a given set of variables [
+ <xref rid="pone.0157929.ref057" ref-type="bibr" class="xref">57</xref>] using the function 
+ <italic class="italic">importance</italic> in the R package 
+ <italic class="italic">MuMIn</italic>. We also adopted a model-averaging approach [
+ <xref rid="pone.0157929.ref031" ref-type="bibr" class="xref">31</xref>], from which we obtained the averaged models in the top 95% confidence set of models using the 
+ <italic class="italic">model</italic>.
+ <italic class="italic">avg</italic> function in the R package 
+ <italic class="italic">MuMIn</italic>. A global Moran’s test was performed to evaluate spatial autocorrelation in the regression residuals using the function 
+ <italic class="italic">lm</italic>.
+ <italic class="italic">morantest</italic>.
+ <italic class="italic">exact</italic> in the R package 
+ <italic class="italic">spdep</italic> version 0.6–4.
+</p>

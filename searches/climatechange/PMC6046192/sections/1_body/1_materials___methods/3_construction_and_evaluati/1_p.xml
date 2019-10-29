@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To generate huemul distribution models we used the software MaxEnt 3.4.1k (
+ <xref rid="ref-49" ref-type="bibr" class="xref">Phillips, Dudík &amp; Schapire, 2004</xref>; 
+ <xref rid="ref-46" ref-type="bibr" class="xref">Phillips et al., 2017</xref>), which employs a machine learning process using the principle of maximum entropy, working only with presence data, and background (
+ <xref rid="ref-47" ref-type="bibr" class="xref">Phillips, Anderson &amp; Schapire, 2006</xref>). Background is the representation of a potentially accessible area or one likely to be explored by the species (
+ <xref rid="ref-45" ref-type="bibr" class="xref">Peterson et al., 2011</xref>), and is used to contrast the information of presence points, allowing training of the model (
+ <xref rid="ref-35" ref-type="bibr" class="xref">Merow et al., 2016</xref>). To adjust the MaxEnt model, we created a training area through the software R 3.4.0 (
+ <xref rid="ref-54" ref-type="bibr" class="xref">R Core Development Team, 2016</xref>) with the package “ADEHABITAT” (
+ <xref rid="ref-7" ref-type="bibr" class="xref">Calenge, 2007</xref>). Then, a habitat use model was created through the Kernel Utilization Distribution method using all available huemul presence points (
+ <xref rid="ref-37" ref-type="bibr" class="xref">Moorcroft &amp; Lewis, 2006</xref>). Within this background, we sampled 10,000 points to test against presence points in MaxEnt (
+ <xref rid="ref-18" ref-type="bibr" class="xref">Fourcade et al., 2014</xref>). Of 856 presences, MaxEnt only considered 619 points; using 434 (70%) of them to train our model, and 185 (30%) to evaluate it. The model was adjusted using 1,000 iterations, keeping its default characteristics. The result was expressed logistically, giving an approximation of habitat suitability with probability values ranging from 0 (not suitable) to 1 (ideal suitability; 
+ <xref rid="ref-45" ref-type="bibr" class="xref">Peterson et al., 2011</xref>).
+</p>

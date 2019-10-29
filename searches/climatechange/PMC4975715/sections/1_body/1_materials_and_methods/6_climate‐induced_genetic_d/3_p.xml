@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">We tested for the genomic signature of adaptive differentiation in response to simulated climate change and soil‐depth heterogeneity using two outlier analyses. First, we conducted analyses using 
+ <sc class="sc">bayescan</sc> v. 2.1 (Foll &amp; Gaggiotti, 
+ <xref rid="gcb12966-bib-0020" ref-type="ref" class="xref">2008</xref>). This software identifies individual marker loci showing patterns of differentiation consistent with departures from neutrality by modelling a parameter for neutral differentiation shared by all loci, and locus‐specific parameters for differentiation representing the effects of selection. For each locus, the weight of evidence in favour of a response to selection is calculated as an odds ratio of posterior probabilities for models containing either both the parameters or containing only the parameter for neutral differentiation. We ran 
+ <sc class="sc">bayescan</sc> models with a burn‐in period of 50 000 iterations and then extracted samples of size 1000 from MCMC chains, with a thin interval of 1000 iterations (1.05 × 10
+ <sup class="sup">6</sup> iterations in total). The prior odds for the neutral model were set to 10. We set a beta prior for 
+ <italic class="italic">F</italic>
+ <sub class="sub">IS</sub> with mean 0.05 and standard deviation 0.1 to incorporate information regarding the mating system of our study species (Bos 
+ <italic class="italic">et al</italic>., 
+ <xref rid="gcb12966-bib-0006" ref-type="ref" class="xref">1986</xref>; Weibull 
+ <italic class="italic">et al</italic>., 
+ <xref rid="gcb12966-bib-0060" ref-type="ref" class="xref">1991</xref>). This prior incorporates previous evidence for a value of 
+ <italic class="italic">F</italic>
+ <sub class="sub">IS</sub> close to zero, but allows for uncertainty in the precise value and for nonzero 
+ <italic class="italic">F</italic>
+ <sub class="sub">IS</sub> in our study populations. Loci responding to selection were identified when the posterior odds for a response to selection exceeded three (equivalent to ‘substantial’ support for selection as defined by Jeffrey's scale of evidence for Bayes factors; Jeffreys, 
+ <xref rid="gcb12966-bib-0037" ref-type="ref" class="xref">1961</xref>). We tested for responses to climatic selection by undertaking a global analysis including all climatic environments and by constructing pairwise outlier analyses for each combination of climate treatment with control, pooling individuals across plots within treatments (five analyses, each with treatment and control subpopulations). Plot‐level sample sizes (
+ <italic class="italic">n</italic> = 12) were insufficient to support separate, robust outlier analyses for each climate treatment within each block. We also carried out a 
+ <sc class="sc">bayescan</sc> analysis that used experimental blocks as subpopulations, to test for signatures of selection resulting from spatial variation in the environment at BCCIL. The second outlier analysis used logistic regression to investigate associations between the presence–absence phenotypes at individual AFLP loci and climate treatment and soil depth (soil depth could not be modelled in the 
+ <sc class="sc">bayescan</sc> analysis). Logistic regressions were fitted separately for each locus, using the R function 
+ <sc class="sc">bayesglm</sc>, with a logit link (package 
+ <sc class="sc">arm</sc>; Gelman 
+ <italic class="italic">et al</italic>., 
+ <xref rid="gcb12966-bib-0026" ref-type="ref" class="xref">2009</xref>). For each locus, we fitted a treatment × soil depth interaction and block main effect. This model was reduced sequentially, and likelihood ratio tests were used to assess the treatment × soil depth interaction, and the treatment, soil depth and block main effects. To identify loci putatively responding to environmental selection, we estimated the tail area‐based false discovery rate for each locus within each model effect, using the total set of 
+ <italic class="italic">P</italic>‐values across loci within model effects (implemented in R package 
+ <sc class="sc">fdrtool</sc>; Strimmer, 
+ <xref rid="gcb12966-bib-0058" ref-type="ref" class="xref">2008a</xref>,
+ <xref rid="gcb12966-bib-0059" ref-type="ref" class="xref">b</xref>). Model effects for particular loci were considered to show an outlier pattern of genetic differentiation when their corresponding 
+ <italic class="italic">Q</italic>‐value was below 10%.
+</p>

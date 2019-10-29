@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Each 
+ <italic class="italic">Acanthopagrus butcheri</italic> caught in the four estuaries in 1993–96 and six estuaries in 2013–15 was assigned, on the basis of the macroscopic appearance of its gonads, a maturity stage (see Sarre &amp; Potter, 
+ <xref rid="ece34236-bib-0066" ref-type="ref" class="xref">1999</xref>). As insufficient 
+ <italic class="italic">A. butcheri</italic> were caught during the spawning seasons in 2013–15 to calculate the ages and lengths at maturity for 
+ <italic class="italic">A. butcheri</italic> in the Swan River and Wellstead estuaries, these data were augmented by those collected previously for the Swan River Estuary in 2007–11 (Cottingham et al., 
+ <xref rid="ece34236-bib-0023" ref-type="ref" class="xref">2014</xref>) and for the Wellstead Estuary in 2005–07 (Chuwen, 
+ <xref rid="ece34236-bib-0017" ref-type="ref" class="xref">2009</xref>), respectively. Logistic regression analysis was used to determine the probability 
+ <italic class="italic">p</italic> that a female or male of a given age possessed maturing or mature gonads during the spawning season in each estuary and period. The logistic equation 
+ <math id="nlm-math-4" class="math">
+  <mrow class="mrow">
+   <mi class="mi">p</mi>
+   <mo class="mo">=</mo>
+   <mn class="mn">1</mn>
+   <mo stretchy="false" class="mo">/</mo>
+   <mo stretchy="false" class="mo">{</mo>
+   <mn class="mn">1</mn>
+   <mo class="mo">+</mo>
+   <msup class="msup">
+    <mi class="mi">e</mi>
+    <mrow class="mrow">
+     <mo class="mo">−</mo>
+     <mi class="mi">s</mi>
+     <mo stretchy="false" class="mo">(</mo>
+     <mi class="mi">A</mi>
+     <mo class="mo">−</mo>
+     <msub class="msub">
+      <mi class="mi">A</mi>
+      <mn class="mn">50</mn>
+     </msub>
+     <mo stretchy="false" class="mo">)</mo>
+    </mrow>
+   </msup>
+   <mo stretchy="false" class="mo">}</mo>
+  </mrow>
+ </math> was fitted separately to the data for females and males for each estuary and period (1993–96 and 2013–15) using R (R Core Team, 
+ <xref rid="ece34236-bib-0063" ref-type="ref" class="xref">2017</xref>). In this equation, 
+ <italic class="italic">A</italic> is the age of the fish in years and 
+ <italic class="italic">A</italic>
+ <sub class="sub">50</sub> is the age by which 50% of fish have attained maturity. The slope 
+ <italic class="italic">s</italic> was constrained to lie between 0 and 
+ <italic class="italic">s</italic>
+ <sub class="sub">max</sub> = 0.2 years when fitting this model, through reparameterization using a value 
+ <italic class="italic">x</italic>, where 
+ <italic class="italic">s</italic> = 
+ <italic class="italic">s</italic>
+ <sub class="sub">max</sub>/(1 + 
+ <italic class="italic">e</italic>
+ <sup class="sup">−
+  <italic class="italic">x</italic>
+ </sup>). Approximate confidence limits for each 
+ <italic class="italic">A</italic>
+ <sub class="sub">50</sub> were calculated from its profile likelihood (Hilborn &amp; Mangel, 
+ <xref rid="ece34236-bib-0035" ref-type="ref" class="xref">1997</xref>). The resultant curve for each sex in each estuary in 2013–15 was then compared with the corresponding curve for that sex and estuary in 1993–96 by fitting the equation 
+ <math id="nlm-math-5" class="math">
+  <mrow class="mrow">
+   <mi class="mi">p</mi>
+   <mo class="mo">=</mo>
+   <mn class="mn">1</mn>
+   <mo stretchy="false" class="mo">/</mo>
+   <mo stretchy="false" class="mo">{</mo>
+   <mn class="mn">1</mn>
+   <mo class="mo">+</mo>
+   <msup class="msup">
+    <mi class="mi">e</mi>
+    <mrow class="mrow">
+     <mo class="mo">−</mo>
+     <mrow class="mrow">
+      <mo stretchy="false" class="mo">(</mo>
+      <msub class="msub">
+       <mi class="mi">s</mi>
+       <mn class="mn">1</mn>
+      </msub>
+      <mrow class="mrow">
+       <mo stretchy="false" class="mo">(</mo>
+       <mn class="mn">1</mn>
+       <mo class="mo">−</mo>
+       <mi class="mi">T</mi>
+       <mo stretchy="false" class="mo">)</mo>
+      </mrow>
+      <mo class="mo">+</mo>
+      <msub class="msub">
+       <mi class="mi">s</mi>
+       <mn class="mn">2</mn>
+      </msub>
+      <mi class="mi">T</mi>
+      <mo stretchy="false" class="mo">)</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mo stretchy="false" class="mo">(</mo>
+      <mi class="mi">A</mi>
+      <mo class="mo">−</mo>
+      <mrow class="mrow">
+       <mo stretchy="false" class="mo">(</mo>
+       <msub class="msub">
+        <mi class="mi">A</mi>
+        <mn class="mn">50</mn>
+       </msub>
+       <mo class="mo">+</mo>
+       <mi class="mi">D</mi>
+       <mi class="mi">T</mi>
+       <mo stretchy="false" class="mo">)</mo>
+      </mrow>
+      <mo stretchy="false" class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </msup>
+   <mo stretchy="false" class="mo">}</mo>
+  </mrow>
+ </math>, where period 
+ <italic class="italic">T</italic> = 0 for data collected in 1993–96 and 
+ <italic class="italic">T =</italic> 1 for 2013–15, 
+ <italic class="italic">s</italic>
+ <sub class="sub">1</sub> is the slope in 1993–96, 
+ <italic class="italic">s</italic>
+ <sub class="sub">2</sub> is the slope in 2013–15, 
+ <italic class="italic">A</italic>
+ <sub class="sub">50</sub> represents the value for that parameter in 1993–96 and 
+ <italic class="italic">D</italic> is the difference between the age at 50% maturity between the second and first periods, that is, the increase in that age for the later period. Confidence limits for 
+ <italic class="italic">D</italic> were calculated at the 95%, 99% and 99.9% levels using its profile likelihood and examined to determine whether the resulting confidence regions lay above, below or overlapped 0, and thereby assess the probability that 
+ <italic class="italic">A</italic>
+ <sub class="sub">50</sub> for the later period significantly exceeded that for the earlier period. The same approach, but with length substituted for age, with 
+ <italic class="italic">s</italic>
+ <sub class="sub">max</sub> constrained to 10 mm, was used to relate the probability that a female or male possessed mature gonads to the total length (mm) of the fish in each estuary and period and to assess whether the 
+ <italic class="italic">L</italic>
+ <sub class="sub">50</sub> decreased significantly between the two periods.
+</p>

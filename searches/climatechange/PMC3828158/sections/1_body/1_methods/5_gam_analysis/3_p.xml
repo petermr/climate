@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The smooth functions are represented by regression splines, which can be written as linear-combinations of known basis functions of the regressors.
+ <disp-formula id="pntd.0002503.e002" class="disp-formula">
+  <graphic xlink:href="pntd.0002503.e002.jpg" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  <label class="label">(2)</label>
+ </disp-formula>where 
+ <italic class="italic">b
+  <sub class="sub">l</sub>
+ </italic>(.) denotes the basis functions and 
+ <italic class="italic">δ
+  <sub class="sub">l</sub>
+ </italic> the parameters to be estimated. The number of basis functions 
+ <italic class="italic">q</italic> determines the maximum possible flexibility of the relation between 
+ <italic class="italic">X
+  <sub class="sub">jit</sub>
+ </italic> and 
+ <italic class="italic">g</italic>(
+ <italic class="italic">μ
+  <sub class="sub">it</sub>
+ </italic>) (see 
+ <xref ref-type="disp-formula" rid="pntd.0002503.e001" class="xref">Equation 1</xref>); the greater the value of 
+ <italic class="italic">q</italic>, the more flexible is the estimated effect. Here, we used Cubic Regression Splines (CRS) in which the basis functions 
+ <italic class="italic">b
+  <sub class="sub">l</sub>
+ </italic>(.) are constructed by dividing the range of values of the independent variable into segments separated by knots. A local cubic regression is fitted to each segment. The continuity and smoothness at the knots is ensured imposing conditions on the first and second-order derivatives 
+ <xref rid="pntd.0002503-Keele1" ref-type="bibr" class="xref">[35]</xref>. Our estimation method, implemented via Penalized Iteratively Reweighted Least Squares (P-IRLS) is designed to automatically reduce the nonlinearities not supported by the data to simple linear forms 
+ <xref rid="pntd.0002503-Wood1" ref-type="bibr" class="xref">[21]</xref>.
+</p>

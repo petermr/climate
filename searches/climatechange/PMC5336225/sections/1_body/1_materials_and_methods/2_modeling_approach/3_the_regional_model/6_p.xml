@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To test the utility of functional descriptors variables in forecasting future spatial distribution of badger, we combined the six selected variables into two groups, with and without including EVI-derived variables. Then, we built four sets of regional SMDs, two of these sets included EVI-derived, climate and topographic variables and the other two only included climate and topographic variables. Using the global model output, the PAs were weighted only in one set of EVI- and Climate-models, respectively [
+ <xref rid="pone.0172107.ref007" ref-type="bibr" class="xref">7</xref>]. We followed the Gallien et al. approach [
+ <xref rid="pone.0172107.ref007" ref-type="bibr" class="xref">7</xref>] based on six statistical algorithms, i.e. GAM, CTA, GBM, RF, ANN and GLM. A PA datasets of 10000 points were randomly selected, followed by four cross-validation repetitions (70–30% on the presence locations for running and testing models respectively). To deal with the potential sample bias in the presence records (i.e., some sites are more likely to be surveyed than others), we followed the same sampling design for selecting PAs as for selecting presences [
+ <xref rid="pone.0172107.ref033" ref-type="bibr" class="xref">33</xref>]. In this manner, we restricted the choice of PAs inside the buffers of 5 km (size of plots used in the grid sampling by [
+ <xref rid="pone.0172107.ref008" ref-type="bibr" class="xref">8</xref>]) around any of the presence records. Ninety-six different models were finally run, and grouped into four sets: EVI-models with and without weighted PAs (24 models, respectively) and Climate-models with and without weighted PAs (24 models, respectively). Currently, an incompletely coverage of the environmental niche of species is recognized that reduces confidence of the forecasting distributions under climate change scenarios [
+ <xref rid="pone.0172107.ref004" ref-type="bibr" class="xref">4</xref>]. By focusing on a reduced area of the distribution range of badger (e.g., and arid southeast in the Iberian Peninsula), we are ignoring that the species may resist a broader range of environmental conditions, and thereby failing to take into account its ecological flexibility in responding to future climate conditions. To solve this point, we employed the approach supported by [
+ <xref rid="pone.0172107.ref007" ref-type="bibr" class="xref">7</xref>]. According to these authors, weighting the PAs in the regional model using the predictions from the global model enable: decrease the influence of (regional) false absences, validate the true (regional) presences, and let the regional climate, soil and land use refine the regional niche estimation. Thus, we used the global model projections applied to our case study to weight each PA. Where the global model showed a high level of agreement with the PA we attributed a high weight to the PA, and vice versa. The weights were given by the Eq (
+ <xref ref-type="disp-formula" rid="pone.0172107.e001" class="xref">1</xref>): 
+ <disp-formula id="pone.0172107.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0172107.e001.jpg" id="pone.0172107.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mrow class="mrow">
+     <mi mathvariant="italic" class="mi">Weight</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">x</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+     <mo class="mo">=</mo>
+     <mfrac class="mfrac">
+      <mn class="mn">1</mn>
+      <mrow class="mrow">
+       <mn class="mn">1</mn>
+       <mo class="mo">+</mo>
+       <msup class="msup">
+        <mrow class="mrow">
+         <mrow class="mrow">
+          <mo class="mo">(</mo>
+          <mrow class="mrow">
+           <mfrac class="mfrac">
+            <mrow class="mrow">
+             <mi mathvariant="italic" class="mi">projG</mi>
+             <mrow class="mrow">
+              <mo class="mo">(</mo>
+              <mi class="mi">x</mi>
+              <mo class="mo">)</mo>
+             </mrow>
+            </mrow>
+            <mrow class="mrow">
+             <mi mathvariant="italic" class="mi">projG</mi>
+             <mrow class="mrow">
+              <mo class="mo">(</mo>
+              <mi class="mi">x</mi>
+              <mo class="mo">)</mo>
+             </mrow>
+             <mo class="mo">−</mo>
+             <mn class="mn">1</mn>
+            </mrow>
+           </mfrac>
+          </mrow>
+          <mo class="mo">)</mo>
+         </mrow>
+        </mrow>
+        <mn class="mn">2</mn>
+       </msup>
+      </mrow>
+     </mfrac>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula> where Weight(x) is the weight attributed to the PA x, and projG is the global model prediction at the location of x.
+</p>

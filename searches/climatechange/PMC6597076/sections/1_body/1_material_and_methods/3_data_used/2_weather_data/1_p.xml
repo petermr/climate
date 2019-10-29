@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Input data in the forecasting model includes gridded weather data from the European Commission Joint Research Centre (JRC). These data contains meteorological variables from weather stations interpolated on a 25km × 25km grid and are available via the Agri4Cast Data Portal (agri4cast.jrc.ec.europa.eu/DataPortal/). The variables maximum air temperature (°C), minimum air temperature (°C), mean air temperature (°C), sum of precipitation (mm/day) and vapour pressure (hPa) were used in the Forecasting model. Relative humidity (%) was calculated from vapour pressure and saturation vapour pressure based on Tetens equation [
+ <xref rid="pone.0218956.ref020" ref-type="bibr" class="xref">20</xref>]: 
+ <disp-formula id="pone.0218956.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0218956.e001.jpg" id="pone.0218956.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mi class="mi">R</mi>
+    <mi class="mi">H</mi>
+    <mo class="mo">=</mo>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <mi class="mi">V</mi>
+      <mi class="mi">P</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+      <mi class="mi">s</mi>
+     </mrow>
+    </mfrac>
+    <mo class="mo">×</mo>
+    <mn class="mn">100</mn>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula> Where, VP is vapour pressure (converted to kPa) and es is the saturation vapour pressure (kPa). 
+ <disp-formula id="pone.0218956.e002" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0218956.e002.jpg" id="pone.0218956.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M2" class="math">
+    <mi class="mi">e</mi>
+    <mi class="mi">s</mi>
+    <mo class="mo">=</mo>
+    <mn class="mn">6</mn>
+    <mo class="mo">.</mo>
+    <mn class="mn">1078</mn>
+    <mo class="mo">×</mo>
+    <msup class="msup">
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mfrac class="mfrac">
+       <mrow class="mrow">
+        <mn class="mn">17</mn>
+        <mo class="mo">.</mo>
+        <mn class="mn">269</mn>
+        <mo class="mo">×</mo>
+        <mi class="mi">T</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mn class="mn">237</mn>
+        <mo class="mo">.</mo>
+        <mn class="mn">3</mn>
+        <mo class="mo">+</mo>
+        <mi class="mi">T</mi>
+       </mrow>
+      </mfrac>
+     </mrow>
+    </msup>
+   </math>
+  </alternatives>
+  <label class="label">(2)</label>
+ </disp-formula> Where, es is saturation vapour pressure in kPa, T is temperature in °C. As baseline weather data the years 2005–2017 were used [
+ <xref rid="pone.0218956.ref021" ref-type="bibr" class="xref">21</xref>]. This period was chosen so as to have the most recent data, but sufficient years to even out potential anomalies.
+</p>

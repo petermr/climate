@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par24" class="p">To assess the habitat suitability of the species, we fitted four ENM methods, including generalized linear models (GLM), generalized boosting models (GBM), surface range envelop (SRE, or commonly called as BIOCLIM), and maximum entropy (MaxEnt) and combined them into a final ensemble model using 
+ <italic class="italic">biomod2</italic> package
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR84" class="xref">84</xref>
+ </sup>. Using the four methods allowed us to combine simple regression (GLM) and envelop (BIOCLIM) models and complex machine learning (MaxEnt, GBM) models
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR85" class="xref">85</xref>
+ </sup> and thus to assess uncertainties arising from the choice of methods. For GLM we used simple and quadratic terms and stepwise selection procedure based on Akaike Information Criteria (AIC) to fit the best model. GBM was set to allow up to 2500 trees, and we set the learning rate to 0.001 and the bag fraction to 0.5. To conduct SRE the species envelop was set up with a quantile 0.05% to avoid the most extreme values. For MaxEnt all feature types (linear, quadratic, product, threshold and hinge) were allowed and a maximum iteration of 200 was used. For all models we weighted presences and pseudo-absences inverse-proportional so as to give them equal weights and the models’ predictive performance was evaluated by means of a repeated (10×) split-sample test (75% training, 25% evaluation) for which we calculated the AUC and the TSS. The final ensemble model was obtained by weighted-averaging the individual models proportionally to their AUC scores
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR84" class="xref">84</xref>
+ </sup>.
+</p>

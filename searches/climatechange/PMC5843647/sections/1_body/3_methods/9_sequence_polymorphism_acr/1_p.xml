@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par39" class="p">In order to assess footprints of selection in different gene repertoires, we quantified nucleotide diversity (
+ <italic class="italic">π</italic>) and Tajima’s D for each transcript expressed in the abdomen. We used angsd
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR71" class="xref">71</xref>
+ </sup> to calculate pairwise nucleotide diversity 
+ <italic class="italic">π</italic> and Tajima’s D from the abdomen RNA-seq reads (aligned using Bowtie2 v. 2.2.3 to our Evigene-enriched reference transcriptome), restricting analyses to the coding sequence of each transcript. First, we used the angsd doSaf and realSFS commands to calculate genotype likelihoods and the folded site frequency spectrum from the bam files. Second, we used this site frequency spectrum as prior to calculate diversity measures (e.g. 
+ <italic class="italic">π</italic>, Tajima’s D), using the angsd commands doThetas followed by thetaStat make_bed and do_stat. This yielded diversity measures for 14,907 transcripts that were also expressed in the abdomen. Differences in Tajima’s D and 
+ <italic class="italic">π</italic> between different gene repertoires were tested using two-sided Mann–Whitney 
+ <italic class="italic">U</italic>-tests, implementing random permutations if sample sizes varied substantially between groups (with 1000 random draws of same sample size as the test group from all genes in the transcriptome).
+</p>

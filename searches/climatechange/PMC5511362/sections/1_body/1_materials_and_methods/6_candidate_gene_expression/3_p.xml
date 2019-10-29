@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Gene‐specific primers were designed based on sequence information from the three‐spined stickleback genome assembly (ensembl v82; 
+ <ext-link ext-link-type="uri" xlink:href="http://www.ensembl.org/Gasterosteus_acuelatus/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">www.ensembl.org/Gasterosteus_acuelatus/</ext-link>). Most similar sequences were searched using Basic Local Assembly Search Tool to confirm the annotation of the sequences. Primers were synthesized by Sigma‐Aldrich Quimica (Madrid, Spain). The efficiency of gene‐specific primers was checked to ensure similar values in amplification. Details on primer sequences, amplicon sizes, melting temperatures (Tm) and efficiency are provided in Table 
+ <xref rid="eva12487-sup-0003" ref-type="supplementary-material" class="xref">S1</xref>. Efficiency of each amplicon was estimated from the slopes of the amplification curves for each qPCR and averaged for each gene using LinRegPCR software (Robledo et al., 
+ <xref rid="eva12487-bib-0066" ref-type="ref" class="xref">2014</xref>; Ruijter et al., 
+ <xref rid="eva12487-bib-0067" ref-type="ref" class="xref">2009</xref>). Selected primer was considered acceptable when the estimated efficiency was between 1.8 and 2.0 and the melting curve presented one single peak corresponding to the denaturation of a single PCR product. Elongation factor 1 alpha gene (
+ <italic class="italic">EF1a</italic>) was used as a reference gene. 
+ <italic class="italic">EF1a</italic> has been identified as a stable housekeeping gene in a previous study of the three‐spined stickleback (Orczewska, Hartleben, &amp; O'Brien, 
+ <xref rid="eva12487-bib-0056" ref-type="ref" class="xref">2010</xref>), and our transcriptome results from this study also showed that this gene was not differentially expressed between the experimental and control males in both brain and liver tissues (all, adj‐
+ <italic class="italic">p </italic>&gt; .991). The level of expression was measured in a 20 μl reaction volume, containing 0.6 μl of each primer (10 μM), 10 μl of Luminaris Color HiGreen qPCR Master Mix, high ROX (Thermo Fisher Scientific) and 1 μl of cDNA (2 μl in the case of 
+ <italic class="italic">smtlb</italic> due to the low expression level). The cycling condition was set to 95°C for 10 min, followed by 40 cycles of 95°C for 15 s and 60°C for 1 min. All reactions were performed in duplicate. We analysed relative gene expression using generalized linear mixed models with a Poisson‐lognormal distribution using MCMC.qpcr package (Matz, Wright, &amp; Scott, 
+ <xref rid="eva12487-bib-0048" ref-type="ref" class="xref">2013</xref>) implemented in R v.3.2.2. Briefly, Cqs of each well were transformed into molecule counts taking the efficiency of each amplicon into account and analysed in a multivariate “informed” model, assuming 
+ <italic class="italic">EF1a</italic> as a stable reference gene. An important advantage of mixed modelling in the analysis of mRNA transcripts is incorporating important sources of variation as random effects in the model (Matz et al., 
+ <xref rid="eva12487-bib-0048" ref-type="ref" class="xref">2013</xref>). Thus, variation in quality and quantity of biological material among samples and inter‐run variation were taken into account in the model by including sample and plate as random effects. Family identity was also included as an additional random effect. In each model, we fitted the Poisson‐lognormal rate of the transcript count for gene 
+ <italic class="italic">g</italic> under treatment 
+ <italic class="italic">i</italic>, family 
+ <italic class="italic">j</italic>, plate k and sample 
+ <italic class="italic">n</italic> as: ψ
+ <sub class="sub">
+  <italic class="italic">gijkn</italic>
+ </sub>
+ <italic class="italic"> </italic>= 
+ <italic class="italic">I</italic>
+ <sub class="sub">
+  <italic class="italic">g</italic>
+ </sub>
+ <italic class="italic"> + B</italic>
+ <sub class="sub">
+  <italic class="italic">ig</italic>
+ </sub>
+ <italic class="italic"> + t</italic>
+ <sub class="sub">
+  <italic class="italic">n</italic>
+ </sub>
+ <italic class="italic"> + a</italic>
+ <sub class="sub">
+  <italic class="italic">jg</italic>
+ </sub>+ 
+ <italic class="italic">v</italic>
+ <sub class="sub">
+  <italic class="italic">kg</italic>
+ </sub>
+ <italic class="italic"> + s</italic>
+ <sub class="sub">
+  <italic class="italic">ng</italic>
+ </sub>. 
+ <italic class="italic">I</italic>
+ <sub class="sub">
+  <italic class="italic">g</italic>
+ </sub> is the gene‐specific intercept and accounts for different levels of expression between genes. 
+ <italic class="italic">B</italic>
+ <sub class="sub">
+  <italic class="italic">ig</italic>
+ </sub> is the fixed effect of treatment 
+ <italic class="italic">i</italic> on gene 
+ <italic class="italic">g,</italic> that is gene‐specific effects of experimental treatments. Gene‐specific random effects include biological replicate 
+ <italic class="italic">n</italic> (
+ <italic class="italic">t</italic>
+ <sub class="sub">
+  <italic class="italic">n</italic>
+ </sub>), accounting for the variation in quantity of biological material among samples, family 
+ <italic class="italic">j</italic> (
+ <italic class="italic">a</italic>
+ <sub class="sub">
+  <italic class="italic">jg</italic>
+ </sub>), plate k (
+ <italic class="italic">v</italic>
+ <sub class="sub">
+  <italic class="italic">kg</italic>
+ </sub>) and residual variation in the biological replicate 
+ <italic class="italic">n</italic> (
+ <italic class="italic">s</italic>
+ <sub class="sub">
+  <italic class="italic">ng</italic>
+ </sub>), that is the unexplained variation due to the differences between technical replicates.
+</p>

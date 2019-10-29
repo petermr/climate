@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The 
+ <italic class="italic">phyloseq</italic> package (v. 1.19.1) was used to calculate relative abundance at different taxonomic levels (i.e., class and genus). For all other statistical analyses, the raw counts were rarefied by randomly down-sampling to the smallest library size (59,752 reads). OTUs including less than five reads in the entire data set were excluded for further analyses. Principal coordinate analysis (PCoA) was applied to visualize variance in the structure of the bacterial communities based on pairwise Bray–Curtis dissimilarities between samples (function 
+ <italic class="italic">cmdscale</italic>, 
+ <italic class="italic">vegan</italic> package, v. 2.4.3). A generalized linear model (GLM) (
+ <xref rid="B90" ref-type="bibr" class="xref">Warton et al., 2012</xref>) was applied to identify the bacterial taxa significantly contributing to the differences in bacterial community composition. The GLM was carried out in pairwise comparisons between the treatments and over time (sampling occasions) at both class and genus levels using the 
+ <italic class="italic">mvabund</italic> package (v. 3.12.3). The 
+ <italic class="italic">p</italic>-values were adjusted using a resampling-based implementation of Holm’s step-down multiple testing procedure, as implemented in 
+ <xref rid="B89" ref-type="bibr" class="xref">Wang et al. (2012)</xref>. The likelihood ratio (LR) test statistics was employed to test the hypotheses of no treatment and no temporal effects. In addition, Tukey’s Honest Significant Differences tests were applied on the OTUs found at week 5 to identify significant differences in OTU composition between the different treatments. In order to focus this approach, OTUs containing less than 100 reads in total (entire data set) were discarded for this analysis. Pearson’s correlation analyses were carried out using the function 
+ <italic class="italic">rcorr</italic> in 
+ <italic class="italic">Hmisc</italic> package (v. 4.0.3) to investigate possible linear dependence between concentration of pollutants and abundance of relevant OTUs from GLM test, as well as between the different environmental factors.
+</p>
