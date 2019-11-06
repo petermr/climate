@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">For a given grid cell, the native distribution of residuals (temperature or precipitation) over time can be captured with an empirical cumulative distribution function (CDF), 
+ <italic class="italic">F</italic>(
+ <italic class="italic">x</italic>) (
+ <xref ref-type="fig" rid="pone.0223542.g003" class="xref">Fig 3</xref>, left), which can then be used to return the quantile values corresponding to sampled residuals, 
+ <italic class="italic">F</italic>(
+ <italic class="italic">residual</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>) = 
+ <italic class="italic">quantile</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>. These sampled quantile values are used to calculate the corresponding values sampled from the standard normal distribution, 
+ <italic class="italic">N</italic>(0, 1) (step 4 of the 
+ <monospace class="monospace">fldgen v2.0</monospace> algorithm summary in 
+ <xref rid="pone.0223542.t001" ref-type="table" class="xref">Table 1</xref>). Composing these steps leads to an increasing, continuous, invertible mapping between the native distribution of residuals in the grid cell and 
+ <italic class="italic">N</italic>(0, 1) (
+ <xref ref-type="fig" rid="pone.0223542.g003" class="xref">Fig 3</xref>, right), represented by arrow 2 of 
+ <xref ref-type="fig" rid="pone.0223542.g001" class="xref">Fig 1</xref>.
+</p>

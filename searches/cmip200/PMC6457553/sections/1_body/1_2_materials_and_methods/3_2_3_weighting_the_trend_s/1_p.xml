@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The trend submodel weighting is implemented following prior work, and full details are provided there [
+ <xref rid="pone.0214535.ref009" ref-type="bibr" class="xref">9</xref>]. Essentially, this method is BMA that also considers the uncertainty due to model error, and uncertainty in statistical properties of data-model residuals. Here, we consider 
+ <italic class="italic">k</italic> competing statistical models 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">T</italic>,
+  <italic class="italic">i</italic>
+ </sub> for raw observations 
+ <bold class="bold">
+  <italic class="italic">y’</italic>
+ </bold>. We stress that statistical and dynamical models are conceptually related: i.e., if the statistical model 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">T</italic>,
+  <italic class="italic">i</italic>
+ </sub> is true, it implies that the associated 
+ <italic class="italic">i</italic>th dynamical model correctly represents the trend in the system. Each 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">T</italic>,
+  <italic class="italic">i</italic>
+ </sub> is a hierarchical statistical model that connects modelled deterministic trend from the 
+ <italic class="italic">i</italic>th model during the calibration period 
+ <bold class="bold">
+  <italic class="italic">x</italic>
+ </bold>
+ <sub class="sub">
+  <bold class="bold">
+   <italic class="italic">i</italic>
+  </bold>
+ </sub> to real system trend 
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold>, and then the system trend to actual observations 
+ <bold class="bold">
+  <italic class="italic">y'</italic>
+ </bold> (
+ <xref ref-type="disp-formula" rid="pone.0214535.e010" class="xref">Eq 6</xref>): 
+ <disp-formula id="pone.0214535.e010" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e010.jpg" id="pone.0214535.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M10" class="math">
+    <mrow class="mrow">
+     <mo class="mo">{</mo>
+     <mtable class="mtable">
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <mrow class="mrow">
+          <mi mathvariant="bold-italic" class="mi">y</mi>
+         </mrow>
+         <mo class="mo">=</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">x</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">f</mi>
+           <mi mathvariant="bold-italic" class="mi">ε</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">D</mi>
+          </mrow>
+         </msub>
+         <mspace width="4pt" class="mspace"/>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <maligngroup class="maligngroup"/>
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">'</mi>
+          </mrow>
+         </msup>
+         <mo class="mo">=</mo>
+         <mi mathvariant="bold-italic" class="mi">y</mi>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">ε</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">N</mi>
+           <mi mathvariant="bold-italic" class="mi">V</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(6)</label>
+ </disp-formula> where 
+ <italic class="italic">f</italic>
+ <bold class="bold">
+  <italic class="italic">ε</italic>
+ </bold>
+ <sub class="sub">
+  <bold class="bold">
+   <italic class="italic">D</italic>
+  </bold>
+ </sub> is random discrepancy (long-term model error), and 
+ <italic class="italic">
+  <bold class="bold">ε</bold>
+  <sub class="sub">
+   <bold class="bold">NV</bold>
+  </sub>
+ </italic> is random internal variability (as well as short-term observational error).
+</p>

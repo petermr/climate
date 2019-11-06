@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par22" class="p">We first test the method using one-at-a-time observation system simulation experiments (Methods section). Here, we pretend each of the models is correct and use its output as observations one-at-a-time. We then exclude the true model from the model set and calculate the pdf for 
+ <italic class="italic">z</italic>* (GMST change to melt), which we compare to actual projections from the true model (Supplementary Figs. 
+ <xref rid="MOESM1" ref-type="media" class="xref">2</xref> and 
+ <xref rid="MOESM1" ref-type="media" class="xref">3</xref>). In these experiments we choose the deterministic error expansion factor 
+ <italic class="italic">f</italic> = 3 such that the method gives correct coverage of the 90% posterior credible intervals for 
+ <italic class="italic">z</italic>*. We then constrain all available models with real observations to make actual projections of GMST change to melt. We compare the method to the standard BMA, which does not account for the non-exclusive terms. To do that, we simply perform weighted sampling from conditional GMST change pdfs given each model being correct 
+ <italic class="italic">p</italic>(
+ <italic class="italic">z</italic>*|
+ <italic class="italic">H</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>) using our MCMC chain. We perform five projection experiments. These experiments explore the sensitivity of the results to observational datasets, and to the natural fraction of the recent SIE decline. The range of natural fractions considered here is roughly consistent with prior model-based studies which place it between 5 and 50%
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR39" class="xref">39</xref>–
+  <xref ref-type="bibr" rid="CR41" class="xref">41</xref>
+ </sup>. HadISST_r51_40p.nat uses 1979–2017 HadISST data for the SIE, the 51st realization of the HadCRUT4 temperature for the calculation of sea ice sensitivity over years 1979–2017, and assumes that 40% of the 1979–2017 SIE decline was natural. HadISST_r51_anthro experiment is exactly the same except is assumes that all of the recent decline was anthropogenic. NSIDC_r47_20p.nat uses NSIDC SIE observations, 47th realization of temperature observations, and assumes a natural contribution to the ice decline of 20%. NSIDC_r91_40p.nat uses NSIDC observations, the 91st realization of temperature observations, and assumes the natural contribution to the decline of 40%. There are large uncertainties regarding the magnitude of the true ice sensitivity given the short length of the observational records, and regarding the cause of the recent SIE decline
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR31" class="xref">31</xref>,
+  <xref ref-type="bibr" rid="CR35" class="xref">35</xref>,
+  <xref ref-type="bibr" rid="CR42" class="xref">42</xref>
+ </sup>. One way to sidestep the problem is to just use the mean SIE constraint for the shorter 1979–2004 period which is not as severely affected by the recent melt. This motivates the NSIDC_mean_only experiment. This experiment uses NSIDC observations for SIE for years 1979–2004, and no SIE sensitivity constraint (see Eq. (
+ <xref rid="Equ18" ref-type="" class="xref">18</xref>) for the formula for the pdf of GMST change for this experiment). To make sure the expansion factor 
+ <italic class="italic">f</italic> = 3 is reasonable for this experiment, we perform observational system simulation experiments using the 1979–2004 calibration period, and no SIE sensitivity constraint. Supplementary Figures 
+ <xref rid="MOESM1" ref-type="media" class="xref">4</xref> and 
+ <xref rid="MOESM1" ref-type="media" class="xref">5</xref> provide validation results for these experiments, and confirm that in this case 
+ <italic class="italic">f</italic> = 3 provides reasonable coverage of the 90% posterior credible interval.
+</p>

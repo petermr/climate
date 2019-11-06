@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par38" class="p">Our work is subject to important caveats. First, joint/combination model weights are dependent only on model and observed output in a low-dimensional space. As such, they do not explicitly consider model families
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR13" class="xref">13</xref>
+ </sup>, or sharing model code between institutions. While similar model output from unrelated models can result from subtle model dependencies such as sharing ideas or calibration datasets, it may also arise due to a random realization of internal variability
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR48" class="xref">48</xref>
+ </sup>. Our code partially accounts for this by considering the uncertainty in the present-day model and observed SIE means. It has been previously shown, that when spatial information is considered, models from the same institution often produce similar output
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR11" class="xref">11</xref>,
+  <xref ref-type="bibr" rid="CR13" class="xref">13</xref>
+ </sup>. Hence, incorporating such information can be considered in future work. Dimension reduction methods used previously may constitute one useful avenue for action
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR11" class="xref">11</xref>,
+  <xref ref-type="bibr" rid="CR49" class="xref">49</xref>
+ </sup>. Second, we consider only two observational SIE datasets
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR50" class="xref">50</xref>–
+  <xref ref-type="bibr" rid="CR52" class="xref">52</xref>
+ </sup>. However, another popular dataset, Meier dataset, is based on the same satellite observations as NSIDC from year 1979
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR50" class="xref">50</xref>,
+  <xref ref-type="bibr" rid="CR53" class="xref">53</xref>
+ </sup>. Third, we do not consider the uncertainty in the autocorrelation, or standard deviation of the interannual present-day September SIE variability. While considering such uncertainty may present a substantial improvement, we refrain from doing this to drastically reduce the computational cost and complexity. Considering these uncertainties is subject of future work. Fourth, we use only a subset of available models and do not make use of multi-parameter model ensembles, or intermediate complexity Earth System models. Fifth, our tolerances for sea ice sensitivity are the same for all models, and do not account for the different internal variability in different models
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR54" class="xref">54</xref>
+ </sup>. Ideally, this information should be incorporated in the sea ice sensitivity constraint. Note that this is not an issue with the mean SIE constraint, as there we sample from the pdfs of unknown population means. These pdfs take into account different internal variabilities of different models, e.g., if a particular model has a high internal variability this is expected to result in a broader pdf for the population mean of the SIE time series. Finally, our decision to formulate hypothesis tolerances using half-normal prior distributions is clearly subjective. We have chosen to make tolerances uncertain parameters because using fixed values resulted in flat pdfs with sharp cutoffs for a projection variable of interest in method validation experiments. We justify the prior distributions post-hoc by the fact that such priors lead to reasonable projection pdfs and model weights that gradually taper off further away from observations (Supplementary Figure 8). More rigorous determination of appropriate tolerance priors needs to be explored in future work.
+</p>

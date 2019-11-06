@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par20" class="p">The historical simulation of monthly convective (PRECC) and total precipitation (PRECT) dataset from 33 CMIP5 and AMIP5 models
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR39" class="xref">39</xref>
+ </sup> were downloaded from the Earth System Grid Federation (ESGF; 
+ <ext-link ext-link-type="uri" xlink:href="https://esgf-node.llnl.gov/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://esgf-node.llnl.gov/</ext-link>). We use the r1i1p1 ensemble member for all CMIP5 and AMIP5 models, since some models of CMIP5 and AMIP5 do not provide the individual convective and large-scale components for other ensemble members. Observed monthly total precipitation for 23 years (1983–2005) are from PERSIANN-CDR dataset, which is a high-resolution (0.25° × 0.25°) long-term satellite and observation merged precipitation dataset, developed by the Centre for Hydrometeorology and Remote Sensing (CHRS) at University of California Irvine (
+ <ext-link ext-link-type="uri" xlink:href="https://chrsdata.eng.uci.edu/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://chrsdata.eng.uci.edu/</ext-link>; Nguyen 
+ <italic class="italic">et al</italic>.
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR40" class="xref">40</xref>
+ </sup>). The PERSIANN-CDR dataset is first bilinearly interpolated to the 0.5° × 0.5° grid of TRMM 3A12 (1998–2013; 0.5 × 0.5 degree)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR41" class="xref">41</xref>
+ </sup>, and then the corresponding convective and large-scale precipitation components are computed from total precipitation, by using Eq. (
+ <xref rid="Equ1" ref-type="" class="xref">1</xref>). The large-scale precipitation (PRECL) dataset for observation and for model simulations are computed by subtracting the convective components from the total precipitation as shown in Eq. (
+ <xref rid="Equ2" ref-type="" class="xref">2</xref>). Monthly zonal (u) and meridional (v) wind dataset (1983–2005) at 850 hPa are used from ECMWF (ERA-I) reanalysis (
+ <ext-link ext-link-type="uri" xlink:href="https://apps.ecmwf.int/datasets/" class="ext-link" xmlns:xlink="http://www.w3.org/1999/xlink">https://apps.ecmwf.int/datasets/</ext-link>
+ <underline class="underline">)</underline>. The domain used for our analysis is 0–360°E; 40°S–40°N.
+ <disp-formula id="Equ1" class="disp-formula">
+  <label class="label">1</label>
+  <alternatives class="alternatives">
+   <tex-math id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$PRECC\,(PERSIANN\_CDR)=PRECT(PERSIANN\_CDR)\ast (\,\frac{PRECC\,(TRMM)}{PRECT\,(TRMM)})$$\end{document}</tex-math>
+   <math id="M2" display="block" class="math">
+    <mi class="mi">P</mi>
+    <mi class="mi">R</mi>
+    <mi class="mi">E</mi>
+    <mi class="mi">C</mi>
+    <mi class="mi">C</mi>
+    <mspace width=".25em" class="mspace"/>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mi class="mi">P</mi>
+      <mi class="mi">E</mi>
+      <mi class="mi">R</mi>
+      <mi class="mi">S</mi>
+      <mi class="mi">I</mi>
+      <mi class="mi">A</mi>
+      <mi class="mi">N</mi>
+      <mi class="mi">N</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">C</mi>
+      <mi class="mi">D</mi>
+      <mi class="mi">R</mi>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+    <mo class="mo">=</mo>
+    <mi class="mi">P</mi>
+    <mi class="mi">R</mi>
+    <mi class="mi">E</mi>
+    <mi class="mi">C</mi>
+    <mi class="mi">T</mi>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mi class="mi">P</mi>
+      <mi class="mi">E</mi>
+      <mi class="mi">R</mi>
+      <mi class="mi">S</mi>
+      <mi class="mi">I</mi>
+      <mi class="mi">A</mi>
+      <mi class="mi">N</mi>
+      <mi class="mi">N</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">C</mi>
+      <mi class="mi">D</mi>
+      <mi class="mi">R</mi>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+    <mo class="mo">∗</mo>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mspace width=".25em" class="mspace"/>
+      <mfrac class="mfrac">
+       <mrow class="mrow">
+        <mi class="mi">P</mi>
+        <mi class="mi">R</mi>
+        <mi class="mi">E</mi>
+        <mi class="mi">C</mi>
+        <mi class="mi">C</mi>
+        <mspace width=".25em" class="mspace"/>
+        <mrow class="mrow">
+         <mo stretchy="true" class="mo">(</mo>
+         <mrow class="mrow">
+          <mi class="mi">T</mi>
+          <mi class="mi">R</mi>
+          <mi class="mi">M</mi>
+          <mi class="mi">M</mi>
+         </mrow>
+         <mo stretchy="true" class="mo">)</mo>
+        </mrow>
+       </mrow>
+       <mrow class="mrow">
+        <mi class="mi">P</mi>
+        <mi class="mi">R</mi>
+        <mi class="mi">E</mi>
+        <mi class="mi">C</mi>
+        <mi class="mi">T</mi>
+        <mspace width=".25em" class="mspace"/>
+        <mrow class="mrow">
+         <mo stretchy="true" class="mo">(</mo>
+         <mrow class="mrow">
+          <mi class="mi">T</mi>
+          <mi class="mi">R</mi>
+          <mi class="mi">M</mi>
+          <mi class="mi">M</mi>
+         </mrow>
+         <mo stretchy="true" class="mo">)</mo>
+        </mrow>
+       </mrow>
+      </mfrac>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+   </math>
+   <graphic xlink:href="41598_2019_45907_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ2" class="disp-formula">
+  <label class="label">2</label>
+  <alternatives class="alternatives">
+   <tex-math id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$PRECL=(PRECT-PRECC)$$\end{document}</tex-math>
+   <math id="M4" display="block" class="math">
+    <mi class="mi">P</mi>
+    <mi class="mi">R</mi>
+    <mi class="mi">E</mi>
+    <mi class="mi">C</mi>
+    <mi class="mi">L</mi>
+    <mo class="mo">=</mo>
+    <mo stretchy="false" class="mo">(</mo>
+    <mi class="mi">P</mi>
+    <mi class="mi">R</mi>
+    <mi class="mi">E</mi>
+    <mi class="mi">C</mi>
+    <mi class="mi">T</mi>
+    <mo class="mo">−</mo>
+    <mi class="mi">P</mi>
+    <mi class="mi">R</mi>
+    <mi class="mi">E</mi>
+    <mi class="mi">C</mi>
+    <mi class="mi">C</mi>
+    <mo stretchy="false" class="mo">)</mo>
+   </math>
+   <graphic xlink:href="41598_2019_45907_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>To compute inter-model similarity between the CMIP5 models, we follow a similar method as that used by Pennell and Reichler
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR3" class="xref">3</xref>
+ </sup> and Knutti 
+ <italic class="italic">et al</italic>.
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR8" class="xref">8</xref>
+ </sup> which are widely accepted methods for model genealogy studies. Thus, we first compute the normalized bias (
+ <italic class="italic">e</italic>
+ <sub class="sub">
+  <italic class="italic">n</italic>,
+  <italic class="italic">m</italic>
+ </sub>) in the mean annual total, convective, and large-scale precipitation for the CMIP5 models by using Eq. (
+ <xref rid="Equ3" ref-type="" class="xref">3</xref>)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR3" class="xref">3</xref>
+ </sup>:
+ <disp-formula id="Equ3" class="disp-formula">
+  <label class="label">3</label>
+  <alternatives class="alternatives">
+   <tex-math id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{e}_{n,m}=({f}_{n,m}-{o}_{n})/{\sigma }_{n}\\ n=1,2,3,\,\ldots \,\mathrm{..},\,N;\,m=1,2,3,\ldots .\,,M\end{array}$$\end{document}</tex-math>
+   <math id="M6" display="block" class="math">
+    <mtable columnalign="left" class="mtable">
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi class="mi">e</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">n</mi>
+         <mo class="mo">,</mo>
+         <mi class="mi">m</mi>
+        </mrow>
+       </msub>
+       <mo class="mo">=</mo>
+       <mo stretchy="false" class="mo">(</mo>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi class="mi">f</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">n</mi>
+         <mo class="mo">,</mo>
+         <mi class="mi">m</mi>
+        </mrow>
+       </msub>
+       <mo class="mo">−</mo>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi class="mi">o</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">n</mi>
+        </mrow>
+       </msub>
+       <mo stretchy="false" class="mo">)</mo>
+       <mo class="mo">/</mo>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi class="mi">σ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">n</mi>
+        </mrow>
+       </msub>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <mi class="mi">n</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">2</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">3</mn>
+       <mo class="mo">,</mo>
+       <mspace width=".25em" class="mspace"/>
+       <mi class="mi">…</mi>
+       <mspace width="-.15em" class="mspace"/>
+       <mn class="mn">..</mn>
+       <mo class="mo">,</mo>
+       <mspace width=".25em" class="mspace"/>
+       <mi class="mi">N</mi>
+       <mo class="mo">;</mo>
+       <mspace width=".25em" class="mspace"/>
+       <mi class="mi">m</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">2</mn>
+       <mo class="mo">,</mo>
+       <mn class="mn">3</mn>
+       <mo class="mo">,</mo>
+       <mi class="mi">…</mi>
+       <mo class="mo">.</mo>
+       <mspace width="-.25em" class="mspace"/>
+       <mo class="mo">,</mo>
+       <mi class="mi">M</mi>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41598_2019_45907_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where ‘N’ and ‘M’ are the total number of grid points and total number of models used for this study, symbol ‘o’, ‘f’, and ‘
+ <italic class="italic">σ</italic>’ represent observation, model output, and observed standard deviation (
+ <italic class="italic">σ</italic>) for any variable. For example, the normalized bias for a particular model (m) can be written from Eq. (
+ <xref rid="Equ3" ref-type="" class="xref">3</xref>) as 
+ <inline-formula id="IEq1" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M7" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${e}_{m}=({e}_{1,m},\,{e}_{2,m},\ldots \ldots ,{e}_{N-1,m},\,{e}_{N,m})$$\end{document}</tex-math>
+   <math id="M8" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">m</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mo stretchy="false" class="mo">(</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">1</mn>
+      <mo class="mo">,</mo>
+      <mi class="mi">m</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">,</mo>
+    <mspace width=".25em" class="mspace"/>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">2</mn>
+      <mo class="mo">,</mo>
+      <mi class="mi">m</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">,</mo>
+    <mi class="mi">…</mi>
+    <mi class="mi">…</mi>
+    <mo class="mo">,</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">N</mi>
+      <mo class="mo">−</mo>
+      <mn class="mn">1</mn>
+      <mo class="mo">,</mo>
+      <mi class="mi">m</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">,</mo>
+    <mspace width=".25em" class="mspace"/>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">N</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">m</mi>
+     </mrow>
+    </msub>
+    <mo stretchy="false" class="mo">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_45907_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula>. Subsequently, we compute the common biain total, convective, and large-scale precipitation from the multi-model mean bias 
+ <inline-formula id="IEq2" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$(\bar{e})$$\end{document}</tex-math>
+   <math id="M10" class="math">
+    <mo stretchy="false" class="mo">(</mo>
+    <mover accent="true" class="mover">
+     <mi class="mi">e</mi>
+     <mo class="mo">¯</mo>
+    </mover>
+    <mo stretchy="false" class="mo">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_45907_Article_IEq2.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula>by using Eq. (
+ <xref rid="Equ4" ref-type="" class="xref">4</xref>)
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR3" class="xref">3</xref>
+ </sup>.
+ <disp-formula id="Equ4" class="disp-formula">
+  <label class="label">4</label>
+  <alternatives class="alternatives">
+   <tex-math id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar{e}=(\frac{1}{M})\sum _{m=1}^{m=M}{e}_{m}$$\end{document}</tex-math>
+   <math id="M12" display="block" class="math">
+    <mover accent="true" class="mover">
+     <mi class="mi">e</mi>
+     <mo class="mo">¯</mo>
+    </mover>
+    <mo class="mo">=</mo>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">(</mo>
+     <mrow class="mrow">
+      <mfrac class="mfrac">
+       <mn class="mn">1</mn>
+       <mi class="mi">M</mi>
+      </mfrac>
+     </mrow>
+     <mo stretchy="true" class="mo">)</mo>
+    </mrow>
+    <munderover class="munderover">
+     <mo class="mo">∑</mo>
+     <mrow class="mrow">
+      <mi class="mi">m</mi>
+      <mo class="mo">=</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">m</mi>
+      <mo class="mo">=</mo>
+      <mi class="mi">M</mi>
+     </mrow>
+    </munderover>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">m</mi>
+     </mrow>
+    </msub>
+   </math>
+   <graphic xlink:href="41598_2019_45907_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

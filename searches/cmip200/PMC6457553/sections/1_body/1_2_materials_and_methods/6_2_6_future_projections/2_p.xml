@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The exact decomposition method for each dataset is listed in Section 3. Next, we consider the following statistical model for dynamical system time-series projections (all quantities are vectors): 
+ <disp-formula id="pone.0214535.e035" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e035.jpg" id="pone.0214535.e035g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M35" class="math">
+    <msup class="msup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">y</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">'</mi>
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msup>
+    <mo class="mo">=</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">+</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">b</mi>
+     </mrow>
+     <mrow class="mrow"/>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">+</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">ε</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">S</mi>
+      <mo class="mo">,</mo>
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">,</mo>
+   </math>
+  </alternatives>
+  <label class="label">(16)</label>
+ </disp-formula> where 
+ <bold class="bold">y</bold>
+ <italic class="italic">'</italic>
+ <sup class="sup">(
+  <bold class="bold">
+   <italic class="italic">f</italic>
+  </bold>)
+ </sup> is the projection time series, 
+ <inline-formula id="pone.0214535.e036" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e036.jpg" id="pone.0214535.e036g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M36" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula> is 
+ <italic class="italic">i</italic>th model trend output from 
+ <xref ref-type="disp-formula" rid="pone.0214535.e034" class="xref">Eq (15)</xref>, 
+ <bold class="bold">
+  <italic class="italic">b</italic>
+ </bold>
+ <sup class="sup">(
+  <bold class="bold">
+   <italic class="italic">f</italic>)
+  </bold>
+ </sup> = 
+ <italic class="italic">b</italic>
+ <sup class="sup">(
+  <bold class="bold">
+   <italic class="italic">f</italic>
+  </bold>)
+ </sup>
+ <bold class="bold">1</bold> is random time-constant bias, and 
+ <inline-formula id="pone.0214535.e037" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e037.jpg" id="pone.0214535.e037g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M37" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">ε</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">S</mi>
+      <mo class="mo">,</mo>
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula> is random short-term internal variability in each model. Thus, we assume fthat if 
+ <italic class="italic">i</italic>th model is correct, the vector projection is the sum of 
+ <italic class="italic">i</italic>th model trend, a time constant bias, and internal variability. Here we again deviate somewhat from the traditional Bayesian theory in that the components of this model are partially informed by inter-model differences, and by model output during cross-validation experiments. Such steps are necessitated by the absence of actual system observations over the projection period to inform us about these components. We model the bias parameter as 
+ <inline-formula id="pone.0214535.e038" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e038.jpg" id="pone.0214535.e038g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M38" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">b</mi>
+     </mrow>
+     <mrow class="mrow"/>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">~</mo>
+    <mi class="mi">N</mi>
+    <mo class="mo">(</mo>
+    <mn class="mn">0</mn>
+    <mo class="mo">,</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">f</mi>
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <mi class="mi">σ</mi>
+       </mrow>
+       <mo class="mo">ˇ</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">b</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+ </inline-formula> where 
+ <inline-formula id="pone.0214535.e039" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e039.jpg" id="pone.0214535.e039g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M39" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <mi class="mi">σ</mi>
+       </mrow>
+       <mo class="mo">ˇ</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">b</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula> is sample standard deviation of future period-mean next-closest model differences (where next-best is used in the 
+ <italic class="italic">l</italic>
+ <sub class="sub">
+  <italic class="italic">1</italic>
+ </sub> distance sense), and 
+ <italic class="italic">f</italic> is the deterministic model error expansion factor (the same factor that is used for model weighting). Two different formulations are implemented for internal variability. In the first formulation (“boot”; [
+ <xref rid="pone.0214535.ref009" ref-type="bibr" class="xref">9</xref>]) we use simple bootstrapping from 
+ <inline-formula id="pone.0214535.e040" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e040.jpg" id="pone.0214535.e040g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M40" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold" class="mi">Δ</mi>
+      <mi mathvariant="bold-italic" class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula> to generate internal variability samples. In the alternative formulation (“ar1”) we sample 
+ <inline-formula id="pone.0214535.e041" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e041.jpg" id="pone.0214535.e041g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M41" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">ε</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">S</mi>
+      <mo class="mo">,</mo>
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula> as a red noise process with parameters 
+ <inline-formula id="pone.0214535.e042" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e042.jpg" id="pone.0214535.e042g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M42" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">θ</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <mo class="mo">(</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <mi class="mi">σ</mi>
+       </mrow>
+       <mo class="mo">ˇ</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">,</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <mi class="mi">ρ</mi>
+       </mrow>
+       <mo class="mo">ˇ</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+ </inline-formula>, the sample innovation standard deviation and autocorrelation of future anomalies. An improvement would be to consider the uncertainty in the AR1 parameters; we do not do this here to simplify the method. To obtain projection period mean changes from the reference period, we take weighted samples of future projections using Eqs (
+ <xref ref-type="disp-formula" rid="pone.0214535.e033" class="xref">14</xref>) and (
+ <xref ref-type="disp-formula" rid="pone.0214535.e035" class="xref">16</xref>), and simply subtract projection reference period mean modeled value for each model. As in previous work [
+ <xref rid="pone.0214535.ref009" ref-type="bibr" class="xref">9</xref>], we use 100,000 samples for all experiments.
+</p>

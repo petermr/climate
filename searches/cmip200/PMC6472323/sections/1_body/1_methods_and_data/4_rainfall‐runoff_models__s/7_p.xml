@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Parameter sets are ranked according to their aggregate efficiency scores. The top 50 performing sets are identified as behavioral and retained. Using simulations from the behavioral parameter sets, the prediction quantiles for each time step are empirically derived according to 
+ <disp-formula id="wrcr23804-disp-0001" class="disp-formula">
+  <label class="label">(1)</label>
+  <math id="nlm-math-1" class="math">
+   <mi class="mi">P</mi>
+   <mfenced open="[" close="]" class="mfenced">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mover accent="true" class="mover">
+       <mi class="mi">Z</mi>
+       <mo stretchy="true" class="mo">^</mo>
+      </mover>
+      <mi class="mi">t</mi>
+     </msub>
+     <mo class="mo">&lt;</mo>
+     <mi class="mi">z</mi>
+    </mrow>
+   </mfenced>
+   <mo class="mo">=</mo>
+   <munderover class="munderover">
+    <mo class="mo">∑</mo>
+    <mrow class="mrow">
+     <mi class="mi">i</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <mi class="mi">NB</mi>
+   </munderover>
+   <mi class="mi">RL</mi>
+   <mfenced open="[" close="]" separators="|," class="mfenced">
+    <mrow class="mrow">
+     <mi class="mi">f</mi>
+     <mfenced open="(" close=")" class="mfenced">
+      <msub class="msub">
+       <mi class="mi">θ</mi>
+       <mi class="mi">i</mi>
+      </msub>
+     </mfenced>
+    </mrow>
+    <msub class="msub">
+     <mover accent="true" class="mover">
+      <mi class="mi">Z</mi>
+      <mo stretchy="true" class="mo">^</mo>
+     </mover>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">t</mi>
+      <mo class="mo">,</mo>
+      <mi mathvariant="normal" class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mi class="mi">z</mi>
+   </mfenced>
+  </math>
+ </disp-formula>where 
+ <inline-formula class="inline-formula">
+  <italic class="italic">P</italic>
+ </inline-formula> is the selected quantile, 
+ <inline-formula class="inline-formula">
+  <italic class="italic">θ</italic>
+  <sub class="sub">
+   <italic class="italic">i</italic>
+  </sub>
+ </inline-formula> is the 
+ <italic class="italic">i</italic>th parameter set, and 
+ <inline-formula class="inline-formula">NB</inline-formula> is the number of behavioral parameters. Rescaled Likelihoods 
+ <inline-formula class="inline-formula">(RL)</inline-formula> are estimated by scaling the aggregate efficiency scores of the behavioral sets so that they sum to unity. The value of the predicted variable (flow) at time step 
+ <inline-formula class="inline-formula">
+  <italic class="italic">t</italic>
+ </inline-formula> by model 
+ <inline-formula class="inline-formula">
+  <italic class="italic">f</italic>(
+  <italic class="italic">θ</italic>
+  <sub class="sub">
+   <italic class="italic">i</italic>
+  </sub>)
+ </inline-formula> is represented by 
+ <math id="nlm-math-2" class="math">
+  <mover accent="true" class="mover">
+   <mi class="mi">Z</mi>
+   <mo stretchy="true" class="mo">^</mo>
+  </mover>
+ </math>. For each model, the 50th percentile is taken as the most likely estimate. It is acknowledged that GLUE necessitates certain assumptions (e.g., use and combination of informal likelihoods, behavioral threshold sample size, and parameter bounds), which, it is argued, affect its statistical validity—particularly in the estimation of prediction intervals (Beven &amp; Binley, 
+ <xref rid="wrcr23804-bib-0008" ref-type="ref" class="xref">1992</xref>; Clark et al., 
+ <xref rid="wrcr23804-bib-0026" ref-type="ref" class="xref">2011</xref>; Mantovan &amp; Todini, 
+ <xref rid="wrcr23804-bib-0056" ref-type="ref" class="xref">2006</xref>; Stedinger et al., 
+ <xref rid="wrcr23804-bib-0090" ref-type="ref" class="xref">2008</xref>). However, as employed here the method is not explicitly intended to provide an estimate of parameter uncertainty in the rainfall response, but rather to provide a robust flow estimate which assumes equifinality in the parameter space (Beven, 
+ <xref rid="wrcr23804-bib-0007" ref-type="ref" class="xref">2006</xref>). Additionally, despite its limitations the method has been applied successfully in numerous environmental and hydrological studies (Beven &amp; Binley, 
+ <xref rid="wrcr23804-bib-0009" ref-type="ref" class="xref">2014</xref>).
+</p>

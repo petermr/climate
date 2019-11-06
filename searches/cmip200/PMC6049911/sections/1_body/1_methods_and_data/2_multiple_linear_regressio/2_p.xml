@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">As a generalization of linear regression, MLR is often used to describe the relationship between a set of dependent variables and multiple explanatory variables (Neter et al., 
+ <xref rid="grl57416-bib-0030" ref-type="ref" class="xref">2004</xref>). However, adding more explanatory variables to MLR leads to a higher fraction of explained variance merely due to the increased degrees of freedom (“overfitting”). Thus, the number of explanatory variables has to be limited. This can be achieved by using special fitting tools, such as stepwise multiple linear regression (e.g., Hocking, 
+ <xref rid="grl57416-bib-0016" ref-type="ref" class="xref">1976</xref>). This algorithm successively adds (removes) explanatory variables to (from) the model and decides whether to include the explanatory variable based on the 
+ <italic class="italic">p</italic> value (obtained from the 
+ <italic class="italic">F</italic> statistic) of the model with and without the respective variable. Here we use stepwise regression with forward selection, that is, starting with no variables and adding them successively in ascending order of their 
+ <italic class="italic">p</italic> values (up to the maximum 
+ <italic class="italic">p</italic> value of 0.05). Regression coefficients that are not included in the final model (due to the stepwise MLR selection procedure) are set to zero. Uncertainty estimates of the stepwise MLR results are calculated using jackknife resampling (e.g., Efron, 
+ <xref rid="grl57416-bib-0010" ref-type="ref" class="xref">1982</xref>). Additionally, we apply least absolute shrinkage and selection operator (LASSO) regression (Tibshirani, 
+ <xref rid="grl57416-bib-0048" ref-type="ref" class="xref">1996</xref>) to test the robustness of the results.
+</p>

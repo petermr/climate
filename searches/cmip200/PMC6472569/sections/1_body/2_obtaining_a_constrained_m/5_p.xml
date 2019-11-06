@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">A general description of our methodology is presented here, whereas detailed information is provided in 
+ <xref rid="grl58462-supitem-0001" ref-type="supplementary-material" class="xref">Supporting Information S1</xref>. In our case, the weight of each model 
+ <italic class="italic">i</italic> represents the probability 
+ <italic class="italic">α</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> of being included in the constrained ensemble. Whereas the original full ensemble corresponds to the case with 
+ <italic class="italic">α</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> = 1 for all models, our goal is to determine the values of 
+ <italic class="italic">α</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> that minimize the CRPS (i.e., maximize the agreement between model simulations and observations). An initial set of 
+ <italic class="italic">α</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> values is selected at random, and then the optimization of 
+ <italic class="italic">α</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> is achieved by iterating through the following steps: 
+ <list list-type="order" id="grl58462-list-0002" class="list">
+  <list-item id="grl58462-li-0004" class="list-item">
+   <p class="p">Propose a new set of 
+    <italic class="italic">α</italic>
+    <sub class="sub">
+     <italic class="italic">i</italic>
+    </sub> values as a function of their values from the previous iteration.
+   </p>
+  </list-item>
+  <list-item id="grl58462-li-0005" class="list-item">
+   <p class="p">Create a model ensemble of 100 members by sampling with these probabilities 
+    <italic class="italic">α</italic>
+    <sub class="sub">
+     <italic class="italic">i</italic>
+    </sub>.
+   </p>
+  </list-item>
+  <list-item id="grl58462-li-0006" class="list-item">
+   <p class="p">Compute the agreement of the ensemble with the observations through the CRPS.</p>
+  </list-item>
+  <list-item id="grl58462-li-0007" class="list-item">
+   <p class="p">If the CRPS of the current iteration is smaller than the CRPS of the previous iteration, store the proposed set of 
+    <italic class="italic">α</italic>
+    <sub class="sub">
+     <italic class="italic">i</italic>
+    </sub>; otherwise, keep the previous set and start a new iteration.
+   </p>
+  </list-item>
+ </list>
+</p>

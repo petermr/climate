@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">For this study, we added an optional, three-stage stochastic ignition algorithm to MC2. Stage one uses a per-day ignition source probability and a Monte Carlo draw to determine whether a grid cell is exposed to an ignition source. Stage two checks fuel conditions for fine fuels moisture code (FFMC) [
+ <xref rid="pone.0210989.ref032" ref-type="bibr" class="xref">32</xref>] and buildup index (BUI) [
+ <xref rid="pone.0210989.ref033" ref-type="bibr" class="xref">33</xref>]. With unlimited ignitions, both FFMC and BUI must exceed a cell’s vegetation type’s threshold for a fire to be simulated. With the stochastic algorithm, they must both exceed a specified fraction of their respective thresholds. The third stage uses a Monte Carlo method to determine whether or not an ignition source initiates a fire. The probability of fire initiation is determined using the Chapman-Richards function: 
+ <disp-formula id="pone.0210989.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0210989.e001.jpg" id="pone.0210989.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mi class="mi">s</mi>
+    <mo class="mo">=</mo>
+    <msup class="msup">
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mn class="mn">1</mn>
+      <mo class="mo">−</mo>
+      <msup class="msup">
+       <mrow class="mrow">
+        <mi class="mi">e</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mo class="mo">−</mo>
+         <mi class="mi">k</mi>
+         <mo class="mo">*</mo>
+         <mi class="mi">f</mi>
+         <mi class="mi">f</mi>
+         <mi class="mi">m</mi>
+         <mi class="mi">c</mi>
+         <mo class="mo">_</mo>
+         <mi class="mi">t</mi>
+         <mi class="mi">h</mi>
+         <mi class="mi">r</mi>
+         <mi class="mi">e</mi>
+         <mi class="mi">s</mi>
+         <mi class="mi">h</mi>
+         <mo class="mo">_</mo>
+         <mi class="mi">f</mi>
+         <mi class="mi">r</mi>
+         <mi class="mi">a</mi>
+         <mi class="mi">c</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+      </msup>
+      <mo class="mo">)</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">2</mn>
+     </mrow>
+    </msup>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula> where 
+ <italic class="italic">ffmc_thresh_frac</italic> is defined as the fraction of the FFMC threshold, adjusted to offset the curve so that values below the minimum threshold produce an initiation probability of zero, and values near the maximum threshold produce a initiation probability near 1.0. It is calculated as: 
+ <disp-formula id="pone.0210989.e002" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0210989.e002.jpg" id="pone.0210989.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M2" class="math">
+    <mi class="mi">f</mi>
+    <mi class="mi">f</mi>
+    <mi class="mi">m</mi>
+    <mi class="mi">c</mi>
+    <mo class="mo">_</mo>
+    <mi class="mi">t</mi>
+    <mi class="mi">h</mi>
+    <mi class="mi">r</mi>
+    <mi class="mi">e</mi>
+    <mi class="mi">s</mi>
+    <mi class="mi">h</mi>
+    <mo class="mo">_</mo>
+    <mi class="mi">f</mi>
+    <mi class="mi">r</mi>
+    <mi class="mi">a</mi>
+    <mi class="mi">c</mi>
+    <mo class="mo">=</mo>
+    <mi mathvariant="normal" class="mi">m</mi>
+    <mi mathvariant="normal" class="mi">a</mi>
+    <mi mathvariant="normal" class="mi">x</mi>
+    <mo class="mo">(</mo>
+    <mo class="mo">(</mo>
+    <mi class="mi">f</mi>
+    <mi class="mi">f</mi>
+    <mi class="mi">m</mi>
+    <mi class="mi">c</mi>
+    <mo class="mo">_</mo>
+    <mi class="mi">m</mi>
+    <mi class="mi">i</mi>
+    <mi class="mi">n</mi>
+    <mo class="mo">_</mo>
+    <mi class="mi">f</mi>
+    <mi class="mi">r</mi>
+    <mi class="mi">a</mi>
+    <mi class="mi">c</mi>
+    <mo class="mo">–</mo>
+    <mi class="mi">f</mi>
+    <mi class="mi">f</mi>
+    <mi class="mi">m</mi>
+    <mi class="mi">c</mi>
+    <mo class="mo">_</mo>
+    <mi class="mi">m</mi>
+    <mi class="mi">a</mi>
+    <mi class="mi">x</mi>
+    <mo class="mo">_</mo>
+    <mi class="mi">f</mi>
+    <mi class="mi">r</mi>
+    <mi class="mi">a</mi>
+    <mi class="mi">c</mi>
+    <mo class="mo">)</mo>
+    <mo class="mo">,</mo>
+    <mn class="mn">0</mn>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+  <label class="label">(2)</label>
+ </disp-formula>
+ <italic class="italic">k</italic> in (
+ <xref ref-type="disp-formula" rid="pone.0210989.e002" class="xref">2</xref>) is the Chapman-Richards constant and is calculated as: 
+ <disp-formula id="pone.0210989.e003" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0210989.e003.jpg" id="pone.0210989.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M3" class="math">
+    <mi class="mi">k</mi>
+    <mo class="mo">=</mo>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <mo class="mo">−</mo>
+      <mi mathvariant="normal" class="mi">l</mi>
+      <mi mathvariant="normal" class="mi">n</mi>
+      <mo class="mo">(</mo>
+      <mn class="mn">1</mn>
+      <mo class="mo">−</mo>
+      <msqrt class="msqrt">
+       <mn class="mn">0.99</mn>
+      </msqrt>
+      <mo class="mo">)</mo>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">f</mi>
+      <mi class="mi">f</mi>
+      <mi class="mi">m</mi>
+      <mi class="mi">c</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">m</mi>
+      <mi class="mi">a</mi>
+      <mi class="mi">x</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">f</mi>
+      <mi class="mi">r</mi>
+      <mi class="mi">a</mi>
+      <mi class="mi">c</mi>
+      <mo class="mo">–</mo>
+      <mi class="mi">f</mi>
+      <mi class="mi">f</mi>
+      <mi class="mi">m</mi>
+      <mi class="mi">c</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">m</mi>
+      <mi class="mi">i</mi>
+      <mi class="mi">n</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">f</mi>
+      <mi class="mi">r</mi>
+      <mi class="mi">a</mi>
+      <mi class="mi">c</mi>
+     </mrow>
+    </mfrac>
+   </math>
+  </alternatives>
+  <label class="label">(3)</label>
+ </disp-formula> where 
+ <italic class="italic">ffmc_min_frac</italic> is the fraction of the FFMC threshold below which fire initiation approaches 0, and 
+ <italic class="italic">ffmc_max_frac</italic> is the fraction of the FFMC threshold where it approaches 1.
+</p>

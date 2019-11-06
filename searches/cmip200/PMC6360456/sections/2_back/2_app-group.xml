@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app-group class="app-group">
+ <app id="jame20790-app-0001" content-type="Appendix" class="app">
+  <label class="label">Appendix A</label>
+  <sec id="jame20790-sec-0012" class="sec">
+   <p class="p">We conducted a number of sensitivity tests with NEMO parameters in N96ORCA1 to address the cold bias in the North Atlantic. This was done separately from the sensitivity tests with CICE parameters, mentioned in section 
+    <xref rid="jame20790-sec-0008" ref-type="sec" class="xref">3.3</xref> above. Below we discuss briefly the impact of parameter variations in NEMO on ocean temperature and circulation.
+   </p>
+   <p class="p">The isopycnal diffusivity was increased by 25% and 50% in two test simulations (baseline value: 1,000 m
+    <sup class="sup">2</sup>/s). In 20‐year means around year 50 of the simulations, a marked increase of SST in large parts of the global ocean was found (around 0.25 K in the global average for the 50% case and around 0.1 K in the 25% case). A penetration of this signal to depths beyond the mixed layer did not occur in this relatively short simulation. The AMOC transport at 26°N was not discernibly affected. Because the warming in these test simulations did not affect the very cold region in the northwest Atlantic, these parameter changes were not adopted.
+   </p>
+   <p class="p">In NEMO's TKE scheme, several parameters were varied to reduce turbulent exchange between the (too cold) surface waters and the (too warm) subsurface waters; we discuss a selection of these experiments below. As before, 20‐year means around year 50 of the simulations were analyzed. The impact on AMOC transport was either very small or not discernible.</p>
+   <p class="p">A reduction of the vertical eddy viscosity by 10% (NEMO parameter 
+    <italic class="italic">rn_ediff</italic> = 0.09) lowered the SST in the North Atlantic by about 1 K, with little effect elsewhere.
+   </p>
+   <p class="p">A reduction of the near‐inertial wave breaking scaling by 20% (
+    <italic class="italic">rn_efr</italic> = 0.04) led to a moderate SST warming in some parts of the midlatitude to high‐latitude NH, with little effect elsewhere.
+   </p>
+   <p class="p">Changing the latitudinal dependence of the length scale for the exponential decrease of TKE penetration by two thirds in the high‐latitude Southern Ocean (
+    <italic class="italic">nn_htau</italic> = 0; length scale reduced from 30 m to 10 m) yielded a strong warming signal in SST, especially in the SH (&gt;1 K) where the warm bias is worsened, while the reduction of MLD reduces the bias in this quantity. However, there is hardly any warming in northwest Atlantic SST.
+   </p>
+   <p class="p">Scaling the same latitudinal dependence by a factor of 2/3 everywhere outside the tropics, where this length scale is 0.5 m, means a reduction of the high‐latitude maxima to 20 m in the Southern Ocean and 6.67 m in the NH (
+    <italic class="italic">nn_htau</italic> = 4 as used in the present configuration; 
+    <italic class="italic">zmax_scale</italic> = 2/3). This leads to an SST increase on the global average by ~0.15 K, located mostly in midlatitude regions and the Nordic Seas.
+   </p>
+   <p class="p">The results of these sensitivity tests are in line with the ocean‐only tests conducted by Calvert and Siddorn (
+    <xref rid="jame20790-bib-0009" ref-type="ref" class="xref">2013</xref>). Unlike the isopycnal diffusivity that needs to vary with horizontal grid resolution in any case (Table 
+    <xref rid="jame20790-tbl-0001" ref-type="table" class="xref">1</xref>), varying these parameters would have constituted a significant breach of traceability with N216ORCA025—both configurations have the same 75 depth levels—and hence was not pursued.
+   </p>
+   <p class="p">Viscosity settings in NEMO can have a marked impact on the circulation. Comparing the current version of N96ORCA1, using a Laplacian viscosity of 
+    <italic class="italic">rn_ahm_lap_0</italic> = 20,000 m
+    <sup class="sup">2</sup>/s and free‐slip boundary conditions, with a development version that used 
+    <italic class="italic">rn_ahm_lap_0</italic> = 10,000 m
+    <sup class="sup">2</sup>/s and no‐slip boundary conditions, we found a substantial improvement in the representation of deepwater formation in the Labrador and Irminger Seas (diagnosed as the maximum monthly mean MLD).
+   </p>
+   <p class="p">We explored the impact of deepening and widening the bathymetry in the region of the overflows in the northeast Atlantic using an earlier version of the N96ORCA1 configuration (UM8.6, NEMO3.4). Only quite significant changes to the bathymetry in Denmark Strait and on the Iceland‐Scotland ridge led to an enhanced AMOC transport at 26°N and higher SST (by 2 or 3 K) throughout the North Atlantic. These effects lasted for about 20 years, after which the differences to the baseline configuration became very small.</p>
+  </sec>
+ </app>
+</app-group>

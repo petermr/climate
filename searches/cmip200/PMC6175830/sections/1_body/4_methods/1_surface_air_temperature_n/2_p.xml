@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par23" class="p">A pair of nodes is considered connected if their link strength is above a threshold 
+ <italic class="italic">Q</italic>. In view of systematic biases between different models, it is necessary to standardize link strength 
+ <inline-formula id="IEq3" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M9" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${W}_{i,j}^{t}$$\end{document}</tex-math>
+   <math id="M10" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">W</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">j</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msubsup>
+   </math>
+   <inline-graphic xlink:href="41598_2018_33340_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> so that the biases could be eliminated. Here, we determined a threshold 
+ <italic class="italic">Q</italic> = 3.1 for the confidence level of 99% (see Supplementary Materials, Fig. 
+ <xref rid="MOESM1" ref-type="media" class="xref">S1</xref>). Using the Heaviside function, we represented this definition as:
+ <disp-formula id="Equ3" class="disp-formula">
+  <label class="label">3</label>
+  <alternatives class="alternatives">
+   <tex-math id="M11" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${A}_{i,j}^{t}=\theta ({W}_{i,j}^{t}-Q)=\{\begin{array}{ll}\mathrm{1,} &amp; {W}_{i,j}^{t} &gt; Q\\ \mathrm{0,} &amp; {W}_{i,j}^{t} &lt; Q\end{array},$$\end{document}</tex-math>
+   <math id="M12" display="block" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">A</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">j</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <mi class="mi">θ</mi>
+    <mo stretchy="false" class="mo">(</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">W</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">j</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">−</mo>
+    <mi class="mi">Q</mi>
+    <mo stretchy="false" class="mo">)</mo>
+    <mo class="mo">=</mo>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">{</mo>
+     <mrow class="mrow">
+      <mtable columnalign="left" class="mtable">
+       <mtr columnalign="left" class="mtr">
+        <mtd columnalign="left" class="mtd">
+         <mrow class="mrow">
+          <mn class="mn">1,</mn>
+         </mrow>
+        </mtd>
+        <mtd columnalign="left" class="mtd">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mrow class="mrow">
+            <mi class="mi">W</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi class="mi">i</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">j</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi class="mi">t</mi>
+           </mrow>
+          </msubsup>
+          <mo class="mo">&gt;</mo>
+          <mi class="mi">Q</mi>
+         </mrow>
+        </mtd>
+       </mtr>
+       <mtr columnalign="left" class="mtr">
+        <mtd columnalign="left" class="mtd">
+         <mrow class="mrow">
+          <mn class="mn">0,</mn>
+         </mrow>
+        </mtd>
+        <mtd columnalign="left" class="mtd">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mrow class="mrow">
+            <mi class="mi">W</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi class="mi">i</mi>
+            <mo class="mo">,</mo>
+            <mi class="mi">j</mi>
+           </mrow>
+           <mrow class="mrow">
+            <mi class="mi">t</mi>
+           </mrow>
+          </msubsup>
+          <mo class="mo">&lt;</mo>
+          <mi class="mi">Q</mi>
+         </mrow>
+        </mtd>
+       </mtr>
+      </mtable>
+     </mrow>
+    </mrow>
+    <mo class="mo">,</mo>
+   </math>
+   <graphic xlink:href="41598_2018_33340_Article_Equ3.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>and the degree of node 
+ <italic class="italic">i</italic> at time 
+ <italic class="italic">t</italic> as
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR37" class="xref">37</xref>,
+  <xref ref-type="bibr" rid="CR38" class="xref">38</xref>
+ </sup>:
+ <disp-formula id="Equ4" class="disp-formula">
+  <label class="label">4</label>
+  <alternatives class="alternatives">
+   <tex-math id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${K}_{i}^{t}=\sum _{j=1}^{j=306}\,{A}_{i,j}^{t}\mathrm{.}$$\end{document}</tex-math>
+   <math id="M14" display="block" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">K</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <munderover class="munderover">
+     <mo class="mo">∑</mo>
+     <mrow class="mrow">
+      <mi class="mi">j</mi>
+      <mo class="mo">=</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">j</mi>
+      <mo class="mo">=</mo>
+      <mn class="mn">306</mn>
+     </mrow>
+    </munderover>
+    <mspace width=".25em" class="mspace"/>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">A</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">j</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msubsup>
+    <mn class="mn">.</mn>
+   </math>
+   <graphic xlink:href="41598_2018_33340_Article_Equ4.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

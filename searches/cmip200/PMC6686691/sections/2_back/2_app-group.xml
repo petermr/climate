@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app-group class="app-group">
+ <app id="ess2278-app-0001" content-type="Appendix" class="app">
+  <label class="label">Appendix A</label>
+  <title class="title">
+   <styled-content style="italic-in-any-context" class="styled-content">K</styled-content>‐Means and influence of Information Criteria
+  </title>
+  <sec id="ess2278-sec-0008" class="sec">
+   <label class="label">A.1</label>
+   <p class="p">The K‐means algorithm is related to methods such as Principal Component Analysis (PCA), more traditionally applied to oceanography. Where PCA attempts to represent all data vectors using a low‐order combination of eigenvectors, minimizing the mean squared reconstruction error, the 
+    <italic class="italic">K</italic>‐means algorithm represents the data vectors via a small number of clusters. This is also done to minimize the mean squared reconstruction error. In this manner, the 
+    <italic class="italic">K</italic>‐means algorithm can be interpreted as a very sparse PCA.
+   </p>
+   <p class="p">Robustness of the regions in terms of the stochastic initialization is highlighted in Figure 
+    <xref rid="ess2278-fig-0002" ref-type="fig" class="xref">2</xref>c, where the 
+    <italic class="italic">K</italic>‐means clustering was run 100 times and mean and 2
+    <italic class="italic">σ</italic> used as metrics in Table 
+    <xref rid="ess2278-tbl-0001" ref-type="table" class="xref">1</xref>. The regimes identified are robust, with the extent of the subpolar gyre being the main area where the algorithm shows appreciable variance.
+   </p>
+   <p class="p">The 
+    <italic class="italic">K</italic>‐means algorithm is initiated by scattering 
+    <italic class="italic">K</italic> first guesses of where the parameters/clusters could be. This initial guess introduces a stochastic element. The success of the algorithm is sensitive to 
+    <italic class="italic">K</italic>, as this determines how the hyperspace given by the dimensions is partitioned. As with regression analysis, adding parameters can increase the accuracy, but overfitting should be avoided. Determining the appropriate value of 
+    <italic class="italic">K</italic>, information criteria (AIC and BIC) are used to assess the quality of the statistical model. These measures weight the added accuracy with the cost of adding additional parameters, minimizing the expectation of the prediction error, are used: 
+    <disp-formula id="ess2278-disp-0006" class="disp-formula">
+     <math id="nlm-math-12" class="math">
+      <mrow class="mrow">
+       <mtext class="mtext">AIC</mtext>
+       <mo class="mo">=</mo>
+       <mn class="mn">2</mn>
+       <mi class="mi">K</mi>
+       <mo class="mo">−</mo>
+       <mn class="mn">2</mn>
+       <mi class="mi">ln</mi>
+       <mo stretchy="false" class="mo">(</mo>
+       <mi mathvariant="script" class="mi">L</mi>
+       <mo stretchy="false" class="mo">)</mo>
+       <mo class="mo">,</mo>
+      </mrow>
+     </math>
+    </disp-formula>
+    <disp-formula id="ess2278-disp-0007" class="disp-formula">
+     <math id="nlm-math-13" class="math">
+      <mrow class="mrow">
+       <mtext class="mtext">BIC</mtext>
+       <mo class="mo">=</mo>
+       <mi class="mi">K</mi>
+       <mi class="mi">ln</mi>
+       <mo stretchy="false" class="mo">(</mo>
+       <mi class="mi">n</mi>
+       <mo stretchy="false" class="mo">)</mo>
+       <mo class="mo">−</mo>
+       <mn class="mn">2</mn>
+       <mi class="mi">ln</mi>
+       <mo stretchy="false" class="mo">(</mo>
+       <mi mathvariant="script" class="mi">L</mi>
+       <mo stretchy="false" class="mo">)</mo>
+       <mo class="mo">,</mo>
+      </mrow>
+     </math>
+    </disp-formula> where 
+    <italic class="italic">n</italic> is the number of data points and 
+    <math id="nlm-math-14" class="math">
+     <mi mathvariant="script" class="mi">L</mi>
+    </math> is the likelihood: 
+    <disp-formula id="ess2278-disp-0008" class="disp-formula">
+     <math id="nlm-math-15" class="math">
+      <mrow class="mrow">
+       <mi mathvariant="script" class="mi">L</mi>
+       <mo class="mo">=</mo>
+       <msubsup class="msubsup">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Π</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">N</mi>
+        </mrow>
+       </msubsup>
+       <mfrac class="mfrac">
+        <mn class="mn">1</mn>
+        <mrow class="mrow">
+         <msqrt class="msqrt">
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+           <mi mathvariant="normal" class="mi">π</mi>
+           <msup class="msup">
+            <mi class="mi">σ</mi>
+            <mn class="mn">2</mn>
+           </msup>
+          </mrow>
+         </msqrt>
+        </mrow>
+       </mfrac>
+       <mi class="mi">exp</mi>
+       <mspace width="1em" class="mspace"/>
+       <mfenced separators="" open="(" close=")" class="mfenced">
+        <mrow class="mrow">
+         <mo class="mo">−</mo>
+         <mfrac class="mfrac">
+          <mrow class="mrow">
+           <msup class="msup">
+            <mrow class="mrow">
+             <mo stretchy="false" class="mo">(</mo>
+             <msub class="msub">
+              <mi class="mi">ζ</mi>
+              <mi class="mi">i</mi>
+             </msub>
+             <mo class="mo">−</mo>
+             <msub class="msub">
+              <mrow class="mrow">
+               <mover accent="true" class="mover">
+                <mi class="mi">ζ</mi>
+                <mo class="mo">^</mo>
+               </mover>
+              </mrow>
+              <mi class="mi">i</mi>
+             </msub>
+             <mo stretchy="false" class="mo">)</mo>
+            </mrow>
+            <mn class="mn">2</mn>
+           </msup>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+           <msup class="msup">
+            <mi class="mi">σ</mi>
+            <mn class="mn">2</mn>
+           </msup>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </mfenced>
+       <mo class="mo">.</mo>
+      </mrow>
+     </math>
+    </disp-formula>
+   </p>
+   <p class="p">The parameter 
+    <italic class="italic">ζ</italic>
+    <sub class="sub">
+     <italic class="italic">i</italic>
+    </sub> is the observed, and 
+    <math id="nlm-math-16" class="math">
+     <msub class="msub">
+      <mrow class="mrow">
+       <mover accent="true" class="mover">
+        <mi class="mi">ζ</mi>
+        <mo class="mo">^</mo>
+       </mover>
+      </mrow>
+      <mi class="mi">i</mi>
+     </msub>
+    </math> is the prediction, so 
+    <math id="nlm-math-17" class="math">
+     <msup class="msup">
+      <mrow class="mrow">
+       <mo stretchy="false" class="mo">(</mo>
+       <msub class="msub">
+        <mi class="mi">ζ</mi>
+        <mi class="mi">i</mi>
+       </msub>
+       <mo class="mo">−</mo>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mover accent="true" class="mover">
+          <mi class="mi">ζ</mi>
+          <mo class="mo">^</mo>
+         </mover>
+        </mrow>
+        <mi class="mi">i</mi>
+       </msub>
+       <mo stretchy="false" class="mo">)</mo>
+      </mrow>
+      <mn class="mn">2</mn>
+     </msup>
+    </math> are the prediction residuals. In the estimate, the AIC value is minimized, which determines the smallest appropriate order to represent the time series. As discussed by Priestley (
+    <xref rid="ess2278-bib-0024" ref-type="ref" class="xref">1981</xref>) and Yang (
+    <xref rid="ess2278-bib-0040" ref-type="ref" class="xref">2005</xref>), the AIC can overestimate the order. Figure 
+    <xref rid="ess2278-fig-0002" ref-type="fig" class="xref">2</xref>b demonstrates that both the AIC and BIC stabilize at &gt;35 K and the asymptotic nature of the regime.
+   </p>
+   <p class="p">The Euclidian distance is used, meaning the variance is assumed to be isotropic (meaning round). This leads to the standard practice of normalizing and standardizing data. To elucidate the impact of assumptions the algorithm makes for the classification, a more generalized form of clustering was also tested: Gaussian Mixture Models (GMM). GMM are used to assess the impact of assumptions relating to the covariance structure; spherical, diagonal, tied, or full covariance. Using the BIC, the results building on the BV data were not seen to be sensitive to this. However, this could be important at higher resolution as the 
+    <italic class="italic">K</italic>‐means clustering problem is NP‐hard and GMM could perform better.
+   </p>
+  </sec>
+ </app>
+</app-group>

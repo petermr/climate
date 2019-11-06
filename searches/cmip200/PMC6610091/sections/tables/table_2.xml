@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table-wrap id="Tab2" class="table-wrap">
+ <label class="label">Table 2</label>
+ <caption class="caption">
+  <p class="p">Description of Convective and Large-scale parameterization, Convective triggers and Convective closures.</p>
+ </caption>
+ <table frame="hsides" rules="groups" class="table">
+  <thead class="thead">
+   <tr class="tr">
+    <th class="th">Models</th>
+    <th class="th">Convective precipitation</th>
+    <th class="th">Large-scale precipitation</th>
+    <th class="th">Convective Trigger</th>
+    <th class="th">Convective Closure</th>
+   </tr>
+  </thead>
+  <tbody class="tbody">
+   <tr class="tr">
+    <td colspan="5" class="td">
+     <bold class="bold">Cloud Model Type: Spectral Cloud Ensemble</bold>
+    </td>
+   </tr>
+   <tr class="tr">
+    <td class="td">GFDL-CM3</td>
+    <td class="td">Relaxed Arakawa–Schubert scheme of Moorthiand Suarez [1992] with few modifications in physics from Donner 
+     <italic class="italic">et al</italic>. [2011]
+    </td>
+    <td class="td">Cloud microphysics of Rotstayn [2000] and macrophysics from Tiedtke [1993], stratiform clouds from Golaz 
+     <italic class="italic">et al</italic>. [2011]
+    </td>
+    <td class="td">Cloud work function (CWF) similar to dilute cape (DCAPE)</td>
+    <td class="td">CAPE closure towards a threshold over a relaxation time scale</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">GFDL-ESM2G</td>
+    <td class="td">Relaxed Arakawa–Schubert scheme of Moorthiand Suarez [1992] and Dunne 
+     <italic class="italic">et al</italic>. [2012 and 2013]
+    </td>
+    <td class="td">Same as GFDL-CM3</td>
+    <td class="td">Cloud work function (CWF) similar to DCAPE</td>
+    <td class="td">CAPE closure towards a threshold over a relaxation time scale</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">GFDL-ESM2M</td>
+    <td class="td">Same as GFDL-ESM2G</td>
+    <td class="td">Same as GFDL-CM3</td>
+    <td class="td">Cloud work function (CWF) similar to DCAPE</td>
+    <td class="td">CAPE closure towards a threshold over a relaxation time scale</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">MIROC5</td>
+    <td class="td">Entraining plume model scheme of Chikira 
+     <italic class="italic">et al</italic>. [2010] similar to Gregory [2001] with some modification according Pan and Randall [1998]
+    </td>
+    <td class="td">Prognostic large-scale cloud scheme of Watanabe 
+     <italic class="italic">et al</italic>. [2009] and bulk microphysical scheme from Wilson and Ballard [1999]
+    </td>
+    <td class="td">CAPE</td>
+    <td class="td">Prognostic convective kinetic energy closure similar to CAPE closure</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">MIROC4h</td>
+    <td class="td">Prognostic closure Arakawa Schubert scheme from Pan and Randall [1998] and addition of relativehumidity-based suppression condition by Emori 
+     <italic class="italic">et al</italic>. [2001]
+    </td>
+    <td class="td">Prognostic cloud water scheme of Treutand Li [1991]</td>
+    <td class="td">Relative humidity</td>
+    <td class="td">Prognostic convective kinetic energy closure similar to CAPE closure</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">MIROC-ESM</td>
+    <td class="td">Same as MIROC4h</td>
+    <td class="td">Large-scale condensation is diagnosed based on Treut&amp; Li (1991) and simple cloud microphysics scheme</td>
+    <td class="td">Relative humidity</td>
+    <td class="td">Prognostic convective kinetic energy closure similar to CAPE closure</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">MIROC-ESM-CHEM</td>
+    <td class="td">Same as MIROC4h</td>
+    <td class="td">Same as MIROC-ESM</td>
+    <td class="td">Relative humidity</td>
+    <td class="td">Prognostic convective kinetic energy closure similar to CAPE closure</td>
+   </tr>
+   <tr class="tr">
+    <td colspan="5" class="td">
+     <bold class="bold">Cloud Model Type: Bulk Cloud Ensemble</bold>
+    </td>
+   </tr>
+   <tr class="tr">
+    <td class="td">GISS-E2R</td>
+    <td class="td">Bulk mass flux scheme by Delgenio&amp; Yao (1993)</td>
+    <td class="td">Prognostic stratiform cloud based on moisture convergence by Delgenio 
+     <italic class="italic">et al</italic>. (1996)
+    </td>
+    <td class="td">—</td>
+    <td class="td">Moisture convergence</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">GISS-E2H</td>
+    <td class="td">Same as GISS-E2R</td>
+    <td class="td">Same as GISS-E2R</td>
+    <td class="td">—</td>
+    <td class="td">Moisture convergence</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">GISS-E2R-CC</td>
+    <td class="td">Same as GISS-E2R</td>
+    <td class="td">Same as GISS-E2R</td>
+    <td class="td">—</td>
+    <td class="td">Moisture convergence</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">HadCM3</td>
+    <td class="td">Bulk mass flux scheme by Gregory &amp; Rowntree (1990)</td>
+    <td class="td">Large-scale precipitation is calculated based on cloud water and ice contents similar to Smith [1990]</td>
+    <td class="td">Cloud base buoyancy</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">HadGEM2-CC</td>
+    <td class="td">Same as HadCM3, withan additional adaptive detrainment parameterization by Derbyshire 
+     <italic class="italic">et al</italic>. [2011]
+    </td>
+    <td class="td">Same as HadCM3</td>
+    <td class="td">Cloud base buoyancy</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">HadGEM2-ES</td>
+    <td class="td">Same as HadGEM2-CC</td>
+    <td class="td">Same as HadCM3</td>
+    <td class="td">Cloud base buoyancy</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">ACCESS1-0</td>
+    <td class="td">Same as HadGEM2-CC</td>
+    <td class="td">Same as HadCM3</td>
+    <td class="td">Cloud base buoyancy</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">ACCESS1-3</td>
+    <td class="td">Same as in ACCESS1.0, except physical parameterization, which is similar to GAM1.0</td>
+    <td class="td">Same as HadCM3</td>
+    <td class="td">—</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">MPI-ESM-LR</td>
+    <td class="td">Bulk mass flux scheme by Tiedtke [1989] with modifications in deep convection by Nordeng 
+     <italic class="italic">et al</italic>. [1994]
+    </td>
+    <td class="td">Prognostic equations of the water phases, bulk cloud microphysics from Lohmann andRoeckner [1996]</td>
+    <td class="td">Moisture convergence and buoyant surface air when lifted to the LCL</td>
+    <td class="td">Moisture convergence/adjustment type</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">MPI-ESM-P</td>
+    <td class="td">Same as MPI-ESM-LR</td>
+    <td class="td">Same as MPI-ESM-LR</td>
+    <td class="td">Moisture convergence and buoyant surface air when lifted to the LCL</td>
+    <td class="td">Moisture convergence/adjustment type</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">MRI-CGCM3</td>
+    <td class="td">Same as MPI-ESM-LR</td>
+    <td class="td"/>
+    <td class="td">Moisture convergence</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">CNRM-CM5</td>
+    <td class="td">Mass-flux scheme of Bougeault [985]</td>
+    <td class="td">Statistical cloud scheme of Ricard and Royer [1993]</td>
+    <td class="td">Depends on moisture convergence and stability profile</td>
+    <td class="td">Moisture convergence</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">CNRM-CM5-2</td>
+    <td class="td">Same as CNRM-CM5</td>
+    <td class="td">Same as CNRM-CM5</td>
+    <td class="td">Depends on moisture convergence and stability profile</td>
+    <td class="td">Moisture convergence</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">EC-EARTH</td>
+    <td class="td">Bulk mass-flux scheme and Entraining/detraining plume cloud model by Hazeleger 
+     <italic class="italic">et al</italic>. [2010]
+    </td>
+    <td class="td">saturated downdraughtsandsimple microphysics scheme</td>
+    <td class="td">—</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">CSIRO-Mk3-6-0</td>
+    <td class="td">Bulk mass flux convection scheme of Gregory and Rowntree [1990] with slightly modified by Gregory [1995]</td>
+    <td class="td">Stratiform cloud condensate scheme from Rotstayn([000]</td>
+    <td class="td">—</td>
+    <td class="td">Stability-Dependent Closure</td>
+   </tr>
+   <tr class="tr">
+    <td colspan="5" class="td">
+     <bold class="bold">Cloud Model Type: Mixed Nature of Spectral and Bulk Cloud Ensemble</bold>
+    </td>
+   </tr>
+   <tr class="tr">
+    <td class="td">CCSM4</td>
+    <td class="td">Simplified Arakawa and Schubert cumulus ensemble scheme of Zhang and McFarlane
+     <sup class="sup">
+      <xref ref-type="bibr" rid="CR27" class="xref">27</xref>
+     </sup> with plume dilution of Neale 
+     <italic class="italic">et al</italic>. [2008]
+    </td>
+    <td class="td">Prognostic condensate and precipitation parameterization from Zhang 
+     <italic class="italic">et al</italic>. [2003]
+    </td>
+    <td class="td">CAPE</td>
+    <td class="td">DCAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">CESM-CAM5</td>
+    <td class="td">Same as CCSM4 with few more modifications by Neale 
+     <italic class="italic">et al</italic>. [2012]
+    </td>
+    <td class="td">Same as CCSM4</td>
+    <td class="td">CAPE</td>
+    <td class="td">DCAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">NorESM1-M</td>
+    <td class="td">Same as CCSM4</td>
+    <td class="td">Same as CCSM4</td>
+    <td class="td">CAPE</td>
+    <td class="td">DCAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">NorESM1-ME</td>
+    <td class="td">Same as CCSM4</td>
+    <td class="td">Same as CCSM4</td>
+    <td class="td">CAPE</td>
+    <td class="td">DCAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">BCC-CSM1-1</td>
+    <td class="td">Mass flux scheme developed by Zhang and McFarlane [1995], has been adapted as proposed by Wu 
+     <italic class="italic">et al</italic>. [2010]
+    </td>
+    <td class="td">Same as CCSM4</td>
+    <td class="td">CAPE</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">FGOALS-g2</td>
+    <td class="td">Mass flux type cumulus convection developed by Zhang and McFarlane
+     <sup class="sup">
+      <xref ref-type="bibr" rid="CR27" class="xref">27</xref>
+     </sup>
+    </td>
+    <td class="td">Precipitation occurs whenever the local relative humidity is supersaturated</td>
+    <td class="td">CAPE</td>
+    <td class="td">CAPE</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">CanESM2</td>
+    <td class="td">Mass flux type cumulus convection schemeby Scinocca and McFarlane [2004]</td>
+    <td class="td">Prognostic cloud liquid water and ice, statistical cloud scheme, interactive with aerosols</td>
+    <td class="td">CAPE</td>
+    <td class="td">Cloud base closure</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">IPSL-CM5A-LR</td>
+    <td class="td">Episodic mixing and buoyancy sorting scheme by Emanuel [1991] and modified moist convection scheme by Grandpeix 
+     <italic class="italic">et al</italic>. [2004]
+    </td>
+    <td class="td">Cloud cover and in-cloud water deduced from large-scale total water and moisture at saturation from Bony and Emmanuel [2001]</td>
+    <td class="td">—</td>
+    <td class="td">CAPE closure</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">IPSl-CM5A-MR</td>
+    <td class="td">Same as IPSL-CM5A-LR</td>
+    <td class="td">Same as IPSL-CM5A-LR</td>
+    <td class="td">—</td>
+    <td class="td">CAPE closure</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">IPSL-CM5B-LR</td>
+    <td class="td">Same as IPSL-CM5A-LR, with the modification in closure and trigger mechanism byGrandpeix and Lafore [2010]</td>
+    <td class="td">Same as IPSL-CM5A-LR, with the few modifications by Jam 
+     <italic class="italic">et al</italic>. [2011]
+    </td>
+    <td class="td">Available Lifting Energy</td>
+    <td class="td">Available Lifting Power</td>
+   </tr>
+   <tr class="tr">
+    <td class="td">INM-CM4</td>
+    <td class="td">Lagged convective adjustment after Betts [1986], but modified referenced profile for deep convection</td>
+    <td class="td">Stratiform cloud fraction is calculated as linear function of relative humidity</td>
+    <td class="td">—</td>
+    <td class="td">CAPE</td>
+   </tr>
+  </tbody>
+ </table>
+</table-wrap>

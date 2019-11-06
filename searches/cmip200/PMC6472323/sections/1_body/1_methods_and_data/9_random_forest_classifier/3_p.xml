@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Here a RF is developed using the physical attributes (physical catchment descriptors; PCDs) of the catchment sample as predictors. Catchment type, identified using the 
+ <italic class="italic">k</italic>‐means procedure applied to the response surfaces, is used as the (categorical) predictand. Based on its contribution to model accuracy the relative importance of each PCD in differentiating catchment types is examined. Features are interpreted to determine which processes and land‐surface attributes influence sensitivity. The RF is also employed to predict the sensitivity class of ungauged or data‐sparse catchments (Booker &amp; Woods, 
+ <xref rid="wrcr23804-bib-0010" ref-type="ref" class="xref">2014</xref>; Snelder et al., 
+ <xref rid="wrcr23804-bib-0089" ref-type="ref" class="xref">2013</xref>). The RF used constitutes 10,000 CTs, each grown using a subset (80%; with replacement) of cases. The remaining “out‐of‐bag” (OOB) cases (20%) are retained to independently estimate predictor importance and ensemble error. The RF algorithm thus facilitates a type of cross validation which is robust in cases where the number of observations is limited. At each decision node the algorithm selects the best split from a random subset (15) of all available (19) predictors according to Gini's diversity index. The OOB error is calculated as the proportion of cases which are misclassified (
+ <inline-formula class="inline-formula">
+  <italic class="italic">MR</italic>),
+ </inline-formula> estimated as 
+ <disp-formula id="wrcr23804-disp-0007" class="disp-formula">
+  <label class="label">(7)</label>
+  <math id="nlm-math-10" class="math">
+   <mi mathvariant="italic" class="mi">MR</mi>
+   <mo class="mo">≈</mo>
+   <msup class="msup">
+    <mi mathvariant="italic" class="mi">MR</mi>
+    <mi class="mi">OOB</mi>
+   </msup>
+   <mo class="mo">=</mo>
+   <msup class="msup">
+    <mi class="mi">c</mi>
+    <mrow class="mrow">
+     <mo class="mo">−</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+   </msup>
+   <munderover class="munderover">
+    <mo class="mo">∑</mo>
+    <mrow class="mrow">
+     <mi class="mi">i</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <mi class="mi">c</mi>
+   </munderover>
+   <mi class="mi">I</mi>
+   <mfenced open="(" close=")" class="mfenced">
+    <mrow class="mrow">
+     <mover accent="true" class="mover">
+      <mi class="mi">Y</mi>
+      <mo stretchy="true" class="mo">^</mo>
+     </mover>
+     <mfenced open="(" close=")" class="mfenced">
+      <msub class="msub">
+       <mi class="mi">J</mi>
+       <mi class="mi">i</mi>
+      </msub>
+     </mfenced>
+     <mo class="mo">≠</mo>
+     <msub class="msub">
+      <mi class="mi">Y</mi>
+      <mi class="mi">i</mi>
+     </msub>
+    </mrow>
+   </mfenced>
+  </math>
+ </disp-formula>
+</p>

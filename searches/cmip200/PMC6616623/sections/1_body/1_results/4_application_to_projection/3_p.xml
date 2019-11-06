@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par18" class="p">The probabilities can be calculated using Eq. (
+ <xref rid="Equ8" ref-type="" class="xref">8</xref>) (reformulated in different variables) and Bayes’ theorem:
+ <disp-formula id="Equ11" class="disp-formula">
+  <label class="label">11</label>
+  <alternatives class="alternatives">
+   <tex-math id="M41" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{l}} {p\left( {z^ \ast |{\bf{Y}}} \right)} \hfill &amp; = \hfill &amp; {{\large \int} {p( {z^ {\ast} , {\mathbf{\upmu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u|{\bf{Y}}} ){\mathrm{d}}{\mathbf{\upmu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu} {\mathrm{d}}{\mathrm{\Delta }}_z^ \ast {\mathrm{d}}{\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; \hskip -8pt \propto \hfill &amp; \hskip -7pt {{\large \int} {p( {{\bf{Y}}|z^ \ast ,{\mathbf{\upmu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u} )p( {z^ \ast ,{\mathbf{\upmu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u} ){\mathrm{d}}{\mathbf{\upmu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu}{\mathrm{d}}{\mathrm{\Delta }}_z^ \ast{\mathrm{d}}{\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; = \hfill &amp; {{\large \int} {p({\bf{Y}}|{\mathbf{\upmu}} )p( {z^ {\ast}, {\mathbf{\upmu}} ,{\mathrm{\Delta }}_{\mu} ,{\mathrm{\Delta }}_z^ \ast ,{\mathrm{\Delta }}_u} ){\mathrm{d}}{\mathbf{\upmu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu}{\mathrm{d}}{\mathrm{\Delta }}_z^ \ast{\mathrm{d}} {\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; = \hfill &amp; {{\large \int} {p({\bf{Y}}|{\mathbf{\upmu}} )p( {{\mathrm{\Delta }}_z^ \ast } )p({\mathrm{\Delta }}_{\mu} )p({\mathrm{\Delta }}_u)p(z^ \ast , {\mathbf{\upmu}} ){\mathrm{d}}{\mathbf{\upmu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu} {\mathrm{d}}{\mathrm{\Delta }}_z^ \ast {\mathrm{d}} {\mathrm{\Delta }}_u} } \hfill \\ {} \hfill &amp; \hskip -8pt \propto \hfill &amp; \hskip -7pt {{\large \int} {p({\bf{Y}}|{\mathbf{\upmu}} )p( {{\mathrm{\Delta }}_z^ \ast })p({\mathrm{\Delta }}_{\mu} )p({\mathrm{\Delta }}_u)1_S{\mathrm{d}}{\mathbf{\upmu}} {\mathrm{d}}{\mathrm{\Delta }}_{\mu} {\mathrm{d}}{\mathrm{\Delta }}_z^ \ast {\mathrm{d}}{\mathrm{\Delta }}_u.} } \hfill \end{array}$$\end{document}</tex-math>
+   <math id="M42" class="math">
+    <mtable class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd">
+       <mi class="mi">p</mi>
+       <mfenced close=")" open="(" separators="" class="mfenced">
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msup>
+         <mo class="mo">∣</mo>
+         <mi mathvariant="bold" class="mi">Y </mi>
+        </mrow>
+       </mfenced>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">=</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">∫</mo>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msup>
+         <mo class="mo">,</mo>
+         <mi class="mi">𝛍</mi>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msubsup>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">u</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <mi mathvariant="bold" class="mi">Y </mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <mi class="mi">𝛍</mi>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">μ</mi>
+        </mrow>
+       </msub>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msubsup class="msubsup">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">z</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">*</mo>
+        </mrow>
+       </msubsup>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">u</mi>
+        </mrow>
+       </msub>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd"/>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">∝</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">∫</mo>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">Y </mi>
+         <mo class="mo">∣</mo>
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msup>
+         <mo class="mo">,</mo>
+         <mi class="mi">𝛍</mi>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msubsup>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">u</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msup>
+         <mo class="mo">,</mo>
+         <mi class="mi">𝛍</mi>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msubsup>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">u</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <mi class="mi">𝛍</mi>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">μ</mi>
+        </mrow>
+       </msub>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msubsup class="msubsup">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">z</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">*</mo>
+        </mrow>
+       </msubsup>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">u</mi>
+        </mrow>
+       </msub>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd"/>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">=</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">∫</mo>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">Y </mi>
+         <mo class="mo">∣</mo>
+         <mi class="mi">𝛍</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msup>
+         <mo class="mo">,</mo>
+         <mi class="mi">𝛍</mi>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msubsup>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">u</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <mi class="mi">𝛍</mi>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">μ</mi>
+        </mrow>
+       </msub>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msubsup class="msubsup">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">z</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">*</mo>
+        </mrow>
+       </msubsup>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">u</mi>
+        </mrow>
+       </msub>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd"/>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">=</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">∫</mo>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">Y </mi>
+         <mo class="mo">∣</mo>
+         <mi class="mi">𝛍</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msubsup>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">u</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msup>
+         <mo class="mo">,</mo>
+         <mi class="mi">𝛍</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <mi class="mi">𝛍</mi>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">μ</mi>
+        </mrow>
+       </msub>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msubsup class="msubsup">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">z</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">*</mo>
+        </mrow>
+       </msubsup>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">u</mi>
+        </mrow>
+       </msub>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd"/>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">∝</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">∫</mo>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">Y </mi>
+         <mo class="mo">∣</mo>
+         <mi class="mi">𝛍</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">z</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mo class="mo">*</mo>
+          </mrow>
+         </msubsup>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">u</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mn class="mn">1</mn>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">S</mi>
+        </mrow>
+       </msub>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <mi class="mi">𝛍</mi>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">μ</mi>
+        </mrow>
+       </msub>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msubsup class="msubsup">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">z</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">*</mo>
+        </mrow>
+       </msubsup>
+       <mi mathvariant="normal" class="mi">d</mi>
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">u</mi>
+        </mrow>
+       </msub>
+       <mo class="mo">.</mo>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41467_2019_10561_Article_Equ11.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

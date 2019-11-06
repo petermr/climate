@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The terms in the BV equation were normalized so that each term individually has a zero mean and unit variance globally. This scaling of the variables ensures that the patterns in the variance of the variables form gridpoint to gridpoint are what is highlighted, rather than the relative magnitudes (Not applying normalization and feature scaling produced a poor result where clusters are harder to robustly identify.). Using the normalized and scaled fields, the clusters are more easily identified. The 
+ <italic class="italic">K</italic>‐means algorithm (MacQueen, 1967) involves an iterative minimization of the sum of squares of the Euclidean distance partitioning of the hyperspace given by the terms in the BV equation: 
+ <disp-formula id="ess2278-disp-0005" class="disp-formula">
+  <label class="label">(5)</label>
+  <math id="nlm-math-8" class="math">
+   <mi class="mi">J</mi>
+   <mo class="mo">=</mo>
+   <msubsup class="msubsup">
+    <mrow class="mrow">
+     <mi mathvariant="normal" class="mi">Σ</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">j</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">K</mi>
+    </mrow>
+   </msubsup>
+   <mspace width="0.1em" class="mspace"/>
+   <msubsup class="msubsup">
+    <mrow class="mrow">
+     <mi mathvariant="normal" class="mi">Σ</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">i</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">n</mi>
+    </mrow>
+   </msubsup>
+   <mspace width="0.1em" class="mspace"/>
+   <mo stretchy="false" class="mo">|</mo>
+   <mo stretchy="false" class="mo">|</mo>
+   <msubsup class="msubsup">
+    <mrow class="mrow">
+     <mi mathvariant="bold" class="mi">x</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">i</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">j</mi>
+    </mrow>
+   </msubsup>
+   <mo class="mo">−</mo>
+   <msub class="msub">
+    <mi mathvariant="bold" class="mi">c</mi>
+    <mi class="mi">j</mi>
+   </msub>
+   <mo stretchy="false" class="mo">|</mo>
+   <msup class="msup">
+    <mo stretchy="false" class="mo">|</mo>
+    <mn class="mn">2</mn>
+   </msup>
+  </math>
+ </disp-formula> the number of 
+ <italic class="italic">K</italic> clusters is a free parameter that is chosen a priori; the cluster centers have random initial values scattered throughout the parameter space. The parameter 
+ <bold class="bold">x</bold> is a vector field that is defined at every grid cell on a discretized sphere, with each element 
+ <bold class="bold">x</bold>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> representing a five‐dimensional vector on the model's horizontal grid, such that index 
+ <italic class="italic">i</italic> uniquely identifies a grid point on the sphere, with (lon,lat) = (
+ <italic class="italic">ϕ</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>,
+ <italic class="italic">θ</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>). The components (features) of each vector 
+ <bold class="bold">x</bold>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> correspond to the five terms in the BV budget. Each cluster 
+ <italic class="italic">j</italic> = 1,…, 
+ <italic class="italic">K</italic> is represented by the five‐dimensional characterizing vector 
+ <italic class="italic">c</italic>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub>, and the 
+ <italic class="italic">K</italic>‐means classification attributes each vector 
+ <bold class="bold">x</bold>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> to a unique cluster 
+ <italic class="italic">c</italic>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub>, thus 
+ <math id="nlm-math-9" class="math">
+  <msub class="msub">
+   <mi mathvariant="bold" class="mi">x</mi>
+   <mi class="mi">i</mi>
+  </msub>
+  <mo class="mo">=</mo>
+  <msubsup class="msubsup">
+   <mrow class="mrow">
+    <mi mathvariant="bold" class="mi">x</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">i</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">j</mi>
+   </mrow>
+  </msubsup>
+ </math>. The distance between a data point 
+ <math id="nlm-math-10" class="math">
+  <msubsup class="msubsup">
+   <mrow class="mrow">
+    <mi mathvariant="bold" class="mi">x</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">i</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">j</mi>
+   </mrow>
+  </msubsup>
+ </math> and 
+ <bold class="bold">c</bold>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub> is given by 
+ <math id="nlm-math-11" class="math">
+  <mo stretchy="false" class="mo">|</mo>
+  <mo stretchy="false" class="mo">|</mo>
+  <msubsup class="msubsup">
+   <mrow class="mrow">
+    <mi mathvariant="bold" class="mi">x</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">i</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">j</mi>
+   </mrow>
+  </msubsup>
+  <mo class="mo">−</mo>
+  <msub class="msub">
+   <mi mathvariant="bold" class="mi">c</mi>
+   <mi class="mi">j</mi>
+  </msub>
+  <mo stretchy="false" class="mo">|</mo>
+  <msup class="msup">
+   <mo stretchy="false" class="mo">|</mo>
+   <mn class="mn">2</mn>
+  </msup>
+ </math>. Each data point is associated with the closest 
+ <italic class="italic">K</italic>‐cluster, the position of 
+ <bold class="bold">c</bold>
+ <sub class="sub">
+  <italic class="italic">j</italic>
+ </sub> is recalculated, and the association reassessed until the solution converges. Assumptions regarding the covariance of the data are discussed in the appendix.
+</p>
