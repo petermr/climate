@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The function 
+ <monospace class="monospace">generate.TP.resids()</monospace> returns an R list of new residual matrices. Each of the 
+ <monospace class="monospace">ngen</monospace> entries in the list is a new realization: a matrix that is [Ntime x 2 * Ngrid]. The first 1:Ngrid columns of each residual matrix are the temperature residuals and columns (Ngrid + 1):(2*Ngrid) are the precipitation residuals. These generated fields can be reshaped, plotted, analyzed, saved, etc. in whatever way a user desires. With the default inputs to 
+ <monospace class="monospace">trainTP()</monospace> of 
+ <monospace class="monospace">tvarconvert_fcn = NULL</monospace> and 
+ <monospace class="monospace">pvarconvert_fcn = log</monospace>, these are residuals in (temperature, log(precipitation) space.
+</p>

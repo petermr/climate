@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Variability models are weighted using similar ideas to the ones used in trend weight estimation. We consider 
+ <italic class="italic">k</italic> competing statistical models for calibration period anomalies observations Δ
+ <italic class="italic">
+  <bold class="bold">y</bold>
+ </italic> = (Δ
+ <italic class="italic">y</italic>
+ <sub class="sub">1</sub>, Δ
+ <italic class="italic">y</italic>
+ <sub class="sub">2</sub>, …, Δ
+ <italic class="italic">y</italic>
+ <sub class="sub">
+  <italic class="italic">n</italic>
+ </sub>) (see 
+ <xref ref-type="disp-formula" rid="pone.0214535.e004" class="xref">Eq (3)</xref>). Each 
+ <italic class="italic">i</italic>th variability model 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">V</italic>,
+  <italic class="italic">i</italic>
+ </sub> models the anomalies hierarchically in the following form: 
+ <disp-formula id="pone.0214535.e013" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e013.jpg" id="pone.0214535.e013g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M13" class="math">
+    <mrow class="mrow">
+     <mo class="mo">{</mo>
+     <mtable class="mtable">
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <maligngroup class="maligngroup"/>
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">θ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">V</mi>
+          </mrow>
+         </msubsup>
+         <mo class="mo">=</mo>
+         <msubsup class="msubsup">
+          <mrow class="mrow">
+           <mover accent="true" class="mover">
+            <mrow class="mrow">
+             <mi mathvariant="bold-italic" class="mi">θ</mi>
+            </mrow>
+            <mo class="mo">ˇ</mo>
+           </mover>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">M</mi>
+           <mo class="mo">,</mo>
+           <mi mathvariant="bold-italic" class="mi">i</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">V</mi>
+          </mrow>
+         </msubsup>
+         <mo class="mo">+</mo>
+         <mi class="mi">f</mi>
+         <msup class="msup">
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">ε</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="bold-italic" class="mi">V</mi>
+          </mrow>
+         </msup>
+         <mo class="mo">(</mo>
+         <mn class="mn">9</mn>
+         <mo class="mo">)</mo>
+        </mrow>
+       </mtd>
+      </mtr>
+      <mtr class="mtr">
+       <mtd class="mtd">
+        <mrow class="mrow">
+         <maligngroup class="maligngroup"/>
+         <mo class="mo">Δ</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">t</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">=</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">ρ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">y</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">Δ</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">t</mi>
+           <mo class="mo">-</mo>
+           <mn class="mn">1</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">+</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">w</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">t</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+        </mrow>
+       </mtd>
+      </mtr>
+     </mtable>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(8)</label>
+ </disp-formula> where 
+ <inline-formula id="pone.0214535.e014" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e014.jpg" id="pone.0214535.e014g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M14" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">θ</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">y</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">V</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <mo class="mo">(</mo>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mrow class="mrow">
+       <mi class="mi">σ</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">y</mi>
+      </mrow>
+     </msub>
+     <mo class="mo">,</mo>
+     <msub class="msub">
+      <mrow class="mrow">
+       <mi class="mi">ρ</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">y</mi>
+      </mrow>
+     </msub>
+    </mrow>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+ </inline-formula>, are autocorrelation and innovation standard deviation of the real climate, 
+ <inline-formula id="pone.0214535.e015" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e015.jpg" id="pone.0214535.e015g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M15" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <mi mathvariant="bold-italic" class="mi">θ</mi>
+       </mrow>
+       <mo class="mo">ˇ</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">M</mi>
+      <mo class="mo">,</mo>
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">V</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <mo class="mo">(</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <mi class="mi">σ</mi>
+       </mrow>
+       <mo class="mo">ˇ</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">M</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">,</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mover accent="true" class="mover">
+       <mrow class="mrow">
+        <mi class="mi">ρ</mi>
+       </mrow>
+       <mo class="mo">ˇ</mo>
+      </mover>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">M</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+ </inline-formula> are summary statistics of autocorrelation and innovation standard deviation from 
+ <italic class="italic">i</italic>th model anomalies, 
+ <italic class="italic">f</italic>
+ <bold class="bold">
+  <italic class="italic">ε</italic>
+ </bold>
+ <sup class="sup">
+  <bold class="bold">
+   <italic class="italic">V</italic>
+  </bold>
+ </sup> is model error (where 
+ <bold class="bold">
+  <italic class="italic">ε</italic>
+ </bold>
+ <sup class="sup">
+  <bold class="bold">
+   <italic class="italic">V</italic>
+  </bold>
+ </sup> = (
+ <italic class="italic">ε</italic>
+ <sub class="sub">
+  <italic class="italic">σ</italic>
+ </sub>, 
+ <italic class="italic">ε</italic>
+ <sub class="sub">
+  <italic class="italic">ρ</italic>
+ </sub>), and 
+ <italic class="italic">f</italic> is a deterministic scaling factor to widen the distribution to correct for potential overconfidence), and 
+ <inline-formula id="pone.0214535.e016" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e016.jpg" id="pone.0214535.e016g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M16" class="math">
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">w</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">~</mo>
+    <mi class="mi">N</mi>
+    <mo class="mo">(</mo>
+    <mrow class="mrow">
+     <mn class="mn">0</mn>
+     <mo class="mo">,</mo>
+     <msubsup class="msubsup">
+      <mrow class="mrow">
+       <mi class="mi">σ</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">y</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mn class="mn">2</mn>
+      </mrow>
+     </msubsup>
+    </mrow>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+ </inline-formula>. The top line of 
+ <xref ref-type="disp-formula" rid="pone.0214535.e013" class="xref">Eq (8)</xref> connects real system anomaly properties to model summary statistics, and the bottom line shows that observed anomalies are modelled as red noise with parameters (
+ <italic class="italic">σ</italic>
+ <sub class="sub">
+  <italic class="italic">y</italic>
+ </sub>, 
+ <italic class="italic">ρ</italic>
+ <sub class="sub">
+  <italic class="italic">y</italic>
+ </sub>) of the real system.
+</p>

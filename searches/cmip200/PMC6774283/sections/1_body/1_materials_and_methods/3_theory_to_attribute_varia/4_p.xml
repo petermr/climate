@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To isolate the relative contributions of NPP and 
+ <italic class="italic">k</italic>
+ <sub class="sub">eco</sub> to the variability in NBP and RH at different timescales, we built a three‐C‐pool box model (henceforth termed the “Box‐Model”) that reproduces the response of the complex ESM given levels of NPP and D (Zhang et al., 
+ <xref rid="jame20902-bib-0077" ref-type="ref" class="xref">2018</xref>). The Box‐Model simplifies the C pool structure of the CESM/CLM4CN, which includes C pools of leaf, grain, live and dead stems, fine root, live and dead coarse roots, three litter pools, coarse woody debris, and four soil organic matter pools; all of these are aggregated into three pools: a plant biomass pool, a litter pool, and a soil organic matter pool (see Figure 
+ <xref rid="jame20902-supitem-0001" ref-type="supplementary-material" class="xref">S2</xref>). The Box‐Model is described as 
+ <disp-formula id="jame20902-disp-0004" class="disp-formula">
+  <label class="label">(4)</label>
+  <math id="nlm-math-4" class="math">
+   <mfrac class="mfrac">
+    <mrow class="mrow">
+     <mi class="mi">d</mi>
+     <mi mathvariant="bold-italic" class="mi">C</mi>
+     <mfenced open="(" close=")" class="mfenced">
+      <mi class="mi">t</mi>
+     </mfenced>
+    </mrow>
+    <mi mathvariant="italic" class="mi">dt</mi>
+   </mfrac>
+   <mo class="mo">=</mo>
+   <mi mathvariant="bold" class="mi">A</mi>
+   <mo class="mo">⋅</mo>
+   <mi mathvariant="bold-italic" class="mi">C</mi>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">t</mi>
+   </mfenced>
+   <mo class="mo">+</mo>
+   <mi class="mi">NPP</mi>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">t</mi>
+   </mfenced>
+   <mo class="mo">−</mo>
+   <mi class="mi">D</mi>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">t</mi>
+   </mfenced>
+   <mo class="mo">,</mo>
+  </math>
+ </disp-formula>where 
+ <inline-formula class="inline-formula">
+  <bold class="bold">
+   <italic class="italic">C</italic>
+  </bold> = (
+  <italic class="italic">c</italic>
+  <sub class="sub">1</sub>, 
+  <italic class="italic">c</italic>
+  <sub class="sub">2</sub>, 
+  <italic class="italic">c</italic>
+  <sub class="sub">3</sub>)
+  <sup class="sup">′</sup> = (
+  <italic class="italic">c</italic>
+  <sub class="sub">plant</sub>, 
+  <italic class="italic">c</italic>
+  <sub class="sub">litter</sub>, 
+  <italic class="italic">c</italic>
+  <sub class="sub">soil</sub>)
+  <sup class="sup">′</sup>
+ </inline-formula> is a vector of carbon pool sizes; NPP and D are the annual output from each of the CESM‐LME full‐forcing simulations with year 
+ <italic class="italic">t</italic> from 850 to 1849. 
+ <bold class="bold">A</bold> is a transfer matrix, representing the fractions of carbon transferred from one pool to the others. Following Zhang et al. (
+ <xref rid="jame20902-bib-0077" ref-type="ref" class="xref">2018</xref>), we have 
+ <disp-formula id="jame20902-disp-0005" class="disp-formula">
+  <label class="label">(5)</label>
+  <math id="nlm-math-5" class="math">
+   <mi mathvariant="bold" class="mi">A</mi>
+   <mo class="mo">=</mo>
+   <mfenced open="(" close=")" class="mfenced">
+    <mtable columnalign="center" class="mtable">
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <mn class="mn">0</mn>
+      </mtd>
+      <mtd class="mtd">
+       <mn class="mn">0</mn>
+      </mtd>
+      <mtd class="mtd">
+       <mn class="mn">0</mn>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <msub class="msub">
+        <mi class="mi">a</mi>
+        <mn class="mn">21</mn>
+       </msub>
+      </mtd>
+      <mtd class="mtd">
+       <mo class="mo">−</mo>
+       <msub class="msub">
+        <mi class="mi">a</mi>
+        <mn class="mn">22</mn>
+       </msub>
+      </mtd>
+      <mtd class="mtd">
+       <mn class="mn">0</mn>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd class="mtd">
+       <mn class="mn">0</mn>
+      </mtd>
+      <mtd class="mtd">
+       <msub class="msub">
+        <mi class="mi">a</mi>
+        <mn class="mn">32</mn>
+       </msub>
+      </mtd>
+      <mtd class="mtd">
+       <mo class="mo">−</mo>
+       <msub class="msub">
+        <mi class="mi">a</mi>
+        <mn class="mn">33</mn>
+       </msub>
+      </mtd>
+     </mtr>
+    </mtable>
+   </mfenced>
+   <mo class="mo">,</mo>
+  </math>
+ </disp-formula>
+ <disp-formula id="jame20902-disp-0006" class="disp-formula">
+  <label class="label">(6)</label>
+  <math id="nlm-math-6" class="math">
+   <mi class="mi">RH</mi>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">t</mi>
+   </mfenced>
+   <mo class="mo">=</mo>
+   <msub class="msub">
+    <mi class="mi">a</mi>
+    <mn class="mn">22</mn>
+   </msub>
+   <msub class="msub">
+    <mi class="mi">c</mi>
+    <mn class="mn">2</mn>
+   </msub>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">t</mi>
+   </mfenced>
+   <mo class="mo">+</mo>
+   <msub class="msub">
+    <mi class="mi">a</mi>
+    <mn class="mn">33</mn>
+   </msub>
+   <msub class="msub">
+    <mi class="mi">c</mi>
+    <mn class="mn">3</mn>
+   </msub>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">t</mi>
+   </mfenced>
+   <mo class="mo">,</mo>
+  </math>
+ </disp-formula>
+ <disp-formula id="jame20902-disp-0007" class="disp-formula">
+  <label class="label">(7)</label>
+  <math id="nlm-math-7" class="math">
+   <mi class="mi">NBP</mi>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">t</mi>
+   </mfenced>
+   <mo class="mo">=</mo>
+   <mfrac class="mfrac">
+    <mrow class="mrow">
+     <mi class="mi">d</mi>
+     <mfenced open="(" close=")" class="mfenced">
+      <mrow class="mrow">
+       <msub class="msub">
+        <mi class="mi">c</mi>
+        <mn class="mn">1</mn>
+       </msub>
+       <mfenced open="(" close=")" class="mfenced">
+        <mi class="mi">t</mi>
+       </mfenced>
+       <mo class="mo">+</mo>
+       <msub class="msub">
+        <mi class="mi">c</mi>
+        <mn class="mn">2</mn>
+       </msub>
+       <mfenced open="(" close=")" class="mfenced">
+        <mi class="mi">t</mi>
+       </mfenced>
+       <mo class="mo">+</mo>
+       <msub class="msub">
+        <mi class="mi">c</mi>
+        <mn class="mn">3</mn>
+       </msub>
+       <mfenced open="(" close=")" class="mfenced">
+        <mi class="mi">t</mi>
+       </mfenced>
+      </mrow>
+     </mfenced>
+    </mrow>
+    <mi mathvariant="italic" class="mi">dt</mi>
+   </mfrac>
+   <mo class="mo">.</mo>
+  </math>
+ </disp-formula>
+</p>

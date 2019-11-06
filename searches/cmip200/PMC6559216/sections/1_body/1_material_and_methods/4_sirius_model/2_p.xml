@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="par0065" class="p">Sirius is a process-based wheat simulation model with a daily timescale. It includes an optimization framework, which facilitates designing ideotypes and optimization of cultivar parameters and plant traits for target environments (
+ <xref rid="bib0405" ref-type="bibr" class="xref">Senapati et al., 2018)</xref>. Sirius utilizes the multicore architecture of modern computers, which substantially reduces the running time for computationally intensive applications such as ideotype design. The model requires daily weather data, a cultivar description, a soil physical description and management information as model inputs. Sirius consists of various sub-models that describe soil, plant phenological development, water and nitrogen (N) uptake, photosynthesis, and biomass and grain production. The model also includes the effects of abiotic stress (
+ <italic class="italic">e.g</italic>., common heat and water stresses), N limitation, and drought and heat stress during reproductive development on photosynthesis, biomass production and grain yield. 
+ <xref rid="tbl0010" ref-type="table" class="xref">Table 2</xref> shows the important cultivar parameters used in Sirius. Briefly, photosynthesis and biomass production are simulated on a daily basis as the product of intercepted photosynthetically active radiation (
+ <italic class="italic">PAR</italic>) and radiation use efficiency (
+ <italic class="italic">RUE</italic>), limited by temperature and water stress. Phyllochron (
+ <italic class="italic">P
+  <sub class="sub">h</sub>
+ </italic>) and day length response (
+ <italic class="italic">P
+  <sub class="sub">p</sub>
+ </italic>) control the rate of crop development. Phenological development is calculated from the mainstem leaf appearance rate and final leaf numbers, with the latter determined by responses to day length and vernalisation. Canopy is described as a series of leaf layers associated with individual mainstem leaves. Leaf area development in each layer is simulated by a thermal time sub-model, and actual leaf area is calculated using a simple limitation rule. Leaf senescence is expressed in thermal time and linked to the rank of the leaf in the canopy. Total canopy senescence synchronizes with the end of grain filling. Leaf senescence could be accelerated by N limitation to sustain green leaves and grain filling, or by abiotic stress, 
+ <italic class="italic">viz</italic>. temperature or water stresses. Soil is described as a cascade of 5-cm layers up to a user-defined depth. Photosynthesis and new biomass production are reduced by water stress proportionally to the response of photosynthesis to water stress. The water stress reduces photosynthesis and biomass production during the crop-growing period. Water stress also increases the rate of leaf senescence, which ultimately reduces the grain yield. Drought and heat stresses, especially during the reproductive phase, decrease the primary fertile grain setting number as a result of the abnormal development of both ovary and anthers, the premature abortion of florets, and the irreversible abortion and sterility of both male and female reproductive organs and gametophytes. Sirius computes a drought stress factor (
+ <italic class="italic">DSF</italic>) and heat stress index (
+ <italic class="italic">HSI</italic>) to estimate the effects of drought and heat stresses respectively on the primary grain setting number during reproductive development. Additionally, the potential weight of grain could be limited by heat stress and water limitation during grain filling and endosperm development. A detailed description of the Sirius model can be found elsewhere (
+ <xref rid="bib0045" ref-type="bibr" class="xref">Brooks et al., 2001</xref>; 
+ <xref rid="bib0185" ref-type="bibr" class="xref">Jamieson and Semenov, 2000</xref>; 
+ <xref rid="bib0195" ref-type="bibr" class="xref">Jamieson et al., 1998b</xref>; 
+ <xref rid="bib0220" ref-type="bibr" class="xref">Lawless et al., 2005</xref>; 
+ <xref rid="bib0370" ref-type="bibr" class="xref">Semenov and Stratonovitch, 2013</xref>; 
+ <xref rid="bib0405" ref-type="bibr" class="xref">Senapati et al., 2018</xref>; 
+ <xref rid="bib0435" ref-type="bibr" class="xref">Stratonovitch and Semenov, 2015</xref>).
+</p>

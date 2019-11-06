@@ -1,0 +1,1526 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app-group class="app-group">
+ <app id="App1" class="app">
+  <sec id="Sec7" class="sec">
+   <title class="title">Appendix. Methods</title>
+   <sec id="Sec8" class="sec">
+    <title class="title">Singular Value Decomposition of an 
+     <italic class="italic">m</italic>-dimensional predictors’ space
+    </title>
+    <p id="Par21" class="p">Suppose an 
+     <italic class="italic">n</italic> × 
+     <italic class="italic">m</italic> matrix 
+     <bold class="bold">X</bold> contains, by columns, centralized samples of 
+     <italic class="italic">m</italic> variables 
+     <italic class="italic">x</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">x</italic>
+     <sub class="sub">2</sub>, ..., 
+     <italic class="italic">x</italic>
+     <sub class="sub">m</sub> (our 
+     <italic class="italic">original predictors</italic>), each observed at the same 
+     <italic class="italic">n &gt; m</italic> times. The well-known 
+     <italic class="italic">thin</italic> Singular Value Decomposition (SVD) presents 
+     <bold class="bold">X</bold> as:
+     <disp-formula id="Equa" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M13" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{X}=\mathbf{U}\boldsymbol{\Sigma } {\mathbf{E}}^{\mathbf{T}} $$\end{document}</tex-math>
+       <math id="M14" display="block" class="math">
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">X</mi>
+        </mrow>
+        <mo class="mo">=</mo>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">U</mi>
+        </mrow>
+        <mi mathvariant="bold" class="mi">Σ</mi>
+        <msup class="msup">
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">E</mi>
+          </mrow>
+         </mrow>
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">T</mi>
+          </mrow>
+         </mrow>
+        </msup>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>where 
+     <bold class="bold">U</bold> is an 
+     <italic class="italic">n</italic> × 
+     <italic class="italic">m</italic> matrix of orthonormal columns, 
+     <bold class="bold">E</bold> is an 
+     <italic class="italic">m</italic> × 
+     <italic class="italic">m</italic> orthogonal matrix, and 
+     <bold class="bold">Σ</bold> is a diagonal matrix with non-negative diagonal elements in non-ascending order, called singular values (Golub and Van Loan 
+     <xref ref-type="bibr" rid="CR24" class="xref">1996</xref>). Superscript 
+     <sup class="sup">
+      <italic class="italic">T</italic>
+     </sup> denotes matrix transposition. The columns of 
+     <bold class="bold">U</bold> and 
+     <bold class="bold">E</bold> are called left and right singular vectors. Rescaling the left singular vectors by 
+     <inline-formula id="IEq3" class="inline-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M15" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{P}=\sqrt{n-1}\mathbf{U} $$\end{document}</tex-math>
+       <math id="M16" display="inline" class="math">
+        <mi mathvariant="bold" class="mi">P</mi>
+        <mo class="mo">=</mo>
+        <msqrt class="msqrt">
+         <mrow class="mrow">
+          <mi class="mi">n</mi>
+          <mo class="mo">−</mo>
+          <mn class="mn">1</mn>
+         </mrow>
+        </msqrt>
+        <mi mathvariant="bold" class="mi">U</mi>
+       </math>
+       <inline-graphic xlink:href="10584_2018_2341_Article_IEq3.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </inline-formula> and introducing 
+     <bold class="bold">Λ</bold> = 
+     <bold class="bold">Σ</bold>
+     <sup class="sup">2</sup>/(
+     <italic class="italic">n</italic> − 1), we rewrite 
+     <bold class="bold">X</bold> as:
+     <disp-formula id="Equ7" class="disp-formula">
+      <label class="label">7</label>
+      <alternatives class="alternatives">
+       <tex-math id="M17" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{X}=\mathbf{P}{\boldsymbol{\Lambda}}^{1/2}{\mathbf{E}}^{\mathrm{T}} $$\end{document}</tex-math>
+       <math id="M18" display="block" class="math">
+        <mi mathvariant="bold" class="mi">X</mi>
+        <mo class="mo">=</mo>
+        <mi mathvariant="bold" class="mi">P</mi>
+        <msup class="msup">
+         <mi mathvariant="bold" class="mi">Λ</mi>
+         <mrow class="mrow">
+          <mn class="mn">1</mn>
+          <mo class="mo">/</mo>
+          <mn class="mn">2</mn>
+         </mrow>
+        </msup>
+        <msup class="msup">
+         <mi mathvariant="bold" class="mi">E</mi>
+         <mi mathvariant="normal" class="mi">T</mi>
+        </msup>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ7.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>
+    </p>
+    <p id="Par22" class="p">By construction, the columns of 
+     <bold class="bold">P</bold> are standardized, mutually uncorrelated time series. Each column is associated with a pattern of 
+     <italic class="italic">loadings</italic> (from the corresponding column of matrix 
+     <bold class="bold">E</bold>) on the original 
+     <italic class="italic">m</italic> variables and with the amount of variance (given by the corresponding diagonal element in 
+     <bold class="bold">Λ</bold>) that it 
+     <italic class="italic">explains</italic> within the total variance of the 
+     <italic class="italic">m</italic> original variables. The latter is easy to see from observing that the variance-covariance matrix of the original variables:
+     <disp-formula id="Equ8" class="disp-formula">
+      <label class="label">8</label>
+      <alternatives class="alternatives">
+       <tex-math id="M19" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{C}={\mathbf{X}}^{\mathrm{T}}\mathbf{X}/\left(n-1\right)=\mathbf{E}\boldsymbol{\Lambda } {\mathbf{E}}^{\mathrm{T}} $$\end{document}</tex-math>
+       <math id="M20" display="block" class="math">
+        <mi mathvariant="bold" class="mi">C</mi>
+        <mo class="mo">=</mo>
+        <msup class="msup">
+         <mi mathvariant="bold" class="mi">X</mi>
+         <mi mathvariant="normal" class="mi">T</mi>
+        </msup>
+        <mi mathvariant="bold" class="mi">X</mi>
+        <mo class="mo">/</mo>
+        <mfenced close=")" open="(" class="mfenced">
+         <mrow class="mrow">
+          <mi class="mi">n</mi>
+          <mo class="mo">−</mo>
+          <mn class="mn">1</mn>
+         </mrow>
+        </mfenced>
+        <mo class="mo">=</mo>
+        <mi mathvariant="bold" class="mi">EΛ</mi>
+        <msup class="msup">
+         <mi mathvariant="bold" class="mi">E</mi>
+         <mi mathvariant="normal" class="mi">T</mi>
+        </msup>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ8.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>has its eigenvalues and eigenvectors equal to diagonal elements of 
+     <bold class="bold">Λ</bold> and to columns of 
+     <bold class="bold">E</bold>, respectively. The columns of 
+     <bold class="bold">E</bold> are also known as Empirical Orthogonal Functions (EOFs), while the columns of 
+     <bold class="bold">V</bold> = 
+     <bold class="bold">PΛ</bold>
+     <sup class="sup">1/2</sup> are known as Principal Components (PC) of the data set contained in matrix 
+     <bold class="bold">X</bold>. Decomposition of the data set into EOFs and PCs:
+     <disp-formula id="Equb" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M21" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{X}={\mathbf{VE}}^{\mathrm{T}} $$\end{document}</tex-math>
+       <math id="M22" display="block" class="math">
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">X</mi>
+        </mrow>
+        <mo class="mo">=</mo>
+        <msup class="msup">
+         <mrow class="mrow">
+          <mi mathvariant="bold" class="mi">V</mi>
+          <mi mathvariant="bold" class="mi">E</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi mathvariant="normal" class="mi">T</mi>
+         </mrow>
+        </msup>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equb.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>is often used in climate science to represent the overall co-variability of the original variables as the superposition of linearly independent modes, with several leading modes usually explaining most of the total variance in the system (von Storch and Zwiers 
+     <xref ref-type="bibr" rid="CR53" class="xref">1999</xref>).
+    </p>
+   </sec>
+   <sec id="Sec9" class="sec">
+    <title class="title">Singular Value Decomposition of a bivariate predictors’ space; derivation of Eqs. (
+     <xref rid="Equ1" ref-type="" class="xref">1</xref>)–(
+     <xref rid="Equ5" ref-type="" class="xref">5</xref>)
+    </title>
+    <p id="Par23" class="p">We centralize our predictors, denote them 
+     <italic class="italic">x</italic>
+     <sub class="sub">
+      <bold class="bold">1</bold>
+     </sub> and 
+     <italic class="italic">x</italic>
+     <sub class="sub">
+      <bold class="bold">2</bold>
+     </sub>, respectively, arrange them column-wise in matrix 
+     <bold class="bold">X</bold> = [
+     <bold class="bold">x</bold>
+     <sub class="sub">1</sub>
+     <bold class="bold">x</bold>
+     <sub class="sub">2</sub>], and perform the SVD of 
+     <bold class="bold">X</bold> in the form of Eq. (
+     <xref rid="Equ7" ref-type="" class="xref">7</xref>). The columns of matrix 
+     <bold class="bold">P</bold> = [
+     <bold class="bold">p</bold>
+     <sub class="sub">1</sub> 
+     <bold class="bold">p</bold>
+     <sub class="sub">2</sub>], called singular vectors, are obtained from the columns of 
+     <bold class="bold">X</bold> by an orthogonal rotation with 2x2 matrix 
+     <bold class="bold">E</bold>, followed by their normalization by the square roots of diagonal elements of 2x2 matrix 
+     <bold class="bold">Λ</bold>:
+     <disp-formula id="Equ9" class="disp-formula">
+      <label class="label">9</label>
+      <alternatives class="alternatives">
+       <tex-math id="M23" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{P}=\mathbf{XE}{\boldsymbol{\Lambda}}^{-1/2} $$\end{document}</tex-math>
+       <math id="M24" display="block" class="math">
+        <mi mathvariant="bold" class="mi">P</mi>
+        <mo class="mo">=</mo>
+        <mi mathvariant="bold" class="mi">XE</mi>
+        <msup class="msup">
+         <mi mathvariant="bold" class="mi">Λ</mi>
+         <mrow class="mrow">
+          <mo class="mo">−</mo>
+          <mn class="mn">1</mn>
+          <mo class="mo">/</mo>
+          <mn class="mn">2</mn>
+         </mrow>
+        </msup>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ9.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>
+    </p>
+    <p id="Par24" class="p">By construction, 
+     <bold class="bold">p</bold>
+     <sub class="sub">1</sub> and 
+     <bold class="bold">p</bold>
+     <sub class="sub">2</sub> are standardized, mutually uncorrelated time series.
+    </p>
+    <p id="Par25" class="p">When there are only two predictors, 
+     <italic class="italic">x</italic>
+     <sub class="sub">1</sub> and 
+     <italic class="italic">x</italic>
+     <sub class="sub">2</sub>, it is possible to present the elements of matrices 
+     <bold class="bold">E</bold> and 
+     <bold class="bold">Λ</bold> of the canonical decomposition of the predictors’ variance-covariance matrix 
+     <bold class="bold">C</bold> = 
+     <bold class="bold">X</bold>
+     <sup class="sup">T</sup>
+     <bold class="bold">X</bold>/(
+     <italic class="italic">n</italic> − 1) = 
+     <bold class="bold">EΛE</bold>
+     <sup class="sup">T</sup> as functions of its elements.
+    </p>
+    <p id="Par26" class="p">Let standard deviations of 
+     <italic class="italic">x</italic>
+     <sub class="sub">1</sub> and 
+     <italic class="italic">x</italic>
+     <sub class="sub">2</sub> be 
+     <italic class="italic">σ</italic>
+     <sub class="sub">1</sub> and 
+     <italic class="italic">σ</italic>
+     <sub class="sub">2</sub>, respectively, and their correlation coefficient be 
+     <italic class="italic">ρ</italic>, then their variance-covariance matrix is:
+     <disp-formula id="Equ10" class="disp-formula">
+      <label class="label">10</label>
+      <alternatives class="alternatives">
+       <tex-math id="M25" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{C}=\left[\begin{array}{cc}{\sigma}_1^2&amp; \rho {\sigma}_1{\sigma}_2\\ {}\rho {\sigma}_1{\sigma}_2&amp; {\sigma}_2^2\end{array}\right]. $$\end{document}</tex-math>
+       <math id="M26" display="block" class="math">
+        <mi mathvariant="bold" class="mi">C</mi>
+        <mo class="mo">=</mo>
+        <mfenced close="]" open="[" class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <msubsup class="msubsup">
+             <mi class="mi">σ</mi>
+             <mn class="mn">1</mn>
+             <mn class="mn">2</mn>
+            </msubsup>
+           </mtd>
+           <mtd class="mtd">
+            <mi class="mi">ρ</mi>
+            <msub class="msub">
+             <mi class="mi">σ</mi>
+             <mn class="mn">1</mn>
+            </msub>
+            <msub class="msub">
+             <mi class="mi">σ</mi>
+             <mn class="mn">2</mn>
+            </msub>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mi class="mi">ρ</mi>
+            <msub class="msub">
+             <mi class="mi">σ</mi>
+             <mn class="mn">1</mn>
+            </msub>
+            <msub class="msub">
+             <mi class="mi">σ</mi>
+             <mn class="mn">2</mn>
+            </msub>
+           </mtd>
+           <mtd class="mtd">
+            <msubsup class="msubsup">
+             <mi class="mi">σ</mi>
+             <mn class="mn">2</mn>
+             <mn class="mn">2</mn>
+            </msubsup>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <mo class="mo">.</mo>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ10.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>
+    </p>
+    <p id="Par27" class="p">Note that:
+     <disp-formula id="Equc" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M27" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{C}=\frac{\sigma_1^2+{\sigma}_2^2}{2}\ \mathbf{I}+{\left[{\left(\frac{\sigma_1^2+{\sigma}_2^2}{2}\right)}^2+{\rho}^2{\sigma}_1^2{\sigma}_2^2\right]}^{1/2}\left[\begin{array}{cc}\cos 2\phi &amp; \sin 2\phi \\ {}\sin 2\phi &amp; -\cos 2\phi \end{array}\right], $$\end{document}</tex-math>
+       <math id="M28" display="block" class="math">
+        <mi mathvariant="bold" class="mi">C</mi>
+        <mo class="mo">=</mo>
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mn class="mn">1</mn>
+           <mn class="mn">2</mn>
+          </msubsup>
+          <mo class="mo">+</mo>
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mn class="mn">2</mn>
+           <mn class="mn">2</mn>
+          </msubsup>
+         </mrow>
+         <mn class="mn">2</mn>
+        </mfrac>
+        <mspace width="0.25em" class="mspace"/>
+        <mi mathvariant="bold" class="mi">I</mi>
+        <mo class="mo">+</mo>
+        <msup class="msup">
+         <mfenced close="]" open="[" class="mfenced">
+          <mrow class="mrow">
+           <msup class="msup">
+            <mfenced close=")" open="(" class="mfenced">
+             <mfrac class="mfrac">
+              <mrow class="mrow">
+               <msubsup class="msubsup">
+                <mi class="mi">σ</mi>
+                <mn class="mn">1</mn>
+                <mn class="mn">2</mn>
+               </msubsup>
+               <mo class="mo">+</mo>
+               <msubsup class="msubsup">
+                <mi class="mi">σ</mi>
+                <mn class="mn">2</mn>
+                <mn class="mn">2</mn>
+               </msubsup>
+              </mrow>
+              <mn class="mn">2</mn>
+             </mfrac>
+            </mfenced>
+            <mn class="mn">2</mn>
+           </msup>
+           <mo class="mo">+</mo>
+           <msup class="msup">
+            <mi class="mi">ρ</mi>
+            <mn class="mn">2</mn>
+           </msup>
+           <msubsup class="msubsup">
+            <mi class="mi">σ</mi>
+            <mn class="mn">1</mn>
+            <mn class="mn">2</mn>
+           </msubsup>
+           <msubsup class="msubsup">
+            <mi class="mi">σ</mi>
+            <mn class="mn">2</mn>
+            <mn class="mn">2</mn>
+           </msubsup>
+          </mrow>
+         </mfenced>
+         <mrow class="mrow">
+          <mn class="mn">1</mn>
+          <mo class="mo">/</mo>
+          <mn class="mn">2</mn>
+         </mrow>
+        </msup>
+        <mfenced close="]" open="[" class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">cos</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">sin</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">sin</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">−</mo>
+            <mo class="mo">cos</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <mo class="mo">,</mo>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equc.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>where 
+     <bold class="bold">I</bold> is a 2x2 identity matrix, and 
+     <italic class="italic">ϕ</italic> from the interval [0, 
+     <italic class="italic">π</italic>) is determined by:
+     <disp-formula id="Equ11" class="disp-formula">
+      <label class="label">11</label>
+      <alternatives class="alternatives">
+       <tex-math id="M29" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \cot \left(2\phi \right)=\left({\sigma}_1^2-{\sigma}_2^2\right)/\left(2\rho {\sigma}_1{\sigma}_2\right). $$\end{document}</tex-math>
+       <math id="M30" display="block" class="math">
+        <mo mathvariant="normal" class="mo">cot</mo>
+        <mfenced close=")" open="(" class="mfenced">
+         <mrow class="mrow">
+          <mn class="mn">2</mn>
+          <mi class="mi">ϕ</mi>
+         </mrow>
+        </mfenced>
+        <mo class="mo">=</mo>
+        <mfenced close=")" open="(" class="mfenced">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mn class="mn">1</mn>
+           <mn class="mn">2</mn>
+          </msubsup>
+          <mo class="mo">−</mo>
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mn class="mn">2</mn>
+           <mn class="mn">2</mn>
+          </msubsup>
+         </mrow>
+        </mfenced>
+        <mo class="mo">/</mo>
+        <mfenced close=")" open="(" class="mfenced">
+         <mrow class="mrow">
+          <mn class="mn">2</mn>
+          <mi class="mi">ρ</mi>
+          <msub class="msub">
+           <mi class="mi">σ</mi>
+           <mn class="mn">1</mn>
+          </msub>
+          <msub class="msub">
+           <mi class="mi">σ</mi>
+           <mn class="mn">2</mn>
+          </msub>
+         </mrow>
+        </mfenced>
+        <mo class="mo">.</mo>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ11.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>
+    </p>
+    <p id="Par28" class="p">Introducing a non-dimensional parameter 
+     <italic class="italic">k</italic> = 
+     <italic class="italic">σ</italic>
+     <sub class="sub">1</sub>/
+     <italic class="italic">σ</italic>
+     <sub class="sub">2</sub>, and expressing 
+     <italic class="italic">ϕ</italic> from Eq. (
+     <xref rid="Equ11" ref-type="" class="xref">11</xref>) as a function of 
+     <italic class="italic">k</italic> and 
+     <italic class="italic">ρ</italic>, we obtain Eq. (
+     <xref rid="Equ3" ref-type="" class="xref">3</xref>).
+    </p>
+    <p id="Par29" class="p">Using the identity:
+     <disp-formula id="Equd" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M31" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \left[\begin{array}{cc}\;\cos 2\phi &amp; \sin 2\phi \\ {}\sin 2\phi &amp; -\cos 2\phi \end{array}\right]=\left[\begin{array}{cc}\;\cos \phi &amp; -\sin \phi \\ {}\sin \phi &amp; \kern0.24em \cos \phi \end{array}\right]\left[\begin{array}{cc}1&amp; 0\\ {}0&amp; -1\end{array}\right]{\left[\begin{array}{cc}\cos \phi &amp; -\sin \phi \\ {}\sin \phi &amp; \cos \phi \end{array}\right]}^T $$\end{document}</tex-math>
+       <math id="M32" display="block" class="math">
+        <mfenced close="]" open="[" separators="," class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mspace width="0.12em" class="mspace"/>
+            <mo class="mo">cos</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">sin</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">sin</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">−</mo>
+            <mo class="mo">cos</mo>
+            <mn class="mn">2</mn>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <mo class="mo">=</mo>
+        <mfenced close="]" open="[" separators="," class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mspace width="0.12em" class="mspace"/>
+            <mo class="mo">cos</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">−</mo>
+            <mo class="mo">sin</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">sin</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mspace width="0.24em" class="mspace"/>
+            <mo class="mo">cos</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <mfenced close="]" open="[" separators="," class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mn class="mn">1</mn>
+           </mtd>
+           <mtd class="mtd">
+            <mn class="mn">0</mn>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mn class="mn">0</mn>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">−</mo>
+            <mn class="mn">1</mn>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <msup class="msup">
+         <mfenced close="]" open="[" separators="," class="mfenced">
+          <mtable class="mtable">
+           <mtr class="mtr">
+            <mtd class="mtd">
+             <mo class="mo">cos</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+            <mtd class="mtd">
+             <mo class="mo">−</mo>
+             <mo class="mo">sin</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+           </mtr>
+           <mtr class="mtr">
+            <mtd class="mtd">
+             <mo class="mo">sin</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+            <mtd class="mtd">
+             <mo class="mo">cos</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mfenced>
+         <mi class="mi">T</mi>
+        </msup>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equd.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>we rewrite:
+     <disp-formula id="Eque" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M33" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{C}=\left[\begin{array}{cc}\cos \phi &amp; -\sin \phi \\ {}\sin \phi &amp; \cos \phi \end{array}\right]\left[\begin{array}{cc}{\lambda}_1&amp; 0\\ {}0&amp; {\lambda}_2\end{array}\right]{\left[\begin{array}{cc}\cos \phi &amp; -\sin \phi \\ {}\sin \phi &amp; \cos \phi \end{array}\right]}^T $$\end{document}</tex-math>
+       <math id="M34" display="block" class="math">
+        <mi mathvariant="bold" class="mi">C</mi>
+        <mo class="mo">=</mo>
+        <mfenced close="]" open="[" class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">cos</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">−</mo>
+            <mo class="mo">sin</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">sin</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">cos</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <mfenced close="]" open="[" class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <msub class="msub">
+             <mi class="mi">λ</mi>
+             <mn class="mn">1</mn>
+            </msub>
+           </mtd>
+           <mtd class="mtd">
+            <mn class="mn">0</mn>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mn class="mn">0</mn>
+           </mtd>
+           <mtd class="mtd">
+            <msub class="msub">
+             <mi class="mi">λ</mi>
+             <mn class="mn">2</mn>
+            </msub>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <msup class="msup">
+         <mfenced close="]" open="[" class="mfenced">
+          <mtable class="mtable">
+           <mtr class="mtr">
+            <mtd class="mtd">
+             <mo class="mo">cos</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+            <mtd class="mtd">
+             <mo class="mo">−</mo>
+             <mo class="mo">sin</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+           </mtr>
+           <mtr class="mtr">
+            <mtd class="mtd">
+             <mo class="mo">sin</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+            <mtd class="mtd">
+             <mo class="mo">cos</mo>
+             <mi class="mi">ϕ</mi>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mfenced>
+         <mi class="mi">T</mi>
+        </msup>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Eque.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>with 
+     <italic class="italic">λ</italic>
+     <sub class="sub">1</sub> and 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub> defined by Eqs. (
+     <xref rid="Equ4" ref-type="" class="xref">4</xref>). Therefore, the canonical decomposition of 
+     <bold class="bold">C</bold> is performed with eigenvector and eigenvalue matrices, 
+     <bold class="bold">E</bold> and 
+     <bold class="bold">Λ</bold>, as follows:
+     <disp-formula id="Equ12" class="disp-formula">
+      <label class="label">12</label>
+      <alternatives class="alternatives">
+       <tex-math id="M35" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathrm{E}=\left[\begin{array}{cc}\cos \phi &amp; -\sin \phi \\ {}\sin \phi &amp; \cos \phi \end{array}\right],\kern0.5em \boldsymbol{\Lambda} =\left[\begin{array}{cc}{\lambda}_1&amp; 0\\ {}0&amp; {\lambda}_2\end{array}\right] $$\end{document}</tex-math>
+       <math id="M36" display="block" class="math">
+        <mi mathvariant="normal" class="mi">E</mi>
+        <mo class="mo">=</mo>
+        <mfenced close="]" open="[" separators="," class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">cos</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">−</mo>
+            <mo class="mo">sin</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mo class="mo">sin</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+           <mtd class="mtd">
+            <mo class="mo">cos</mo>
+            <mi class="mi">ϕ</mi>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+        <mo class="mo">,</mo>
+        <mspace width="0.5em" class="mspace"/>
+        <mi mathvariant="bold" class="mi">Λ</mi>
+        <mo class="mo">=</mo>
+        <mfenced close="]" open="[" separators="," class="mfenced">
+         <mtable class="mtable">
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <msub class="msub">
+             <mi class="mi">λ</mi>
+             <mn class="mn">1</mn>
+            </msub>
+           </mtd>
+           <mtd class="mtd">
+            <mn class="mn">0</mn>
+           </mtd>
+          </mtr>
+          <mtr class="mtr">
+           <mtd class="mtd">
+            <mn class="mn">0</mn>
+           </mtd>
+           <mtd class="mtd">
+            <msub class="msub">
+             <mi class="mi">λ</mi>
+             <mn class="mn">2</mn>
+            </msub>
+           </mtd>
+          </mtr>
+         </mtable>
+        </mfenced>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ12.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>
+    </p>
+    <p id="Par30" class="p">where 
+     <italic class="italic">ϕ</italic> is given by Eq. (
+     <xref rid="Equ3" ref-type="" class="xref">3</xref>) and 
+     <italic class="italic">λ</italic>
+     <sub class="sub">1</sub> and 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub> by Eq. (
+     <xref rid="Equ4" ref-type="" class="xref">4</xref>).
+    </p>
+    <p id="Par31" class="p">Inserting expressions for 
+     <bold class="bold">E</bold> and 
+     <bold class="bold">Λ</bold> from Eq. (
+     <xref rid="Equ12" ref-type="" class="xref">12</xref>) into Eq. (
+     <xref rid="Equ9" ref-type="" class="xref">9</xref>), we write them out in the component form for an arbitrary row of matrix P to obtain Eqs. (
+     <xref rid="Equ1" ref-type="" class="xref">1</xref>)–(
+     <xref rid="Equ2" ref-type="" class="xref">2</xref>).
+    </p>
+    <p id="Par32" class="p">Preisendorfer (
+     <xref ref-type="bibr" rid="CR43" class="xref">1988</xref>) noted that Eqs. (
+     <xref rid="Equ11" ref-type="" class="xref">11</xref>) and (
+     <xref rid="Equ4" ref-type="" class="xref">4</xref>) are known since Pearson (
+     <xref ref-type="bibr" rid="CR42" class="xref">1901</xref>). Equation (
+     <xref rid="Equ3" ref-type="" class="xref">3</xref>) derived above gives an explicit form for the angle 
+     <italic class="italic">ϕ</italic>, expressing it through the non-dimensional parameters 
+     <italic class="italic">k</italic> and 
+     <italic class="italic">ρ</italic> of the original predictors’ variance-covariance matrix, making it more convenient for interpretation. A traditional non-dimensional parameter of such matrix for SVD-based predictors 
+     <italic class="italic">p</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">p</italic>
+     <sub class="sub">2</sub>, the portion of variance explained by one of the predictors, follows from Eq. (
+     <xref rid="Equ4" ref-type="" class="xref">4</xref>). For 
+     <italic class="italic">p</italic>
+     <sub class="sub">1</sub>, it is expressed through 
+     <italic class="italic">k</italic> and 
+     <italic class="italic">ρ</italic> as:
+     <disp-formula id="Equ13" class="disp-formula">
+      <label class="label">13</label>
+      <alternatives class="alternatives">
+       <tex-math id="M37" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \frac{\lambda_1}{\lambda_1+{\lambda}_2}=\frac{1}{2}+\frac{1}{2}{\left[{\left(\frac{k-{k}^{-1}}{k+{k}^{-1}}\right)}^2+{\left(\frac{2\rho }{k+{k}^{-1}}\right)}^2\right]}^{1/2}. $$\end{document}</tex-math>
+       <math id="M38" display="block" class="math">
+        <mfrac class="mfrac">
+         <msub class="msub">
+          <mi class="mi">λ</mi>
+          <mn class="mn">1</mn>
+         </msub>
+         <mrow class="mrow">
+          <msub class="msub">
+           <mi class="mi">λ</mi>
+           <mn class="mn">1</mn>
+          </msub>
+          <mo class="mo">+</mo>
+          <msub class="msub">
+           <mi class="mi">λ</mi>
+           <mn class="mn">2</mn>
+          </msub>
+         </mrow>
+        </mfrac>
+        <mo class="mo">=</mo>
+        <mfrac class="mfrac">
+         <mn class="mn">1</mn>
+         <mn class="mn">2</mn>
+        </mfrac>
+        <mo class="mo">+</mo>
+        <mfrac class="mfrac">
+         <mn class="mn">1</mn>
+         <mn class="mn">2</mn>
+        </mfrac>
+        <msup class="msup">
+         <mrow class="mrow">
+          <mo class="mo">[</mo>
+          <msup class="msup">
+           <mrow class="mrow">
+            <mo class="mo">(</mo>
+            <mfrac class="mfrac">
+             <mrow class="mrow">
+              <mi class="mi">k</mi>
+              <mo class="mo">−</mo>
+              <msup class="msup">
+               <mrow class="mrow">
+                <mi class="mi">k</mi>
+               </mrow>
+               <mrow class="mrow">
+                <mo class="mo">−</mo>
+                <mn class="mn">1</mn>
+               </mrow>
+              </msup>
+             </mrow>
+             <mrow class="mrow">
+              <mi class="mi">k</mi>
+              <mo class="mo">+</mo>
+              <msup class="msup">
+               <mrow class="mrow">
+                <mi class="mi">k</mi>
+               </mrow>
+               <mrow class="mrow">
+                <mo class="mo">−</mo>
+                <mn class="mn">1</mn>
+               </mrow>
+              </msup>
+             </mrow>
+            </mfrac>
+            <mo class="mo">)</mo>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msup>
+          <mo class="mo">+</mo>
+          <msup class="msup">
+           <mrow class="mrow">
+            <mo class="mo">(</mo>
+            <mfrac class="mfrac">
+             <mrow class="mrow">
+              <mn class="mn">2</mn>
+              <mi class="mi">ρ</mi>
+             </mrow>
+             <mrow class="mrow">
+              <mi class="mi">k</mi>
+              <mo class="mo">+</mo>
+              <msup class="msup">
+               <mrow class="mrow">
+                <mi class="mi">k</mi>
+               </mrow>
+               <mrow class="mrow">
+                <mo class="mo">−</mo>
+                <mn class="mn">1</mn>
+               </mrow>
+              </msup>
+             </mrow>
+            </mfrac>
+            <mo class="mo">)</mo>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msup>
+          <mo class="mo">]</mo>
+         </mrow>
+         <mrow class="mrow">
+          <mn class="mn">1</mn>
+          <mrow class="mrow">
+           <mo class="mo">/</mo>
+          </mrow>
+          <mn class="mn">2</mn>
+         </mrow>
+        </msup>
+        <mo class="mo">.</mo>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ13.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>
+    </p>
+    <p id="Par33" class="p">For the predictor 
+     <italic class="italic">p</italic>
+     <sub class="sub">2</sub> with the smaller variance, 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub>, since 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub>/(
+     <italic class="italic">λ</italic>
+     <sub class="sub">1</sub> + 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub>) = 1 − 
+     <italic class="italic">λ</italic>
+     <sub class="sub">1</sub>/(
+     <italic class="italic">λ</italic>
+     <sub class="sub">1</sub> + 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub>), using (
+     <xref rid="Equ13" ref-type="" class="xref">13</xref>) results in Eq. (
+     <xref rid="Equ5" ref-type="" class="xref">5</xref>). The general structure of the dependence of the angle 
+     <italic class="italic">ϕ</italic>, characterizing the rotation of the original predictors toward uncorrelated singular vectors, and of ratio 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub>/(
+     <italic class="italic">λ</italic>
+     <sub class="sub">1</sub> + 
+     <italic class="italic">λ</italic>
+     <sub class="sub">2</sub>), characterizing the relative variance of the second (trailing) predictors’ mode, on non-dimensional parameters of the original predictors’ variance-covariance matrix, 
+     <italic class="italic">ρ</italic>, the correlation coefficient of the original predictors 
+     <italic class="italic">x</italic>
+     <sub class="sub">1</sub> and 
+     <italic class="italic">x</italic>
+     <sub class="sub">2</sub>, and 
+     <italic class="italic">k</italic>, their ratio of standard deviations, are illustrated in Fig. 
+     <xref rid="Fig4" ref-type="fig" class="xref">4</xref>, with points corresponding to the data samples of multi-model means from CMIP5 simulations and from observations, as listed in Table 
+     <xref rid="Tab1" ref-type="table" class="xref">1</xref>.
+    </p>
+    <p id="Par34" class="p">Finally, the relationships between parameters of variance-covariance matrices in the (
+     <italic class="italic">x</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">x</italic>
+     <sub class="sub">2</sub>) and (
+     <italic class="italic">p</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">p</italic>
+     <sub class="sub">2</sub>) predictor planes are illustrated by the shape of “concentration ellipses,” which are described by equation:
+     <disp-formula id="Equf" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M39" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {x}_1^2/{\sigma}_1^2-2\rho {x}_1{x}_2/\left({\sigma}_1{\sigma}_2\right)+{x}_2^2/{\sigma}_2^2=\left(1-{\rho}^2\right)q\left(\alpha \right) $$\end{document}</tex-math>
+       <math id="M40" display="block" class="math">
+        <msubsup class="msubsup">
+         <mi class="mi">x</mi>
+         <mn class="mn">1</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mo class="mo">/</mo>
+        <msubsup class="msubsup">
+         <mi class="mi">σ</mi>
+         <mn class="mn">1</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mo class="mo">−</mo>
+        <mn class="mn">2</mn>
+        <mi class="mi">ρ</mi>
+        <msub class="msub">
+         <mi class="mi">x</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">x</mi>
+         <mn class="mn">2</mn>
+        </msub>
+        <mo class="mo">/</mo>
+        <mfenced close=")" open="(" class="mfenced">
+         <mrow class="mrow">
+          <msub class="msub">
+           <mi class="mi">σ</mi>
+           <mn class="mn">1</mn>
+          </msub>
+          <msub class="msub">
+           <mi class="mi">σ</mi>
+           <mn class="mn">2</mn>
+          </msub>
+         </mrow>
+        </mfenced>
+        <mo class="mo">+</mo>
+        <msubsup class="msubsup">
+         <mi class="mi">x</mi>
+         <mn class="mn">2</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mo class="mo">/</mo>
+        <msubsup class="msubsup">
+         <mi class="mi">σ</mi>
+         <mn class="mn">2</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mo class="mo">=</mo>
+        <mfenced close=")" open="(" class="mfenced">
+         <mrow class="mrow">
+          <mn class="mn">1</mn>
+          <mo class="mo">−</mo>
+          <msup class="msup">
+           <mi class="mi">ρ</mi>
+           <mn class="mn">2</mn>
+          </msup>
+         </mrow>
+        </mfenced>
+        <mi class="mi">q</mi>
+        <mfenced close=")" open="(" class="mfenced">
+         <mi class="mi">α</mi>
+        </mfenced>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equf.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>in (
+     <italic class="italic">x</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">x</italic>
+     <sub class="sub">2</sub>) coordinates and by equation:
+     <disp-formula id="Equg" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M41" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {p}_1^2/{\lambda}_1+{p}_2^2/{\lambda}_2=q\left(\alpha \right) $$\end{document}</tex-math>
+       <math id="M42" display="block" class="math">
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mi class="mi">p</mi>
+         </mrow>
+         <mn class="mn">1</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mrow class="mrow">
+         <mo class="mo">/</mo>
+        </mrow>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">λ</mi>
+         </mrow>
+         <mn class="mn">1</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mi class="mi">p</mi>
+         </mrow>
+         <mn class="mn">2</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mrow class="mrow">
+         <mo class="mo">/</mo>
+        </mrow>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">λ</mi>
+         </mrow>
+         <mn class="mn">2</mn>
+        </msub>
+        <mo class="mo">=</mo>
+        <mi class="mi">q</mi>
+        <mo stretchy="false" class="mo">(</mo>
+        <mi class="mi">α</mi>
+        <mo stretchy="false" class="mo">)</mo>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equg.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>
+    </p>
+    <p id="Par35" class="p">in (
+     <italic class="italic">p</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">p</italic>
+     <sub class="sub">2</sub>) coordinates. Here, 
+     <italic class="italic">q</italic>(
+     <italic class="italic">α</italic>) is the 
+     <italic class="italic">α</italic>% quantile of the 
+     <italic class="italic">χ</italic>
+     <sup class="sup">2</sup>(2) distribution with two degrees of freedom, so that if (
+     <italic class="italic">x</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">x</italic>
+     <sub class="sub">2</sub>) observations obey a bivariate normal distribution, 
+     <italic class="italic">α</italic>% of the data points is contained within this concentration ellipse (von Storch and Zwiers 
+     <xref ref-type="bibr" rid="CR53" class="xref">1999</xref>, see their example 2.8.12, p. 43). An example of such an ellipse, expected to contain (for normally distributed data) 
+     <italic class="italic">α</italic> = 95% of the data, is shown in Fig. 
+     <xref rid="Fig2" ref-type="fig" class="xref">2</xref>.
+    </p>
+   </sec>
+   <sec id="Sec10" class="sec">
+    <title class="title">Use of time-dimensional singular vectors as predictors</title>
+    <p id="Par36" class="p">In regression studies, it often proves advantageous to use as predictors a set of standardized and mutually uncorrelated variables, like 
+     <italic class="italic">p</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">p</italic>
+     <sub class="sub">2</sub>, ..., 
+     <italic class="italic">p</italic>
+     <sub class="sub">
+      <italic class="italic">m</italic>
+     </sub> (their time series 
+     <bold class="bold">p</bold>
+     <sub class="sub">i</sub>, 
+     <italic class="italic">i</italic> = 1, 2, ..., 
+     <italic class="italic">m</italic>, are given by columns of matrix 
+     <bold class="bold">P</bold> and represent rescaled time-dimensional (left) singular vectors of 
+     <bold class="bold">X</bold>), instead of the original variables that lack these properties, leading to more tractable and easier to interpret results. Indeed, consider the regression model:
+     <disp-formula id="Equ14" class="disp-formula">
+      <label class="label">14</label>
+      <alternatives class="alternatives">
+       <tex-math id="M43" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ y={a}_1{p}_1+{a}_2{p}_2+\dots +{a}_m{p}_m+\varepsilon $$\end{document}</tex-math>
+       <math id="M44" display="block" class="math">
+        <mi class="mi">y</mi>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">a</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">p</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">a</mi>
+         <mn class="mn">2</mn>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">p</mi>
+         <mn class="mn">2</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <mo class="mo">…</mo>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">a</mi>
+         <mi class="mi">m</mi>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">p</mi>
+         <mi class="mi">m</mi>
+        </msub>
+        <mo class="mo">+</mo>
+        <mi class="mi">ε</mi>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ14.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>where 
+     <italic class="italic">ε</italic> is a random error and, for simplicity, the predictand 
+     <italic class="italic">y</italic> is assumed standardized. The vector of unknown regression coefficients 
+     <bold class="bold">a</bold> = (
+     <italic class="italic">a</italic>
+     <sub class="sub">1</sub>, 
+     <italic class="italic">a</italic>
+     <sub class="sub">2</sub>, …, 
+     <italic class="italic">a</italic>
+     <sub class="sub">
+      <italic class="italic">m</italic>
+     </sub>)
+     <sup class="sup">
+      <italic class="italic">T</italic>
+     </sup> has to be found by the least-squares best fit to the system
+     <disp-formula id="Equh" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M45" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{y}=\mathbf{Pa} $$\end{document}</tex-math>
+       <math id="M46" display="block" class="math">
+        <mi mathvariant="bold" class="mi">y</mi>
+        <mo class="mo">=</mo>
+        <mi mathvariant="bold" class="mi">Pa</mi>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equh.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>where 
+     <bold class="bold">y</bold> is an 
+     <italic class="italic">n</italic>-dimensional vector—a column that contains the standardized data sample for variable 
+     <italic class="italic">y</italic>. Dividing normal equations
+     <disp-formula id="Equi" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M47" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \left({\mathbf{P}}^{\mathrm{T}}\mathbf{P}\right)\mathbf{a}={\mathbf{P}}^{\mathrm{T}}\mathbf{y} $$\end{document}</tex-math>
+       <math id="M48" display="block" class="math">
+        <mo stretchy="false" class="mo">(</mo>
+        <msup class="msup">
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">P</mi>
+          </mrow>
+         </mrow>
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">T</mi>
+          </mrow>
+         </mrow>
+        </msup>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">P</mi>
+        </mrow>
+        <mo stretchy="false" class="mo">)</mo>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">a</mi>
+        </mrow>
+        <mo class="mo">=</mo>
+        <msup class="msup">
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">P</mi>
+          </mrow>
+         </mrow>
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">T</mi>
+          </mrow>
+         </mrow>
+        </msup>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">y</mi>
+        </mrow>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equi.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>by 
+     <italic class="italic">n</italic>–1, we find, since 
+     <bold class="bold">P</bold>
+     <sup class="sup">T</sup>
+     <bold class="bold">P</bold>/(
+     <italic class="italic">n</italic> −1) = 
+     <bold class="bold">I</bold> (where 
+     <bold class="bold">I</bold> is an 
+     <italic class="italic">n</italic> × 
+     <italic class="italic">n</italic> identity matrix),
+     <disp-formula id="Equj" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M49" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \mathbf{a}={\mathbf{P}}^{\mathrm{T}}\mathbf{y}/\left(n-1\right)={\left({\rho}_1,{\rho}_2,\dots, {\rho}_m\right)}^T, $$\end{document}</tex-math>
+       <math id="M50" display="block" class="math">
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">a</mi>
+        </mrow>
+        <mo class="mo">=</mo>
+        <msup class="msup">
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">P</mi>
+          </mrow>
+         </mrow>
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">T</mi>
+          </mrow>
+         </mrow>
+        </msup>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">y</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mo fence="true" maxsize="1.2em" minsize="1.2em" stretchy="true" symmetric="true" class="mo">/</mo>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">n</mi>
+         <mo class="mo">−</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <msup class="msup">
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mo class="mo">(</mo>
+           <msub class="msub">
+            <mrow class="mrow">
+             <mi class="mi">ρ</mi>
+            </mrow>
+            <mn class="mn">1</mn>
+           </msub>
+           <mo class="mo">,</mo>
+           <msub class="msub">
+            <mrow class="mrow">
+             <mi class="mi">ρ</mi>
+            </mrow>
+            <mn class="mn">2</mn>
+           </msub>
+           <mo class="mo">,</mo>
+           <mo class="mo">…</mo>
+           <mo class="mo">,</mo>
+           <msub class="msub">
+            <mrow class="mrow">
+             <mi class="mi">ρ</mi>
+            </mrow>
+            <mi class="mi">m</mi>
+           </msub>
+           <mo class="mo">)</mo>
+          </mrow>
+         </mrow>
+         <mi class="mi">T</mi>
+        </msup>
+        <mo class="mo">,</mo>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equj.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>where 
+     <italic class="italic">ρ</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub>, for each 
+     <italic class="italic">i</italic> = 1, 2, ..., 
+     <italic class="italic">m</italic>, is the sample correlation coefficient between 
+     <italic class="italic">p</italic>
+     <sub class="sub">i</sub> and 
+     <italic class="italic">y</italic> (
+     <inline-formula id="IEq4" class="inline-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M51" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {\rho}_i={p}_i^Ty/\left(n-1\right) $$\end{document}</tex-math>
+       <math id="M52" class="math">
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">ρ</mi>
+         </mrow>
+         <mi class="mi">i</mi>
+        </msub>
+        <mo class="mo">=</mo>
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mi class="mi">p</mi>
+         </mrow>
+         <mi class="mi">i</mi>
+         <mi class="mi">T</mi>
+        </msubsup>
+        <mi class="mi">y</mi>
+        <mrow class="mrow">
+         <mo class="mo">/</mo>
+        </mrow>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">n</mi>
+         <mo class="mo">−</mo>
+         <mn class="mn">1</mn>
+         <mo class="mo">)</mo>
+        </mrow>
+       </math>
+       <inline-graphic xlink:href="10584_2018_2341_Article_IEq4.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </inline-formula>, since 
+     <bold class="bold">y</bold> and columns of 
+     <bold class="bold">P</bold> are all standardized). Therefore, regression model Eq. (
+     <xref rid="Equ14" ref-type="" class="xref">14</xref>) results in the prediction:
+     <disp-formula id="Equ15" class="disp-formula">
+      <label class="label">15</label>
+      <alternatives class="alternatives">
+       <tex-math id="M53" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{y}={\rho}_1{p}_1+{\rho}_2{p}_2+\dots +{\rho}_m{p}_m $$\end{document}</tex-math>
+       <math id="M54" display="block" class="math">
+        <mover accent="true" class="mover">
+         <mi class="mi">y</mi>
+         <mo stretchy="true" class="mo">^</mo>
+        </mover>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">ρ</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">p</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">ρ</mi>
+         <mn class="mn">2</mn>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">p</mi>
+         <mn class="mn">2</mn>
+        </msub>
+        <mo class="mo">+</mo>
+        <mo class="mo">…</mo>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">ρ</mi>
+         <mi class="mi">m</mi>
+        </msub>
+        <msub class="msub">
+         <mi class="mi">p</mi>
+         <mi class="mi">m</mi>
+        </msub>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equ15.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>for which the sample estimate 
+     <inline-formula id="IEq5" class="inline-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M55" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{\rho} $$\end{document}</tex-math>
+       <math id="M56" display="inline" class="math">
+        <mover accent="true" class="mover">
+         <mi class="mi">ρ</mi>
+         <mo stretchy="true" class="mo">^</mo>
+        </mover>
+       </math>
+       <inline-graphic xlink:href="10584_2018_2341_Article_IEq5.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </inline-formula> of its correlation coefficient with the actual value of 
+     <italic class="italic">y</italic> satisfies the relationship:
+     <disp-formula id="Equk" class="disp-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M57" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {\widehat{\rho}}^2={\rho}_1^2+{\rho}_2^2+\dots {\rho}_m^2, $$\end{document}</tex-math>
+       <math id="M58" display="block" class="math">
+        <msup class="msup">
+         <mover accent="true" class="mover">
+          <mi class="mi">ρ</mi>
+          <mo stretchy="true" class="mo">^</mo>
+         </mover>
+         <mn class="mn">2</mn>
+        </msup>
+        <mo class="mo">=</mo>
+        <msubsup class="msubsup">
+         <mi class="mi">ρ</mi>
+         <mn class="mn">1</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mo class="mo">+</mo>
+        <msubsup class="msubsup">
+         <mi class="mi">ρ</mi>
+         <mn class="mn">2</mn>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mo class="mo">+</mo>
+        <mo class="mo">…</mo>
+        <msubsup class="msubsup">
+         <mi class="mi">ρ</mi>
+         <mi class="mi">m</mi>
+         <mn class="mn">2</mn>
+        </msubsup>
+        <mo class="mo">,</mo>
+       </math>
+       <graphic xlink:href="10584_2018_2341_Article_Equk.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>making it easy to see how the inclusion of time series 
+     <italic class="italic">p</italic>
+     <sub class="sub">
+      <italic class="italic">i</italic>
+     </sub> of each individual mode 
+     <italic class="italic">i</italic> into the regression model contributes to the overall skill of prediction. Another measure of in-sample skill estimate for prediction Eq. (
+     <xref rid="Equ15" ref-type="" class="xref">15</xref>), the standard deviation 
+     <inline-formula id="IEq6" class="inline-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M59" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{e} $$\end{document}</tex-math>
+       <math id="M60" display="inline" class="math">
+        <mover accent="true" class="mover">
+         <mi class="mi">e</mi>
+         <mo stretchy="true" class="mo">^</mo>
+        </mover>
+       </math>
+       <inline-graphic xlink:href="10584_2018_2341_Article_IEq6.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </inline-formula>, of the difference 
+     <inline-formula id="IEq7" class="inline-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M61" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \hat{y}-y $$\end{document}</tex-math>
+       <math id="M62" class="math">
+        <mrow class="mrow">
+         <mover class="mover">
+          <mi class="mi">y</mi>
+          <mo class="mo">^</mo>
+         </mover>
+        </mrow>
+        <mo class="mo">−</mo>
+        <mi class="mi">y</mi>
+       </math>
+       <inline-graphic xlink:href="10584_2018_2341_Article_IEq7.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </inline-formula>, can be expressed through 
+     <inline-formula id="IEq8" class="inline-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M63" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{\rho} $$\end{document}</tex-math>
+       <math id="M64" display="inline" class="math">
+        <mover accent="true" class="mover">
+         <mi class="mi">ρ</mi>
+         <mo stretchy="true" class="mo">^</mo>
+        </mover>
+       </math>
+       <inline-graphic xlink:href="10584_2018_2341_Article_IEq8.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </inline-formula> as 
+     <inline-formula id="IEq9" class="inline-formula">
+      <alternatives class="alternatives">
+       <tex-math id="M65" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ \widehat{e}=\sqrt{1-{\widehat{\rho}}^2} $$\end{document}</tex-math>
+       <math id="M66" display="inline" class="math">
+        <mover accent="true" class="mover">
+         <mi class="mi">e</mi>
+         <mo stretchy="true" class="mo">^</mo>
+        </mover>
+        <mo class="mo">=</mo>
+        <msqrt class="msqrt">
+         <mrow class="mrow">
+          <mn class="mn">1</mn>
+          <mo class="mo">−</mo>
+          <msup class="msup">
+           <mover accent="true" class="mover">
+            <mi class="mi">ρ</mi>
+            <mo stretchy="true" class="mo">^</mo>
+           </mover>
+           <mn class="mn">2</mn>
+          </msup>
+         </mrow>
+        </msqrt>
+       </math>
+       <inline-graphic xlink:href="10584_2018_2341_Article_IEq9.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </inline-formula>.
+    </p>
+   </sec>
+  </sec>
+ </app>
+</app-group>

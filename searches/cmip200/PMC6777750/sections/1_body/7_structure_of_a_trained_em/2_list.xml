@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list list-type="bullet" class="list">
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">griddataT</bold>: Input training temperature data, the contents of NetCDF files in 
+   <monospace class="monospace">datadir</monospace> and an entry for the 
+   <monospace class="monospace">tvarconvert_fcn</monospace>. If the temperature data has been transformed with the input argument 
+   <monospace class="monospace">tvarconvert_fcn</monospace> to 
+   <monospace class="monospace">trainTP()</monospace>, this also includes the transformed variable data in addition to the raw variable data in the NetCDF file. The default is not to transform the temperature data (
+   <monospace class="monospace">tvarconvert_fcn = NULL</monospace>).
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">griddataP</bold>: Input training precipitation data, the contents of NetCDF files in 
+   <monospace class="monospace">datadir</monospace> and an entry for the 
+   <monospace class="monospace">pvarconvert_fcn</monospace>. If the precipitation data has been transformed with the input argument 
+   <monospace class="monospace">pvarconvert_fcn</monospace> to 
+   <monospace class="monospace">trainTP()</monospace>, this also includes the transformed variable data in addition to the raw variable data in the NetCDF file. The default is to transform the precipitation data (
+   <monospace class="monospace">pvarconvert_fcn = log</monospace>).
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">tgav</bold>: Global mean temperature for the grids in griddataT.
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">meanfldT</bold>: The mean field analysis for temperature (Steps 2-3). 
+   <list list-type="bullet" class="list">
+    <list-item class="list-item">
+     <p class="p">
+      <bold class="bold">r</bold>: The matrix of input temperature residuals in each grid cell, in their native distribution.
+     </p>
+    </list-item>
+    <list-item class="list-item">
+     <p class="p">
+      <bold class="bold">b</bold> and 
+      <bold class="bold">w</bold>: the mean field coefficients for use in reconstructing the full temperature data.
+     </p>
+    </list-item>
+   </list>
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">meanfldP</bold>: Analogous to meanfldT, for precipitation.
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">tfuns</bold>: The empirical characterization of native distributions of temperature residuals for each grid cell. 
+   <list list-type="bullet" class="list">
+    <list-item class="list-item">
+     <p class="p">
+      <bold class="bold">cdf</bold>: A list of the empirical CDFs in each grid cell used to transform temperature residuals from the native distribution of the grid cell to 
+      <italic class="italic">N</italic>(0, 1).
+     </p>
+    </list-item>
+    <list-item class="list-item">
+     <p class="p">
+      <bold class="bold">quants</bold>: A list of the empirical quantile functions (inverse CDF) in each grid cell used to transform generated temperature residuals from 
+      <italic class="italic">N</italic>(0, 1) to the native distribution for temperature residuals in each grid cell.
+     </p>
+    </list-item>
+   </list>
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">pfuns</bold>: Analogous to tfuns, for precipitation.
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">reof</bold>: Follows the same format as the structure returned by 
+   <monospace class="monospace">stats::princomp()</monospace>. The most important fields are: 
+   <list list-type="bullet" class="list">
+    <list-item class="list-item">
+     <p class="p">
+      <bold class="bold">rotation</bold>: A matrix [2 * Ngrid x NEOF] containing orthogonal basis vectors for the residuals. Each column is a basis vector. The number of basis vectors, NEOF, will be less than or equal to the number of time slices in the input, Ntime.
+     </p>
+    </list-item>
+    <list-item class="list-item">
+     <p class="p">
+      <bold class="bold">x</bold>: A matrix [Ntime x NEOF] containing the coordinates of the residuals in the coordinate system defined by the basis vectors. Each row is a time slice. Thus 
+      <inline-formula id="pone.0223542.e009" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic xlink:href="pone.0223542.e009.jpg" id="pone.0223542.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M9" class="math">
+         <mrow class="mrow">
+          <mi class="mi">r</mi>
+          <mi class="mi">e</mi>
+          <mi class="mi">s</mi>
+          <mi class="mi">i</mi>
+          <mi class="mi">d</mi>
+          <mi class="mi">u</mi>
+          <mi class="mi">a</mi>
+          <mi class="mi">l</mi>
+          <mrow class="mrow">
+           <mo class="mo">(</mo>
+           <mi class="mi">t</mi>
+           <mo class="mo">)</mo>
+          </mrow>
+          <mo class="mo">=</mo>
+          <msubsup class="msubsup">
+           <mo class="mo">∑</mo>
+           <mrow class="mrow">
+            <mi class="mi">i</mi>
+            <mo class="mo">=</mo>
+            <mn class="mn">1</mn>
+           </mrow>
+           <mi class="mi">N</mi>
+          </msubsup>
+          <mi class="mi">x</mi>
+          <mrow class="mrow">
+           <mo class="mo">[</mo>
+           <mi class="mi">t</mi>
+           <mo class="mo">,</mo>
+           <mi class="mi">i</mi>
+           <mo class="mo">]</mo>
+          </mrow>
+          <mo class="mo">*</mo>
+          <mi class="mi">r</mi>
+          <mi class="mi">o</mi>
+          <mi class="mi">t</mi>
+          <mi class="mi">a</mi>
+          <mi class="mi">t</mi>
+          <mi class="mi">i</mi>
+          <mi class="mi">o</mi>
+          <mi class="mi">n</mi>
+          <mrow class="mrow">
+           <mo class="mo">[</mo>
+           <mo class="mo">:</mo>
+           <mo class="mo">,</mo>
+           <mi class="mi">i</mi>
+           <mo class="mo">]</mo>
+          </mrow>
+         </mrow>
+        </math>
+       </alternatives>
+      </inline-formula>.
+     </p>
+    </list-item>
+   </list>
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">fxmag</bold>: The magnitude of the Fourier transform of the EOF projection coefficients. This should be a matrix [Ntime x NEOF]
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">fxphase</bold>: List of matrices [Ntime x NEOF] of phases of the Fourier transform. There should be one element in the list for each input ESM run.
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <p class="p">
+   <bold class="bold">infiles</bold>: Names of input files used to construct the data.
+  </p>
+ </list-item>
+</list>

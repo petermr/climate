@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par21" class="p">The DREAM algorithm is a Markov chain Monte Carlo (MCMC) simulation algorithm that returns the optimum values of the reservoir parameters. In short, in DREAM, 
+ <italic class="italic">N</italic> different Markov chains are run simultaneously in parallel. If the state of a single chain is given by the 
+ <italic class="italic">d = </italic>24 dimensional vector 
+ <bold class="bold">x</bold> with values of 
+ <italic class="italic">S</italic>
+ <sub class="sub">low</sub> and 
+ <italic class="italic">S</italic>
+ <sub class="sub">up</sub>, then at each generation 
+ <italic class="italic">i</italic> the 
+ <italic class="italic">N</italic> chains in DREAM define a population 
+ <bold class="bold">X</bold>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> which corresponds to an 
+ <italic class="italic">N × d</italic> matrix, with each chain as a row. Multivariate proposals are generated on the fly from the collection of chains, 
+ <bold class="bold">
+  <italic class="italic">X</italic>
+ </bold>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> using differential evolution
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR71" class="xref">71</xref>, 
+  <xref ref-type="bibr" rid="CR72" class="xref">72</xref>
+ </sup>. By accepting each proposal with Metropolis probability a Markov chain is obtained, the stationary or limiting distribution of which is the posterior distribution (see the proof in refs 
+ <xref ref-type="bibr" rid="CR68" class="xref">68</xref>, 
+ <xref ref-type="bibr" rid="CR69" class="xref">69</xref> and 
+ <xref ref-type="bibr" rid="CR73" class="xref">73</xref>). If the initial population is drawn from the prior distribution, then DREAM translates this sample into a posterior population. We assumed a uniform prior distribution of the 24 parameters, whereas a classical least squares type likelihood function was used to summarize the distance between the observed and simulated monthly storage volumes. The first ten years of the 17-year data record (1995–2004) were used for posterior inference of the monthly 
+ <italic class="italic">S</italic>
+ <sub class="sub">low</sub> and 
+ <italic class="italic">S</italic>
+ <sub class="sub">up</sub> values, whereas the remaining 7-year record (2005–2011) is used for model evaluation purposes. Table 
+ <xref rid="MOESM1" ref-type="media" class="xref">S3</xref> lists the estimated parameters and their standard deviations. Table 
+ <xref rid="MOESM1" ref-type="media" class="xref">S4</xref> summarizes the model efficiency coefficients for the calibration and evaluation periods. As shown in Table 
+ <xref rid="MOESM1" ref-type="media" class="xref">S4</xref> and Figure 
+ <xref rid="MOESM1" ref-type="media" class="xref">S3</xref>, the simulated storage of the reservoir model closely tracks the observed storage data.
+</p>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par32" class="p">The three PHYS simulations instead used the more physically based dust emission parameterization K14
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR17" class="xref">17</xref>
+ </sup> (Table 
+ <xref rid="Tab1" ref-type="table" class="xref">1</xref>), which has a number of improvements over previous parameterizations. First, K14 accounts for the increasing scaling of dust flux with wind speed that occurs when a soil becomes less erodible (i.e., its threshold friction velocity 
+ <italic class="italic">u</italic>
+ <sub class="sub">*t</sub> increases), which in CLM is primarily due to changes in soil moisture. Second, K14 explicitly accounts for the increase in dust emission efficiency that occurs as a soil becomes more erodible. That is, if a soil’s 
+ <italic class="italic">u</italic>
+ <sub class="sub">*t</sub> decreases, for instance due to a decrease in soil moisture, it will on average increase the amount of dust emitted per unit of horizontal saltation flux because dust aggregates in the soil will generally (but now always) be less strongly bound. Since this improvement increases the sensitivity of emissions to 
+ <italic class="italic">u</italic>
+ <sub class="sub">*t</sub>, it shifts those emissions to the world’s most erodible regions, where 
+ <italic class="italic">u</italic>
+ <sub class="sub">*t</sub> is lowest. This eliminates the need to use a source function to shift emissions to those regions, at least in CESM
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR21" class="xref">21</xref>
+ </sup>. The fact that K14 does not require a source function is an important advantage, because using a source function to parameterize the spatial variability of dust emissions limits a model’s ability to capture changes in dust emissions in a climate that differs from that for which the source function was obtained
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR21" class="xref">21</xref>
+ </sup>. These improvements cause the K14 parameterization to produce better agreement with small-scale dust emission measurements, although substantial differences remain
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR17" class="xref">17</xref>
+ </sup>. Furthermore, when implemented in CESM, K14 improves agreement with the global pattern of dust AOD as measured by AERONET sun photometers
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR21" class="xref">21</xref>
+ </sup>.
+</p>

@@ -1,0 +1,644 @@
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving and Interchange DTD v1.1 20151215//EN" "JATS-archivearticle1.dtd"> 
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" article-type="research-article"><?properties open_access?><?DTDIdentifier.IdentifierValue -//NLM//DTD Journal Archiving and Interchange DTD v3.0 20080202//EN?><?DTDIdentifier.IdentifierType public?><?SourceDTD.DTDName archivearticle3.dtd?><?SourceDTD.Version 3.0?><?ConverterInfo.XSLTName jp2nlmx2.xsl?><?ConverterInfo.Version 1?><front><journal-meta><journal-id journal-id-type="nlm-ta">J Geophys Res Atmos</journal-id><journal-id journal-id-type="iso-abbrev">J Geophys Res Atmos</journal-id><journal-id journal-id-type="doi">10.1002/(ISSN)2169-8996</journal-id><journal-id journal-id-type="publisher-id">JGRD</journal-id><journal-title-group><journal-title>Journal of Geophysical Research. Atmospheres</journal-title></journal-title-group><issn pub-type="ppub">2169-897X</issn><issn pub-type="epub">2169-8996</issn><publisher><publisher-name>John Wiley and Sons Inc.</publisher-name><publisher-loc>Hoboken</publisher-loc></publisher></journal-meta><article-meta><article-id pub-id-type="pmcid">5993269</article-id><article-id pub-id-type="doi">10.1002/2017JD027577</article-id><article-id pub-id-type="publisher-id">JGRD54513</article-id><article-id pub-id-type="other">2017JD027577</article-id><article-categories><subj-group subj-group-type="article-subject-classification"><subject>Climate and Dynamics</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Computational Geophysics</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Model Verification and Validation</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Hydrology</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Drought</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Precipitation</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Atmospheric Processes</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Precipitation</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Natural Hazards</subject></subj-group><subj-group subj-group-type="article-subject-classification"><subject>Hydrological</subject></subj-group><subj-group subj-group-type="overline"><subject>Research Article</subject></subj-group><subj-group subj-group-type="heading"><subject>Research Articles</subject><subj-group subj-group-type="heading"><subject>Climate and Dynamics</subject></subj-group></subj-group></article-categories><title-group><article-title>Drought Persistence Errors in Global Climate Models</article-title><alt-title alt-title-type="left-running-head">Moon et al.</alt-title></title-group><contrib-group><contrib id="jgrd54513-cr-0001" contrib-type="author" corresp="yes"><name><surname>Moon</surname><given-names>H.</given-names></name><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-3026-6187</contrib-id><address><email>heewon.moon@env.ethz.ch</email></address><xref ref-type="aff" rid="jgrd54513-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="jgrd54513-cr-0002" contrib-type="author"><name><surname>Gudmundsson</surname><given-names>L.</given-names></name><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0003-3539-8621</contrib-id><xref ref-type="aff" rid="jgrd54513-aff-0001">
+<sup>1</sup>
+</xref></contrib><contrib id="jgrd54513-cr-0003" contrib-type="author" corresp="yes"><name><surname>Seneviratne</surname><given-names>S. I.</given-names></name><contrib-id contrib-id-type="orcid">http://orcid.org/0000-0001-9528-2917</contrib-id><address><email>sonia.seneviratne@ethz.ch</email></address><xref ref-type="aff" rid="jgrd54513-aff-0001">
+<sup>1</sup>
+</xref></contrib></contrib-group><aff id="jgrd54513-aff-0001">
+<label><sup>1</sup></label>
+<named-content content-type="organisation-division">Institute for Atmospheric and Climate Science</named-content>
+<institution>ETH Zurich</institution>
+<named-content content-type="city">Zurich</named-content>
+<country country="CH">Switzerland</country>
+</aff><author-notes><corresp id="correspondenceTo"><label>*</label>
+Correspondence to: H. Moon and S. I. Seneviratne,<break/><email>heewon.moon@env.ethz.ch</email>;<break/><email>sonia.seneviratne@ethz.ch</email><break/></corresp></author-notes><pub-date pub-type="epub"><day>12</day><month>4</month><year>2018</year></pub-date><pub-date pub-type="ppub"><day>16</day><month>4</month><year>2018</year></pub-date><volume>123</volume><issue>7</issue><issue-id pub-id-type="doi">10.1002/jgrd.v123.7</issue-id><fpage>3483</fpage><lpage>3496</lpage><history><date date-type="received"><day>10</day><month>8</month><year>2017</year></date><date date-type="rev-recd"><day>27</day><month>2</month><year>2018</year></date><date date-type="accepted"><day>03</day><month>3</month><year>2018</year></date></history><permissions><!--<copyright-statement content-type="issue-copyright"> &#x000a9;2018. American Geophysical Union. All Rights Reserved. <copyright-statement>--><copyright-statement content-type="article-copyright">&#x000a9;2018. The Authors.</copyright-statement><license license-type="creativeCommonsBy-nc-nd"><license-p>This is an open access article under the terms of the <ext-link ext-link-type="uri" xlink:href="http://creativecommons.org/licenses/by-nc-nd/4.0/">http://creativecommons.org/licenses/by-nc-nd/4.0/</ext-link> License, which permits use and distribution in any medium, provided the original work is properly cited, the use is non&#x02010;commercial and no modifications or adaptations are made.</license-p></license></permissions><self-uri content-type="pdf" xlink:type="simple" xlink:href="file:JGRD-123-3483.pdf"/><abstract><title>Abstract</title><p>The persistence of drought events largely determines the severity of socioeconomic and ecological impacts, but the capability of current global climate models (GCMs) to simulate such events is subject to large uncertainties. In this study, the representation of drought persistence in GCMs is assessed by comparing state&#x02010;of&#x02010;the&#x02010;art GCM model simulations to observation&#x02010;based data sets. For doing so, we consider dry&#x02010;to&#x02010;dry transition probabilities at monthly and annual scales as estimates for drought persistence, where a dry status is defined as negative precipitation anomaly. Though there is a substantial spread in the drought persistence bias, most of the simulations show systematic underestimation of drought persistence at global scale. Subsequently, we analyzed to which degree (i) inaccurate observations, (ii) differences among models, (iii) internal climate variability, and (iv) uncertainty of the employed statistical methods contribute to the spread in drought persistence errors using an analysis of variance approach. The results show that at monthly scale, model uncertainty and observational uncertainty dominate, while the contribution from internal variability is small in most cases. At annual scale, the spread of the drought persistence error is dominated by the statistical estimation error of drought persistence, indicating that the partitioning of the error is impaired by the limited number of considered time steps. These findings reveal systematic errors in the representation of drought persistence in current GCMs and suggest directions for further model improvement.</p></abstract><abstract abstract-type="short"><title>Key Points</title><p>
+<list list-type="bullet" id="jgrd54513-list-0001"><list-item id="jgrd54513-li-0001"><p>State&#x02010;of&#x02010;the art climate models systematically underestimate drought persistence</p></list-item><list-item id="jgrd54513-li-0002"><p>A method for partitioning sources of uncertainty in model errors is developed</p></list-item><list-item id="jgrd54513-li-0003"><p>Observation and model uncertainty dominate the total spread in drought persistence error</p></list-item></list>
+</p></abstract><kwd-group kwd-group-type="author-generated"><kwd id="jgrd54513-kwd-0001">drought</kwd><kwd id="jgrd54513-kwd-0002">climate models</kwd><kwd id="jgrd54513-kwd-0003">uncertainty</kwd><kwd id="jgrd54513-kwd-0004">drought persistence</kwd><kwd id="jgrd54513-kwd-0005">drought length bias</kwd><kwd id="jgrd54513-kwd-0006">drought persistence bias</kwd></kwd-group><funding-group><award-group><funding-source>EC | FP7 | FP7 Ideas: European Research Council (FP7 Ideas)</funding-source><award-id>FP7&#x02010;IDEAS&#x02010;ERC&#x02010;617518</award-id></award-group></funding-group><counts><fig-count count="11"/><table-count count="2"/><page-count count="14"/><word-count count="5594"/></counts><custom-meta-group><custom-meta><meta-name>source-schema-version-number</meta-name><meta-value>2.0</meta-value></custom-meta><custom-meta><meta-name>component-id</meta-name><meta-value>jgrd54513</meta-value></custom-meta><custom-meta><meta-name>cover-date</meta-name><meta-value>16 April 2018</meta-value></custom-meta><custom-meta><meta-name>details-of-publishers-convertor</meta-name><meta-value>Converter:WILEY_ML3GV2_TO_NLMPMC version:version=5.3.8.2 mode:remove_FC converted:11.05.2018</meta-value></custom-meta></custom-meta-group></article-meta><notes><p content-type="self-citation">
+<mixed-citation publication-type="journal" id="jgrd54513-cit-0001">
+<string-name>
+<surname>Moon</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Gudmundsson</surname>, <given-names>L.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Seneviratne</surname>, <given-names>S. I.</given-names>
+</string-name> (<year>2018</year>). <article-title>Drought persistence errors in global climate models</article-title>. <source xml:lang="en">Journal of Geophysical Research: Atmospheres</source>, <volume>123</volume>, <fpage>3483</fpage>&#x02013;<lpage>3496</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/2017JD027577">https://doi.org/10.1002/2017JD027577</ext-link>
+</mixed-citation>
+</p></notes></front><body><sec id="jgrd54513-sec-0001"><label>1</label><title>Introduction</title><p>The persistence of droughts is one of the main attributes that determines the level of their socioeconomic and ecological impacts (B&#x000ea;che et al., <xref rid="jgrd54513-bib-0005" ref-type="ref">2009</xref>; Harou et al., <xref rid="jgrd54513-bib-0017" ref-type="ref">2010</xref>; Kelley et al., <xref rid="jgrd54513-bib-0021" ref-type="ref">2015</xref>). Lately, several studies have highlighted that climate models tend to underestimate drought persistence compared to the observational record (Ault et al., <xref rid="jgrd54513-bib-0003" ref-type="ref">2014</xref>; Wetter et al., <xref rid="jgrd54513-bib-0055" ref-type="ref">2014</xref>), which contributes to the uncertainty of future projections of drought risk. Furthermore, the characteristics of extremely prolonged droughts have been found to be similar over different time frames, including the twentieth century and longer paleoclimatic records (Ault et al., <xref rid="jgrd54513-bib-0003" ref-type="ref">2014</xref>). However, the driving mechanism of such droughts remains controversial and likely differs between individual events (Ault et al., <xref rid="jgrd54513-bib-0003" ref-type="ref">2014</xref>; Cook et al., <xref rid="jgrd54513-bib-0008" ref-type="ref">2015</xref>; Dai, <xref rid="jgrd54513-bib-0012" ref-type="ref">2011</xref>; Griffin &#x00026; Anchukaitis, <xref rid="jgrd54513-bib-0014" ref-type="ref">2014</xref>; Shanahan et al., <xref rid="jgrd54513-bib-0043" ref-type="ref">2009</xref>; Stine, <xref rid="jgrd54513-bib-0047" ref-type="ref">1994</xref>). Thus, an in&#x02010;depth assessment of the underestimation of drought persistence in current climate models in the recent past century may help to better understand similar issues found for longer time scales.</p><p>Measures of persistence (or memory) of drought events and related climate phenomena have been used to analyze drought variability in both models and observations. Commonly used measures include power spectra of the time series (Ault et al., <xref rid="jgrd54513-bib-0003" ref-type="ref">2014</xref>; Pelletier &#x00026; Turcotte, <xref rid="jgrd54513-bib-0036" ref-type="ref">1997</xref>) or the Hurst exponent (Mandelbrot &#x00026; Wallis, <xref rid="jgrd54513-bib-0028" ref-type="ref">1969</xref>) which have been used, for example, to measure long&#x02010;term persistence in time series of drought indices (Tatli, <xref rid="jgrd54513-bib-0050" ref-type="ref">2015</xref>) or precipitation (Bunde et al., <xref rid="jgrd54513-bib-0006" ref-type="ref">2013</xref>; Kumar et al., <xref rid="jgrd54513-bib-0025" ref-type="ref">2013</xref>). By transforming continuous time series of drought indicators into categorical time series of dry and wet spells, the persistence of drought can be effectively estimated through the parameters of a binary first&#x02010;order Markov chain model (Sericola, <xref rid="jgrd54513-bib-0042" ref-type="ref">2013</xref>). In this case the dry&#x02010;to&#x02010;dry transition probability (<italic>P</italic>
+<sub>dd</sub>) is used as a measure of drought persistence (Jackson, <xref rid="jgrd54513-bib-0020" ref-type="ref">1975</xref>; Sharma &#x00026; Panu, <xref rid="jgrd54513-bib-0044" ref-type="ref">2014</xref>; Wilby et al., <xref rid="jgrd54513-bib-0056" ref-type="ref">2015</xref>). The primary assumption for this measure is that the probability of drought and nondrought events is conditional only upon the previous time step. Interestingly, the dry spell length distribution can also be approximated by the geometric distribution given the assumption that the dry spell lengths that are estimated are binary sequences of independent trial results (in this case, drought and nondrought), and the probability of success (in this case, probability of drought) is equal for all the trials (Lee et al., <xref rid="jgrd54513-bib-0026" ref-type="ref">1986</xref>; Mathier et al., <xref rid="jgrd54513-bib-0029" ref-type="ref">1992</xref>).</p><p>Quantifications of drought persistence errors in a model ensemble are themselves subject to several sources of uncertainty, which include (i) uncertainty of the considered observations, (ii) uncertainty of the individual models, (iii) internal variability, and (iv) errors related to the statistical estimation of drought persistence (i.e., finite sample effects). Assessing the relative contribution of each of these sources to the total uncertainty will aid interpretation in a model validation exercise. Uncertainty in the observation&#x02010;based data sets generally refers to the combination of observational errors and the uncertainty related to data processing methods which depend on the interpolation scheme, station density, and quality control tools (Xie et al., <xref rid="jgrd54513-bib-0057" ref-type="ref">1996</xref>) as well as the subset of selected stations. Previous studies that have assessed global climate models (GCMs) globally usually relied on a single observational data set as a reference and sometimes accounted for observational uncertainty in the analysis by excluding the regions where observations were deemed unreliable. An alternative approach to account for observational uncertainty is to use independent observation&#x02010;based data sets for the analysis and to investigate the associated spread. Model uncertainty can be characterized as the spread across different models, mainly generated from the discrepancy in their structure. Internal climate variability (or natural climate variability) corresponds to fluctuations generated in the climate system without changes in external forcing and can thus be approximated from the spread across initial condition ensembles of individual GCMs. Lastly, the fact that model evaluation is based on finite data sources leads to uncertainty in the statistical characterization of model performance. This statistical estimation error is often omitted in model validation studies, although it could affect the robustness of the analysis and hence also the conclusions.</p><p>In this study, we aim to investigate the ability of GCMs to simulate drought persistence, measured through the dry&#x02010;to&#x02010;dry transition probability (<italic>P</italic>
+<sub>dd</sub>) in a Markov chain framework. Currently, a number of drought indicators are used in the scientific literature. Typically, these indices are tailored to specific types of analysis and are often categorized into meteorological (Keyantash &#x00026; Dracup, <xref rid="jgrd54513-bib-0022" ref-type="ref">2002</xref>) hydrological (Tallaksen &#x00026; van Lanen, <xref rid="jgrd54513-bib-0048" ref-type="ref">2004</xref>), or agricultural drought (Quiring &#x00026; Papakryiakou, <xref rid="jgrd54513-bib-0038" ref-type="ref">2003</xref>). In addition, indicators like the Standardized Precipitation Index (McKee et al., <xref rid="jgrd54513-bib-0031" ref-type="ref">1993</xref>) or the Standardized Precipitation and Evapotranspiration Index (Vicente&#x02010;Serrano et al., <xref rid="jgrd54513-bib-0054" ref-type="ref">2009</xref>) depend on the choice of a model distribution which in turn needs to be calibrated and is subject to uncertainty (Stagge et al., <xref rid="jgrd54513-bib-0045" ref-type="ref">2015</xref>). Finally, the choice of threshold to discriminate droughts from nondrought events is highly contextual and sometimes even subjective (Steinemann, <xref rid="jgrd54513-bib-0046" ref-type="ref">2014</xref>). Consequently, there is no single unifying drought definition, and the choice of drought indicator is usually dependent on the scope of individual assessments. Here we use precipitation anomalies as a drought indicator to separate dry (negative anomalies) from wet spells, which form the basis for estimating <italic>P</italic>
+<sub>dd</sub>. The rationale underlying this decision is that precipitation is one of the climate variables that has been monitored with the best spatial and temporal coverage throughout the past century, and few additional assumptions are required (see section <xref rid="jgrd54513-sec-0005" ref-type="sec">3</xref>). In order to robustly assess the representation of <italic>P</italic>
+<sub>dd</sub> in the models and to fully characterize the spread of the model error, we compare multiple observation&#x02010;based data sets with a large ensemble of GCMs runs. Finally, we assess to which degree the spread in drought persistence error can be attributed to differences among models, observation uncertainty, internal variability, and the statistical estimation error of <italic>P</italic>
+<sub>dd</sub> using an analysis of variance (ANOVA)&#x02010;based approach. We close with a discussion on the link between the drought persistence error identified in this study to the issues found in precipitation variability and suggest potential implication of using the error partitioning method introduced in this study for the interpretation of climate model projections.</p></sec><sec id="jgrd54513-sec-0002"><label>2</label><title>Data</title><sec id="jgrd54513-sec-0003"><label>2.1</label><title>Precipitation From the Fifth Phase of Coupled Model Intercomparison Projects Model Simulations</title><p>With the international consensus on establishing global Coupled Model Intercomparison Projects (CMIP), there have been continued phases of CMIPs since the early 2000s. The GCM simulations of the fifth phase of CMIP (CMIP5; K. E. Taylor, Stouffer, &#x00026; Meehl, <xref rid="jgrd54513-bib-0051" ref-type="ref">2012</xref>) include historical simulations for the period 1850&#x02013;2005 and Representative Concentration Pathways experiments built according to different greenhouse gas concentration scenarios from 2006 onward. Here we consider historical simulations (1901&#x02013;2005) and Representative Concentration Pathway 8.5 simulations (2006&#x02013;2010) to cover the 1901&#x02013;2010 period. Only models with at least three initial condition ensemble members were included in the analysis to account for internal variability (Table&#x000a0;<xref rid="jgrd54513-tbl-0001" ref-type="table-wrap">1</xref>).</p><table-wrap id="jgrd54513-tbl-0001" xml:lang="en" orientation="portrait" position="float"><label>Table 1</label><caption><p>GCMs Used in This Study</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="char" char="." span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">GCM</th><th align="center" valign="bottom" rowspan="1" colspan="1">Institution (country)</th><th align="center" valign="bottom" rowspan="1" colspan="1">Ensemble members</th></tr></thead><tbody valign="middle"><tr><td align="left" valign="middle" rowspan="1" colspan="1">CanESM2</td><td align="left" valign="middle" rowspan="1" colspan="1">Canadian Centre for Climate Modeling and Analysis (Canada)</td><td align="char" valign="middle" rowspan="1" colspan="1">5</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">CCSM4</td><td align="left" valign="middle" rowspan="1" colspan="1">National Center for Atmospheric Research (United States)</td><td align="char" valign="middle" rowspan="1" colspan="1">6</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">CESM1&#x02010;CAM5</td><td align="left" valign="middle" rowspan="1" colspan="1">National Science Foundation, Department of Energy, National Center for Atmospheric Research (United States)</td><td align="char" valign="middle" rowspan="1" colspan="1">3</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">CNRM&#x02010;CM5</td><td align="left" valign="middle" rowspan="1" colspan="1">Centre National de Recherches M&#x000e9;t&#x000e9;orologiques / Centre Europ&#x000e9;en de Recherche et Formation Avanc&#x000e9;es en Calcul Scientifique (France)</td><td align="char" valign="middle" rowspan="1" colspan="1">5</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">CSIRO&#x02010;Mk3&#x02010;6&#x02010;0</td><td align="left" valign="middle" rowspan="1" colspan="1">Commonwealth Scientific and Industrial Research Organisation in Collaboration with the Queensland Climate Change Centre of Excellence (Australia)</td><td align="char" valign="middle" rowspan="1" colspan="1">10</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">EC&#x02010;EARTH</td><td align="left" valign="middle" rowspan="1" colspan="1">EC&#x02010;EARTH Consortium</td><td align="char" valign="middle" rowspan="1" colspan="1">6</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">FIO&#x02010;ESM</td><td align="left" valign="middle" rowspan="1" colspan="1">The First Institute of Oceanography, SOA (China)</td><td align="char" valign="middle" rowspan="1" colspan="1">3</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">GISS&#x02010;E2&#x02010;H</td><td rowspan="2" align="left" valign="middle" colspan="1">NASA Goddard Institute for Space Studies (United States)</td><td align="char" valign="middle" rowspan="1" colspan="1">5</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">GISS&#x02010;E2&#x02010;R</td><td align="char" valign="middle" rowspan="1" colspan="1">5</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">HadGEM2&#x02010;ES</td><td align="left" valign="middle" rowspan="1" colspan="1">Met Office Hadley Centre (UK)</td><td align="char" valign="middle" rowspan="1" colspan="1">4</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">IPSL&#x02010;CM5A&#x02010;LR</td><td align="left" valign="middle" rowspan="1" colspan="1">Institut Pierre Simon Laplace (France)</td><td align="char" valign="middle" rowspan="1" colspan="1">4</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">MIROC5</td><td align="left" valign="middle" rowspan="1" colspan="1">Atmosphere and Ocean Research Institute, The University of Tokyo (Japan)</td><td align="char" valign="middle" rowspan="1" colspan="1">3</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">MPI&#x02010;ESM&#x02010;LR</td><td align="left" valign="middle" rowspan="1" colspan="1">Max Planck Institute for Meteorology (Germany)</td><td align="char" valign="middle" rowspan="1" colspan="1">3</td></tr></tbody></table><table-wrap-foot><fn id="jgrd54513-note-0001"><p>
+<italic>Note</italic>. Names of GCMs, modeling institution, and number of ensemble simulations are given. GCM&#x000a0;=&#x000a0;global climate model.</p></fn></table-wrap-foot></table-wrap></sec><sec id="jgrd54513-sec-0004"><label>2.2</label><title>Interpolated Precipitation Observations and Reanalysis Products</title><p>To quantitatively assess the performance of the considered GCM simulations, five observation&#x02010;based global precipitation data sets were selected, all covering at least the 1901&#x02013;2010 time period (Table&#x000a0;<xref rid="jgrd54513-tbl-0002" ref-type="table-wrap">2</xref>). The Climatic Research Unit Timeseries version 3.1 (Harris et al., <xref rid="jgrd54513-bib-0018" ref-type="ref">2014</xref>), University of Delaware version 3.0.1 (Matsuura &#x00026; Willmott, <xref rid="jgrd54513-bib-0030" ref-type="ref">2012</xref>), and Global Precipitation Climatology Centre (Schneider et al., <xref rid="jgrd54513-bib-0039" ref-type="ref">2014</xref>) data are generated from interpolated station data, and each data product uses a different subset of available stations as well as different interpolation and quality control methods. In addition, we use the 20CR (20th Century Reanalysis; Compo et al., <xref rid="jgrd54513-bib-0007" ref-type="ref">2006</xref>) and the European Centre for Medium&#x02010;Range Weather Forecasts twentieth century reanalysis (Poli et al., <xref rid="jgrd54513-bib-0037" ref-type="ref">2016</xref>), which assimilate different variables and differ both with respect to the underlying models and assimilation schemes.</p><table-wrap id="jgrd54513-tbl-0002" xml:lang="en" orientation="portrait" position="float"><label>Table 2</label><caption><p>Observation&#x02010;Based Data Set Used in This Study</p></caption><table frame="hsides" rules="groups"><col align="left" span="1"/><col align="left" span="1"/><col align="left" span="1"/><thead valign="bottom"><tr style="border-bottom:solid 1px #000000"><th align="left" valign="bottom" rowspan="1" colspan="1">Observation&#x02010;based data set</th><th align="center" valign="bottom" rowspan="1" colspan="1">Data features</th><th align="center" valign="bottom" rowspan="1" colspan="1">Provided resolution</th></tr></thead><tbody valign="middle"><tr><td align="left" valign="middle" rowspan="1" colspan="1">CRU TS3.1</td><td align="left" valign="middle" rowspan="1" colspan="1">3,500&#x02013;9,000 weather station records from CLIMAT</td><td align="left" valign="middle" rowspan="1" colspan="1">Monthly, 0.5&#x000b0;&#x000a0;&#x000d7;&#x000a0;0.5&#x000b0;</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">UDEL</td><td align="left" valign="middle" rowspan="1" colspan="1">4,100&#x02013;18,000 weather station records mainly from GHCN v2</td><td align="left" valign="middle" rowspan="1" colspan="1">Monthly, 0.5&#x000b0;&#x000a0;&#x000d7;&#x000a0;0.5&#x000b0;</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">GPCC</td><td align="left" valign="middle" rowspan="1" colspan="1">11,000&#x02013;49,450 gauge stations</td><td align="left" valign="middle" rowspan="1" colspan="1">Monthly, 0.5&#x000b0;&#x000a0;&#x000d7;&#x000a0;0.5&#x000b0;, 1.0&#x000b0;&#x000a0;&#x000d7;&#x000a0;1.0&#x000b0;, and 2.5&#x000b0;&#x000a0;&#x000d7;&#x000a0;2.5&#x000b0;</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">20CR</td><td align="left" valign="middle" rowspan="1" colspan="1">Assimilating variable: surface pressure</td><td align="left" valign="middle" rowspan="1" colspan="1">Subdaily, daily, and monthly, 2&#x000b0;&#x000a0;&#x000d7;&#x000a0;2&#x000b0;</td></tr><tr><td align="left" valign="middle" rowspan="1" colspan="1">ERA&#x02010;20C</td><td align="left" valign="middle" rowspan="1" colspan="1">Assimilating variable: surface pressure, surface winds</td><td align="left" valign="middle" rowspan="1" colspan="1">Subdaily, daily, and monthly, approximately 128 km &#x000d7; 128 km</td></tr></tbody></table><table-wrap-foot><fn id="jgrd54513-note-0002"><p>
+<italic>Note</italic>. Names of data sets, number of minimum stations used (for interpolated data sets), assimilated variables (for atmospheric reanalysis), and temporal and spatial resolution are given. Number of stations taken from Schneider et al. (<xref rid="jgrd54513-bib-0039" ref-type="ref">2014</xref>). CRU TS3.1&#x000a0;=&#x000a0;Climatic Research Unit Timeseries version 3.1; UDEL&#x000a0;=&#x000a0;University of Delaware; GPCC&#x000a0;=&#x000a0;Global Precipitation Climatology Centre; 20CR&#x000a0;=&#x000a0;20th Century Reanalysis; ERA&#x02010;20C&#x000a0;=&#x000a0;ECMWF twentieth century reanalysis; CHCN v2 = Global Historical Climate Network version 2.</p></fn></table-wrap-foot></table-wrap></sec></sec><sec id="jgrd54513-sec-0005"><label>3</label><title>Methods</title><sec id="jgrd54513-sec-0006"><label>3.1</label><title>Quantifying Drought Persistence</title><p>To quantify drought persistence, we convert observed and modeled precipitation values into binary time series indicating dry (negative) and wet (positive) anomalies. For annual time series anomalies are computed by subtracting the linear trend (least squares estimate). For the monthly resolution, the series were first detrended using linear least squares regression. Subsequently, the long&#x02010;term mean of each month was removed from the detrended time series. Drought persistence is then measured through the dry&#x02010;to&#x02010;dry transition probability <italic>P</italic>
+<sub>dd</sub>, which is defined as the proportion of dry&#x02010;to&#x02010;dry transition out of all transitions from a dry status. The theoretical minimum of <italic>P</italic>
+<sub>dd</sub> is 0.5 by construction as this value indicates a white noise system without memory (unless there is a tendency to systematically have wetter conditions after dry conditions). In a few cases <italic>P</italic>
+<sub>dd</sub> values estimated from observed or simulated climate variables are slightly below the theoretical minimum, which can be explained by the sampling uncertainty. In the analyses, we consider both month&#x02010;to&#x02010;month and year&#x02010;to&#x02010;year transitions. In addition to the dry&#x02010;to&#x02010;dry transition probability <italic>P</italic>
+<sub>dd</sub>, also dry&#x02010;to&#x02010;wet (<italic>P</italic>
+<sub>dw</sub>), wet&#x02010;to&#x02010;wet (<italic>P</italic>
+<sub>ww</sub>), and wet&#x02010;to&#x02010;dry (<italic>P</italic>
+<sub>wd</sub>) transition probabilities can be estimated from the time series. The transition probabilities are related to each other such that <italic>P</italic>
+<sub>dd</sub>&#x000a0;=&#x000a0;1&#x000a0;&#x02212;&#x000a0;<italic>P</italic>
+<sub>dw</sub> and <italic>P</italic>
+<sub>ww</sub>&#x000a0;=&#x000a0;1&#x000a0;&#x02212;&#x000a0;<italic>P</italic>
+<sub>wd</sub>, implying that the dynamics of the binary series can be captured by two parameters only. Under a first&#x02010;order Markov chain assumption, these transition probabilities can then be used to simulate stochastic ensembles resembling the original binary time series, which in turn can be used to generate estimates of the dry spell length distribution. The statistical simulation of a Markov chain is conducted by first taking a random initial status (either dry or wet) of which subsequent statuses are determined based on the prior status and the corresponding transition probabilities derived from the original time series. The process is repeated until the length of constructed binary time series equals the length of the original time series. To facilitate the interpretation of the persistence metric (<italic>P</italic>
+<sub>dd</sub>), Figure&#x000a0;<xref rid="jgrd54513-fig-0001" ref-type="fig">1</xref> shows how the drought length distribution depends on the value of <italic>P</italic>
+<sub>dd</sub>. For constructing this figure, 1,000 time steps were considered for the statistical simulation of binary time series with a constant <italic>P</italic>
+<sub>ww</sub> value of 0.5. For each <italic>P</italic>
+<sub>dd</sub> value, the statistical simulation was repeated 1,000 times and median of the simulated samples was taken as the best estimates of dry spell length distributions. Dry spell lengths at 90th of each distribution are also presented, which increase with increasing <italic>P</italic>
+<sub>dd</sub>.</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0001" orientation="portrait" position="float"><label>Figure 1</label><caption><p>Dependence of the dry spell length frequency distribution on different <italic>P</italic>
+<sub>dd</sub> values with constant <italic>P</italic>
+<sub>ww</sub> (0.5). Vertical lines indicate the 90th percentile of the distributions for different <italic>P</italic>
+<sub>dd</sub> values. The unit of <italic>x</italic> axis (dry spell lengths) is omitted as it varies depending on the temporal scale, for example, months for monthly time series and years for annual time series.</p></caption><graphic id="nlm-graphic-1" xlink:href="JGRD-123-3483-g001"/></fig><p>Figure&#x000a0;<xref rid="jgrd54513-fig-0002" ref-type="fig">2</xref> shows an example of an annual precipitation anomaly time series at a grid cell in Eastern Europe from the Climatic Research Unit Timeseries version 3.1 data together with the dry spell length distribution derived from the time series with the uncertainty range obtained by statistical simulation. <italic>P</italic>
+<sub>dd</sub> and <italic>P</italic>
+<sub>ww</sub> estimated in this grid cell are also provided for better understanding of the conversion between Markov chain parameters and dry spell length distribution. More examples in different regions are presented in Figure <xref rid="jgrd54513-supitem-0001" ref-type="supplementary-material">S1</xref> (<xref rid="jgrd54513-supinf-0001" ref-type="supplementary-material">supporting information</xref>).</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0002" orientation="portrait" position="float"><label>Figure 2</label><caption><p>(a) Precipitation anomaly for 1901&#x02013;2010 at a randomly chosen grid cell in Eastern Europe. The time series is taken from the Climatic Research Unit Timeseries version 3.1 data set. (b) Dry spell length distribution derived from the observed time series and median and 5th to 95th uncertainty range of 300 dry spell length distributions from statistical simulation of Markov chain.</p></caption><graphic id="nlm-graphic-3" xlink:href="JGRD-123-3483-g002"/></fig><p>To assess whether the Markov chain model and thus also the dry&#x02010;to&#x02010;dry transition probability (<italic>P</italic>
+<sub>dd</sub>) later used for model validation are reasonable approximations for observed and modeled dry spell length distributions, a two sample Kolmogorov&#x02010;Smirnov (KS) test was conducted to compare dry spell length distributions derived from the original time series to those derived from statistical simulation. For doing so, the previously described statistical simulation was repeated 1,000 times and the median of the bootstrapped distribution (black line in Figure&#x000a0;<xref rid="jgrd54513-fig-0002" ref-type="fig">2</xref>b; gray shading corresponds to the range spanned by the individual simulations) compared with the observed or modeled dry spell length distributions using the KS test with a 0.05 significance level. Failure to reject the null hypothesis of equal distributions indicates that the Markov chain (and thus <italic>P</italic>
+<sub>dd</sub>) is a reasonable approximation of the observed and modeled dry spell length distributions. Figure&#x000a0;<xref rid="jgrd54513-fig-0003" ref-type="fig">3</xref> shows the total number of cases at which the KS test rejects the null hypothesis that observed and modeled dry spell length distributions can be approximated with a Markov chain model at the monthly time scale. For observation&#x02010;based data sets, there are no cases of rejection in most of the regions while a few grid cells located in Sahara, Northeast Brazil, and Southeast Asia have one to five cases of rejection out of five observation&#x02010;based data sets indicating that the dry spell length distribution is not well presented with Markov chain model in the respective regions. For model simulations, the spatial distribution of rejections is similar to the observation&#x02010;based estimates, with one to six cases out of 63 model simulations in the same region, which in this case confirms the reliability of the Markov chain assumption. At the annual time scale, there were no cases of rejection for model simulations and less than 10 grid cells had one to two rejections for observations (thus not shown in the figures).</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0003" orientation="portrait" position="float"><label>Figure 3</label><caption><p>Assessment of the suitability of the Markov&#x02010;chain assumption for approximating observed (a) and modeled (b) dry spell length distributions. Shown are the number of cases at which a two&#x02010;sample Kolmogorov&#x02010;Smirnov test rejects the null hypothesis that the observed (a) or modeled (b) dry spell length distribution can be approximated by a first&#x02010;order Markov chain.</p></caption><graphic id="nlm-graphic-5" xlink:href="JGRD-123-3483-g003"/></fig><p>Uncertainty in <italic>P</italic>
+<sub>dd</sub> estimation is related to the finite number of samples in the observed and modeled time series at both time scales, and it is critical to assess whether this uncertainty substantially affects the model validation results. To quantitatively assess the uncertainty due to finite sample size, which also can be referred to as statistical estimation error, we generate the uncertainty distribution of <italic>P</italic>
+<sub>dd</sub> using parametric bootstrapping (Basawa et al., <xref rid="jgrd54513-bib-0004" ref-type="ref">1990</xref>; Efron &#x00026; Tibshirani, <xref rid="jgrd54513-bib-0013" ref-type="ref">1994</xref>). In each grid cell, 1,000 samples of binary time series are generated through statistical simulation under Markov chain assumption (described in the previous paragraph of this chapter) based on the <italic>P</italic>
+<sub>dd</sub> and <italic>P</italic>
+<sub>wd</sub> parameters estimated from the original time series. <italic>P</italic>
+<sub>dd</sub> is then calculated for each statistical ensemble member, resulting in the uncertainty distribution for each <italic>P</italic>
+<sub>dd</sub> estimate from the observational data and the ensemble runs of the GCMs. The <italic>b</italic>th bootstrapped sample of <italic>P</italic>
+<sub>dd</sub> from observation <italic>o</italic> can be denoted as <italic>P</italic>
+<sub>dd ob</sub> and from ensemble <italic>r</italic> in model <italic>m</italic> as <italic>P</italic>
+<sub>dd <italic>mrb</italic></sub>. We compute the drought persistence error of ensemble <italic>r</italic> in model <italic>m</italic> against observation <italic>o</italic> as
+<disp-formula id="jgrd54513-disp-0001"><label>(1)</label><mml:math id="nlm-math-1"><mml:msub><mml:mi>E</mml:mi><mml:mtext mathvariant="italic">omrb</mml:mtext></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>P</mml:mi><mml:mrow><mml:mi>dd</mml:mi><mml:mspace width="0.25em"/><mml:mi mathvariant="italic">mrb</mml:mi></mml:mrow></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>P</mml:mi><mml:mrow><mml:mi>dd</mml:mi><mml:mspace width="0.25em"/><mml:mi>ob</mml:mi></mml:mrow></mml:msub></mml:math></disp-formula>so that the uncertainty range of the estimated error can be spanned by the differences between bootstrapped samples from the observations and the models.</p></sec><sec id="jgrd54513-sec-0007"><label>3.2</label><title>Partitioning the Spread of the <italic>P</italic>
+<sub>dd</sub> Error</title><p>To investigate the respective roles of the sources of uncertainty on the drought persistence error, we aim at partitioning the spread of <italic>E</italic>
+<sub><italic>omrb</italic></sub>. For doing so, we adapt a methodology that has been previously used to partition the spread in climate model projections (Hawkins &#x00026; Sutton, <xref rid="jgrd54513-bib-0019" ref-type="ref">2009</xref>; Orlowsky &#x00026; Seneviratne, <xref rid="jgrd54513-bib-0035" ref-type="ref">2013</xref>), with modifications that allow to account for observation uncertainty and the statistical estimation error of <italic>P</italic>
+<sub>dd</sub>. Using an ANOVA&#x02010;based approach, we aim to quantify the relative contribution of (i) differences among observational products, (ii) differences among climate models, (iii) internal climate variability, and (iv) statistical estimation uncertainty of <italic>P</italic>
+<sub>dd</sub> to the total spread of <italic>E</italic>
+<sub><italic>omrb</italic></sub>. As ensemble members are subordinate to the models and bootstrapped samples are subordinate to the ensemble members and observations (Figure&#x000a0;<xref rid="jgrd54513-fig-0004" ref-type="fig">4</xref>), we apply a crossed and nested ANOVA (Krzywinski et al., <xref rid="jgrd54513-bib-0024" ref-type="ref">2014</xref>). A schematic of the partitioning is shown in Figure&#x000a0;<xref rid="jgrd54513-fig-0005" ref-type="fig">5</xref>. This approach partitions the total sum of squares of <italic>E</italic>
+<sub><italic>omrb</italic></sub> (SS<sub><italic>t</italic></sub>) into model uncertainty (SS<sub><italic>m</italic></sub>), observation uncertainty (SS<sub><italic>o</italic></sub>), internal variability (SS<sub><italic>i</italic></sub>), and sampling error (SS<sub><italic>s</italic></sub>) as
+<disp-formula id="jgrd54513-disp-0002"><label>(2)</label><mml:math id="nlm-math-2"><mml:msub><mml:mi>SS</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>o</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi mathvariant="normal">m</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>r</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub></mml:munderover><mml:mfenced open="(" close=")"><mml:msup><mml:msub><mml:mi>E</mml:mi><mml:mtext mathvariant="italic">omrb</mml:mtext></mml:msub><mml:mn>2</mml:mn></mml:msup></mml:mfenced><mml:mo>&#x02212;</mml:mo><mml:mi>cf</mml:mi></mml:math></disp-formula>
+</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0004" orientation="portrait" position="float"><label>Figure 4</label><caption><p>Hierarchical structure of drought persistence (<italic>P</italic>
+<sub>dd</sub>) error.</p></caption><graphic id="nlm-graphic-7" xlink:href="JGRD-123-3483-g004"/></fig><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0005" orientation="portrait" position="float"><label>Figure 5</label><caption><p>Schematic of partitioning the spread in the error, for the case <italic>N</italic>
+<sub><italic>m</italic></sub>&#x000a0;=&#x000a0;2, <italic>N</italic>
+<sub><italic>o</italic></sub>&#x000a0;=&#x000a0;2, <italic>R</italic>
+<sub>1</sub>&#x000a0;=&#x000a0;5, <italic>R</italic>
+<sub>2</sub>&#x000a0;=&#x000a0;6, and <italic>N</italic>
+<sub><italic>b</italic></sub>&#x000a0;=&#x000a0;30. See text for details and definitions.</p></caption><graphic id="nlm-graphic-9" xlink:href="JGRD-123-3483-g005"/></fig><p>where <italic>N</italic>
+<sub><italic>o</italic></sub> is the number of observation data sets, 5, <italic>N</italic>
+<sub><italic>m</italic></sub> is the number of models, 13, <italic>R</italic>
+<sub><italic>m</italic></sub> is the number of ensemble members available for each model <italic>m</italic>, minimum 3 to maximum 10 (Table&#x000a0;<xref rid="jgrd54513-tbl-0001" ref-type="table-wrap">1</xref>), and <italic>N</italic>
+<sub><italic>b</italic></sub> is the number of bootstrapped samples per observation or model, 1000. We introduce the correction factor (cf) defined as
+<disp-formula id="jgrd54513-disp-0003"><label>(3)</label><mml:math id="nlm-math-3"><mml:mi>cf</mml:mi><mml:mo>=</mml:mo><mml:msup><mml:mfenced open="(" close=")"><mml:mrow><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>o</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>r</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>b</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub></mml:munderover><mml:msub><mml:mi>E</mml:mi><mml:mtext mathvariant="italic">omrb</mml:mtext></mml:msub></mml:mrow></mml:mfenced><mml:mn>2</mml:mn></mml:msup><mml:mo>/</mml:mo><mml:msub><mml:mi>N</mml:mi><mml:mi>t</mml:mi></mml:msub></mml:math></disp-formula>to correct the sum of squares of nonnested factors (Crawley, <xref rid="jgrd54513-bib-0010" ref-type="ref">2005</xref>) by subtracting it from the raw sum of squares of average error of each observation (
+<mml:math id="nlm-math-4"><mml:mover accent="true"><mml:msup><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mi>o&#x02009;</mml:mi><mml:mo>&#x022c5;&#x022c5;&#x022c5;</mml:mo></mml:mrow></mml:msub><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover></mml:math>) and model (
+<mml:math id="nlm-math-5"><mml:mover accent="true"><mml:msup><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mo>&#x022c5;&#x02009;</mml:mo><mml:mi>m</mml:mi><mml:mo>&#x02009;&#x022c5;&#x022c5;</mml:mo></mml:mrow></mml:msub><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover></mml:math>) to adjust them as deviations from the total mean as
+<disp-formula id="jgrd54513-disp-0004"><label>(4)</label><mml:math id="nlm-math-6"><mml:msub><mml:mi>SS</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>N</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>o</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub></mml:munderover><mml:mover accent="true"><mml:msup><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mi>o&#x02009;</mml:mi><mml:mo>&#x022c5;&#x022c5;&#x022c5;</mml:mo></mml:mrow></mml:msub><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover><mml:mo>&#x02212;</mml:mo><mml:mi>cf</mml:mi></mml:math></disp-formula>and
+<disp-formula id="jgrd54513-disp-0005"><label>(5)</label><mml:math id="nlm-math-7"><mml:msub><mml:mi>SS</mml:mi><mml:mi>mod</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:msub><mml:mi>R</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mover accent="true"><mml:msup><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mo>&#x022c5;&#x02009;</mml:mo><mml:mtext mathvariant="italic">m</mml:mtext><mml:mo>&#x02009;&#x022c5;&#x022c5;</mml:mo></mml:mrow></mml:msub><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover><mml:mo>&#x02212;</mml:mo><mml:mi>cf</mml:mi></mml:math></disp-formula>where <italic>N</italic>
+<sub><italic>s</italic></sub> is total number of model simulations, <inline-formula>&#x02211;<italic>R</italic><sub><italic>m</italic></sub></inline-formula>, and <italic>N</italic>
+<sub><italic>t</italic></sub> is the total number of <italic>E</italic>
+<sub><italic>omrb</italic></sub> calculated as <inline-formula><italic>N</italic><sub><italic>o</italic></sub><italic>N</italic><sub><italic>b</italic></sub><italic>N</italic><sub><italic>s</italic></sub></inline-formula>. Note that for SS<sub><italic>i</italic></sub>, additional terms are subtracted from the raw sum of squares of average error of each ensemble simulation to account for the hierarchical structure of the problem.
+<disp-formula id="jgrd54513-disp-0006"><label>(6)</label><mml:math id="nlm-math-8"><mml:mtable columnalign="left" displaystyle="true"><mml:mtr><mml:mtd><mml:msub><mml:mi>SS</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>r</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:mover accent="true"><mml:msup><mml:mrow><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mo>&#x022c5;</mml:mo><mml:mtext mathvariant="italic">mr</mml:mtext><mml:mo>&#x022c5;</mml:mo></mml:mrow></mml:msub></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover><mml:mo>&#x02212;</mml:mo><mml:mfenced open="(" close=")"><mml:mrow><mml:msub><mml:mi>SS</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mo>+</mml:mo><mml:mi>cf</mml:mi></mml:mrow></mml:mfenced></mml:mtd></mml:mtr><mml:mtr><mml:mtd><mml:mo>=</mml:mo><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>r</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:mover accent="true"><mml:msup><mml:mrow><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mo>&#x022c5;</mml:mo><mml:mtext mathvariant="italic">mr</mml:mtext><mml:mo>&#x022c5;</mml:mo></mml:mrow></mml:msub></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mn>13</mml:mn></mml:munderover><mml:mover accent="true"><mml:msup><mml:mrow><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mo>&#x022c5;&#x02009;</mml:mo><mml:mi>m</mml:mi><mml:mo>&#x02009;&#x022c5;&#x022c5;</mml:mo></mml:mrow></mml:msub></mml:mrow><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover></mml:mtd></mml:mtr></mml:mtable></mml:math></disp-formula>
+</p><p>SS<sub><italic>s</italic></sub> is calculated as the sum of squared deviations of bootstrapped samples from average error of each ensemble simulation against each observation or as a residual sum of squares
+<disp-formula id="jgrd54513-disp-0007"><label>(7)</label><mml:math id="nlm-math-9"><mml:msub><mml:mi>SS</mml:mi><mml:mi>s</mml:mi></mml:msub><mml:mo>=</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>N</mml:mi><mml:mi>b</mml:mi></mml:msub><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>o</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>o</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>m</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>N</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:munderover><mml:mo movablelimits="false">&#x02211;</mml:mo><mml:mrow><mml:mi>r</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:msub><mml:mi>R</mml:mi><mml:mi>m</mml:mi></mml:msub></mml:munderover><mml:mover accent="true"><mml:msup><mml:msub><mml:mi>E</mml:mi><mml:mrow><mml:mtext mathvariant="italic">omr</mml:mtext><mml:mo>&#x02009;&#x022c5;</mml:mo></mml:mrow></mml:msub><mml:mn>2</mml:mn></mml:msup><mml:mo stretchy="true">&#x000af;</mml:mo></mml:mover><mml:mo>=</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>t</mml:mi></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>m</mml:mi></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>o</mml:mi></mml:msub><mml:mo>&#x02212;</mml:mo><mml:msub><mml:mi>SS</mml:mi><mml:mi>i</mml:mi></mml:msub></mml:math></disp-formula>
+</p></sec></sec><sec id="jgrd54513-sec-0008"><label>4</label><title>Results</title><sec id="jgrd54513-sec-0009"><label>4.1</label><title>Observed Global <italic>P</italic>
+<sub>dd</sub> Patterns</title><p>Figure&#x000a0;<xref rid="jgrd54513-fig-0005" ref-type="fig">5</xref> shows the mean dry&#x02010;to&#x02010;dry transition probability (<italic>P</italic>
+<sub>dd</sub>) over all observational data sets at each grid cell around the world for both monthly and annual time scales. At the monthly scale, global mean <italic>P</italic>
+<sub>dd</sub> is 0.62 (with [0.58, 0.65] interquartile range) and at annual scale global mean <italic>P</italic>
+<sub>dd</sub> is 0.57 (with [0.54, 0.60] interquartile range). The global means of observed maximum dry spell lengths are 19.1&#x000a0;months and 8.9&#x000a0;years for each time scale.</p><p>Monthly and annual <italic>P</italic>
+<sub>dd</sub> values display clear different spatial patterns (Figure&#x000a0;<xref rid="jgrd54513-fig-0006" ref-type="fig">6</xref>), indicating that monthly persistence does not necessarily propagate linearly to the yearly persistence. Some of the desert areas, for example, Sahara, Gobi, and Atacama, are commonly recognizable in both temporal scale with larger <italic>P</italic>
+<sub>dd</sub> values. The results of KS test (Figure&#x000a0;<xref rid="jgrd54513-fig-0003" ref-type="fig">3</xref>) also suggest higher uncertainty in <italic>P</italic>
+<sub>dd</sub> estimation in Sahara.</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0006" orientation="portrait" position="float"><label>Figure 6</label><caption><p>Mean drought persistence (<italic>P</italic>
+<sub>dd</sub>) estimated from five observation&#x02010;based data sets for 1901&#x02013;2010 at (a) monthly and (b) annual scales.</p></caption><graphic id="nlm-graphic-11" xlink:href="JGRD-123-3483-g006"/></fig></sec><sec id="jgrd54513-sec-0010"><label>4.2</label><title>Drought Persistence Error of CMIP5 Model Simulations</title><p>Figures&#x000a0;<xref rid="jgrd54513-fig-0007" ref-type="fig">7</xref>a and <xref rid="jgrd54513-fig-0007" ref-type="fig">7</xref>c show the drought persistence error (<italic>E</italic>
+<sub><italic>omrb</italic></sub>) averaged over all observational data sets and all model simulations. Overall, the models tend to underestimate <italic>P</italic>
+<sub>dd</sub> at both monthly and annual scales, a feature that is particularly pronounced in western North America, western South America, Africa, and Northeast Asia. In around 40% of the land grid cells (38.9% at monthly scale and 37.9% at annual scale) at least 80% of the model simulations agree on the negative sign of <italic>E</italic>
+<sub><italic>omrb</italic></sub>. For the positive sign, the same percentage of agreement was only found in 2.7% of the land grid cells at monthly scale and 1.5% at annual scale. Figures&#x000a0;<xref rid="jgrd54513-fig-0006" ref-type="fig">6</xref>b and <xref rid="jgrd54513-fig-0006" ref-type="fig">6</xref>d show the global distribution of <italic>E</italic>
+<sub><italic>omrb</italic></sub> and for each observational data set. For all considered observational data sets the tendency of the models to underestimate drought persistence is visible, but it should be noted that 20CR has stronger drought persistence at annual scale and suggests even larger negative drought persistence biases in the climate models than when using other reference data sets. It should be noted for this result that 20CR relies on less direct observations than the other considered products (see Table&#x000a0;<xref rid="jgrd54513-tbl-0002" ref-type="table-wrap">2</xref>). The &#x0201c;drizzle problem,&#x0201d; where GCMs overestimate the number of days with light rainfall (Dai, <xref rid="jgrd54513-bib-0011" ref-type="ref">2006</xref>), might contribute to the larger biases found in desert regions.</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0007" orientation="portrait" position="float"><label>Figure 7</label><caption><p>Spatial distribution of multi&#x02010;simulation mean drought persistence error (<italic>E</italic>
+<sub><italic>omrb</italic></sub>) for (a) monthly and (c) annual scales. Stippling indicates agreement in the sign of drought persistence error among more than 80% of the model simulations. Global distribution of drought persistence error for (b) monthly and (d) annual scales. CRU&#x000a0;=&#x000a0;Climatic Research Unit Timeseries version 3.1; UDEL&#x000a0;=&#x000a0;University of Delaware; GPCC&#x000a0;=&#x000a0;Global Precipitation Climatology Centre; ERA&#x02010;20C&#x000a0;=&#x000a0;ECMWF twentieth century reanalysis; 20CR&#x000a0;=&#x000a0;twentieth century reanalysis.</p></caption><graphic id="nlm-graphic-13" xlink:href="JGRD-123-3483-g007"/></fig><p>Although the mean drought persistence bias indicates that the considered climate models tend to underestimate drought persistence, there are a few regions in which overestimation of <italic>P</italic>
+<sub>dd</sub> is found. This is most pronounced at the monthly scale in the Arabian Peninsula and India, and there is a tendency for overestimation in the Mediterranean, southeastern South America, South Australia, and Southeast Asia. South Australia and India also show overestimation in annual <italic>P</italic>
+<sub>dd.</sub>
+</p><p>Additionally, most of these regions also show underestimation of wet persistence (<italic>P</italic>
+<sub>ww</sub>) (<xref rid="jgrd54513-supinf-0001" ref-type="supplementary-material">supporting information</xref> Figure <xref rid="jgrd54513-supitem-0001" ref-type="supplementary-material">S2</xref>), which indicates that models are generally underestimating persistence of both dry and wet anomalies, at monthly and annual time scales.</p><p>Figure&#x000a0;<xref rid="jgrd54513-fig-0008" ref-type="fig">8</xref> shows the mean drought length bias at the 95th percentile of the dry spell length distribution, estimated on the multisimulation and observation mean <italic>P</italic>
+<sub>dd</sub>. For doing so the observed and modeled dry spell length distributions were estimated on the basis of the multiobservation and multisimulation mean <italic>P</italic>
+<sub>dd</sub> and <italic>P</italic>
+<sub>ww</sub> values (using statistical simulation; see section <xref rid="jgrd54513-sec-0005" ref-type="sec">3</xref>). Subsequently, the difference between the observed and the modeled dry spell length distribution at the 95th percentile was calculated. The spatial distribution of drought length bias generally follows the pattern of the drought persistence bias in Figure&#x000a0;<xref rid="jgrd54513-fig-0007" ref-type="fig">7</xref>. At monthly scale, the strongest underestimation in drought length (up to 5&#x000a0;months) is found in Sahara. Substantial overestimation of drought length in Arabian Peninsula and India is also noticeable. The spatial pattern at annual scale is rather homogenous over all regions. Considering the scale difference, drought length bias at annual scale is considerably smaller than monthly, unlike the larger persistence bias (Figure&#x000a0;<xref rid="jgrd54513-fig-0007" ref-type="fig">7</xref>) which is related to the generally smaller values of <italic>P</italic>
+<sub>dd</sub> at annual scale. Drought length biases at other percentiles are presented in Figure <xref rid="jgrd54513-supitem-0001" ref-type="supplementary-material">S3</xref> (<xref rid="jgrd54513-supinf-0001" ref-type="supplementary-material">supporting information</xref>).</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0008" orientation="portrait" position="float"><label>Figure 8</label><caption><p>Spatial distribution of multi&#x02010;simulation mean drought length bias against observed mean drought length at 95th percentile for (a) at monthly scale and (b) at annual scale.</p></caption><graphic id="nlm-graphic-15" xlink:href="JGRD-123-3483-g008"/></fig><p>Figures&#x000a0;<xref rid="jgrd54513-fig-0009" ref-type="fig">9</xref>a and <xref rid="jgrd54513-fig-0009" ref-type="fig">9</xref>c show the standard deviation of model error at monthly and annual scales. While the spread of <italic>E</italic>
+<sub><italic>omrb</italic></sub> at monthly scale is only large in a few regions (e.g., Amazon, central Andes, Tibetan Plateau, and Sahara), most of the regions show substantial spread in <italic>E</italic>
+<sub><italic>omrb</italic></sub> at annual scale. To compare the relative magnitude of spread against the magnitude of multisimulation mean bias, the coefficient of variation is calculated (Figures&#x000a0;<xref rid="jgrd54513-fig-0009" ref-type="fig">9</xref>b and <xref rid="jgrd54513-fig-0009" ref-type="fig">9</xref>d). In many regions, the absolute value of the coefficient exceeds 1, which indicates that the standard deviation is larger than the mean of <italic>E</italic>
+<sub><italic>omrb</italic></sub>. Nevertheless, pronounced underestimation can be confirmed at monthly scale, in western North America, central, and South Africa, and at annual scale, in Greenland, western South America, Tibetan Plateau, and mainland Southeast Asia, while there are only few grid cells with mean overestimation larger than the spread.</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0009" orientation="portrait" position="float"><label>Figure 9</label><caption><p>Standard deviation of drought persistence error at (a) monthly and (c) annual scales and grid cells at which the coefficient of variation <italic>E</italic>
+<sub><italic>omrb</italic></sub> is larger or smaller than one for the (b) monthly and (d) annual scales. Stippling in (a) and (c) indicates regions with absolute value of coefficient of variation less than 1.</p></caption><graphic id="nlm-graphic-17" xlink:href="JGRD-123-3483-g009"/></fig></sec><sec id="jgrd54513-sec-0011"><label>4.3</label><title>ANOVA of Drought Persistence Error</title><p>As a substantial spread in the drought persistence error is found, we apply the ANOVA&#x02010;based partitioning to quantitatively assess the relative contribution from the four possible sources of uncertainty to the total spread (see section <xref rid="jgrd54513-sec-0007" ref-type="sec">3.2</xref>). Figure&#x000a0;<xref rid="jgrd54513-fig-0010" ref-type="fig">10</xref> shows the spatial patterns determined by the relative contribution from, which are observation uncertainty, model uncertainty, and internal variability, where contribution from the statistical estimation error is only used for indicating reliability of the partitioning. Interestingly, the overall spatial patterns clearly differ depending on the considered time scale. The spread in monthly drought persistence error is mostly related to differences among the considered observational products and model uncertainty, except for high&#x02010;latitude regions. Dominant contributions from model uncertainty are especially pronounced in western North America, Amazon, Northeast Brazil, Algeria, India, and Australia. Even some regions with scarce ground measurements, for example, Sahara, Amazon, and Australia, show similar or even higher contributions from model uncertainty to the spread in <italic>E</italic>
+<sub><italic>omrb</italic></sub> at the monthly time scale, although a higher contribution of observation uncertainty might have been expected. In southern South America, central Africa, Arabian Peninsula, and East Asia, observation uncertainty is dominating to the total spread. Interestingly, a large spread among observation&#x02010;based data sets for monthly precipitation in North Africa and Arabian Peninsula and other low&#x02010;precipitation regions was reported in a previous study (Tanarhte et al., <xref rid="jgrd54513-bib-0049" ref-type="ref">2012</xref>). In contrast, the spread in annual drought persistence error is dominated by a combination from observation uncertainty and internal climate variability. In the Arabian Peninsula, Eastern Africa, and the Tibetan Plateau, observation uncertainty is more pronounced. Note, however, that for the annual scale, the statistical estimation error is larger than the sum of the relative contribution of all other sources of uncertainty at most locations, indicating that most of the spread (Figure&#x000a0;<xref rid="jgrd54513-fig-0009" ref-type="fig">9</xref>c) is caused by finite sample effects.</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0010" orientation="portrait" position="float"><label>Figure 10</label><caption><p>Partitioning the spread of the drought persistence error (<italic>E</italic>
+<sub><italic>omrb</italic></sub>) into model uncertainty, observation uncertainty, and internal variability for (a) monthly and (b) annual scales. Stippled areas indicate that the summated contribution from the other sources is smaller than contribution from statistical estimation error.</p></caption><graphic id="nlm-graphic-19" xlink:href="JGRD-123-3483-g010"/></fig><p>Figure&#x000a0;<xref rid="jgrd54513-fig-0011" ref-type="fig">11</xref> shows the global distribution of the contributions from each source to the total spread in drought persistence error. At the monthly scale, overall contribution from observational and model uncertainty is clearly larger than that from internal variability. At the annual scale, the median of the contribution from statistical estimation error is larger than any other source, implying that the partitioning is unreliable in most of the regions (Figure&#x000a0;<xref rid="jgrd54513-fig-0010" ref-type="fig">10</xref>b). In addition, a substantially lower contribution from model uncertainty is also noticeable at the annual scale.</p><fig fig-type="Figure" xml:lang="en" id="jgrd54513-fig-0011" orientation="portrait" position="float"><label>Figure 11</label><caption><p>Box plots showing global distribution of contribution from each source of uncertainty to the total spread of drought persistence error for monthly (red) and annual (blue) scales. Each box represents the interquartile range, and the median is shown as white line. The whiskers show the range (25th quantile &#x02212;1.5&#x000b7;IQR, 75th quantile +1.5&#x000b7;IQR), and values outside this range are indicated as dots.</p></caption><graphic id="nlm-graphic-21" xlink:href="JGRD-123-3483-g011"/></fig></sec></sec><sec id="jgrd54513-sec-0012"><label>5</label><title>Discussion</title><sec id="jgrd54513-sec-0013"><label>5.1</label><title>Drought Persistence Error</title><p>While previous studies have highlighted the underestimation of interannual to multidecadal precipitation variability in current climate models (Ault et al., <xref rid="jgrd54513-bib-0002" ref-type="ref">2012</xref>; Dai, <xref rid="jgrd54513-bib-0011" ref-type="ref">2006</xref>; Kumar et al., <xref rid="jgrd54513-bib-0025" ref-type="ref">2013</xref>), we investigated here whether state&#x02010;of&#x02010;the&#x02010;art climate models capture meteorological drought persistence at shorter time scales. We find a systematic underestimation of the persistence of drought at both the monthly and annual scales in the considered CMIP5 models, when compared to five observational reference products over the 1901 to 2010 time frame. This underestimation is clear, despite the large spread in drought persistence error, which is in many regions attributable to observational uncertainty. Consequently, this study complements previous research (Ault et al., <xref rid="jgrd54513-bib-0003" ref-type="ref">2014</xref>; Wetter et al., <xref rid="jgrd54513-bib-0055" ref-type="ref">2014</xref>) by showing that the underestimation of drought persistence already occurs if year&#x02010;to&#x02010;year or month&#x02010;to month variability is considered.</p><p>Overall, the climate models' ability to simulate precipitation variability at long time scales is likely related to the representation of tropical sea surface temperature and El Ni&#x000f1;o&#x02013;Southern Oscillation variability in the GCMs, as previously suggested (Meinke et al., <xref rid="jgrd54513-bib-0032" ref-type="ref">2005</xref>; Schubert et al., <xref rid="jgrd54513-bib-0040" ref-type="ref">2016</xref>). Consequently, it is not unlikely that drought persistence in current climate models also depends on how well large&#x02010;scale ocean&#x02010;atmosphere variability is represented. On shorter time scales, the general underestimation of drought persistence shown in this study could possibly be attributed to issues in the representation of land&#x02010;atmosphere couplings, such as the soil moisture&#x02010;precipitation coupling at the regional scale (Guillod et al., <xref rid="jgrd54513-bib-0015" ref-type="ref">2015</xref>; Koster et al., <xref rid="jgrd54513-bib-0023" ref-type="ref">2006</xref>; Orlowsky &#x00026; Seneviratne, <xref rid="jgrd54513-bib-0034" ref-type="ref">2010</xref>; C. M. Taylor, de Jeu, et al., <xref rid="jgrd54513-bib-0052" ref-type="ref">2012</xref>). Consequently, the differences in the spatial distribution of the drought persistence error at monthly and annual time scales identified in this study might be related to differences in the governing processes. However, to which degree this is the case and how errors on short time scales (e.g., day to day) translate to errors on long time scales (e.g., year to year) remains to be investigated.</p></sec><sec id="jgrd54513-sec-0014"><label>5.2</label><title>Partitioning the Spread in the Drought Persistence Error</title><p>While the considered GCMs display a systematic underestimation of drought persistence, the range of underestimation spanned by these models and by the observational data sets is substantial. To further investigate this issue, we developed an ANOVA&#x02010;based approach that allows to partition the contribution of unprecise observations, differences among climate models, internal climate variability, and statistical uncertainty to the total spread in the drought persistence error. The partitioning method applied in this study is motivated by an approach that is used to partition the uncertainty in future climate projections into model uncertainty, scenario uncertainty, and internal variability (Addor et al., <xref rid="jgrd54513-bib-0001" ref-type="ref">2014</xref>; Hawkins &#x00026; Sutton, <xref rid="jgrd54513-bib-0019" ref-type="ref">2009</xref>; Orlowsky &#x00026; Seneviratne, <xref rid="jgrd54513-bib-0035" ref-type="ref">2013</xref>; I. H. Taylor, Burke, et al., <xref rid="jgrd54513-bib-0053" ref-type="ref">2012</xref>). In this study, we expand this framework for the model validation task. To this end, we incorporated observation uncertainty together with the statistical estimation error of <italic>E</italic>
+<sub><italic>omrb</italic></sub> into the existing framework. The analysis showed that both observational uncertainty and the statistical estimation uncertainty can play a significant role in climate model validation.</p><p>The results of the partitioning of the spread in the drought persistence error have interesting implications both for future model validation studies and for model development. On the one hand, the analysis highlights that differences among the considered climate models are in many cases larger than the uncertainty of observations, highlighting the potential of future model development. On the other hand, the analysis also shows that issues with the considered observational data products (especially in data scarce regions) as well as finite sample effects (annual time scale) can impair the model validation exercise. Consequently, the results highlight the importance of considering the latter uncertainties in future model validation studies. Furthermore, the partitioned spread in this study might be used to assess the efficiency of model selection based on observational constraint for reducing the model spread in future projections (Cox et al., <xref rid="jgrd54513-bib-0009" ref-type="ref">2013</xref>; Hall &#x00026; Qu, <xref rid="jgrd54513-bib-0016" ref-type="ref">2006</xref>). The efficiency is expected to be higher in the regions where the range of observation uncertainty is substantially narrower than the model uncertainty.</p></sec></sec><sec id="jgrd54513-sec-0015"><label>6</label><title>Conclusions</title><p>Persistent meteorological drought triggers subsequent drying of other hydrological variables on land (Van Loon, <xref rid="jgrd54513-bib-0027" ref-type="ref">2015</xref>) such as soil moisture or water storage, which can, for example, have strong impacts on vegetation (Nicolai&#x02010;Shaw et al., <xref rid="jgrd54513-bib-0033" ref-type="ref">2017</xref>) and regional temperature (Seneviratne et al., <xref rid="jgrd54513-bib-0041" ref-type="ref">2010</xref>). In this study, we investigated how well current generation GCMs represent drought persistence over the twentieth century and the recent past. For doing so we focused on meteorological drought and compared dry&#x02010;to&#x02010;dry transition probabilities (<italic>P</italic>
+<sub>dd</sub>) at yearly and monthly time scales of an ensemble of simulations from the CMIP5 archive with observational data sets (interpolated observations and reanalyses). Overall, the results highlight that the considered models tend to underestimate drought persistence at monthly and annual time scales. This is an interesting addition to previous results (Ault et al., <xref rid="jgrd54513-bib-0003" ref-type="ref">2014</xref>; Kumar et al., <xref rid="jgrd54513-bib-0025" ref-type="ref">2013</xref>), which indicate that CMIP5 models underestimate the risk of prolonged droughts on multidecadal time scales.</p><p>To investigate the substantial spread in the drought persistence error, we develop a new methodology to effectively partition the spread into its main components, which include (i) observation uncertainty, (ii) model uncertainty, (iii) internal variability, and (iv) statistical estimation error of the considered validation metric. At the monthly time scale, observation uncertainty (which is often neglected in model validation studies) and model uncertainty are the main contributors to the total spread. At annual time scales, the statistical estimation error is dominant in most regions, followed by combined contributions from internal variability and observational uncertainty. This analysis reveals regions where improvements of GCMs or model selection can substantially reduce the spread of model uncertainty. Reducing uncertainty of drought simulations is important for improving drought projections in a changing climate.</p></sec><sec sec-type="supplementary-material"><title>Supporting information</title><supplementary-material content-type="local-data" id="jgrd54513-supinf-0001"/><supplementary-material content-type="local-data" id="jgrd54513-supitem-0001"><caption><p>Supporting Information S1</p></caption><media xlink:href="JGRD-123-3483-s001.docx"><caption><p>Click here for additional data file.</p></caption></media></supplementary-material></sec></body><back><ack id="jgrd54513-sec-0016"><title>Acknowledgments</title><p>This research was funded by the ERC DROUGHT&#x02010;HEAT project (contract 617518). We acknowledge the World Climate Research Programme's Working Group on Coupled Modeling, which is responsible for CMIP, and we thank the climate modeling groups (listed in Table&#x000a0;<xref rid="jgrd54513-tbl-0001" ref-type="table-wrap">1</xref> of this paper) for producing and making available their model output. For CMIP the U.S. Department of Energy's Program for Climate Model Diagnosis and Intercomparison provides coordinating support and led development of software infrastructure in partnership with the Global Organization for Earth System Science Portals. We thank Jan Sedlacek and Urs Beyerle for the retrieval and preparation of CMIP5 model data. We also acknowledge the providers of precipitation data of the following products: GPCC (<ext-link ext-link-type="uri" xlink:href="http://gpcc.dwd.de">http://gpcc.dwd.de</ext-link>), CRU TS (<ext-link ext-link-type="uri" xlink:href="https://crudata.uea.ac.uk/cru/data/hrg/">https://crudata.uea.ac.uk/cru/data/hrg/</ext-link>), UDEL (<ext-link ext-link-type="uri" xlink:href="http://climate.geog.udel.edu/~climate/">http://climate.geog.udel.edu/~climate/</ext-link>), 20CR (<ext-link ext-link-type="uri" xlink:href="https://www.esrl.noaa.gov/psd/data/20thC_Rean/">https://www.esrl.noaa.gov/psd/data/20thC_Rean/</ext-link>), and ERA&#x02010;20C (<ext-link ext-link-type="uri" xlink:href="http://apps.ecmwf.int/datasets/">http://apps.ecmwf.int/datasets/</ext-link>).</p></ack><ref-list id="jgrd54513-bibl-0001" content-type="cited-references"><title>References</title><ref id="jgrd54513-bib-0001"><mixed-citation publication-type="journal" id="jgrd54513-cit-0002">
+<string-name>
+<surname>Addor</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>R&#x000f6;ssler</surname>, <given-names>O.</given-names>
+</string-name>, <string-name>
+<surname>K&#x000f6;plin</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Huss</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Weingartner</surname>, <given-names>R.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Seibert</surname>, <given-names>J.</given-names>
+</string-name> (<year>2014</year>). <article-title>Robust changes and sources of uncertainty in the projected hydrological regimes of Swiss catchments</article-title>. <source xml:lang="en">Water Resources Research</source>, <volume>50</volume>, <fpage>7541</fpage>&#x02013;<lpage>7562</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/2014WR015549">https://doi.org/10.1002/2014WR015549</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0002"><mixed-citation publication-type="journal" id="jgrd54513-cit-0003">
+<string-name>
+<surname>Ault</surname>, <given-names>T. R.</given-names>
+</string-name>, <string-name>
+<surname>Cole</surname>, <given-names>J. E.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>St. George</surname>, <given-names>S.</given-names>
+</string-name> (<year>2012</year>). <article-title>The amplitude of decadal to multidecadal variability in precipitation simulated by state&#x02010;of&#x02010;the&#x02010;art climate models</article-title>. <source xml:lang="en">Geophysical Research Letters</source>, <volume>39</volume>, <elocation-id>L21705</elocation-id>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/2012GL053424">https://doi.org/10.1029/2012GL053424</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0003"><mixed-citation publication-type="journal" id="jgrd54513-cit-0004">
+<string-name>
+<surname>Ault</surname>, <given-names>T. R.</given-names>
+</string-name>, <string-name>
+<surname>Cole</surname>, <given-names>J. E.</given-names>
+</string-name>, <string-name>
+<surname>Overpeck</surname>, <given-names>J. T.</given-names>
+</string-name>, <string-name>
+<surname>Pederson</surname>, <given-names>G. T.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Meko</surname>, <given-names>D. M.</given-names>
+</string-name> (<year>2014</year>). <article-title>Assessing the risk of persistent drought using climate model simulations and paleoclimate data</article-title>. <source xml:lang="en">Journal of Climate</source>, <volume>27</volume>(<issue>20</issue>), <fpage>7529</fpage>&#x02013;<lpage>7549</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/JCLI-D-12-00282.1">https://doi.org/10.1175/JCLI-D-12-00282.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0004"><mixed-citation publication-type="journal" id="jgrd54513-cit-0005">
+<string-name>
+<surname>Basawa</surname>, <given-names>I. V.</given-names>
+</string-name>, <string-name>
+<surname>Green</surname>, <given-names>T. A.</given-names>
+</string-name>, <string-name>
+<surname>McCormick</surname>, <given-names>W. P.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Taylor</surname>, <given-names>R. L.</given-names>
+</string-name> (<year>1990</year>). <article-title>Asymptotic bootstrap validity for finite Markov chains</article-title>. <source xml:lang="en">Communications in Statistics &#x02010; Theory and Methods</source>, <volume>19</volume>(<issue>4</issue>), <fpage>1493</fpage>&#x02013;<lpage>1510</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1080/03610929008830275">https://doi.org/10.1080/03610929008830275</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0005"><mixed-citation publication-type="journal" id="jgrd54513-cit-0006">
+<string-name>
+<surname>B&#x000ea;che</surname>, <given-names>L. A.</given-names>
+</string-name>, <string-name>
+<surname>Connors</surname>, <given-names>P. G.</given-names>
+</string-name>, <string-name>
+<surname>Resh</surname>, <given-names>V. H.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Merenlender</surname>, <given-names>A. M.</given-names>
+</string-name> (<year>2009</year>). <article-title>Resilience of fishes and invertebrates to prolonged drought in two California streams</article-title>. <source xml:lang="en">Ecography</source>, <volume>32</volume>(<issue>5</issue>), <fpage>778</fpage>&#x02013;<lpage>788</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1111/j.1600-0587.2009.05612.x">https://doi.org/10.1111/j.1600-0587.2009.05612.x</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0006"><mixed-citation publication-type="journal" id="jgrd54513-cit-0007">
+<string-name>
+<surname>Bunde</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>B&#x000fc;ntgen</surname>, <given-names>U.</given-names>
+</string-name>, <string-name>
+<surname>Ludescher</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Luterbacher</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>von Storch</surname>, <given-names>H.</given-names>
+</string-name> (<year>2013</year>). <article-title>Is there memory in precipitation?</article-title>
+<source xml:lang="en">Nature Climate Change</source>, <volume>3</volume>(<issue>3</issue>), <fpage>174</fpage>&#x02013;<lpage>175</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nclimate1830">https://doi.org/10.1038/nclimate1830</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0007"><mixed-citation publication-type="journal" id="jgrd54513-cit-0008">
+<string-name>
+<surname>Compo</surname>, <given-names>G. P.</given-names>
+</string-name>, <string-name>
+<surname>Whitaker</surname>, <given-names>J. S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Sardeshmukh</surname>, <given-names>P. D.</given-names>
+</string-name> (<year>2006</year>). <article-title>Feasibility of a 100&#x02010;year reanalysis using only surface pressure data</article-title>. <source xml:lang="en">Bulletin of the American Meteorological Society</source>, <volume>87</volume>(<issue>2</issue>), <fpage>175</fpage>&#x02013;<lpage>190</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/BAMS-87-2-175">https://doi.org/10.1175/BAMS-87-2-175</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0008"><mixed-citation publication-type="journal" id="jgrd54513-cit-0009">
+<string-name>
+<surname>Cook</surname>, <given-names>B. I.</given-names>
+</string-name>, <string-name>
+<surname>Ault</surname>, <given-names>T. R.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Smerdon</surname>, <given-names>J. E.</given-names>
+</string-name> (<year>2015</year>). <article-title>Unprecedented 21st century drought risk in the American Southwest and Central Plains</article-title>. <source xml:lang="en">Science Advances</source>, <volume>1</volume>(<issue>1</issue>), <fpage>e1400082</fpage>&#x02013;<lpage>e1400082</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/sciadv.1400082">https://doi.org/10.1126/sciadv.1400082</ext-link>
+<pub-id pub-id-type="pmid">26601131</pub-id></mixed-citation></ref><ref id="jgrd54513-bib-0009"><mixed-citation publication-type="journal" id="jgrd54513-cit-0010">
+<string-name>
+<surname>Cox</surname>, <given-names>P. M.</given-names>
+</string-name>, <string-name>
+<surname>Pearson</surname>, <given-names>D.</given-names>
+</string-name>, <string-name>
+<surname>Booth</surname>, <given-names>B. B.</given-names>
+</string-name>, <string-name>
+<surname>Friedlingstein</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Huntingford</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Jones</surname>, <given-names>C. D.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Luke</surname>, <given-names>C. M.</given-names>
+</string-name> (<year>2013</year>). <article-title>Sensitivity of tropical carbon to climate change constrained by carbon dioxide variability</article-title>. <source xml:lang="en">Nature</source>, <volume>494</volume>(<issue>7437</issue>), <fpage>341</fpage>&#x02013;<lpage>344</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature11882">https://doi.org/10.1038/nature11882</ext-link>
+<pub-id pub-id-type="pmid">23389447</pub-id></mixed-citation></ref><ref id="jgrd54513-bib-0010"><mixed-citation publication-type="book" id="jgrd54513-cit-0011">
+<string-name>
+<surname>Crawley</surname>, <given-names>M. J.</given-names>
+</string-name> (<year>2005</year>). <chapter-title>Analysis of variance</chapter-title> In <source xml:lang="en">Statistics: An introduction using R</source> (pp. <fpage>155</fpage>&#x02013;<lpage>185</lpage>). <publisher-loc>London, UK</publisher-loc>: <publisher-name>John Wiley</publisher-name>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/9781119941750">https://doi.org/10.1002/9781119941750</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0011"><mixed-citation publication-type="journal" id="jgrd54513-cit-0012">
+<string-name>
+<surname>Dai</surname>, <given-names>A.</given-names>
+</string-name> (<year>2006</year>). <article-title>Precipitation characteristics in eighteen coupled climate models</article-title>. <source xml:lang="en">Journal of Climate</source>, <volume>19</volume>(<issue>18</issue>), <fpage>4605</fpage>&#x02013;<lpage>4630</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/JCLI3884.1">https://doi.org/10.1175/JCLI3884.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0012"><mixed-citation publication-type="journal" id="jgrd54513-cit-0013">
+<string-name>
+<surname>Dai</surname>, <given-names>A.</given-names>
+</string-name> (<year>2011</year>). <article-title>Drought under global warming: A review</article-title>. <source xml:lang="en">Wiley Interdisciplinary Reviews: Climate Change</source>, <volume>2</volume>(<issue>1</issue>), <fpage>45</fpage>&#x02013;<lpage>65</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/wcc.81">https://doi.org/10.1002/wcc.81</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0013"><mixed-citation publication-type="book" id="jgrd54513-cit-0014">
+<string-name>
+<surname>Efron</surname>, <given-names>B.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Tibshirani</surname>, <given-names>R. J.</given-names>
+</string-name> (<year>1994</year>). <source xml:lang="en">An introduction to the bootsrap</source>. <publisher-loc>New York</publisher-loc>: <publisher-name>Chapman &#x00026; Hall/CRC</publisher-name>.</mixed-citation></ref><ref id="jgrd54513-bib-0014"><mixed-citation publication-type="journal" id="jgrd54513-cit-0015">
+<string-name>
+<surname>Griffin</surname>, <given-names>D.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Anchukaitis</surname>, <given-names>K. J.</given-names>
+</string-name> (<year>2014</year>). <article-title>How unusual is the 2012&#x02013;2014 California drought?</article-title>
+<source xml:lang="en">Geophysical Research Letters</source>, <volume>41</volume>, <fpage>9017</fpage>&#x02013;<lpage>9023</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/2014GL062433">https://doi.org/10.1002/2014GL062433</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0015"><mixed-citation publication-type="journal" id="jgrd54513-cit-0016">
+<string-name>
+<surname>Guillod</surname>, <given-names>B. P.</given-names>
+</string-name>, <string-name>
+<surname>Orlowsky</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Miralles</surname>, <given-names>D. G.</given-names>
+</string-name>, <string-name>
+<surname>Teuling</surname>, <given-names>A. J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Seneviratne</surname>, <given-names>S. I.</given-names>
+</string-name> (<year>2015</year>). <article-title>Reconciling spatial and temporal soil moisture effects on afternoon rainfall</article-title>. <source xml:lang="en">Nature Communications</source>, <volume>6</volume>(<issue>1</issue>), <elocation-id>6443</elocation-id>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/ncomms7443">https://doi.org/10.1038/ncomms7443</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0016"><mixed-citation publication-type="journal" id="jgrd54513-cit-0017">
+<string-name>
+<surname>Hall</surname>, <given-names>A.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Qu</surname>, <given-names>X.</given-names>
+</string-name> (<year>2006</year>). <article-title>Using the current seasonal cycle to constrain snow albedo feedback in future climate change</article-title>. <source xml:lang="en">Geophysical Research Letters</source>, <volume>33</volume>, <elocation-id>L03502</elocation-id>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/2005GL025127">https://doi.org/10.1029/2005GL025127</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0017"><mixed-citation publication-type="journal" id="jgrd54513-cit-0018">
+<string-name>
+<surname>Harou</surname>, <given-names>J. J.</given-names>
+</string-name>, <string-name>
+<surname>Medell&#x000ed;n&#x02010;Azuara</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Zhu</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Tanaka</surname>, <given-names>S. K.</given-names>
+</string-name>, <string-name>
+<surname>Lund</surname>, <given-names>J. R.</given-names>
+</string-name>, <string-name>
+<surname>Stine</surname>, <given-names>S.</given-names>
+</string-name>, et al. (<year>2010</year>). <article-title>Economic consequences of optimized water management for a prolonged, severe drought in California</article-title>. <source xml:lang="en">Water Resources Research</source>, <volume>46</volume>, <elocation-id>W05522</elocation-id>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/2008WR007681">https://doi.org/10.1029/2008WR007681</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0018"><mixed-citation publication-type="journal" id="jgrd54513-cit-0019">
+<string-name>
+<surname>Harris</surname>, <given-names>I.</given-names>
+</string-name>, <string-name>
+<surname>Jones</surname>, <given-names>P. D.</given-names>
+</string-name>, <string-name>
+<surname>Osborn</surname>, <given-names>T. J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Lister</surname>, <given-names>D. H.</given-names>
+</string-name> (<year>2014</year>). <article-title>Updated high&#x02010;resolution grids of monthly climatic observations&#x02014;The CRU TS3.10 dataset</article-title>. <source xml:lang="en">International Journal of Climatology</source>, <volume>34</volume>(<issue>3</issue>), <fpage>623</fpage>&#x02013;<lpage>642</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/joc.3711">https://doi.org/10.1002/joc.3711</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0019"><mixed-citation publication-type="journal" id="jgrd54513-cit-0020">
+<string-name>
+<surname>Hawkins</surname>, <given-names>E.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Sutton</surname>, <given-names>R.</given-names>
+</string-name> (<year>2009</year>). <article-title>The potential to narrow uncertainty in regional climate predictions</article-title>. <source xml:lang="en">Bulletin of the American Meteorological Society</source>, <volume>90</volume>(<issue>8</issue>), <fpage>1095</fpage>&#x02013;<lpage>1108</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/2009BAMS2607.1">https://doi.org/10.1175/2009BAMS2607.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0020"><mixed-citation publication-type="journal" id="jgrd54513-cit-0021">
+<string-name>
+<surname>Jackson</surname>, <given-names>B. B.</given-names>
+</string-name> (<year>1975</year>). <article-title>Markov mixture models for drought lengths</article-title>. <source xml:lang="en">Water Resources Research</source>, <volume>11</volume>(<issue>1</issue>), <fpage>64</fpage>&#x02013;<lpage>74</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/WR011i001p00064">https://doi.org/10.1029/WR011i001p00064</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0021"><mixed-citation publication-type="journal" id="jgrd54513-cit-0022">
+<string-name>
+<surname>Kelley</surname>, <given-names>C. P.</given-names>
+</string-name>, <string-name>
+<surname>Mohtadi</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Cane</surname>, <given-names>M. A.</given-names>
+</string-name>, <string-name>
+<surname>Seager</surname>, <given-names>R.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Kushnir</surname>, <given-names>Y.</given-names>
+</string-name> (<year>2015</year>). <article-title>Climate change in the fertile crescent and implications of the recent Syrian drought</article-title>. <source xml:lang="en">Proceedings of the National Academy of Sciences</source>, <volume>112</volume>(<issue>11</issue>), <fpage>3241</fpage>&#x02013;<lpage>3246</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1073/pnas.1421533112">https://doi.org/10.1073/pnas.1421533112</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0022"><mixed-citation publication-type="journal" id="jgrd54513-cit-0023">
+<string-name>
+<surname>Keyantash</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Dracup</surname>, <given-names>J. A.</given-names>
+</string-name> (<year>2002</year>). <article-title>The quantification of drought: An evaluation of drought indices</article-title>. <source xml:lang="en">Bulletin of the American Meteorological Society</source>, <volume>83</volume>(<issue>8</issue>), <fpage>1167</fpage>&#x02013;<lpage>1180</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/1520-0477-83.8.1167">https://doi.org/10.1175/1520-0477-83.8.1167</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0023"><mixed-citation publication-type="journal" id="jgrd54513-cit-0024">
+<string-name>
+<surname>Koster</surname>, <given-names>R. D.</given-names>
+</string-name>, <string-name>
+<surname>Sud</surname>, <given-names>Y. C.</given-names>
+</string-name>, <string-name>
+<surname>Guo</surname>, <given-names>Z.</given-names>
+</string-name>, <string-name>
+<surname>Dirmeyer</surname>, <given-names>P. A.</given-names>
+</string-name>, <string-name>
+<surname>Bonan</surname>, <given-names>G.</given-names>
+</string-name>, <string-name>
+<surname>Oleson</surname>, <given-names>K. W.</given-names>
+</string-name>, et al. (<year>2006</year>). <article-title>GLACE: The global land&#x02013;atmosphere coupling experiment. Part I: Overview</article-title>. <source xml:lang="en">Journal of Hydrometeorology</source>, <volume>7</volume>(<issue>4</issue>), <fpage>590</fpage>&#x02013;<lpage>610</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/JHM510.1">https://doi.org/10.1175/JHM510.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0024"><mixed-citation publication-type="journal" id="jgrd54513-cit-0025">
+<string-name>
+<surname>Krzywinski</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Altman</surname>, <given-names>N.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Blainey</surname>, <given-names>P.</given-names>
+</string-name> (<year>2014</year>). <article-title>Points of significance: Nested designs</article-title>. <source xml:lang="en">Nature Methods</source>, <volume>11</volume>(<issue>10</issue>), <fpage>977</fpage>&#x02013;<lpage>978</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nmeth.3137">https://doi.org/10.1038/nmeth.3137</ext-link>
+<pub-id pub-id-type="pmid">25392877</pub-id></mixed-citation></ref><ref id="jgrd54513-bib-0025"><mixed-citation publication-type="journal" id="jgrd54513-cit-0026">
+<string-name>
+<surname>Kumar</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Merwade</surname>, <given-names>V.</given-names>
+</string-name>, <string-name>
+<surname>Kinter</surname>, <given-names>J. L.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Niyogi</surname>, <given-names>D.</given-names>
+</string-name> (<year>2013</year>). <article-title>Evaluation of temperature and precipitation trends and long&#x02010;term persistence in CMIP5 twentieth&#x02010;century climate simulations</article-title>. <source xml:lang="en">Journal of Climate</source>, <volume>26</volume>(<issue>12</issue>), <fpage>4168</fpage>&#x02013;<lpage>4185</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/JCLI-D-12-00259.1">https://doi.org/10.1175/JCLI-D-12-00259.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0026"><mixed-citation publication-type="journal" id="jgrd54513-cit-0027">
+<string-name>
+<surname>Lee</surname>, <given-names>K. S.</given-names>
+</string-name>, <string-name>
+<surname>Sadeghipour</surname>, <given-names>J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Dracup</surname>, <given-names>J. A.</given-names>
+</string-name> (<year>1986</year>). <article-title>An approach for frequency analysis of multiyear drought durations</article-title>. <source xml:lang="en">Water Resources Research</source>, <volume>22</volume>(<issue>5</issue>), <fpage>655</fpage>&#x02013;<lpage>662</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/WR022i005p00655">https://doi.org/10.1029/WR022i005p00655</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0028"><mixed-citation publication-type="journal" id="jgrd54513-cit-0029">
+<string-name>
+<surname>Mandelbrot</surname>, <given-names>B. B.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Wallis</surname>, <given-names>J. R.</given-names>
+</string-name> (<year>1969</year>). <article-title>Some long&#x02010;run properties of geophysical records</article-title>. <source xml:lang="en">Water Resources Research</source>, <volume>5</volume>(<issue>2</issue>), <fpage>321</fpage>&#x02013;<lpage>340</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/WR005i002p00321">https://doi.org/10.1029/WR005i002p00321</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0029"><mixed-citation publication-type="journal" id="jgrd54513-cit-0030">
+<string-name>
+<surname>Mathier</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Perreault</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Bob&#x000e9;e</surname>, <given-names>B.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Ashkar</surname>, <given-names>F.</given-names>
+</string-name> (<year>1992</year>). <article-title>The use of geometric and gamma&#x02010;related distributions for frequency analysis of water deficit</article-title>. <source xml:lang="en">Stochastic Hydrology and Hydraulics</source>, <volume>6</volume>(<issue>4</issue>), <fpage>239</fpage>&#x02013;<lpage>254</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/BF01581619">https://doi.org/10.1007/BF01581619</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0030"><mixed-citation publication-type="miscellaneous" id="jgrd54513-cit-0031">
+<string-name>
+<surname>Matsuura</surname>, <given-names>K.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Willmott</surname>, <given-names>C. J.</given-names>
+</string-name> (<year>2012</year>). <article-title>Terrestrial precipitation: 1900&#x02013;2010 gridded monthly time series</article-title>. Retrieved from <ext-link ext-link-type="uri" xlink:href="http://climate.geog.udel.edu/~climate/html_pages/Global2011/README.GlobalTsP2011.html">http://climate.geog.udel.edu/~climate/html_pages/Global2011/README.GlobalTsP2011.html</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0031"><mixed-citation publication-type="book" id="jgrd54513-cit-0032">
+<string-name>
+<surname>McKee</surname>, <given-names>T. B.</given-names>
+</string-name>, <string-name>
+<surname>Doesken</surname>, <given-names>N. J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Kleist</surname>, <given-names>J.</given-names>
+</string-name> (<year>1993</year>). <chapter-title>The relationship of drought frequency and duration to time scales</chapter-title> In <source xml:lang="en">Proceedings of the 8th conference on applied climatology</source> (Vol. <volume>17</volume>, pp. <fpage>179</fpage>&#x02013;<lpage>183</lpage>). <publisher-loc>MA</publisher-loc>: <publisher-name>American Meteorological Society Boston</publisher-name>.</mixed-citation></ref><ref id="jgrd54513-bib-0032"><mixed-citation publication-type="journal" id="jgrd54513-cit-0033">
+<string-name>
+<surname>Meinke</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>DeVoil</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Hammer</surname>, <given-names>G. L.</given-names>
+</string-name>, <string-name>
+<surname>Power</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Allan</surname>, <given-names>R.</given-names>
+</string-name>, <string-name>
+<surname>Stone</surname>, <given-names>R. C.</given-names>
+</string-name>, et al. (<year>2005</year>). <article-title>Rainfall variability at decadal and longer time scales: Signal or noise?</article-title>
+<source xml:lang="en">Journal of Climate</source>, <volume>18</volume>(<issue>1</issue>), <fpage>89</fpage>&#x02013;<lpage>96</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/JCLI-3263.1">https://doi.org/10.1175/JCLI-3263.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0033"><mixed-citation publication-type="journal" id="jgrd54513-cit-0034">
+<string-name>
+<surname>Nicolai&#x02010;Shaw</surname>, <given-names>N.</given-names>
+</string-name>, <string-name>
+<surname>Zscheischler</surname>, <given-names>J.</given-names>
+</string-name>, <string-name>
+<surname>Hirschi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Gudmundsson</surname>, <given-names>L.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Seneviratne</surname>, <given-names>S. I.</given-names>
+</string-name> (<year>2017</year>). <article-title>A drought event composite analysis using satellite remote&#x02010;sensing based soil moisture</article-title>. <source xml:lang="en">Remote Sensing of Environment</source>, <volume>203</volume>, <fpage>216</fpage>&#x02013;<lpage>225</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.rse.2017.06.014">https://doi.org/10.1016/j.rse.2017.06.014</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0034"><mixed-citation publication-type="journal" id="jgrd54513-cit-0035">
+<string-name>
+<surname>Orlowsky</surname>, <given-names>B.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Seneviratne</surname>, <given-names>S. I.</given-names>
+</string-name> (<year>2010</year>). <article-title>Statistical analyses of land&#x02013;atmosphere feedbacks and their possible pitfalls</article-title>. <source xml:lang="en">Journal of Climate</source>, <volume>23</volume>(<issue>14</issue>), <fpage>3918</fpage>&#x02013;<lpage>3932</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/2010JCLI3366.1">https://doi.org/10.1175/2010JCLI3366.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0035"><mixed-citation publication-type="journal" id="jgrd54513-cit-0036">
+<string-name>
+<surname>Orlowsky</surname>, <given-names>B.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Seneviratne</surname>, <given-names>S. I.</given-names>
+</string-name> (<year>2013</year>). <article-title>Elusive drought: Uncertainty in observed trends and short&#x02010; and long&#x02010;term CMIP5 projections</article-title>. <source xml:lang="en">Hydrology and Earth System Sciences</source>, <volume>17</volume>(<issue>5</issue>), <fpage>1765</fpage>&#x02013;<lpage>1781</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5194/hess-17-1765-2013">https://doi.org/10.5194/hess-17-1765-2013</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0036"><mixed-citation publication-type="journal" id="jgrd54513-cit-0037">
+<string-name>
+<surname>Pelletier</surname>, <given-names>J. D.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Turcotte</surname>, <given-names>D. L.</given-names>
+</string-name> (<year>1997</year>). <article-title>Long&#x02010;range persistence in climatological and hydrological time series: Analysis, modeling and application to drought hazard assessment</article-title>. <source xml:lang="en">Journal of Hydrology</source>, <volume>203</volume>(<issue>1&#x02013;4</issue>), <fpage>198</fpage>&#x02013;<lpage>208</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/S0022-1694(97)00102-9">https://doi.org/10.1016/S0022-1694(97)00102-9</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0037"><mixed-citation publication-type="journal" id="jgrd54513-cit-0038">
+<string-name>
+<surname>Poli</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Hersbach</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Dee</surname>, <given-names>D. P.</given-names>
+</string-name>, <string-name>
+<surname>Berrisford</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Simmons</surname>, <given-names>A. J.</given-names>
+</string-name>, <string-name>
+<surname>Vitart</surname>, <given-names>F.</given-names>
+</string-name>, et al. (<year>2016</year>). <article-title>ERA&#x02010;20C: An atmospheric reanalysis of the twentieth century</article-title>. <source xml:lang="en">Journal of Climate</source>, <volume>29</volume>(<issue>11</issue>), <fpage>4083</fpage>&#x02013;<lpage>4097</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/JCLI-D-15-0556.1">https://doi.org/10.1175/JCLI-D-15-0556.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0038"><mixed-citation publication-type="journal" id="jgrd54513-cit-0039">
+<string-name>
+<surname>Quiring</surname>, <given-names>S. M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Papakryiakou</surname>, <given-names>T. N.</given-names>
+</string-name> (<year>2003</year>). <article-title>An evaluation of agricultural drought indices for the Canadian prairies</article-title>. <source xml:lang="en">Agricultural and Forest Meteorology</source>, <volume>118</volume>(<issue>1&#x02010;2</issue>), <fpage>49</fpage>&#x02013;<lpage>62</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/S0168-1923(03)00072-8">https://doi.org/10.1016/S0168-1923(03)00072-8</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0039"><mixed-citation publication-type="journal" id="jgrd54513-cit-0040">
+<string-name>
+<surname>Schneider</surname>, <given-names>U.</given-names>
+</string-name>, <string-name>
+<surname>Becker</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Finger</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Meyer&#x02010;Christoffer</surname>, <given-names>A.</given-names>
+</string-name>, <string-name>
+<surname>Ziese</surname>, <given-names>M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Rudolf</surname>, <given-names>B.</given-names>
+</string-name> (<year>2014</year>). <article-title>GPCC's new land surface precipitation climatology based on quality&#x02010;controlled in situ data and its role in quantifying the global water cycle</article-title>. <source xml:lang="en">Theoretical and Applied Climatology</source>, <volume>115</volume>(<issue>1&#x02013;2</issue>), <fpage>15</fpage>&#x02013;<lpage>40</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s00704-013-0860-x">https://doi.org/10.1007/s00704-013-0860-x</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0040"><mixed-citation publication-type="journal" id="jgrd54513-cit-0041">
+<string-name>
+<surname>Schubert</surname>, <given-names>S. D.</given-names>
+</string-name>, <string-name>
+<surname>Stewart</surname>, <given-names>R. E.</given-names>
+</string-name>, <string-name>
+<surname>Wang</surname>, <given-names>H.</given-names>
+</string-name>, <string-name>
+<surname>Barlow</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Berbery</surname>, <given-names>E. H.</given-names>
+</string-name>, <string-name>
+<surname>Cai</surname>, <given-names>W.</given-names>
+</string-name>, et al. (<year>2016</year>). <article-title>Global meteorological drought: A synthesis of current understanding with a focus on SST drivers of precipitation deficits</article-title>. <source xml:lang="en">Journal of Climate</source>, <volume>29</volume>(<issue>11</issue>), <fpage>3989</fpage>&#x02013;<lpage>4019</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/JCLI-D-15-0452.1">https://doi.org/10.1175/JCLI-D-15-0452.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0041"><mixed-citation publication-type="journal" id="jgrd54513-cit-0042">
+<string-name>
+<surname>Seneviratne</surname>, <given-names>S. I.</given-names>
+</string-name>, <string-name>
+<surname>Corti</surname>, <given-names>T.</given-names>
+</string-name>, <string-name>
+<surname>Davin</surname>, <given-names>E. L.</given-names>
+</string-name>, <string-name>
+<surname>Hirschi</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Jaeger</surname>, <given-names>E. B.</given-names>
+</string-name>, <string-name>
+<surname>Lehner</surname>, <given-names>I.</given-names>
+</string-name>, et al. (<year>2010</year>). <article-title>Investigating soil moisture&#x02013;climate interactions in a changing climate: A review</article-title>. <source xml:lang="en">Earth&#x02010;Science Reviews</source>, <volume>99</volume>(<issue>3&#x02013;4</issue>), <fpage>125</fpage>&#x02013;<lpage>161</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.earscirev.2010.02.004">https://doi.org/10.1016/j.earscirev.2010.02.004</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0042"><mixed-citation publication-type="book" id="jgrd54513-cit-0043">
+<string-name>
+<surname>Sericola</surname>, <given-names>B.</given-names>
+</string-name> (<year>2013</year>). <chapter-title>Discrete&#x02010;time Markov chains</chapter-title> In <source xml:lang="en">Markov chains: Theory and applications</source> (pp. <fpage>76</fpage>&#x02013;<lpage>87</lpage>). <publisher-loc>London, Great Britain</publisher-loc>: <publisher-name>ISTE Ltd and John Wiley</publisher-name>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/9781118731543.ch1">https://doi.org/10.1002/9781118731543.ch1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0043"><mixed-citation publication-type="journal" id="jgrd54513-cit-0044">
+<string-name>
+<surname>Shanahan</surname>, <given-names>T. M.</given-names>
+</string-name>, <string-name>
+<surname>Overpeck</surname>, <given-names>J. T.</given-names>
+</string-name>, <string-name>
+<surname>Anchukaitis</surname>, <given-names>K. J.</given-names>
+</string-name>, <string-name>
+<surname>Beck</surname>, <given-names>J. W.</given-names>
+</string-name>, <string-name>
+<surname>Cole</surname>, <given-names>J. E.</given-names>
+</string-name>, <string-name>
+<surname>Dettman</surname>, <given-names>D. L.</given-names>
+</string-name>, et al. (<year>2009</year>). <article-title>Atlantic forcing of persistent drought in West Africa</article-title>. <source xml:lang="en">Science</source>, <volume>324</volume>(<issue>5925</issue>), <fpage>377</fpage>&#x02013;<lpage>380</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1126/science.1166352">https://doi.org/10.1126/science.1166352</ext-link>
+<pub-id pub-id-type="pmid">19372429</pub-id></mixed-citation></ref><ref id="jgrd54513-bib-0044"><mixed-citation publication-type="journal" id="jgrd54513-cit-0045">
+<string-name>
+<surname>Sharma</surname>, <given-names>T. C.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Panu</surname>, <given-names>U. S.</given-names>
+</string-name> (<year>2014</year>). <article-title>Modeling of hydrological drought durations and magnitudes: Experiences on Canadian streamflows</article-title>. <source xml:lang="en">Journal of Hydrology: Regional Studies</source>, <volume>1</volume>, <fpage>92</fpage>&#x02013;<lpage>106</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1016/j.ejrh.2014.06.006">https://doi.org/10.1016/j.ejrh.2014.06.006</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0045"><mixed-citation publication-type="journal" id="jgrd54513-cit-0046">
+<string-name>
+<surname>Stagge</surname>, <given-names>J. H.</given-names>
+</string-name>, <string-name>
+<surname>Tallaksen</surname>, <given-names>L. M.</given-names>
+</string-name>, <string-name>
+<surname>Gudmundsson</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Van Loon</surname>, <given-names>A. F.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Stahl</surname>, <given-names>K.</given-names>
+</string-name> (<year>2015</year>). <article-title>Candidate distributions for climatological drought indices (SPI and SPEI)</article-title>. <source xml:lang="en">International Journal of Climatology</source>, <volume>35</volume>(<issue>13</issue>), <fpage>4027</fpage>&#x02013;<lpage>4040</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/joc.4267">https://doi.org/10.1002/joc.4267</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0046"><mixed-citation publication-type="journal" id="jgrd54513-cit-0047">
+<string-name>
+<surname>Steinemann</surname>, <given-names>A.</given-names>
+</string-name> (<year>2014</year>). <article-title>Drought information for improving preparedness in the Western States</article-title>. <source xml:lang="en">Bulletin of the American Meteorological Society</source>, <volume>95</volume>(<issue>6</issue>), <fpage>843</fpage>&#x02013;<lpage>847</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/BAMS-D-13-00067.1">https://doi.org/10.1175/BAMS-D-13-00067.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0047"><mixed-citation publication-type="journal" id="jgrd54513-cit-0048">
+<string-name>
+<surname>Stine</surname>, <given-names>S.</given-names>
+</string-name> (<year>1994</year>). <article-title>Extreme and persistent drought in California and Patagonia during mediaeval time</article-title>. <source xml:lang="en">Nature</source>, <volume>369</volume>, <fpage>546</fpage>&#x02013;<lpage>549</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/369546a0">https://doi.org/10.1038/369546a0</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0048"><mixed-citation publication-type="book" id="jgrd54513-cit-0049">
+<string-name>
+<surname>Tallaksen</surname>, <given-names>L. M.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>van Lanen</surname>, <given-names>H. A. J.</given-names>
+</string-name> (<year>2004</year>). <source xml:lang="en">Hydrological drought: Processes and estimation methods for streamflow and groundwater</source>. <publisher-loc>Amsterdam, Netherlands</publisher-loc>: <publisher-name>Elsevier</publisher-name>.</mixed-citation></ref><ref id="jgrd54513-bib-0049"><mixed-citation publication-type="journal" id="jgrd54513-cit-0050">
+<string-name>
+<surname>Tanarhte</surname>, <given-names>M.</given-names>
+</string-name>, <string-name>
+<surname>Hadjinicolaou</surname>, <given-names>P.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Lelieveld</surname>, <given-names>J.</given-names>
+</string-name> (<year>2012</year>). <article-title>Intercomparison of temperature and precipitation data sets based on observations in the Mediterranean and the Middle East: Precipitation and temperature data sets</article-title>. <source xml:lang="en">Journal of Geophysical Research</source>, <volume>117</volume>, <elocation-id>D12102</elocation-id>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/2011JD017293">https://doi.org/10.1029/2011JD017293</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0050"><mixed-citation publication-type="journal" id="jgrd54513-cit-0051">
+<string-name>
+<surname>Tatli</surname>, <given-names>H.</given-names>
+</string-name> (<year>2015</year>). <article-title>Detecting persistence of meteorological drought via the Hurst exponent</article-title>. <source xml:lang="en">Meteorological Applications</source>, <volume>22</volume>(<issue>4</issue>), <fpage>763</fpage>&#x02013;<lpage>769</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/met.1519">https://doi.org/10.1002/met.1519</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0051"><mixed-citation publication-type="journal" id="jgrd54513-cit-0052">
+<string-name>
+<surname>Taylor</surname>, <given-names>K. E.</given-names>
+</string-name>, <string-name>
+<surname>Stouffer</surname>, <given-names>R. J.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Meehl</surname>, <given-names>G. A.</given-names>
+</string-name> (<year>2012</year>). <article-title>An overview of CMIP5 and the experiment design</article-title>. <source xml:lang="en">Bulletin of the American Meteorological Society</source>, <volume>93</volume>(<issue>4</issue>), <fpage>485</fpage>&#x02013;<lpage>498</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/BAMS-D-11-00094.1">https://doi.org/10.1175/BAMS-D-11-00094.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0052"><mixed-citation publication-type="journal" id="jgrd54513-cit-0053">
+<string-name>
+<surname>Taylor</surname>, <given-names>C. M.</given-names>
+</string-name>, <string-name>
+<surname>de Jeu</surname>, <given-names>R. A. M.</given-names>
+</string-name>, <string-name>
+<surname>Guichard</surname>, <given-names>F.</given-names>
+</string-name>, <string-name>
+<surname>Harris</surname>, <given-names>P. P.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Dorigo</surname>, <given-names>W. A.</given-names>
+</string-name> (<year>2012</year>). <article-title>Afternoon rain more likely over drier soils</article-title>. <source xml:lang="en">Nature</source>, <volume>489</volume>(<issue>7416</issue>), <fpage>423</fpage>&#x02013;<lpage>426</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1038/nature11377">https://doi.org/10.1038/nature11377</ext-link>
+<pub-id pub-id-type="pmid">22972193</pub-id></mixed-citation></ref><ref id="jgrd54513-bib-0053"><mixed-citation publication-type="journal" id="jgrd54513-cit-0054">
+<string-name>
+<surname>Taylor</surname>, <given-names>I. H.</given-names>
+</string-name>, <string-name>
+<surname>Burke</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>McColl</surname>, <given-names>L.</given-names>
+</string-name>, <string-name>
+<surname>Falloon</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Harris</surname>, <given-names>G. R.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>McNeall</surname>, <given-names>D.</given-names>
+</string-name> (<year>2012</year>). <article-title>Contributions to uncertainty in projections of future drought under climate change scenarios</article-title>. <source xml:lang="en">Hydrology and Earth System Sciences Discussions</source>, <volume>9</volume>(<issue>11</issue>), <fpage>12,613</fpage>&#x02013;<lpage>12,653</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.5194/hessd-9-12613-2012">https://doi.org/10.5194/hessd-9-12613-2012</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0027"><mixed-citation publication-type="journal" id="jgrd54513-cit-0028">
+<string-name>
+<surname>Van Loon</surname>, <given-names>A. F.</given-names>
+</string-name> (<year>2015</year>). <article-title>Hydrological drought explained: Hydrological drought explained</article-title>. <source xml:lang="en">Wiley Interdisciplinary Reviews: Water</source>, <volume>2</volume>(<issue>4</issue>), <fpage>359</fpage>&#x02013;<lpage>392</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1002/wat2.1085">https://doi.org/10.1002/wat2.1085</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0054"><mixed-citation publication-type="journal" id="jgrd54513-cit-0055">
+<string-name>
+<surname>Vicente&#x02010;Serrano</surname>, <given-names>S. M.</given-names>
+</string-name>, <string-name>
+<surname>Beguer&#x000ed;a</surname>, <given-names>S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>L&#x000f3;pez&#x02010;Moreno</surname>, <given-names>J. I.</given-names>
+</string-name> (<year>2009</year>). <article-title>A multiscalar drought index sensitive to global warming: The standardized precipitation evapotranspiration index</article-title>. <source xml:lang="en">Journal of Climate</source>, <volume>23</volume>(<issue>7</issue>), <fpage>1696</fpage>&#x02013;<lpage>1718</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1175/2009JCLI2909.1">https://doi.org/10.1175/2009JCLI2909.1</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0055"><mixed-citation publication-type="journal" id="jgrd54513-cit-0056">
+<string-name>
+<surname>Wetter</surname>, <given-names>O.</given-names>
+</string-name>, <string-name>
+<surname>Pfister</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Werner</surname>, <given-names>J. P.</given-names>
+</string-name>, <string-name>
+<surname>Zorita</surname>, <given-names>E.</given-names>
+</string-name>, <string-name>
+<surname>Wagner</surname>, <given-names>S.</given-names>
+</string-name>, <string-name>
+<surname>Seneviratne</surname>, <given-names>S. I.</given-names>
+</string-name>, et al. (<year>2014</year>). <article-title>The year&#x02010;long unprecedented European heat and drought of 1540&#x02014;A worst case</article-title>. <source xml:lang="en">Climatic Change</source>, <volume>125</volume>(<issue>3&#x02013;4</issue>), <fpage>349</fpage>&#x02013;<lpage>363</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1007/s10584-014-1184-2">https://doi.org/10.1007/s10584-014-1184-2</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0056"><mixed-citation publication-type="journal" id="jgrd54513-cit-0057">
+<string-name>
+<surname>Wilby</surname>, <given-names>R. L.</given-names>
+</string-name>, <string-name>
+<surname>Prudhomme</surname>, <given-names>C.</given-names>
+</string-name>, <string-name>
+<surname>Parry</surname>, <given-names>S.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Muchan</surname>, <given-names>K. G. L.</given-names>
+</string-name> (<year>2015</year>). <article-title>Persistence of hydrometeorological droughts in the United Kingdom: A regional analysis of multi&#x02010;season rainfall and river flow anomalies</article-title>. <source xml:lang="en">Journal of Extreme Events</source>, <volume>02</volume>(<issue>02</issue>), <elocation-id>1550006</elocation-id>
+<ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1142/S2345737615500062">https://doi.org/10.1142/S2345737615500062</ext-link>
+</mixed-citation></ref><ref id="jgrd54513-bib-0057"><mixed-citation publication-type="journal" id="jgrd54513-cit-0058">
+<string-name>
+<surname>Xie</surname>, <given-names>P.</given-names>
+</string-name>, <string-name>
+<surname>Rudolf</surname>, <given-names>B.</given-names>
+</string-name>, <string-name>
+<surname>Schneider</surname>, <given-names>U.</given-names>
+</string-name>, &#x00026; <string-name>
+<surname>Arkin</surname>, <given-names>P. A.</given-names>
+</string-name> (<year>1996</year>). <article-title>Gauge&#x02010;based monthly analysis of global land precipitation from 1971 to 1994</article-title>. <source xml:lang="en">Journal of Geophysical Research</source>, <volume>101</volume>(<issue>D14</issue>), <fpage>19,023</fpage>&#x02013;<lpage>19,034</lpage>. <ext-link ext-link-type="uri" xlink:href="https://doi.org/10.1029/96JD01553">https://doi.org/10.1029/96JD01553</ext-link>
+</mixed-citation></ref></ref-list></back></article>

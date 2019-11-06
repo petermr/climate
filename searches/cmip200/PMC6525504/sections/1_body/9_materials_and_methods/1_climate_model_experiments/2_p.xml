@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">For each country, we create 21 counterfactual historical temperature timeseries 
+ <italic class="italic">T</italic>
+ <sub class="sub">
+  <italic class="italic">NoAnthro</italic>
+ </sub>, which remove the influence of anthropogenic forcing simulated by each of the 21 climate models. Our approach to creating the counterfactual timeseries follows the widely applied “delta method” of climate model bias correction, in which the model-simulated change in the mean is applied to the observed timeseries. For each country 
+ <italic class="italic">c</italic>, we first calculate the observed country-level population-weighted mean annual temperature timeseries 
+ <italic class="italic">T</italic>
+ <sub class="sub">
+  <italic class="italic">Obs</italic>
+ </sub> for the 1961–2010 time period covered by the socioeconomic data, following Burke et al. (
+ <xref rid="r14" ref-type="bibr" class="xref">14</xref>). Then, for each country 
+ <italic class="italic">c</italic> and climate model 
+ <italic class="italic">m</italic>, we calculate the difference in country-level population-weighted mean temperature between the Historical and Natural CMIP5 simulations, both for the 20-y period centered on the beginning of the socioeconomic data (1951–1970), and for the 20-y historical baseline period used by the IPCC (1986–2005). We then linearize the difference between the Historical and Natural simulations over the 1961–2010 period, such that the difference in 1961 is equal to the difference in the Historical and Natural means during the 20-y period centered on 1961 (1951–1970), and the difference in 2010 is equal to the difference in the Historical and Natural means during the IPCC’s 20-y baseline period (1986–2005). Finally, for each year 
+ <italic class="italic">t</italic> in the 1961–2010 observed temperature timeseries, we add the linearized 
+ <italic class="italic">Natural</italic> minus 
+ <italic class="italic">Historical</italic> difference ∆
+ <italic class="italic">T</italic> for that year:
+ <disp-formula id="uneq1" class="disp-formula">
+  <math id="me1" class="math">
+   <mrow class="mrow">
+    <msub class="msub">
+     <mi class="mi">T</mi>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">NoAnthro</mi>
+     </mrow>
+    </msub>
+    <mrow class="mrow">
+     <mo class="mo">[</mo>
+     <mi class="mi">t</mi>
+     <mo class="mo">]</mo>
+    </mrow>
+    <mo class="mo">=</mo>
+    <msub class="msub">
+     <mi class="mi">T</mi>
+     <mrow class="mrow">
+      <mi mathvariant="italic" class="mi">Obs</mi>
+     </mrow>
+    </msub>
+    <mrow class="mrow">
+     <mo class="mo">[</mo>
+     <mi class="mi">t</mi>
+     <mo class="mo">]</mo>
+    </mrow>
+    <mo class="mo">+</mo>
+    <mi mathvariant="normal" class="mi">Δ</mi>
+    <mi class="mi">T</mi>
+    <mrow class="mrow">
+     <mo class="mo">[</mo>
+     <mi class="mi">t</mi>
+     <mo class="mo">]</mo>
+    </mrow>
+    <mo class="mo">.</mo>
+   </mrow>
+  </math>
+ </disp-formula>
+</p>

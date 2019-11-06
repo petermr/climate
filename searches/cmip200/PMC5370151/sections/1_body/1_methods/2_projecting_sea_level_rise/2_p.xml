@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Following a Bayesian approach (as described in detail in [
+ <xref rid="pone.0174666.ref035" ref-type="bibr" class="xref">35</xref>]), we fit the model to global sea-level anomalies with respect to the average sea level in 2000 [
+ <xref rid="pone.0174666.ref032" ref-type="bibr" class="xref">32</xref>] using a Markov chain Monte Carlo method accounting for interdependent (autocorrelated) residuals and time-varying (heteroskedastic) observation error [
+ <xref rid="pone.0174666.ref036" ref-type="bibr" class="xref">36</xref>–
+ <xref rid="pone.0174666.ref038" ref-type="bibr" class="xref">38</xref>]. Using this method, we approximate the noisy observations 
+ <italic class="italic">y</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub> as the sum of the semi-empirical model simulations 
+ <italic class="italic">H</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub>, residuals 
+ <italic class="italic">R</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub> (i.e., approximating the effects of unresolved internal variability and model error), and observation errors 
+ <italic class="italic">ϵ</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub>, 
+ <disp-formula id="pone.0174666.e002" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0174666.e002.jpg" id="pone.0174666.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M2" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">y</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">=</mo>
+        <msub class="msub">
+         <mi class="mi">H</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">R</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">ϵ</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(2)</label>
+ </disp-formula>
+ <disp-formula id="pone.0174666.e003" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0174666.e003.jpg" id="pone.0174666.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M3" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">R</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">=</mo>
+        <mi class="mi">ρ</mi>
+        <mo class="mo">×</mo>
+        <msub class="msub">
+         <mi class="mi">R</mi>
+         <mrow class="mrow">
+          <mi class="mi">t</mi>
+          <mo class="mo">-</mo>
+          <mn class="mn">1</mn>
+         </mrow>
+        </msub>
+        <mo class="mo">+</mo>
+        <msub class="msub">
+         <mi class="mi">δ</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(3)</label>
+ </disp-formula>
+ <disp-formula id="pone.0174666.e004" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0174666.e004.jpg" id="pone.0174666.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M4" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">R</mi>
+         <mn class="mn">1</mn>
+        </msub>
+        <mo class="mo">∼</mo>
+        <mi class="mi">N</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">0</mn>
+         <mo class="mo">,</mo>
+         <mfrac class="mfrac">
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mrow class="mrow">
+            <mi class="mi">A</mi>
+            <mi class="mi">R</mi>
+            <mn class="mn">1</mn>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+          <mrow class="mrow">
+           <mn class="mn">1</mn>
+           <mo class="mo">-</mo>
+           <msup class="msup">
+            <mi class="mi">ρ</mi>
+            <mn class="mn">2</mn>
+           </msup>
+          </mrow>
+         </mfrac>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">,</mo>
+        <msub class="msub">
+         <mi class="mi">δ</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">∼</mo>
+        <mi class="mi">N</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">0</mn>
+         <mo class="mo">,</mo>
+         <msubsup class="msubsup">
+          <mi class="mi">σ</mi>
+          <mrow class="mrow">
+           <mi class="mi">A</mi>
+           <mi class="mi">R</mi>
+           <mn class="mn">1</mn>
+          </mrow>
+          <mn class="mn">2</mn>
+         </msubsup>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">,</mo>
+        <msub class="msub">
+         <mi class="mi">ϵ</mi>
+         <mi class="mi">t</mi>
+        </msub>
+        <mo class="mo">∼</mo>
+        <mi class="mi">N</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mn class="mn">0</mn>
+         <mo class="mo">,</mo>
+         <msubsup class="msubsup">
+          <mi class="mi">σ</mi>
+          <mrow class="mrow">
+           <mi class="mi">ϵ</mi>
+           <mo class="mo">,</mo>
+           <mi class="mi">t</mi>
+          </mrow>
+          <mn class="mn">2</mn>
+         </msubsup>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(4)</label>
+ </disp-formula> where 
+ <italic class="italic">R</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub> is a stationary first-order autoregressive process. It is characterized by an annual autoregression coefficient 
+ <italic class="italic">ρ</italic> and a white noise process 
+ <italic class="italic">δ</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub> with zero mean and constant variance 
+ <inline-formula id="pone.0174666.e005" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0174666.e005.jpg" id="pone.0174666.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M5" class="math">
+    <msubsup class="msubsup">
+     <mi class="mi">σ</mi>
+     <mrow class="mrow">
+      <mi class="mi">A</mi>
+      <mi class="mi">R</mi>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mn class="mn">2</mn>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula>. 
+ <italic class="italic">ϵ</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub> represents the observation errors (also known as measurement errors) with time-varying known variance 
+ <inline-formula id="pone.0174666.e006" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0174666.e006.jpg" id="pone.0174666.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M6" class="math">
+    <msubsup class="msubsup">
+     <mi class="mi">σ</mi>
+     <mrow class="mrow">
+      <mi class="mi">ϵ</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">t</mi>
+     </mrow>
+     <mn class="mn">2</mn>
+    </msubsup>
+   </math>
+  </alternatives>
+ </inline-formula>. We estimate the posterior density of the model parameters (
+ <italic class="italic">α</italic>, 
+ <italic class="italic">T</italic>
+ <sub class="sub">0</sub>, and 
+ <italic class="italic">H</italic>
+ <sub class="sub">0</sub>) and the statistical parameters (
+ <italic class="italic">ρ</italic> and 
+ <italic class="italic">σ</italic>
+ <sub class="sub">
+  <italic class="italic">AR</italic>1
+ </sub>) with uniform prior distributions using the Markov chain Monte Carlo method and the Metropolis Hastings algorithm [
+ <xref rid="pone.0174666.ref037" ref-type="bibr" class="xref">37</xref>–
+ <xref rid="pone.0174666.ref040" ref-type="bibr" class="xref">40</xref>]. In this method, the likelihood function incorporates the variance of the autocorrelation process (accounting for the autocorrelated structure of the residuals) and the heteroskedastic observation error. We choose this implementation process because ignoring known observational properties (i.e., accounting for autocorrelated residuals and heteroskedastic errors) could lead to overconfident projections [
+ <xref rid="pone.0174666.ref035" ref-type="bibr" class="xref">35</xref>]. The observation errors are set as the reported measurement error values [
+ <xref rid="pone.0174666.ref032" ref-type="bibr" class="xref">32</xref>]. We use 2.5 × 10
+ <sup class="sup">7</sup> iterations. We assess convergence using visual inspection and the potential scale reduction factor [
+ <xref rid="pone.0174666.ref041" ref-type="bibr" class="xref">41</xref>], remove a 1% initial “burn-in” from the Markov chains, and thin the chains to subsets of 2 × 10
+ <sup class="sup">4</sup> for the analysis [
+ <xref rid="pone.0174666.ref038" ref-type="bibr" class="xref">38</xref>].
+</p>

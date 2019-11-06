@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par45" class="p">To obtain the likelihood function for the observations 
+ <bold class="bold">y</bold> we assume that the random variable 
+ <bold class="bold">Y</bold> describing the historical climate and model SIE output is independent between the models, and real climate, given the present-day modeled and observed SIE mean 
+ <bold class="bold">μ</bold>. This is justified as internal variability in climate models and observations is known to be random. Under such assumption the likelihood function can be decomposed as
+ <disp-formula id="Equ16" class="disp-formula">
+  <label class="label">16</label>
+  <alternatives class="alternatives">
+   <tex-math id="M105" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{l}} {p({\bf{Y}}|{\mathbf{\upmu}} )} \hfill &amp; = \hfill &amp; {p\left( {{\bf{y}}_{\mathrm{o}},{\bf{y}}_1,{\bf{y}}_2, \ldots ,{\bf{y}}_n|\mu _{\mathrm{o}},\mu _1,\mu _2, \ldots ,\mu _n} \right)} \hfill \\ {} \hfill &amp; = \hfill &amp; {p({\bf{y}}_{\mathrm{o}}|\mu _{\mathrm{o}},\mu _1,\mu_2, \ldots ,\mu _n) \times \mathop {\prod}\limits_{i = 1}^n {p\left( {{\mathbf{y}}_i|\mu _{\mathrm{o}},\mu _1,\mu _2, \ldots ,\mu _n} \right)} } \hfill \\ {} \hfill &amp; = \hfill &amp; {p({\bf{y}}_{\mathrm{o}}|\mu _{\mathrm{o}}) \times \mathop {\prod}\limits_{i = 1}^n {p({\bf{y}}_i|\mu _i)} } \hfill \\ {} \hfill &amp; = \hfill &amp; {p\left( {{\bf{y}}_{\mathrm{o}}|\mu _{\mathrm{o}},\hat k_{\mathrm{o}},{\hat {\sigma}} _{\mathrm{o}},\hat \rho _{\mathrm{o}}} \right) \times \mathop {\prod}\limits_{i = 1}^{n} {p\left( {{\bf{y}}_i| \mu _i,\hat k_{i} , {\hat {\sigma}} _{i} ,{\hat {\rho}} _{i}} \right)} .} \hfill \end{array}$$\end{document}</tex-math>
+   <math id="M106" class="math">
+    <mtable class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd">
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="bold" class="mi">Y </mi>
+         <mo class="mo">∣</mo>
+         <mi class="mi">𝛍</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">=</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mi class="mi">p</mi>
+       <mfenced close=")" open="(" separators="" class="mfenced">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">1</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <mo class="mo">…</mo>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">n</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">1</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <mo class="mo">…</mo>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">n</mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </mfenced>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd"/>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">=</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">1</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <mo class="mo">…</mo>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">n</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mo class="mo">×</mo>
+       <munderover accent="false" accentunder="false" class="munderover">
+        <mrow class="mrow">
+         <mo class="mo">∏</mo>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">n</mi>
+        </mrow>
+       </munderover>
+       <mi class="mi">p</mi>
+       <mfenced close=")" open="(" separators="" class="mfenced">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">1</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mn class="mn">2</mn>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <mo class="mo">…</mo>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">n</mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </mfenced>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd"/>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">=</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+       <mo class="mo">×</mo>
+       <munderover accent="false" accentunder="false" class="munderover">
+        <mrow class="mrow">
+         <mo class="mo">∏</mo>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">n</mi>
+        </mrow>
+       </munderover>
+       <mi class="mi">p</mi>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+     <mtr class="mtr">
+      <mtd columnalign="left" class="mtd"/>
+      <mtd columnalign="left" class="mtd">
+       <mo class="mo">=</mo>
+      </mtd>
+      <mtd columnalign="left" class="mtd">
+       <mi class="mi">p</mi>
+       <mfenced close=")" open="(" separators="" class="mfenced">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mover accent="true" class="mover">
+            <mrow class="mrow">
+             <mi class="mi">k</mi>
+            </mrow>
+            <mo class="mo">^</mo>
+           </mover>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mover accent="true" class="mover">
+            <mrow class="mrow">
+             <mi class="mi">σ</mi>
+            </mrow>
+            <mo class="mo">^</mo>
+           </mover>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mover accent="true" class="mover">
+            <mrow class="mrow">
+             <mi class="mi">ρ</mi>
+            </mrow>
+            <mo class="mo">^</mo>
+           </mover>
+          </mrow>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">o</mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </mfenced>
+       <mo class="mo">×</mo>
+       <munderover accent="false" accentunder="false" class="munderover">
+        <mrow class="mrow">
+         <mo class="mo">∏</mo>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">n</mi>
+        </mrow>
+       </munderover>
+       <mi class="mi">p</mi>
+       <mfenced close=")" open="(" separators="" class="mfenced">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi mathvariant="bold" class="mi">y</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">∣</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">μ</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mover accent="true" class="mover">
+            <mrow class="mrow">
+             <mi class="mi">k</mi>
+            </mrow>
+            <mo class="mo">^</mo>
+           </mover>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mover accent="true" class="mover">
+            <mrow class="mrow">
+             <mi class="mi">σ</mi>
+            </mrow>
+            <mo class="mo">^</mo>
+           </mover>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <msub class="msub">
+          <mrow class="mrow">
+           <mover accent="true" class="mover">
+            <mrow class="mrow">
+             <mi class="mi">ρ</mi>
+            </mrow>
+            <mo class="mo">^</mo>
+           </mover>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </mfenced>
+       <mo class="mo">.</mo>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41467_2019_10561_Article_Equ16.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Pressure, gravity, density, and vertical shear stress are denoted 
+ <italic class="italic">p</italic>, 
+ <italic class="italic">g</italic>, 
+ <italic class="italic">ρ</italic>, and 
+ <italic class="italic">τ</italic>, respectively, with 
+ <italic class="italic">ρ</italic>
+ <sub class="sub">0</sub> the reference density; the three‐dimensional velocity field 
+ <bold class="bold">v</bold> = (u, v, w ) = (
+ <bold class="bold">u</bold>, w); the gradient 
+ <italic class="italic">∇</italic> = (
+ <italic class="italic">∇</italic>
+ <sub class="sub">
+  <italic class="italic">h</italic>
+ </sub>, 
+ <italic class="italic">∂</italic>
+ <sub class="sub">
+  <italic class="italic">z</italic>
+ </sub>); the unit vector is denoted 
+ <bold class="bold">k</bold>; planetary vorticity is a function of latitude 
+ <italic class="italic">ϕ</italic> in 
+ <math id="nlm-math-3" class="math">
+  <mi class="mi">f</mi>
+  <mspace width="0.1em" class="mspace"/>
+  <mi mathvariant="bold" class="mi">k</mi>
+  <mo class="mo">=</mo>
+  <mo stretchy="false" class="mo">(</mo>
+  <mn class="mn">0</mn>
+  <mo class="mo">,</mo>
+  <mn class="mn">0</mn>
+  <mo class="mo">,</mo>
+  <mn class="mn">2</mn>
+  <mspace width="0.1em" class="mspace"/>
+  <mi mathvariant="normal" class="mi">Ω</mi>
+  <mi class="mi">sin</mi>
+  <mi class="mi">ϕ</mi>
+  <mo stretchy="false" class="mo">)</mo>
+ </math>; the viscous forcing by vertical shear is denoted 
+ <italic class="italic">∂</italic>
+ <sub class="sub">
+  <italic class="italic">z</italic>
+ </sub>
+ <italic class="italic">τ</italic>; the nonlinear torque is 
+ <bold class="bold">a</bold>, and the horizontal viscous forcing 
+ <bold class="bold">b</bold> includes subgrid‐scale parameterizations. Assuming a steady state, the vertical integral from the surface 
+ <italic class="italic">z</italic> = 
+ <italic class="italic">η</italic>(
+ <italic class="italic">x</italic>,
+ <italic class="italic">y</italic>,
+ <italic class="italic">t</italic>) to the water depth below the surface 
+ <italic class="italic">z</italic> = 
+ <italic class="italic">H</italic>(
+ <italic class="italic">x</italic>,
+ <italic class="italic">y</italic>) is 
+ <disp-formula id="ess2278-disp-0003" class="disp-formula">
+  <label class="label">(3)</label>
+  <math id="nlm-math-4" class="math">
+   <mi class="mi">β</mi>
+   <mi class="mi">V</mi>
+   <mo class="mo">=</mo>
+   <mfrac class="mfrac">
+    <mn class="mn">1</mn>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">ρ</mi>
+      <mn class="mn">0</mn>
+     </msub>
+    </mrow>
+   </mfrac>
+   <mi class="mi">∇</mi>
+   <msub class="msub">
+    <mi class="mi">p</mi>
+    <mi class="mi">b</mi>
+   </msub>
+   <mo class="mo">×</mo>
+   <mi class="mi">∇</mi>
+   <mi class="mi">H</mi>
+   <mo class="mo">+</mo>
+   <mfrac class="mfrac">
+    <mn class="mn">1</mn>
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">ρ</mi>
+      <mn class="mn">0</mn>
+     </msub>
+    </mrow>
+   </mfrac>
+   <mi class="mi">∇</mi>
+   <mo class="mo">×</mo>
+   <mi class="mi">𝛕</mi>
+   <mo class="mo">+</mo>
+   <mi class="mi">∇</mi>
+   <mo class="mo">×</mo>
+   <mi mathvariant="bold" class="mi">A</mi>
+   <mo class="mo">+</mo>
+   <mi class="mi">∇</mi>
+   <mo class="mo">×</mo>
+   <mi mathvariant="bold" class="mi">B</mi>
+   <mo class="mo">,</mo>
+  </math>
+ </disp-formula> where 
+ <italic class="italic">∇</italic>·
+ <bold class="bold">U</bold> = 0,
+ <bold class="bold">U</bold>·
+ <italic class="italic">∇f</italic> = 
+ <italic class="italic">βV</italic>, the bottom pressure is denoted 
+ <italic class="italic">p</italic>
+ <sub class="sub">
+  <italic class="italic">b</italic>
+ </sub>, 
+ <math id="nlm-math-5" class="math">
+  <mi mathvariant="bold" class="mi">A</mi>
+  <mo class="mo">=</mo>
+  <msubsup class="msubsup">
+   <mrow class="mrow">
+    <mo class="mo">∫</mo>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">H</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">η</mi>
+   </mrow>
+  </msubsup>
+  <mi mathvariant="bold" class="mi">a</mi>
+  <mi mathvariant="normal" class="mi">d</mi>
+  <mi class="mi">z</mi>
+ </math>, and 
+ <math id="nlm-math-6" class="math">
+  <mi mathvariant="bold" class="mi">B</mi>
+  <mo class="mo">=</mo>
+  <msubsup class="msubsup">
+   <mrow class="mrow">
+    <mo class="mo">∫</mo>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">H</mi>
+   </mrow>
+   <mrow class="mrow">
+    <mi class="mi">η</mi>
+   </mrow>
+  </msubsup>
+  <mi mathvariant="bold" class="mi">b</mi>
+  <mi mathvariant="normal" class="mi">d</mi>
+  <mi class="mi">z</mi>
+ </math>. The curl operator 
+ <italic class="italic">∇</italic>× yields a scalar, representing the vertical component of the operator. The left‐hand side of equation 
+ <xref rid="ess2278-disp-0003" ref-type="disp-formula" class="xref">(3)</xref> is the planetary vorticity advection term, while the right‐hand side of equation 
+ <xref rid="ess2278-disp-0003" ref-type="disp-formula" class="xref">(3)</xref> is the bottom pressure torque (BPT), the wind and bottom stress curl, the nonlinear torque, and the viscous torque, respectively. The subgrid‐scale parameterization introduces a torque, which is included in the viscous torque term. Nonlinear torque is composed of three terms: 
+ <disp-formula id="ess2278-disp-0004" class="disp-formula">
+  <label class="label">(4)</label>
+  <math id="nlm-math-7" class="math">
+   <mi class="mi">∇</mi>
+   <mo class="mo">×</mo>
+   <mi mathvariant="bold" class="mi">A</mi>
+   <mo class="mo">=</mo>
+   <mi class="mi">∇</mi>
+   <mo class="mo">×</mo>
+   <mfenced separators="" open="[" close="]" class="mfenced">
+    <mrow class="mrow">
+     <msubsup class="msubsup">
+      <mo class="mo">∫</mo>
+      <mrow class="mrow">
+       <mo class="mo">−</mo>
+       <mi class="mi">H</mi>
+      </mrow>
+      <mi class="mi">η</mi>
+     </msubsup>
+     <mi class="mi">∇</mi>
+     <mo class="mo">·</mo>
+     <mo stretchy="false" class="mo">(</mo>
+     <mi mathvariant="bold" class="mi">u</mi>
+     <mi mathvariant="bold" class="mi">u</mi>
+     <mo stretchy="false" class="mo">)</mo>
+     <mi mathvariant="normal" class="mi">d</mi>
+     <mi class="mi">z</mi>
+    </mrow>
+   </mfenced>
+   <mo class="mo">+</mo>
+   <msubsup class="msubsup">
+    <mrow class="mrow">
+     <mfenced separators="" open="[" close="]" class="mfenced">
+      <mrow class="mrow">
+       <mi class="mi">w</mi>
+       <mi class="mi">ζ</mi>
+      </mrow>
+     </mfenced>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">z</mi>
+     <mo class="mo">=</mo>
+     <mi class="mi">H</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">z</mi>
+     <mo class="mo">=</mo>
+     <mi class="mi">η</mi>
+    </mrow>
+   </msubsup>
+   <mo class="mo">+</mo>
+   <msubsup class="msubsup">
+    <mrow class="mrow">
+     <mfenced separators="" open="[" close="]" class="mfenced">
+      <mrow class="mrow">
+       <mi class="mi">∇</mi>
+       <mi class="mi">w</mi>
+       <mo class="mo">×</mo>
+       <mi mathvariant="bold" class="mi">u</mi>
+      </mrow>
+     </mfenced>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">z</mi>
+     <mo class="mo">=</mo>
+     <mi class="mi">H</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">z</mi>
+     <mo class="mo">=</mo>
+     <mi class="mi">η</mi>
+    </mrow>
+   </msubsup>
+   <mo class="mo">,</mo>
+  </math>
+ </disp-formula> where 
+ <bold class="bold">uu</bold> is a second‐order tensor. The right‐hand side of equation 
+ <xref rid="ess2278-disp-0004" ref-type="disp-formula" class="xref">(4)</xref> represents the curl of the vertically integrated momentum flux divergence, the nonlinear contribution to vortex tube stretching, and the conversion of vertical shear to barotropic vorticity. Horizontal viscous forcing includes that induced by subgrid‐scale parameterizations. Twenty‐year averaged fields of the BV equation are used after a Laplacian smoother is applied, with an effective averaging range of three grid cells.
+</p>

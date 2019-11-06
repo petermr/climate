@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">A common forecasting problem is one of probabilistic multi-model forecasts of a stochastic dynamical system [
+ <xref rid="pone.0214535.ref001" ref-type="bibr" class="xref">1</xref>–
+ <xref rid="pone.0214535.ref018" ref-type="bibr" class="xref">18</xref>]. Sometimes, when a collection of complex dynamical models is used to provide multi-model forecasts, these forecasts are weighted according to model performance compared to observations [
+ <xref rid="pone.0214535.ref001" ref-type="bibr" class="xref">1</xref>,
+ <xref rid="pone.0214535.ref005" ref-type="bibr" class="xref">5</xref>,
+ <xref rid="pone.0214535.ref010" ref-type="bibr" class="xref">10</xref>,
+ <xref rid="pone.0214535.ref019" ref-type="bibr" class="xref">19</xref>–
+ <xref rid="pone.0214535.ref023" ref-type="bibr" class="xref">23</xref>]. The Bayesian approach to this problem assumes that associated with 
+ <italic class="italic">k</italic> dynamical models are 
+ <italic class="italic">k</italic> competing statistical models 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> for vector of observations 
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold>. These statistical models result in a conditional probability density function (pdf) for 
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold> given that 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> is reasonable, 
+ <italic class="italic">p</italic>(
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold>|
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>). Typically, in a multi-model evaluation context, the pdf 
+ <italic class="italic">p</italic>(
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold>|
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>) is a multivariate statistical distribution centered on 
+ <italic class="italic">i</italic>th dynamical model trend 
+ <bold class="bold">
+  <italic class="italic">x</italic>
+ </bold>
+ <sub class="sub">
+  <bold class="bold">
+   <italic class="italic">i</italic>
+  </bold>
+ </sub>. Each model is associated with a prior belief in its adequacy (“prior”) 
+ <italic class="italic">p</italic>(
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>), which can be derived from previous work, or may be more subjective. The posterior probability, or weight, for each model 
+ <italic class="italic">i</italic> given the observations is then found using Bayes theorem [
+ <xref rid="pone.0214535.ref024" ref-type="bibr" class="xref">24</xref>]: 
+ <disp-formula id="pone.0214535.e001" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e001.jpg" id="pone.0214535.e001g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M1" class="math">
+    <mi class="mi">p</mi>
+    <mo class="mo">(</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">M</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">|</mo>
+    <mi mathvariant="bold-italic" class="mi">y</mi>
+    <mo class="mo">)</mo>
+    <mo class="mo">∝</mo>
+    <mi class="mi">p</mi>
+    <mo class="mo">(</mo>
+    <mi mathvariant="bold-italic" class="mi">y</mi>
+    <mo class="mo">|</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">M</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">)</mo>
+    <mi class="mi">p</mi>
+    <mo class="mo">(</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">M</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+  <label class="label">(1)</label>
+ </disp-formula>
+</p>

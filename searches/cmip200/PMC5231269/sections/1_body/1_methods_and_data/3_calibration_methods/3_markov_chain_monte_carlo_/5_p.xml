@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">After specifying the prior parameter distributions (
+ <xref ref-type="supplementary-material" rid="pone.0170052.s006" class="xref">S3 Fig</xref>) and the likelihood function, the MCMC algorithm samples from the posterior distribution [
+ <xref rid="pone.0170052.ref029" ref-type="bibr" class="xref">29</xref>–
+ <xref rid="pone.0170052.ref031" ref-type="bibr" class="xref">31</xref>, 
+ <xref rid="pone.0170052.ref034" ref-type="bibr" class="xref">34</xref>]. We construct the likelihood function, assuming that the observational data 
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold> consists of the model output 
+ <bold class="bold">
+  <italic class="italic">f</italic>
+ </bold>(
+ <bold class="bold">
+  <italic class="italic">θ</italic>
+ </bold>, 
+ <bold class="bold">
+  <italic class="italic">t</italic>
+ </bold>) plus an unknown residual term 
+ <italic class="italic">
+  <bold class="bold">R</bold>
+ </italic> (Eqs 
+ <xref ref-type="disp-formula" rid="pone.0170052.e001" class="xref">1</xref> and 
+ <xref ref-type="disp-formula" rid="pone.0170052.e002" class="xref">2</xref>). The uncertain parameters Θ include both the unknown model parameters 
+ <bold class="bold">
+  <italic class="italic">θ</italic>
+ </bold> and the unknown statistical parameters σ
+ <sup class="sup">2</sup>
+ <sub class="sub">P</sub> and σ
+ <sup class="sup">2</sup>
+ <sub class="sub">I</sub> (
+ <xref ref-type="supplementary-material" rid="pone.0170052.s006" class="xref">S3</xref> and 
+ <xref ref-type="supplementary-material" rid="pone.0170052.s007" class="xref">S4</xref> Figs). To derive the likelihood of the data given the parameters 
+ <italic class="italic">L</italic>(
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold>∣Θ), we find the residuals 
+ <bold class="bold">
+  <italic class="italic">R</italic>
+ </bold> ∼ 
+ <italic class="italic">N</italic>(0, Σ); 
+ <disp-formula id="pone.0170052.e007" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0170052.e007.jpg" id="pone.0170052.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M7" class="math">
+    <mrow class="mrow">
+     <mo class="mo">Σ</mo>
+     <mo class="mo">=</mo>
+     <mi class="mi">V</mi>
+     <mi class="mi">a</mi>
+     <mi class="mi">r</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mi class="mi">R</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+     <mo class="mo">=</mo>
+     <mfenced close=")" open="(" class="mfenced">
+      <mtable class="mtable">
+       <mtr class="mtr">
+        <mtd class="mtd">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mrow class="mrow">
+            <mi class="mi">P</mi>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+          <mo class="mo">+</mo>
+          <msubsup class="msubsup">
+           <mi class="mi">τ</mi>
+           <mrow class="mrow">
+            <mn class="mn">1</mn>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+         </mrow>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+       </mtr>
+       <mtr class="mtr">
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mrow class="mrow">
+            <mi class="mi">P</mi>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+          <mo class="mo">+</mo>
+          <msubsup class="msubsup">
+           <mi class="mi">τ</mi>
+           <mrow class="mrow">
+            <mn class="mn">2</mn>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+         </mrow>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+       </mtr>
+       <mtr class="mtr">
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mrow class="mrow">
+            <mi class="mi">P</mi>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+          <mo class="mo">+</mo>
+          <msubsup class="msubsup">
+           <mi class="mi">τ</mi>
+           <mrow class="mrow">
+            <mn class="mn">3</mn>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+         </mrow>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+       </mtr>
+       <mtr class="mtr">
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mn class="mn">0</mn>
+        </mtd>
+        <mtd class="mtd">
+         <mrow class="mrow">
+          <msubsup class="msubsup">
+           <mi class="mi">σ</mi>
+           <mrow class="mrow">
+            <mi class="mi">I</mi>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+          <mo class="mo">+</mo>
+          <msubsup class="msubsup">
+           <mi class="mi">τ</mi>
+           <mrow class="mrow">
+            <mn class="mn">4</mn>
+           </mrow>
+           <mn class="mn">2</mn>
+          </msubsup>
+         </mrow>
+        </mtd>
+       </mtr>
+      </mtable>
+     </mfenced>
+     <mo class="mo">.</mo>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(4)</label>
+ </disp-formula>
+</p>

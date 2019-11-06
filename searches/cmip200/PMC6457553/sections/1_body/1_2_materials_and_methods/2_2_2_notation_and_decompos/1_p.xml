@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Consider that 
+ <italic class="italic">k</italic> models are available. We postulate that each dynamical model is associated with a statistical model 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> for the observations. 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> can be thought of as a statistical event, which when true indicates that 
+ <italic class="italic">i</italic>th dynamical model is a reasonable representation of real system. 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> consists of two submodels: a trend submodel 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">T</italic>,
+  <italic class="italic">i</italic>
+ </sub> (related to the trend in the system), and a variability submodel 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">V</italic>,
+  <italic class="italic">i</italic>
+ </sub> (modelling internal fluctuations in the system). When 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">T</italic>,
+  <italic class="italic">i</italic>
+ </sub> is true, the 
+ <italic class="italic">i</italic>th dynamical model correctly captures the trend of the system. Likewise, when 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">V</italic>,
+  <italic class="italic">i</italic>
+ </sub> is true, the 
+ <italic class="italic">i</italic>th dynamical model correctly captures the variability of the system. Alternatively, we can consider the model for anomalies scaled by the mean (
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">V0</italic>,
+  <italic class="italic">i</italic>
+ </sub>). Each model produces time series output of a physical quantity during the period when observations are available (“calibration period”), as well as under new forcing conditions, usually associated with future system projections (“projection period”). We are interested in finding the probability distribution of a change of the system mean Δ between a “projection reference period” (typically the same as the calibration period) and the projection period. We denote the raw calibration period model output from the 
+ <italic class="italic">i</italic>th dynamical model by vector 
+ <inline-formula id="pone.0214535.e002" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e002.jpg" id="pone.0214535.e002g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M2" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">'</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <mo class="mo">(</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+      <mo class="mo">,</mo>
+      <mn class="mn">1</mn>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">'</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">,</mo>
+    <mo class="mo">…</mo>
+    <mo class="mo">,</mo>
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+      <mo class="mo">,</mo>
+      <mi class="mi">n</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">'</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">)</mo>
+   </math>
+  </alternatives>
+ </inline-formula> where superscript “
+ <italic class="italic">'</italic>” indicates that the output is raw (un-smoothed), and 
+ <italic class="italic">n</italic> is the length of the record. The model output is a regularly spaced time series. We consider decomposition of the form: 
+ <disp-formula id="pone.0214535.e003" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e003.jpg" id="pone.0214535.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M3" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">'</mi>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <munder class="munder">
+     <mrow class="mrow">
+      <munder accentunder="false" class="munder">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi mathvariant="bold-italic" class="mi">x</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi mathvariant="bold-italic" class="mi">i</mi>
+         </mrow>
+        </msub>
+       </mrow>
+       <mo class="mo">⏟</mo>
+      </munder>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">t</mi>
+      <mi mathvariant="normal" class="mi">r</mi>
+      <mi mathvariant="normal" class="mi">e</mi>
+      <mi mathvariant="normal" class="mi">n</mi>
+      <mi mathvariant="normal" class="mi">d</mi>
+     </mrow>
+    </munder>
+    <mo class="mo">+</mo>
+    <munder class="munder">
+     <mrow class="mrow">
+      <munder accentunder="false" class="munder">
+       <mrow class="mrow">
+        <mi mathvariant="bold-italic" class="mi">Δ</mi>
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi mathvariant="bold-italic" class="mi">x</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi mathvariant="bold-italic" class="mi">i</mi>
+         </mrow>
+        </msub>
+       </mrow>
+       <mo class="mo">⏟</mo>
+      </munder>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">a</mi>
+      <mi mathvariant="normal" class="mi">n</mi>
+      <mi mathvariant="normal" class="mi">o</mi>
+      <mi mathvariant="normal" class="mi">m</mi>
+      <mi mathvariant="normal" class="mi">a</mi>
+      <mi mathvariant="normal" class="mi">l</mi>
+      <mi mathvariant="normal" class="mi">i</mi>
+      <mi mathvariant="normal" class="mi">e</mi>
+      <mi mathvariant="normal" class="mi">s</mi>
+     </mrow>
+    </munder>
+   </math>
+  </alternatives>
+  <label class="label">(2)</label>
+ </disp-formula>
+</p>

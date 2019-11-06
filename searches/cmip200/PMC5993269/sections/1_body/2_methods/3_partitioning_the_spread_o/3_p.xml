@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">where 
+ <italic class="italic">N</italic>
+ <sub class="sub">
+  <italic class="italic">o</italic>
+ </sub> is the number of observation data sets, 5, 
+ <italic class="italic">N</italic>
+ <sub class="sub">
+  <italic class="italic">m</italic>
+ </sub> is the number of models, 13, 
+ <italic class="italic">R</italic>
+ <sub class="sub">
+  <italic class="italic">m</italic>
+ </sub> is the number of ensemble members available for each model 
+ <italic class="italic">m</italic>, minimum 3 to maximum 10 (Table 
+ <xref rid="jgrd54513-tbl-0001" ref-type="table-wrap" class="xref">1</xref>), and 
+ <italic class="italic">N</italic>
+ <sub class="sub">
+  <italic class="italic">b</italic>
+ </sub> is the number of bootstrapped samples per observation or model, 1000. We introduce the correction factor (cf) defined as 
+ <disp-formula id="jgrd54513-disp-0003" class="disp-formula">
+  <label class="label">(3)</label>
+  <math id="nlm-math-3" class="math">
+   <mi class="mi">cf</mi>
+   <mo class="mo">=</mo>
+   <msup class="msup">
+    <mfenced open="(" close=")" class="mfenced">
+     <mrow class="mrow">
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">o</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">N</mi>
+        <mi class="mi">o</mi>
+       </msub>
+      </munderover>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">m</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">N</mi>
+        <mi class="mi">m</mi>
+       </msub>
+      </munderover>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">r</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">R</mi>
+        <mi class="mi">m</mi>
+       </msub>
+      </munderover>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">b</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">N</mi>
+        <mi class="mi">b</mi>
+       </msub>
+      </munderover>
+      <msub class="msub">
+       <mi class="mi">E</mi>
+       <mtext mathvariant="italic" class="mtext">omrb</mtext>
+      </msub>
+     </mrow>
+    </mfenced>
+    <mn class="mn">2</mn>
+   </msup>
+   <mo class="mo">/</mo>
+   <msub class="msub">
+    <mi class="mi">N</mi>
+    <mi class="mi">t</mi>
+   </msub>
+  </math>
+ </disp-formula>to correct the sum of squares of nonnested factors (Crawley, 
+ <xref rid="jgrd54513-bib-0010" ref-type="ref" class="xref">2005</xref>) by subtracting it from the raw sum of squares of average error of each observation ( 
+ <math id="nlm-math-4" class="math">
+  <mover accent="true" class="mover">
+   <msup class="msup">
+    <msub class="msub">
+     <mi class="mi">E</mi>
+     <mrow class="mrow">
+      <mi class="mi">o </mi>
+      <mo class="mo">⋅⋅⋅</mo>
+     </mrow>
+    </msub>
+    <mn class="mn">2</mn>
+   </msup>
+   <mo stretchy="true" class="mo">¯</mo>
+  </mover>
+ </math>) and model ( 
+ <math id="nlm-math-5" class="math">
+  <mover accent="true" class="mover">
+   <msup class="msup">
+    <msub class="msub">
+     <mi class="mi">E</mi>
+     <mrow class="mrow">
+      <mo class="mo">⋅ </mo>
+      <mi class="mi">m</mi>
+      <mo class="mo"> ⋅⋅</mo>
+     </mrow>
+    </msub>
+    <mn class="mn">2</mn>
+   </msup>
+   <mo stretchy="true" class="mo">¯</mo>
+  </mover>
+ </math>) to adjust them as deviations from the total mean as 
+ <disp-formula id="jgrd54513-disp-0004" class="disp-formula">
+  <label class="label">(4)</label>
+  <math id="nlm-math-6" class="math">
+   <msub class="msub">
+    <mi class="mi">SS</mi>
+    <mi class="mi">o</mi>
+   </msub>
+   <mo class="mo">=</mo>
+   <msub class="msub">
+    <mi class="mi">N</mi>
+    <mi class="mi">s</mi>
+   </msub>
+   <msub class="msub">
+    <mi class="mi">N</mi>
+    <mi class="mi">b</mi>
+   </msub>
+   <munderover class="munderover">
+    <mo movablelimits="false" class="mo">∑</mo>
+    <mrow class="mrow">
+     <mi class="mi">o</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <msub class="msub">
+     <mi class="mi">N</mi>
+     <mi class="mi">o</mi>
+    </msub>
+   </munderover>
+   <mover accent="true" class="mover">
+    <msup class="msup">
+     <msub class="msub">
+      <mi class="mi">E</mi>
+      <mrow class="mrow">
+       <mi class="mi">o </mi>
+       <mo class="mo">⋅⋅⋅</mo>
+      </mrow>
+     </msub>
+     <mn class="mn">2</mn>
+    </msup>
+    <mo stretchy="true" class="mo">¯</mo>
+   </mover>
+   <mo class="mo">−</mo>
+   <mi class="mi">cf</mi>
+  </math>
+ </disp-formula>and 
+ <disp-formula id="jgrd54513-disp-0005" class="disp-formula">
+  <label class="label">(5)</label>
+  <math id="nlm-math-7" class="math">
+   <msub class="msub">
+    <mi class="mi">SS</mi>
+    <mi class="mi">mod</mi>
+   </msub>
+   <mo class="mo">=</mo>
+   <msub class="msub">
+    <mi class="mi">N</mi>
+    <mi class="mi">o</mi>
+   </msub>
+   <msub class="msub">
+    <mi class="mi">N</mi>
+    <mi class="mi">b</mi>
+   </msub>
+   <munderover class="munderover">
+    <mo movablelimits="false" class="mo">∑</mo>
+    <mrow class="mrow">
+     <mi class="mi">m</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <msub class="msub">
+     <mi class="mi">N</mi>
+     <mi class="mi">m</mi>
+    </msub>
+   </munderover>
+   <msub class="msub">
+    <mi class="mi">R</mi>
+    <mi class="mi">m</mi>
+   </msub>
+   <mover accent="true" class="mover">
+    <msup class="msup">
+     <msub class="msub">
+      <mi class="mi">E</mi>
+      <mrow class="mrow">
+       <mo class="mo">⋅ </mo>
+       <mtext mathvariant="italic" class="mtext">m</mtext>
+       <mo class="mo"> ⋅⋅</mo>
+      </mrow>
+     </msub>
+     <mn class="mn">2</mn>
+    </msup>
+    <mo stretchy="true" class="mo">¯</mo>
+   </mover>
+   <mo class="mo">−</mo>
+   <mi class="mi">cf</mi>
+  </math>
+ </disp-formula>where 
+ <italic class="italic">N</italic>
+ <sub class="sub">
+  <italic class="italic">s</italic>
+ </sub> is total number of model simulations, 
+ <inline-formula class="inline-formula">∑
+  <italic class="italic">R</italic>
+  <sub class="sub">
+   <italic class="italic">m</italic>
+  </sub>
+ </inline-formula>, and 
+ <italic class="italic">N</italic>
+ <sub class="sub">
+  <italic class="italic">t</italic>
+ </sub> is the total number of 
+ <italic class="italic">E</italic>
+ <sub class="sub">
+  <italic class="italic">omrb</italic>
+ </sub> calculated as 
+ <inline-formula class="inline-formula">
+  <italic class="italic">N</italic>
+  <sub class="sub">
+   <italic class="italic">o</italic>
+  </sub>
+  <italic class="italic">N</italic>
+  <sub class="sub">
+   <italic class="italic">b</italic>
+  </sub>
+  <italic class="italic">N</italic>
+  <sub class="sub">
+   <italic class="italic">s</italic>
+  </sub>
+ </inline-formula>. Note that for SS
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>, additional terms are subtracted from the raw sum of squares of average error of each ensemble simulation to account for the hierarchical structure of the problem. 
+ <disp-formula id="jgrd54513-disp-0006" class="disp-formula">
+  <label class="label">(6)</label>
+  <math id="nlm-math-8" class="math">
+   <mtable columnalign="left" displaystyle="true" class="mtable">
+    <mtr class="mtr">
+     <mtd class="mtd">
+      <msub class="msub">
+       <mi class="mi">SS</mi>
+       <mi class="mi">i</mi>
+      </msub>
+      <mo class="mo">=</mo>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">o</mi>
+      </msub>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">b</mi>
+      </msub>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">m</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">N</mi>
+        <mi class="mi">m</mi>
+       </msub>
+      </munderover>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">r</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">R</mi>
+        <mi class="mi">m</mi>
+       </msub>
+      </munderover>
+      <mover accent="true" class="mover">
+       <msup class="msup">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi class="mi">E</mi>
+          <mrow class="mrow">
+           <mo class="mo">⋅</mo>
+           <mtext mathvariant="italic" class="mtext">mr</mtext>
+           <mo class="mo">⋅</mo>
+          </mrow>
+         </msub>
+        </mrow>
+        <mn class="mn">2</mn>
+       </msup>
+       <mo stretchy="true" class="mo">¯</mo>
+      </mover>
+      <mo class="mo">−</mo>
+      <mfenced open="(" close=")" class="mfenced">
+       <mrow class="mrow">
+        <msub class="msub">
+         <mi class="mi">SS</mi>
+         <mi class="mi">m</mi>
+        </msub>
+        <mo class="mo">+</mo>
+        <mi class="mi">cf</mi>
+       </mrow>
+      </mfenced>
+     </mtd>
+    </mtr>
+    <mtr class="mtr">
+     <mtd class="mtd">
+      <mo class="mo">=</mo>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">o</mi>
+      </msub>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">b</mi>
+      </msub>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">m</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">N</mi>
+        <mi class="mi">m</mi>
+       </msub>
+      </munderover>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">r</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <msub class="msub">
+        <mi class="mi">R</mi>
+        <mi class="mi">m</mi>
+       </msub>
+      </munderover>
+      <mover accent="true" class="mover">
+       <msup class="msup">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi class="mi">E</mi>
+          <mrow class="mrow">
+           <mo class="mo">⋅</mo>
+           <mtext mathvariant="italic" class="mtext">mr</mtext>
+           <mo class="mo">⋅</mo>
+          </mrow>
+         </msub>
+        </mrow>
+        <mn class="mn">2</mn>
+       </msup>
+       <mo stretchy="true" class="mo">¯</mo>
+      </mover>
+      <mo class="mo">−</mo>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">o</mi>
+      </msub>
+      <msub class="msub">
+       <mi class="mi">N</mi>
+       <mi class="mi">b</mi>
+      </msub>
+      <munderover class="munderover">
+       <mo movablelimits="false" class="mo">∑</mo>
+       <mrow class="mrow">
+        <mi class="mi">m</mi>
+        <mo class="mo">=</mo>
+        <mn class="mn">1</mn>
+       </mrow>
+       <mn class="mn">13</mn>
+      </munderover>
+      <mover accent="true" class="mover">
+       <msup class="msup">
+        <mrow class="mrow">
+         <msub class="msub">
+          <mi class="mi">E</mi>
+          <mrow class="mrow">
+           <mo class="mo">⋅ </mo>
+           <mi class="mi">m</mi>
+           <mo class="mo"> ⋅⋅</mo>
+          </mrow>
+         </msub>
+        </mrow>
+        <mn class="mn">2</mn>
+       </msup>
+       <mo stretchy="true" class="mo">¯</mo>
+      </mover>
+     </mtd>
+    </mtr>
+   </mtable>
+  </math>
+ </disp-formula>
+</p>

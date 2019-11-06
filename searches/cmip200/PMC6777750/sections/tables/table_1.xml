@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table-wrap id="pone.0223542.t001" orientation="portrait" position="float" class="table-wrap">
+ <object-id pub-id-type="doi" class="object-id">10.1371/journal.pone.0223542.t001</object-id>
+ <label class="label">Table 1</label>
+ <caption class="caption">
+  <title class="title">Summary of the fldgen v2.0 algorithm.</title>
+  <p class="p">Details of the steps shared with version 1.0 (denoted with 
+   <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>) are provided in Paper LS1 [
+   <xref rid="pone.0223542.ref007" ref-type="bibr" class="xref">7</xref>].
+  </p>
+ </caption>
+ <alternatives class="alternatives">
+  <graphic id="pone.0223542.t001g" xlink:href="pone.0223542.t001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  <table frame="box" rules="all" border="0" class="table">
+   <colgroup span="1" class="colgroup">
+    <col align="left" valign="middle" span="1" class="col"/>
+    <col align="left" valign="middle" span="1" class="col"/>
+   </colgroup>
+   <tbody class="tbody">
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">1.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Select ESM runs for training the emulator.</td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">2.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Select and fit the mean response model relating local temperature (
+      <italic class="italic">T</italic>) and log-precipitation (log(
+      <italic class="italic">P</italic>)) to global average temperature.
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">3.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Calculate the residuals by subtracting mean response from ESM output.</td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">4. 
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Map the distribution of (
+      <italic class="italic">T</italic> or log(
+      <italic class="italic">P</italic>)) residuals in each grid cell from the 
+      <italic class="italic">native</italic> distribution of the grid cell to the standard normal distribution (
+      <italic class="italic">N</italic>(0, 1)) via quantiles.
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">5.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Form a joint matrix of state residuals (spatially flattened, concatenated, normally distributed 
+      <italic class="italic">T</italic> and log(
+      <italic class="italic">P</italic>) residuals in each grid cell at each time, denoted by 
+      <italic class="italic">x</italic>(
+      <italic class="italic">t</italic>)).
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">6
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>.
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Perform principal components analysis (PCA) on the joint 
+      <italic class="italic">T</italic>-log(
+      <italic class="italic">P</italic>) residual field state: 
+      <inline-formula id="pone.0223542.e001" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e001g" xlink:href="pone.0223542.e001" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M1" class="math">
+         <mrow class="mrow">
+          <mi class="mi">x</mi>
+          <mrow class="mrow">
+           <mo class="mo">(</mo>
+           <mi class="mi">t</mi>
+           <mo class="mo">)</mo>
+          </mrow>
+          <mo class="mo">=</mo>
+          <msubsup class="msubsup">
+           <mo class="mo">∑</mo>
+           <mrow class="mrow">
+            <mi class="mi">i</mi>
+            <mo class="mo">=</mo>
+            <mn class="mn">1</mn>
+           </mrow>
+           <mi class="mi">N</mi>
+          </msubsup>
+          <msub class="msub">
+           <mi class="mi">ϕ</mi>
+           <mi class="mi">i</mi>
+          </msub>
+          <mrow class="mrow">
+           <mo class="mo">(</mo>
+           <mi class="mi">t</mi>
+           <mo class="mo">)</mo>
+          </mrow>
+          <msub class="msub">
+           <mover accent="true" class="mover">
+            <mi class="mi">x</mi>
+            <mo class="mo">^</mo>
+           </mover>
+           <mi class="mi">i</mi>
+          </msub>
+         </mrow>
+        </math>
+       </alternatives>
+      </inline-formula>, where the 
+      <inline-formula id="pone.0223542.e002" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e002g" xlink:href="pone.0223542.e002" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M2" class="math">
+         <msub class="msub">
+          <mover accent="true" class="mover">
+           <mi class="mi">x</mi>
+           <mo class="mo">^</mo>
+          </mover>
+          <mi class="mi">i</mi>
+         </msub>
+        </math>
+       </alternatives>
+      </inline-formula> are the principal components, and the 
+      <italic class="italic">ϕ</italic>
+      <sub class="sub">
+       <italic class="italic">i</italic>
+      </sub>(
+      <italic class="italic">t</italic>) are the projection coefficients. This step expresses the grid state as a linear combination of orthogonal basis vectors that diagonalize the covariance matrix of the system to capture spatial correlations.
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">7.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Compute the discrete Fourier transform (DFT) [
+      <xref rid="pone.0223542.ref016" ref-type="bibr" class="xref">16</xref>] of the residual field’s projection coefficients onto the principal components: 
+      <inline-formula id="pone.0223542.e003" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e003g" xlink:href="pone.0223542.e003" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M3" class="math">
+         <mrow class="mrow">
+          <msub class="msub">
+           <mo class="mo">Φ</mo>
+           <mi class="mi">i</mi>
+          </msub>
+          <mo class="mo">=</mo>
+         </mrow>
+         <mrow class="mrow">
+          <mi mathvariant="script" class="mi">F</mi>
+          <mo class="mo">(</mo>
+          <msub class="msub">
+           <mi class="mi">ϕ</mi>
+           <mi class="mi">i</mi>
+          </msub>
+          <mrow class="mrow">
+           <mo class="mo">(</mo>
+           <mi class="mi">t</mi>
+           <mo class="mo">)</mo>
+          </mrow>
+          <mo class="mo">)</mo>
+         </mrow>
+        </math>
+       </alternatives>
+      </inline-formula>.
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">8.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Choose new phases of Φ
+      <sub class="sub">
+       <italic class="italic">i</italic>
+      </sub> randomly, uniformly on [0, 2
+      <italic class="italic">π</italic>) to create new frequency space coefficients 
+      <inline-formula id="pone.0223542.e004" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e004g" xlink:href="pone.0223542.e004" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M4" class="math">
+         <msubsup class="msubsup">
+          <mo class="mo">Φ</mo>
+          <mi class="mi">i</mi>
+          <mo class="mo">⋆</mo>
+         </msubsup>
+        </math>
+       </alternatives>
+      </inline-formula> with 
+      <inline-formula id="pone.0223542.e005" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e005g" xlink:href="pone.0223542.e005" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M5" class="math">
+         <mrow class="mrow">
+          <mrow class="mrow">
+           <mo class="mo">|</mo>
+          </mrow>
+          <msub class="msub">
+           <mo class="mo">Φ</mo>
+           <mi class="mi">i</mi>
+          </msub>
+          <mrow class="mrow">
+           <mo class="mo">|</mo>
+           <mo class="mo">=</mo>
+           <mo class="mo">|</mo>
+          </mrow>
+          <msubsup class="msubsup">
+           <mo class="mo">Φ</mo>
+           <mi class="mi">i</mi>
+           <mo class="mo">⋆</mo>
+          </msubsup>
+          <mrow class="mrow">
+           <mo class="mo">|</mo>
+          </mrow>
+         </mrow>
+        </math>
+       </alternatives>
+      </inline-formula>. This preserves the time autocorrelation function of the ESM training data by the Wiener-Khinchin Theorem [
+      <xref rid="pone.0223542.ref016" ref-type="bibr" class="xref">16</xref>].
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">9.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Compute the projection coefficients 
+      <inline-formula id="pone.0223542.e006" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e006g" xlink:href="pone.0223542.e006" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M6" class="math">
+         <msubsup class="msubsup">
+          <mi class="mi">ϕ</mi>
+          <mi class="mi">i</mi>
+          <mo class="mo">⋆</mo>
+         </msubsup>
+        </math>
+       </alternatives>
+      </inline-formula> of the new residual field as the inverse DFT of 
+      <inline-formula id="pone.0223542.e007" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e007g" xlink:href="pone.0223542.e007" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M7" class="math">
+         <msubsup class="msubsup">
+          <mo class="mo">Φ</mo>
+          <mi class="mi">i</mi>
+          <mo class="mo">⋆</mo>
+         </msubsup>
+        </math>
+       </alternatives>
+      </inline-formula>.
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">10.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Compute the generated, joint 
+      <italic class="italic">T</italic>-log(
+      <italic class="italic">P</italic>) residual field as 
+      <inline-formula id="pone.0223542.e008" class="inline-formula">
+       <alternatives class="alternatives">
+        <graphic id="pone.0223542.e008g" xlink:href="pone.0223542.e008" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+        <math id="M8" class="math">
+         <mrow class="mrow">
+          <msup class="msup">
+           <mi class="mi">x</mi>
+           <mo class="mo">⋆</mo>
+          </msup>
+          <mrow class="mrow">
+           <mo class="mo">(</mo>
+           <mi class="mi">t</mi>
+           <mo class="mo">)</mo>
+          </mrow>
+          <mo class="mo">=</mo>
+          <msubsup class="msubsup">
+           <mo class="mo">∑</mo>
+           <mrow class="mrow">
+            <mi class="mi">i</mi>
+            <mo class="mo">=</mo>
+            <mn class="mn">1</mn>
+           </mrow>
+           <mi class="mi">N</mi>
+          </msubsup>
+          <msubsup class="msubsup">
+           <mi class="mi">ϕ</mi>
+           <mi class="mi">i</mi>
+           <mo class="mo">⋆</mo>
+          </msubsup>
+          <mrow class="mrow">
+           <mo class="mo">(</mo>
+           <mi class="mi">t</mi>
+           <mo class="mo">)</mo>
+          </mrow>
+          <msub class="msub">
+           <mover accent="true" class="mover">
+            <mi class="mi">x</mi>
+            <mo class="mo">^</mo>
+           </mover>
+           <mi class="mi">i</mi>
+          </msub>
+         </mrow>
+        </math>
+       </alternatives>
+      </inline-formula>.
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">11.</td>
+     <td align="left" rowspan="1" colspan="1" class="td">Map the generated (
+      <italic class="italic">T</italic> or log(
+      <italic class="italic">P</italic>)) residuals in each grid cell back to the native (
+      <italic class="italic">T</italic> or log(
+      <italic class="italic">P</italic>)) distribution of that grid cell.
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">12.
+      <xref ref-type="table-fn" rid="t001fn001" class="xref">*</xref>
+     </td>
+     <td align="left" rowspan="1" colspan="1" class="td">Add to the respective 
+      <italic class="italic">T</italic> or log(
+      <italic class="italic">P</italic>) mean field to create the generated full fields for 
+      <italic class="italic">T</italic> and log(
+      <italic class="italic">P</italic>).
+     </td>
+    </tr>
+    <tr class="tr">
+     <td align="right" rowspan="1" colspan="1" class="td">13.</td>
+     <td align="left" rowspan="1" colspan="1" class="td">Take the exponential of the generated log(
+      <italic class="italic">P</italic>) full fields to produce generated full fields of precipitation.
+     </td>
+    </tr>
+   </tbody>
+  </table>
+ </alternatives>
+ <table-wrap-foot class="table-wrap-foot">
+  <fn id="t001fn001" class="fn">
+   <p class="p">* Denotes a step shared with 
+    <monospace class="monospace">fldgen v1.0</monospace> and detailed in Paper LS1. The only differences in shared steps between version 1.0 and 2.0 are that the same step is applied to log(
+    <italic class="italic">P</italic>) in addition to 
+    <italic class="italic">T</italic> in version 2.0.
+   </p>
+  </fn>
+ </table-wrap-foot>
+</table-wrap>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<app-group class="app-group">
+ <app id="App1" class="app">
+  <sec id="Sec8" class="sec">
+   <title class="title">Appendix</title>
+   <p id="Par45" class="p">We describe the algorithms and thresholds employed herein to identify blocking. They follow common approaches published elsewhere [
+    <xref ref-type="bibr" rid="CR88" class="xref">88</xref>]. For simplicity and coherency, the implementation of thresholds and other methodological considerations have been modified with respect to the original studies. Daily geopotential height fields at 500 hPa (Z500) were linearly interpolated to a common 2.5°×2.5° grid before performing the computations.
+   </p>
+   <sec id="FPar2" class="sec">
+    <title class="title">Anomaly method (ANO, hereafter, similar to Schwierz et al. [
+     <xref ref-type="bibr" rid="CR98" class="xref">98</xref>] but using Z500 instead)
+    </title>
+    <p id="Par46" class="p">Daily anomalies of Z500 are computed for each grid point as the difference with respect to the climatological mean daily values of the analysed period. For each day, blocks are detected as 2-D areas of at least 2·10
+     <sup class="sup">6</sup> km
+     <sup class="sup">2</sup> extension with Z500 anomalies above the 90th percentile of the Z500 anomaly distribution over 50°-80°N. The same threshold is applied to all grid points, but it is allowed to change with the calendar month by using three-month centered distributions. Quasi-stationarity and persistence are ensured by imposing a minimum percentage of spatial overlap between the blocked areas of successive days (50%) for at least 5 days.
+    </p>
+   </sec>
+   <sec id="FPar3" class="sec">
+    <title class="title">Absolute method (ABS, hereafter, similar to Davini et al. [
+     <xref ref-type="bibr" rid="CR86" class="xref">86</xref>])
+    </title>
+    <p id="Par47" class="p">For each longitude λ, the following meridional Z500 gradients are computed to the north and south of a given latitude ϕ:
+     <disp-formula id="Equ1" class="disp-formula">
+      <label class="label">1</label>
+      <alternatives class="alternatives">
+       <tex-math id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ {\displaystyle \begin{array}{l} GHGN\left(\lambda, \phi \right)=\frac{\left(Z\left(\lambda, \phi +\Delta \right)-Z\left(\lambda, \phi \right)\right)}{\Delta}&lt;-10 gpm/{}^{\mathrm{o}}\\ {} GHGS\left(\lambda, \phi \right)=\frac{\left(Z\left(\lambda, \phi \right)-Z\left(\lambda, \phi -\Delta \right)\right)}{\Delta}&gt;0\\ {}{GHGS}_2\left(\lambda, \phi \right)=\frac{\left(Z\left(\lambda, \phi -\Delta \right)-Z\left(\lambda, \phi -2\Delta \right)\right)}{\Delta}&lt;-5 gpm/{}^{\mathrm{o}}\end{array}} $$\end{document}</tex-math>
+       <math id="M2" display="block" class="math">
+        <mtable columnalign="left" displaystyle="true" class="mtable">
+         <mtr class="mtr">
+          <mtd class="mtd">
+           <mtext mathvariant="italic" class="mtext">GHGN</mtext>
+           <mfenced close=")" open="(" separators="," class="mfenced">
+            <mi class="mi">λ</mi>
+            <mi class="mi">ϕ</mi>
+           </mfenced>
+           <mo class="mo">=</mo>
+           <mfrac class="mfrac">
+            <mfenced close=")" open="(" class="mfenced">
+             <mrow class="mrow">
+              <mi class="mi">Z</mi>
+              <mfenced close=")" open="(" separators="," class="mfenced">
+               <mi class="mi">λ</mi>
+               <mrow class="mrow">
+                <mi class="mi">ϕ</mi>
+                <mo class="mo">+</mo>
+                <mi mathvariant="normal" class="mi">Δ</mi>
+               </mrow>
+              </mfenced>
+              <mo class="mo">−</mo>
+              <mi class="mi">Z</mi>
+              <mfenced close=")" open="(" separators="," class="mfenced">
+               <mi class="mi">λ</mi>
+               <mi class="mi">ϕ</mi>
+              </mfenced>
+             </mrow>
+            </mfenced>
+            <mi mathvariant="normal" class="mi">Δ</mi>
+           </mfrac>
+           <mo class="mo">&lt;</mo>
+           <mo class="mo">−</mo>
+           <mn class="mn">10</mn>
+           <mi mathvariant="italic" class="mi">gpm</mi>
+           <mo class="mo">/</mo>
+           <msup class="msup">
+            <mrow class="mrow"/>
+            <mi mathvariant="normal" class="mi">o</mi>
+           </msup>
+          </mtd>
+         </mtr>
+         <mtr class="mtr">
+          <mtd class="mtd">
+           <mtext mathvariant="italic" class="mtext">GHGS</mtext>
+           <mfenced close=")" open="(" separators="," class="mfenced">
+            <mi class="mi">λ</mi>
+            <mi class="mi">ϕ</mi>
+           </mfenced>
+           <mo class="mo">=</mo>
+           <mfrac class="mfrac">
+            <mfenced close=")" open="(" class="mfenced">
+             <mrow class="mrow">
+              <mi class="mi">Z</mi>
+              <mfenced close=")" open="(" separators="," class="mfenced">
+               <mi class="mi">λ</mi>
+               <mi class="mi">ϕ</mi>
+              </mfenced>
+              <mo class="mo">−</mo>
+              <mi class="mi">Z</mi>
+              <mfenced close=")" open="(" separators="," class="mfenced">
+               <mi class="mi">λ</mi>
+               <mrow class="mrow">
+                <mi class="mi">ϕ</mi>
+                <mo class="mo">−</mo>
+                <mi mathvariant="normal" class="mi">Δ</mi>
+               </mrow>
+              </mfenced>
+             </mrow>
+            </mfenced>
+            <mi mathvariant="normal" class="mi">Δ</mi>
+           </mfrac>
+           <mo class="mo">&gt;</mo>
+           <mn class="mn">0</mn>
+          </mtd>
+         </mtr>
+         <mtr class="mtr">
+          <mtd class="mtd">
+           <msub class="msub">
+            <mtext mathvariant="italic" class="mtext">GHGS</mtext>
+            <mn class="mn">2</mn>
+           </msub>
+           <mfenced close=")" open="(" separators="," class="mfenced">
+            <mi class="mi">λ</mi>
+            <mi class="mi">ϕ</mi>
+           </mfenced>
+           <mo class="mo">=</mo>
+           <mfrac class="mfrac">
+            <mfenced close=")" open="(" class="mfenced">
+             <mrow class="mrow">
+              <mi class="mi">Z</mi>
+              <mfenced close=")" open="(" separators="," class="mfenced">
+               <mi class="mi">λ</mi>
+               <mrow class="mrow">
+                <mi class="mi">ϕ</mi>
+                <mo class="mo">−</mo>
+                <mi mathvariant="normal" class="mi">Δ</mi>
+               </mrow>
+              </mfenced>
+              <mo class="mo">−</mo>
+              <mi class="mi">Z</mi>
+              <mfenced close=")" open="(" separators="," class="mfenced">
+               <mi class="mi">λ</mi>
+               <mrow class="mrow">
+                <mi class="mi">ϕ</mi>
+                <mo class="mo">−</mo>
+                <mn class="mn">2</mn>
+                <mi mathvariant="normal" class="mi">Δ</mi>
+               </mrow>
+              </mfenced>
+             </mrow>
+            </mfenced>
+            <mi mathvariant="normal" class="mi">Δ</mi>
+           </mfrac>
+           <mo class="mo">&lt;</mo>
+           <mo class="mo">−</mo>
+           <mn class="mn">5</mn>
+           <mi mathvariant="italic" class="mi">gpm</mi>
+           <mo class="mo">/</mo>
+           <msup class="msup">
+            <mrow class="mrow"/>
+            <mi mathvariant="normal" class="mi">o</mi>
+           </msup>
+          </mtd>
+         </mtr>
+        </mtable>
+       </math>
+       <graphic xlink:href="40641_2018_108_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>where 45° &lt; ϕ &lt; 70° N and ∆ = 15° latitude. GHGN and GHGS
+     <sub class="sub">2</sub> are applied to avoid the detection of cut-off lows and subtropical features (‘low-latitude blocks’). A grid point is blocked if the above meridional gradients averaged over ∆/2 in longitude satisfy eq. (1). 2-D blocked areas are required to have a minimum areal extension of 500,000 km
+     <sup class="sup">2</sup>. Finally, blocking patterns occurring during consecutive days are considered a blocking event if there is any overlap between their 2-D blocked areas for at least 5 days.
+    </p>
+   </sec>
+   <sec id="FPar4" class="sec">
+    <title class="title">Hybrid method (MIX, hereafter, similar to Barriopedro et al. [
+     <xref ref-type="bibr" rid="CR88" class="xref">88</xref>])
+    </title>
+    <p id="Par48" class="p">Following ANO, daily blocks are identified as contiguous 2-D spatial signatures with anomalies above a given threshold (the same as in ANO). Similar to ABS, these areas are also required to be associated with meridional Z500 gradient reversals around a reference latitude (
+     <italic class="italic">ϕ</italic>
+     <sub class="sub">
+      <italic class="italic">c</italic>
+     </sub>), defined for each longitude and calendar month as the latitude with maximum variance in the 5-day high-pass Z500 filtered field. This condition is demanded by computing the difference between ∆-width latitudinal averages of Z500:
+     <disp-formula id="Equ2" class="disp-formula">
+      <label class="label">2</label>
+      <alternatives class="alternatives">
+       <tex-math id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$ GHGS\left(\lambda, \phi \right)=\frac{\overline{Z}\left(\lambda, \phi :\phi +\Delta \right)-\overline{Z}\left(\lambda, \phi :\phi -\Delta \right)}{\Delta}&gt;0 $$\end{document}</tex-math>
+       <math id="M4" display="block" class="math">
+        <mtext mathvariant="italic" class="mtext">GHGS</mtext>
+        <mfenced close=")" open="(" separators="," class="mfenced">
+         <mi class="mi">λ</mi>
+         <mi class="mi">ϕ</mi>
+        </mfenced>
+        <mo class="mo">=</mo>
+        <mfrac class="mfrac">
+         <mrow class="mrow">
+          <mover accent="true" class="mover">
+           <mi class="mi">Z</mi>
+           <mo stretchy="true" class="mo">¯</mo>
+          </mover>
+          <mfenced close=")" open="(" separators="," class="mfenced">
+           <mi class="mi">λ</mi>
+           <mrow class="mrow">
+            <mi class="mi">ϕ</mi>
+            <mo class="mo">:</mo>
+            <mi class="mi">ϕ</mi>
+            <mo class="mo">+</mo>
+            <mi mathvariant="normal" class="mi">Δ</mi>
+           </mrow>
+          </mfenced>
+          <mo class="mo">−</mo>
+          <mover accent="true" class="mover">
+           <mi class="mi">Z</mi>
+           <mo stretchy="true" class="mo">¯</mo>
+          </mover>
+          <mfenced close=")" open="(" separators="," class="mfenced">
+           <mi class="mi">λ</mi>
+           <mrow class="mrow">
+            <mi class="mi">ϕ</mi>
+            <mo class="mo">:</mo>
+            <mi class="mi">ϕ</mi>
+            <mo class="mo">−</mo>
+            <mi mathvariant="normal" class="mi">Δ</mi>
+           </mrow>
+          </mfenced>
+         </mrow>
+         <mi mathvariant="normal" class="mi">Δ</mi>
+        </mfrac>
+        <mo class="mo">&gt;</mo>
+        <mn class="mn">0</mn>
+       </math>
+       <graphic xlink:href="40641_2018_108_Article_Equ2.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+      </alternatives>
+     </disp-formula>where 
+     <italic class="italic">ϕ</italic>
+     <sub class="sub">
+      <italic class="italic">c</italic>
+     </sub>(
+     <italic class="italic">λ</italic>) − Δ/2 &lt; 
+     <italic class="italic">ϕ</italic> &lt; 
+     <italic class="italic">ϕ</italic>
+     <sub class="sub">
+      <italic class="italic">c</italic>
+     </sub>(
+     <italic class="italic">λ</italic>) + Δ/2 and ∆ = 15° latitude. The entire 2-D area is blocked if, for at least one of its longitudes, GHGS averaged over ∆/2 in longitude satisfies eq. (2). Finally, minimum cut-off values are required to the 2-D extension (2∙10
+     <sup class="sup">6</sup> km
+     <sup class="sup">2</sup>), the fraction of overlap between successive daily blocks (50%) and the duration (5 days).
+    </p>
+   </sec>
+  </sec>
+ </app>
+</app-group>

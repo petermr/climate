@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par11" class="p">We create the HIDF curves by determining the non-exceedance probability of heat wave duration and intensity, although HIDF can also be defined based on exceedance probability. We define heat wave intensity using the average daily temperature throughout the duration of the event. The HIDF model differs from the typical heat wave definition as it lacks a certain temperature threshold to define heat waves. Instead, similar to traditional precipitation IDF curves, we use the block maxima method to produce the HIDF curves. We determine the hottest heat wave events in each year with durations ranging from one to ten consecutive days. We do this by first determining the hottest, two consecutive hottest, three consecutive hottest, …, ten consecutive hottest days for each year, and then modeling the joint probabilities of all those block maxima temperature values with their corresponding durations. We consider the highest mean temperature over the duration period. We subsequently calculate the intensity of each event using,
+ <disp-formula id="Equ1" class="disp-formula">
+  <label class="label">1</label>
+  <alternatives class="alternatives">
+   <tex-math id="M1" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\forall y\,{I}_{y}=\,\max \{\frac{{\sum }_{i}^{i+D-1}{t}_{i}^{y}}{D}\},$$\end{document}</tex-math>
+   <math id="M2" display="block" class="math">
+    <mo class="mo">∀</mo>
+    <mi class="mi">y</mi>
+    <mspace width=".25em" class="mspace"/>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">I</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">y</mi>
+     </mrow>
+    </msub>
+    <mo class="mo">=</mo>
+    <mspace width=".25em" class="mspace"/>
+    <mi class="mi">max</mi>
+    <mrow class="mrow">
+     <mo stretchy="true" class="mo">{</mo>
+     <mrow class="mrow">
+      <mfrac class="mfrac">
+       <mrow class="mrow">
+        <msubsup class="msubsup">
+         <mo class="mo">∑</mo>
+         <mi class="mi">i</mi>
+         <mrow class="mrow">
+          <mi class="mi">i</mi>
+          <mo class="mo">+</mo>
+          <mi class="mi">D</mi>
+          <mo class="mo">−</mo>
+          <mn class="mn">1</mn>
+         </mrow>
+        </msubsup>
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mi class="mi">t</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">i</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">y</mi>
+         </mrow>
+        </msubsup>
+       </mrow>
+       <mi class="mi">D</mi>
+      </mfrac>
+     </mrow>
+     <mo stretchy="true" class="mo">}</mo>
+    </mrow>
+    <mo class="mo">,</mo>
+   </math>
+   <graphic xlink:href="41598_2019_50643_Article_Equ1.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equa" class="disp-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M3" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\forall D\,D=1:10,$$\end{document}</tex-math>
+   <math id="M4" display="block" class="math">
+    <mo class="mo">∀</mo>
+    <mi class="mi">D</mi>
+    <mspace width=".25em" class="mspace"/>
+    <mi class="mi">D</mi>
+    <mo class="mo">=</mo>
+    <mn class="mn">1</mn>
+    <mo class="mo">:</mo>
+    <mn class="mn">10</mn>
+    <mo class="mo">,</mo>
+   </math>
+   <graphic xlink:href="41598_2019_50643_Article_Equa.gif" position="anchor" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic class="italic">y</italic> is the year, 
+ <italic class="italic">i</italic> is the first day in the moving window that ranges between one and the number of days in the year, 
+ <inline-formula id="IEq1" class="inline-formula">
+  <alternatives class="alternatives">
+   <tex-math id="M5" class="tex-math">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${t}_{i}^{y}$$\end{document}</tex-math>
+   <math id="M6" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi class="mi">t</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">y</mi>
+     </mrow>
+    </msubsup>
+   </math>
+   <inline-graphic xlink:href="41598_2019_50643_Article_IEq1.gif" class="inline-graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> is the average daily temperature at day 
+ <italic class="italic">i</italic> of year 
+ <italic class="italic">y</italic>, and 
+ <italic class="italic">D</italic> is the length of the running window (i.e. heat wave duration). Note that the data used to create HIDF curves consists of heat waves with one, two, …, ten days duration and associated average daily temperature during the event. Hence, each year in the period of observation yields 10 pairs of duration and intensity data.
+</p>

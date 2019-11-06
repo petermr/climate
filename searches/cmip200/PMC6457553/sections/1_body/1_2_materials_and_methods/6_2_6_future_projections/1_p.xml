@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Future model projections are implemented largely following previous work [
+ <xref rid="pone.0214535.ref009" ref-type="bibr" class="xref">9</xref>]. Once the weights are obtained, the statistical model for system change between projection reference and projection periods Δ follows the BMA formula [
+ <xref rid="pone.0214535.ref020" ref-type="bibr" class="xref">20</xref>,
+ <xref rid="pone.0214535.ref021" ref-type="bibr" class="xref">21</xref>]: 
+ <disp-formula id="pone.0214535.e033" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e033.jpg" id="pone.0214535.e033g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M33" class="math">
+    <mi class="mi">p</mi>
+    <mo class="mo">(</mo>
+    <mrow class="mrow">
+     <mi mathvariant="normal" class="mi">Δ</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mo class="mo">|</mo>
+     <mi class="mi">D</mi>
+    </mrow>
+    <mo class="mo">)</mo>
+    <mo class="mo">=</mo>
+    <mrow class="mrow">
+     <msubsup class="msubsup">
+      <mo stretchy="false" class="mo">∑</mo>
+      <mrow class="mrow">
+       <mi class="mi">i</mi>
+       <mo class="mo">=</mo>
+       <mn class="mn">1</mn>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">k</mi>
+      </mrow>
+     </msubsup>
+     <mrow class="mrow">
+      <mi class="mi">p</mi>
+      <mo class="mo">(</mo>
+      <mrow class="mrow">
+       <mi mathvariant="normal" class="mi">Δ</mi>
+       <mo class="mo">|</mo>
+      </mrow>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi class="mi">M</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+       <mo class="mo">,</mo>
+       <mi class="mi">D</mi>
+      </mrow>
+      <mo class="mo">)</mo>
+      <mi class="mi">p</mi>
+      <mo class="mo">(</mo>
+      <mrow class="mrow">
+       <msub class="msub">
+        <mrow class="mrow">
+         <mi class="mi">M</mi>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+        </mrow>
+       </msub>
+      </mrow>
+      <mrow class="mrow">
+       <mo class="mo">|</mo>
+       <mi class="mi">D</mi>
+      </mrow>
+      <mo class="mo">)</mo>
+      <mo class="mo">=</mo>
+      <mrow class="mrow">
+       <msubsup class="msubsup">
+        <mo stretchy="false" class="mo">∑</mo>
+        <mrow class="mrow">
+         <mi class="mi">i</mi>
+         <mo class="mo">=</mo>
+         <mn class="mn">1</mn>
+        </mrow>
+        <mrow class="mrow">
+         <mi class="mi">k</mi>
+        </mrow>
+       </msubsup>
+       <mrow class="mrow">
+        <msub class="msub">
+         <mrow class="mrow">
+          <mi class="mi">w</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi class="mi">i</mi>
+         </mrow>
+        </msub>
+        <mi class="mi">p</mi>
+        <mo class="mo">(</mo>
+        <mrow class="mrow">
+         <mi mathvariant="normal" class="mi">Δ</mi>
+         <mo class="mo">|</mo>
+        </mrow>
+        <mrow class="mrow">
+         <msub class="msub">
+          <mrow class="mrow">
+           <mi class="mi">M</mi>
+          </mrow>
+          <mrow class="mrow">
+           <mi class="mi">i</mi>
+          </mrow>
+         </msub>
+         <mo class="mo">,</mo>
+         <mi class="mi">D</mi>
+        </mrow>
+        <mo class="mo">)</mo>
+       </mrow>
+      </mrow>
+      <mo class="mo">,</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+  <label class="label">(14)</label>
+ </disp-formula> where 
+ <italic class="italic">D</italic> = (
+ <bold class="bold">
+  <italic class="italic">y</italic>
+ </bold>, 
+ <bold class="bold">
+  <italic class="italic">Δy</italic>
+ </bold>) is collection of all available observations, 
+ <italic class="italic">p</italic>(Δ|
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>, 
+ <italic class="italic">D</italic>) is conditional probability for the change given than 
+ <italic class="italic">i</italic>th dynamical model is correct, and 
+ <italic class="italic">w</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub> = 
+ <italic class="italic">p</italic>(
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">i</italic>
+ </sub>|
+ <italic class="italic">D</italic>) is the probability for the 
+ <italic class="italic">i</italic>th model (i.e., model weight) found earlier (
+ <xref ref-type="disp-formula" rid="pone.0214535.e032" class="xref">Eq (13)</xref>) as the product of the trend and variability model probabilities. This represents a skill-weighted mixture of pdfs from individual models. Here we consider Δ to be a simple difference between projection period mean and forecast reference period mean. Future predictions are largely modelled following prior work [
+ <xref rid="pone.0214535.ref009" ref-type="bibr" class="xref">9</xref>]. Just as for the calibration period, we assume a deterministic decomposition of projection period output into trend and anomalies: 
+ <disp-formula id="pone.0214535.e034" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0214535.e034.jpg" id="pone.0214535.e034g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M34" class="math">
+    <msubsup class="msubsup">
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">x</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">i</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="bold-italic" class="mi">'</mi>
+      <mo class="mo">(</mo>
+      <mi mathvariant="bold-italic" class="mi">f</mi>
+      <mo class="mo">)</mo>
+     </mrow>
+    </msubsup>
+    <mo class="mo">=</mo>
+    <munder class="munder">
+     <mrow class="mrow">
+      <msubsup class="msubsup">
+       <mrow class="mrow">
+        <mi mathvariant="bold-italic" class="mi">x</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mi mathvariant="bold-italic" class="mi">i</mi>
+       </mrow>
+       <mrow class="mrow">
+        <mo class="mo">(</mo>
+        <mi mathvariant="bold-italic" class="mi">f</mi>
+        <mo class="mo">)</mo>
+       </mrow>
+      </msubsup>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">t</mi>
+      <mi mathvariant="normal" class="mi">r</mi>
+      <mi mathvariant="normal" class="mi">e</mi>
+      <mi mathvariant="normal" class="mi">n</mi>
+      <mi mathvariant="normal" class="mi">d</mi>
+     </mrow>
+    </munder>
+    <mo class="mo">+</mo>
+    <munder class="munder">
+     <mrow class="mrow">
+      <munder accentunder="false" class="munder">
+       <mrow class="mrow">
+        <msubsup class="msubsup">
+         <mrow class="mrow">
+          <mi mathvariant="bold" class="mi">Δ</mi>
+          <mi mathvariant="bold-italic" class="mi">x</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mi mathvariant="bold-italic" class="mi">i</mi>
+         </mrow>
+         <mrow class="mrow">
+          <mo class="mo">(</mo>
+          <mi mathvariant="bold-italic" class="mi">f</mi>
+          <mo class="mo">)</mo>
+         </mrow>
+        </msubsup>
+       </mrow>
+       <mo class="mo">⏟</mo>
+      </munder>
+     </mrow>
+     <mrow class="mrow">
+      <mi mathvariant="normal" class="mi">a</mi>
+      <mi mathvariant="normal" class="mi">n</mi>
+      <mi mathvariant="normal" class="mi">o</mi>
+      <mi mathvariant="normal" class="mi">m</mi>
+      <mi mathvariant="normal" class="mi">a</mi>
+      <mi mathvariant="normal" class="mi">l</mi>
+      <mi mathvariant="normal" class="mi">i</mi>
+      <mi mathvariant="normal" class="mi">e</mi>
+      <mi mathvariant="normal" class="mi">s</mi>
+     </mrow>
+    </munder>
+   </math>
+  </alternatives>
+  <label class="label">(15)</label>
+ </disp-formula>
+</p>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list list-type="simple" class="list">
+ <list-item class="list-item">
+  <label class="label">dat</label>
+  <p class="p">A single directory name, or a list of NetCDF files. If a directory name is given, all NetCDF files in the directory will be used. The pairing of temperature and precipitation NetCDF files in the directory relies on the CMIP5 file naming conventions. Other naming conventions are not currently supported.</p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">tvarname</label>
+  <p class="p">A string with the name of the temperature variable in the temperature NetCDF.</p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">tlatvar</label>
+  <p class="p">A string with the name of the latitude coordinate variable in the temperature NetCDF files. Normally this is simply ‘lat’.</p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">tlonvar</label>
+  <p class="p">A string with the name of the longitude coordinate variable in the temperature NetCDF files. Normally this is simply ‘lon’.</p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">tvarconvert_fcn</label>
+  <p class="p">The function used to transform the temperature variable prior to training so that it has support on (−∞, ∞). Defaults to 
+   <monospace class="monospace">NULL</monospace>, as temperature is effectively already supported on this range.
+  </p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">pvarname</label>
+  <p class="p">A string with the name of the temperature variable in the precipitation NetCDF.</p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">platvar</label>
+  <p class="p">A string with the name of the latitude coordinate variable in the precipitation NetCDF files. Normally this is simply ‘lat’.</p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">plonvar</label>
+  <p class="p">A string with the name of the longitude coordinate variable in the precipitation NetCDF files. Normally this is simply ‘lon’.</p>
+ </list-item>
+ <list-item class="list-item">
+  <label class="label">pvarconvert_fcn</label>
+  <p class="p">The function used to transform the precipitation variable prior to training so that it has support on (−∞, ∞). Defaults to 
+   <monospace class="monospace">log</monospace>.
+  </p>
+ </list-item>
+</list>
