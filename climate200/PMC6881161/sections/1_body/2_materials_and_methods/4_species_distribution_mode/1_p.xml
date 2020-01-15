@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>We modeled species distributions using Maxent 3.3.3k, a maximum entropy algorithm designed for species distribution modeling with presence-only data (
+ <ext-link ext-link-type="uri" xlink:href="https://biodiversityinformatics.amnh.org/open_source/maxent/" xmlns:xlink="http://www.w3.org/1999/xlink">https://biodiversityinformatics.amnh.org/open_source/maxent/</ext-link>) (
+ <xref rid="R31" ref-type="bibr">
+  <italic>31</italic>
+ </xref>), which performs well compared to other methods (
+ <xref rid="R32" ref-type="bibr">
+  <italic>32</italic>
+ </xref>, 
+ <xref rid="R33" ref-type="bibr">
+  <italic>33</italic>
+ </xref>). To correct for spatial bias among botanical collections, we used a target-group background sample of all raster cells from which at least one botanical record was made for model training. Hinge, product, and threshold predictor features were excluded from the Maxent algorithm for model training to minimize the chances of overfitting (
+ <xref rid="R34" ref-type="bibr">
+  <italic>34</italic>
+ </xref>). As a measure of SDM accuracy, we used the area under the curve (AUC) of the receiver operating characteristic plot (
+ <xref rid="R35" ref-type="bibr">
+  <italic>35</italic>
+ </xref>). Each SDM was evaluated against a bias-corrected null model built with presence locations randomly selected from the target-group background sample (
+ <xref rid="R36" ref-type="bibr">
+  <italic>36</italic>
+ </xref>). We drew as many random points 
+ <italic>n</italic> from cells where collections were made as number of records used to develop each SDM and repeated this process 100 times. To test for significance, the upper 95% one-sided confidence interval AUC value from the randomization was compared to the AUC in the developed SDM. SDMs with AUC values higher than the 95th percentile of null models were considered to have a significantly stronger relationship between presences and predictors than expected by chance alone and were retained for further analyses. Overall, we retained 2353 significant SDMs (77% of the 3053 SDMs), which represent 26% of New Guinea’s endemic plants. All significant SDMs were projected to the future climatic conditions for two climate change scenarios: RCP 2.6 and RCP 8.5.
+</p>

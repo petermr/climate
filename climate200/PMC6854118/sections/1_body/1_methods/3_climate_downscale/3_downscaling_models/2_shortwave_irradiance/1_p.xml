@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>Solar radiation can regulate temperature in complex terrains as topography produces varying solar angles and can reduce terrain winds that diminish boundary layer mixing during the winter months (Daly, 
+ <xref rid="ece35511-bib-0011" ref-type="ref">2006</xref>; Dobrowski et al., 
+ <xref rid="ece35511-bib-0016" ref-type="ref">2009</xref>; Urban, Miller, Halpin, &amp; Stephenson, 
+ <xref rid="ece35511-bib-0064" ref-type="ref">2000</xref>). Therefore, solar radiation is an important physiographic parameter to consider when downscaling temperature to topo and microscales. Mean monthly daily clear‐sky irradiance at a location 
+ <italic>x</italic>,
+ <italic>y</italic> (
+ <italic>I</italic>
+ <sub>(</sub>
+ <italic>
+  <sub>x</sub>
+ </italic>
+ <sub>,</sub>
+ <italic>
+  <sub>y</sub>
+ </italic>
+ <sub>,</sub>
+ <italic>
+  <sub>t</sub>
+ </italic>
+ <sub>)</sub>, W/m
+ <sup>2</sup>) was modeled using the r.sun algorithm (Suri &amp; Hofierka, 
+ <xref rid="ece35511-bib-0059" ref-type="ref">2004</xref>) running under GRASS GIS 7.1. This algorithm uses topographic elevation, slope, aspect, and geographic latitude as inputs referenced against solar angles. GRASS GIS's r.sun algorithm is a complex and flexible solar radiation model that has been found to outperform other similar products (SolarFlux, Solei, Solar Analyst, and SRAD) because it performs especially well for large areas at fine resolutions with complex terrain and can be used for long‐term calculations at different scales (Hofierka &amp; Suri, 
+ <xref rid="ece35511-bib-0035" ref-type="ref">2002</xref>; Ruiz‐Arias, Tovar‐Pescador, Pozo‐Vázquez, &amp; Alsamamra, 
+ <xref rid="ece35511-bib-0055" ref-type="ref">2009</xref>). To create “true sky” clouded irradiance surfaces for both the LGM and today, we acquired coarse modeled surface downwelling shortwave radiation (100 km) that was calculated by the Coupled Model Intercomparison Project (CMIP5, Modern) the Paleoclimate Modeling Intercomparison Project (PMIP5, LGM; Taylor, Stouffer, &amp; Meehl, 
+ <xref rid="ece35511-bib-0060" ref-type="ref">2012</xref>). These groups calculate surface downwelling shortwave radiation using additional modeled climate surfaces produced from the same CCSM4 LGM and modern historical runs used in our temperature and precipitation downscale models. To transform our high‐resolution “clear‐sky” irradiance to “true‐sky” irradiance, we calculated the ratio of true‐sky to clear‐sky irradiance for each month for both the LGM and today, and then applied each corresponding ratio to each monthly high‐resolution clear‐sky irradiance surface to create twelve monthly LGM and Modern “true‐sky” surface radiation surfaces that are capable of considering coarse atmospheric properties (e.g., cloud cover) of each era with our clear‐sky radiation surfaces. We then summarized our monthly radiation surfaces into an annual average radiation surface to compute novel and disappeared radiation climates for later analysis. Mean radiation was created by computing the yearly average of all monthly radiation surfaces for both the LGM and modern eras at 60‐m resolution.
+</p>
