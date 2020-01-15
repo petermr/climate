@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Here we deviate somewhat from orthodox Bayesian practice. A typical Bayesian approach would assume a distributional form for the discrepancy vector 
+ <italic class="italic">f</italic>
+ <bold class="bold">
+  <italic class="italic">ε</italic>
+ </bold>
+ <sub class="sub">
+  <bold class="bold">
+   <italic class="italic">D</italic>
+  </bold>
+ </sub>. However, because this error is likely long-term dependent, and the probability distributions for its components are not necessarily normal, finding and justifying a proper parametric model for it is non-trivial. To deal with this conundrum, we adopt an approach inspired by prior work [
+ <xref rid="pone.0214535.ref037" ref-type="bibr" class="xref">37</xref>]. We postulate that model error can be derived from inter-model trend differences. The reasoning for this implementation is as follows. Imagine a particular trend submodel 
+ <italic class="italic">M</italic>
+ <sub class="sub">
+  <italic class="italic">T</italic>,
+  <italic class="italic">i</italic>
+ </sub> represents the “true” system. Associated with this system is trend 
+ <bold class="bold">
+  <italic class="italic">x</italic>
+ </bold>
+ <sub class="sub">
+  <bold class="bold">
+   <italic class="italic">i</italic>
+  </bold>
+ </sub> and pseudo-observations 
+ <bold class="bold">
+  <inline-formula id="pone.0214535.e011" class="inline-formula">
+   <alternatives class="alternatives">
+    <graphic xlink:href="pone.0214535.e011.jpg" id="pone.0214535.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+    <math id="M11" class="math">
+     <msubsup class="msubsup">
+      <mrow class="mrow">
+       <mi mathvariant="bold-italic" class="mi">x</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mi mathvariant="bold-italic" class="mi">i</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mi mathvariant="bold-italic" class="mi">'</mi>
+      </mrow>
+     </msubsup>
+    </math>
+   </alternatives>
+  </inline-formula>
+ </bold>. If only the rest of the models are available to the researcher, then the best-fit model 
+ <italic class="italic">j</italic> to these pseudo-observations is associated with trend 
+ <bold class="bold">
+  <italic class="italic">x</italic>
+ </bold>
+ <sub class="sub">
+  <bold class="bold">
+   <italic class="italic">j</italic>
+  </bold>
+ </sub>. The difference between the best model and the pseudo-observed trends is then the unscaled error of the 
+ <italic class="italic">j</italic>th model. Thus, we obtain samples for unscaled discrepancy 
+ <bold class="bold">
+  <italic class="italic">ε</italic>
+ </bold>
+ <sub class="sub">
+  <bold class="bold">
+   <italic class="italic">D</italic>
+  </bold>
+ </sub> directly from the differences between each model’s trend and the next-closest model trend (see [
+ <xref rid="pone.0214535.ref009" ref-type="bibr" class="xref">9</xref>] for details). We acknowledge that this parameterization is simplified; model error is an emergent research topic [
+ <xref rid="pone.0214535.ref037" ref-type="bibr" class="xref">37</xref>]. We thus hope this work can galvanize more research on parametrizing model error.
+</p>

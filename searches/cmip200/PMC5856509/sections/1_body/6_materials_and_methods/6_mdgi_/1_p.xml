@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">The MDGI is a statistical model that predicts the likelihood of LPS genesis as a function of climatological monthly mean variables (
+ <xref rid="r19" ref-type="bibr" class="xref">19</xref>). The expected number of LPS genesis points 
+ <inline-formula class="inline-formula">
+  <math id="i44" class="math">
+   <mi class="mi">μ</mi>
+  </math>
+ </inline-formula> is written as a log-linear model,
+ <disp-formula id="uneq5" class="disp-formula">
+  <math id="me5" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <mi class="mi">μ</mi>
+     <mo class="mo">=</mo>
+     <mrow class="mrow">
+      <mi class="mi">e</mi>
+      <mi class="mi">x</mi>
+      <mi class="mi">p</mi>
+      <mrow class="mrow">
+       <mo stretchy="false" class="mo">[</mo>
+       <mrow class="mrow">
+        <mrow class="mrow">
+         <msup class="msup">
+          <mtext class="mtext">𝐛</mtext>
+          <mi class="mi">T</mi>
+         </msup>
+         <mtext class="mtext">𝐱</mtext>
+        </mrow>
+        <mo class="mo">+</mo>
+        <mrow class="mrow">
+         <mi class="mi">log</mi>
+         <mrow class="mrow">
+          <mo stretchy="false" class="mo">(</mo>
+          <mrow class="mrow">
+           <mi mathvariant="normal" class="mi">Δ</mi>
+           <mi class="mi">x</mi>
+           <mi mathvariant="normal" class="mi">Δ</mi>
+           <mpadded width="+1.7pt" class="mpadded">
+            <mi class="mi">y</mi>
+           </mpadded>
+           <mi class="mi">T</mi>
+           <mrow class="mrow">
+            <mi class="mi">cos</mi>
+            <mo class="mo">⁡</mo>
+            <mi class="mi">ϕ</mi>
+           </mrow>
+          </mrow>
+          <mo stretchy="false" class="mo">)</mo>
+         </mrow>
+        </mrow>
+       </mrow>
+       <mo stretchy="false" class="mo">]</mo>
+      </mrow>
+     </mrow>
+    </mrow>
+    <mo class="mo">,</mo>
+   </mrow>
+  </math>
+ </disp-formula>where 
+ <bold class="bold">b</bold> is a vector of coefficients multiplying the climatological variables in the vector 
+ <bold class="bold">x</bold>, 
+ <inline-formula class="inline-formula">
+  <math id="i45" class="math">
+   <mrow class="mrow">
+    <mi mathvariant="normal" class="mi">Δ</mi>
+    <mi class="mi">x</mi>
+   </mrow>
+  </math>
+ </inline-formula> and 
+ <inline-formula class="inline-formula">
+  <math id="i46" class="math">
+   <mrow class="mrow">
+    <mi mathvariant="normal" class="mi">Δ</mi>
+    <mi class="mi">y</mi>
+   </mrow>
+  </math>
+ </inline-formula> are the longitude and latitude grid spacing, respectively, 
+ <inline-formula class="inline-formula">
+  <math id="i47" class="math">
+   <mi class="mi">T</mi>
+  </math>
+ </inline-formula> is the number of years in the storm count record, and 
+ <inline-formula class="inline-formula">
+  <math id="i48" class="math">
+   <mi class="mi">ϕ</mi>
+  </math>
+ </inline-formula> is latitude. The variables in 
+ <inline-formula class="inline-formula">
+  <math id="i49" class="math">
+   <mi class="mi">𝐱</mi>
+  </math>
+ </inline-formula> were objectively selected in the original MDGI using cross-validation to avoid overfitting. The functional form of the MDGI permits fractional changes in genesis frequency to be expressed as a linear function of changes in the climatological variables,
+ <disp-formula id="uneq6" class="disp-formula">
+  <math id="me6" class="math">
+   <mrow class="mrow">
+    <mrow class="mrow">
+     <mfrac class="mfrac">
+      <mrow class="mrow">
+       <mi class="mi">δ</mi>
+       <mi class="mi">μ</mi>
+      </mrow>
+      <mi class="mi">μ</mi>
+     </mfrac>
+     <mo class="mo">=</mo>
+     <mrow class="mrow">
+      <msup class="msup">
+       <mtext class="mtext">𝐛</mtext>
+       <mi class="mi">T</mi>
+      </msup>
+      <mtext class="mtext">𝐱</mtext>
+     </mrow>
+    </mrow>
+    <mo class="mo">.</mo>
+   </mrow>
+  </math>
+ </disp-formula>Using Poisson regression we refit the log-linear model to HiRAM storm counts in the HIST simulations for June–September, giving one set of MDGI coefficients for each of the four ensemble members. All four sets of coefficients were similar to each other and to the previously derived coefficients obtained using global observations of LPS counts for the full calendar year (
+ <xref rid="r19" ref-type="bibr" class="xref">19</xref>), but the HiRAM coefficients had larger standard errors due to the smaller number of storms occurring in the Indian region.
+</p>

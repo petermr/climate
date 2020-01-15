@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To identify catchments with similar responses, the 2‐D surfaces for each rainfall‐runoff model and catchment are first converted to a single vector and horizontally concatenated. All vectors are arranged into a matrix of size 35 × 1,050—representing the number of observations (catchments) and variables (points on the response surface), respectively—and input to a 
+ <italic class="italic">k</italic>‐means clustering procedure (Lloyd, 
+ <xref rid="wrcr23804-bib-0053" ref-type="ref" class="xref">1982</xref>). Accordingly, the algorithm partitions the input matrix into 
+ <inline-formula class="inline-formula">
+  <italic class="italic">k</italic>
+ </inline-formula> clusters for which each catchment response surface is assigned to the cluster with the nearest centroid based on Euclidean distance. The centroid is estimated as the arithmetic mean of assigned cluster members. As clusters are influenced by the initial position, 100 random initialization points are used. That seed point which minimizes the cost function is retained. The error function used is expressed as 
+ <disp-formula id="wrcr23804-disp-0004" class="disp-formula">
+  <label class="label">(4)</label>
+  <math id="nlm-math-5" class="math">
+   <mi class="mi">J</mi>
+   <mo class="mo">=</mo>
+   <munderover class="munderover">
+    <mo class="mo">∑</mo>
+    <mrow class="mrow">
+     <mi class="mi">j</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <mi class="mi">k</mi>
+   </munderover>
+   <munderover class="munderover">
+    <mo class="mo">∑</mo>
+    <mrow class="mrow">
+     <mi class="mi">i</mi>
+     <mo class="mo">=</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <mi class="mi">n</mi>
+   </munderover>
+   <mfenced open="‖" close="‖" class="mfenced">
+    <mrow class="mrow">
+     <msubsup class="msubsup">
+      <mi class="mi">x</mi>
+      <mi class="mi">i</mi>
+      <mfenced open="(" close=")" class="mfenced">
+       <mi class="mi">j</mi>
+      </mfenced>
+     </msubsup>
+     <mo class="mo">−</mo>
+     <msub class="msub">
+      <mi class="mi">c</mi>
+      <mi class="mi">j</mi>
+     </msub>
+    </mrow>
+   </mfenced>
+  </math>
+ </disp-formula>where 
+ <inline-formula class="inline-formula">
+  <italic class="italic">k</italic>
+ </inline-formula> and 
+ <inline-formula class="inline-formula">
+  <italic class="italic">n</italic>
+ </inline-formula> represent the number of clusters and observations, respectively; 
+ <math id="nlm-math-6" class="math">
+  <msubsup class="msubsup">
+   <mi class="mi">x</mi>
+   <mi class="mi">i</mi>
+   <mfenced open="(" close=")" class="mfenced">
+    <mi class="mi">j</mi>
+   </mfenced>
+  </msubsup>
+ </math> denotes the 
+ <italic class="italic">i</italic>th member of the 
+ <italic class="italic">j</italic>th cluster, the centroid of which is given by 
+ <inline-formula class="inline-formula">
+  <italic class="italic">c</italic>
+  <sub class="sub">
+   <italic class="italic">j</italic>
+  </sub>
+ </inline-formula>. This algorithm is used in conjunction with the Calinski‐Harabasz (CH) efficiency criterion (Calinski &amp; Harabasz, 
+ <xref rid="wrcr23804-bib-0020" ref-type="ref" class="xref">1974</xref>) to optimize the number of clusters. The criterion seeks a value for 
+ <italic class="italic">k</italic>, which simultaneously minimizes/maximizes the within/between cluster variance: 
+ <disp-formula id="wrcr23804-disp-0005" class="disp-formula">
+  <label class="label">(5)</label>
+  <math id="nlm-math-7" class="math">
+   <mi class="mi">CH</mi>
+   <mo class="mo">=</mo>
+   <mfrac class="mfrac">
+    <msub class="msub">
+     <mi class="mi">B</mi>
+     <mi class="mi">k</mi>
+    </msub>
+    <msub class="msub">
+     <mi class="mi">W</mi>
+     <mi class="mi">k</mi>
+    </msub>
+   </mfrac>
+   <mo class="mo">×</mo>
+   <mfrac class="mfrac">
+    <mrow class="mrow">
+     <mi class="mi">N</mi>
+     <mo class="mo">−</mo>
+     <mi class="mi">k</mi>
+    </mrow>
+    <mrow class="mrow">
+     <mi class="mi">k</mi>
+     <mo class="mo">−</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+   </mfrac>
+  </math>
+ </disp-formula>where 
+ <inline-formula class="inline-formula">
+  <italic class="italic">N</italic>
+ </inline-formula> represents the number of data points. 
+ <inline-formula class="inline-formula">
+  <italic class="italic">W</italic>
+  <sub class="sub">
+   <italic class="italic">k</italic>
+  </sub>
+ </inline-formula> and 
+ <inline-formula class="inline-formula">
+  <italic class="italic">B</italic>
+  <sub class="sub">
+   <italic class="italic">k</italic>
+  </sub>
+ </inline-formula> denote the within and between cluster sum of squares, respectively, calculated using the squared Euclidean distance. Convergence to a local optimum is achieved when group membership is stable over successive iterations. An individual 2‐D centroid response surface is derived for each model and cluster. This is calculated as the arithmetic mean of the individual (1,050) grid points averaged across cluster members. This vector is split according to each model and reshaped into the original response surface dimensions (21 × 25).
+</p>

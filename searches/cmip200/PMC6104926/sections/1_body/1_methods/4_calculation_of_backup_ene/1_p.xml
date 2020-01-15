@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Country-wise aggregated wind generation and load data are used to derive the backup energy need of a country given different storage capacities. At each point of time 
+ <italic class="italic">t</italic> power generation and consumption of a country must be balanced [
+ <xref rid="pone.0201457.ref012" ref-type="bibr" class="xref">12</xref>, 
+ <xref rid="pone.0201457.ref050" ref-type="bibr" class="xref">50</xref>, 
+ <xref rid="pone.0201457.ref054" ref-type="bibr" class="xref">54</xref>] 
+ <disp-formula id="pone.0201457.e006" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e006.jpg" id="pone.0201457.e006g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M6" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mi class="mi">R</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">+</mo>
+        <mi class="mi">B</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">=</mo>
+        <mo class="mo">Δ</mo>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">+</mo>
+        <mi class="mi">L</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">+</mo>
+        <mi class="mi">C</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(4)</label>
+ </disp-formula> where 
+ <italic class="italic">R</italic>(
+ <italic class="italic">t</italic>) and 
+ <italic class="italic">B</italic>(
+ <italic class="italic">t</italic>) denote the generation by fluctuating renewables and dispatchable backup generators, respectively, 
+ <italic class="italic">L</italic>(
+ <italic class="italic">t</italic>) is the load and 
+ <italic class="italic">C</italic>(
+ <italic class="italic">t</italic>) denotes curtailment (cf. 
+ <xref ref-type="fig" rid="pone.0201457.g001" class="xref">Fig 1c</xref>). Δ(
+ <italic class="italic">t</italic>) is the generation (Δ(
+ <italic class="italic">t</italic>) &lt; 0) or load (Δ(
+ <italic class="italic">t</italic>) &gt; 0) of the storage facilities, such that the storage filling level evolves according to (cf. 
+ <xref ref-type="fig" rid="pone.0201457.g001" class="xref">Fig 1d</xref>) 
+ <disp-formula id="pone.0201457.e007" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e007.jpg" id="pone.0201457.e007g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M7" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mi class="mi">S</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">+</mo>
+        <mi class="mi">T</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">=</mo>
+        <mi class="mi">S</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">+</mo>
+        <mo class="mo">Δ</mo>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">·</mo>
+        <mi class="mi">T</mi>
+        <mo class="mo">.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(5)</label>
+ </disp-formula> where 
+ <italic class="italic">T</italic> is the duration of one time step (here: 3 hours). The storage filling level must satisfy 0 ≤ 
+ <italic class="italic">S</italic>(
+ <italic class="italic">t</italic>) ≤ 
+ <italic class="italic">S</italic>
+ <sub class="sub">max</sub> with 
+ <italic class="italic">S</italic>
+ <sub class="sub">max</sub> being the storage capacity. We decide to minimize the total backup energy 
+ <disp-formula id="pone.0201457.e008" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e008.jpg" id="pone.0201457.e008g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M8" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mo form="prefix" movablelimits="true" class="mo">min</mo>
+        <msub class="msub">
+         <mi class="mi">B</mi>
+         <mtext class="mtext">tot</mtext>
+        </msub>
+        <mo class="mo">=</mo>
+        <munder class="munder">
+         <mo class="mo">∑</mo>
+         <mi class="mi">t</mi>
+        </munder>
+        <mi class="mi">B</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">t</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">·</mo>
+        <mi class="mi">T</mi>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(6)</label>
+ </disp-formula> which also minimizes fossil-fuel usage and hence greenhouse gas emissions. One option to minimize 
+ <italic class="italic">B</italic>
+ <sub class="sub">tot</sub> is to consider a storage-first strategy [
+ <xref rid="pone.0201457.ref054" ref-type="bibr" class="xref">54</xref>], which we apply sequentially: In the case of overproduction (i.e. 
+ <italic class="italic">R</italic>(
+ <italic class="italic">t</italic>) &gt; 
+ <italic class="italic">L</italic>(
+ <italic class="italic">t</italic>)) excess energy is stored until the storage device is fully charged, 
+ <disp-formula id="pone.0201457.e009" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e009.jpg" id="pone.0201457.e009g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M9" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mo class="mo">Δ</mo>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">t</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">=</mo>
+        <mo form="prefix" movablelimits="true" class="mo">min</mo>
+        <mo class="mo">[</mo>
+        <mi class="mi">R</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">t</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">-</mo>
+        <mi class="mi">L</mi>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <mi class="mi">t</mi>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">;</mo>
+        <mrow class="mrow">
+         <mo class="mo">(</mo>
+         <msub class="msub">
+          <mi class="mi">S</mi>
+          <mtext class="mtext">max</mtext>
+         </msub>
+         <mo class="mo">-</mo>
+         <mi class="mi">S</mi>
+         <mrow class="mrow">
+          <mo class="mo">(</mo>
+          <mi class="mi">t</mi>
+          <mo class="mo">)</mo>
+         </mrow>
+         <mo class="mo">)</mo>
+        </mrow>
+        <mo class="mo">/</mo>
+        <mi class="mi">T</mi>
+        <mo class="mo">]</mo>
+        <mo class="mo">.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(7)</label>
+ </disp-formula> To ensure power balance, we may need curtailment 
+ <disp-formula id="pone.0201457.e010" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e010.jpg" id="pone.0201457.e010g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M10" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mi class="mi">C</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">=</mo>
+        <mi class="mi">R</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">-</mo>
+        <mi class="mi">L</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">-</mo>
+        <mo class="mo">Δ</mo>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(8)</label>
+ </disp-formula> In the case of scarcity (i.e. 
+ <italic class="italic">R</italic>(
+ <italic class="italic">t</italic>) &lt; 
+ <italic class="italic">L</italic>(
+ <italic class="italic">t</italic>)) energy is provided by the storage infrastructures until they are empty, 
+ <disp-formula id="pone.0201457.e011" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e011.jpg" id="pone.0201457.e011g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M11" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mo class="mo">Δ</mo>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">=</mo>
+        <mo class="mo">-</mo>
+        <mo form="prefix" movablelimits="true" class="mo">min</mo>
+        <mo class="mo">[</mo>
+        <mi class="mi">L</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">-</mo>
+        <mi class="mi">R</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">;</mo>
+        <mi class="mi">S</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">/</mo>
+        <mi class="mi">T</mi>
+        <mo class="mo">]</mo>
+        <mo class="mo">.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(9)</label>
+ </disp-formula> The missing energy has to be provided by backup power plants, 
+ <disp-formula id="pone.0201457.e012" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0201457.e012.jpg" id="pone.0201457.e012g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M12" class="math">
+    <mtable displaystyle="true" class="mtable">
+     <mtr class="mtr">
+      <mtd columnalign="right" class="mtd">
+       <mrow class="mrow">
+        <mi class="mi">B</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">=</mo>
+        <mi class="mi">L</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">-</mo>
+        <mi class="mi">R</mi>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">+</mo>
+        <mo class="mo">Δ</mo>
+        <mo class="mo">(</mo>
+        <mi class="mi">t</mi>
+        <mo class="mo">)</mo>
+        <mo class="mo">.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label class="label">(10)</label>
+ </disp-formula> The backup power 
+ <italic class="italic">B</italic> is not restricted in our model and can be interpreted as the aggregated amount of backup power per country, not differentiating between different technologies. In order to keep the storage neutral, a periodic boundary condition is applied [
+ <xref rid="pone.0201457.ref055" ref-type="bibr" class="xref">55</xref>]: We run the above algorithm twice. First, we choose 
+ <italic class="italic">S</italic>(
+ <italic class="italic">t</italic> = 0) = 
+ <italic class="italic">S</italic>
+ <sub class="sub">max</sub>/2. In the second run, we set 
+ <italic class="italic">S</italic>(
+ <italic class="italic">t</italic> = 0) to 
+ <italic class="italic">S</italic>(
+ <italic class="italic">t</italic> = 
+ <italic class="italic">t</italic>
+ <sub class="sub">max</sub>) of the first run. This way, the storage filling level at 
+ <italic class="italic">t</italic> = 
+ <italic class="italic">t</italic>
+ <sub class="sub">max</sub> equals the initial storage filling level at 
+ <italic class="italic">t</italic> = 0. We emphasize that by the term ‘storage’ we mean storage regardless of the technical realization. Hence, 
+ <italic class="italic">S</italic>
+ <sub class="sub">max</sub> describes the total accumulated storage capacity, including virtual storage. For simplicity, we neglect losses in the storage process.
+</p>

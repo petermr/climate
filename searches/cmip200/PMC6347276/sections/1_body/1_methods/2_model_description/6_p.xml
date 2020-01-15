@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">To implement the CO
+ <sub class="sub">2</sub> fertilization effect on WUE, MC2 uses a multiplier applied directly to production and transpiration. It is calculated as: 
+ <disp-formula id="pone.0210989.e004" class="disp-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0210989.e004.jpg" id="pone.0210989.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M4" class="math">
+    <mi class="mi">m</mi>
+    <mi class="mi">u</mi>
+    <mi class="mi">l</mi>
+    <mi class="mi">t</mi>
+    <mi class="mi">i</mi>
+    <mi class="mi">p</mi>
+    <mi class="mi">l</mi>
+    <mi class="mi">i</mi>
+    <mi class="mi">e</mi>
+    <mi class="mi">r</mi>
+    <mo class="mo">=</mo>
+    <mn class="mn">1</mn>
+    <mo class="mo">+</mo>
+    <mo class="mo">(</mo>
+    <mrow class="mrow">
+     <mi class="mi">e</mi>
+     <mi class="mi">f</mi>
+     <mi class="mi">f</mi>
+     <mi class="mi">e</mi>
+     <mi class="mi">c</mi>
+     <msub class="msub">
+      <mrow class="mrow">
+       <mi class="mi">t</mi>
+      </mrow>
+      <mrow class="mrow">
+       <mi class="mi">p</mi>
+       <mi class="mi">a</mi>
+       <mi class="mi">r</mi>
+       <mi class="mi">a</mi>
+       <mi class="mi">m</mi>
+      </mrow>
+     </msub>
+     <mo class="mo">−</mo>
+     <mn class="mn">1</mn>
+    </mrow>
+    <mo class="mo">)</mo>
+    <mo class="mo">*</mo>
+    <msub class="msub">
+     <mrow class="mrow">
+      <mi class="mi">l</mi>
+      <mi class="mi">o</mi>
+      <mi class="mi">g</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mn class="mn">2</mn>
+     </mrow>
+    </msub>
+    <mfrac class="mfrac">
+     <mrow class="mrow">
+      <mi class="mi">c</mi>
+      <mi class="mi">u</mi>
+      <mi class="mi">r</mi>
+      <mi class="mi">r</mi>
+      <mi class="mi">e</mi>
+      <mi class="mi">n</mi>
+      <mi class="mi">t</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">c</mi>
+      <mi class="mi">o</mi>
+      <mn class="mn">2</mn>
+      <mo class="mo">_</mo>
+      <mi class="mi">c</mi>
+      <mi class="mi">o</mi>
+      <mi class="mi">n</mi>
+      <mi class="mi">c</mi>
+     </mrow>
+     <mrow class="mrow">
+      <mi class="mi">b</mi>
+      <mi class="mi">a</mi>
+      <mi class="mi">s</mi>
+      <mi class="mi">e</mi>
+      <mi class="mi">l</mi>
+      <mi class="mi">i</mi>
+      <mi class="mi">n</mi>
+      <mi class="mi">e</mi>
+      <mo class="mo">_</mo>
+      <mi class="mi">c</mi>
+      <mi class="mi">o</mi>
+      <mn class="mn">2</mn>
+      <mo class="mo">_</mo>
+      <mi class="mi">c</mi>
+      <mi class="mi">o</mi>
+      <mi class="mi">n</mi>
+      <mi class="mi">c</mi>
+     </mrow>
+    </mfrac>
+   </math>
+  </alternatives>
+  <label class="label">(4)</label>
+ </disp-formula> where 
+ <italic class="italic">multiplier</italic> is the value used to modify production, 
+ <italic class="italic">effect_param</italic> specifies the degree of the effect, 
+ <italic class="italic">current_co2_conc</italic> is the CO
+ <sub class="sub">2</sub> concentration for the current model year, and 
+ <italic class="italic">baseline_co2_conc</italic> is the CO
+ <sub class="sub">2</sub> concentration at which the multiplier is equal to 1.0 (350 ppm in this study). CO
+ <sub class="sub">2</sub> concentrations above 350 ppm yield a positive effect and values below 350 yield a negative effect. The default CO
+ <sub class="sub">2</sub> fertilization effect used in this study is 1.25 (
+ <xref ref-type="fig" rid="pone.0210989.g003" class="xref">Fig 3</xref>).
+</p>

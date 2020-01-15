@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">Where 
+ <inline-formula class="inline-formula">
+  <italic class="italic">I</italic>(·)
+ </inline-formula> denotes the indicator function, 
+ <inline-formula class="inline-formula">
+  <italic class="italic">Y</italic>
+ </inline-formula> the observed class labels, and 
+ <inline-formula class="inline-formula">
+  <italic class="italic">c</italic>
+ </inline-formula> is the number of cases. Finally, 
+ <math id="nlm-math-11" class="math">
+  <mover accent="true" class="mover">
+   <mi class="mi">Y</mi>
+   <mo stretchy="true" class="mo">^</mo>
+  </mover>
+ </math> represents the OOB prediction and 
+ <inline-formula class="inline-formula">
+  <italic class="italic">J</italic>
+ </inline-formula> the vector of descriptors. Each tree is grown to a maximum depth thus avoiding uncertainty issues related to predictor selection and pruning method. During model training the RF algorithm identifies the most important predictors. Importance is quantified by observing the effect that randomly permuting each predictor has on the OOB error. A standardized measure of importance is returned—estimated as the average difference in prediction error across the ensemble divided by the standard deviation. Ensemble predictions are made by aggregating the classification predicted by EMs. For a given case that class with the majority vote is considered the most likely. To investigate uncertainty, the RF algorithm also returns the probability of the predicted class. For each CT the posterior probability at a particular node is the number of cases assigned to that node, which have the same observed class, divided by the total number of cases assigned to that node. The posterior probabilities returned by individual CTs are averaged across the ensemble.
+</p>

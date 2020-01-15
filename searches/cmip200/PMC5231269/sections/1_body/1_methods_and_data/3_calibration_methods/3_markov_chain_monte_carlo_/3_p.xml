@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p class="p">This is a simple model for the data model discrepancy since accounting for independent and identically distributed residuals ignores the potentially complex autocorrelation structure [
+ <xref rid="pone.0170052.ref032" ref-type="bibr" class="xref">32</xref>] of AIS trends. The autocorrelation structure can be modeled from year to year if more data are available [
+ <xref rid="pone.0170052.ref032" ref-type="bibr" class="xref">32</xref>]. In our case, our simple model seems appropriate, because there are four data points with large time spans between observations. We hence use models of white noise, δ
+ <sub class="sub">t</sub> that are independent normally distributed with different variance for the paleo and instrumental record, for instance, 
+ <inline-formula id="pone.0170052.e003" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0170052.e003.jpg" id="pone.0170052.e003g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M3" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">δ</mi>
+      <mi class="mi">t</mi>
+     </msub>
+     <mo class="mo">∼</mo>
+     <mi class="mi">N</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mn class="mn">0</mn>
+      <mo class="mo">,</mo>
+      <msubsup class="msubsup">
+       <mi class="mi">σ</mi>
+       <mi class="mi">P</mi>
+       <mn class="mn">2</mn>
+      </msubsup>
+      <mo class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+ </inline-formula> for t = 1, 2, 3 and 
+ <inline-formula id="pone.0170052.e004" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0170052.e004.jpg" id="pone.0170052.e004g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M4" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">δ</mi>
+      <mi class="mi">t</mi>
+     </msub>
+     <mo class="mo">∼</mo>
+     <mi class="mi">N</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mn class="mn">0</mn>
+      <mo class="mo">,</mo>
+      <msubsup class="msubsup">
+       <mi class="mi">σ</mi>
+       <mi class="mi">I</mi>
+       <mn class="mn">2</mn>
+      </msubsup>
+      <mo class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+ </inline-formula> for t = 4. The observation error ε
+ <sub class="sub">t</sub> is heteroskedastic consisting of a normal distribution with zero means and a time dependent variance, 
+ <inline-formula id="pone.0170052.e005" class="inline-formula">
+  <alternatives class="alternatives">
+   <graphic xlink:href="pone.0170052.e005.jpg" id="pone.0170052.e005g" mimetype="image" position="anchor" orientation="portrait" class="graphic" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M5" class="math">
+    <mrow class="mrow">
+     <msub class="msub">
+      <mi class="mi">ϵ</mi>
+      <mi class="mi">t</mi>
+     </msub>
+     <mo class="mo">∼</mo>
+     <mi class="mi">N</mi>
+     <mrow class="mrow">
+      <mo class="mo">(</mo>
+      <mn class="mn">0</mn>
+      <mo class="mo">,</mo>
+      <msubsup class="msubsup">
+       <mi class="mi">τ</mi>
+       <mi class="mi">t</mi>
+       <mn class="mn">2</mn>
+      </msubsup>
+      <mo class="mo">)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+ </inline-formula>. The white noise 
+ <bold class="bold">
+  <italic class="italic">δ</italic>
+ </bold> = (
+ <italic class="italic">δ</italic>
+ <sub class="sub">1</sub>, …, 
+ <italic class="italic">δ</italic>
+ <sub class="sub">
+  <italic class="italic">N</italic>
+ </sub>)
+ <sup class="sup">
+  <italic class="italic">t</italic>
+ </sup> approximates the model structural uncertainty and internal climate variability whereas the time dependent variance of 
+ <bold class="bold">
+  <italic class="italic">ϵ</italic>
+ </bold> = (
+ <italic class="italic">ϵ</italic>
+ <sub class="sub">1</sub>, …, 
+ <italic class="italic">ϵ</italic>
+ <sub class="sub">
+  <italic class="italic">N</italic>
+ </sub>)
+ <sup class="sup">
+  <italic class="italic">t</italic>
+ </sup> is implemented by substituting in the known measurement error of each observational constraint. This implementation is important because ignoring the potentially complex error structure can result in overconfident parameter estimates, hindcasts, and projections (e.g., [
+ <xref rid="pone.0170052.ref032" ref-type="bibr" class="xref">32</xref>]).
+</p>

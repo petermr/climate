@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par12" class="p">Based on prior literature
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR14" class="xref">14</xref>,
+  <xref ref-type="bibr" rid="CR25" class="xref">25</xref>,
+  <xref ref-type="bibr" rid="CR27" class="xref">27</xref>,
+  <xref ref-type="bibr" rid="CR30" class="xref">30</xref>
+ </sup>, we use Generalized Extreme Value theory (GEV) distribution for estimation of return levels of precipitation events. GEV, which is based on the block maxima theory is utilized to quantify the intensity of extreme precipitation. Given the duration of interest (e.g. 1-day data), the Annual Maximum Precipitation (AMP) series are computed from data; these are then used to estimate parameters of fitted GEV. In many studies, extreme rainfall statistics are expressed in terms of 
+ <italic class="italic">T</italic> year rainfall depth that statistically represents one annual maximum precipitation event exceeding a given threshold is expected to occur within every non-overlapping T year length window. Details of GEV can be found in
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR27" class="xref">27</xref>
+ </sup> and detailed methodology in the context of climate models is discussed in
+ <sup class="sup">
+  <xref ref-type="bibr" rid="CR14" class="xref">14</xref>,
+  <xref ref-type="bibr" rid="CR26" class="xref">26</xref>,
+  <xref ref-type="bibr" rid="CR30" class="xref">30</xref>
+ </sup>. The GEV parameters are estimated using the maximum likelihood estimates. We use 
+ <italic class="italic">fevd</italic> and 
+ <italic class="italic">eva</italic> library in R to estimate return levels, 95% confidence interval around the estimate and generate random samples from extreme value distribution with estimated parameters for testing statistical significance. We test for the goodness of fit of the extreme value distributions using Kolmogorov-Smirnov at a 5% significance level. If a grid-point fails to pass the goodness of fit test, it is not included in the computation of regional statistics. Less than 1% of the total cases fail to pass the goodness of fit tests suggesting the appropriateness of the GEV distribution in modeling precipitation extremes. In concatenation approach, we use annual maximum precipitation from each year and concatenate these together. For example, 27 initial conditions with 96 years of daily data will yield (27 × 96) AMPs, which in turn, are used to estimate return levels and associated 95% confidence interval bound around the estimates.
+</p>
