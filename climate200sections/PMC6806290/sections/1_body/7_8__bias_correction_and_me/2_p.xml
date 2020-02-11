@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>Specifically, multi-annual averages of 
+ <inline-formula>
+  <math id="mm58">
+   <mrow>
+    <msub>
+     <mi>R</mi>
+     <mrow>
+      <mi>r</mi>
+      <mi>s</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </math>
+ </inline-formula> expressed at the SeaWiFS wavelengths (i.e., band-shifted 
+ <inline-formula>
+  <math id="mm59">
+   <mrow>
+    <msub>
+     <mi>R</mi>
+     <mrow>
+      <mi>r</mi>
+      <mi>s</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </math>
+ </inline-formula> in the case of MODIS-Aqua, MERIS, and VIIRS) are computed over the period of 2003–2007, serving as the reference period when the three missions all functioned in an optimal way without any data gaps. In practice, 4-km daily data are first averaged as monthly composites, which are then combined into a monthly climatology for the period (i.e., all five January composites combined and so forth). Finally, these twelve monthly maps are averaged as a multi-annual (five-year) composite. This approach was chosen to reduce the impact of unusual or annual variations on the average and to minimise data gaps. The multi-annual bias of the average 
+ <inline-formula>
+  <math id="mm60">
+   <mrow>
+    <msub>
+     <mi>R</mi>
+     <mrow>
+      <mi>r</mi>
+      <mi>s</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </math>
+ </inline-formula> values (
+ <inline-formula>
+  <math id="mm61">
+   <mrow>
+    <mrow>
+     <mo>&lt;</mo>
+     <msub>
+      <mi>R</mi>
+      <mrow>
+       <mi>r</mi>
+       <mi>s</mi>
+      </mrow>
+     </msub>
+     <mo>&gt;</mo>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula>) from mission 
+ <italic>i</italic> with respect to a reference mission (denoted as ref) is thus expressed as follows:
+ <disp-formula id="FD1-sensors-19-04285">
+  <label>(1)</label>
+  <math id="mm62">
+   <mrow>
+    <mrow>
+     <msubsup>
+      <mi>δ</mi>
+      <mi>i</mi>
+      <mrow>
+       <mi>r</mi>
+       <mi>e</mi>
+       <mi>f</mi>
+      </mrow>
+     </msubsup>
+     <mrow>
+      <mo>(</mo>
+      <mi>λ</mi>
+      <mo>,</mo>
+      <mi>b</mi>
+      <mo>)</mo>
+     </mrow>
+     <mo>=</mo>
+     <mfrac>
+      <mrow>
+       <mo>&lt;</mo>
+       <msubsup>
+        <mi>R</mi>
+        <mrow>
+         <mi>r</mi>
+         <mi>s</mi>
+        </mrow>
+        <mi>i</mi>
+       </msubsup>
+       <mrow>
+        <mo>(</mo>
+        <mi>λ</mi>
+        <mo>,</mo>
+        <mi>b</mi>
+        <mo>)</mo>
+       </mrow>
+       <mo>&gt;</mo>
+      </mrow>
+      <mrow>
+       <mo>&lt;</mo>
+       <msubsup>
+        <mi>R</mi>
+        <mrow>
+         <mi>r</mi>
+         <mi>s</mi>
+        </mrow>
+        <mrow>
+         <mi>r</mi>
+         <mi>e</mi>
+         <mi>f</mi>
+        </mrow>
+       </msubsup>
+       <mrow>
+        <mo>(</mo>
+        <mi>λ</mi>
+        <mo>,</mo>
+        <mi>b</mi>
+        <mo>)</mo>
+       </mrow>
+       <mo>&gt;</mo>
+      </mrow>
+     </mfrac>
+     <mo>,</mo>
+    </mrow>
+   </mrow>
+  </math>
+ </disp-formula> for wavelength 
+ <inline-formula>
+  <math id="mm63">
+   <mrow>
+    <mi>λ</mi>
+   </mrow>
+  </math>
+ </inline-formula> and bin location 
+ <italic>b</italic>. The bias correction is the reverse operation applied on any daily 
+ <inline-formula>
+  <math id="mm64">
+   <mrow>
+    <msub>
+     <mi>R</mi>
+     <mrow>
+      <mi>r</mi>
+      <mi>s</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </math>
+ </inline-formula> record at bin location 
+ <italic>b</italic> to produce a bias-corrected 
+ <inline-formula>
+  <math id="mm65">
+   <mrow>
+    <msub>
+     <mi>R</mi>
+     <mrow>
+      <mi>r</mi>
+      <mi>s</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </math>
+ </inline-formula>:
+ <disp-formula id="FD2-sensors-19-04285">
+  <label>(2)</label>
+  <math id="mm66">
+   <mrow>
+    <mrow>
+     <msubsup>
+      <mi>R</mi>
+      <mrow>
+       <mi>r</mi>
+       <mi>s</mi>
+      </mrow>
+      <mrow>
+       <mi>i</mi>
+       <mo>,</mo>
+       <mi>c</mi>
+       <mi>o</mi>
+       <mi>r</mi>
+       <mi>r</mi>
+      </mrow>
+     </msubsup>
+     <mrow>
+      <mo>(</mo>
+      <mi>λ</mi>
+      <mo>,</mo>
+      <mi>b</mi>
+      <mo>)</mo>
+     </mrow>
+     <mo>=</mo>
+     <mfrac>
+      <mrow>
+       <msubsup>
+        <mi>R</mi>
+        <mrow>
+         <mi>r</mi>
+         <mi>s</mi>
+        </mrow>
+        <mi>i</mi>
+       </msubsup>
+       <mrow>
+        <mo>(</mo>
+        <mi>λ</mi>
+        <mo>,</mo>
+        <mi>b</mi>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+      <mrow>
+       <msubsup>
+        <mi>δ</mi>
+        <mi>i</mi>
+        <mrow>
+         <mi>r</mi>
+         <mi>e</mi>
+         <mi>f</mi>
+        </mrow>
+       </msubsup>
+       <mrow>
+        <mo>(</mo>
+        <mi>λ</mi>
+        <mo>,</mo>
+        <mi>b</mi>
+        <mo>)</mo>
+       </mrow>
+      </mrow>
+     </mfrac>
+     <mo>.</mo>
+    </mrow>
+   </mrow>
+  </math>
+ </disp-formula>
+</p>

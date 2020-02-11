@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par34">We averaged monthly temperatures and VPDs to calculate annual temperature, annual VPD, and standard deviation of annual VPD for each location over a 30-year time period. We then developed custom code in Python (v. 3.6) to analyze the correlation between these environmental variables using linear regression analyses from the 
+ <italic>statsmodels</italic> library. We sampled the spatial layers using the 
+ <italic>gdal</italic> functions in 
+ <italic>osgeo</italic> library to convert the spatial data into a large dataset (~60 gigabytes) for downstream analysis. Due to the large size of the dataset, we used the 
+ <italic>chunksize</italic> parameter in the 
+ <italic>pandas</italic> library to import portions of the global dataset for analysis. We then used the 
+ <italic>multiprocessing</italic> library to evaluate correlations for each site (meaning, a single pixel of roughly 4 km) across 30 independent central processing units. These individual datasets were then compiled together and sorted into global maps using a custom function in Python. These maps were then visualized in QGIS (v. 2.1). All script is available at 
+ <ext-link ext-link-type="uri" xlink:href="https://github.com/ecophysiology/global_cues" xmlns:xlink="http://www.w3.org/1999/xlink">https://github.com/ecophysiology/global_cues</ext-link>.
+</p>

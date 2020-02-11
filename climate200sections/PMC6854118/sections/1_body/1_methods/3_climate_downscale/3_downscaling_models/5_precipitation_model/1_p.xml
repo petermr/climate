@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>The model to downscale precipitation was found to require topographic predictors at a variety of scales, not just the high resolution 60 m predictors. Specifically, we used elevation at location 
+ <italic>x,y</italic> (
+ <italic>Z</italic>
+ <sub>(</sub>
+ <italic>
+  <sub>x,y</sub>
+ </italic>
+ <sub>)</sub>) at 60 m; topographic slope at location 
+ <italic>x</italic>,
+ <italic>y</italic> at 1‐km resolution (
+ <italic>m
+  <sub>x,y</sub>
+ </italic>); wind speed (
+ <italic>m</italic>/
+ <italic>s</italic>, 
+ <sub>(</sub>
+ <italic>
+  <sub>x,y,t,t</sub>
+ </italic>
+ <sub>′)</sub>) and wind direction at a given location (
+ <italic>x,y</italic>) (
+ <italic>degrees</italic>, 
+ <sub>(</sub>
+ <italic>
+  <sub>x,y,t,t</sub>
+ </italic>
+ <sub>′)</sub>) and month (
+ <italic>t</italic>) at 100 km; and the angular difference between geographic direction and topographic aspect to act as an orographic effect proxy (i.e., rain shadow) at 500‐m resolution (
+ <italic>
+  <sub>x,y,t,t</sub>
+ </italic>
+ <sub>′</sub>). Elevation and slope exhibited slight nonlinear trends which were corrected by applying a log‐transformation to each of the two predictor variables. A cubic root transformation was applied to (
+ <italic>P
+  <sub>x,y,t,t</sub>
+ </italic>
+ <sub>′</sub>) and (
+ <italic>P</italic>′
+ <italic>
+  <sub>x,y,t,t</sub>
+ </italic>
+ <sub>′</sub>) so the model could not predict values below 0 mm/month (Equation 
+ <xref rid="ece35511-disp-0003" ref-type="disp-formula">3</xref>). The final model form was
+ <disp-formula id="ece35511-disp-0003">
+  <label>(3)</label>
+  <math id="nlm-math-3">
+   <mrow>
+    <msup>
+     <mfenced close=")" open="(" separators="">
+      <msub>
+       <mi>P</mi>
+       <mrow>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>t</mi>
+        <mo>,</mo>
+        <msup>
+         <mi>t</mi>
+         <mo>′</mo>
+        </msup>
+       </mrow>
+      </msub>
+     </mfenced>
+     <mrow>
+      <mn>1</mn>
+      <mo stretchy="false">/</mo>
+      <mn>3</mn>
+     </mrow>
+    </msup>
+    <mo>=</mo>
+    <msup>
+     <mfenced close=")" open="(" separators="">
+      <msubsup>
+       <mi>P</mi>
+       <mrow>
+        <mi>x</mi>
+        <mo>,</mo>
+        <mi>y</mi>
+        <mo>,</mo>
+        <mi>t</mi>
+        <mo>,</mo>
+        <msup>
+         <mi>t</mi>
+         <mo>′</mo>
+        </msup>
+       </mrow>
+       <mo>′</mo>
+      </msubsup>
+     </mfenced>
+     <mrow>
+      <mn>1</mn>
+      <mo stretchy="false">/</mo>
+      <mn>3</mn>
+     </mrow>
+    </msup>
+    <mo>+</mo>
+    <mtext>log</mtext>
+    <mfenced close=")" open="(" separators="">
+     <msub>
+      <mi>Z</mi>
+      <mrow>
+       <mi>x</mi>
+       <mo>,</mo>
+       <mi>y</mi>
+      </mrow>
+     </msub>
+    </mfenced>
+    <mo>+</mo>
+    <mtext>log</mtext>
+    <mfenced close=")" open="(" separators="">
+     <msub>
+      <mi>m</mi>
+      <mrow>
+       <mi>x</mi>
+       <mo>,</mo>
+       <mi>y</mi>
+      </mrow>
+     </msub>
+    </mfenced>
+    <mo>+</mo>
+    <msub>
+     <mi>ω</mi>
+     <mrow>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>,</mo>
+      <msup>
+       <mi>t</mi>
+       <mo>′</mo>
+      </msup>
+     </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+     <mi>θ</mi>
+     <mrow>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>,</mo>
+      <msup>
+       <mi>t</mi>
+       <mo>′</mo>
+      </msup>
+     </mrow>
+    </msub>
+    <mo>+</mo>
+    <msub>
+     <mi mathvariant="normal">Δ</mi>
+     <mrow>
+      <mi>x</mi>
+      <mo>,</mo>
+      <mi>y</mi>
+      <mo>,</mo>
+      <mi>t</mi>
+      <mo>,</mo>
+      <msup>
+       <mi>t</mi>
+       <mo>′</mo>
+      </msup>
+     </mrow>
+    </msub>
+    <mo>+</mo>
+    <mi>ε</mi>
+   </mrow>
+  </math>
+ </disp-formula>
+</p>

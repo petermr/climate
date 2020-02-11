@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par26">To identify the best performing model for each bird species, we compared five SDM algorithms: generalized linear models (GLM), generalized additive models (GAM), boosted regression trees (GBM), random forest (RF) and maximum entropy models (MAXENT)
+ <sup>
+  <xref ref-type="bibr" rid="CR71">71</xref>
+ </sup>. SDMs were based on mean annual temperature and precipitation values (WorldClim
+ <sup>
+  <xref ref-type="bibr" rid="CR41">41</xref>
+ </sup>). As a random cross-validation of model performance, species occurrence data were split into 80% calibration data and 20% evaluation data. Prevalence was set to 0.5, to give presences and absences the same importance in the calibration process. We followed the suggestions of Barbet-Massin 
+ <italic>et al</italic>.
+ <sup>
+  <xref ref-type="bibr" rid="CR72">72</xref>
+ </sup>, who provide a comparative analysis from which they derive recommendations on how, where and how many pseudo-absences should be generated for various SDM algorithms. Prior to model fitting, we consequently selected 10,000 random PAs from the background data for fitting GLM and GAM models
+ <sup>
+  <xref ref-type="bibr" rid="CR72">72</xref>
+ </sup>. For the GBM and RF models, we selected the same amount of PAs as there were presence data (occurrence records) available for each species
+ <sup>
+  <xref ref-type="bibr" rid="CR72">72</xref>
+ </sup>. For these two methods, we ran the models ten times per species, each run with a new selection of PAs. The average of these ten models was then considered further. For MAXENT, a simple form of a Poisson point-process model, the presence records were contrasted against the entire background because presence/absence is not measured
+ <sup>
+  <xref ref-type="bibr" rid="CR72">72</xref>,
+  <xref ref-type="bibr" rid="CR73">73</xref>
+ </sup>. All SDMs were evaluated with the true skill statistic (TSS) evaluation metric, 
+ <italic>i</italic>.
+ <italic>e</italic>., the sum of sensitivity and specificity minus one (the sensitivity is the proportion of correctly predicted presences, and the specificity is the proportion of correctly predicted absences), GBM and RF were evaluated with the average TSS value of the ten averaged models. The cut-off value of the models, 
+ <italic>i</italic>.
+ <italic>e</italic>., the threshold value of the probability of occurrence that maximizes the TSS metric for each model, ranged between 0.62–0.85 (see Supplementary Table 
+ <xref rid="MOESM1" ref-type="media">S5</xref>). To optimize the SDM projection per species, we selected the model algorithm with the highest TSS value for the respective species (see Supplementary Table 
+ <xref rid="MOESM1" ref-type="media">S5</xref> for model evaluation metrics for all SDMs). The TSS metric for the selected SDMs ranged between 0.63–0.99. The interpretation of SDMs, as well as any other correlative approach, has to be done with caution because correlations do not necessarily imply causation.
+</p>

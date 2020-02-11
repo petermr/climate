@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>Annual climate variables at each of the 11 spatial resolutions were binned to simplify the ranges of possible climate values for analysis. We computed the 5th and 95th percentiles of each 60 m annual climate variable and removed these values as outliers in each surface. The range of each 60 m annual climate variable was determined and used to create 25 equal‐sized bins for each variable to reassign pixel values. The value of 25 bins was chosen to avoid empty bins within the range of the coarsest (12 km) surfaces for all climate variables. Bin widths were computed for each surface using the following equation:
+ <disp-formula id="ece35511-disp-0004">
+  <label>(4)</label>
+  <math id="nlm-math-4">
+   <mrow>
+    <mtext>Bin</mtext>
+    <mspace width="0.166667em"/>
+    <mtext>Width</mtext>
+    <mo>=</mo>
+    <mfrac>
+     <mfenced close=")" open="(" separators="">
+      <mrow>
+       <mtext>MaxRange</mtext>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mfenced close="|" open="">
+          <mtext>LGM</mtext>
+         </mfenced>
+         <mtext>Modern</mtext>
+        </mrow>
+       </mfenced>
+       <mo>-</mo>
+       <mtext>MinRange</mtext>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mfenced close="|" open="">
+          <mtext>LGM</mtext>
+         </mfenced>
+         <mtext>Modern</mtext>
+        </mrow>
+       </mfenced>
+      </mrow>
+     </mfenced>
+     <mrow>
+      <mtext>Max</mtext>
+      <mspace width="0.166667em"/>
+      <mtext>Bin</mtext>
+      <mspace width="0.166667em"/>
+      <mtext>Value</mtext>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </math>
+ </disp-formula>where MaxRange(LGM||Modern) is the maximum value of between the LGM or modern climate surface at 60 m, MinRange(LGM||Modern) is the minimum value between the LGM or modern climate surface at 60 m, and Max Bin Value is the maximum bin class value (25). To reclassify each annual climate surface at all resolutions, the bin widths were applied to each LGM and modern climate surface using the following equation:
+ <disp-formula id="ece35511-disp-0005">
+  <label>(5)</label>
+  <math id="nlm-math-5">
+   <mrow>
+    <mtext>Bin</mtext>
+    <mspace width="0.166667em"/>
+    <mtext>Class</mtext>
+    <mo>=</mo>
+    <mfrac>
+     <mrow>
+      <mtext>Ceiling</mtext>
+      <mfenced close=")" open="(" separators="">
+       <mrow>
+        <mtext>Climate</mtext>
+        <mspace width="0.166667em"/>
+        <msub>
+         <mtext>Value</mtext>
+         <mrow>
+          <mi>x</mi>
+          <mo>,</mo>
+          <mi>y</mi>
+          <mo>,</mo>
+          <mi>t</mi>
+          <mo>,</mo>
+          <msup>
+           <mi>t</mi>
+           <mo>′</mo>
+          </msup>
+         </mrow>
+        </msub>
+        <mo>-</mo>
+        <mtext>Min</mtext>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mtext>Climate</mtext>
+          <mspace width="0.166667em"/>
+          <msub>
+           <mtext>Surface</mtext>
+           <mi>t</mi>
+          </msub>
+         </mrow>
+        </mfenced>
+       </mrow>
+      </mfenced>
+     </mrow>
+     <mrow>
+      <mtext>Bin</mtext>
+      <mspace width="0.166667em"/>
+      <mtext>Width</mtext>
+     </mrow>
+    </mfrac>
+   </mrow>
+  </math>
+ </disp-formula>where Climate Value
+ <italic>
+  <sub>x,y,t</sub>
+ </italic> is the climate surface value at location 
+ <italic>x,y</italic> and at time 
+ <italic>t</italic> (LGM or modern), and Min(Climate Surface
+ <italic>
+  <sub>t</sub>
+ </italic>) is the minimum value of the climate surface at time 
+ <italic>t</italic>. Pixels that fell within the removed 1st and 99th ranges were reclassified to either the lowest (0) or highest (25) bins for final reclassification.
+</p>
