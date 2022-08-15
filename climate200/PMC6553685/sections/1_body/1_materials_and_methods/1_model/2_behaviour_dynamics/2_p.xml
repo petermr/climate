@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>Social learning is implemented as follows. Each individual samples other members of the population at a fixed rate 
+ <italic>κ</italic>. If ‘individual A’ samples ‘individual B’ and B’s strategy has a higher payoff that of A, then A will switch to B’s strategy with a probability proportional to the difference in payoffs. Thus if there are 
+ <italic>x</italic> mitigators in the population, the rate at which a non-mitigator encounters a mitigator is 
+ <italic>κx</italic>. Should there be a utility gain in switching (
+ <italic>e</italic>
+ <sub>
+  <italic>M</italic>
+ </sub> &gt; 
+ <italic>e</italic>
+ <sub>
+  <italic>N</italic>
+ </sub>), the non-mitigator will switch their strategy with a probability proportional to the payoff difference, 
+ <italic>e</italic>
+ <sub>
+  <italic>M</italic>
+ </sub> − 
+ <italic>e</italic>
+ <sub>
+  <italic>N</italic>
+ </sub>. Since there are a total of 1 − 
+ <italic>x</italic> non-mitigators in the population, the total rate at which non-mitigators switch to being mitigators is 
+ <disp-formula id="pcbi.1007000.e004">
+  <alternatives>
+   <graphic xlink:href="pcbi.1007000.e004.jpg" id="pcbi.1007000.e004g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M4">
+    <mtable displaystyle="true">
+     <mtr>
+      <mtd columnalign="right">
+       <mrow>
+        <msub>
+         <mi>r</mi>
+         <mrow>
+          <mi>N</mi>
+          <mo>→</mo>
+          <mi>M</mi>
+         </mrow>
+        </msub>
+        <mo>=</mo>
+        <mi>κ</mi>
+        <mi>x</mi>
+        <mrow>
+         <mo>(</mo>
+         <mn>1</mn>
+         <mo>−</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mspace width="2pt"/>
+        <mtext>max</mtext>
+        <mrow>
+         <mo>{</mo>
+         <msub>
+          <mi>e</mi>
+          <mi>M</mi>
+         </msub>
+         <mo>−</mo>
+         <msub>
+          <mi>e</mi>
+          <mi>N</mi>
+         </msub>
+         <mo>,</mo>
+         <mn>0</mn>
+         <mo>}</mo>
+        </mrow>
+        <mo>.</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label>(3)</label>
+ </disp-formula> Using similar arguments, one can show 
+ <disp-formula id="pcbi.1007000.e005">
+  <alternatives>
+   <graphic xlink:href="pcbi.1007000.e005.jpg" id="pcbi.1007000.e005g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M5">
+    <mtable displaystyle="true">
+     <mtr>
+      <mtd columnalign="right">
+       <mrow>
+        <msub>
+         <mi>r</mi>
+         <mrow>
+          <mi>M</mi>
+          <mo>→</mo>
+          <mi>N</mi>
+         </mrow>
+        </msub>
+        <mo>=</mo>
+        <mi>κ</mi>
+        <mi>x</mi>
+        <mrow>
+         <mo>(</mo>
+         <mn>1</mn>
+         <mo>−</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mspace width="2pt"/>
+        <mtext>max</mtext>
+        <mrow>
+         <mo>{</mo>
+         <msub>
+          <mi>e</mi>
+          <mi>N</mi>
+         </msub>
+         <mo>−</mo>
+         <msub>
+          <mi>e</mi>
+          <mi>M</mi>
+         </msub>
+         <mo>,</mo>
+         <mn>0</mn>
+         <mo>}</mo>
+        </mrow>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label>(4)</label>
+ </disp-formula> and so the net rate of change in mitigators is 
+ <disp-formula id="pcbi.1007000.e006">
+  <alternatives>
+   <graphic xlink:href="pcbi.1007000.e006.jpg" id="pcbi.1007000.e006g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M6">
+    <mtable displaystyle="true">
+     <mtr>
+      <mtd columnalign="right">
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mi>d</mi>
+          <mi>x</mi>
+         </mrow>
+         <mrow>
+          <mi>d</mi>
+          <mi>t</mi>
+         </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <msub>
+         <mi>r</mi>
+         <mrow>
+          <mi>N</mi>
+          <mo>→</mo>
+          <mi>M</mi>
+         </mrow>
+        </msub>
+        <mo>−</mo>
+        <msub>
+         <mi>r</mi>
+         <mrow>
+          <mi>M</mi>
+          <mo>→</mo>
+          <mi>N</mi>
+         </mrow>
+        </msub>
+        <mo>=</mo>
+        <mi>κ</mi>
+        <mi>x</mi>
+        <mrow>
+         <mo>(</mo>
+         <mn>1</mn>
+         <mo>−</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mi>e</mi>
+          <mi>M</mi>
+         </msub>
+         <mo>−</mo>
+         <msub>
+          <mi>e</mi>
+          <mi>N</mi>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+        <mo>,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label>(5)</label>
+ </disp-formula> which has an equivalent form to the replicator equations of evolutionary game theory [
+ <xref rid="pcbi.1007000.ref032" ref-type="bibr">32</xref>]. Writing the payoff functions explicitly gives 
+ <disp-formula id="pcbi.1007000.e007">
+  <alternatives>
+   <graphic xlink:href="pcbi.1007000.e007.jpg" id="pcbi.1007000.e007g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M7">
+    <mtable displaystyle="true">
+     <mtr>
+      <mtd columnalign="right">
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mi>d</mi>
+          <mi>x</mi>
+         </mrow>
+         <mrow>
+          <mi>d</mi>
+          <mi>t</mi>
+         </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mi>κ</mi>
+        <mi>x</mi>
+        <mrow>
+         <mo>(</mo>
+         <mn>1</mn>
+         <mo>−</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mo>[</mo>
+        <mi>γ</mi>
+        <mo>−</mo>
+        <mi>α</mi>
+        <mo>+</mo>
+        <mrow>
+         <mo>(</mo>
+         <mi>c</mi>
+         <mo>+</mo>
+         <mn>1</mn>
+         <mo>)</mo>
+        </mrow>
+        <mover accent="true">
+         <mi>f</mi>
+         <mo>˜</mo>
+        </mover>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mi>T</mi>
+          <mi>f</mi>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>δ</mi>
+        <mrow>
+         <mo>(</mo>
+         <mn>2</mn>
+         <mi>x</mi>
+         <mo>−</mo>
+         <mn>1</mn>
+         <mo>)</mo>
+        </mrow>
+        <mo>]</mo>
+        <mo>,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label>(6)</label>
+ </disp-formula> which can be reduced to 
+ <disp-formula id="pcbi.1007000.e008">
+  <alternatives>
+   <graphic xlink:href="pcbi.1007000.e008.jpg" id="pcbi.1007000.e008g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M8">
+    <mtable displaystyle="true">
+     <mtr>
+      <mtd columnalign="right">
+       <mrow>
+        <mfrac>
+         <mrow>
+          <mi>d</mi>
+          <mi>x</mi>
+         </mrow>
+         <mrow>
+          <mi>d</mi>
+          <mi>t</mi>
+         </mrow>
+        </mfrac>
+        <mo>=</mo>
+        <mi>κ</mi>
+        <mi>x</mi>
+        <mrow>
+         <mo>(</mo>
+         <mn>1</mn>
+         <mo>−</mo>
+         <mi>x</mi>
+         <mo>)</mo>
+        </mrow>
+        <mo>[</mo>
+        <mo>−</mo>
+        <mi>β</mi>
+        <mo>+</mo>
+        <mi>f</mi>
+        <mrow>
+         <mo>(</mo>
+         <msub>
+          <mi>T</mi>
+          <mi>f</mi>
+         </msub>
+         <mo>)</mo>
+        </mrow>
+        <mo>+</mo>
+        <mi>δ</mi>
+        <mrow>
+         <mo>(</mo>
+         <mn>2</mn>
+         <mi>x</mi>
+         <mo>−</mo>
+         <mn>1</mn>
+         <mo>)</mo>
+        </mrow>
+        <mo>]</mo>
+        <mo>,</mo>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label>(7)</label>
+ </disp-formula> by introducing the new parameter 
+ <italic>β</italic> = 
+ <italic>α</italic> − 
+ <italic>γ</italic> (the net cost to mitigate) scaled function 
+ <inline-formula id="pcbi.1007000.e009">
+  <alternatives>
+   <graphic xlink:href="pcbi.1007000.e009.jpg" id="pcbi.1007000.e009g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M9">
+    <mrow>
+     <mi>f</mi>
+     <mrow>
+      <mo>(</mo>
+      <mi>T</mi>
+      <mo>)</mo>
+     </mrow>
+     <mo>=</mo>
+     <mrow>
+      <mo>(</mo>
+      <mi>c</mi>
+      <mo>+</mo>
+      <mn>1</mn>
+      <mo>)</mo>
+     </mrow>
+     <mover accent="true">
+      <mi>f</mi>
+      <mo>˜</mo>
+     </mover>
+     <mrow>
+      <mo>(</mo>
+      <mi>T</mi>
+      <mo>)</mo>
+     </mrow>
+    </mrow>
+   </math>
+  </alternatives>
+ </inline-formula> (the net temperature associated gain to mitigate).
+</p>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par53">We addressed this redundancy by merging articles with the same MC media source and similar title into a single article instance so that article counts for sources and individuals are not systematically inflated. We determine whether two titles are similar by calculating the Damerau–Levenshtein edit distance 
+ <italic>D</italic>
+ <sub>
+  <italic>jk</italic>
+ </sub> between the title 
+ <italic>T</italic>
+ <sub>
+  <italic>j</italic>
+ </sub> and 
+ <italic>T</italic>
+ <sub>
+  <italic>k</italic>
+ </sub>. Titles that are similar have small 
+ <italic>D</italic>
+ <sub>
+  <italic>jk</italic>
+ </sub>, meaning that a small number of character insertions, deletions, and swaps can convert 
+ <italic>T</italic>
+ <sub>
+  <italic>j</italic>
+ </sub> and 
+ <italic>T</italic>
+ <sub>
+  <italic>k</italic>
+ </sub>, or vice versa since it is a symmetric measure. Thus we merged two articles if 
+ <italic>D</italic>
+ <sub>
+  <italic>jk</italic>
+ </sub> ≤ 0.2 × Min.[|
+ <italic>T</italic>
+ <sub>
+  <italic>j</italic>
+ </sub>|,|
+ <italic>T</italic>
+ <sub>
+  <italic>k</italic>
+ </sub>|], where |
+ <italic>T</italic>
+ <sub>
+  <italic>j</italic>
+ </sub>| is the string length of title 
+ <italic>j</italic> after removing all HTML encodings and ASCII control codes and extended characters that are present in the title—i.e., first refining the title 
+ <italic>State Officials Investigated Over Their Inquiry Into Exxon Mobil’s Climate Change Research</italic> into 
+ <italic>State Officials Investigated Over Their Inquiry Into Exxon Mobils Climate Change Research</italic>. We calculated 
+ <italic>D</italic>
+ <sub>
+  <italic>jk</italic>
+ </sub> between all pairs of MC articles from the same media source, which refined the total dataset size from 121,729 to 102,250 MC articles, a 16% reduction. We observed similar reduction levels for the set of articles belonging to each CCC and CCS group.
+</p>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>We calibrated the distribution models with presence and absence records provided by the atlases. The sampling of the species ranges provided by GBIF and Anthos may rather be incomplete, and our initial presence–pseudo-absence datasets may therefore include many false absences, which may, in turn, induce an underestimation of these species climatic niches (
+ <xref rid="R37" ref-type="bibr">
+  <italic>37</italic>
+ </xref>, 
+ <xref rid="R38" ref-type="bibr">
+  <italic>38</italic>
+ </xref>). To compensate for this potential underestimation, we discarded pseudo-absences that fell inside these species rectilinear surface envelope (
+ <xref rid="R39" ref-type="bibr">
+  <italic>39</italic>
+ </xref>, 
+ <xref rid="R40" ref-type="bibr">
+  <italic>40</italic>
+ </xref>) using the 
+ <italic>sre</italic> function of the biomod2 package in R and calibrated distribution models with the remaining ones. Given that the species distribution modeling accuracy may vary depending on the statistical models used and the quality of the input data (
+ <xref rid="R10" ref-type="bibr">
+  <italic>10</italic>
+ </xref>), we used a consensus method (
+ <xref rid="R41" ref-type="bibr">
+  <italic>41</italic>
+ </xref>, 
+ <xref rid="R42" ref-type="bibr">
+  <italic>42</italic>
+ </xref>) by considering six different probabilistic models implemented in the biomod2 package in R: generalized additive model, generalized boosting model, artificial neural network, multivariate adaptive regression splines, random forest, and Maxent. For each model run, we used 70% of the original data for the model calibration and kept 30% for model evaluation. This procedure was repeated 20 times to ensure that the model predictive accuracy was not affected by the random-splitting strategy. Moreover, we evaluated this accuracy according to two different metrics: the true skill statistics (TSS) (
+ <xref rid="R43" ref-type="bibr">
+  <italic>43</italic>
+ </xref>) and the area under the receiver operating characteristic curve (ROC) (
+ <xref rid="R44" ref-type="bibr">
+  <italic>44</italic>
+ </xref>). For each species, we ran a total of 240 models using six different statistical models, two evaluation metrics, and 20 repetitions.
+</p>

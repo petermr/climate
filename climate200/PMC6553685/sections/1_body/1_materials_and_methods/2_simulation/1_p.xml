@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>Over the period from 1800 to 2014, the socio-climate model is simulated with a fixed social component, forced with historical anthropogenic carbon emissions. Initial conditions for all climate variables are zero since they represent deviations from pre-industrial values. Social dynamics are initiated in 2014 with an initial proportion of mitigators 
+ <italic>x</italic>
+ <sub>0</sub> = 0.05. The ensuing dynamics of 
+ <italic>ϵ</italic>(
+ <italic>t</italic>) follow an increasing but saturating trend corresponding to the world’s increasing but saturating population size and energy demands. Specifically 
+ <disp-formula id="pcbi.1007000.e018">
+  <alternatives>
+   <graphic xlink:href="pcbi.1007000.e018.jpg" id="pcbi.1007000.e018g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M18">
+    <mtable displaystyle="true">
+     <mtr>
+      <mtd columnalign="right">
+       <mrow>
+        <mi>ϵ</mi>
+        <mrow>
+         <mo>(</mo>
+         <mi>t</mi>
+         <mo>)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mo>{</mo>
+        <mtable>
+         <mtr>
+          <mtd columnalign="left">
+           <mrow>
+            <mtext>linear</mtext>
+            <mspace width="4.pt"/>
+            <mtext>interpolation</mtext>
+            <mspace width="4.pt"/>
+            <mtext>of</mtext>
+            <mspace width="4.pt"/>
+            <mtext>historical</mtext>
+            <mspace width="4.pt"/>
+            <mtext>emissions</mtext>
+           </mrow>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mi>t</mi>
+            <mo>≤</mo>
+            <mn>2014</mn>
+           </mrow>
+          </mtd>
+         </mtr>
+         <mtr>
+          <mtd columnalign="left">
+           <mrow>
+            <msub>
+             <mi>ϵ</mi>
+             <mn>2014</mn>
+            </msub>
+            <mo>+</mo>
+            <mfrac>
+             <mrow>
+              <mrow>
+               <mo>(</mo>
+               <mi>t</mi>
+               <mo>−</mo>
+               <mn>2014</mn>
+               <mo>)</mo>
+              </mrow>
+              <msub>
+               <mi>ϵ</mi>
+               <mtext>max</mtext>
+              </msub>
+             </mrow>
+             <mrow>
+              <mi>t</mi>
+              <mo>−</mo>
+              <mn>2014</mn>
+              <mo>+</mo>
+              <mi>s</mi>
+             </mrow>
+            </mfrac>
+           </mrow>
+          </mtd>
+          <mtd columnalign="left">
+           <mrow>
+            <mi>t</mi>
+            <mo>≥</mo>
+            <mn>2014</mn>
+           </mrow>
+          </mtd>
+         </mtr>
+        </mtable>
+        <mo/>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+  </alternatives>
+  <label>(14)</label>
+ </disp-formula> where 
+ <italic>ϵ</italic>
+ <sub>max</sub> is the saturating value, and 
+ <italic>s</italic> the half-saturation constant, of 
+ <italic>ϵ</italic>(
+ <italic>t</italic>). This expression is shown graphically in 
+ <xref ref-type="supplementary-material" rid="pcbi.1007000.s010">S7 Fig</xref>. The system of (delay) ordinary differential equations is simulated using the NDSolve package in Wolfram Mathematica. Historical CO
+ <sub>2</sub> emissions were obtained from the CDIAC data repository [
+ <xref rid="pcbi.1007000.ref035" ref-type="bibr">35</xref>].
+</p>

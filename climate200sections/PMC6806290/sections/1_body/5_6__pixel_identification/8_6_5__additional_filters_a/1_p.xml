@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>In some or all the versions, the well-verified data processor L2Gen packaged as part of SeaDAS was used for processing SeaWiFS, MODIS-Aqua, and VIIRS. Some additional post-filtering was done. Primarily, any pixels with negative 
+ <inline-formula>
+  <math id="mm16">
+   <mrow>
+    <msub>
+     <mi>R</mi>
+     <mrow>
+      <mi>r</mi>
+      <mi>s</mi>
+     </mrow>
+    </msub>
+   </mrow>
+  </math>
+ </inline-formula> values in the 412–560 nm range were discarded, as they would probably have resulted from a flawed atmospheric correction. The 670 nm band was exempted because negatives close to zero are common at this wavelength due to low signal levels; instead, these values were trimmed to zero and the pixels were retained if all other bands were positive. Some other range filters were applied, removing impossibly high reflectances (e.g., due to unfiltered glint) or chlorophyll well outside the range of case-1 waters that OC-CCI targets. Other than this, there were no filters applied to mask potential case-2 (optically-complex) waters.
+</p>

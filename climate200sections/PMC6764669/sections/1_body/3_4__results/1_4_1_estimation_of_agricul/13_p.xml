@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>The climate projections dataset consists of monthly information on average minimum and maximum temperatures and total precipitation, by department or province. The choice of which climatic attributes to include, given this data, requires giving flexibility to the estimation by including different climate measurements, but at the same time minimizing the potential for autocorrelation of errors and multicollinearity. Additionally, the special nature of cross-sectional and time series data was considered. The dataset allows the use of average climate conditions over time, which would reflect impact of longer-term climate conditions; and each year’s meteorological conditions, which would capture the response of yields to the specific year’s conditions. We use cumulative moving averages of each climate indicator (i.e. the average from 1970 to the year of the observation); and the annual deviation, that is the indicator, say total precipitation, for that year 
+ <italic>t</italic> and province 
+ <italic>i</italic> minus the cumulative average of total annual precipitation from 1970 to year 
+ <italic>t</italic>, for province 
+ <italic>i</italic>: 
+ <inline-formula id="pone.0222483.e008">
+  <alternatives>
+   <graphic xlink:href="pone.0222483.e008.jpg" id="pone.0222483.e008g" mimetype="image" position="anchor" orientation="portrait" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+   <math id="M8">
+    <mo>(</mo>
+    <msub>
+     <mrow>
+      <mi>x</mi>
+     </mrow>
+     <mrow>
+      <mi>i</mi>
+      <mi>t</mi>
+     </mrow>
+    </msub>
+    <mo>-</mo>
+    <msub>
+     <mrow>
+      <mover accent="true">
+       <mrow>
+        <mi>x</mi>
+       </mrow>
+       <mo>-</mo>
+      </mover>
+     </mrow>
+     <mrow>
+      <mi>i</mi>
+      <mi>t</mi>
+     </mrow>
+    </msub>
+    <mo>)</mo>
+   </math>
+  </alternatives>
+ </inline-formula>. Averages do not capture the concentration or dispersion of climatic indicator within a year, which is of particular importance with precipitation, so in addition to total precipitation, we use indicators of intra annual dispersion (the seasonality index of [
+ <xref rid="pone.0222483.ref033" ref-type="bibr">33</xref>]). Given the original climate data, we settle for four underlying indicators, maximum temperatures, average temperatures (using min. and max. data), total precipitation, and precipitation seasonality. This information is expanded to a vector of 24 climate variables: each climate indicator as a cumulative moving average, and as an annual deviation, and expanded to the three main eco-regions. Also, the impact on temperature on yields may vary with altitude, so in addition to controlling for altitude we explored the interaction of altitude with the temperature indicators. Based on the BIC we limited this interaction to mean temperatures and only in the mountains / sierra ecoregion. A sensible outcome, given that large altitude differentials are observed in this ecoregion and not on others.
+</p>

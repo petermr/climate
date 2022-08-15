@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par39">Our reaction modelling implements the kinetic models of refs. 
+ <sup>
+  <xref ref-type="bibr" rid="CR31">31</xref>
+ </sup> and 
+ <sup>
+  <xref ref-type="bibr" rid="CR32">32</xref>
+ </sup>. We approximated each normal distribution of activation energies with an odd number 
+ <italic>N</italic>
+ <sub>E</sub> of discrete reactions, each with a constant activation energy and frequency factor. This strategy is more straightforward to implement and quicker to execute than numerical integration because progress of each reaction at each time step can be calculated using the analytical expressions. The concentration of a product 
+ <italic>P</italic> (i.e. the progress of the reaction) for one of the discrete reactions in RG1 to RG3 is given by
+ <disp-formula id="Equ6">
+  <label>6</label>
+  <alternatives>
+   <tex-math id="M11">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{c}} {\frac{{{\mathrm{{d}}}\left( {1 \, -\, P} \right)}}{{{\mathrm{{d}}}t}} = - \bar k\left( {1 - P} \right)} \end{array},$$\end{document}</tex-math>
+   <math id="M12">
+    <mtable>
+     <mtr>
+      <mtd columnalign="center">
+       <mfrac>
+        <mrow>
+         <mi mathvariant="normal">d</mi>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <mn>1</mn>
+           <mspace width="0.25em"/>
+           <mo>−</mo>
+           <mspace width="0.25em"/>
+           <mi>P</mi>
+          </mrow>
+         </mfenced>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">d</mi>
+         <mi>t</mi>
+        </mrow>
+       </mfrac>
+       <mo>=</mo>
+       <mo>−</mo>
+       <mover accent="true">
+        <mrow>
+         <mi>k</mi>
+        </mrow>
+        <mo>¯</mo>
+       </mover>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mn>1</mn>
+         <mo>−</mo>
+         <mi>P</mi>
+        </mrow>
+       </mfenced>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo>,</mo>
+   </math>
+   <graphic xlink:href="41467_2019_12957_Article_Equ6.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <inline-formula id="IEq1">
+  <alternatives>
+   <tex-math id="M13">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar k$$\end{document}</tex-math>
+   <math id="M14">
+    <mover accent="true">
+     <mrow>
+      <mi>k</mi>
+     </mrow>
+     <mo>¯</mo>
+    </mover>
+   </math>
+   <inline-graphic xlink:href="41467_2019_12957_Article_IEq1.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> is the average reaction rate. We assume 
+ <inline-formula id="IEq2">
+  <alternatives>
+   <tex-math id="M15">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\bar k$$\end{document}</tex-math>
+   <math id="M16">
+    <mover accent="true">
+     <mrow>
+      <mi>k</mi>
+     </mrow>
+     <mo>¯</mo>
+    </mover>
+   </math>
+   <inline-graphic xlink:href="41467_2019_12957_Article_IEq2.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> to be constant within each short time step of the finite difference calculation; the harmonic mean of the reaction rates for the temperatures at the start and end of the time step was used. The reaction rate at any temperature is given by the Arrhenius equation
+ <disp-formula id="Equ7">
+  <label>7</label>
+  <alternatives>
+   <tex-math id="M17">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{c}} {k = A_{\mathrm{E}}{\mathrm{{exp}}}\left( { - \frac{{\overline {E_{\mathrm{a}}} }}{{R_{\mathrm{g}}T}}} \right)} \end{array},$$\end{document}</tex-math>
+   <math id="M18">
+    <mtable>
+     <mtr>
+      <mtd columnalign="center">
+       <mi>k</mi>
+       <mo>=</mo>
+       <msub>
+        <mrow>
+         <mi>A</mi>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">E</mi>
+        </mrow>
+       </msub>
+       <mi mathvariant="normal">exp</mi>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mo>−</mo>
+         <mfrac>
+          <mrow>
+           <mover accent="true">
+            <mrow>
+             <msub>
+              <mrow>
+               <mi>E</mi>
+              </mrow>
+              <mrow>
+               <mi mathvariant="normal">a</mi>
+              </mrow>
+             </msub>
+            </mrow>
+            <mo accent="true">¯</mo>
+           </mover>
+          </mrow>
+          <mrow>
+           <msub>
+            <mrow>
+             <mi>R</mi>
+            </mrow>
+            <mrow>
+             <mi mathvariant="normal">g</mi>
+            </mrow>
+           </msub>
+           <mi>T</mi>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </mfenced>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo>,</mo>
+   </math>
+   <graphic xlink:href="41467_2019_12957_Article_Equ7.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic>A</italic>
+ <sub>E</sub> is the frequency factor, 
+ <inline-formula id="IEq3">
+  <alternatives>
+   <tex-math id="M19">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\overline {E_{\mathrm{a}}}$$\end{document}</tex-math>
+   <math id="M20">
+    <mover accent="true">
+     <mrow>
+      <msub>
+       <mrow>
+        <mi>E</mi>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">a</mi>
+       </mrow>
+      </msub>
+     </mrow>
+     <mo accent="true">¯</mo>
+    </mover>
+   </math>
+   <inline-graphic xlink:href="41467_2019_12957_Article_IEq3.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> is the mean activation energy of the discrete reaction and 
+ <italic>R</italic>
+ <sub>g</sub> is the gas constant. The reaction progress at the end of the time step is then given by
+ <disp-formula id="Equ8">
+  <label>8</label>
+  <alternatives>
+   <tex-math id="M21">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{c}} {P = 1 - \left( {1 - P_0} \right){\mathrm{{exp}}}\left( { - \bar k\,t} \right)} \end{array},$$\end{document}</tex-math>
+   <math id="M22">
+    <mtable>
+     <mtr>
+      <mtd columnalign="center">
+       <mi>P</mi>
+       <mo>=</mo>
+       <mn>1</mn>
+       <mo>−</mo>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mn>1</mn>
+         <mo>−</mo>
+         <msub>
+          <mrow>
+           <mi>P</mi>
+          </mrow>
+          <mrow>
+           <mn>0</mn>
+          </mrow>
+         </msub>
+        </mrow>
+       </mfenced>
+       <mi mathvariant="normal">exp</mi>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mo>−</mo>
+         <mover accent="true">
+          <mrow>
+           <mi>k</mi>
+          </mrow>
+          <mo>¯</mo>
+         </mover>
+         <mspace width="0.25em"/>
+         <mi>t</mi>
+        </mrow>
+       </mfenced>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo>,</mo>
+   </math>
+   <graphic xlink:href="41467_2019_12957_Article_Equ8.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic>P</italic>
+ <sub>0</sub> is the progress at the start of the time step. We assumed that the total amount of kerogen was initially evenly distributed over the discrete reaction in each group, so that overall progress of the reactions group at each time step is given by
+ <disp-formula id="Equ9">
+  <label>9</label>
+  <alternatives>
+   <tex-math id="M23">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{c}} {P = \mathop {\sum }\limits_{i = 1}^{N_{\mathrm{E}}} \frac{{P_i}}{{N_{\mathrm{E}}}}} \end{array}.$$\end{document}</tex-math>
+   <math id="M24">
+    <mtable>
+     <mtr>
+      <mtd columnalign="center">
+       <mi>P</mi>
+       <mo>=</mo>
+       <munderover accent="false" accentunder="false">
+        <mrow>
+         <mo> ∑</mo>
+        </mrow>
+        <mrow>
+         <mi>i</mi>
+         <mo>=</mo>
+         <mn>1</mn>
+        </mrow>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>N</mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">E</mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </munderover>
+       <mfrac>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>P</mi>
+          </mrow>
+          <mrow>
+           <mi>i</mi>
+          </mrow>
+         </msub>
+        </mrow>
+        <mrow>
+         <msub>
+          <mrow>
+           <mi>N</mi>
+          </mrow>
+          <mrow>
+           <mi mathvariant="normal">E</mi>
+          </mrow>
+         </msub>
+        </mrow>
+       </mfrac>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo>.</mo>
+   </math>
+   <graphic xlink:href="41467_2019_12957_Article_Equ9.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>The discrete oil cracking reactions in RG4 are governed by
+ <disp-formula id="Equ10">
+  <label>10</label>
+  <alternatives>
+   <tex-math id="M25">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{c}} {\frac{{{\mathrm{{d}}}\left( {1 \, - \, P} \right)}}{{{\mathrm{{d}}}t}} = - \bar k\left( {1 - P} \right) - C} \end{array},$$\end{document}</tex-math>
+   <math id="M26">
+    <mtable>
+     <mtr>
+      <mtd columnalign="center">
+       <mfrac>
+        <mrow>
+         <mi mathvariant="normal">d</mi>
+         <mfenced close=")" open="(" separators="">
+          <mrow>
+           <mn>1</mn>
+           <mspace width="0.25em"/>
+           <mo>−</mo>
+           <mspace width="0.25em"/>
+           <mi>P</mi>
+          </mrow>
+         </mfenced>
+        </mrow>
+        <mrow>
+         <mi mathvariant="normal">d</mi>
+         <mi>t</mi>
+        </mrow>
+       </mfrac>
+       <mo>=</mo>
+       <mo>−</mo>
+       <mover accent="true">
+        <mrow>
+         <mi>k</mi>
+        </mrow>
+        <mo>¯</mo>
+       </mover>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mn>1</mn>
+         <mo>−</mo>
+         <mi>P</mi>
+        </mrow>
+       </mfenced>
+       <mo>−</mo>
+       <mi>C</mi>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo>,</mo>
+   </math>
+   <graphic xlink:href="41467_2019_12957_Article_Equ10.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic>C</italic>(
+ <italic>t</italic>) is the total rate of oil generation from the RG1 reactions. We assume 
+ <italic>C</italic> to be constant over each short time step so that
+ <disp-formula id="Equ11">
+  <label>11</label>
+  <alternatives>
+   <tex-math id="M27">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{*{20}{c}} {P = 1 - \frac{C}{{\bar k}} - \left( {1 - P_0 - \frac{C}{{\bar k}}} \right){\mathrm{{exp}}}\left( { - \bar k\,t} \right)} \end{array}.$$\end{document}</tex-math>
+   <math id="M28">
+    <mtable>
+     <mtr>
+      <mtd columnalign="center">
+       <mi>P</mi>
+       <mo>=</mo>
+       <mn>1</mn>
+       <mo>−</mo>
+       <mfrac>
+        <mrow>
+         <mi>C</mi>
+        </mrow>
+        <mrow>
+         <mover accent="true">
+          <mrow>
+           <mi>k</mi>
+          </mrow>
+          <mo>¯</mo>
+         </mover>
+        </mrow>
+       </mfrac>
+       <mo>−</mo>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mn>1</mn>
+         <mo>−</mo>
+         <msub>
+          <mrow>
+           <mi>P</mi>
+          </mrow>
+          <mrow>
+           <mn>0</mn>
+          </mrow>
+         </msub>
+         <mo>−</mo>
+         <mfrac>
+          <mrow>
+           <mi>C</mi>
+          </mrow>
+          <mrow>
+           <mover accent="true">
+            <mrow>
+             <mi>k</mi>
+            </mrow>
+            <mo>¯</mo>
+           </mover>
+          </mrow>
+         </mfrac>
+        </mrow>
+       </mfenced>
+       <mi mathvariant="normal">exp</mi>
+       <mfenced close=")" open="(" separators="">
+        <mrow>
+         <mo>−</mo>
+         <mover accent="true">
+          <mrow>
+           <mi>k</mi>
+          </mrow>
+          <mo>¯</mo>
+         </mover>
+         <mspace width="0.25em"/>
+         <mi>t</mi>
+        </mrow>
+       </mfenced>
+      </mtd>
+     </mtr>
+    </mtable>
+    <mo>.</mo>
+   </math>
+   <graphic xlink:href="41467_2019_12957_Article_Equ11.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

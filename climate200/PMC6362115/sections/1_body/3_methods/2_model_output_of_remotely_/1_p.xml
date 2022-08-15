@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par49">Importantly for this paper, the numerical model provides spectral surface upwelling irradiance: output that is similar to measurements made by ocean colour satellites. Only a few biogeochemical/ecosystem models have the ability to capture this diagnostic
+ <sup>
+  <xref ref-type="bibr" rid="CR17">17</xref>,
+  <xref ref-type="bibr" rid="CR43">43</xref>,
+  <xref ref-type="bibr" rid="CR45">45</xref>
+ </sup>, and until now such diagnostics have not been part of a climate change simulation. We follow the procedure as discussed in ref. 
+ <sup>
+  <xref ref-type="bibr" rid="CR19">19</xref>
+ </sup> to calculate 
+ <italic>R</italic>
+ <sub>RS</sub>. We calculate model reflectance for each waveband as the upwelling just below the surface (
+ <italic>E</italic>
+ <sub>u</sub>) divided by the total downward (direct and diffuse) irradiance also just below the surface (as provided by OASIM): 
+ <inline-formula id="IEq2">
+  <alternatives>
+   <tex-math id="M9">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$R\left( {\lambda ,0^ - } \right) = \frac{{E_{\mathrm{u}}(\lambda )}}{{E_{{\mathrm{d}}0}\left( \lambda \right) + E_{{\mathrm{s}}0}\left( \lambda \right)}}$$\end{document}</tex-math>
+   <math id="M10">
+    <mi>R</mi>
+    <mfenced close=")" open="(" separators="">
+     <mrow>
+      <mi>λ</mi>
+      <mo>,</mo>
+      <msup>
+       <mrow>
+        <mn>0</mn>
+       </mrow>
+       <mrow>
+        <mo>-</mo>
+       </mrow>
+      </msup>
+     </mrow>
+    </mfenced>
+    <mo>=</mo>
+    <mfrac>
+     <mrow>
+      <msub>
+       <mrow>
+        <mi>E</mi>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">u</mi>
+       </mrow>
+      </msub>
+      <mrow>
+       <mo>(</mo>
+       <mrow>
+        <mi>λ</mi>
+       </mrow>
+       <mo>)</mo>
+      </mrow>
+     </mrow>
+     <mrow>
+      <msub>
+       <mrow>
+        <mi>E</mi>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">d</mi>
+        <mn>0</mn>
+       </mrow>
+      </msub>
+      <mfenced close=")" open="(" separators="">
+       <mrow>
+        <mi>λ</mi>
+       </mrow>
+      </mfenced>
+      <mo>+</mo>
+      <msub>
+       <mrow>
+        <mi>E</mi>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">s</mi>
+        <mn>0</mn>
+       </mrow>
+      </msub>
+      <mfenced close=")" open="(" separators="">
+       <mrow>
+        <mi>λ</mi>
+       </mrow>
+      </mfenced>
+     </mrow>
+    </mfrac>
+   </math>
+   <inline-graphic xlink:href="41467_2019_8457_Article_IEq2.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula>. We first convert model subsurface irradiance reflectance to remotely sensed reflectance just below the surface using a bidirectional function 
+ <italic>Q</italic>: 
+ <inline-formula id="IEq3">
+  <alternatives>
+   <tex-math id="M11">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$R_{{\mathrm{RS}}}\left( {\lambda ,\,0^ - } \right) = \frac{{R\left( {\lambda ,0^ - } \right)}}{Q}$$\end{document}</tex-math>
+   <math id="M12">
+    <msub>
+     <mrow>
+      <mi>R</mi>
+     </mrow>
+     <mrow>
+      <mi mathvariant="normal">RS</mi>
+     </mrow>
+    </msub>
+    <mfenced close=")" open="(" separators="">
+     <mrow>
+      <mi>λ</mi>
+      <mo>,</mo>
+      <mspace width="0.3em"/>
+      <msup>
+       <mrow>
+        <mn>0</mn>
+       </mrow>
+       <mrow>
+        <mo>-</mo>
+       </mrow>
+      </msup>
+     </mrow>
+    </mfenced>
+    <mo>=</mo>
+    <mfrac>
+     <mrow>
+      <mi>R</mi>
+      <mfenced close=")" open="(" separators="">
+       <mrow>
+        <mi>λ</mi>
+        <mo>,</mo>
+        <msup>
+         <mrow>
+          <mn>0</mn>
+         </mrow>
+         <mrow>
+          <mo>-</mo>
+         </mrow>
+        </msup>
+       </mrow>
+      </mfenced>
+     </mrow>
+     <mrow>
+      <mi>Q</mi>
+     </mrow>
+    </mfrac>
+   </math>
+   <inline-graphic xlink:href="41467_2019_8457_Article_IEq3.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula>. The bidirectional function 
+ <italic>Q</italic> has values between 3 and 5 sr
+ <sup>
+  <xref ref-type="bibr" rid="CR60">60</xref>
+ </sup> and depends on several variables, including inherent optical properties of the water, wavelength, and solar zenith angles
+ <sup>
+  <xref ref-type="bibr" rid="CR60">60</xref>,
+  <xref ref-type="bibr" rid="CR61">61</xref>
+ </sup>. Here for simplicity we assume that 
+ <italic>Q</italic> = 3 sr (as done in refs. 
+ <sup>
+  <xref ref-type="bibr" rid="CR19">19</xref>,
+  <xref ref-type="bibr" rid="CR43">43</xref>
+ </sup>). Secondly, we convert to above surface remotely sensed reflectance using the formula of Lee et al.
+ <sup>
+  <xref ref-type="bibr" rid="CR62">62</xref>
+ </sup>: 
+ <inline-formula id="IEq4">
+  <alternatives>
+   <tex-math id="M13">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$R_{{\mathrm{RS}}}\left( {\lambda ,0^ + } \right) = \frac{{0.53R_{{\mathrm{RS}}}\left( {\lambda ,\,0^ - } \right)}}{{\left( {1 - 1.7R_{{\mathrm{RS}}}\left( {\lambda ,\,0^ - } \right)} \right)}}$$\end{document}</tex-math>
+   <math id="M14">
+    <msub>
+     <mrow>
+      <mi>R</mi>
+     </mrow>
+     <mrow>
+      <mi mathvariant="normal">RS</mi>
+     </mrow>
+    </msub>
+    <mfenced close=")" open="(" separators="">
+     <mrow>
+      <mi>λ</mi>
+      <mo>,</mo>
+      <msup>
+       <mrow>
+        <mn>0</mn>
+       </mrow>
+       <mrow>
+        <mo>+</mo>
+       </mrow>
+      </msup>
+     </mrow>
+    </mfenced>
+    <mo>=</mo>
+    <mfrac>
+     <mrow>
+      <mn>0.53</mn>
+      <msub>
+       <mrow>
+        <mi>R</mi>
+       </mrow>
+       <mrow>
+        <mi mathvariant="normal">RS</mi>
+       </mrow>
+      </msub>
+      <mfenced close=")" open="(" separators="">
+       <mrow>
+        <mi>λ</mi>
+        <mo>,</mo>
+        <mspace width="0.3em"/>
+        <msup>
+         <mrow>
+          <mn>0</mn>
+         </mrow>
+         <mrow>
+          <mo>-</mo>
+         </mrow>
+        </msup>
+       </mrow>
+      </mfenced>
+     </mrow>
+     <mrow>
+      <mfenced close=")" open="(" separators="">
+       <mrow>
+        <mn>1</mn>
+        <mo>-</mo>
+        <mn>1.7</mn>
+        <msub>
+         <mrow>
+          <mi>R</mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">RS</mi>
+         </mrow>
+        </msub>
+        <mfenced close=")" open="(" separators="">
+         <mrow>
+          <mi>λ</mi>
+          <mo>,</mo>
+          <mspace width="0.3em"/>
+          <msup>
+           <mrow>
+            <mn>0</mn>
+           </mrow>
+           <mrow>
+            <mo>-</mo>
+           </mrow>
+          </msup>
+         </mrow>
+        </mfenced>
+       </mrow>
+      </mfenced>
+     </mrow>
+    </mfrac>
+   </math>
+   <inline-graphic xlink:href="41467_2019_8457_Article_IEq4.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula>. Hereafter we will refer to this quantity as 
+ <italic>R</italic>
+ <sub>RS</sub> which has units of sr
+ <sup>−1</sup> and is equivalent to the 
+ <italic>R</italic>
+ <sub>RS</sub> provided by ocean colour satellite databases.
+</p>

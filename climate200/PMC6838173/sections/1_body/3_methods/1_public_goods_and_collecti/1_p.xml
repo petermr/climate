@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par18">Let us consider a population with 
+ <italic>Z</italic> individuals, where each individual can be a cooperator (
+ <bold>
+  <italic>C</italic>
+ </bold>) or a defector (
+ <bold>
+  <italic>D</italic>
+ </bold>). For each round of this game, a group of 
+ <italic>N</italic> players is sampled from the original finite population of size 
+ <italic>Z</italic>, which corresponds to a process of sampling without replacement. The probability of a group comprising any possible combination of 
+ <bold>
+  <italic>C</italic>
+ </bold>s and 
+ <bold>
+  <italic>D</italic>
+ </bold>s is given by the hypergeometric distribution. In the context of a given group, a strategy is associated with a payoff value corresponding to an individual’s earnings in that round, which depend on the action of the rest of group. Fitness is the expected payoff of an individual in a population, before knowing to which group he was assigned. This way, for a population with 
+ <italic>k</italic> out of 
+ <italic>Z C</italic>s and each group containing 
+ <italic>j</italic> out of 
+ <italic>N C</italic>s, the fitness of a 
+ <italic>D</italic> and a 
+ <italic>C</italic> can be written as:
+ <disp-formula id="Equ1">
+  <label>1</label>
+  <alternatives>
+   <tex-math id="M5">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{f}_{D}={(\begin{array}{c}Z-1\\ N-1\end{array})}^{-1}\mathop{\sum }\limits_{j=0}^{N-1}(\begin{array}{c}k\\ j\end{array})(\begin{array}{c}Z-k-1\\ N-j-1\end{array}){\Pi }_{{\rm{D}}}(j)\end{array}$$\end{document}</tex-math>
+   <math id="M6" display="block">
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>f</mi>
+         </mrow>
+         <mrow>
+          <mi>D</mi>
+         </mrow>
+        </msub>
+        <mo>=</mo>
+        <msup>
+         <mrow>
+          <mo stretchy="true">(</mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <mi>Z</mi>
+               <mo>−</mo>
+               <mn>1</mn>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mrow>
+               <mi>N</mi>
+               <mo>−</mo>
+               <mn>1</mn>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo stretchy="true">)</mo>
+         </mrow>
+         <mrow>
+          <mo>−</mo>
+          <mn>1</mn>
+         </mrow>
+        </msup>
+        <munderover>
+         <mo>∑</mo>
+         <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+         </mrow>
+         <mrow>
+          <mi>N</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+         </mrow>
+        </munderover>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd>
+             <mi>k</mi>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+             <mi>j</mi>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd>
+             <mrow>
+              <mi>Z</mi>
+              <mo>−</mo>
+              <mi>k</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+             <mrow>
+              <mi>N</mi>
+              <mo>−</mo>
+              <mi>j</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">Π</mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">D</mi>
+         </mrow>
+        </msub>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mi>j</mi>
+         <mo stretchy="true">)</mo>
+        </mrow>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41598_2019_52524_Article_Equ1.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ2">
+  <label>2</label>
+  <alternatives>
+   <tex-math id="M7">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{f}_{C}={(\begin{array}{c}Z-1\\ N-1\end{array})}^{-1}\mathop{\sum }\limits_{j=0}^{N-1}(\begin{array}{c}k-1\\ j\end{array})(\begin{array}{c}Z-k\\ N-j-1\end{array}){\Pi }_{{\rm{C}}}(j+1)\end{array}$$\end{document}</tex-math>
+   <math id="M8" display="block">
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>f</mi>
+         </mrow>
+         <mrow>
+          <mi>C</mi>
+         </mrow>
+        </msub>
+        <mo>=</mo>
+        <msup>
+         <mrow>
+          <mo stretchy="true">(</mo>
+          <mrow>
+           <mtable>
+            <mtr>
+             <mtd>
+              <mrow>
+               <mi>Z</mi>
+               <mo>−</mo>
+               <mn>1</mn>
+              </mrow>
+             </mtd>
+            </mtr>
+            <mtr>
+             <mtd>
+              <mrow>
+               <mi>N</mi>
+               <mo>−</mo>
+               <mn>1</mn>
+              </mrow>
+             </mtd>
+            </mtr>
+           </mtable>
+          </mrow>
+          <mo stretchy="true">)</mo>
+         </mrow>
+         <mrow>
+          <mo>−</mo>
+          <mn>1</mn>
+         </mrow>
+        </msup>
+        <munderover>
+         <mo>∑</mo>
+         <mrow>
+          <mi>j</mi>
+          <mo>=</mo>
+          <mn>0</mn>
+         </mrow>
+         <mrow>
+          <mi>N</mi>
+          <mo>−</mo>
+          <mn>1</mn>
+         </mrow>
+        </munderover>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd>
+             <mrow>
+              <mi>k</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+             <mi>j</mi>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mrow>
+          <mtable>
+           <mtr>
+            <mtd>
+             <mrow>
+              <mi>Z</mi>
+              <mo>−</mo>
+              <mi>k</mi>
+             </mrow>
+            </mtd>
+           </mtr>
+           <mtr>
+            <mtd>
+             <mrow>
+              <mi>N</mi>
+              <mo>−</mo>
+              <mi>j</mi>
+              <mo>−</mo>
+              <mn>1</mn>
+             </mrow>
+            </mtd>
+           </mtr>
+          </mtable>
+         </mrow>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">Π</mi>
+         </mrow>
+         <mrow>
+          <mi mathvariant="normal">C</mi>
+         </mrow>
+        </msub>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mrow>
+          <mi>j</mi>
+          <mo>+</mo>
+          <mn>1</mn>
+         </mrow>
+         <mo stretchy="true">)</mo>
+        </mrow>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41598_2019_52524_Article_Equ2.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <inline-formula id="IEq3">
+  <alternatives>
+   <tex-math id="M9">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\Pi }_{{\rm{C}}}(j)$$\end{document}</tex-math>
+   <math id="M10">
+    <msub>
+     <mrow>
+      <mi mathvariant="normal">Π</mi>
+     </mrow>
+     <mrow>
+      <mi mathvariant="normal">C</mi>
+     </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <mi>j</mi>
+    <mo stretchy="false">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_52524_Article_IEq3.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> and 
+ <inline-formula id="IEq4">
+  <alternatives>
+   <tex-math id="M11">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\Pi }_{{\rm{D}}}(j)$$\end{document}</tex-math>
+   <math id="M12">
+    <msub>
+     <mrow>
+      <mi mathvariant="normal">Π</mi>
+     </mrow>
+     <mrow>
+      <mi mathvariant="normal">D</mi>
+     </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <mi>j</mi>
+    <mo stretchy="false">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_52524_Article_IEq4.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> stand for the payoff or a 
+ <italic>C</italic> and a 
+ <italic>D</italic> in a single round, in a group with N players and 
+ <italic>j Cs</italic>. To define the payoff functions, let 
+ <inline-formula id="IEq5">
+  <alternatives>
+   <tex-math id="M13">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\theta (x)$$\end{document}</tex-math>
+   <math id="M14">
+    <mi>θ</mi>
+    <mo stretchy="false">(</mo>
+    <mi>x</mi>
+    <mo stretchy="false">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_52524_Article_IEq5.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> be a Heaviside step-function distribution, where 
+ <italic>θ</italic>(
+ <italic>x</italic>) = 0 if 
+ <italic>x</italic> &lt; 0 and 
+ <italic>θ</italic>(
+ <italic>x</italic>) = 1 if 
+ <italic>x</italic> ≥ 0. Each player can contribute with a fraction 
+ <italic>c</italic> of her endowment 
+ <italic>B</italic> (with 0 ≤ 
+ <italic>c</italic> ≤ 1), and in case a group contains less than 
+ <italic>M</italic> cooperators (0 &lt; 
+ <italic>M</italic> ≤ 
+ <italic>N</italic>) there is a risk 
+ <italic>r</italic> of failure (0 ≤ 
+ <italic>r</italic> ≤ 1), in which case no player obtains her remaining endowment. The payoff of a defector (
+ <inline-formula id="IEq6">
+  <alternatives>
+   <tex-math id="M15">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\Pi }_{D}(j)$$\end{document}</tex-math>
+   <math id="M16">
+    <msub>
+     <mrow>
+      <mi mathvariant="normal">Π</mi>
+     </mrow>
+     <mrow>
+      <mi>D</mi>
+     </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <mi>j</mi>
+    <mo stretchy="false">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_52524_Article_IEq6.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula>) and the payoff of a cooperator (
+ <inline-formula id="IEq7">
+  <alternatives>
+   <tex-math id="M17">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${\Pi }_{C}(j)$$\end{document}</tex-math>
+   <math id="M18">
+    <msub>
+     <mrow>
+      <mi mathvariant="normal">Π</mi>
+     </mrow>
+     <mrow>
+      <mi>C</mi>
+     </mrow>
+    </msub>
+    <mo stretchy="false">(</mo>
+    <mi>j</mi>
+    <mo stretchy="false">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_52524_Article_IEq7.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula>), before incorporating any policy, can be written as
+ <sup>
+  <xref ref-type="bibr" rid="CR9">9</xref>
+ </sup>:
+ <disp-formula id="Equ3">
+  <label>3</label>
+  <alternatives>
+   <tex-math id="M19">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{\Pi }_{D}(j)=B\{\theta (j-M)+(1-r)[1-\theta (j-M)]\}\end{array}$$\end{document}</tex-math>
+   <math id="M20" display="block">
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">Π</mi>
+         </mrow>
+         <mrow>
+          <mi>D</mi>
+         </mrow>
+        </msub>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mi>j</mi>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mi>B</mi>
+        <mrow>
+         <mo stretchy="true">{</mo>
+         <mrow>
+          <mi>θ</mi>
+          <mrow>
+           <mo stretchy="true">(</mo>
+           <mrow>
+            <mi>j</mi>
+            <mo>−</mo>
+            <mi>M</mi>
+           </mrow>
+           <mo stretchy="true">)</mo>
+          </mrow>
+          <mo>+</mo>
+          <mrow>
+           <mo stretchy="true">(</mo>
+           <mrow>
+            <mn>1</mn>
+            <mo>−</mo>
+            <mi>r</mi>
+           </mrow>
+           <mo stretchy="true">)</mo>
+          </mrow>
+          <mrow>
+           <mo stretchy="true">[</mo>
+           <mrow>
+            <mn>1</mn>
+            <mo>−</mo>
+            <mi>θ</mi>
+            <mrow>
+             <mo stretchy="true">(</mo>
+             <mrow>
+              <mi>j</mi>
+              <mo>−</mo>
+              <mi>M</mi>
+             </mrow>
+             <mo stretchy="true">)</mo>
+            </mrow>
+           </mrow>
+           <mo stretchy="true">]</mo>
+          </mrow>
+         </mrow>
+         <mo stretchy="true">}</mo>
+        </mrow>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41598_2019_52524_Article_Equ3.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+ <disp-formula id="Equ4">
+  <label>4</label>
+  <alternatives>
+   <tex-math id="M21">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{\Pi }_{C}(j)={\Pi }_{D}(j)-cB\end{array}$$\end{document}</tex-math>
+   <math id="M22" display="block">
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">Π</mi>
+         </mrow>
+         <mrow>
+          <mi>C</mi>
+         </mrow>
+        </msub>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mi>j</mi>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <msub>
+         <mrow>
+          <mi mathvariant="normal">Π</mi>
+         </mrow>
+         <mrow>
+          <mi>D</mi>
+         </mrow>
+        </msub>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mi>j</mi>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <mo>−</mo>
+        <mi>c</mi>
+        <mi>B</mi>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41598_2019_52524_Article_Equ4.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

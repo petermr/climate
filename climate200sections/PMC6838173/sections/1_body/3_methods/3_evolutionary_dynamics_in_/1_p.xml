@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p id="Par21">The fitness functions written above allow us to setup the (discrete time) evolutionary dynamics. Indeed, the configurations of the entire population may be used to define a Markov Chain, where each state is characterized by number of cooperators
+ <sup>
+  <xref ref-type="bibr" rid="CR9">9</xref>,
+  <xref ref-type="bibr" rid="CR44">44</xref>
+ </sup>. To decide in which direction the system will evolve, at each step a player 
+ <italic>i</italic> and a neighbour 
+ <italic>j</italic> of her are drawn at random from the population. Player 
+ <italic>i</italic> decides whether to imitate her neighbour 
+ <italic>j</italic> with a probability depending on the difference between their fitness
+ <sup>
+  <xref ref-type="bibr" rid="CR43">43</xref>,
+  <xref ref-type="bibr" rid="CR44">44</xref>
+ </sup>. This way, a system with 
+ <italic>k</italic> cooperators may stay in the same state, switch to 
+ <italic>k</italic> − 1 or to 
+ <italic>k</italic> + 1. The probability of player 
+ <italic>i</italic> imitating player 
+ <italic>j</italic> can be given by the Fermi function:
+ <disp-formula id="Equ7">
+  <label>7</label>
+  <alternatives>
+   <tex-math id="M35">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{p}_{j,i}(k)\equiv {[1+{e}^{-\beta ({f}_{j}-{f}_{i})}]}^{-1}\end{array}$$\end{document}</tex-math>
+   <math id="M36" display="block">
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msub>
+         <mrow>
+          <mi>p</mi>
+         </mrow>
+         <mrow>
+          <mi>j</mi>
+          <mo>,</mo>
+          <mi>i</mi>
+         </mrow>
+        </msub>
+        <mo stretchy="false">(</mo>
+        <mi>k</mi>
+        <mo stretchy="false">)</mo>
+        <mo>≡</mo>
+        <msup>
+         <mrow>
+          <mo stretchy="false">[</mo>
+          <mrow>
+           <mn>1</mn>
+           <mo>+</mo>
+           <msup>
+            <mrow>
+             <mi>e</mi>
+            </mrow>
+            <mrow>
+             <mo>−</mo>
+             <mi>β</mi>
+             <mrow>
+              <mo stretchy="true">(</mo>
+              <mrow>
+               <msub>
+                <mrow>
+                 <mi>f</mi>
+                </mrow>
+                <mrow>
+                 <mi>j</mi>
+                </mrow>
+               </msub>
+               <mo>−</mo>
+               <msub>
+                <mrow>
+                 <mi>f</mi>
+                </mrow>
+                <mrow>
+                 <mi>i</mi>
+                </mrow>
+               </msub>
+              </mrow>
+              <mo stretchy="true">)</mo>
+             </mrow>
+            </mrow>
+           </msup>
+          </mrow>
+          <mo stretchy="false">]</mo>
+         </mrow>
+         <mrow>
+          <mo>−</mo>
+          <mn>1</mn>
+         </mrow>
+        </msup>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41598_2019_52524_Article_Equ7.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>where 
+ <italic>β</italic> is the intensity of selection. Using this probability distribution, we can fully characterize this Markov process. Let 
+ <italic>k</italic> be the total number of cooperators in the population and 
+ <italic>Z</italic> the total size of the population. 
+ <inline-formula id="IEq12">
+  <alternatives>
+   <tex-math id="M37">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${T}^{+}(k)$$\end{document}</tex-math>
+   <math id="M38">
+    <msup>
+     <mrow>
+      <mi>T</mi>
+     </mrow>
+     <mo>+</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>k</mi>
+    <mo stretchy="false">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_52524_Article_IEq12.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> and 
+ <inline-formula id="IEq13">
+  <alternatives>
+   <tex-math id="M39">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$${T}^{-}(k)$$\end{document}</tex-math>
+   <math id="M40">
+    <msup>
+     <mrow>
+      <mi>T</mi>
+     </mrow>
+     <mo>−</mo>
+    </msup>
+    <mo stretchy="false">(</mo>
+    <mi>k</mi>
+    <mo stretchy="false">)</mo>
+   </math>
+   <inline-graphic xlink:href="41598_2019_52524_Article_IEq13.gif" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </inline-formula> are the probabilities to increase and decrease 
+ <italic>k</italic> by one, respectively
+ <sup>
+  <xref ref-type="bibr" rid="CR44">44</xref>
+ </sup>:
+ <disp-formula id="Equ8">
+  <label>8</label>
+  <alternatives>
+   <tex-math id="M41">\documentclass[12pt]{minimal} \usepackage{amsmath} \usepackage{wasysym} \usepackage{amsfonts} \usepackage{amssymb} \usepackage{amsbsy} \usepackage{mathrsfs} \usepackage{upgreek} \setlength{\oddsidemargin}{-69pt} \begin{document}$$\begin{array}{c}{T}^{\pm }(k)=\,\frac{k}{Z}\,\frac{Z-k}{Z}\,{[1+{e}^{\mp \beta [{f}_{C}(k)-{f}_{D}(k)}]}^{-1}\end{array}$$\end{document}</tex-math>
+   <math id="M42" display="block">
+    <mtable>
+     <mtr>
+      <mtd>
+       <mrow>
+        <msup>
+         <mrow>
+          <mi>T</mi>
+         </mrow>
+         <mo>±</mo>
+        </msup>
+        <mrow>
+         <mo stretchy="true">(</mo>
+         <mi>k</mi>
+         <mo stretchy="true">)</mo>
+        </mrow>
+        <mo>=</mo>
+        <mspace width=".25em"/>
+        <mfrac>
+         <mi>k</mi>
+         <mi>Z</mi>
+        </mfrac>
+        <mspace width=".25em"/>
+        <mfrac>
+         <mrow>
+          <mi>Z</mi>
+          <mo>−</mo>
+          <mi>k</mi>
+         </mrow>
+         <mi>Z</mi>
+        </mfrac>
+        <mspace width=".25em"/>
+        <msup>
+         <mrow>
+          <mo stretchy="true">[</mo>
+          <mrow>
+           <mn>1</mn>
+           <mo>+</mo>
+           <msup>
+            <mrow>
+             <mi>e</mi>
+            </mrow>
+            <mrow>
+             <mo>∓</mo>
+             <mi>β</mi>
+             <mo stretchy="false">[</mo>
+             <msub>
+              <mrow>
+               <mi>f</mi>
+              </mrow>
+              <mrow>
+               <mi>C</mi>
+              </mrow>
+             </msub>
+             <mrow>
+              <mo stretchy="true">(</mo>
+              <mi>k</mi>
+              <mo stretchy="true">)</mo>
+             </mrow>
+             <mo>−</mo>
+             <msub>
+              <mrow>
+               <mi>f</mi>
+              </mrow>
+              <mrow>
+               <mi>D</mi>
+              </mrow>
+             </msub>
+             <mo stretchy="false">(</mo>
+             <mi>k</mi>
+             <mo stretchy="false">)</mo>
+            </mrow>
+           </msup>
+          </mrow>
+          <mo stretchy="true">]</mo>
+         </mrow>
+         <mrow>
+          <mo>−</mo>
+          <mn>1</mn>
+         </mrow>
+        </msup>
+       </mrow>
+      </mtd>
+     </mtr>
+    </mtable>
+   </math>
+   <graphic xlink:href="41598_2019_52524_Article_Equ8.gif" position="anchor" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </alternatives>
+ </disp-formula>
+</p>

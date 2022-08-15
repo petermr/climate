@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p>We then followed by simulating species extinctions. Simulations were performed following a stochastic process, where the probability of a plant species being driven to extinction is proportional to its decrease in occurrence. This stochastic process is independent for each network, scenario, and time horizon. That is, calculations are both from the present time to 2050 and from the present time to 2080. We ran 1000 replicates. This first stage leads to a number of extinguished plant species and a number of directly coextinguished insect species. We proceeded by considering plant coextinctions. The probability of coextinction is proportional to the fraction of interactions lost through the simulation. For each network, scenario, and time horizon, the probability of coextinction for species 
+ <italic>i</italic> at iteration 
+ <italic>t</italic> is given by 
+ <inline-formula>
+  <math id="m4">
+   <mrow>
+    <mrow>
+     <msubsup>
+      <mi>c</mi>
+      <mi>t</mi>
+      <mi>i</mi>
+     </msubsup>
+     <mo>=</mo>
+     <mn>1</mn>
+     <mo>−</mo>
+     <mo stretchy="false">(</mo>
+     <msubsup>
+      <mi>I</mi>
+      <mi>t</mi>
+      <mi>i</mi>
+     </msubsup>
+     <mo>/</mo>
+     <msubsup>
+      <mi>I</mi>
+      <mrow>
+       <mi>t</mi>
+       <mo>−</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>i</mi>
+     </msubsup>
+     <mo stretchy="false">)</mo>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula>, where 
+ <inline-formula>
+  <math id="m5">
+   <mrow>
+    <mrow>
+     <msubsup>
+      <mi>I</mi>
+      <mi>t</mi>
+      <mi>i</mi>
+     </msubsup>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula> is the number of interactions of species 
+ <italic>i</italic> at time step 
+ <italic>t</italic> (after removing extinct and coextinct species) and 
+ <inline-formula>
+  <math id="m6">
+   <mrow>
+    <mrow>
+     <msubsup>
+      <mi>I</mi>
+      <mrow>
+       <mi>t</mi>
+       <mo>−</mo>
+       <mn>1</mn>
+      </mrow>
+      <mi>i</mi>
+     </msubsup>
+    </mrow>
+   </mrow>
+  </math>
+ </inline-formula> is the number of interactions at previous time step. This reflects the fact that a given species can experience a reduction in its number of interactions (and so, have a nonzero probability of becoming coextinct) at several times as coextinction cascades travel through the network. This scheme ensures that the probability of coextinction for each species is the same than if all the interactions were lost at once. The process was executed recursively at each time step until there were no further losses of interactions. For the networks containing weighted information describing the frequency of visits by each pollinator (three of seven), we calculated a weighted version of our probability of coextinction (estimated as the relative fraction of interaction strength contained in the extinct interactions) and compared it to the previous one to assess whether similar trends would be expected for more realistic coextinction scenarios.
+</p>
